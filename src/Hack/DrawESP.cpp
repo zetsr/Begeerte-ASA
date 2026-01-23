@@ -34,11 +34,12 @@ namespace g_DrawESP {
 			if (!TargetActor->IsA(SDK::APrimalCharacter::StaticClass())) continue;
 
 			SDK::APrimalCharacter* TargetChar = (SDK::APrimalCharacter*)TargetActor;
+			SDK::APrimalCharacter* LocalChar = (SDK::APrimalCharacter*)LocalPC->Pawn;
 
 			if (TargetChar->IsDead()) continue;
 
 			SDK::APlayerState* TargetPS = TargetChar->PlayerState;
-			g_ESP::RelationType relation = g_ESP::GetPlayerRelation(TargetPS, LocalPS);
+			g_ESP::RelationType relation = g_ESP::GetRelation(TargetChar, LocalChar);
 
 			bool bDrawBox = false, bDrawHealthBar = false, bDrawName = false;
 			bool bDrawSpecies = false, bDrawGrowth = false, bDrawDistance = false;

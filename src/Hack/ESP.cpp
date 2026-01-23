@@ -18,6 +18,7 @@ namespace g_ESP {
         return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
     }
 
+    /*
     RelationType GetPlayerRelation(SDK::APlayerState* targetPS, SDK::APlayerState* localPS) {
         if (!targetPS || !localPS) return RelationType::Enemy;
 
@@ -27,6 +28,20 @@ namespace g_ESP {
         if (!tPS || !lPS) return RelationType::Enemy;
 
         if (tPS->TargetingTeam != 0 && tPS->TargetingTeam == lPS->TargetingTeam) {
+            return RelationType::Team;
+        }
+
+        return RelationType::Enemy;
+    }
+    */
+
+    RelationType GetRelation(SDK::APrimalCharacter* TargetChar, SDK::APrimalCharacter* LocalChar) {
+        if (!TargetChar || !LocalChar) return RelationType::Enemy;
+
+        int targetTeam = TargetChar->TargetingTeam;
+        int localTeam = LocalChar->TargetingTeam;
+
+        if (targetTeam != 0 && targetTeam == localTeam) {
             return RelationType::Team;
         }
 

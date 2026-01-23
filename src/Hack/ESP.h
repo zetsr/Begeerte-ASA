@@ -46,5 +46,6 @@ namespace g_ESP {
         Team,
     };
 
-    RelationType GetPlayerRelation(SDK::APlayerState* targetPS, SDK::APlayerState* localPS);
+    // RelationType GetPlayerRelation(SDK::APlayerState* targetPS, SDK::APlayerState* localPS);
+    RelationType GetRelation(SDK::APrimalCharacter* TargetChar, SDK::APrimalCharacter* LocalChar);
 }
