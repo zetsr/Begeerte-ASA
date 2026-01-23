@@ -10,6 +10,9 @@ namespace g_Config {
     inline bool bDrawDroppedItems = true;          // 掉落物开关
     inline float DroppedItemMaxDistance = 100.0f;       // 掉落物最大显示距离
 
+    inline bool bDrawSupplyDrops = true; // 空投 宝箱
+    inline float SupplyDropMaxDistance = 1500.0f;
+
     // --- 敌人 ESP 设置 ---
     inline bool bDrawBox = true;
     inline float BoxColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };

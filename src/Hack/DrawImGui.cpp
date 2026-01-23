@@ -316,7 +316,11 @@ namespace g_DrawImGui {
                         ImGui::Separator();
                         DrawCustomCheckbox(U8("掉落的物品"), &g_Config::bDrawDroppedItems);
                         if (g_Config::bDrawDroppedItems) {
-                            DrawCustomSliderFloat(U8("掉落的物品显示距离"), &g_Config::DroppedItemMaxDistance, 1.0f, 300.0f, "%.0f");
+                            DrawCustomSliderFloat(U8("物品显示距离"), &g_Config::DroppedItemMaxDistance, 1.0f, 300.0f, "%.0f");
+                        }
+                        DrawCustomCheckbox(U8("显示宝箱"), &g_Config::bDrawSupplyDrops);
+                        if (g_Config::bDrawDroppedItems) {
+                            DrawCustomSliderFloat(U8("宝箱显示距离"), &g_Config::SupplyDropMaxDistance, 100.0f, 10000.0f, "%.0f");
                         }
                         ImGui::Separator();
 

@@ -135,7 +135,6 @@ namespace g_DrawESP {
                 if (LocalPC->ProjectWorldLocationToScreen(TargetActor->K2_GetActorLocation(), &screenPos, false)) {
                     if (screenPos.X > 0 && screenPos.X < screenW && screenPos.Y > 0 && screenPos.Y < screenH) {
 
-                        // 1. 获取显示名称 (优先自定义，其次描述名)
                         std::string itemName = "";
                         if (Item->CustomItemName.IsValid() && Item->CustomItemName.ToString() != "") {
                             itemName = Item->CustomItemName.ToString();
@@ -147,37 +146,28 @@ namespace g_DrawESP {
                             itemName = Item->Class ? Item->Class->GetName() : "Unknown Item";
                         }
 
-                        // 2. 颜色逻辑：优先判断特殊物品，其次判断品质
-                        ImU32 finalCol = ToImColor(220, 220, 220, 255); // 默认灰白色 (Primitive)
-
+                        ImU32 finalCol = ToImColor(220, 220, 220, 255);
                         std::string className = Item->Class ? Item->Class->GetName() : "";
                         int quantity = Item->ItemQuantity;
 
-                        // 2.1. 优先级最高：低温仓 (无论多少个，紫色最醒目)
                         if (className.find("Cryopod") != std::string::npos) {
-                            finalCol = ToImColor(255, 100, 255, 255); // 亮紫色
+                            finalCol = ToImColor(255, 100, 255, 255);
                         }
-                        // 2.2. 优先级第二：大堆叠物品 ( > 1000 )
                         else if (quantity >= 1000) {
-                            finalCol = ToImColor(50, 255, 50, 255);   // 亮绿色
+                            finalCol = ToImColor(50, 255, 50, 255);
                         }
-                        // 2.3. 优先级第三：所有肉类 (Raw Meat, Cooked Meat, Prime Meat 等)
-                        // 包含 "Meat" 且不是高品质（防止某些特殊Mod的高级肉被覆盖颜色）
                         else if (className.find("Meat") != std::string::npos) {
-                            finalCol = ToImColor(139, 69, 19, 255);   // 褐色 (Saddle/Meat Brown)
+                            finalCol = ToImColor(139, 69, 19, 255);
                         }
-                        // 2.4. 优先级最低：按品质分级
                         else {
                             float rating = Item->ItemRating;
-                            if (rating >= 10.0f)      finalCol = ToImColor(0, 255, 255, 255);   // 神话 (青色)
-                            else if (rating >= 7.0f)  finalCol = ToImColor(255, 255, 0, 255);   // 传说 (黄色)
-                            else if (rating >= 4.5f)  finalCol = ToImColor(160, 32, 240, 255);  // 史诗 (紫色)
-                            else if (rating >= 2.5f)  finalCol = ToImColor(0, 191, 255, 255);   // 卓越 (蓝色)
-                            else if (rating >= 1.25f) finalCol = ToImColor(50, 205, 50, 255);   // 精良 (绿色)
-                            // 默认颜色已在上方定义
+                            if (rating >= 10.0f)      finalCol = ToImColor(0, 255, 255, 255);
+                            else if (rating >= 7.0f)  finalCol = ToImColor(255, 255, 0, 255);
+                            else if (rating >= 4.5f)  finalCol = ToImColor(160, 32, 240, 255);
+                            else if (rating >= 2.5f)  finalCol = ToImColor(0, 191, 255, 255);
+                            else if (rating >= 1.25f) finalCol = ToImColor(50, 205, 50, 255);
                         }
 
-                        // 3. 绘制逻辑
                         g_ESP::BoxRect itemRect;
                         itemRect.topLeft = ImVec2(screenPos.X - 5, screenPos.Y - 5);
                         itemRect.bottomRight = ImVec2(screenPos.X + 5, screenPos.Y + 5);
@@ -188,14 +178,73 @@ namespace g_DrawESP {
 
                         std::string label = "[" + itemName + "]";
                         if (Item->ItemQuantity > 1) label += " x" + std::to_string(Item->ItemQuantity);
-
-                        // 如果是蓝图，加个标记
-                        if (Item->bIsBlueprint) {
-                            label = "[BP] " + label;
-                        }
+                        if (Item->bIsBlueprint) label = "[BP] " + label;
 
                         itemFlag.AddFlag(itemRect, label, finalCol, g_ESP::FlagPos::Right);
                         itemFlag.AddFlag(itemRect, std::to_string((int)dist) + "m", ToImColor(200, 200, 200, 200), g_ESP::FlagPos::Right);
+                    }
+                }
+            }
+
+            // 情况 C：专业级补给箱识别 (修复识别失败问题)
+            else if (g_Config::bDrawSupplyDrops && TargetActor->IsA(SDK::APrimalStructureItemContainer::StaticClass())) {
+                // 排除炮塔：既然 APrimalStructureTurret 继承自这个容器类，我们需要排除它
+                // 否则你的空投 ESP 会把地图上所有的自动炮塔都画出来
+                if (TargetActor->IsA(SDK::APrimalStructureTurret::StaticClass())) continue;
+
+                std::string actorName = TargetActor->Class ? TargetActor->Class->GetName() : "";
+
+                // 只处理包含 Crate 或 SupplyDrop 的容器
+                if (actorName.find("Crate") != std::string::npos || actorName.find("SupplyDrop") != std::string::npos) {
+
+                    float dist = LocalPC->Pawn ? LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f : 0.0f;
+                    if (dist > g_Config::SupplyDropMaxDistance) continue;
+
+                    SDK::FVector2D screenPos;
+                    if (LocalPC->ProjectWorldLocationToScreen(TargetActor->K2_GetActorLocation(), &screenPos, false)) {
+                        if (screenPos.X > 0 && screenPos.X < screenW && screenPos.Y > 0 && screenPos.Y < screenH) {
+
+                            // 默认颜色：白色
+                            ImU32 crateCol = ToImColor(255, 255, 255, 255);
+                            std::string levelTag = "[Lvl 3]";
+
+                            if (actorName.find("Level60") != std::string::npos || actorName.find("Red") != std::string::npos) {
+                                crateCol = ToImColor(255, 50, 50, 255); levelTag = "[Lvl 60]";
+                            }
+                            else if (actorName.find("Level45") != std::string::npos || actorName.find("Yellow") != std::string::npos) {
+                                crateCol = ToImColor(255, 255, 0, 255); levelTag = "[Lvl 45]";
+                            }
+                            else if (actorName.find("Level35") != std::string::npos || actorName.find("Purple") != std::string::npos) {
+                                crateCol = ToImColor(160, 32, 240, 255); levelTag = "[Lvl 35]";
+                            }
+                            else if (actorName.find("Level25") != std::string::npos || actorName.find("Blue") != std::string::npos) {
+                                crateCol = ToImColor(0, 191, 255, 255); levelTag = "[Lvl 25]";
+                            }
+                            else if (actorName.find("Level15") != std::string::npos || actorName.find("Green") != std::string::npos) {
+                                crateCol = ToImColor(50, 255, 50, 255); levelTag = "[Lvl 15]";
+                            }
+                            else if (actorName.find("Cave") != std::string::npos) {
+                                crateCol = ToImColor(0, 255, 255, 255); levelTag = "[Cave]";
+                            }
+
+                            g_ESP::BoxRect crateRect;
+                            crateRect.topLeft = ImVec2(screenPos.X - 5, screenPos.Y - 5);
+                            crateRect.bottomRight = ImVec2(screenPos.X + 5, screenPos.Y + 5);
+                            crateRect.valid = true;
+
+                            g_ESP::FlagManager crateFlag;
+                            crateFlag.Reset();
+
+                            SDK::APrimalStructureItemContainer* Container = (SDK::APrimalStructureItemContainer*)TargetActor;
+                            std::string cDisplayName = Container->GetDescriptiveName().ToString();
+                            if (cDisplayName.empty() || cDisplayName == "None") cDisplayName = "Supply Crate";
+
+                            // 绘制
+                            ImGui::GetBackgroundDrawList()->AddCircleFilled(ImVec2(screenPos.X, screenPos.Y), 4.0f, crateCol);
+
+                            crateFlag.AddFlag(crateRect, levelTag + " " + cDisplayName, crateCol, g_ESP::FlagPos::Right);
+                            crateFlag.AddFlag(crateRect, std::to_string((int)dist) + "m", ToImColor(220, 220, 220, 255), g_ESP::FlagPos::Right);
+                        }
                     }
                 }
             }

@@ -18,23 +18,6 @@ namespace g_ESP {
         return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
     }
 
-    /*
-    RelationType GetPlayerRelation(SDK::APlayerState* targetPS, SDK::APlayerState* localPS) {
-        if (!targetPS || !localPS) return RelationType::Enemy;
-
-        auto tPS = static_cast<SDK::AShooterPlayerState*>(targetPS);
-        auto lPS = static_cast<SDK::AShooterPlayerState*>(localPS);
-
-        if (!tPS || !lPS) return RelationType::Enemy;
-
-        if (tPS->TargetingTeam != 0 && tPS->TargetingTeam == lPS->TargetingTeam) {
-            return RelationType::Team;
-        }
-
-        return RelationType::Enemy;
-    }
-    */
-
     RelationType GetRelation(SDK::APrimalCharacter* TargetChar, SDK::APrimalCharacter* LocalChar) {
         if (!TargetChar || !LocalChar) return RelationType::Enemy;
 
@@ -50,8 +33,13 @@ namespace g_ESP {
 
     void FlagManager::AddFlag(BoxRect rect, const std::string& text, ImU32 color, FlagPos pos) {
         if (!rect.valid || text.empty()) return;
+
         ImDrawList* drawList = ImGui::GetBackgroundDrawList();
-        ImVec2 textSize = ImGui::CalcTextSize(text.c_str());
+
+        ImFont* font = ImGui::GetFont();
+        float fontSize = ImGui::GetFontSize();
+        ImVec2 textSize = font->CalcTextSizeA(fontSize, FLT_MAX, 0.0f, text.c_str());
+
         ImVec2 drawPos;
 
         if (pos == FlagPos::Right) {
@@ -62,6 +50,8 @@ namespace g_ESP {
             drawPos = ImVec2(rect.topLeft.x - 8.0f - textSize.x, rect.topLeft.y + leftY);
             leftY += textSize.y + 1.0f;
         }
+
+        // ÒõÓ° + ÎÄ±¾
         drawList->AddText(ImVec2(drawPos.x + 1, drawPos.y + 1), ToImColor(0, 0, 0, 255), text.c_str());
         drawList->AddText(drawPos, color, text.c_str());
     }
