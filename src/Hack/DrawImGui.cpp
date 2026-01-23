@@ -11,6 +11,7 @@
 #include "Configs.h"
 #include "DrawESP.h"
 #include "DrawImGui.h"
+#include "Aimbot.h"
 
 #include <cstdio>
 #include <string>
@@ -294,6 +295,34 @@ namespace g_DrawImGui {
 
                 if (ImGui::BeginTabBar("MainTabBar", ImGuiTabBarFlags_None)) {
 
+                    if (ImGui::BeginTabItem(U8("自瞄"))) {
+                        ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(12.0f, 12.0f));
+                        BeginTabRegion("AimbotRegion");
+
+                        ImGui::TextColored(ThemeColors::ACCENT, U8("[Test] 自动瞄准"));
+                        ImGui::Separator();
+                        DrawCustomCheckbox(U8("启用自瞄"), &g_Config::bAimbotEnabled);
+                        if (g_Config::bAimbotEnabled) {
+                            DrawCustomSliderFloat(U8("自瞄范围"), &g_Config::AimbotFOV, 1.0f, 180.0f, "%.0f");
+                            DrawCustomSliderFloat(U8("自瞄平滑"), &g_Config::AimbotSmooth, 0.0f, 100.0f, "%.0f");
+                        }
+                        ImGui::Separator();
+
+                        ImGui::TextColored(ThemeColors::ACCENT, U8("[Test] 自动扳机"));
+                        ImGui::Separator();
+                        DrawCustomCheckbox(U8("启用扳机"), &g_Config::bTriggerbotEnabled);
+                        if (g_Config::bTriggerbotEnabled) {
+                            DrawCustomSliderFloat(U8("扳机延迟"), &g_Config::TriggerDelay, 0.0f, 200.0f, "%.0f");
+                            DrawCustomSliderFloat(U8("扳机随机延迟"), &g_Config::TriggerRandomPercent, 0.0f, 100.0f, "%.0f");
+                            DrawCustomSliderFloat(U8("扳机命中率"), &g_Config::TriggerHitChance, 0.0f, 100.0f, "%.0f");
+                        }
+                        ImGui::Separator();
+
+                        EndTabRegion();
+                        ImGui::PopStyleVar();
+                        ImGui::EndTabItem();
+                    }
+
                     if (ImGui::BeginTabItem(U8("视觉"))) {
                         ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(12.0f, 12.0f));
                         BeginTabRegion("VisualsRegion");
@@ -384,6 +413,9 @@ namespace g_DrawImGui {
 
         // ESP 绘制
         g_DrawESP::DrawESP();
+
+        // Aimbot 调用
+        g_Aimbot::Tick();
     }
 
 } // namespace g_DrawImGui

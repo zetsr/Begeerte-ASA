@@ -6,6 +6,14 @@ namespace g_Config {
     inline ImU32 GetU32Color(float color[4]) {
         return ImGui::ColorConvertFloat4ToU32(*(ImVec4*)color);
     }
+    inline bool bAimbotEnabled = false;
+    inline float AimbotFOV = 180.0f;
+    inline float AimbotSmooth = 5.0f;    // 1-100
+
+    inline bool bTriggerbotEnabled = false;
+    inline float TriggerDelay = 0.0f;   // 基础延迟 ms
+    inline float TriggerRandomPercent = 0.0f; // 随机波动
+    inline float TriggerHitChance = 100.0f;
 
     inline bool bDrawDroppedItems = true;          // 掉落物开关
     inline float DroppedItemMaxDistance = 100.0f;       // 掉落物最大显示距离
