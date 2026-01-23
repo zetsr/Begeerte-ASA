@@ -312,6 +312,14 @@ namespace g_DrawImGui {
                         DrawColorPickerRow(U8("距离"), &g_Config::bDrawDistance, "DistCol1", g_Config::DistanceColor);
                         ImGui::Separator();
 
+                        ImGui::TextColored(ThemeColors::ACCENT, U8("世界信息"));
+                        ImGui::Separator();
+                        DrawCustomCheckbox(U8("掉落的物品"), &g_Config::bDrawDroppedItems);
+                        if (g_Config::bDrawDroppedItems) {
+                            DrawCustomSliderFloat(U8("掉落的物品显示距离"), &g_Config::DroppedItemMaxDistance, 1.0f, 300.0f, "%.0f");
+                        }
+                        ImGui::Separator();
+
                         DrawColorPickerRow(U8("显示视野外的威胁"), &g_Config::bEnableOOF, "OOFCol1", g_Config::OOFColor);
                         if (g_Config::bEnableOOF) {
                             float avail = ImGui::GetContentRegionAvail().x;

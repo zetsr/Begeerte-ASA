@@ -7,6 +7,9 @@ namespace g_Config {
         return ImGui::ColorConvertFloat4ToU32(*(ImVec4*)color);
     }
 
+    inline bool bDrawDroppedItems = true;          // 掉落物开关
+    inline float DroppedItemMaxDistance = 100.0f;       // 掉落物最大显示距离
+
     // --- 敌人 ESP 设置 ---
     inline bool bDrawBox = true;
     inline float BoxColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
