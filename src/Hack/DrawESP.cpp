@@ -27,6 +27,7 @@ namespace g_DrawESP {
 
         SDK::TArray<SDK::AActor*>& Actors = World->PersistentLevel->Actors;
 
+        std::string searchFilter = g_Config::entitySearchBuf;
         for (int i = 0; i < Actors.Num(); i++) {
             SDK::AActor* TargetActor = Actors[i];
 
@@ -38,6 +39,16 @@ namespace g_DrawESP {
                 SDK::APrimalCharacter* LocalChar = (SDK::APrimalCharacter*)LocalPC->Pawn;
 
                 if (TargetChar->IsDead()) continue;
+
+                if (g_Config::bEnableFilter && !searchFilter.empty()) {
+                    std::string nameForESP = TargetChar->PlayerState ?
+                        TargetChar->PlayerState->GetPlayerName().ToString() :
+                        TargetChar->GetDescriptiveName().ToString();
+
+                    if (!g_ESP::IsEntityMatch(nameForESP, searchFilter)) {
+                        continue;
+                    }
+                }
 
                 SDK::APlayerState* TargetPS = TargetChar->PlayerState;
                 g_ESP::RelationType relation = g_ESP::GetRelation(TargetChar, LocalChar);

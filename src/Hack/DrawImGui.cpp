@@ -398,6 +398,66 @@ namespace g_DrawImGui {
                         ImGui::EndTabItem();
                     }
 
+                    if (ImGui::BeginTabItem(U8("生物列表"))) {
+                        ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(12.0f, 12.0f));
+                        BeginTabRegion("EntityListRegion");
+
+                        ImGui::TextColored(ThemeColors::ACCENT, U8("生物列表"));
+                        ImGui::Separator();
+
+                        ImGui::Checkbox(U8("应用筛选到全局视觉"), &g_Config::bEnableFilter);
+                        ImGui::SameLine();
+
+                        ImGui::PushItemWidth(-1.0f);
+                        ImGui::InputTextWithHint("##EntitySearch", U8("输入生物名称进行过滤 (如: 南巨)..."), g_Config::entitySearchBuf, IM_ARRAYSIZE(g_Config::entitySearchBuf));
+                        ImGui::PopItemWidth();
+
+                        ImGui::Spacing();
+                        if (ImGui::BeginChild("##EntityListChild", ImVec2(0, 0), true)) {
+
+                            SDK::UWorld* World = SDK::UWorld::GetWorld();
+                            SDK::APlayerController* LocalPC = g_ESP::GetLocalPC();
+
+                            if (World && World->PersistentLevel && LocalPC && LocalPC->Pawn) {
+                                SDK::TArray<SDK::AActor*>& Actors = World->PersistentLevel->Actors;
+                                SDK::AActor* LocalPawn = LocalPC->Pawn;
+                                std::string searchFilter = g_Config::entitySearchBuf;
+
+                                for (int i = 0; i < Actors.Num(); i++) {
+                                    SDK::AActor* TargetActor = Actors[i];
+
+                                    if (!TargetActor || TargetActor == LocalPawn || TargetActor->bHidden) continue;
+                                    if (!TargetActor->IsA(SDK::APrimalCharacter::StaticClass())) continue;
+
+                                    SDK::APrimalCharacter* TargetChar = (SDK::APrimalCharacter*)TargetActor;
+                                    if (TargetChar->IsDead()) continue;
+
+                                    std::string displayName;
+                                    if (TargetChar->PlayerState) {
+                                        displayName = TargetChar->PlayerState->GetPlayerName().ToString();
+                                    }
+                                    else {
+                                        displayName = TargetChar->GetDescriptiveName().ToString();
+                                    }
+
+                                    if (displayName.empty() || displayName == "None") continue;
+
+                                    if (g_ESP::IsEntityMatch(displayName, g_Config::entitySearchBuf)) {
+                                        float dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                                        ImGui::Text("[%dm] %s", (int)dist, displayName.c_str());
+                                    }
+                                }
+                            }
+                            ImGui::EndChild();
+                        }
+
+                        ImGui::Separator();
+
+                        EndTabRegion();
+                        ImGui::PopStyleVar();
+                        ImGui::EndTabItem();
+                    }
+
                     ImGui::EndTabBar();
 
                 } // End TabBar

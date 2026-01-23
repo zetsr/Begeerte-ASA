@@ -18,6 +18,38 @@ namespace g_ESP {
         return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
     }
 
+    std::string ToLower(std::string s) {
+        std::transform(s.begin(), s.end(), s.begin(), [](unsigned char c) {
+            return std::tolower(c);
+            });
+        return s;
+    }
+
+    bool IsEntityMatch(std::string displayName, std::string filter) {
+        if (filter.empty()) return true;
+
+        std::string nameLower = ToLower(displayName);
+        std::string filterLower = ToLower(filter);
+
+        size_t lastPos = 0;
+        for (size_t j = 0; j < filterLower.length(); ) {
+            unsigned char c = static_cast<unsigned char>(filterLower[j]);
+            int charLen = 1;
+            if (c >= 0xf0) charLen = 4;
+            else if (c >= 0xe0) charLen = 3;
+            else if (c >= 0xc0) charLen = 2;
+
+            std::string sub = filterLower.substr(j, charLen);
+            size_t foundPos = nameLower.find(sub, lastPos);
+
+            if (foundPos == std::string::npos) return false;
+
+            lastPos = foundPos + charLen;
+            j += charLen;
+        }
+        return true;
+    }
+
     RelationType GetRelation(SDK::APrimalCharacter* TargetChar, SDK::APrimalCharacter* LocalChar) {
         if (!TargetChar || !LocalChar) return RelationType::Enemy;
 

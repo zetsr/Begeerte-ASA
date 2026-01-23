@@ -5,6 +5,10 @@
 namespace g_ESP {
     SDK::APlayerController* GetLocalPC();
 
+    std::string ToLower(std::string s);
+
+    bool IsEntityMatch(std::string displayName, std::string filter);
+
     struct BoxRect {
         ImVec2 topLeft;
         ImVec2 bottomRight;
