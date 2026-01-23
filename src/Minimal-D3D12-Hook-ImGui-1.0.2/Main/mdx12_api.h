@@ -16,6 +16,7 @@
 #pragma warning(disable: 26451)
 #pragma warning(disable: 26812)
 #include "../ImGui/imgui.h"
+#include "../ImGui/imgui_internal.h"
 #include "../ImGui/imgui_impl_win32.h"
 #include "../ImGui/imgui_impl_dx12.h"
 #include "../MinHook/include/MinHook.h"

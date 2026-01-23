@@ -19,7 +19,7 @@ namespace g_Config {
     inline float TriggerHitChance = 100.0f;
 
     inline bool bDrawDroppedItems = true;          // 掉落物开关
-    inline float DroppedItemMaxDistance = 100.0f;       // 掉落物最大显示距离
+    inline float DroppedItemMaxDistance = 500.0f;       // 掉落物最大显示距离
 
     inline bool bDrawSupplyDrops = true; // 空投 宝箱
     inline float SupplyDropMaxDistance = 1500.0f;
