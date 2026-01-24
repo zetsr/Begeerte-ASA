@@ -4,6 +4,7 @@
 #include "Configs.h"
 #include "DrawESP.h"
 #include "DrawImGui.h"
+#include "LuaManager.h"
 
 extern "C" {
 #include "../Minimal-D3D12-Hook-ImGui-1.0.2/MinHook/src/buffer.c"
