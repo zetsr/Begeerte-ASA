@@ -693,7 +693,15 @@ namespace g_DrawImGui {
 									std::string displayName = prefix + script.name;
 
 									if (ImGui::Selectable(displayName.c_str(), false, ImGuiSelectableFlags_SpanAllColumns)) {
-										mgr.SetScriptState(i, !script.isLoaded);
+										bool targetState = !script.isLoaded;
+										if (targetState) {
+											if (!mgr.SetScriptState(i, true)) {
+
+											}
+										}
+										else {
+											mgr.SetScriptState(i, false);
+										}
 									}
 
 									ImGui::PopStyleColor();

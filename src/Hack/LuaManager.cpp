@@ -64,10 +64,26 @@ void LuaManager::Shutdown() {
     m_lua.reset();
 }
 
-void LuaManager::SetScriptState(int index, bool load) {
-    if (index < 0 || index >= (int)m_scripts.size()) return;
-    m_scripts[index].isLoaded = load;
-    m_needsReload = true;
+bool LuaManager::SetScriptState(int index, bool load) {
+    if (index < 0 || index >= (int)m_scripts.size()) return false;
+    auto& script = m_scripts[index];
+
+    if (load) {
+        if (ExecuteScript(script)) {
+            script.isLoaded = true;
+            return true;
+        }
+        else {
+            script.isLoaded = false;
+            return false;
+        }
+    }
+    else {
+        script.isLoaded = false;
+        script.env = sol::nil;
+        script.hasError = false;
+        return true;
+    }
 }
 
 void LuaManager::Update() {
@@ -91,14 +107,13 @@ void LuaManager::Update() {
 
 void LuaManager::ActualReloadAll() {
     if (!m_lua) return;
-    for (auto& script : m_scripts) {
-        script.env = sol::nil;
-        script.hasError = false;
-        script.lastError.clear();
-    }
+
     m_lua->collect_garbage();
+
     for (auto& script : m_scripts) {
-        if (script.isLoaded) ExecuteScript(script);
+        if (script.isLoaded) {
+            ExecuteScript(script);
+        }
     }
 }
 
@@ -106,8 +121,11 @@ void LuaManager::ReloadAll() {
     m_pendingReset = true;
 }
 
-void LuaManager::ExecuteScript(LuaScript& script) {
-    if (!m_lua) return;
+bool LuaManager::ExecuteScript(LuaScript& script) {
+    if (!m_lua) return false;
+
+    script.hasError = false;
+    script.lastError.clear();
 
     sol::table env_table = m_lua->create_table();
     sol::table env_mt = m_lua->create_table();
@@ -120,7 +138,7 @@ void LuaManager::ExecuteScript(LuaScript& script) {
         sol::error err = load_result;
         script.hasError = true;
         script.lastError = "Load Error: " + std::string(err.what());
-        return;
+        return false;
     }
 
     sol::protected_function script_func = load_result;
@@ -131,7 +149,10 @@ void LuaManager::ExecuteScript(LuaScript& script) {
         sol::error err = exec_result;
         script.hasError = true;
         script.lastError = "Exec Error: " + std::string(err.what());
+        return false;
     }
+
+    return true;
 }
 
 void LuaManager::RefreshFileList() {
@@ -142,20 +163,19 @@ void LuaManager::RefreshFileList() {
     std::vector<fs::path> currentFiles;
     for (const auto& entry : fs::directory_iterator(dirPath)) {
         if (entry.is_regular_file() && entry.path().extension() == ".lua") {
-            currentFiles.push_back(entry.path());
+            currentFiles.push_back(fs::absolute(entry.path()));
         }
     }
 
     m_scripts.erase(std::remove_if(m_scripts.begin(), m_scripts.end(), [&](const LuaScript& s) {
-        return std::find_if(currentFiles.begin(), currentFiles.end(), [&](const fs::path& p) {
-            return fs::equivalent(p, s.path);
-            }) == currentFiles.end();
+        return std::find(currentFiles.begin(), currentFiles.end(), s.path) == currentFiles.end();
         }), m_scripts.end());
 
     for (const auto& filePath : currentFiles) {
         auto it = std::find_if(m_scripts.begin(), m_scripts.end(), [&](const LuaScript& s) {
-            return fs::equivalent(filePath, s.path);
+            return s.path == filePath;
             });
+
         if (it == m_scripts.end()) {
             LuaScript newScript;
             newScript.name = filePath.filename().string();

@@ -36,7 +36,7 @@ public:
     void ReloadAll();
     void RefreshFileList();
     std::vector<LuaScript>& GetScripts() { return m_scripts; }
-    void SetScriptState(int index, bool load);
+    bool SetScriptState(int index, bool load);
 
     lua_State* GetState() { return m_lua ? m_lua->lua_state() : nullptr; }
     const std::string& GetScriptDir() const { return m_scriptDir; }
@@ -59,5 +59,5 @@ private:
 
     void InitVM();
     void BindImGui();
-    void ExecuteScript(LuaScript& script);
+    bool ExecuteScript(LuaScript& script);
 };
