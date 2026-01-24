@@ -1,4 +1,4 @@
-# 🚀 Cheat Lua API 脚本指南 (v1.0)
+# 🚀 Lua API
 
 基于 **Lua 5.4.8** 与 **sol2** 构建。
 
