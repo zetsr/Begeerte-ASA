@@ -1,3 +1,5 @@
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/485e987f-d15f-465b-97d3-ca8cb7eb27b1" />
+
 # 🚀 Lua API
 
 基于 **Lua 5.4.8** 与 **sol2** 构建。
@@ -10,8 +12,6 @@
 ---
 
 ## 🎨 ImGui 绘制模块
-
-`ImGui` 表提供了强大的背景绘图 API，所有坐标和颜色均基于屏幕空间。
 
 ### 基础方法
 
@@ -47,8 +47,6 @@
 
 ## 🎮 SDK 核心模块
 
-`SDK` 提供对虚幻引擎（Unreal Engine）底层对象的直接访问。
-
 ### 基础结构 (Userdata)
 
 #### `FVector`
@@ -68,8 +66,6 @@
 ---
 
 ## 🛠️ 对象操作接口
-
-这些模块用于处理从 `SDK.GetActors()` 获取的原始地址。
 
 ### `Actor` (通用对象)
 
@@ -107,8 +103,6 @@
 * **`ProjectToScreen(pc_addr, worldPos)`**:
 * **返回**: `success, screenX, screenY`
 * **说明**: 将世界坐标转换为屏幕坐标。
-
-
 
 ---
 
