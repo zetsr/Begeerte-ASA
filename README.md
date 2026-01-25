@@ -11,98 +11,199 @@
 
 ---
 
-## 🎨 ImGui 绘制模块
+# 🎨 ImGui Lua 绘制模块（完整 & 修正版）
 
-### 基础方法
+> ⚠️ **注意**
+>
+> **所有 ImGui 绘制 API 必须且只能在 `OnPaint()` 全局函数中调用。**  
+> 这些接口底层使用 `ImGui::GetBackgroundDrawList()`，仅在渲染阶段有效。
+>
+---
 
-| 函数签名 | 说明 |
-| --- | --- |
-| `ImGui.Color(r, g, b, a)` | 创建一个 `ImU32` 颜色值 (0-255)。 |
-| `ImGui.GetDeltaTime()` | 获取上一帧的间隔时间。 |
-| `ImGui.GetFPS()` | 获取当前渲染帧率。 |
-| `ImGui.GetScreenSize()` | 返回包含 `x, y` 的表格，表示屏幕分辨率。 |
-| `ImGui.GetMousePos()` | 返回包含 `x, y` 的当前鼠标坐标。 |
-| `ImGui.CalcTextSize(text)` | 计算文本在屏幕上占据的 `x, y` 尺寸。 |
+## 📦 ImGui 全局表
 
-### 输入检测
-
-| 函数签名 | 说明 |
-| --- | --- |
-| `ImGui.IsMouseDown(button)` | 鼠标按键是否按下 (0:左键, 1:右键, 2:中键)。 |
-| `ImGui.IsKeyDown(key)` | 指定按键是否按下 (使用 ImGuiKey 枚举索引)。 |
-
-### 形状绘制
-
-| 函数签名 | 参数说明 |
-| --- | --- |
-| `AddLine(x1, y1, x2, y2, col, thickness)` | 绘制直线。 |
-| `AddRect(x1, y1, x2, y2, col, rounding, thickness)` | 绘制矩形边框。 |
-| `AddRectFilled(x1, y1, x2, y2, col, rounding)` | 绘制实心矩形。 |
-| `AddCircle(x, y, radius, col, segments, thickness)` | 绘制圆圈。 |
-| `AddText(x, y, col, text)` | 在指定位置绘制文字。 |
-| `AddTriangle(x1, y1, x2, y2, x3, y3, col, thick)` | 绘制三角形。 |
-| `AddBezierCubic(x1, y1, ..., col, thick, seg)` | 绘制三阶贝塞尔曲线。 |
+Lua 中通过全局表 `ImGui` 访问所有绘制与输入接口。
 
 ---
 
-## 🎮 SDK 核心模块
+## 🎨 基础工具函数
 
-### 基础结构 (Userdata)
-
-#### `FVector`
-
-* **构造函数**: `FVector(x, y, z)` 或 `FVector()`
-* **属性**: `.X`, `.Y`, `.Z` (float)
-
-### 全局方法
-
-* **`SDK.GetLocalPC()`**: 返回本地 `PlayerController` 的内存地址 (`uintptr_t`)。
-* **`SDK.GetActors()`**: 返回一个包含当前 World 中所有 Actor 地址的数组 (table)。
-* **`SDK.GetXXXClass()`**: 获取特定类的 StaticClass 指针，用于 `IsA` 判断。
-* `GetCharacterClass()` / `GetDinoClass()` / `GetTurretClass()` 等。
-
-
-
----
-
-## 🛠️ 对象操作接口
-
-### `Actor` (通用对象)
-
-| 函数 | 返回值 | 说明 |
+| 函数签名 | 返回值 | 说明 |
 | --- | --- | --- |
-| `IsA(addr, class_ptr)` | `bool` | 判断对象是否属于特定类型。 |
-| `GetLocation(addr)` | `FVector?` | 获取 Actor 的世界坐标（可能返回 nil）。 |
-| `GetDistance(a, b)` | `float` | 计算两个 Actor 之间的距离。 |
-| `IsHidden(addr)` | `bool` | 对象是否处于隐藏状态。 |
-| `GetClassName(addr)` | `string` | 获取该对象的类名字符串。 |
+| `ImGui.Color(r, g, b, a)` | `ImU32` | 生成颜色值，参数范围 0~255 |
+| `ImGui.GetDeltaTime()` | `float` | 上一帧时间间隔 |
+| `ImGui.GetFPS()` | `float` | 当前帧率 |
+| `ImGui.GetScreenSize()` | `table { x, y }` | 当前屏幕分辨率 |
+| `ImGui.GetMousePos()` | `table { x, y }` | 当前鼠标屏幕坐标 |
+| `ImGui.CalcTextSize(text)` | `table { x, y }` | 计算文本绘制尺寸 |
 
-### `Character` (生物/玩家)
+---
 
-* **`GetInfo(addr)`**:
-* **返回**: `health, maxHealth, isDead, name`
-* **说明**: 自动识别玩家名或生物描述名。
+## 🖱️ 输入检测
 
+| 函数签名 | 返回值 | 说明 |
+| --- | --- | --- |
+| `ImGui.IsMouseDown(button)` | `bool` | 鼠标是否按下（0 左 / 1 右 / 2 中） |
+| `ImGui.IsKeyDown(key)` | `bool` | 键盘是否按下（`ImGuiKey` 枚举值） |
 
-* **`GetRelation(target, local)`**:
-* **返回**: `int` (关系枚举：0-中立, 1-友军, 2-敌对等)。
+---
 
+## 🖌️ 绘制 API（仅限 OnPaint）
 
+### 📐 线条与矩形
 
-### `Item` (掉落物)
+| 函数签名 | 说明 |
+| --- | --- |
+| `ImGui.AddLine(x1, y1, x2, y2, col, thickness)` | 绘制线段 |
+| `ImGui.AddRect(x1, y1, x2, y2, col, rounding, thickness)` | 绘制矩形边框 |
+| `ImGui.AddRectFilled(x1, y1, x2, y2, col, rounding)` | 绘制实心矩形 |
+| `ImGui.AddRectFilledMultiColor(x1, y1, x2, y2, colUL, colUR, colBR, colBL)` | 多色渐变矩形 |
 
-* **`GetDroppedInfo(addr)`**:
-* **返回**: `isValid, name, quantity, rating, isBP, className`
-* **说明**: 获取地面掉落包的详细属性。
+---
 
+### 🔺 多边形
 
+| 函数签名 | 说明 |
+| --- | --- |
+| `ImGui.AddTriangle(x1, y1, x2, y2, x3, y3, col, thickness)` | 绘制三角形 |
+| `ImGui.AddTriangleFilled(x1, y1, x2, y2, x3, y3, col)` | 实心三角形 |
+| `ImGui.AddQuad(x1, y1, x2, y2, x3, y3, x4, y4, col, thickness)` | 绘制四边形 |
+| `ImGui.AddQuadFilled(x1, y1, x2, y2, x3, y3, x4, y4, col)` | 实心四边形 |
+| `ImGui.AddNgon(x, y, radius, col, segments, thickness)` | 正多边形 |
+| `ImGui.AddNgonFilled(x, y, radius, col, segments)` | 实心正多边形 |
 
-### `PC` (控制器)
+---
 
-* **`GetPawn(pc_addr)`**: 获取当前控制的 Pawn 地址。
-* **`ProjectToScreen(pc_addr, worldPos)`**:
-* **返回**: `success, screenX, screenY`
-* **说明**: 将世界坐标转换为屏幕坐标。
+### ⚪ 圆形 / 椭圆
+
+| 函数签名 | 说明 |
+| --- | --- |
+| `ImGui.AddCircle(x, y, radius, col, segments, thickness)` | 圆形 |
+| `ImGui.AddCircleFilled(x, y, radius, col, segments)` | 实心圆 |
+| `ImGui.AddEllipse(x, y, rx, ry, col, rot, segments, thickness)` | 椭圆 |
+| `ImGui.AddEllipseFilled(x, y, rx, ry, col, rot, segments)` | 实心椭圆 |
+
+---
+
+### 🌀 贝塞尔曲线
+
+| 函数签名 | 说明 |
+| --- | --- |
+| `ImGui.AddBezierQuadratic(x1, y1, x2, y2, x3, y3, col, thickness, segments)` | 二阶贝塞尔 |
+| `ImGui.AddBezierCubic(x1, y1, x2, y2, x3, y3, x4, y4, col, thickness, segments)` | 三阶贝塞尔 |
+
+---
+
+### 🔤 文本
+
+| 函数签名 | 说明 |
+| --- | --- |
+| `ImGui.AddText(x, y, col, text)` | 绘制文本 |
+
+---
+
+# 🎮 SDK 核心模块
+
+---
+
+## 📐 基础结构（Userdata）
+
+### `FVector`
+
+```lua
+local v = FVector(x, y, z)
+````
+
+| 成员  | 类型      |
+| --- | ------- |
+| `X` | `float` |
+| `Y` | `float` |
+| `Z` | `float` |
+
+---
+
+## 🌍 SDK 全局接口
+
+| 函数                          | 返回值                | 说明                  |
+| --------------------------- | ------------------ | ------------------- |
+| `SDK.GetLocalPC()`          | `uintptr_t`        | 本地 PlayerController |
+| `SDK.GetActors()`           | `table<uintptr_t>` | 当前 World 中所有 Actor  |
+| `SDK.GetCharacterClass()`   | `uintptr_t`        | Character 类指针       |
+| `SDK.GetDinoClass()`        | `uintptr_t`        | Dino 类指针            |
+| `SDK.GetDroppedItemClass()` | `uintptr_t`        | 掉落物类                |
+| `SDK.GetContainerClass()`   | `uintptr_t`        | 容器类                 |
+| `SDK.GetTurretClass()`      | `uintptr_t`        | 炮塔类                 |
+
+---
+
+## 🧱 Actor 通用接口
+
+| 函数                         | 返回值        | 说明   |
+| -------------------------- | ---------- | ---- |
+| `Actor.IsA(addr, class)`   | `bool`     | 类型判断 |
+| `Actor.GetLocation(addr)`  | `FVector?` | 世界坐标 |
+| `Actor.GetDistance(a, b)`  | `float`    | 距离   |
+| `Actor.IsHidden(addr)`     | `bool`     | 是否隐藏 |
+| `Actor.GetClassName(addr)` | `string`   | 类名   |
+
+---
+
+## 🧬 Character（玩家 / 生物）
+
+### `Character.GetInfo(addr)`
+
+返回：
+
+```lua
+health, maxHealth, isDead, name
+```
+
+说明：
+
+* 自动区分玩家 / 生物
+* 优先使用 `PlayerState` 名字
+
+---
+
+### `Character.GetRelation(target, local)`
+
+| 返回值 | 含义 |
+| --- | -- |
+| `0` | 敌对 |
+| `1` | 友军 |
+
+---
+
+## 🎒 Item（掉落物）
+
+### `Item.GetDroppedInfo(addr)`
+
+返回：
+
+```lua
+isValid, name, quantity, rating, isBlueprint, className
+```
+
+---
+
+## 📦 Container（补给箱 / 容器）
+
+### `Container.GetInfo(addr)`
+
+返回：
+
+```lua
+name
+```
+
+---
+
+## 🎮 PC（PlayerController）
+
+| 函数                                 | 返回值          | 说明      |
+| ---------------------------------- | ------------ | ------- |
+| `PC.GetPawn(pc)`                   | `uintptr_t`  | 当前 Pawn |
+| `PC.ProjectToScreen(pc, worldPos)` | `bool, x, y` | 世界 → 屏幕 |
 
 ---
 
