@@ -2,6 +2,9 @@
 #include <vector>
 #include <string>
 
+struct ImVec2;
+using ImU32 = unsigned int;
+
 namespace g_ESP {
     SDK::APlayerController* GetLocalPC();
 
@@ -31,9 +34,11 @@ namespace g_ESP {
             rightY = 0.0f;
         }
 
-        void AddFlag(BoxRect rect, const std::string& text, ImU32 color, FlagPos pos);
+        // alphaMult: 0..1 overall multiplier applied to color alpha
+        void AddFlag(BoxRect rect, const std::string& text, ImU32 color, FlagPos pos, float alphaMult = 1.0f);
     };
 
+    // DrawBox: r,g,b in 0..255, a in 0..255
     BoxRect DrawBox(SDK::AActor* entity, float r, float g, float b, float a, float width_scale, bool bTestOnly = false);
     void DrawHealthBar(BoxRect rect, float healthPercent, float maxHealth, float a);
     void DrawName(SDK::AActor* entity, BoxRect rect, float r, float g, float b, float a);
@@ -43,7 +48,8 @@ namespace g_ESP {
         ImU32 color;
     };
 
-    void DrawOutOfFOV(SDK::AActor* entity, SDK::APlayerController* LocalPC, const std::vector<OOFFlag>& flags);
+    // DrawOutOfFOV takes a world location (so it's safe even if actor is gone)
+    void DrawOutOfFOV(const SDK::FVector& targetLoc, SDK::APlayerController* LocalPC, const std::vector<OOFFlag>& flags, float alphaMult = 1.0f);
 
     enum class RelationType {
         Enemy,
