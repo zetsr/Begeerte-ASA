@@ -22,7 +22,14 @@ namespace g_Aimbot {
         TargetInfo Best;
         SDK::UWorld* World = SDK::UWorld::GetWorld();
         SDK::APlayerController* LocalPC = g_ESP::GetLocalPC();
-        if (!World || !LocalPC || !LocalPC->Pawn) return Best;
+
+        if (!World || !LocalPC || !LocalPC->Pawn) {
+            return Best;
+        }
+
+        if (!LocalPC->PlayerCameraManager) {
+            return Best;
+        }
 
         SDK::FVector CameraLoc;
         SDK::FRotator CameraRot;
@@ -35,13 +42,13 @@ namespace g_Aimbot {
 
             if (Actor->IsA(SDK::APrimalCharacter::StaticClass())) {
                 SDK::APrimalCharacter* Char = (SDK::APrimalCharacter*)Actor;
-                if (Char->IsDead()) continue;
-
+                if (!Char || Char->IsDead()) continue;
                 if (g_ESP::GetRelation(Char, (SDK::APrimalCharacter*)LocalPC->Pawn) == g_ESP::RelationType::Team)
                     continue;
 
                 SDK::ACharacter* CharacterBase = (SDK::ACharacter*)Char;
-                if (!CharacterBase->Mesh) continue;
+
+                if (!CharacterBase || !CharacterBase->Mesh) continue;
 
                 if (!LocalPC->LineOfSightTo(Char, { 0, 0, 0 }, false))
                     continue;
@@ -86,15 +93,26 @@ namespace g_Aimbot {
         if (!World || !World->PersistentLevel) return;
 
         SDK::APlayerController* LocalPC = g_ESP::GetLocalPC();
-        if (!LocalPC || !LocalPC->Class || !LocalPC->PlayerCameraManager || !LocalPC->PlayerCameraManager->Class || !LocalPC->Pawn || !LocalPC->Pawn->Class) {
+        if (!LocalPC || !LocalPC->Class || !LocalPC->PlayerCameraManager ||
+            !LocalPC->PlayerCameraManager->Class || !LocalPC->Pawn ||
+            !LocalPC->Pawn->Class) {
             bIsAutoFiring = false;
+            CurrentTarget = nullptr;
             return;
         }
 
         TargetInfo Best = GetBestTarget();
-        if (!Best.bIsValid) return;
+        if (!Best.bIsValid) {
+            CurrentTarget = nullptr;
+            return;
+        }
 
         if (g_Config::bAimbotEnabled) {
+            if (!LocalPC->PlayerCameraManager || !LocalPC->PlayerCameraManager->Class) {
+                CurrentTarget = nullptr;
+                return;
+            }
+
             SDK::FVector CamLoc = LocalPC->PlayerCameraManager->GetCameraLocation();
             SDK::FRotator TargetRot = SDK::UKismetMathLibrary::FindLookAtRotation(CamLoc, Best.BestComponentLocation);
             SDK::FRotator CurrentRot = LocalPC->ControlRotation;
@@ -109,7 +127,26 @@ namespace g_Aimbot {
             auto Now = std::chrono::steady_clock::now();
             float Delay = GetRandomDelay(g_Config::TriggerDelay, g_Config::TriggerRandomPercent);
 
+            if (!LocalPC->Pawn || !LocalPC->Pawn->IsA(SDK::AShooterCharacter::StaticClass())) {
+                if (bIsAutoFiring) {
+                    ((SDK::AShooterPlayerController*)LocalPC)->OnStopFire();
+                    bIsAutoFiring = false;
+                }
+                CurrentTarget = nullptr;
+                return;
+            }
+
             SDK::AShooterCharacter* MyChar = (SDK::AShooterCharacter*)LocalPC->Pawn;
+
+            if (!MyChar) {
+                if (bIsAutoFiring) {
+                    ((SDK::AShooterPlayerController*)LocalPC)->OnStopFire();
+                    bIsAutoFiring = false;
+                }
+                CurrentTarget = nullptr;
+                return;
+            }
+
             SDK::AShooterWeapon* MyWeapon = MyChar ? MyChar->CurrentWeapon : nullptr;
 
             if (MyWeapon && MyWeapon->GetAmmoReloadState() == SDK::EWeaponAmmoReloadState::Ready && MyWeapon->GetCurrentAmmo() > 0) {
@@ -137,7 +174,9 @@ namespace g_Aimbot {
             }
             else {
                 if (bIsAutoFiring) {
-                    ((SDK::AShooterPlayerController*)LocalPC)->OnStopFire();
+                    if (LocalPC) {
+                        ((SDK::AShooterPlayerController*)LocalPC)->OnStopFire();
+                    }
                     bIsAutoFiring = false;
                 }
             }

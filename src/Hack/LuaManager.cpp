@@ -151,15 +151,24 @@ void LuaManager::BindSDK() {
         );
 
     auto sdk = m_lua->create_named_table("SDK");
-    sdk.set_function("GetLocalPC", []() { return (uintptr_t)g_ESP::GetLocalPC(); });
+    sdk.set_function("GetLocalPC", []() {
+        auto pc = g_ESP::GetLocalPC();
+        return (pc) ? (uintptr_t)pc : 0;
+        });
+
     sdk.set_function("GetActors", [this](sol::this_state s) {
         sol::state_view lua(s);
         sol::table res = lua.create_table();
-        if (auto W = SDK::UWorld::GetWorld()) {
+        auto W = SDK::UWorld::GetWorld();
+
+        if (W && W->PersistentLevel) {
             int idx = 1;
             auto& actors = W->PersistentLevel->Actors;
             for (int i = 0; i < actors.Num(); i++) {
-                if (auto a = actors[i]) res[idx++] = (uintptr_t)a;
+                auto a = actors[i];
+                if (a) {
+                    res[idx++] = (uintptr_t)a;
+                }
             }
         }
         return res;

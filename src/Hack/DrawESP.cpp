@@ -66,10 +66,23 @@ namespace g_DrawESP {
         if (!World || !World->GameState || !World->PersistentLevel) return;
 
         SDK::APlayerController* LocalPC = g_ESP::GetLocalPC();
-        if (!LocalPC || !LocalPC->Pawn) return;
+        if (!LocalPC || !LocalPC->Pawn) {
+            for (auto& kv : s_entries) {
+                kv.second.targetAlpha = 0.0f;
+                kv.second.aliveThisFrame = false;
+            }
+            return;
+        }
 
         SDK::APlayerState* LocalPS = LocalPC->PlayerState;
-        if (!LocalPS) return;
+        if (!LocalPS) {
+            for (auto& kv : s_entries) {
+                kv.second.targetAlpha = 0.0f;
+                kv.second.aliveThisFrame = false;
+            }
+            return;
+        }
+
 
         ImGuiIO& io = ImGui::GetIO();
         float screenW = io.DisplaySize.x;

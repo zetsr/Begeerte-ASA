@@ -11,8 +11,30 @@
 namespace g_ESP {
     SDK::APlayerController* GetLocalPC() {
         SDK::UWorld* World = SDK::UWorld::GetWorld();
-        if (!World || !World->OwningGameInstance || World->OwningGameInstance->LocalPlayers.Num() == 0) return nullptr;
-        return World->OwningGameInstance->LocalPlayers[0]->PlayerController;
+
+        if (!World) {
+            return nullptr;
+        }
+
+        if (!World->OwningGameInstance) {
+            return nullptr;
+        }
+
+        if (World->OwningGameInstance->LocalPlayers.Num() == 0) {
+            return nullptr;
+        }
+
+        auto LocalPlayer = World->OwningGameInstance->LocalPlayers[0];
+        if (!LocalPlayer) {
+            return nullptr;
+        }
+
+        auto PC = LocalPlayer->PlayerController;
+        if (!PC) {
+            return nullptr;
+        }
+
+        return PC;
     }
 
     inline ImU32 ToImColor(float r, float g, float b, float a) {
