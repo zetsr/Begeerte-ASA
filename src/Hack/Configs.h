@@ -29,6 +29,10 @@ namespace g_Config {
     inline bool bDrawSupplyDrops = true;
     inline float SupplyDropMaxDistance = 1500.0f;
 
+    // ½¨Öþ
+    inline bool bDrawStructures = true;
+    inline float StructureMaxDistance = 5.0f;
+
     // È«¾Ö
     inline bool bDrawBox = true;
     inline float BoxColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
