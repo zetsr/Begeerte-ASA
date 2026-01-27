@@ -174,14 +174,12 @@ void LuaManager::BindSDK() {
         return res;
         });
 
-    // 暴露更多类指针用于 IsA 判断
     sdk.set_function("GetCharacterClass", []() { return (uintptr_t)SDK::APrimalCharacter::StaticClass(); });
     sdk.set_function("GetDinoClass", []() { return (uintptr_t)SDK::APrimalDinoCharacter::StaticClass(); });
     sdk.set_function("GetDroppedItemClass", []() { return (uintptr_t)SDK::ADroppedItem::StaticClass(); });
     sdk.set_function("GetContainerClass", []() { return (uintptr_t)SDK::APrimalStructureItemContainer::StaticClass(); });
     sdk.set_function("GetTurretClass", []() { return (uintptr_t)SDK::APrimalStructureTurret::StaticClass(); });
 
-    // --- 2. Actor 通用接口 ---
     auto actor_api = m_lua->create_named_table("Actor");
     actor_api.set_function("IsA", [](uintptr_t a, uintptr_t cls) { return (a && cls) ? ((SDK::AActor*)a)->IsA((SDK::UClass*)cls) : false; });
     actor_api.set_function("GetLocation", [](uintptr_t a) -> sol::optional<SDK::FVector> { return (a) ? sol::make_optional(((SDK::AActor*)a)->K2_GetActorLocation()) : sol::nullopt; });
@@ -192,25 +190,23 @@ void LuaManager::BindSDK() {
         return (act && act->Class) ? act->Class->GetName() : "";
         });
 
-    // --- 3. 生物/玩家接口 (Character) ---
     auto char_api = m_lua->create_named_table("Character");
     char_api.set_function("GetInfo", [](uintptr_t a) {
         auto c = (SDK::APrimalCharacter*)a;
         if (!c) return std::make_tuple(0.0f, 0.0f, false, std::string("Unknown"));
 
         std::string name = c->GetDescriptiveName().ToString();
-        // 如果有 PlayerState，则获取玩家名
+
         if (c->PlayerState) name = c->PlayerState->GetPlayerName().ToString();
 
         return std::make_tuple(c->GetHealth(), c->GetMaxHealth(), (bool)c->IsDead(), name);
         });
-    // 专门用于判断团队关系 (如果你 C++ 已经实现了 g_ESP::GetRelation)
+
     char_api.set_function("GetRelation", [](uintptr_t target, uintptr_t local) -> int {
         if (!target || !local) return 0;
         return (int)g_ESP::GetRelation((SDK::APrimalCharacter*)target, (SDK::APrimalCharacter*)local);
         });
 
-    // --- 4. 掉落物品接口 (DroppedItem & Item) ---
     auto item_api = m_lua->create_named_table("Item");
     item_api.set_function("GetDroppedInfo", [](uintptr_t a) {
         auto dropped = (SDK::ADroppedItem*)a;
@@ -224,7 +220,6 @@ void LuaManager::BindSDK() {
         return std::make_tuple(true, name, it->ItemQuantity, it->ItemRating, (bool)it->bIsBlueprint, className);
         });
 
-    // --- 5. 补给箱接口 (Container) ---
     auto cont_api = m_lua->create_named_table("Container");
     cont_api.set_function("GetInfo", [](uintptr_t a) {
         auto c = (SDK::APrimalStructureItemContainer*)a;
@@ -233,7 +228,6 @@ void LuaManager::BindSDK() {
         return name;
         });
 
-    // --- 6. PC 控制器接口 ---
     auto pc_api = m_lua->create_named_table("PC");
     pc_api.set_function("GetPawn", [](uintptr_t pc) -> uintptr_t { return pc ? (uintptr_t)((SDK::APlayerController*)pc)->Pawn : 0; });
     pc_api.set_function("ProjectToScreen", [](uintptr_t pc, SDK::FVector worldLoc) -> std::tuple<bool, float, float> {

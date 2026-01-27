@@ -106,7 +106,6 @@ namespace g_ESP {
             leftY += textSize.y + 1.0f;
         }
 
-        // 将 ImU32 解为浮点颜色并乘以 alphaMult，再转回 U32
         ImVec4 baseCol = ImGui::ColorConvertU32ToFloat4(color);
         baseCol.w *= alphaMult;
         ImU32 col = ImGui::ColorConvertFloat4ToU32(baseCol);
@@ -114,14 +113,10 @@ namespace g_ESP {
         ImVec4 shadowCol = ImVec4(0, 0, 0, 0.8f * alphaMult);
         ImU32 sCol = ImGui::ColorConvertFloat4ToU32(shadowCol);
 
-        // 阴影 + 文本（带 alphaMult）
         drawList->AddText(ImVec2(drawPos.x + 1, drawPos.y + 1), sCol, text.c_str());
         drawList->AddText(drawPos, col, text.c_str());
     }
 
-    // 修正版 DrawOutOfFOV：
-    // - 用水平平面上的角度 (atan2(delta.Y, delta.X) - yaw) 来决定方向（避免 pitch 导致上下翻转的问题）
-    // - 仍然支持 breathing alpha，并乘以传入的 alphaMult（用于淡入/淡出）
     void DrawOutOfFOV(const SDK::FVector& targetLoc, SDK::APlayerController* LocalPC, const std::vector<OOFFlag>& flags, float alphaMult /*=1.0f*/) {
         if (targetLoc.X == 0 && targetLoc.Y == 0 && targetLoc.Z == 0) return;
         if (!LocalPC || !LocalPC->Pawn || !LocalPC->PlayerCameraManager) return;
@@ -133,28 +128,22 @@ namespace g_ESP {
         SDK::FVector playerLoc = LocalPC->Pawn->K2_GetActorLocation();
         SDK::FVector delta = targetLoc - playerLoc;
 
-        // 使用 camera yaw（仅水平旋转）来计算在平面上的相对角度
         const float PI = 3.1415926535f;
         SDK::FRotator cameraRot = LocalPC->PlayerCameraManager->GetCameraRotation();
         float yawRad = cameraRot.Yaw * (PI / 180.0f);
 
-        // 计算平面角度（忽略 Z，防止 pitch 导致上下颠倒）
         float planarAngle = atan2f(delta.Y, delta.X) - yawRad;
 
-        // 规范化到 [-PI, PI]
         while (planarAngle > PI) planarAngle -= 2.0f * PI;
         while (planarAngle < -PI) planarAngle += 2.0f * PI;
 
-        // OOF 半径配置
         float radiusX = (screenSize.x * 0.45f) * g_Config::OOFRadius;
         float radiusY = (screenSize.y * 0.45f) * g_Config::OOFRadius;
 
         ImVec2 drawPos;
         drawPos.x = screenCenter.x + sinf(planarAngle) * radiusX;
-        // 注意：ImGui 屏幕坐标的 Y 轴朝下，所以使用减法来把角度 0 放在上方（像原实现）
         drawPos.y = screenCenter.y - cosf(planarAngle) * radiusY;
 
-        // 呼吸/闪烁效果（和以前一致），再乘以 alphaMult（entry.alpha）
         static float breathTime = 0.0f;
         breathTime += ImGui::GetIO().DeltaTime;
 
@@ -167,7 +156,7 @@ namespace g_ESP {
         float alphaValue = g_Config::OOFMinAlpha + (g_Config::OOFMaxAlpha - g_Config::OOFMinAlpha) * breathCycle;
 
         ImVec4 baseColor = *(ImVec4*)g_Config::OOFColor;
-        baseColor.w = alphaValue * alphaMult; // 应用整体 alphaMult（支持淡入/淡出）
+        baseColor.w = alphaValue * alphaMult;
         ImU32 triCol = ImGui::ColorConvertFloat4ToU32(baseColor);
 
         ImDrawList* drawList = ImGui::GetBackgroundDrawList();
@@ -186,7 +175,6 @@ namespace g_ESP {
             float tx = std::clamp(drawPos.x - (textSize.x * 0.5f), 10.0f, screenSize.x - textSize.x - 10.0f);
             float ty = std::clamp(drawPos.y + textOffsetY, 10.0f, screenSize.y - textSize.y - 10.0f);
 
-            // 使用 flag.color，但乘以 alphaMult（并通过 AddFlag 的行为保持样式）
             ImVec4 fcol = ImGui::ColorConvertU32ToFloat4(flag.color);
             fcol.w *= alphaMult;
             ImU32 fcolU = ImGui::ColorConvertFloat4ToU32(fcol);

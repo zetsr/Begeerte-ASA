@@ -15,8 +15,7 @@ namespace g_DrawESP {
         return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
     }
 
-    // 淡入/淡出时长（秒）
-    static constexpr float FADE_IN_TIME = 0.12f;
+    static constexpr float FADE_IN_TIME = 0.10f;
     static constexpr float FADE_OUT_TIME = 0.20f;
 
     struct CachedFlag {
@@ -43,7 +42,6 @@ namespace g_DrawESP {
         float cachedHP = 0.0f;
         float cachedMaxHP = 0.0f;
 
-        // per-entry draw toggles (snapshot at observation)
         bool shouldDrawBox = false;
         bool shouldDrawHealthBar = false;
         bool shouldDrawName = false;
@@ -91,14 +89,12 @@ namespace g_DrawESP {
 
         SDK::TArray<SDK::AActor*>& Actors = World->PersistentLevel->Actors;
 
-        // Mark all entries not seen this frame
         for (auto& kv : s_entries) {
             kv.second.aliveThisFrame = false;
         }
 
         std::string searchFilter = g_Config::entitySearchBuf;
 
-        // 1) Scan current actors and update/create entries
         for (int i = 0; i < Actors.Num(); i++) {
             SDK::AActor* TargetActor = Actors[i];
 
@@ -110,7 +106,6 @@ namespace g_DrawESP {
             entry.actorKey = key;
             entry.lastSeenTime = 0.0f;
 
-            // If hidden, treat as should fade out (and don't mark aliveThisFrame)
             if (TargetActor->bHidden) {
                 entry.targetAlpha = 0.0f;
                 entry.lastWorldLoc = TargetActor->K2_GetActorLocation();
@@ -118,18 +113,15 @@ namespace g_DrawESP {
                 continue;
             }
 
-            // Else mark alive this frame
             entry.aliveThisFrame = true;
             entry.lastWorldLoc = TargetActor->K2_GetActorLocation();
 
-            // Case A: Character (players/dinos)
             if (TargetActor->IsA(SDK::APrimalCharacter::StaticClass())) {
                 SDK::APrimalCharacter* TargetChar = (SDK::APrimalCharacter*)TargetActor;
                 SDK::APrimalCharacter* LocalChar = (SDK::APrimalCharacter*)LocalPC->Pawn;
 
                 bool isDead = TargetChar->IsDead();
                 if (isDead) {
-                    // entity dead -> start fading out, but cache last rect so fade uses last position
                     entry.targetAlpha = 0.0f;
                     g_ESP::BoxRect rect = g_ESP::DrawBox(TargetActor,
                         255.0f, 255.0f, 255.0f, 255.0f, 0.5f, true);
@@ -183,7 +175,6 @@ namespace g_DrawESP {
 
                 SDK::FVector actorLoc = TargetActor->K2_GetActorLocation();
 
-                // compute cached rect (test only)
                 g_ESP::BoxRect rect = g_ESP::DrawBox(TargetActor,
                     BoxColor[0] * 255.0f, BoxColor[1] * 255.0f,
                     BoxColor[2] * 255.0f, BoxColor[3] * 255.0f, 0.5f, true);
@@ -197,14 +188,12 @@ namespace g_DrawESP {
                 entry.cachedHP = TargetChar->GetHealth();
                 entry.cachedMaxHP = TargetChar->GetMaxHealth();
 
-                // store toggles (this is the fix: store per-entry desired draw flags)
                 entry.shouldDrawBox = bDrawBox;
                 entry.shouldDrawHealthBar = bDrawHealthBar;
                 entry.shouldDrawName = bDrawName;
                 entry.shouldDrawSpecies = bDrawSpecies;
                 entry.shouldDrawDistance = bDrawDistance;
 
-                // Ensure we cache the name if name drawing is enabled
                 if (bDrawName) {
                     entry.name = TargetPS ? TargetPS->GetPlayerName().ToString() : TargetChar->GetDescriptiveName().ToString();
                 }
@@ -212,7 +201,6 @@ namespace g_DrawESP {
                     entry.name.clear();
                 }
 
-                // prepare flags only if relevant (e.g. health text only if health bar enabled)
                 entry.flags.clear();
                 if (bDrawHealthBar) {
                     std::string hpStr = std::to_string((int)entry.cachedHP);
@@ -230,7 +218,6 @@ namespace g_DrawESP {
                     entry.flags.push_back({ std::to_string((int)dist) + "m", g_Config::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
                 }
 
-                // On-screen / off-screen
                 SDK::FVector2D screenPos;
                 if (LocalPC->ProjectWorldLocationToScreen(actorLoc, &screenPos, false)) {
                     if (screenPos.X > 0 && screenPos.X < screenW && screenPos.Y > 0 && screenPos.Y < screenH) {
@@ -239,7 +226,6 @@ namespace g_DrawESP {
                     }
                     else {
                         if (g_Config::bEnableOOF) {
-                            // OOF: keep name/distance flags based on toggles
                             entry.isOOF = true;
                             entry.targetAlpha = 1.0f;
                             entry.flags.clear();
@@ -256,9 +242,8 @@ namespace g_DrawESP {
                     entry.targetAlpha = 0.0f;
                     entry.aliveThisFrame = false;
                 }
-            } // end character handling
+            }
 
-            // Case B: Dropped items
             else if (g_Config::bDrawDroppedItems && TargetActor->IsA(SDK::ADroppedItem::StaticClass())) {
                 SDK::ADroppedItem* DroppedItem = (SDK::ADroppedItem*)TargetActor;
                 if (!DroppedItem || !DroppedItem->MyItem) {
@@ -322,17 +307,15 @@ namespace g_DrawESP {
                         if (Item->ItemQuantity > 1) label += " x" + std::to_string(Item->ItemQuantity);
                         if (Item->bIsBlueprint) label = "[BP] " + label;
 
-                        // Items: only flags (name + distance). Do NOT draw icon/box.
                         entry.flags.push_back({ label, finalCol, g_ESP::FlagPos::Right });
                         entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(200, 200, 200, 200), g_ESP::FlagPos::Right });
 
                         entry.boxColor = finalCol;
                         entry.nameColor = ToImColor(220, 220, 220, 255);
 
-                        // set draw toggles for items (no main box, no health)
                         entry.shouldDrawBox = false;
                         entry.shouldDrawHealthBar = false;
-                        entry.shouldDrawName = false; // avoid duplicating with flags
+                        entry.shouldDrawName = false;
                         entry.shouldDrawDistance = true;
                         entry.shouldDrawSpecies = false;
                     }
@@ -347,7 +330,6 @@ namespace g_DrawESP {
                 }
             }
 
-            // Case C: Supply crates / containers
             else if (g_Config::bDrawSupplyDrops && TargetActor->IsA(SDK::APrimalStructureItemContainer::StaticClass())) {
                 if (TargetActor->IsA(SDK::APrimalStructureTurret::StaticClass())) {
                     entry.targetAlpha = 0.0f;
@@ -411,7 +393,6 @@ namespace g_DrawESP {
                         entry.boxColor = crateCol;
                         entry.nameColor = ToImColor(220, 220, 220, 255);
 
-                        // crates treated like items — only flags
                         entry.shouldDrawBox = false;
                         entry.shouldDrawHealthBar = false;
                         entry.shouldDrawName = false;
@@ -429,20 +410,17 @@ namespace g_DrawESP {
                 }
             }
             else {
-                // other types: don't show
                 entry.targetAlpha = 0.0f;
                 entry.aliveThisFrame = false;
             }
-        } // end actors loop
+        }
 
-        // Ensure all entries not seen this frame begin fade out
         for (auto& kv : s_entries) {
             if (!kv.second.aliveThisFrame) {
                 kv.second.targetAlpha = 0.0f;
             }
         }
 
-        // 2) Update alpha and draw cached entries
         std::vector<uintptr_t> toErase;
         for (auto& kv : s_entries) {
             ESPEntry& entry = kv.second;
@@ -459,7 +437,6 @@ namespace g_DrawESP {
                 float alpha255 = entry.alpha * 255.0f;
                 ImDrawList* drawList = ImGui::GetBackgroundDrawList();
 
-                // Draw box only if entry.shouldDrawBox and rect valid and not an item
                 if (!entry.isItem && entry.shouldDrawBox && entry.cachedRect.valid) {
                     ImVec4 boxF = ImGui::ColorConvertU32ToFloat4(entry.boxColor);
                     float drawA = entry.configBoxAlpha * entry.alpha; // 0..1
@@ -471,12 +448,10 @@ namespace g_DrawESP {
                     drawList->AddRect(entry.cachedRect.topLeft, entry.cachedRect.bottomRight, col, 0.0f, 0, 1.0f);
                 }
 
-                // Health bar: only draw if we recorded shouldDrawHealthBar
                 if (!entry.isItem && entry.shouldDrawHealthBar && entry.cachedMaxHP > 0.0f) {
                     g_ESP::DrawHealthBar(entry.cachedRect, entry.cachedHP, entry.cachedMaxHP, alpha255);
                 }
 
-                // Name: draw only if shouldDrawName (we draw cached name if present)
                 if (entry.shouldDrawName && !entry.name.empty() && entry.cachedRect.valid) {
                     ImVec4 nf = ImGui::ColorConvertU32ToFloat4(entry.nameColor);
                     nf.w *= entry.alpha;
@@ -489,14 +464,12 @@ namespace g_DrawESP {
                     drawList->AddText(textPos, ncol, entry.name.c_str());
                 }
 
-                // Flags: use FlagManager, pass entry.alpha as alphaMult
                 g_ESP::FlagManager fm;
                 fm.Reset();
                 for (auto& f : entry.flags) {
                     fm.AddFlag(entry.cachedRect, f.text, f.color, f.pos, entry.alpha);
                 }
 
-                // OOF: draw using lastWorldLoc, passing alpha
                 if (entry.isOOF) {
                     std::vector<g_ESP::OOFFlag> oofFlags;
                     for (auto& ff : entry.flags) oofFlags.push_back({ ff.text, ff.color });
