@@ -130,12 +130,16 @@ namespace g_ESP {
 
         const float PI = 3.1415926535f;
         SDK::FRotator cameraRot = LocalPC->PlayerCameraManager->GetCameraRotation();
+
         float yawRad = cameraRot.Yaw * (PI / 180.0f);
-
         float planarAngle = atan2f(delta.Y, delta.X) - yawRad;
-
         while (planarAngle > PI) planarAngle -= 2.0f * PI;
         while (planarAngle < -PI) planarAngle += 2.0f * PI;
+
+        float pitchRad = cameraRot.Pitch * (PI / 180.0f);
+        float horizontalDist = sqrtf(delta.X * delta.X + delta.Y * delta.Y);
+        float targetVerticalAngle = atan2f(delta.Z, horizontalDist);
+        float relativeVerticalAngle = targetVerticalAngle - pitchRad;
 
         float radiusX = (screenSize.x * 0.45f) * g_Config::OOFRadius;
         float radiusY = (screenSize.y * 0.45f) * g_Config::OOFRadius;
@@ -144,6 +148,17 @@ namespace g_ESP {
         drawPos.x = screenCenter.x + sinf(planarAngle) * radiusX;
         drawPos.y = screenCenter.y - cosf(planarAngle) * radiusY;
 
+        if (relativeVerticalAngle < -0.1f) {
+            if (drawPos.y < screenCenter.y) {
+                drawPos.y = screenCenter.y + (screenCenter.y - drawPos.y);
+            }
+        }
+        else if (relativeVerticalAngle > 0.1f) {
+            if (drawPos.y > screenCenter.y) {
+                drawPos.y = screenCenter.y - (drawPos.y - screenCenter.y);
+            }
+        }
+
         static float breathTime = 0.0f;
         breathTime += ImGui::GetIO().DeltaTime;
 
@@ -151,7 +166,6 @@ namespace g_ESP {
         float maxDistance = 500.0f;
         float distanceRatio = 1.0f - std::clamp(distance3D / maxDistance, 0.0f, 1.0f);
         float dynamicSpeed = g_Config::OOFBreathSpeed * (1.0f + distanceRatio * 2.0f);
-
         float breathCycle = sinf(breathTime * dynamicSpeed) * 0.5f + 0.5f;
         float alphaValue = g_Config::OOFMinAlpha + (g_Config::OOFMaxAlpha - g_Config::OOFMinAlpha) * breathCycle;
 
@@ -181,6 +195,7 @@ namespace g_ESP {
 
             drawList->AddText(ImVec2(tx + 1, ty + 1), ToImColor(0, 0, 0, 200 * alphaMult), flag.text.c_str());
             drawList->AddText(ImVec2(tx, ty), fcolU, flag.text.c_str());
+
             textOffsetY += textSize.y + 1.0f;
         }
     }

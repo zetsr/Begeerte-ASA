@@ -11,7 +11,7 @@
 #include "Configs.h"
 #include "DrawESP.h"
 #include "DrawImGui.h"
-#include "Aimbot.h"
+// #include "Aimbot.h"
 #include "LuaManager.h"
 
 #include <cstdio>
