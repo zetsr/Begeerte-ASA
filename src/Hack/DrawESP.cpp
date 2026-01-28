@@ -330,6 +330,50 @@ namespace g_DrawESP {
                 }
             }
 
+            else if (g_Config::bDrawStructures && TargetActor->IsA(SDK::APrimalStructure::StaticClass())) {
+                SDK::APrimalStructure* Structure = (SDK::APrimalStructure*)TargetActor;
+                if (Structure->Health < 0.1f) {
+                    entry.targetAlpha = 0.0f;
+                    entry.aliveThisFrame = false;
+                    continue;
+                }
+                float dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                if (dist > g_Config::StructureMaxDistance) {
+                    entry.targetAlpha = 0.0f;
+                    entry.aliveThisFrame = false;
+                    continue;
+                }
+                SDK::FVector2D screenPos;
+                if (LocalPC->ProjectWorldLocationToScreen(TargetActor->K2_GetActorLocation(), &screenPos, false)) {
+                    entry.aliveThisFrame = true;
+                    entry.targetAlpha = 1.0f;
+                    entry.isItem = true;
+                    entry.cachedRect.valid = true;
+                    entry.cachedRect.topLeft = ImVec2(screenPos.X - 2, screenPos.Y - 2);
+                    entry.cachedRect.bottomRight = ImVec2(screenPos.X + 2, screenPos.Y + 2);
+                    std::string sName = Structure->GetDescriptiveName().ToString();
+                    if (sName.empty() || sName == "None") sName = "Structure";
+                    float curHP = Structure->Health;
+                    float maxHP = Structure->MaxHealth;
+                    int hpPercent = (maxHP > 0) ? (int)((curHP / maxHP) * 100.0f) : 0;
+                    std::string ownerStr = Structure->OwnerName.ToString();
+                    if (ownerStr.empty() || ownerStr == "None") {
+                        ownerStr = "*";
+                    }
+                    entry.flags.clear();
+                    entry.flags.push_back({ "[" + sName + "]", ToImColor(255, 255, 180, 255), g_ESP::FlagPos::Right });
+                    entry.flags.push_back({ "" + ownerStr, ToImColor(100, 255, 255, 255), g_ESP::FlagPos::Right });
+                    ImU32 hpColor = (hpPercent > 50) ? ToImColor(120, 255, 120, 255) : ToImColor(255, 100, 100, 255);
+                    std::string hpText = "" + std::to_string((int)curHP) + " (" + std::to_string(hpPercent) + "%)";
+                    entry.flags.push_back({ hpText, hpColor, g_ESP::FlagPos::Right });
+                    entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(255, 255, 255, 255), g_ESP::FlagPos::Right });
+                }
+                else {
+                    entry.targetAlpha = 0.0f;
+                    entry.aliveThisFrame = false;
+                }
+            }
+
             else if (g_Config::bDrawSupplyDrops && TargetActor->IsA(SDK::APrimalStructureItemContainer::StaticClass())) {
                 if (TargetActor->IsA(SDK::APrimalStructureTurret::StaticClass())) {
                     entry.targetAlpha = 0.0f;
@@ -403,50 +447,6 @@ namespace g_DrawESP {
                         entry.targetAlpha = 0.0f;
                         entry.aliveThisFrame = false;
                     }
-                }
-                else {
-                    entry.targetAlpha = 0.0f;
-                    entry.aliveThisFrame = false;
-                }
-            }
-
-            else if (g_Config::bDrawStructures && TargetActor->IsA(SDK::APrimalStructure::StaticClass())) {
-                SDK::APrimalStructure* Structure = (SDK::APrimalStructure*)TargetActor;
-                if (Structure->Health < 0.1f) {
-                    entry.targetAlpha = 0.0f;
-                    entry.aliveThisFrame = false;
-                    continue;
-                }
-                float dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
-                if (dist > g_Config::StructureMaxDistance) {
-                    entry.targetAlpha = 0.0f;
-                    entry.aliveThisFrame = false;
-                    continue;
-                }
-                SDK::FVector2D screenPos;
-                if (LocalPC->ProjectWorldLocationToScreen(TargetActor->K2_GetActorLocation(), &screenPos, false)) {
-                    entry.aliveThisFrame = true;
-                    entry.targetAlpha = 1.0f;
-                    entry.isItem = true;
-                    entry.cachedRect.valid = true;
-                    entry.cachedRect.topLeft = ImVec2(screenPos.X - 2, screenPos.Y - 2);
-                    entry.cachedRect.bottomRight = ImVec2(screenPos.X + 2, screenPos.Y + 2);
-                    std::string sName = Structure->GetDescriptiveName().ToString();
-                    if (sName.empty() || sName == "None") sName = "Structure";
-                    float curHP = Structure->Health;
-                    float maxHP = Structure->MaxHealth;
-                    int hpPercent = (maxHP > 0) ? (int)((curHP / maxHP) * 100.0f) : 0;
-                    std::string ownerStr = Structure->OwnerName.ToString();
-                    if (ownerStr.empty() || ownerStr == "None") {
-                        ownerStr = "*";
-                    }
-                    entry.flags.clear();
-                    entry.flags.push_back({ "[" + sName + "]", ToImColor(255, 255, 180, 255), g_ESP::FlagPos::Right });
-                    entry.flags.push_back({ "" + ownerStr, ToImColor(100, 255, 255, 255), g_ESP::FlagPos::Right });
-                    ImU32 hpColor = (hpPercent > 50) ? ToImColor(120, 255, 120, 255) : ToImColor(255, 100, 100, 255);
-                    std::string hpText = "" + std::to_string((int)curHP) + " (" + std::to_string(hpPercent) + "%)";
-                    entry.flags.push_back({ hpText, hpColor, g_ESP::FlagPos::Right });
-                    entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(255, 255, 255, 255), g_ESP::FlagPos::Right });
                 }
                 else {
                     entry.targetAlpha = 0.0f;
