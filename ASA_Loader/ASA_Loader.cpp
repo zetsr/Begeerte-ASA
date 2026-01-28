@@ -6,6 +6,7 @@
 #include <filesystem>
 #include <thread>
 #include <tlhelp32.h>
+#include <vector>
 
 #pragma comment(lib, "wininet.lib")
 #pragma comment(lib, "kernel32.lib")
@@ -17,29 +18,45 @@ const char* URL = "https://github.com/zetsr/Begeerte-ASA/raw/refs/heads/main/rel
 const char* DLL_NAME = "begeerte_ark_survival_ascended.dll";
 const char* TARGET_PROCESS = "ArkAscended.exe";
 
+// --- 工具函数：控制台输出 ---
 void WriteToConsoleBuffer(const std::string& text) {
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
     DWORD written = 0;
-    WriteFile(h, text.c_str(), text.length(), &written, NULL);
+    WriteFile(h, text.c_str(), (DWORD)text.length(), &written, NULL);
 }
 
+// --- 核心功能：挂起/恢复进程所有线程 ---
+typedef LONG(NTAPI* pNtSuspendProcess)(HANDLE ProcessHandle);
+typedef LONG(NTAPI* pNtResumeProcess)(HANDLE ProcessHandle);
+
+// 使用 ntdll 未公开 API 可以更高效地挂起整个进程
+bool SetProcessState(DWORD procID, bool suspend) {
+    HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, procID);
+    if (!hProcess) return false;
+
+    HMODULE hNtDll = GetModuleHandleA("ntdll.dll");
+    if (hNtDll) {
+        if (suspend) {
+            auto NtSuspendProcess = (pNtSuspendProcess)GetProcAddress(hNtDll, "NtSuspendProcess");
+            if (NtSuspendProcess) NtSuspendProcess(hProcess);
+        }
+        else {
+            auto NtResumeProcess = (pNtResumeProcess)GetProcAddress(hNtDll, "NtResumeProcess");
+            if (NtResumeProcess) NtResumeProcess(hProcess);
+        }
+    }
+    CloseHandle(hProcess);
+    return true;
+}
+
+// --- 业务逻辑：下载 DLL ---
 bool DownloadDLL() {
     const char* TEMP_DLL_NAME = "begeerte_ark_survival_ascended.dll.tmp";
-
     HINTERNET hInternet = InternetOpenA("DLLDownloader/1.0", INTERNET_OPEN_TYPE_PRECONFIG, NULL, NULL, 0);
-    if (!hInternet) {
-        char buf[256];
-        sprintf_s(buf, 256, "Failed to initialize internet: %lu\n", GetLastError());
-        WriteToConsoleBuffer(buf);
-        return false;
-    }
+    if (!hInternet) return false;
 
     HINTERNET hUrl = InternetOpenUrlA(hInternet, URL, "User-Agent: Mozilla/5.0\r\n", 0, INTERNET_FLAG_NO_CACHE_WRITE | INTERNET_FLAG_RELOAD, 0);
     if (!hUrl) {
-        char buf[256];
-        DWORD err = GetLastError();
-        sprintf_s(buf, 256, "Failed to open URL: %lu\n", err);
-        WriteToConsoleBuffer(buf);
         InternetCloseHandle(hInternet);
         return false;
     }
@@ -48,16 +65,8 @@ bool DownloadDLL() {
     DWORD sizeLen = sizeof(DWORD);
     HttpQueryInfoA(hUrl, HTTP_QUERY_CONTENT_LENGTH | HTTP_QUERY_FLAG_NUMBER, &fileSize, &sizeLen, NULL);
 
-    if (fileSize == 0) {
-        WriteToConsoleBuffer("Failed to get file size\n");
-        InternetCloseHandle(hUrl);
-        InternetCloseHandle(hInternet);
-        return false;
-    }
-
     HANDLE hFile = CreateFileA(TEMP_DLL_NAME, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
     if (hFile == INVALID_HANDLE_VALUE) {
-        WriteToConsoleBuffer("Failed to create temp file\n");
         InternetCloseHandle(hUrl);
         InternetCloseHandle(hInternet);
         return false;
@@ -65,34 +74,18 @@ bool DownloadDLL() {
 
     const DWORD BUFFER_SIZE = 1048576;
     BYTE* buffer = (BYTE*)malloc(BUFFER_SIZE);
-    if (!buffer) {
-        CloseHandle(hFile);
-        InternetCloseHandle(hUrl);
-        InternetCloseHandle(hInternet);
-        WriteToConsoleBuffer("Failed to allocate buffer\n");
-        return false;
-    }
-
     DWORD downloaded = 0;
-    DWORD totalKB = (fileSize + 1023) / 1024;
     bool success = true;
 
     while (true) {
         DWORD bytesRead = 0;
-        if (!InternetReadFile(hUrl, buffer, BUFFER_SIZE, &bytesRead) || bytesRead == 0) {
-            break;
-        }
-
+        if (!InternetReadFile(hUrl, buffer, BUFFER_SIZE, &bytesRead) || bytesRead == 0) break;
         DWORD bytesWritten = 0;
-        if (!WriteFile(hFile, buffer, bytesRead, &bytesWritten, NULL) || bytesWritten != bytesRead) {
+        if (!WriteFile(hFile, buffer, bytesRead, &bytesWritten, NULL)) {
             success = false;
             break;
         }
-
         downloaded += bytesRead;
-        DWORD currentKB = (downloaded + 1023) / 1024;
-        std::string msg = "Download " + std::to_string(currentKB) + "/" + std::to_string(totalKB) + " KB\n";
-        WriteToConsoleBuffer(msg);
     }
 
     free(buffer);
@@ -100,226 +93,114 @@ bool DownloadDLL() {
     InternetCloseHandle(hUrl);
     InternetCloseHandle(hInternet);
 
-    if (!success || downloaded != fileSize) {
-        DeleteFileA(TEMP_DLL_NAME);
-        WriteToConsoleBuffer("Download failed or incomplete\n");
-        return false;
+    if (success) {
+        MoveFileExA(TEMP_DLL_NAME, DLL_NAME, MOVEFILE_REPLACE_EXISTING);
+        return true;
     }
-
-    if (!ReplaceFileA(DLL_NAME, TEMP_DLL_NAME, NULL, REPLACEFILE_IGNORE_MERGE_ERRORS, NULL, NULL)) {
-        DWORD err = GetLastError();
-        if (err == ERROR_FILE_NOT_FOUND) {
-            if (!MoveFileA(TEMP_DLL_NAME, DLL_NAME)) {
-                DeleteFileA(TEMP_DLL_NAME);
-                WriteToConsoleBuffer("Failed to move temp file to DLL\n");
-                return false;
-            }
-        }
-        else {
-            DeleteFileA(TEMP_DLL_NAME);
-            WriteToConsoleBuffer("Failed to replace DLL\n");
-            return false;
-        }
-    }
-
-    return true;
+    return false;
 }
 
+// --- 业务逻辑：查找 PID ---
 DWORD FindProcessId(const char* procName) {
-    DWORD aProcesses[1024], cProcesses, cbNeeded;
     DWORD processID = 0;
-
-    while (true) {
-        if (EnumProcesses(aProcesses, sizeof(aProcesses), &cbNeeded)) {
-            cProcesses = cbNeeded / sizeof(DWORD);
-
-            for (DWORD i = 0; i < cProcesses; i++) {
-                HANDLE hProcess = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, aProcesses[i]);
-                if (hProcess) {
-                    DWORD dwSize = MAX_PATH;
-                    char szProcessName[MAX_PATH] = { 0 };
-                    GetModuleBaseNameA(hProcess, NULL, szProcessName, dwSize);
-
-                    if (strcmp(szProcessName, procName) == 0) {
-                        processID = aProcesses[i];
-                        CloseHandle(hProcess);
-                        return processID;
+    while (processID == 0) {
+        HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+        if (hSnapshot != INVALID_HANDLE_VALUE) {
+            PROCESSENTRY32 pe32;
+            pe32.dwSize = sizeof(PROCESSENTRY32);
+            if (Process32First(hSnapshot, &pe32)) {
+                do {
+                    if (_stricmp(pe32.szExeFile, procName) == 0) {
+                        processID = pe32.th32ProcessID;
+                        break;
                     }
-                    CloseHandle(hProcess);
-                }
+                } while (Process32Next(hSnapshot, &pe32));
             }
+            CloseHandle(hSnapshot);
         }
-
-        WriteToConsoleBuffer("Waiting for target process...\n");
-        Sleep(1000);
+        if (processID == 0) {
+            WriteToConsoleBuffer("Waiting for " + std::string(procName) + "...\n");
+            Sleep(1000);
+        }
     }
+    return processID;
 }
 
+// --- 业务逻辑：检查模块是否已加载 ---
 bool IsModuleLoaded(DWORD procID, const char* moduleName) {
     HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, procID);
-    if (hSnapshot == INVALID_HANDLE_VALUE) {
-        return false;
-    }
-
-    MODULEENTRY32 moduleEntry;
-    moduleEntry.dwSize = sizeof(MODULEENTRY32);
-
+    if (hSnapshot == INVALID_HANDLE_VALUE) return false;
+    MODULEENTRY32 me32 = { sizeof(MODULEENTRY32) };
     bool found = false;
-    if (Module32First(hSnapshot, &moduleEntry)) {
+    if (Module32First(hSnapshot, &me32)) {
         do {
-            if (_stricmp(moduleEntry.szModule, moduleName) == 0) {
+            if (_stricmp(me32.szModule, moduleName) == 0) {
                 found = true;
                 break;
             }
-        } while (Module32Next(hSnapshot, &moduleEntry));
+        } while (Module32Next(hSnapshot, &me32));
     }
-
     CloseHandle(hSnapshot);
     return found;
 }
 
-bool WaitForDX12Initialization(DWORD procID) {
-    WriteToConsoleBuffer("Waiting for DirectX 12 initialization...\n");
-
-    const char* dx12Modules[] = {
-        "d3d12.dll",
-        "dxgi.dll",
-        "d3d12core.dll"
-    };
-
-    const int MAX_WAIT_TIME = 30000;
-    const int CHECK_INTERVAL = 100;
-    int elapsed = 0;
-
-    bool allModulesLoaded = false;
-
-    while (elapsed < MAX_WAIT_TIME) {
-        bool currentCheck = true;
-
-        for (int i = 0; i < sizeof(dx12Modules) / sizeof(dx12Modules[0]); i++) {
-            if (!IsModuleLoaded(procID, dx12Modules[i])) {
-                currentCheck = false;
-                break;
-            }
-        }
-
-        if (currentCheck) {
-            if (!allModulesLoaded) {
-                allModulesLoaded = true;
-                WriteToConsoleBuffer("DirectX 12 modules detected, waiting for stabilization...\n");
-            }
-
-            bool stillLoaded = true;
-            for (int i = 0; i < sizeof(dx12Modules) / sizeof(dx12Modules[0]); i++) {
-                if (!IsModuleLoaded(procID, dx12Modules[i])) {
-                    stillLoaded = false;
-                    break;
-                }
-            }
-
-            if (stillLoaded) {
-                WriteToConsoleBuffer("DirectX 12 fully initialized\n");
-                return true;
-            }
-            else {
-                allModulesLoaded = false;
-            }
-        }
-
-        Sleep(CHECK_INTERVAL);
-        elapsed += CHECK_INTERVAL;
-
-        if (elapsed % 5000 == 0) {
-            char buf[256];
-            sprintf_s(buf, 256, "Still waiting for DX12... (%d seconds)\n", elapsed / 1000);
-            WriteToConsoleBuffer(buf);
-        }
-    }
-
-    WriteToConsoleBuffer("Warning: Max wait time reached, proceeding with injection\n");
-    return false;
-}
-
+// --- 业务逻辑：注入 DLL ---
 bool InjectDLL(DWORD procID) {
-    HANDLE hProcess = OpenProcess(PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_VM_OPERATION | PROCESS_VM_WRITE | PROCESS_VM_READ, FALSE, procID);
-    if (!hProcess) {
-        WriteToConsoleBuffer("Failed to open process\n");
-        return false;
-    }
+    HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, procID);
+    if (!hProcess) return false;
 
     char dllPath[MAX_PATH];
     GetFullPathNameA(DLL_NAME, MAX_PATH, dllPath, NULL);
 
-    size_t pathLen = strlen(dllPath) + 1;
-    LPVOID pDllPath = VirtualAllocEx(hProcess, NULL, pathLen, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
-    if (!pDllPath) {
-        WriteToConsoleBuffer("Failed to allocate memory in target process\n");
-        CloseHandle(hProcess);
-        return false;
-    }
+    LPVOID pDllPath = VirtualAllocEx(hProcess, NULL, strlen(dllPath) + 1, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+    WriteProcessMemory(hProcess, pDllPath, dllPath, strlen(dllPath) + 1, NULL);
 
-    if (!WriteProcessMemory(hProcess, pDllPath, dllPath, pathLen, NULL)) {
-        WriteToConsoleBuffer("Failed to write DLL path to target process\n");
-        VirtualFreeEx(hProcess, pDllPath, 0, MEM_RELEASE);
-        CloseHandle(hProcess);
-        return false;
-    }
-
-    HMODULE hKernel32 = GetModuleHandleA("kernel32.dll");
-    LPVOID pLoadLibrary = GetProcAddress(hKernel32, "LoadLibraryA");
-
+    LPVOID pLoadLibrary = GetProcAddress(GetModuleHandleA("kernel32.dll"), "LoadLibraryA");
     HANDLE hThread = CreateRemoteThread(hProcess, NULL, 0, (LPTHREAD_START_ROUTINE)pLoadLibrary, pDllPath, 0, NULL);
-    if (!hThread) {
-        WriteToConsoleBuffer("Failed to create remote thread\n");
-        VirtualFreeEx(hProcess, pDllPath, 0, MEM_RELEASE);
-        CloseHandle(hProcess);
-        return false;
+
+    if (hThread) {
+        WaitForSingleObject(hThread, INFINITE);
+        CloseHandle(hThread);
     }
 
-    WaitForSingleObject(hThread, INFINITE);
-    CloseHandle(hThread);
     VirtualFreeEx(hProcess, pDllPath, 0, MEM_RELEASE);
     CloseHandle(hProcess);
-
-    return true;
+    return hThread != NULL;
 }
 
+// --- 主程序 ---
 int main() {
-    WriteToConsoleBuffer("Starting DLL download...\n");
-
+    WriteToConsoleBuffer(">>> Initializing Downloader...\n");
     if (!DownloadDLL()) {
-        WriteToConsoleBuffer("Download failed\n");
+        WriteToConsoleBuffer("[-] Download failed.\n");
         return 1;
     }
-
-    WriteToConsoleBuffer("Download completed\n");
-    WriteToConsoleBuffer("Finding target process...\n");
 
     DWORD procID = FindProcessId(TARGET_PROCESS);
-    if (procID == 0) {
-        WriteToConsoleBuffer("Target process not found\n");
-        return 1;
+    WriteToConsoleBuffer("[+] Target found! PID: " + std::to_string(procID) + "\n");
+
+    // 等待 DX12 初始化以确保渲染上下文准备就绪
+    WriteToConsoleBuffer("[*] Waiting for DX12 modules...\n");
+    while (!IsModuleLoaded(procID, "d3d12.dll")) { Sleep(500); }
+    Sleep(1000);
+
+    // 关键步骤：挂起进程
+    WriteToConsoleBuffer("[!] Suspending target process...\n");
+    SetProcessState(procID, true);
+
+    WriteToConsoleBuffer("[*] Injecting DLL...\n");
+    if (InjectDLL(procID)) {
+        WriteToConsoleBuffer("[+] Injection successful!\n");
+    }
+    else {
+        WriteToConsoleBuffer("[-] Injection failed!\n");
     }
 
-    char buf[256];
-    sprintf_s(buf, 256, "Target process found (PID: %lu)\n", procID);
-    WriteToConsoleBuffer(buf);
+    // 关键步骤：恢复进程
+    WriteToConsoleBuffer("[!] Resuming target process...\n");
+    SetProcessState(procID, false);
 
-    WaitForDX12Initialization(procID);
+    WriteToConsoleBuffer(">>> Done. Exiting in 5s...\n");
     Sleep(5000);
-
-    WriteToConsoleBuffer("Injecting DLL...\n");
-
-    if (!InjectDLL(procID)) {
-        WriteToConsoleBuffer("Injection failed\n");
-        return 1;
-    }
-
-    WriteToConsoleBuffer("Injection successful\n");
-    WriteToConsoleBuffer("Waiting 5 seconds...\n");
-
-    Sleep(5000);
-
-    WriteToConsoleBuffer("Exiting\n");
     return 0;
 }
