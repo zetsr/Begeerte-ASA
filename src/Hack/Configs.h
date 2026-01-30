@@ -27,11 +27,15 @@ namespace g_Config {
 
     // 宝箱
     inline bool bDrawSupplyDrops = true;
-    inline float SupplyDropMaxDistance = 1500.0f;
+    inline float SupplyDropMaxDistance = 10000.0f;
 
     // 建筑
     inline bool bDrawStructures = true;
-    inline float StructureMaxDistance = 5.0f;
+    inline float StructureMaxDistance = 10000.0f;
+
+    // 水源
+    inline bool bDrawWater = true;
+    inline float WaterMaxDistance = 500.0f;
 
     // 全局
     inline bool bDrawBox = true;

@@ -1,0 +1,55 @@
+﻿cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
+  DrawESP.cpp
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Basic.hpp(853,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,48): warning C4369: “SDK::EPlayerHeatMapHeatLevel::EPlayerHeatMapHeatLevel_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(298,88): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(298,71): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(299,92): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(299,75): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(348,88): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(348,71): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(349,92): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(349,75): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(440,88): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(440,71): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(441,92): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(441,75): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(752,1): warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : 查看对正在编译的函数 模板 实例化“g_ESP::OOFFlag *std::vector<g_ESP::OOFFlag,std::allocator<g_ESP::OOFFlag>>::_Emplace_reallocate<_Ty>(g_ESP::OOFFlag *const ,_Ty &&)”的引用
+          with
+          [
+              _Ty=g_ESP::OOFFlag
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(734): message : 查看对正在编译的函数 模板 实例化“g_ESP::OOFFlag *std::vector<g_ESP::OOFFlag,std::allocator<g_ESP::OOFFlag>>::_Emplace_reallocate<_Ty>(g_ESP::OOFFlag *const ,_Ty &&)”的引用
+          with
+          [
+              _Ty=g_ESP::OOFFlag
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(748): message : 查看对正在编译的函数 模板 实例化“_Ty &std::vector<_Ty,std::allocator<_Ty>>::emplace_back<g_ESP::OOFFlag>(g_ESP::OOFFlag &&)”的引用
+          with
+          [
+              _Ty=g_ESP::OOFFlag
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(746): message : 在编译 类 模板 成员函数“void std::vector<g_ESP::OOFFlag,std::allocator<g_ESP::OOFFlag>>::push_back(_Ty &&)”时
+          with
+          [
+              _Ty=g_ESP::OOFFlag
+          ]
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(538): message : 查看对正在编译的函数 模板 实例化“void std::vector<g_ESP::OOFFlag,std::allocator<g_ESP::OOFFlag>>::push_back(_Ty &&)”的引用
+          with
+          [
+              _Ty=g_ESP::OOFFlag
+          ]
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(537): message : 查看对正在编译的 类 模板 实例化“std::vector<g_ESP::OOFFlag,std::allocator<g_ESP::OOFFlag>>”的引用
+    正在创建库 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\..\release\begeerte_ark_survival_ascended.lib 和对象 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\..\release\begeerte_ark_survival_ascended.exp
+  LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能
+  begeerte_ark_survival_ascended.vcxproj -> C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\release\begeerte_ark_survival_ascended.dll

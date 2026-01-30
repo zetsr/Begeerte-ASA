@@ -15,6 +15,26 @@ namespace g_DrawESP {
         return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
     }
 
+    inline ImU32 GetHealthColor(float healthPercent) {
+        healthPercent = (healthPercent < 0.0f) ? 0.0f : (healthPercent > 1.0f) ? 1.0f : healthPercent;
+
+        float r, g, b;
+        if (healthPercent > 0.5f) {
+            float t = (healthPercent - 0.5f) * 2.0f;
+            r = 1.0f - t;
+            g = 1.0f;
+            b = 0.0f;
+        }
+        else {
+            float t = healthPercent * 2.0f;
+            r = 1.0f;
+            g = t;
+            b = 0.0f;
+        }
+
+        return ToImColor(r * 255.0f, g * 255.0f, b * 255.0f, 255.0f);
+    }
+
     static constexpr float FADE_IN_TIME = 0.10f;
     static constexpr float FADE_OUT_TIME = 0.20f;
 
@@ -204,7 +224,8 @@ namespace g_DrawESP {
                 entry.flags.clear();
                 if (bDrawHealthBar) {
                     std::string hpStr = std::to_string((int)entry.cachedHP);
-                    ImU32 hpCol = (entry.cachedMaxHP > 0 && (entry.cachedHP / entry.cachedMaxHP) > 0.5f) ? ToImColor(100, 255, 100, 255) : ToImColor(255, 100, 100, 255);
+                    float healthPercent = (entry.cachedMaxHP > 0) ? (entry.cachedHP / entry.cachedMaxHP) : 0.0f;
+                    ImU32 hpCol = GetHealthColor(healthPercent);
                     entry.flags.push_back({ hpStr, hpCol, g_ESP::FlagPos::Left });
                 }
 
@@ -214,7 +235,10 @@ namespace g_DrawESP {
                 }
 
                 if (bDrawDistance) {
-                    float dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                    float dist = 0.0f;
+                    if (LocalPC->Pawn && TargetActor) {
+                        dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                    }
                     entry.flags.push_back({ std::to_string((int)dist) + "m", g_Config::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
                 }
 
@@ -230,12 +254,65 @@ namespace g_DrawESP {
                             entry.targetAlpha = 1.0f;
                             entry.flags.clear();
                             if (bDrawName) entry.flags.push_back({ entry.name.empty() ? (TargetPS ? TargetPS->GetPlayerName().ToString() : TargetChar->GetDescriptiveName().ToString()) : entry.name, entry.nameColor, g_ESP::FlagPos::Right });
-                            if (bDrawDistance) entry.flags.push_back({ std::to_string((int)(LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f)) + "m", g_Config::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
+                            float dist = 0.0f;
+                            if (LocalPC->Pawn && TargetActor) {
+                                dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                            }
+                            if (bDrawDistance) entry.flags.push_back({ std::to_string((int)(dist)) + "m", g_Config::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
                         }
                         else {
                             entry.targetAlpha = 0.0f;
                             entry.aliveThisFrame = false;
                         }
+                    }
+                }
+                else {
+                    entry.targetAlpha = 0.0f;
+                    entry.aliveThisFrame = false;
+                }
+            }
+
+            else if (g_Config::bDrawWater && TargetActor->IsA(SDK::APhysicsVolume::StaticClass()) && ((SDK::APhysicsVolume*)TargetActor)->bWaterVolume) {
+                SDK::APhysicsVolume* WaterVolume = (SDK::APhysicsVolume*)TargetActor;
+                SDK::FVector Origin, Extend;
+                TargetActor->GetActorBounds(false, &Origin, &Extend, false);
+
+                SDK::FVector WaterSurfaceLocation = { Origin.X, Origin.Y, Origin.Z + Extend.Z };
+                float dist = 0.0f;
+                if (LocalPC->Pawn && TargetActor) {
+                    dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                }
+
+                if (dist > g_Config::WaterMaxDistance) {
+                    entry.targetAlpha = 0.0f;
+                    entry.aliveThisFrame = false;
+                    continue;
+                }
+
+                SDK::FVector2D screenPos;
+                if (LocalPC->ProjectWorldLocationToScreen(WaterSurfaceLocation, &screenPos, false)) {
+                    if (screenPos.X > 0 && screenPos.X < screenW && screenPos.Y > 0 && screenPos.Y < screenH) {
+                        entry.aliveThisFrame = true;
+                        entry.targetAlpha = 1.0f;
+                        entry.isItem = true;
+                        entry.cachedRect.topLeft = ImVec2(screenPos.X - 2, screenPos.Y - 2);
+                        entry.cachedRect.bottomRight = ImVec2(screenPos.X + 2, screenPos.Y + 2);
+                        entry.cachedRect.valid = true;
+                        entry.flags.clear();
+                        ImU32 waterColor = ToImColor(0, 200, 255, 255);
+
+                        entry.flags.push_back({ "[Water]", waterColor, g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(200, 200, 200, 255), g_ESP::FlagPos::Right });
+
+                        entry.shouldDrawBox = false;
+                        entry.shouldDrawHealthBar = false;
+                        entry.shouldDrawName = false;
+                        entry.shouldDrawDistance = true;
+                        entry.shouldDrawSpecies = false;
+                    }
+                    else {
+                        entry.targetAlpha = 0.0f;
+                        entry.aliveThisFrame = false;
                     }
                 }
                 else {
@@ -253,7 +330,10 @@ namespace g_DrawESP {
                 }
 
                 SDK::UPrimalItem* Item = DroppedItem->MyItem;
-                float dist = LocalPC->Pawn ? LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f : 0.0f;
+                float dist = 0.0f;
+                if (LocalPC->Pawn && TargetActor) {
+                    dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                }
                 if (dist > g_Config::DroppedItemMaxDistance) {
                     entry.targetAlpha = 0.0f;
                     entry.aliveThisFrame = false;
@@ -332,64 +412,19 @@ namespace g_DrawESP {
 
             else if (g_Config::bDrawStructures && TargetActor->IsA(SDK::APrimalStructure::StaticClass())) {
                 SDK::APrimalStructure* Structure = (SDK::APrimalStructure*)TargetActor;
-                if (Structure->Health < 0.1f) {
+
+                if (Structure->Health <= 0.0f) {
                     entry.targetAlpha = 0.0f;
                     entry.aliveThisFrame = false;
                     continue;
                 }
-                float dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+
+                float dist = 0.0f;
+                if (LocalPC->Pawn && TargetActor) {
+                    dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                }
+
                 if (dist > g_Config::StructureMaxDistance) {
-                    entry.targetAlpha = 0.0f;
-                    entry.aliveThisFrame = false;
-                    continue;
-                }
-                SDK::FVector2D screenPos;
-                if (LocalPC->ProjectWorldLocationToScreen(TargetActor->K2_GetActorLocation(), &screenPos, false)) {
-                    entry.aliveThisFrame = true;
-                    entry.targetAlpha = 1.0f;
-                    entry.isItem = true;
-                    entry.cachedRect.valid = true;
-                    entry.cachedRect.topLeft = ImVec2(screenPos.X - 2, screenPos.Y - 2);
-                    entry.cachedRect.bottomRight = ImVec2(screenPos.X + 2, screenPos.Y + 2);
-                    std::string sName = Structure->GetDescriptiveName().ToString();
-                    if (sName.empty() || sName == "None") sName = "Structure";
-                    float curHP = Structure->Health;
-                    float maxHP = Structure->MaxHealth;
-                    int hpPercent = (maxHP > 0) ? (int)((curHP / maxHP) * 100.0f) : 0;
-                    std::string ownerStr = Structure->OwnerName.ToString();
-                    if (ownerStr.empty() || ownerStr == "None") {
-                        ownerStr = "*";
-                    }
-                    entry.flags.clear();
-                    entry.flags.push_back({ "[" + sName + "]", ToImColor(255, 255, 180, 255), g_ESP::FlagPos::Right });
-                    entry.flags.push_back({ "" + ownerStr, ToImColor(100, 255, 255, 255), g_ESP::FlagPos::Right });
-                    ImU32 hpColor = (hpPercent > 50) ? ToImColor(120, 255, 120, 255) : ToImColor(255, 100, 100, 255);
-                    std::string hpText = "" + std::to_string((int)curHP) + " (" + std::to_string(hpPercent) + "%)";
-                    entry.flags.push_back({ hpText, hpColor, g_ESP::FlagPos::Right });
-                    entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(255, 255, 255, 255), g_ESP::FlagPos::Right });
-                }
-                else {
-                    entry.targetAlpha = 0.0f;
-                    entry.aliveThisFrame = false;
-                }
-            }
-
-            else if (g_Config::bDrawSupplyDrops && TargetActor->IsA(SDK::APrimalStructureItemContainer::StaticClass())) {
-                if (TargetActor->IsA(SDK::APrimalStructureTurret::StaticClass())) {
-                    entry.targetAlpha = 0.0f;
-                    entry.aliveThisFrame = false;
-                    continue;
-                }
-
-                std::string actorName = TargetActor->Class ? TargetActor->Class->GetName() : "";
-                if (actorName.find("Crate") == std::string::npos && actorName.find("SupplyDrop") == std::string::npos) {
-                    entry.targetAlpha = 0.0f;
-                    entry.aliveThisFrame = false;
-                    continue;
-                }
-
-                float dist = LocalPC->Pawn ? LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f : 0.0f;
-                if (dist > g_Config::SupplyDropMaxDistance) {
                     entry.targetAlpha = 0.0f;
                     entry.aliveThisFrame = false;
                     continue;
@@ -398,50 +433,33 @@ namespace g_DrawESP {
                 SDK::FVector2D screenPos;
                 if (LocalPC->ProjectWorldLocationToScreen(TargetActor->K2_GetActorLocation(), &screenPos, false)) {
                     if (screenPos.X > 0 && screenPos.X < screenW && screenPos.Y > 0 && screenPos.Y < screenH) {
+                        entry.aliveThisFrame = true;
                         entry.targetAlpha = 1.0f;
                         entry.isItem = true;
-                        entry.cachedRect.topLeft = ImVec2(screenPos.X - 5, screenPos.Y - 5);
-                        entry.cachedRect.bottomRight = ImVec2(screenPos.X + 5, screenPos.Y + 5);
                         entry.cachedRect.valid = true;
+                        entry.cachedRect.topLeft = ImVec2(screenPos.X - 2, screenPos.Y - 2);
+                        entry.cachedRect.bottomRight = ImVec2(screenPos.X + 2, screenPos.Y + 2);
 
-                        ImU32 crateCol = ToImColor(255, 255, 255, 255);
-                        std::string levelTag = "[Lvl 3]";
+                        std::string sName = Structure->GetDescriptiveName().ToString();
+                        if (sName.empty() || sName == "None") sName = "Structure";
 
-                        if (actorName.find("Level60") != std::string::npos || actorName.find("Red") != std::string::npos) {
-                            crateCol = ToImColor(255, 50, 50, 255); levelTag = "[Lvl 60]";
-                        }
-                        else if (actorName.find("Level45") != std::string::npos || actorName.find("Yellow") != std::string::npos) {
-                            crateCol = ToImColor(255, 255, 0, 255); levelTag = "[Lvl 45]";
-                        }
-                        else if (actorName.find("Level35") != std::string::npos || actorName.find("Purple") != std::string::npos) {
-                            crateCol = ToImColor(160, 32, 240, 255); levelTag = "[Lvl 35]";
-                        }
-                        else if (actorName.find("Level25") != std::string::npos || actorName.find("Blue") != std::string::npos) {
-                            crateCol = ToImColor(0, 191, 255, 255); levelTag = "[Lvl 25]";
-                        }
-                        else if (actorName.find("Level15") != std::string::npos || actorName.find("Green") != std::string::npos) {
-                            crateCol = ToImColor(50, 255, 50, 255); levelTag = "[Lvl 15]";
-                        }
-                        else if (actorName.find("Cave") != std::string::npos) {
-                            crateCol = ToImColor(0, 255, 255, 255); levelTag = "[Cave]";
-                        }
+                        float curHP = Structure->Health;
+                        float maxHP = Structure->MaxHealth;
+                        float healthPercent = (maxHP > 0) ? (curHP / maxHP) : 0.0f;
+                        int hpPercent = (int)(healthPercent * 100.0f);
 
-                        SDK::APrimalStructureItemContainer* Container = (SDK::APrimalStructureItemContainer*)TargetActor;
-                        std::string cDisplayName = Container->GetDescriptiveName().ToString();
-                        if (cDisplayName.empty() || cDisplayName == "None") cDisplayName = "Supply Crate";
+                        std::string ownerStr = Structure->OwnerName.ToString();
+                        if (ownerStr.empty() || ownerStr == "None") {
+                            ownerStr = "*";
+                        }
 
                         entry.flags.clear();
-                        entry.flags.push_back({ levelTag + " " + cDisplayName, crateCol, g_ESP::FlagPos::Right });
-                        entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(220, 220, 220, 255), g_ESP::FlagPos::Right });
-
-                        entry.boxColor = crateCol;
-                        entry.nameColor = ToImColor(220, 220, 220, 255);
-
-                        entry.shouldDrawBox = false;
-                        entry.shouldDrawHealthBar = false;
-                        entry.shouldDrawName = false;
-                        entry.shouldDrawDistance = true;
-                        entry.shouldDrawSpecies = false;
+                        entry.flags.push_back({ "[" + sName + "]", ToImColor(255, 255, 180, 255), g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ ownerStr, ToImColor(100, 255, 255, 255), g_ESP::FlagPos::Right });
+                        ImU32 hpColor = GetHealthColor(healthPercent);
+                        std::string hpText = std::to_string((int)curHP) + " (" + std::to_string(hpPercent) + "%)";
+                        entry.flags.push_back({ hpText, hpColor, g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(255, 255, 255, 255), g_ESP::FlagPos::Right });
                     }
                     else {
                         entry.targetAlpha = 0.0f;
@@ -457,6 +475,7 @@ namespace g_DrawESP {
                 entry.targetAlpha = 0.0f;
                 entry.aliveThisFrame = false;
             }
+
         }
 
         for (auto& kv : s_entries) {
@@ -483,7 +502,7 @@ namespace g_DrawESP {
 
                 if (!entry.isItem && entry.shouldDrawBox && entry.cachedRect.valid) {
                     ImVec4 boxF = ImGui::ColorConvertU32ToFloat4(entry.boxColor);
-                    float drawA = entry.configBoxAlpha * entry.alpha; // 0..1
+                    float drawA = entry.configBoxAlpha * entry.alpha;
                     ImU32 bgShadow = ImGui::ColorConvertFloat4ToU32(ImVec4(0, 0, 0, drawA));
                     ImU32 col = ImGui::ColorConvertFloat4ToU32(ImVec4(boxF.x, boxF.y, boxF.z, drawA));
                     drawList->AddRect(ImVec2(entry.cachedRect.topLeft.x - 1, entry.cachedRect.topLeft.y - 1),

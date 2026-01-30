@@ -529,18 +529,22 @@ namespace g_DrawImGui {
 
 						ImGui::TextColored(ThemeColors::ACCENT, U8("世界信息"));
 						DrawAnimatedSeparator();
+
 						DrawCustomCheckbox(U8("掉落的物品"), &g_Config::bDrawDroppedItems);
 						if (g_Config::bDrawDroppedItems) {
 							DrawCustomSliderFloat(U8("物品显示距离"), &g_Config::DroppedItemMaxDistance, 1.0f, 500.0f, "%.0f", 1.0f, "m");
 						}
-						DrawCustomCheckbox(U8("显示宝箱"), &g_Config::bDrawSupplyDrops);
-						if (g_Config::bDrawSupplyDrops) {
-							DrawCustomSliderFloat(U8("宝箱显示距离"), &g_Config::SupplyDropMaxDistance, 100.0f, 10000.0f, "%.0f", 100.0f, "m");
+						DrawAnimatedSeparator();
+
+						DrawCustomCheckbox(U8("显示建筑"), &g_Config::bDrawStructures);
+						if (g_Config::bDrawStructures) {
+							DrawCustomSliderFloat(U8("建筑显示距离"), &g_Config::StructureMaxDistance, 1.0f, 10000.0f, "%.0f", 1.0f, "m");
 						}
 						DrawAnimatedSeparator();
-						DrawCustomCheckbox(U8("显示建筑"), &g_Config::bDrawStructures);
-						if (g_Config::bDrawSupplyDrops) {
-							DrawCustomSliderFloat(U8("建筑显示距离"), &g_Config::StructureMaxDistance, 1.0f, 500.0f, "%.0f", 1.0f, "m");
+
+						DrawCustomCheckbox(U8("显示水源"), &g_Config::bDrawWater);
+						if (g_Config::bDrawWater) {
+							DrawCustomSliderFloat(U8("水源显示距离"), &g_Config::WaterMaxDistance, 1.0f, 10000.0f, "%.0f", 1.0f, "m");
 						}
 						DrawAnimatedSeparator();
 
