@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Struct_WeapAnimWith3P_V3_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Struct_WeapAnimWith3P_V3_structs.hpp"
 
 
 namespace SDK::Params

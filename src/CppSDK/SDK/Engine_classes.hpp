@@ -7593,6 +7593,7 @@ public:
 	uint8                                         BitPad_AA8_1 : 7;                                  // 0x0AA8(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
 	uint8                                         Pad_AA9[0x3];                                      // 0x0AA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint8                                         bForceShowMouseCursor : 1;                         // 0x0AAC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bForceHideMouseCursor : 1;                         // 0x0AAC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_AAD[0x3];                                      // 0x0AAD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -43421,14 +43422,14 @@ public:
 DUMPER7_ASSERTS_ISlateTextureAtlasInterface;
 
 // Class Engine.SoundClass
-// 0x01C0 (0x01E8 - 0x0028)
+// 0x01C8 (0x01F0 - 0x0028)
 class USoundClass final : public UObject
 {
 public:
-	struct FSoundClassProperties                  Properties;                                        // 0x0028(0x0198)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TArray<class USoundClass*>                    ChildClasses;                                      // 0x01C0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<struct FPassiveSoundMixModifier>       PassiveSoundMixModifiers;                          // 0x01D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	class USoundClass*                            ParentClass;                                       // 0x01E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FSoundClassProperties                  Properties;                                        // 0x0028(0x01A0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<class USoundClass*>                    ChildClasses;                                      // 0x01C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<struct FPassiveSoundMixModifier>       PassiveSoundMixModifiers;                          // 0x01D8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	class USoundClass*                            ParentClass;                                       // 0x01E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 
 public:
 	static class UClass* StaticClass()

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ShooterGame_structs.hpp"
 #include "CheatMenuCharacterLevelPreset_structs.hpp"
+#include "ShooterGame_structs.hpp"
 
 
 namespace SDK::Params

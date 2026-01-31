@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_OverlayProfiles_structs.hpp"
 #include "UMG_structs.hpp"
+#include "ENUM_OverlayProfiles_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

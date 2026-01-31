@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PrimalItemConsumableEatable_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "PrimalItemConsumableEatable_classes.hpp"
 
 
 namespace SDK

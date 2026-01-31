@@ -1,4 +1,19 @@
 ﻿cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
+  Aimbot.cpp
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Basic.hpp(853,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,48): warning C4369: “SDK::EPlayerHeatMapHeatLevel::EPlayerHeatMapHeatLevel_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\chrono(2198,9): warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\Aimbot.cpp(62,57): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\Aimbot.cpp(62,93): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
   DrawESP.cpp
 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Basic.hpp(853,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,2): warning C4309: “初始化”: 截断常量值
@@ -50,6 +65,102 @@ C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(538): message 
               _Ty=g_ESP::OOFFlag
           ]
 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawESP.cpp(537): message : 查看对正在编译的 类 模板 实例化“std::vector<g_ESP::OOFFlag,std::allocator<g_ESP::OOFFlag>>”的引用
+  DrawImGui.cpp
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Basic.hpp(853,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,48): warning C4369: “SDK::EPlayerHeatMapHeatLevel::EPlayerHeatMapHeatLevel_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\chrono(2198,9): warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawImGui.cpp(346,13): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawImGui.cpp(433,14): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\DrawImGui.cpp(492,16): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+  ESP.cpp
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Basic.hpp(853,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,48): warning C4369: “SDK::EPlayerHeatMapHeatLevel::EPlayerHeatMapHeatLevel_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(134,22): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(135,50): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(135,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(139,24): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(140,56): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(141,49): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(165,72): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(219,26): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(221,72): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(221,47): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(222,79): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\ESP.cpp(222,51): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(508,1): warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4947): message : 查看对正在编译的函数 模板 实例化“std::basic_ostream<char,std::char_traits<char>> &std::_Insert_string<char,std::char_traits<char>,unsigned __int64>(std::basic_ostream<char,std::char_traits<char>> &,const _Elem *const ,const _SizeT)”的引用
+          with
+          [
+              _Elem=char,
+              _SizeT=unsigned __int64
+          ]
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\UnrealContainers.hpp(339): message : 查看对正在编译的函数 模板 实例化“std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>,std::allocator<char>>(std::basic_ostream<char,std::char_traits<char>> &,const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)”的引用
+  LuaManager.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\chrono(2198,9): warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Basic.hpp(853,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,48): warning C4369: “SDK::EPlayerHeatMapHeatLevel::EPlayerHeatMapHeatLevel_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\LuaManager.cpp(15,40): warning C4101: “e”: 未引用的局部变量
+  SDK_Impl.cpp
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Basic.hpp(853,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,48): warning C4369: “SDK::EPlayerHeatMapHeatLevel::EPlayerHeatMapHeatLevel_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(508,1): warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstring(4947): message : 查看对正在编译的函数 模板 实例化“std::basic_ostream<char,std::char_traits<char>> &std::_Insert_string<char,std::char_traits<char>,unsigned __int64>(std::basic_ostream<char,std::char_traits<char>> &,const _Elem *const ,const _SizeT)”的引用
+          with
+          [
+              _Elem=char,
+              _SizeT=unsigned __int64
+          ]
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\UnrealContainers.hpp(339): message : 查看对正在编译的函数 模板 实例化“std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>,std::allocator<char>>(std::basic_ostream<char,std::char_traits<char>> &,const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)”的引用
+  dllmain.cpp
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Basic.hpp(853,38): warning C4369: “SDK::EObjectFlags::AllocatedInSharedPage”: 枚举数的值“2147483648”不能表示为“int”，值是“-2147483648”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(4208,48): warning C4369: “SDK::ESoundWaveLoadingBehavior::ESoundWaveLoadingBehavior_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6578,48): warning C4369: “SDK::ESkinCacheUsage::ESkinCacheUsage_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(6856,48): warning C4369: “SDK::ETextureEncodeSpeedOverride::ETextureEncodeSpeedOverride_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,2): warning C4309: “初始化”: 截断常量值
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,48): warning C4369: “SDK::EPlayerHeatMapHeatLevel::EPlayerHeatMapHeatLevel_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\chrono(2198,9): warning C4530: 使用了 C++ 异常处理程序，但未启用展开语义。请指定 /EHsc
+  正在生成代码...
     正在创建库 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\..\release\begeerte_ark_survival_ascended.lib 和对象 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\..\release\begeerte_ark_survival_ascended.exp
   LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能
   begeerte_ark_survival_ascended.vcxproj -> C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\release\begeerte_ark_survival_ascended.dll

@@ -17,99 +17,21 @@
 namespace SDK
 {
 
-// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.BPExecutedCommandForPrimalUI
-// (Event, Public, HasOutParams, BlueprintEvent)
+// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.UpdateColorPicker
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             CommandName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FBPNetExecParams&          ExecParams                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FVector2D&                 ColorPickerSliderValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDataListButtonVariable_ColorPicker_Widget_ASA_C::BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams)
+void UDataListButtonVariable_ColorPicker_Widget_ASA_C::UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "BPExecutedCommandForPrimalUI");
+		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "UpdateColorPicker");
 
-	Params::DataListButtonVariable_ColorPicker_Widget_ASA_C_BPExecutedCommandForPrimalUI Parms{};
+	Params::DataListButtonVariable_ColorPicker_Widget_ASA_C_UpdateColorPicker Parms{};
 
-	Parms.CommandName = CommandName;
-	Parms.ExecParams = std::move(ExecParams);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UDataListButtonVariable_ColorPicker_Widget_ASA_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UDataListButtonVariable_ColorPicker_Widget_ASA_C::ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA");
-
-	Params::DataListButtonVariable_ColorPicker_Widget_ASA_C_ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.ExtraSetupToggledButton
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Toggle                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    FromSelectOtherOption                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UDataListButtonVariable_ColorPicker_Widget_ASA_C::ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "ExtraSetupToggledButton");
-
-	Params::DataListButtonVariable_ColorPicker_Widget_ASA_C_ExtraSetupToggledButton Parms{};
-
-	Parms.Toggle = Toggle;
-	Parms.FromSelectOtherOption = FromSelectOtherOption;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UDataListButtonVariable_ColorPicker_Widget_ASA_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "PreConstruct");
-
-	Params::DataListButtonVariable_ColorPicker_Widget_ASA_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.ColorPickerSliderValue = std::move(ColorPickerSliderValue);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -139,21 +61,99 @@ void UDataListButtonVariable_ColorPicker_Widget_ASA_C::SetupTextValue(const clas
 }
 
 
-// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.UpdateColorPicker
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// const struct FVector2D&                 ColorPickerSliderValue                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDataListButtonVariable_ColorPicker_Widget_ASA_C::UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue)
+void UDataListButtonVariable_ColorPicker_Widget_ASA_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "UpdateColorPicker");
+		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "PreConstruct");
 
-	Params::DataListButtonVariable_ColorPicker_Widget_ASA_C_UpdateColorPicker Parms{};
+	Params::DataListButtonVariable_ColorPicker_Widget_ASA_C_PreConstruct Parms{};
 
-	Parms.ColorPickerSliderValue = std::move(ColorPickerSliderValue);
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.ExtraSetupToggledButton
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Toggle                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    FromSelectOtherOption                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDataListButtonVariable_ColorPicker_Widget_ASA_C::ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "ExtraSetupToggledButton");
+
+	Params::DataListButtonVariable_ColorPicker_Widget_ASA_C_ExtraSetupToggledButton Parms{};
+
+	Parms.Toggle = Toggle;
+	Parms.FromSelectOtherOption = FromSelectOtherOption;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UDataListButtonVariable_ColorPicker_Widget_ASA_C::ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA");
+
+	Params::DataListButtonVariable_ColorPicker_Widget_ASA_C_ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UDataListButtonVariable_ColorPicker_Widget_ASA_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C.BPExecutedCommandForPrimalUI
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// class FName                             CommandName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FBPNetExecParams&          ExecParams                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UDataListButtonVariable_ColorPicker_Widget_ASA_C::BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DataListButtonVariable_ColorPicker_Widget_ASA_C", "BPExecutedCommandForPrimalUI");
+
+	Params::DataListButtonVariable_ColorPicker_Widget_ASA_C_BPExecutedCommandForPrimalUI Parms{};
+
+	Parms.CommandName = CommandName;
+	Parms.ExecParams = std::move(ExecParams);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

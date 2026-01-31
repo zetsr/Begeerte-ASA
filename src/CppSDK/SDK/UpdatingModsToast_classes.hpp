@@ -33,15 +33,15 @@ public:
 	bool                                          HideCounter;                                       // 0x0808(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateProgressBar();
-	void UpdateMainText();
-	void SetCounter(int32 NewCounter);
-	void OverrideTextValueWithString(const class FString& NewText, bool HideProgressBar, bool HideCounter_0);
-	void OverrideTextValue(const class FText& NewText, bool HideProgressBar, bool HideCounter_0);
-	void InitCounter(int32 NewCounterMax, bool bInWillSetCounter);
-	void incrementCounter();
-	void ExecuteUbergraph_UpdatingModsToast(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_UpdatingModsToast(int32 EntryPoint);
+	void incrementCounter();
+	void InitCounter(int32 NewCounterMax, bool bInWillSetCounter);
+	void OverrideTextValue(const class FText& NewText, bool HideProgressBar, bool HideCounter_0);
+	void OverrideTextValueWithString(const class FString& NewText, bool HideProgressBar, bool HideCounter_0);
+	void SetCounter(int32 NewCounter);
+	void UpdateMainText();
+	void UpdateProgressBar();
 
 public:
 	static class UClass* StaticClass()

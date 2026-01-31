@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Struct_VFX_DinoData_structs.hpp"
 #include "DinoSettings_Base_classes.hpp"
+#include "Struct_VFX_DinoData_structs.hpp"
 
 
 namespace SDK

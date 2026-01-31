@@ -12,8 +12,8 @@
 
 #include "STRUCT_SubOptions_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "CFCoreUIWidget_classes.hpp"
 #include "Engine_structs.hpp"
+#include "CFCoreUIWidget_classes.hpp"
 
 
 namespace SDK

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "DinoContentData_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ShooterGame_classes.hpp"
 
 
