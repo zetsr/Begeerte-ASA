@@ -140,6 +140,12 @@ namespace g_DrawESP {
                 SDK::APrimalCharacter* TargetChar = (SDK::APrimalCharacter*)TargetActor;
                 SDK::APrimalCharacter* LocalChar = (SDK::APrimalCharacter*)LocalPC->Pawn;
 
+                if (!TargetChar || !LocalChar) {
+                    entry.targetAlpha = 0.0f;
+                    entry.aliveThisFrame = false;
+                    continue;
+                }
+
                 bool isDead = TargetChar->IsDead();
                 if (isDead) {
                     entry.targetAlpha = 0.0f;
