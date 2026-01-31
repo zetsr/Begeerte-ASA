@@ -221,7 +221,17 @@ namespace g_DrawESP {
                 entry.shouldDrawDistance = bDrawDistance;
 
                 if (bDrawName) {
-                    entry.name = TargetPS ? TargetPS->GetPlayerName().ToString() : TargetChar->GetDescriptiveName().ToString();
+                    std::string gender = "?";
+                    if (LocalPC->Pawn && TargetActor) {
+                        gender = TargetActor->IsFemale() ? "F" : "M";
+                    }
+
+                    if (gender != "?") {
+                        entry.name = TargetPS ? TargetPS->GetPlayerName().ToString() + "-" + gender : TargetChar->GetDescriptiveName().ToString() + "-" + gender;
+                    }
+                    else {
+                        entry.name = TargetPS ? TargetPS->GetPlayerName().ToString() : TargetChar->GetDescriptiveName().ToString();
+                    }
                 }
                 else {
                     entry.name.clear();
