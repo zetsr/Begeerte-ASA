@@ -44,12 +44,21 @@ namespace g_DrawESP {
         g_ESP::FlagPos pos;
     };
 
+    struct CachedBar {
+        float currentValue;
+        float maxValue;
+        ImU32 color;
+        g_ESP::BarPos pos;
+        g_ESP::BarOrientation orientation;
+    };
+
     struct ESPEntry {
         uintptr_t actorKey = 0;
         SDK::FVector lastWorldLoc{};
         g_ESP::BoxRect cachedRect;
         std::string name;
         std::vector<CachedFlag> flags;
+        std::vector<CachedBar> bars;
         ImU32 boxColor = 0;
         ImU32 nameColor = 0;
         float configBoxAlpha = 1.0f;
@@ -61,12 +70,15 @@ namespace g_DrawESP {
         bool isItem = false;
         float cachedHP = 0.0f;
         float cachedMaxHP = 0.0f;
+        float cachedTorpor = 0.0f;
+        float cachedMaxTorpor = 0.0f;
 
         bool shouldDrawBox = false;
         bool shouldDrawHealthBar = false;
         bool shouldDrawName = false;
         bool shouldDrawSpecies = false;
         bool shouldDrawDistance = false;
+        bool shouldDrawTorpor = false;
     };
 
     static std::unordered_map<uintptr_t, ESPEntry> s_entries;
@@ -100,7 +112,6 @@ namespace g_DrawESP {
             }
             return;
         }
-
 
         ImGuiIO& io = ImGui::GetIO();
         float screenW = io.DisplaySize.x;
@@ -172,6 +183,7 @@ namespace g_DrawESP {
 
                 bool bDrawBox = false, bDrawHealthBar = false, bDrawName = false;
                 bool bDrawSpecies = false, bDrawGrowth = false, bDrawDistance = false;
+                bool bDrawTorpor = false;
                 float* BoxColor = nullptr;
                 float* NameColor = nullptr;
                 float* DistanceColor = nullptr;
@@ -186,6 +198,7 @@ namespace g_DrawESP {
                     bDrawGrowth = g_Config::bDrawGrowthTeam;
                     bDrawDistance = g_Config::bDrawDistanceTeam;
                     DistanceColor = g_Config::DistanceColorTeam;
+                    bDrawTorpor = g_Config::bDrawTorporTeam;
                 }
                 else {
                     bDrawBox = g_Config::bDrawBox;
@@ -197,6 +210,7 @@ namespace g_DrawESP {
                     bDrawGrowth = g_Config::bDrawGrowth;
                     bDrawDistance = g_Config::bDrawDistance;
                     DistanceColor = g_Config::DistanceColor;
+                    bDrawTorpor = g_Config::bDrawTorpor;
                 }
 
                 SDK::FVector actorLoc = TargetActor->K2_GetActorLocation();
@@ -214,11 +228,22 @@ namespace g_DrawESP {
                 entry.cachedHP = TargetChar->GetHealth();
                 entry.cachedMaxHP = TargetChar->GetMaxHealth();
 
+                SDK::UPrimalCharacterStatusComponent* StatusComp = TargetChar->GetCharacterStatusComponent();
+                if (StatusComp) {
+                    entry.cachedTorpor = StatusComp->CurrentStatusValues[(int)SDK::EPrimalCharacterStatusValue::Torpidity];
+                    entry.cachedMaxTorpor = StatusComp->MaxStatusValues[(int)SDK::EPrimalCharacterStatusValue::Torpidity];
+                }
+                else {
+                    entry.cachedTorpor = 0.0f;
+                    entry.cachedMaxTorpor = 0.0f;
+                }
+
                 entry.shouldDrawBox = bDrawBox;
                 entry.shouldDrawHealthBar = bDrawHealthBar;
                 entry.shouldDrawName = bDrawName;
                 entry.shouldDrawSpecies = bDrawSpecies;
                 entry.shouldDrawDistance = bDrawDistance;
+                entry.shouldDrawTorpor = bDrawTorpor;
 
                 if (bDrawName) {
                     std::string gender = "?";
@@ -238,11 +263,26 @@ namespace g_DrawESP {
                 }
 
                 entry.flags.clear();
+                entry.bars.clear();
+
+                if (bDrawName && !entry.name.empty()) {
+                    entry.flags.push_back({ entry.name, entry.nameColor, g_ESP::FlagPos::Top });
+                }
+
                 if (bDrawHealthBar) {
                     std::string hpStr = std::to_string((int)entry.cachedHP);
                     float healthPercent = (entry.cachedMaxHP > 0) ? (entry.cachedHP / entry.cachedMaxHP) : 0.0f;
                     ImU32 hpCol = GetHealthColor(healthPercent);
                     entry.flags.push_back({ hpStr, hpCol, g_ESP::FlagPos::Left });
+                    entry.bars.push_back({ entry.cachedHP, entry.cachedMaxHP, hpCol, g_ESP::BarPos::Left, g_ESP::BarOrientation::Vertical });
+                }
+
+                if (bDrawTorpor && entry.cachedMaxTorpor > 0) {
+                    std::string torporStr = std::to_string((int)entry.cachedTorpor) + "/" + std::to_string((int)entry.cachedMaxTorpor);
+                    float torporPercent = (entry.cachedMaxTorpor > 0) ? (entry.cachedTorpor / entry.cachedMaxTorpor) : 0.0f;
+                    ImU32 torporCol = ToImColor(238, 130, 238, 255);
+                    entry.flags.push_back({ torporStr, torporCol, g_ESP::FlagPos::Bottom });
+                    entry.bars.push_back({ entry.cachedTorpor, entry.cachedMaxTorpor, torporCol, g_ESP::BarPos::Bottom, g_ESP::BarOrientation::Horizontal });
                 }
 
                 if (bDrawSpecies) {
@@ -269,7 +309,7 @@ namespace g_DrawESP {
                             entry.isOOF = true;
                             entry.targetAlpha = 1.0f;
                             entry.flags.clear();
-                            if (bDrawName) entry.flags.push_back({ entry.name.empty() ? (TargetPS ? TargetPS->GetPlayerName().ToString() : TargetChar->GetDescriptiveName().ToString()) : entry.name, entry.nameColor, g_ESP::FlagPos::Right });
+                            if (bDrawName && !entry.name.empty()) entry.flags.push_back({ entry.name, entry.nameColor, g_ESP::FlagPos::Right });
                             float dist = 0.0f;
                             if (LocalPC->Pawn && TargetActor) {
                                 dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
@@ -315,6 +355,7 @@ namespace g_DrawESP {
                         entry.cachedRect.bottomRight = ImVec2(screenPos.X + 2, screenPos.Y + 2);
                         entry.cachedRect.valid = true;
                         entry.flags.clear();
+                        entry.bars.clear();
                         ImU32 waterColor = ToImColor(0, 200, 255, 255);
 
                         entry.flags.push_back({ "[Water]", waterColor, g_ESP::FlagPos::Right });
@@ -325,6 +366,7 @@ namespace g_DrawESP {
                         entry.shouldDrawName = false;
                         entry.shouldDrawDistance = true;
                         entry.shouldDrawSpecies = false;
+                        entry.shouldDrawTorpor = false;
                     }
                     else {
                         entry.targetAlpha = 0.0f;
@@ -399,6 +441,7 @@ namespace g_DrawESP {
                         }
 
                         entry.flags.clear();
+                        entry.bars.clear();
                         std::string label = "[" + itemName + "]";
                         if (Item->ItemQuantity > 1) label += " x" + std::to_string(Item->ItemQuantity);
                         if (Item->bIsBlueprint) label = "[BP] " + label;
@@ -414,6 +457,7 @@ namespace g_DrawESP {
                         entry.shouldDrawName = false;
                         entry.shouldDrawDistance = true;
                         entry.shouldDrawSpecies = false;
+                        entry.shouldDrawTorpor = false;
                     }
                     else {
                         entry.targetAlpha = 0.0f;
@@ -470,12 +514,15 @@ namespace g_DrawESP {
                         }
 
                         entry.flags.clear();
+                        entry.bars.clear();
                         entry.flags.push_back({ "[" + sName + "]", ToImColor(255, 255, 180, 255), g_ESP::FlagPos::Right });
                         entry.flags.push_back({ ownerStr, ToImColor(100, 255, 255, 255), g_ESP::FlagPos::Right });
                         ImU32 hpColor = GetHealthColor(healthPercent);
                         std::string hpText = std::to_string((int)curHP) + " (" + std::to_string(hpPercent) + "%)";
                         entry.flags.push_back({ hpText, hpColor, g_ESP::FlagPos::Right });
                         entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(255, 255, 255, 255), g_ESP::FlagPos::Right });
+
+                        entry.shouldDrawTorpor = false;
                     }
                     else {
                         entry.targetAlpha = 0.0f;
@@ -491,7 +538,6 @@ namespace g_DrawESP {
                 entry.targetAlpha = 0.0f;
                 entry.aliveThisFrame = false;
             }
-
         }
 
         for (auto& kv : s_entries) {
@@ -527,26 +573,16 @@ namespace g_DrawESP {
                     drawList->AddRect(entry.cachedRect.topLeft, entry.cachedRect.bottomRight, col, 0.0f, 0, 1.0f);
                 }
 
-                if (!entry.isItem && entry.shouldDrawHealthBar && entry.cachedMaxHP > 0.0f) {
-                    g_ESP::DrawHealthBar(entry.cachedRect, entry.cachedHP, entry.cachedMaxHP, alpha255);
-                }
-
-                if (entry.shouldDrawName && !entry.name.empty() && entry.cachedRect.valid) {
-                    ImVec4 nf = ImGui::ColorConvertU32ToFloat4(entry.nameColor);
-                    nf.w *= entry.alpha;
-                    ImU32 ncol = ImGui::ColorConvertFloat4ToU32(nf);
-                    ImU32 shadow = ImGui::ColorConvertFloat4ToU32(ImVec4(0, 0, 0, entry.alpha));
-                    ImVec2 textSize = ImGui::CalcTextSize(entry.name.c_str());
-                    ImVec2 textPos = ImVec2(entry.cachedRect.topLeft.x + (entry.cachedRect.bottomRight.x - entry.cachedRect.topLeft.x) / 2.0f - textSize.x / 2.0f,
-                        entry.cachedRect.topLeft.y - textSize.y - 5.0f);
-                    drawList->AddText(ImVec2(textPos.x + 1, textPos.y + 1), shadow, entry.name.c_str());
-                    drawList->AddText(textPos, ncol, entry.name.c_str());
+                g_ESP::BarManager bm;
+                bm.Reset();
+                for (auto& bar : entry.bars) {
+                    bm.AddBar(entry.cachedRect, bar.currentValue, bar.maxValue, bar.color, bar.pos, bar.orientation, alpha255);
                 }
 
                 g_ESP::FlagManager fm;
                 fm.Reset();
                 for (auto& f : entry.flags) {
-                    fm.AddFlag(entry.cachedRect, f.text, f.color, f.pos, entry.alpha);
+                    fm.AddFlag(entry.cachedRect, f.text, f.color, f.pos, entry.alpha, &bm);
                 }
 
                 if (entry.isOOF) {

@@ -86,7 +86,99 @@ namespace g_ESP {
         return RelationType::Enemy;
     }
 
-    void FlagManager::AddFlag(BoxRect rect, const std::string& text, ImU32 color, FlagPos pos, float alphaMult /*=1.0f*/) {
+    void BarManager::AddBar(BoxRect rect, float currentValue, float maxValue, ImU32 color, BarPos pos, BarOrientation orientation, float a) {
+        if (!rect.valid || maxValue <= 0) return;
+
+        ImDrawList* drawList = ImGui::GetBackgroundDrawList();
+        float percentage = std::clamp(currentValue / maxValue, 0.0f, 1.0f);
+
+        if (pos == BarPos::Left && orientation == BarOrientation::Vertical) {
+            float boxHeight = rect.bottomRight.y - rect.topLeft.y;
+            float barWidth = 2.5f;
+            float barMargin = 4.0f + leftOffset;
+
+            ImVec2 barBgTop = ImVec2(rect.topLeft.x - barMargin - barWidth, rect.topLeft.y);
+            ImVec2 barBgBottom = ImVec2(rect.topLeft.x - barMargin, rect.bottomRight.y);
+
+            drawList->AddRectFilled(ImVec2(barBgTop.x - 1, barBgTop.y - 1), ImVec2(barBgBottom.x + 1, barBgBottom.y + 1), ToImColor(0, 0, 0, a * 0.7f));
+
+            ImVec4 col = ImGui::ColorConvertU32ToFloat4(color);
+            col.w = a / 255.0f;
+            ImU32 barColor = ImGui::ColorConvertFloat4ToU32(col);
+
+            if (currentValue > 0) {
+                float dynamicHeight = boxHeight * percentage;
+                drawList->AddRectFilled(ImVec2(barBgTop.x, barBgBottom.y - dynamicHeight), barBgBottom, barColor);
+            }
+
+            leftOffset += barWidth + 2.0f;
+        }
+        else if (pos == BarPos::Right && orientation == BarOrientation::Vertical) {
+            float boxHeight = rect.bottomRight.y - rect.topLeft.y;
+            float barWidth = 2.5f;
+            float barMargin = 4.0f + rightOffset;
+
+            ImVec2 barBgTop = ImVec2(rect.bottomRight.x + barMargin, rect.topLeft.y);
+            ImVec2 barBgBottom = ImVec2(rect.bottomRight.x + barMargin + barWidth, rect.bottomRight.y);
+
+            drawList->AddRectFilled(ImVec2(barBgTop.x - 1, barBgTop.y - 1), ImVec2(barBgBottom.x + 1, barBgBottom.y + 1), ToImColor(0, 0, 0, a * 0.7f));
+
+            ImVec4 col = ImGui::ColorConvertU32ToFloat4(color);
+            col.w = a / 255.0f;
+            ImU32 barColor = ImGui::ColorConvertFloat4ToU32(col);
+
+            if (currentValue > 0) {
+                float dynamicHeight = boxHeight * percentage;
+                drawList->AddRectFilled(ImVec2(barBgTop.x, barBgBottom.y - dynamicHeight), barBgBottom, barColor);
+            }
+
+            rightOffset += barWidth + 2.0f;
+        }
+        else if (pos == BarPos::Top && orientation == BarOrientation::Horizontal) {
+            float boxWidth = rect.bottomRight.x - rect.topLeft.x;
+            float barHeight = 2.5f;
+            float barMargin = 4.0f + topOffset;
+
+            ImVec2 barBgLeft = ImVec2(rect.topLeft.x, rect.topLeft.y - barMargin - barHeight);
+            ImVec2 barBgRight = ImVec2(rect.bottomRight.x, rect.topLeft.y - barMargin);
+
+            drawList->AddRectFilled(ImVec2(barBgLeft.x - 1, barBgLeft.y - 1), ImVec2(barBgRight.x + 1, barBgRight.y + 1), ToImColor(0, 0, 0, a * 0.7f));
+
+            ImVec4 col = ImGui::ColorConvertU32ToFloat4(color);
+            col.w = a / 255.0f;
+            ImU32 barColor = ImGui::ColorConvertFloat4ToU32(col);
+
+            if (currentValue > 0) {
+                float dynamicWidth = boxWidth * percentage;
+                drawList->AddRectFilled(barBgLeft, ImVec2(barBgLeft.x + dynamicWidth, barBgRight.y), barColor);
+            }
+
+            topOffset += barHeight + 2.0f;
+        }
+        else if (pos == BarPos::Bottom && orientation == BarOrientation::Horizontal) {
+            float boxWidth = rect.bottomRight.x - rect.topLeft.x;
+            float barHeight = 2.5f;
+            float barMargin = 4.0f + bottomOffset;
+
+            ImVec2 barBgLeft = ImVec2(rect.topLeft.x, rect.bottomRight.y + barMargin);
+            ImVec2 barBgRight = ImVec2(rect.bottomRight.x, rect.bottomRight.y + barMargin + barHeight);
+
+            drawList->AddRectFilled(ImVec2(barBgLeft.x - 1, barBgLeft.y - 1), ImVec2(barBgRight.x + 1, barBgRight.y + 1), ToImColor(0, 0, 0, a * 0.7f));
+
+            ImVec4 col = ImGui::ColorConvertU32ToFloat4(color);
+            col.w = a / 255.0f;
+            ImU32 barColor = ImGui::ColorConvertFloat4ToU32(col);
+
+            if (currentValue > 0) {
+                float dynamicWidth = boxWidth * percentage;
+                drawList->AddRectFilled(barBgLeft, ImVec2(barBgLeft.x + dynamicWidth, barBgRight.y), barColor);
+            }
+
+            bottomOffset += barHeight + 2.0f;
+        }
+    }
+
+    void FlagManager::AddFlag(BoxRect rect, const std::string& text, ImU32 color, FlagPos pos, float alphaMult, const BarManager* barMgr) {
         if (!rect.valid || text.empty()) return;
 
         ImDrawList* drawList = ImGui::GetBackgroundDrawList();
@@ -101,9 +193,21 @@ namespace g_ESP {
             drawPos = ImVec2(rect.bottomRight.x + 5.0f, rect.topLeft.y + rightY);
             rightY += textSize.y + 1.0f;
         }
-        else {
+        else if (pos == FlagPos::Left) {
             drawPos = ImVec2(rect.topLeft.x - 8.0f - textSize.x, rect.topLeft.y + leftY);
             leftY += textSize.y + 1.0f;
+        }
+        else if (pos == FlagPos::Top) {
+            float barOffset = barMgr ? barMgr->GetTopOffset() : 0.0f;
+            float centerX = (rect.topLeft.x + rect.bottomRight.x) / 2.0f;
+            drawPos = ImVec2(centerX - textSize.x / 2.0f, rect.topLeft.y - barOffset - topY - textSize.y - 5.0f);
+            topY += textSize.y + 1.0f;
+        }
+        else if (pos == FlagPos::Bottom) {
+            float barOffset = barMgr ? barMgr->GetBottomOffset() : 0.0f;
+            float centerX = (rect.topLeft.x + rect.bottomRight.x) / 2.0f;
+            drawPos = ImVec2(centerX - textSize.x / 2.0f, rect.bottomRight.y + barOffset + bottomY + 5.0f);
+            bottomY += textSize.y + 1.0f;
         }
 
         ImVec4 baseCol = ImGui::ColorConvertU32ToFloat4(color);
