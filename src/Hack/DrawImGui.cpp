@@ -519,7 +519,8 @@ namespace g_DrawImGui {
 						DrawColorPickerRow(U8("方框"), &g_Config::bDrawBox, "BoxCol1", g_Config::BoxColor);
 						DrawColorPickerRow(U8("名称"), &g_Config::bDrawName, "NameCol1", g_Config::NameColor);
 						DrawCustomCheckbox(U8("血量"), &g_Config::bDrawHealthBar);
-						DrawCustomCheckbox(U8("眩晕"), &g_Config::bDrawTorpor);
+						DrawColorPickerRow(U8("眩晕"), &g_Config::bDrawTorpor, "TorporCol", g_Config::TorporColor);
+						DrawColorPickerRow(U8("尸体"), &g_Config::bDrawRagdoll, "RagdollCol", g_Config::RagdollColor);
 						DrawAnimatedSeparator();
 
 						ImGui::TextColored(ThemeColors::ACCENT, U8("额外信息"));
@@ -580,7 +581,8 @@ namespace g_DrawImGui {
 						DrawColorPickerRow(U8("方框##Team"), &g_Config::bDrawBoxTeam, "BoxColTeam", g_Config::BoxColorTeam);
 						DrawColorPickerRow(U8("名称##Team"), &g_Config::bDrawNameTeam, "NameColTeam", g_Config::NameColorTeam);
 						DrawCustomCheckbox(U8("血量##Team"), &g_Config::bDrawHealthBarTeam);
-						DrawCustomCheckbox(U8("眩晕##Team"), &g_Config::bDrawTorporTeam);
+						DrawColorPickerRow(U8("眩晕##Team"), &g_Config::bDrawTorporTeam, "TorporColTeam", g_Config::TorporColorTeam);
+						DrawColorPickerRow(U8("尸体##Team"), &g_Config::bDrawRagdollTeam, "RagdollColTeam", g_Config::RagdollColorTeam);
 						DrawAnimatedSeparator();
 
 						ImGui::TextColored(ThemeColors::ACCENT, U8("额外信息"));

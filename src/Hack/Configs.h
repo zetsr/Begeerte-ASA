@@ -46,6 +46,9 @@ namespace g_Config {
     inline bool bDrawSpecies = false;
     inline bool bDrawGrowth = true;
     inline bool bDrawTorpor = true;
+    inline float TorporColor[4] = { 0.95f, 0.5f, 0.95f, 1.0f };
+    inline bool bDrawRagdoll = true;
+    inline float RagdollColor[4] = { 1.0f, 0.0f, 0.25f, 0.75f };
     inline bool bDrawDistance = true;
     inline float DistanceColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 
@@ -58,6 +61,9 @@ namespace g_Config {
     inline bool bDrawSpeciesTeam = false;
     inline bool bDrawGrowthTeam = true;
     inline bool bDrawTorporTeam = true;
+    inline float TorporColorTeam[4] = { 0.0f, 0.9f, 1.0f, 1.0f };
+    inline bool bDrawRagdollTeam = true;
+    inline float RagdollColorTeam[4] = { 1.0f, 0.0f, 0.25f, 0.75f };
     inline bool bDrawDistanceTeam = true;
     inline float DistanceColorTeam[4] = { 0.0f, 0.5f, 1.0f, 1.0f };
 

@@ -157,12 +157,60 @@ namespace g_DrawESP {
                     continue;
                 }
 
+                SDK::APlayerState* TargetPS = TargetChar->PlayerState;
+
                 bool isDead = TargetChar->IsDead();
                 if (isDead) {
-                    entry.targetAlpha = 0.0f;
+                    g_ESP::RelationType relation = g_ESP::GetRelation(TargetChar, LocalChar);
+
+                    bool bShowRagdoll = false;
+                    float* RagdollCol = nullptr;
+
+                    if (relation == g_ESP::RelationType::Team) {
+                        bShowRagdoll = g_Config::bDrawRagdollTeam;
+                        RagdollCol = g_Config::RagdollColorTeam;
+                    }
+                    else {
+                        bShowRagdoll = g_Config::bDrawRagdoll;
+                        RagdollCol = g_Config::RagdollColor;
+                    }
+
+                    if (!bShowRagdoll) {
+                        entry.targetAlpha = 0.0f;
+                        entry.aliveThisFrame = false;
+                        continue;
+                    }
+
                     g_ESP::BoxRect rect = g_ESP::DrawBox(TargetActor,
-                        255.0f, 255.0f, 255.0f, 255.0f, 0.5f, true);
-                    if (rect.valid) entry.cachedRect = rect;
+                        RagdollCol[0] * 255.0f, RagdollCol[1] * 255.0f,
+                        RagdollCol[2] * 255.0f, RagdollCol[3] * 255.0f, 0.5f, true);
+
+                    if (!rect.valid) {
+                        entry.targetAlpha = 0.0f;
+                        continue;
+                    }
+
+                    entry.cachedRect = rect;
+                    entry.boxColor = g_Config::GetU32Color(RagdollCol);
+                    entry.configBoxAlpha = RagdollCol[3];
+                    entry.targetAlpha = 1.0f;
+                    entry.aliveThisFrame = true;
+
+                    entry.shouldDrawBox = true;
+                    entry.shouldDrawHealthBar = false;
+                    entry.shouldDrawTorpor = false;
+                    entry.shouldDrawName = true;
+                    entry.shouldDrawDistance = true;
+
+                    entry.flags.clear();
+                    entry.bars.clear();
+
+                    std::string deadName = (TargetPS ? TargetPS->GetPlayerName().ToString() : TargetChar->GetDescriptiveName().ToString());
+                    entry.flags.push_back({ deadName, entry.boxColor, g_ESP::FlagPos::Top });
+
+                    float dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                    entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(200, 200, 200, 255), g_ESP::FlagPos::Right });
+
                     continue;
                 }
 
@@ -178,7 +226,6 @@ namespace g_DrawESP {
                     }
                 }
 
-                SDK::APlayerState* TargetPS = TargetChar->PlayerState;
                 g_ESP::RelationType relation = g_ESP::GetRelation(TargetChar, LocalChar);
 
                 bool bDrawBox = false, bDrawHealthBar = false, bDrawName = false;
@@ -187,6 +234,7 @@ namespace g_DrawESP {
                 float* BoxColor = nullptr;
                 float* NameColor = nullptr;
                 float* DistanceColor = nullptr;
+                float* TorporColor = nullptr;
 
                 if (relation == g_ESP::RelationType::Team) {
                     bDrawBox = g_Config::bDrawBoxTeam;
@@ -199,6 +247,7 @@ namespace g_DrawESP {
                     bDrawDistance = g_Config::bDrawDistanceTeam;
                     DistanceColor = g_Config::DistanceColorTeam;
                     bDrawTorpor = g_Config::bDrawTorporTeam;
+                    TorporColor = g_Config::TorporColorTeam;
                 }
                 else {
                     bDrawBox = g_Config::bDrawBox;
@@ -211,6 +260,7 @@ namespace g_DrawESP {
                     bDrawDistance = g_Config::bDrawDistance;
                     DistanceColor = g_Config::DistanceColor;
                     bDrawTorpor = g_Config::bDrawTorpor;
+                    TorporColor = g_Config::TorporColor;
                 }
 
                 SDK::FVector actorLoc = TargetActor->K2_GetActorLocation();
@@ -280,7 +330,7 @@ namespace g_DrawESP {
                 if (bDrawTorpor && entry.cachedMaxTorpor > 0) {
                     std::string torporStr = std::to_string((int)entry.cachedTorpor) + "/" + std::to_string((int)entry.cachedMaxTorpor);
                     float torporPercent = (entry.cachedMaxTorpor > 0) ? (entry.cachedTorpor / entry.cachedMaxTorpor) : 0.0f;
-                    ImU32 torporCol = ToImColor(238, 130, 238, 255);
+                    ImU32 torporCol = g_Config::GetU32Color(TorporColor);
                     entry.flags.push_back({ torporStr, torporCol, g_ESP::FlagPos::Bottom });
                     entry.bars.push_back({ entry.cachedTorpor, entry.cachedMaxTorpor, torporCol, g_ESP::BarPos::Bottom, g_ESP::BarOrientation::Horizontal });
                 }
@@ -301,13 +351,13 @@ namespace g_DrawESP {
                 SDK::FVector2D screenPos;
                 if (LocalPC->ProjectWorldLocationToScreen(actorLoc, &screenPos, false)) {
                     if (screenPos.X > 0 && screenPos.X < screenW && screenPos.Y > 0 && screenPos.Y < screenH) {
-                        entry.targetAlpha = 1.0f;
+                        entry.targetAlpha = entry.configBoxAlpha;
                         entry.isOOF = false;
                     }
                     else {
                         if (g_Config::bEnableOOF) {
                             entry.isOOF = true;
-                            entry.targetAlpha = 1.0f;
+                            entry.targetAlpha = entry.configBoxAlpha;
                             entry.flags.clear();
                             if (bDrawName && !entry.name.empty()) entry.flags.push_back({ entry.name, entry.nameColor, g_ESP::FlagPos::Right });
                             float dist = 0.0f;
