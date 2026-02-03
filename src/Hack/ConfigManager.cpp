@@ -97,22 +97,26 @@ bool ConfigManager::SaveConfig(const std::string& filename) {
         file << "# Configuration File\n";
         file << "# Format: key=value\n\n";
 
+        // 生物列表
         file << "[EntityList]\n";
         CONFIG_STRING(g_Config::entitySearchBuf, 256);
         CONFIG_BOOL(g_Config::bEnableFilter);
         file << "\n";
 
+        // 建筑列表
         file << "[StructureList]\n";
         CONFIG_STRING(g_Config::structureSearchBuf, 256);
         CONFIG_BOOL(g_Config::bEnableStructureFilter);
         file << "\n";
 
+        // 自瞄
         file << "[Aimbot]\n";
         CONFIG_BOOL(g_Config::bAimbotEnabled);
         CONFIG_FLOAT(g_Config::AimbotFOV);
         CONFIG_FLOAT(g_Config::AimbotSmooth);
         file << "\n";
 
+        // 扳机
         file << "[Triggerbot]\n";
         CONFIG_BOOL(g_Config::bTriggerbotEnabled);
         CONFIG_FLOAT(g_Config::TriggerDelay);
@@ -120,26 +124,36 @@ bool ConfigManager::SaveConfig(const std::string& filename) {
         CONFIG_FLOAT(g_Config::TriggerHitChance);
         file << "\n";
 
+        // 掉落物
         file << "[DroppedItems]\n";
         CONFIG_BOOL(g_Config::bDrawDroppedItems);
         CONFIG_FLOAT(g_Config::DroppedItemMaxDistance);
         file << "\n";
 
+        // 宝箱
         file << "[SupplyDrops]\n";
         CONFIG_BOOL(g_Config::bDrawSupplyDrops);
         CONFIG_FLOAT(g_Config::SupplyDropMaxDistance);
         file << "\n";
 
+        // 建筑
         file << "[Structures]\n";
         CONFIG_BOOL(g_Config::bDrawStructures);
         CONFIG_FLOAT(g_Config::StructureMaxDistance);
+        CONFIG_COLOR(g_Config::StructureNameColor);
+        CONFIG_COLOR(g_Config::StructureOwnerColor);
+        CONFIG_COLOR(g_Config::StructureDistanceColor);
         file << "\n";
 
+        // 水源
         file << "[Water]\n";
         CONFIG_BOOL(g_Config::bDrawWater);
         CONFIG_FLOAT(g_Config::WaterMaxDistance);
+        CONFIG_COLOR(g_Config::WaterNameColor);
+        CONFIG_COLOR(g_Config::WaterDistanceColor);
         file << "\n";
 
+        // 全局
         file << "[Global]\n";
         CONFIG_BOOL(g_Config::bDrawBox);
         CONFIG_COLOR(g_Config::BoxColor);
@@ -156,6 +170,7 @@ bool ConfigManager::SaveConfig(const std::string& filename) {
         CONFIG_COLOR(g_Config::DistanceColor);
         file << "\n";
 
+        // 队友
         file << "[Team]\n";
         CONFIG_BOOL(g_Config::bDrawBoxTeam);
         CONFIG_COLOR(g_Config::BoxColorTeam);
@@ -172,6 +187,7 @@ bool ConfigManager::SaveConfig(const std::string& filename) {
         CONFIG_COLOR(g_Config::DistanceColorTeam);
         file << "\n";
 
+        // OOF
         file << "[OOF]\n";
         CONFIG_BOOL(g_Config::bEnableOOF);
         CONFIG_COLOR(g_Config::OOFColor);
@@ -215,32 +231,47 @@ bool ConfigManager::LoadConfig(const std::string& filename) {
         }
 
         file.close();
+        // 生物列表
         LOAD_STRING(g_Config::entitySearchBuf, 256);
         LOAD_BOOL(g_Config::bEnableFilter);
+
+        // 建筑列表
         LOAD_STRING(g_Config::structureSearchBuf, 256);
         LOAD_BOOL(g_Config::bEnableStructureFilter);
         
+        // 自瞄
         LOAD_BOOL(g_Config::bAimbotEnabled);
         LOAD_FLOAT(g_Config::AimbotFOV);
         LOAD_FLOAT(g_Config::AimbotSmooth);
         
+        // 扳机
         LOAD_BOOL(g_Config::bTriggerbotEnabled);
         LOAD_FLOAT(g_Config::TriggerDelay);
         LOAD_FLOAT(g_Config::TriggerRandomPercent);
         LOAD_FLOAT(g_Config::TriggerHitChance);
         
+        // 掉落物
         LOAD_BOOL(g_Config::bDrawDroppedItems);
         LOAD_FLOAT(g_Config::DroppedItemMaxDistance);
         
+        // 宝箱
         LOAD_BOOL(g_Config::bDrawSupplyDrops);
         LOAD_FLOAT(g_Config::SupplyDropMaxDistance);
         
+        // 建筑
         LOAD_BOOL(g_Config::bDrawStructures);
         LOAD_FLOAT(g_Config::StructureMaxDistance);
-        
+        LOAD_COLOR(g_Config::StructureNameColor);
+        LOAD_COLOR(g_Config::StructureOwnerColor);
+        LOAD_COLOR(g_Config::StructureDistanceColor);
+
+        // 水源
         LOAD_BOOL(g_Config::bDrawWater);
         LOAD_FLOAT(g_Config::WaterMaxDistance);
-        
+        LOAD_COLOR(g_Config::WaterNameColor);
+        LOAD_COLOR(g_Config::WaterDistanceColor);
+
+        // 全局
         LOAD_BOOL(g_Config::bDrawBox);
         LOAD_COLOR(g_Config::BoxColor);
         LOAD_BOOL(g_Config::bDrawHealthBar);
@@ -255,6 +286,7 @@ bool ConfigManager::LoadConfig(const std::string& filename) {
         LOAD_BOOL(g_Config::bDrawDistance);
         LOAD_COLOR(g_Config::DistanceColor);
         
+        // 队友
         LOAD_BOOL(g_Config::bDrawBoxTeam);
         LOAD_COLOR(g_Config::BoxColorTeam);
         LOAD_BOOL(g_Config::bDrawHealthBarTeam);
@@ -269,6 +301,7 @@ bool ConfigManager::LoadConfig(const std::string& filename) {
         LOAD_BOOL(g_Config::bDrawDistanceTeam);
         LOAD_COLOR(g_Config::DistanceColorTeam);
         
+        // OOF
         LOAD_BOOL(g_Config::bEnableOOF);
         LOAD_COLOR(g_Config::OOFColor);
         LOAD_FLOAT(g_Config::OOFRadius);

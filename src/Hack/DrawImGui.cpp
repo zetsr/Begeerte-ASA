@@ -1,4 +1,4 @@
-﻿#define NOMINMAX
+﻿#define NOMINMAX  
 #if defined(__cpp_char8_t)
 #define U8(str) reinterpret_cast<const char*>(u8##str)
 #else
@@ -20,6 +20,7 @@
 #include <algorithm>
 #include <cfloat>
 #include <cmath>
+#include <map>
 
 namespace ThemeColors {
 	const ImVec4 BG = ImVec4(7.0f / 255.0f, 8.0f / 255.0f, 10.0f / 255.0f, 1.0f);
@@ -133,13 +134,30 @@ namespace g_DrawImGui {
 		return max_text_w + extra;
 	}
 
-	void DrawCustomColorPicker(const char* label_id, float* col_ptr)
+	void DrawCustomColorPicker(const char* label_id, float* col_ptr, const char* display_text = nullptr)
 	{
+		ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(5.0f, 5.0f));
+
 		float frame_h = ImGui::GetFrameHeight();
 		float pad_y = ImGui::GetStyle().FramePadding.y;
 		float btn_size = frame_h - pad_y * 2.0f;
 		if (btn_size <= 0.0f) btn_size = frame_h * 0.8f;
 		ImVec2 btn_size_vec(btn_size, btn_size);
+
+		ImGui::BeginGroup();
+
+		if (display_text && strlen(display_text) > 0)
+		{
+			ImGui::AlignTextToFramePadding();
+			ImGui::TextUnformatted(display_text);
+
+			ImGui::SameLine();
+
+			float avail_x = ImGui::GetContentRegionAvail().x;
+			if (avail_x > btn_size) {
+				ImGui::SetCursorPosX(ImGui::GetCursorPosX() + avail_x - btn_size);
+			}
+		}
 
 		char button_id[256];
 		char popup_id[256];
@@ -147,17 +165,13 @@ namespace g_DrawImGui {
 		std::snprintf(popup_id, sizeof(popup_id), "##ColorPopup_%s", label_id);
 
 		ImVec4 cur = ImVec4(col_ptr[0], col_ptr[1], col_ptr[2], col_ptr[3]);
-
-		bool hovered = ImGui::IsItemHovered();
-		static float hover_anim = 0.0f;
-		if (hovered) hover_anim = std::min(hover_anim + ImGui::GetIO().DeltaTime * 8.0f, 1.0f);
-		else hover_anim = std::max(hover_anim - ImGui::GetIO().DeltaTime * 8.0f, 0.0f);
-
-		ImGuiColorEditFlags colorbutton_flags = ImGuiColorEditFlags_NoBorder | ImGuiColorEditFlags_NoTooltip;
-
 		ImDrawList* draw_list = ImGui::GetWindowDrawList();
 		ImVec2 btn_pos = ImGui::GetCursorScreenPos();
 		ImVec2 btn_center = ImVec2(btn_pos.x + btn_size * 0.5f, btn_pos.y + btn_size * 0.5f);
+
+		ImGuiStorage* storage = ImGui::GetStateStorage();
+		ImGuiID anim_id = ImGui::GetID(label_id);
+		float hover_anim = storage->GetFloat(anim_id, 0.0f);
 
 		if (hover_anim > 0.0f) {
 			float glow_radius = btn_size * 0.5f + hover_anim * 4.0f;
@@ -165,19 +179,28 @@ namespace g_DrawImGui {
 			draw_list->AddCircleFilled(btn_center, glow_radius, glow_col, 32);
 		}
 
+		ImGuiColorEditFlags colorbutton_flags = ImGuiColorEditFlags_NoBorder | ImGuiColorEditFlags_NoTooltip;
 		if (ImGui::ColorButton(button_id, cur, colorbutton_flags, btn_size_vec))
 		{
 			ImGui::OpenPopup(popup_id);
 		}
 
-		const char* popup_items[] = { U8("复制"), U8("粘贴") };
-		if (ImGui::IsItemHovered() && ImGui::IsMouseReleased(ImGuiMouseButton_Right))
+		ImGui::EndGroup();
+		ImGui::PopStyleVar();
+
+		bool hovered = ImGui::IsItemHovered();
+		hover_anim = hovered ? std::min(hover_anim + ImGui::GetIO().DeltaTime * 8.0f, 1.0f)
+			: std::max(hover_anim - ImGui::GetIO().DeltaTime * 8.0f, 0.0f);
+		storage->SetFloat(anim_id, hover_anim);
+
+		if (hovered && ImGui::IsMouseReleased(ImGuiMouseButton_Right))
 		{
 			ImGui::OpenPopup(popup_id);
 		}
 
+		const char* popup_items[] = { U8("复制"), U8("粘贴") };
 		float popup_min_w = CalcPopupMinWidthForItems(popup_items, IM_ARRAYSIZE(popup_items));
-		ImGui::SetNextWindowSizeConstraints(ImVec2(popup_min_w, 0.0f), ImVec2(FLT_MAX, FLT_MAX));
+		ImGui::SetNextWindowSizeConstraints(ImVec2(std::max(180.0f, popup_min_w), 0.0f), ImVec2(FLT_MAX, FLT_MAX));
 
 		if (ImGui::BeginPopup(popup_id, ImGuiWindowFlags_AlwaysAutoResize))
 		{
@@ -189,27 +212,16 @@ namespace g_DrawImGui {
 				col_ptr[0] = g_saved_color[0]; col_ptr[1] = g_saved_color[1];
 				col_ptr[2] = g_saved_color[2]; col_ptr[3] = g_saved_color[3];
 			}
-			ImGui::EndPopup();
-		}
-
-		float pick_w = std::max(180.0f, frame_h * 9.0f);
-		float pick_h = std::max(110.0f, frame_h * 5.0f);
-		ImGui::SetNextWindowSize(ImVec2(pick_w, pick_h), ImGuiCond_Always);
-
-		if (ImGui::BeginPopup(popup_id, ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_AlwaysAutoResize))
-		{
-			ImGuiColorEditFlags picker_flags =
-				ImGuiColorEditFlags_AlphaBar |
+			ImGui::Separator();
+			ImGuiColorEditFlags picker_flags = 
+				ImGuiColorEditFlags_AlphaBar | 
 				ImGuiColorEditFlags_NoInputs |
-				ImGuiColorEditFlags_NoOptions |
+				ImGuiColorEditFlags_NoOptions | 
 				ImGuiColorEditFlags_NoSmallPreview |
-				ImGuiColorEditFlags_NoLabel |
+				ImGuiColorEditFlags_NoLabel | 
 				ImGuiColorEditFlags_NoTooltip;
 
-#ifdef ImGuiColorEditFlags_NoSidePreview
-			picker_flags = (ImGuiColorEditFlags)(picker_flags | ImGuiColorEditFlags_NoSidePreview);
-#endif
-
+			ImGui::SetNextItemWidth(std::max(180.0f, frame_h * 9.0f));
 			ImGui::ColorPicker4("##Picker", col_ptr, picker_flags);
 			ImGui::EndPopup();
 		}
@@ -248,9 +260,9 @@ namespace g_DrawImGui {
 		const float VALUE_TEXT_PAD = 8.0f;
 
 		ImVec2 pos = window->DC.CursorPos;
-		ImVec2 size = ImVec2(full_w, std::max(style.FramePadding.y * 2.0f + TRACK_HEIGHT, label_size.y + style.FramePadding.y * 2.0f + 16.0f));
+		ImVec2 size = ImVec2(full_w, std::max(style.FramePadding.y * 2.0f + TRACK_HEIGHT, label_size.y + style.FramePadding.y * 2.0f));
 		ImRect bb(pos, ImVec2(pos.x + size.x, pos.y + size.y));
-		ImGui::ItemSize(bb, style.FramePadding.y);
+		ImGui::ItemSize(bb, 0.0f);
 		if (!ImGui::ItemAdd(bb, id))
 			return false;
 
@@ -527,7 +539,6 @@ namespace g_DrawImGui {
 
 						ImGui::TextColored(ThemeColors::ACCENT, U8("额外信息"));
 						DrawAnimatedSeparator();
-						DrawCustomCheckbox(U8("物种"), &g_Config::bDrawSpecies);
 						DrawColorPickerRow(U8("距离"), &g_Config::bDrawDistance, "DistCol1", g_Config::DistanceColor);
 						DrawAnimatedSeparator();
 
@@ -536,18 +547,25 @@ namespace g_DrawImGui {
 
 						DrawCustomCheckbox(U8("掉落的物品"), &g_Config::bDrawDroppedItems);
 						if (g_Config::bDrawDroppedItems) {
+							DrawCustomColorPicker("DroppedItemNameCol", g_Config::DroppedItemNameColor, U8("物品名称"));
+							DrawCustomColorPicker("DroppedItemDistanceCol", g_Config::DroppedItemDistanceColor, U8("物品距离"));
 							DrawCustomSliderFloat(U8("物品显示距离"), &g_Config::DroppedItemMaxDistance, 1.0f, 500.0f, "%.0f", 1.0f, "m");
 						}
 						DrawAnimatedSeparator();
 
 						DrawCustomCheckbox(U8("显示建筑"), &g_Config::bDrawStructures);
 						if (g_Config::bDrawStructures) {
+							DrawCustomColorPicker("StructureNameCol", g_Config::StructureNameColor, U8("建筑名称"));
+							DrawCustomColorPicker("StructureOwnerCol", g_Config::StructureOwnerColor, U8("建筑所有者"));
+							DrawCustomColorPicker("StructureDistanceCol", g_Config::StructureDistanceColor, U8("建筑距离"));
 							DrawCustomSliderFloat(U8("建筑显示距离"), &g_Config::StructureMaxDistance, 1.0f, 10000.0f, "%.0f", 1.0f, "m");
 						}
 						DrawAnimatedSeparator();
 
 						DrawCustomCheckbox(U8("显示水源"), &g_Config::bDrawWater);
 						if (g_Config::bDrawWater) {
+							DrawCustomColorPicker("WaterNameCol", g_Config::WaterNameColor, U8("水源名称"));
+							DrawCustomColorPicker("WaterDistanceCol", g_Config::WaterDistanceColor, U8("水源距离"));
 							DrawCustomSliderFloat(U8("水源显示距离"), &g_Config::WaterMaxDistance, 1.0f, 10000.0f, "%.0f", 1.0f, "m");
 						}
 						DrawAnimatedSeparator();
@@ -589,7 +607,6 @@ namespace g_DrawImGui {
 
 						ImGui::TextColored(ThemeColors::ACCENT, U8("额外信息"));
 						DrawAnimatedSeparator();
-						DrawCustomCheckbox(U8("物种##Team"), &g_Config::bDrawSpeciesTeam);
 						DrawColorPickerRow(U8("距离##Team"), &g_Config::bDrawDistanceTeam, "DistColTeam", g_Config::DistanceColorTeam);
 						DrawAnimatedSeparator();
 
@@ -657,9 +674,9 @@ namespace g_DrawImGui {
 										float curHP = TargetChar->GetHealth();
 										float maxHP = TargetChar->GetMaxHealth();
 
-										ImGui::Text("[%dm] %s - %.0f/%.0f", 
-											(int)dist, 
-											displayName.c_str(), 
+										ImGui::Text("[%dm] %s - %.0f/%.0f",
+											(int)dist,
+											displayName.c_str(),
 											curHP,
 											maxHP);
 									}
@@ -755,7 +772,7 @@ namespace g_DrawImGui {
 						configInitialized = true;
 					}
 
-					if (ImGui::BeginTabItem(U8("设置"))) {
+					if (ImGui::BeginTabItem(U8("配置"))) {
 						auto& mgr = ConfigManager::Get();
 						auto& configs = mgr.GetConfigs();
 
@@ -778,7 +795,7 @@ namespace g_DrawImGui {
 
 						static char configNameBuf[65] = { 0 };
 						ImGui::SetNextItemWidth(150.0f);
-						ImGui::InputText(U8("##ConfigName"), configNameBuf, sizeof(configNameBuf));
+						ImGui::InputTextWithHint("##ConfigName", U8("输入你想使用的参数名称 (如: MyCFG)..."), configNameBuf, sizeof(configNameBuf));
 						ImGui::SameLine();
 						if (ImGui::Button(U8("创建"))) {
 							std::string configName(configNameBuf);

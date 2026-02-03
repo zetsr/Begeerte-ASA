@@ -1,4 +1,4 @@
-// ESP.cpp
+﻿// ESP.cpp
 #include "../Minimal-D3D12-Hook-ImGui-1.0.2/Main/mdx12_api.h"
 #include "SDK_Headers.hpp"
 #include "ESP.h"
@@ -226,14 +226,21 @@ namespace g_ESP {
         baseCol.w *= alphaMult;
         ImU32 col = ImGui::ColorConvertFloat4ToU32(baseCol);
 
+        /*
         ImVec4 shadowCol = ImVec4(0, 0, 0, 0.8f * alphaMult);
         ImU32 sCol = ImGui::ColorConvertFloat4ToU32(shadowCol);
+        */
+
+        // Fixed
+        // baseCol.w 已经是 color.A * alphaMult 了
+        float finalAlpha = baseCol.w;
+        ImU32 sCol = ImGui::ColorConvertFloat4ToU32(ImVec4(0.0f, 0.0f, 0.0f, finalAlpha * 0.8f));
 
         drawList->AddText(ImVec2(drawPos.x + 1, drawPos.y + 1), sCol, text.c_str());
         drawList->AddText(drawPos, col, text.c_str());
     }
 
-    void DrawOutOfFOV(const SDK::FVector& targetLoc, SDK::APlayerController* LocalPC, const std::vector<OOFFlag>& flags, float alphaMult /*=1.0f*/) {
+    void DrawOutOfFOV(const SDK::FVector& targetLoc, SDK::APlayerController* LocalPC, const std::vector<OOFFlag>& flags, float alphaMult) {
         if (targetLoc.X == 0 && targetLoc.Y == 0 && targetLoc.Z == 0) return;
         if (!LocalPC || !LocalPC->Pawn || !LocalPC->PlayerCameraManager) return;
 
@@ -252,11 +259,6 @@ namespace g_ESP {
         while (planarAngle > PI) planarAngle -= 2.0f * PI;
         while (planarAngle < -PI) planarAngle += 2.0f * PI;
 
-        float pitchRad = cameraRot.Pitch * (PI / 180.0f);
-        float horizontalDist = sqrtf(delta.X * delta.X + delta.Y * delta.Y);
-        float targetVerticalAngle = atan2f(delta.Z, horizontalDist);
-        float relativeVerticalAngle = targetVerticalAngle - pitchRad;
-
         float radiusX = (screenSize.x * 0.45f) * g_Config::OOFRadius;
         float radiusY = (screenSize.y * 0.45f) * g_Config::OOFRadius;
 
@@ -264,30 +266,25 @@ namespace g_ESP {
         drawPos.x = screenCenter.x + sinf(planarAngle) * radiusX;
         drawPos.y = screenCenter.y - cosf(planarAngle) * radiusY;
 
-        if (relativeVerticalAngle < -0.1f) {
-            if (drawPos.y < screenCenter.y) {
-                drawPos.y = screenCenter.y + (screenCenter.y - drawPos.y);
-            }
-        }
-        else if (relativeVerticalAngle > 0.1f) {
-            if (drawPos.y > screenCenter.y) {
-                drawPos.y = screenCenter.y - (drawPos.y - screenCenter.y);
-            }
-        }
+        ImVec4 baseCfgColor = *(ImVec4*)g_Config::OOFColor;
+        ImVec4 textColorVec = baseCfgColor;
+        textColorVec.w *= alphaMult;
+        ImU32 textColU = ImGui::ColorConvertFloat4ToU32(textColorVec);
+        ImU32 shadowColU = ImGui::ColorConvertFloat4ToU32(ImVec4(0, 0, 0, textColorVec.w * 0.85f));
 
         static float breathTime = 0.0f;
-        breathTime += ImGui::GetIO().DeltaTime;
+        breathTime += io.DeltaTime;
 
         float distance3D = sqrtf(delta.X * delta.X + delta.Y * delta.Y + delta.Z * delta.Z);
         float maxDistance = 500.0f;
         float distanceRatio = 1.0f - std::clamp(distance3D / maxDistance, 0.0f, 1.0f);
         float dynamicSpeed = g_Config::OOFBreathSpeed * (1.0f + distanceRatio * 2.0f);
         float breathCycle = sinf(breathTime * dynamicSpeed) * 0.5f + 0.5f;
-        float alphaValue = g_Config::OOFMinAlpha + (g_Config::OOFMaxAlpha - g_Config::OOFMinAlpha) * breathCycle;
+        float breathAlphaMod = g_Config::OOFMinAlpha + (g_Config::OOFMaxAlpha - g_Config::OOFMinAlpha) * breathCycle;
 
-        ImVec4 baseColor = *(ImVec4*)g_Config::OOFColor;
-        baseColor.w = alphaValue * alphaMult;
-        ImU32 triCol = ImGui::ColorConvertFloat4ToU32(baseColor);
+        ImVec4 triColorVec = baseCfgColor;
+        triColorVec.w *= (alphaMult * breathAlphaMod);
+        ImU32 triColU = ImGui::ColorConvertFloat4ToU32(triColorVec);
 
         ImDrawList* drawList = ImGui::GetBackgroundDrawList();
         float size = g_Config::OOFSize;
@@ -296,8 +293,7 @@ namespace g_ESP {
         ImVec2 p1 = ImVec2(drawPos.x + sinf(triAngle) * size, drawPos.y - cosf(triAngle) * size);
         ImVec2 p2 = ImVec2(drawPos.x + sinf(triAngle + 2.3f) * size, drawPos.y - cosf(triAngle + 2.3f) * size);
         ImVec2 p3 = ImVec2(drawPos.x + sinf(triAngle - 2.3f) * size, drawPos.y - cosf(triAngle - 2.3f) * size);
-
-        drawList->AddTriangleFilled(p1, p2, p3, triCol);
+        drawList->AddTriangleFilled(p1, p2, p3, triColU);
 
         float textOffsetY = size + 5.0f;
         for (const auto& flag : flags) {
@@ -305,12 +301,8 @@ namespace g_ESP {
             float tx = std::clamp(drawPos.x - (textSize.x * 0.5f), 10.0f, screenSize.x - textSize.x - 10.0f);
             float ty = std::clamp(drawPos.y + textOffsetY, 10.0f, screenSize.y - textSize.y - 10.0f);
 
-            ImVec4 fcol = ImGui::ColorConvertU32ToFloat4(flag.color);
-            fcol.w *= alphaMult;
-            ImU32 fcolU = ImGui::ColorConvertFloat4ToU32(fcol);
-
-            drawList->AddText(ImVec2(tx + 1, ty + 1), ToImColor(0, 0, 0, 200 * alphaMult), flag.text.c_str());
-            drawList->AddText(ImVec2(tx, ty), fcolU, flag.text.c_str());
+            drawList->AddText(ImVec2(tx + 1, ty + 1), shadowColU, flag.text.c_str());
+            drawList->AddText(ImVec2(tx, ty), textColU, flag.text.c_str());
 
             textOffsetY += textSize.y + 1.0f;
         }

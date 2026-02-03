@@ -23,6 +23,8 @@ namespace g_Config {
     // 掉落物
     inline bool bDrawDroppedItems = true;
     inline float DroppedItemMaxDistance = 500.0f;
+    inline float DroppedItemNameColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    inline float DroppedItemDistanceColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 
     // 宝箱
     inline bool bDrawSupplyDrops = true;
@@ -31,10 +33,15 @@ namespace g_Config {
     // 建筑
     inline bool bDrawStructures = true;
     inline float StructureMaxDistance = 10000.0f;
+    inline float StructureNameColor[4] = { 1.0f, 1.0f, 0.7f, 1.0f };
+    inline float StructureOwnerColor[4] = { 0.4f, 1.0f, 1.0f, 1.0f };
+    inline float StructureDistanceColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 
     // 水源
     inline bool bDrawWater = true;
     inline float WaterMaxDistance = 500.0f;
+    inline float WaterNameColor[4] = { 0.0f, 0.75f, 1.0f, 1.0f };
+    inline float WaterDistanceColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 
     // 全局
     inline bool bDrawBox = true;
@@ -68,7 +75,7 @@ namespace g_Config {
 
     // OOF
     inline bool bEnableOOF = false;
-    inline float OOFColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    inline float OOFColor[4] = { 1.0f, 1.0f, 1.0f, 0.75f };
     inline float OOFRadius = 1.00f;
     inline float OOFSize = 12.0f;
     inline float OOFBreathSpeed = 0.1f;

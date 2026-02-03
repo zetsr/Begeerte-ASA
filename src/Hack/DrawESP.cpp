@@ -80,7 +80,6 @@ namespace g_DrawESP {
         bool shouldDrawBox = false;
         bool shouldDrawHealthBar = false;
         bool shouldDrawName = false;
-        bool shouldDrawSpecies = false;
         bool shouldDrawDistance = false;
         bool shouldDrawTorpor = false;
     };
@@ -236,8 +235,7 @@ namespace g_DrawESP {
                 g_ESP::RelationType relation = g_ESP::GetRelation(TargetChar, LocalChar);
 
                 bool bDrawBox = false, bDrawHealthBar = false, bDrawName = false;
-                bool bDrawSpecies = false, bDrawGrowth = false, bDrawDistance = false;
-                bool bDrawTorpor = false;
+                bool bDrawGrowth = false, bDrawDistance = false, bDrawTorpor = false;
                 float* BoxColor = nullptr;
                 float* NameColor = nullptr;
                 float* DistanceColor = nullptr;
@@ -249,7 +247,6 @@ namespace g_DrawESP {
                     bDrawHealthBar = g_Config::bDrawHealthBarTeam;
                     bDrawName = g_Config::bDrawNameTeam;
                     NameColor = g_Config::NameColorTeam;
-                    bDrawSpecies = g_Config::bDrawSpeciesTeam;
                     bDrawGrowth = g_Config::bDrawGrowthTeam;
                     bDrawDistance = g_Config::bDrawDistanceTeam;
                     DistanceColor = g_Config::DistanceColorTeam;
@@ -262,7 +259,6 @@ namespace g_DrawESP {
                     bDrawHealthBar = g_Config::bDrawHealthBar;
                     bDrawName = g_Config::bDrawName;
                     NameColor = g_Config::NameColor;
-                    bDrawSpecies = g_Config::bDrawSpecies;
                     bDrawGrowth = g_Config::bDrawGrowth;
                     bDrawDistance = g_Config::bDrawDistance;
                     DistanceColor = g_Config::DistanceColor;
@@ -298,7 +294,6 @@ namespace g_DrawESP {
                 entry.shouldDrawBox = bDrawBox;
                 entry.shouldDrawHealthBar = bDrawHealthBar;
                 entry.shouldDrawName = bDrawName;
-                entry.shouldDrawSpecies = bDrawSpecies;
                 entry.shouldDrawDistance = bDrawDistance;
                 entry.shouldDrawTorpor = bDrawTorpor;
 
@@ -340,11 +335,6 @@ namespace g_DrawESP {
                     ImU32 torporCol = g_DrawESP::GetU32Color(TorporColor);
                     entry.flags.push_back({ torporStr, torporCol, g_ESP::FlagPos::Bottom });
                     entry.bars.push_back({ entry.cachedTorpor, entry.cachedMaxTorpor, torporCol, g_ESP::BarPos::Bottom, g_ESP::BarOrientation::Horizontal });
-                }
-
-                if (bDrawSpecies) {
-                    std::string species = TargetActor->IsA(SDK::APrimalDinoCharacter::StaticClass()) ? ((SDK::APrimalDinoCharacter*)TargetActor)->GetDescriptiveName().ToString() : "Human";
-                    entry.flags.push_back({ species, ToImColor(220, 220, 220, 255), g_ESP::FlagPos::Right });
                 }
 
                 if (bDrawDistance) {
@@ -412,16 +402,15 @@ namespace g_DrawESP {
                         entry.cachedRect.valid = true;
                         entry.flags.clear();
                         entry.bars.clear();
-                        ImU32 waterColor = ToImColor(0, 200, 255, 255);
+                        ImU32 waterColor = g_DrawESP::GetU32Color(g_Config::WaterNameColor);
 
                         entry.flags.push_back({ "[Water]", waterColor, g_ESP::FlagPos::Right });
-                        entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(200, 200, 200, 255), g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_DrawESP::GetU32Color(g_Config::WaterDistanceColor), g_ESP::FlagPos::Right });
 
                         entry.shouldDrawBox = false;
                         entry.shouldDrawHealthBar = false;
                         entry.shouldDrawName = false;
                         entry.shouldDrawDistance = true;
-                        entry.shouldDrawSpecies = false;
                         entry.shouldDrawTorpor = false;
                     }
                     else {
@@ -480,7 +469,7 @@ namespace g_DrawESP {
                             itemName = Item->Class ? Item->Class->GetName() : "Unknown Item";
                         }
 
-                        ImU32 finalCol = ToImColor(220, 220, 220, 255);
+                        ImU32 finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemNameColor);
                         std::string className = Item->Class ? Item->Class->GetName() : "";
                         int quantity = Item->ItemQuantity;
 
@@ -509,16 +498,15 @@ namespace g_DrawESP {
                         if (Item->bIsBlueprint) label = "[BP] " + label;
 
                         entry.flags.push_back({ label, finalCol, g_ESP::FlagPos::Right });
-                        entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(200, 200, 200, 200), g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_DrawESP::GetU32Color(g_Config::DroppedItemDistanceColor), g_ESP::FlagPos::Right });
 
                         entry.boxColor = finalCol;
-                        entry.nameColor = ToImColor(220, 220, 220, 255);
+                        entry.nameColor = g_DrawESP::GetU32Color(g_Config::DroppedItemNameColor);
 
                         entry.shouldDrawBox = false;
                         entry.shouldDrawHealthBar = false;
                         entry.shouldDrawName = false;
                         entry.shouldDrawDistance = true;
-                        entry.shouldDrawSpecies = false;
                         entry.shouldDrawTorpor = false;
                     }
                     else {
@@ -595,12 +583,12 @@ namespace g_DrawESP {
 
                         entry.flags.clear();
                         entry.bars.clear();
-                        entry.flags.push_back({ "[" + sName + "]", ToImColor(255, 255, 180, 255), g_ESP::FlagPos::Right });
-                        entry.flags.push_back({ ownerStr, ToImColor(100, 255, 255, 255), g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ "[" + sName + "]", g_DrawESP::GetU32Color(g_Config::StructureNameColor), g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ ownerStr, g_DrawESP::GetU32Color(g_Config::StructureOwnerColor), g_ESP::FlagPos::Right });
                         ImU32 hpColor = GetHealthColor(healthPercent);
                         std::string hpText = std::to_string((int)curHP) + " (" + std::to_string(hpPercent) + "%)";
                         entry.flags.push_back({ hpText, hpColor, g_ESP::FlagPos::Right });
-                        entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(255, 255, 255, 255), g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_DrawESP::GetU32Color(g_Config::StructureDistanceColor), g_ESP::FlagPos::Right });
 
                         entry.shouldDrawTorpor = false;
                     }
