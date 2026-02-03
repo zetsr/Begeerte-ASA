@@ -12,6 +12,7 @@
 #include "DrawESP.h"
 #include "DrawImGui.h"
 // #include "Aimbot.h"
+#include "ConfigManager.h"
 #include "LuaManager.h"
 
 #include <cstdio>
@@ -460,6 +461,7 @@ namespace g_DrawImGui {
 
 		if (isNowOpen && !g_PrevMenuState) {
 			LuaManager::Get().RefreshFileList();
+			ConfigManager::Get().RefreshFileList();
 		}
 		g_PrevMenuState = isNowOpen;
 
@@ -742,6 +744,117 @@ namespace g_DrawImGui {
 
 						DrawAnimatedSeparator();
 
+						EndTabRegion();
+						ImGui::PopStyleVar();
+						ImGui::EndTabItem();
+					}
+
+					static bool configInitialized = false;
+					if (!configInitialized) {
+						ConfigManager::Get().Initialize("cfg");
+						configInitialized = true;
+					}
+
+					if (ImGui::BeginTabItem(U8("设置"))) {
+						auto& mgr = ConfigManager::Get();
+						auto& configs = mgr.GetConfigs();
+
+						ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(14.0f, 14.0f));
+						BeginTabRegion("ConfigManagerRegion");
+
+						ImGui::TextColored(ThemeColors::ACCENT, U8("配置管理系统"));
+						DrawAnimatedSeparator();
+
+						if (ImGui::Button(U8("刷新列表"))) {
+							mgr.RefreshFileList();
+						}
+						ImGui::SameLine();
+						if (ImGui::Button(U8("打开目录"))) {
+							std::string path = mgr.GetConfigDir();
+							ShellExecuteA(NULL, "open", path.c_str(), NULL, NULL, SW_SHOWDEFAULT);
+						}
+
+						ImGui::SameLine(0.0f, 20.0f);
+
+						static char configNameBuf[65] = { 0 };
+						ImGui::SetNextItemWidth(150.0f);
+						ImGui::InputText(U8("##ConfigName"), configNameBuf, sizeof(configNameBuf));
+						ImGui::SameLine();
+						if (ImGui::Button(U8("创建"))) {
+							std::string configName(configNameBuf);
+							if (configName.empty()) {
+
+							}
+							else if (!ConfigManager::IsValidConfigName(configName)) {
+
+							}
+							else {
+								if (mgr.CreateConfig(configName)) {
+									configNameBuf[0] = '\0';
+								}
+								else {
+
+								}
+							}
+						}
+
+						ImGui::Spacing();
+
+						static int selectedConfigIdx = -1;
+						if (ImGui::BeginChild("##ConfigListChild", ImVec2(0, 300), true)) {
+							if (configs.empty()) {
+								ImGui::SetCursorPosY(ImGui::GetWindowHeight() / 2 - 10);
+								ImGui::TextDisabled(U8("暂无配置文件"));
+							}
+							else {
+								for (int i = 0; i < (int)configs.size(); i++) {
+									auto& config = configs[i];
+									ImGui::PushID(i);
+
+									bool isSelected = (selectedConfigIdx == i);
+									if (ImGui::Selectable(config.name.c_str(), isSelected, ImGuiSelectableFlags_SpanAllColumns)) {
+										selectedConfigIdx = i;
+									}
+
+									ImGui::PopID();
+								}
+							}
+							ImGui::EndChild();
+						}
+
+						ImGui::Spacing();
+
+						ImGui::BeginDisabled(selectedConfigIdx < 0 || selectedConfigIdx >= (int)configs.size());
+
+						if (ImGui::Button(U8("加载配置"), ImVec2(120, 0))) {
+							if (selectedConfigIdx >= 0 && selectedConfigIdx < (int)configs.size()) {
+								auto& selectedConfig = configs[selectedConfigIdx];
+								if (mgr.LoadConfig(selectedConfig.name)) {
+
+								}
+								else {
+
+								}
+							}
+						}
+
+						ImGui::SameLine();
+
+						if (ImGui::Button(U8("保存配置"), ImVec2(120, 0))) {
+							if (selectedConfigIdx >= 0 && selectedConfigIdx < (int)configs.size()) {
+								auto& selectedConfig = configs[selectedConfigIdx];
+								if (mgr.SaveConfig(selectedConfig.name)) {
+
+								}
+								else {
+
+								}
+							}
+						}
+
+						ImGui::EndDisabled();
+
+						DrawAnimatedSeparator();
 						EndTabRegion();
 						ImGui::PopStyleVar();
 						ImGui::EndTabItem();

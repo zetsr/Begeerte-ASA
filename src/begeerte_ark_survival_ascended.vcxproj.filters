@@ -199,6 +199,9 @@
     <ClInclude Include="Hack\SDK_Headers.hpp">
       <Filter>Hack</Filter>
     </ClInclude>
+    <ClInclude Include="Hack\ConfigManager.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\hook.cpp">
@@ -352,6 +355,9 @@
       <Filter>lua-5.4.8\src</Filter>
     </ClCompile>
     <ClCompile Include="Hack\SDK_Impl.cpp">
+      <Filter>Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\ConfigManager.cpp">
       <Filter>Hack</Filter>
     </ClCompile>
   </ItemGroup>

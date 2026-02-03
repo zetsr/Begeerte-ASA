@@ -29,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Hack\Aimbot.h" />
+    <ClInclude Include="Hack\ConfigManager.h" />
     <ClInclude Include="Hack\Configs.h" />
     <ClInclude Include="Hack\DrawESP.h" />
     <ClInclude Include="Hack\DrawImGui.h" />
@@ -79,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hack\Aimbot.cpp" />
+    <ClCompile Include="Hack\ConfigManager.cpp" />
     <ClCompile Include="Hack\dllmain.cpp" />
     <ClCompile Include="Hack\DrawESP.cpp" />
     <ClCompile Include="Hack\DrawImGui.cpp" />

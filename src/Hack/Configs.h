@@ -1,11 +1,6 @@
 #pragma once
 
 namespace g_Config {
-    // 辅助函数：将 float[4] 转换为 ImU32
-    inline ImU32 GetU32Color(float color[4]) {
-        return ImGui::ColorConvertFloat4ToU32(*(ImVec4*)color);
-    }
-
     // 生物列表
     inline char entitySearchBuf[256] = { 0 };
     inline bool bEnableFilter = false;

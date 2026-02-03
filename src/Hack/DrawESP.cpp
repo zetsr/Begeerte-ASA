@@ -11,6 +11,10 @@
 #include <memory>
 
 namespace g_DrawESP {
+    inline ImU32 GetU32Color(float color[4]) {
+        return ImGui::ColorConvertFloat4ToU32(*(ImVec4*)color);
+    }
+
     inline ImU32 ToImColor(float r, float g, float b, float a) {
         return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
     }
@@ -191,7 +195,7 @@ namespace g_DrawESP {
                     }
 
                     entry.cachedRect = rect;
-                    entry.boxColor = g_Config::GetU32Color(RagdollCol);
+                    entry.boxColor = g_DrawESP::GetU32Color(RagdollCol);
                     entry.configBoxAlpha = RagdollCol[3];
                     entry.targetAlpha = 1.0f;
                     entry.aliveThisFrame = true;
@@ -273,8 +277,8 @@ namespace g_DrawESP {
                     BoxColor[2] * 255.0f, BoxColor[3] * 255.0f, 0.5f, true);
 
                 entry.cachedRect = rect;
-                entry.boxColor = g_Config::GetU32Color(BoxColor);
-                entry.nameColor = g_Config::GetU32Color(NameColor);
+                entry.boxColor = g_DrawESP::GetU32Color(BoxColor);
+                entry.nameColor = g_DrawESP::GetU32Color(NameColor);
                 entry.configBoxAlpha = BoxColor[3];
                 entry.isItem = false;
                 entry.isOOF = false;
@@ -333,7 +337,7 @@ namespace g_DrawESP {
                 if (bDrawTorpor && entry.cachedMaxTorpor > 0) {
                     std::string torporStr = std::to_string((int)entry.cachedTorpor) + "/" + std::to_string((int)entry.cachedMaxTorpor);
                     float torporPercent = (entry.cachedMaxTorpor > 0) ? (entry.cachedTorpor / entry.cachedMaxTorpor) : 0.0f;
-                    ImU32 torporCol = g_Config::GetU32Color(TorporColor);
+                    ImU32 torporCol = g_DrawESP::GetU32Color(TorporColor);
                     entry.flags.push_back({ torporStr, torporCol, g_ESP::FlagPos::Bottom });
                     entry.bars.push_back({ entry.cachedTorpor, entry.cachedMaxTorpor, torporCol, g_ESP::BarPos::Bottom, g_ESP::BarOrientation::Horizontal });
                 }
@@ -348,7 +352,7 @@ namespace g_DrawESP {
                     if (LocalPC->Pawn && TargetActor) {
                         dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
                     }
-                    entry.flags.push_back({ std::to_string((int)dist) + "m", g_Config::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
+                    entry.flags.push_back({ std::to_string((int)dist) + "m", g_DrawESP::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
                 }
 
                 SDK::FVector2D screenPos;
@@ -367,7 +371,7 @@ namespace g_DrawESP {
                             if (LocalPC->Pawn && TargetActor) {
                                 dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
                             }
-                            if (bDrawDistance) entry.flags.push_back({ std::to_string((int)(dist)) + "m", g_Config::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
+                            if (bDrawDistance) entry.flags.push_back({ std::to_string((int)(dist)) + "m", g_DrawESP::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
                         }
                         else {
                             entry.targetAlpha = 0.0f;
