@@ -208,7 +208,10 @@ namespace g_DrawESP {
                     std::string deadName = (TargetPS ? TargetPS->GetPlayerName().ToString() : TargetChar->GetDescriptiveName().ToString());
                     entry.flags.push_back({ deadName, entry.boxColor, g_ESP::FlagPos::Top });
 
-                    float dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                    float dist = 0.0f;
+                    if (LocalPC->Pawn && TargetActor) {
+                        dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                    }
                     entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(200, 200, 200, 255), g_ESP::FlagPos::Right });
 
                     continue;
