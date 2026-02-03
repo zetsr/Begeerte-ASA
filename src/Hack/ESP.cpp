@@ -73,6 +73,18 @@ namespace g_ESP {
         return true;
     }
 
+    bool IsStructureMatch(const std::string& structureName, const std::string& filter) {
+        if (filter.empty()) return true;
+
+        std::string lowerName = structureName;
+        std::string lowerFilter = filter;
+
+        std::transform(lowerName.begin(), lowerName.end(), lowerName.begin(), ::tolower);
+        std::transform(lowerFilter.begin(), lowerFilter.end(), lowerFilter.begin(), ::tolower);
+
+        return lowerName.find(lowerFilter) != std::string::npos;
+    }
+
     RelationType GetRelation(SDK::APrimalCharacter* TargetChar, SDK::APrimalCharacter* LocalChar) {
         if (!TargetChar || !LocalChar) return RelationType::Enemy;
 

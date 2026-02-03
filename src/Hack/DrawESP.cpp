@@ -147,7 +147,7 @@ namespace g_DrawESP {
             entry.aliveThisFrame = true;
             entry.lastWorldLoc = TargetActor->K2_GetActorLocation();
 
-            if (TargetActor->IsA(SDK::APrimalCharacter::StaticClass())) {
+            if (TargetActor && TargetActor->IsA(SDK::APrimalCharacter::StaticClass())) {
                 SDK::APrimalCharacter* TargetChar = (SDK::APrimalCharacter*)TargetActor;
                 SDK::APrimalCharacter* LocalChar = (SDK::APrimalCharacter*)LocalPC->Pawn;
 
@@ -381,8 +381,7 @@ namespace g_DrawESP {
                 }
             }
 
-            else if (g_Config::bDrawWater && TargetActor->IsA(SDK::APhysicsVolume::StaticClass()) && ((SDK::APhysicsVolume*)TargetActor)->bWaterVolume) {
-                SDK::APhysicsVolume* WaterVolume = (SDK::APhysicsVolume*)TargetActor;
+            else if (g_Config::bDrawWater && TargetActor && TargetActor->IsA(SDK::APhysicsVolume::StaticClass()) && (((SDK::APhysicsVolume*)TargetActor)->bWaterVolume || ((SDK::APhysicsVolume*)TargetActor)->bDynamicWaterVolume)) {
                 SDK::FVector Origin, Extend;
                 TargetActor->GetActorBounds(false, &Origin, &Extend, false);
 
@@ -432,7 +431,7 @@ namespace g_DrawESP {
                 }
             }
 
-            else if (g_Config::bDrawDroppedItems && TargetActor->IsA(SDK::ADroppedItem::StaticClass())) {
+            else if (g_Config::bDrawDroppedItems && TargetActor && TargetActor->IsA(SDK::ADroppedItem::StaticClass())) {
                 SDK::ADroppedItem* DroppedItem = (SDK::ADroppedItem*)TargetActor;
                 if (!DroppedItem || !DroppedItem->MyItem) {
                     entry.targetAlpha = 0.0f;
@@ -441,6 +440,12 @@ namespace g_DrawESP {
                 }
 
                 SDK::UPrimalItem* Item = DroppedItem->MyItem;
+                if (!Item) {
+                    entry.targetAlpha = 0.0f;
+                    entry.aliveThisFrame = false;
+                    continue;
+                }
+
                 float dist = 0.0f;
                 if (LocalPC->Pawn && TargetActor) {
                     dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
@@ -523,13 +528,31 @@ namespace g_DrawESP {
                 }
             }
 
-            else if (g_Config::bDrawStructures && TargetActor->IsA(SDK::APrimalStructure::StaticClass())) {
+            else if (g_Config::bDrawStructures && TargetActor && TargetActor->IsA(SDK::APrimalStructure::StaticClass())) {
                 SDK::APrimalStructure* Structure = (SDK::APrimalStructure*)TargetActor;
+                if (!Structure) {
+                    entry.targetAlpha = 0.0f;
+                    entry.aliveThisFrame = false;
+                    continue;
+                }
 
                 if (Structure->Health <= 0.0f) {
                     entry.targetAlpha = 0.0f;
                     entry.aliveThisFrame = false;
                     continue;
+                }
+
+                if (g_Config::bEnableStructureFilter && !g_Config::structureSearchBuf[0] == '\0') {
+                    std::string structureName = Structure->GetDescriptiveName().ToString();
+                    if (structureName.empty() || structureName == "None") {
+                        structureName = "Structure";
+                    }
+
+                    if (!g_ESP::IsStructureMatch(structureName, g_Config::structureSearchBuf)) {
+                        entry.targetAlpha = 0.0f;
+                        entry.aliveThisFrame = false;
+                        continue;
+                    }
                 }
 
                 float dist = 0.0f;

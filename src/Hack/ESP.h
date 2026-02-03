@@ -11,6 +11,7 @@ namespace g_ESP {
     std::string ToLower(std::string s);
 
     bool IsEntityMatch(std::string displayName, std::string filter);
+    bool IsStructureMatch(const std::string& structureName, const std::string& filter);
 
     struct BoxRect {
         ImVec2 topLeft;

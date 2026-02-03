@@ -10,6 +10,10 @@ namespace g_Config {
     inline char entitySearchBuf[256] = { 0 };
     inline bool bEnableFilter = false;
 
+    // 建筑列表
+    inline char structureSearchBuf[256] = "";
+    inline bool bEnableStructureFilter = false;
+
     // 自瞄
     inline bool bAimbotEnabled = false;
     inline float AimbotFOV = 180.0f;
