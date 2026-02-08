@@ -11,11 +11,19 @@
 
 ---
 
-# 🎨 ImGui Lua 绘制模块（完整 & 修正版）
+# 💻 全局函数
+
+| 函数签名 | 返回值 | 说明 | C++
+| --- | --- | --- | --- |
+| `OnPaint()` |  | 在这里使用 ImGui API 进行绘制 | `HRESULT STDMETHODCALLTYPE hkPresent(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)` |
+
+---
+
+# 🎨 ImGui
 
 > ⚠️ **注意**
 >
-> **所有 ImGui 绘制 API 必须且只能在 `OnPaint()` 全局函数中调用。**  
+> **所有 ImGui 绘制 API 必须在 `OnPaint()` 全局函数中调用才会正常工作。**  
 > 这些接口底层使用 `ImGui::GetBackgroundDrawList()`，仅在渲染阶段有效。
 >
 ---
@@ -48,7 +56,7 @@ Lua 中通过全局表 `ImGui` 访问所有绘制与输入接口。
 
 ---
 
-## 🖌️ 绘制 API（仅限 OnPaint）
+## 🖌️ 绘制 API
 
 ### 📐 线条与矩形
 
