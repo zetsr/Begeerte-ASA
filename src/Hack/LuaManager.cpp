@@ -1,6 +1,8 @@
 #include "LuaManager.h"
 #include "SDK_Headers.hpp"
 #include "ESP.h"
+#include "infoCPU.h"
+#include "infoGPU.h"
 #include <algorithm>
 #include <iostream>
 
@@ -202,6 +204,16 @@ void LuaManager::BindSDK() {
         return std::make_tuple(c->GetHealth(), c->GetMaxHealth(), (bool)c->IsDead(), name);
         });
 
+    char_api.set_function("GetExactPing", [](uintptr_t a) {
+        float ping = 0.0f;
+
+        auto c = (SDK::APrimalCharacter*)a;
+        if (!c) return ping;
+        if (c->PlayerState) ping = c->PlayerState->GetExactPing();
+
+        return ping;
+        });
+
     char_api.set_function("GetRelation", [](uintptr_t target, uintptr_t local) -> int {
         if (!target || !local) return 0;
         return (int)g_ESP::GetRelation((SDK::APrimalCharacter*)target, (SDK::APrimalCharacter*)local);
@@ -237,6 +249,29 @@ void LuaManager::BindSDK() {
         });
 }
 
+void LuaManager::BindSystem() {
+    if (!m_lua) return;
+    auto system_api = m_lua->create_named_table("System");
+
+    system_api.set_function("GetCPUStats", []() -> std::tuple<double, double> {
+        g_infoCPU::CPUStats stats;
+        if (g_infoCPU::GetCPUInformation(stats)) {
+            // 返回元组：第一个是使用率，第二个是频率
+            return std::make_tuple(stats.usagePercentage, stats.frequencyMHz);
+        }
+        return std::make_tuple(0.0, 0.0);
+        });
+
+    system_api.set_function("GetGPUStats", []() -> std::tuple<double, double> {
+        g_infoGPU::GPUStats stats;
+        if (g_infoGPU::GetGPUInformation(stats)) {
+            // 返回元组：第一个是使用率
+            return std::make_tuple(stats.usagePercentage, 0.0);
+        }
+        return std::make_tuple(0.0, 0.0);
+        });
+}
+
 void LuaManager::InitVM() {
     for (auto& script : m_scripts) {
         script.env = sol::nil;
@@ -247,6 +282,7 @@ void LuaManager::InitVM() {
     m_lua->open_libraries();
     BindImGui();
     BindSDK();
+    BindSystem();
 }
 
 void LuaManager::Shutdown() {

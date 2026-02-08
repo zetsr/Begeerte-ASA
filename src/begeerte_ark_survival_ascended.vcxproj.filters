@@ -202,6 +202,12 @@
     <ClInclude Include="Hack\ConfigManager.h">
       <Filter>Hack</Filter>
     </ClInclude>
+    <ClInclude Include="Hack\infoCPU.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\infoGPU.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\hook.cpp">
@@ -358,6 +364,12 @@
       <Filter>Hack</Filter>
     </ClCompile>
     <ClCompile Include="Hack\ConfigManager.cpp">
+      <Filter>Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\infoCPU.cpp">
+      <Filter>Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\infoGPU.cpp">
       <Filter>Hack</Filter>
     </ClCompile>
   </ItemGroup>

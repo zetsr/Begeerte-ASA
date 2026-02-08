@@ -34,6 +34,8 @@
     <ClInclude Include="Hack\DrawESP.h" />
     <ClInclude Include="Hack\DrawImGui.h" />
     <ClInclude Include="Hack\ESP.h" />
+    <ClInclude Include="Hack\infoCPU.h" />
+    <ClInclude Include="Hack\infoGPU.h" />
     <ClInclude Include="Hack\LuaManager.h" />
     <ClInclude Include="Hack\SDK_Headers.hpp" />
     <ClInclude Include="lua-5.4.8\src\lapi.h" />
@@ -85,6 +87,8 @@
     <ClCompile Include="Hack\DrawESP.cpp" />
     <ClCompile Include="Hack\DrawImGui.cpp" />
     <ClCompile Include="Hack\ESP.cpp" />
+    <ClCompile Include="Hack\infoCPU.cpp" />
+    <ClCompile Include="Hack\infoGPU.cpp" />
     <ClCompile Include="Hack\LuaManager.cpp" />
     <ClCompile Include="Hack\SDK_Impl.cpp" />
     <ClCompile Include="lua-5.4.8\src\lapi.c" />

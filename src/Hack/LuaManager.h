@@ -60,5 +60,6 @@ private:
     void InitVM();
     void BindImGui();
     void BindSDK();
+    void BindSystem();
     bool ExecuteScript(LuaScript& script);
 };
