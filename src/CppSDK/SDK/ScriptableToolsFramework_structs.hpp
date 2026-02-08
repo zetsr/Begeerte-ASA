@@ -127,15 +127,6 @@ enum class EScriptableToolStartupRequirements : uint8
 	EScriptableToolStartupRequirements_MAX   = 3,
 };
 
-// ScriptStruct ScriptableToolsFramework.ScriptableToolGroupSet
-// 0x0050 (0x0050 - 0x0000)
-struct FScriptableToolGroupSet final
-{
-public:
-	TSet<TSubclassOf<class UScriptableToolGroupTag>> Groups;                                         // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FScriptableToolGroupSet;
-
 // ScriptStruct ScriptableToolsFramework.ScriptableToolModifierStates
 // 0x0003 (0x0003 - 0x0000)
 struct FScriptableToolModifierStates final
@@ -165,6 +156,15 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FScriptableToolGizmoOptions;
+
+// ScriptStruct ScriptableToolsFramework.ScriptableToolGroupSet
+// 0x0050 (0x0050 - 0x0000)
+struct FScriptableToolGroupSet final
+{
+public:
+	TSet<TSubclassOf<class UScriptableToolGroupTag>> Groups;                                         // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FScriptableToolGroupSet;
 
 }
 

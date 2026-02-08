@@ -19,24 +19,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass DataListButtonVariable_ColorPicker_Widget_ASA.DataListButtonVariable_ColorPicker_Widget_ASA_C
-// 0x0030 (0x04F8 - 0x04C8)
+// 0x0030 (0x0508 - 0x04D8)
 class UDataListButtonVariable_ColorPicker_Widget_ASA_C final : public UDataListButtonVariable_Widget_ASA_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_DataListButtonVariable_ColorPicker_Widget_ASA_C; // 0x04C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMulticastInlineDelegate<void(const struct FLinearColor& Color)> ChangedColor;                   // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bHideColor;                                        // 0x04E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E1[0x7];                                      // 0x04E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool Toggle)>   SelectedOption;                                    // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame_DataListButtonVariable_ColorPicker_Widget_ASA_C; // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TMulticastInlineDelegate<void(const struct FLinearColor& Color)> ChangedColor;                   // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bHideColor;                                        // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool Toggle)>   SelectedOption;                                    // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue);
-	void SetupTextValue(const class FText& Text, class FText* ReturnText);
-	void PreConstruct(bool IsDesignTime);
-	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
-	void ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA(int32 EntryPoint);
-	void Construct();
 	void BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams);
+	void Construct();
+	void ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA(int32 EntryPoint);
+	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
+	void PreConstruct(bool IsDesignTime);
+	void SetupTextValue(const class FText& Text, class FText* ReturnText);
+	void UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue);
 
 public:
 	static class UClass* StaticClass()

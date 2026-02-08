@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Human_FaceCustomization_AnimBP_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "Human_FaceCustomization_AnimBP_structs.hpp"
 #include "Human_Male_Faces_Enum_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
 namespace SDK

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GeometryScriptingCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GeometryScriptingCore_structs.hpp"
 
 
 namespace SDK::Params

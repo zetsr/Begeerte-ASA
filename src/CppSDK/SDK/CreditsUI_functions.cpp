@@ -17,29 +17,37 @@
 namespace SDK
 {
 
-// Function CreditsUI.CreditsUI_C.CloseButtonEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function CreditsUI.CreditsUI_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCreditsUI_C::CloseButtonEvent()
+void UCreditsUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CreditsUI_C", "CloseButtonEvent");
+		Func = Class->GetFunction("CreditsUI_C", "Tick");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::CreditsUI_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function CreditsUI.CreditsUI_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function CreditsUI.CreditsUI_C.RemovedFromViewport
+// (Event, Public, BlueprintEvent)
 
-void UCreditsUI_C::Construct()
+void UCreditsUI_C::RemovedFromViewport()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CreditsUI_C", "Construct");
+		Func = Class->GetFunction("CreditsUI_C", "RemovedFromViewport");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,39 +73,31 @@ void UCreditsUI_C::ExecuteUbergraph_CreditsUI(int32 EntryPoint)
 }
 
 
-// Function CreditsUI.CreditsUI_C.RemovedFromViewport
-// (Event, Public, BlueprintEvent)
+// Function CreditsUI.CreditsUI_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UCreditsUI_C::RemovedFromViewport()
+void UCreditsUI_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CreditsUI_C", "RemovedFromViewport");
+		Func = Class->GetFunction("CreditsUI_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function CreditsUI.CreditsUI_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function CreditsUI.CreditsUI_C.CloseButtonEvent
+// (BlueprintCallable, BlueprintEvent)
 
-void UCreditsUI_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UCreditsUI_C::CloseButtonEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CreditsUI_C", "Tick");
+		Func = Class->GetFunction("CreditsUI_C", "CloseButtonEvent");
 
-	Params::CreditsUI_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

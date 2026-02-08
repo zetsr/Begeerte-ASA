@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "ScriptableToolsFramework_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "InteractiveToolsFramework_structs.hpp"
 #include "InteractiveToolsFramework_classes.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK
@@ -133,39 +133,6 @@ public:
 };
 DUMPER7_ASSERTS_UScriptableToolBehavior;
 
-// Class ScriptableToolsFramework.ScriptableToolClickDragBehavior
-// 0x0080 (0x00A8 - 0x0028)
-class UScriptableToolClickDragBehavior final : public UScriptableToolBehavior
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UScriptableModularBehaviorTool*         BehaviorHost;                                      // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	class UClickDragInputBehavior*                Behavior;                                          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TDelegate<void(const struct FInputDeviceState& InputDeviceState)> ModifierCheckFunc;             // 0x0040(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TDelegate<void(const struct FInputDeviceRay& PressPos, const struct FScriptableToolModifierStates& Modifiers, EScriptableToolMouseButton MouseButton)> TestCanBeginClickDragSequenceFunc; // 0x0050(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TDelegate<void(const struct FInputDeviceRay& PressPos, const struct FScriptableToolModifierStates& Modifiers, EScriptableToolMouseButton MouseButton)> OnClickPressFunc; // 0x0060(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TDelegate<void(const struct FInputDeviceRay& DragPos, const struct FScriptableToolModifierStates& Modifiers, EScriptableToolMouseButton MouseButton)> OnClickDragFunc; // 0x0070(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TDelegate<void(const struct FInputDeviceRay& ReleasePos, const struct FScriptableToolModifierStates& Modifiers, EScriptableToolMouseButton MouseButton)> OnClickReleaseFunc; // 0x0080(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TDelegate<void(const struct FScriptableToolModifierStates& Modifiers, EScriptableToolMouseButton MouseButton)> OnTerminateDragSequenceFunc; // 0x0090(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EScriptableToolMouseButton                    MouseButton;                                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ScriptableToolClickDragBehavior")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ScriptableToolClickDragBehavior")
-	}
-	static class UScriptableToolClickDragBehavior* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UScriptableToolClickDragBehavior>();
-	}
-};
-DUMPER7_ASSERTS_UScriptableToolClickDragBehavior;
-
 // Class ScriptableToolsFramework.ScriptableClickDragTool
 // 0x0038 (0x0320 - 0x02E8)
 class UScriptableClickDragTool final : public UScriptableInteractiveTool
@@ -241,35 +208,6 @@ public:
 };
 DUMPER7_ASSERTS_UScriptableTool_RenderAPI;
 
-// Class ScriptableToolsFramework.CustomScriptableToolBuilderBaseInterface
-// 0x0000 (0x0000 - 0x0000)
-class ICustomScriptableToolBuilderBaseInterface final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CustomScriptableToolBuilderBaseInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CustomScriptableToolBuilderBaseInterface")
-	}
-	static class ICustomScriptableToolBuilderBaseInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ICustomScriptableToolBuilderBaseInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_ICustomScriptableToolBuilderBaseInterface;
-
 // Class ScriptableToolsFramework.ScriptableTool_HUDAPI
 // 0x0010 (0x0038 - 0x0028)
 class UScriptableTool_HUDAPI final : public UObject
@@ -324,6 +262,52 @@ public:
 };
 DUMPER7_ASSERTS_UScriptableInteractiveToolPropertySet;
 
+// Class ScriptableToolsFramework.BaseScriptableToolBuilder
+// 0x0008 (0x0030 - 0x0028)
+class UBaseScriptableToolBuilder : public UInteractiveToolBuilder
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BaseScriptableToolBuilder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseScriptableToolBuilder")
+	}
+	static class UBaseScriptableToolBuilder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBaseScriptableToolBuilder>();
+	}
+};
+DUMPER7_ASSERTS_UBaseScriptableToolBuilder;
+
+// Class ScriptableToolsFramework.CustomScriptableToolBuilderContainer
+// 0x0008 (0x0038 - 0x0030)
+class UCustomScriptableToolBuilderContainer final : public UBaseScriptableToolBuilder
+{
+public:
+	class UCustomScriptableToolBuilderComponentBase* BuilderInstance;                                // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CustomScriptableToolBuilderContainer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CustomScriptableToolBuilderContainer")
+	}
+	static class UCustomScriptableToolBuilderContainer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCustomScriptableToolBuilderContainer>();
+	}
+};
+DUMPER7_ASSERTS_UCustomScriptableToolBuilderContainer;
+
 // Class ScriptableToolsFramework.ScriptableToolsUtilityLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UScriptableToolsUtilityLibrary final : public UBlueprintFunctionLibrary
@@ -348,6 +332,48 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UScriptableToolsUtilityLibrary;
+
+// Class ScriptableToolsFramework.ScriptableSingleClickTool
+// 0x0030 (0x0318 - 0x02E8)
+class UScriptableSingleClickTool final : public UScriptableInteractiveTool
+{
+public:
+	uint8                                         Pad_2E8[0x10];                                     // 0x02E8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bWantMouseHover;                                   // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USingleClickInputBehavior*              SingleClickBehavior;                               // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NonTransactional, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UMouseHoverBehavior*                    MouseHoverBehavior;                                // 0x0308(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NonTransactional, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         Pad_310[0x8];                                      // 0x0310(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FScriptableToolModifierStates GetActiveModifiers();
+	void OnHitByClick(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers);
+	void OnHoverBegin(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers);
+	void OnHoverEnd(const struct FScriptableToolModifierStates& Modifiers);
+	struct FInputRayHit OnHoverHitTest(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers);
+	bool OnHoverUpdate(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers);
+	struct FInputRayHit TestIfHitByClick(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers);
+
+	bool InActiveHover() const;
+	bool IsAltDown() const;
+	bool IsCtrlDown() const;
+	bool IsShiftDown() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ScriptableSingleClickTool")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ScriptableSingleClickTool")
+	}
+	static class UScriptableSingleClickTool* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UScriptableSingleClickTool>();
+	}
+};
+DUMPER7_ASSERTS_UScriptableSingleClickTool;
 
 // Class ScriptableToolsFramework.ScriptableModularBehaviorTool
 // 0x0088 (0x0370 - 0x02E8)
@@ -396,98 +422,34 @@ public:
 };
 DUMPER7_ASSERTS_UScriptableModularBehaviorTool;
 
-// Class ScriptableToolsFramework.ScriptableToolTargetRequirements
-// 0x0040 (0x0068 - 0x0028)
-class UScriptableToolTargetRequirements final : public UObject
+// Class ScriptableToolsFramework.CustomScriptableToolBuilderBaseInterface
+// 0x0000 (0x0000 - 0x0000)
+class ICustomScriptableToolBuilderBaseInterface final
 {
-public:
-	int32                                         MinMatchingTargets;                                // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxMatchingTargets;                                // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30[0x38];                                      // 0x0030(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UScriptableToolTargetRequirements* BuildToolTargetRequirements(const TArray<class UClass*>& RequirementInterfaces);
-
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ScriptableToolTargetRequirements")
+		STATIC_CLASS_IMPL("CustomScriptableToolBuilderBaseInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ScriptableToolTargetRequirements")
+		STATIC_NAME_IMPL(L"CustomScriptableToolBuilderBaseInterface")
 	}
-	static class UScriptableToolTargetRequirements* GetDefaultObj()
+	static class ICustomScriptableToolBuilderBaseInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UScriptableToolTargetRequirements>();
+		return GetDefaultObjImpl<ICustomScriptableToolBuilderBaseInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolTargetRequirements;
-
-// Class ScriptableToolsFramework.ScriptableSingleClickTool
-// 0x0030 (0x0318 - 0x02E8)
-class UScriptableSingleClickTool final : public UScriptableInteractiveTool
-{
-public:
-	uint8                                         Pad_2E8[0x10];                                     // 0x02E8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bWantMouseHover;                                   // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USingleClickInputBehavior*              SingleClickBehavior;                               // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NonTransactional, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UMouseHoverBehavior*                    MouseHoverBehavior;                                // 0x0308(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NonTransactional, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	uint8                                         Pad_310[0x8];                                      // 0x0310(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FScriptableToolModifierStates GetActiveModifiers();
-	void OnHitByClick(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers);
-	void OnHoverBegin(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers);
-	void OnHoverEnd(const struct FScriptableToolModifierStates& Modifiers);
-	struct FInputRayHit OnHoverHitTest(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers);
-	bool OnHoverUpdate(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers);
-	struct FInputRayHit TestIfHitByClick(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers);
-
-	bool InActiveHover() const;
-	bool IsAltDown() const;
-	bool IsCtrlDown() const;
-	bool IsShiftDown() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ScriptableSingleClickTool")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ScriptableSingleClickTool")
-	}
-	static class UScriptableSingleClickTool* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UScriptableSingleClickTool>();
-	}
-};
-DUMPER7_ASSERTS_UScriptableSingleClickTool;
-
-// Class ScriptableToolsFramework.BaseScriptableToolBuilder
-// 0x0008 (0x0030 - 0x0028)
-class UBaseScriptableToolBuilder : public UInteractiveToolBuilder
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BaseScriptableToolBuilder")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BaseScriptableToolBuilder")
-	}
-	static class UBaseScriptableToolBuilder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBaseScriptableToolBuilder>();
-	}
-};
-DUMPER7_ASSERTS_UBaseScriptableToolBuilder;
+DUMPER7_ASSERTS_ICustomScriptableToolBuilderBaseInterface;
 
 // Class ScriptableToolsFramework.CustomScriptableToolBuilderComponentBase
 // 0x0000 (0x0028 - 0x0028)
@@ -508,29 +470,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UCustomScriptableToolBuilderComponentBase;
-
-// Class ScriptableToolsFramework.CustomScriptableToolBuilderContainer
-// 0x0008 (0x0038 - 0x0030)
-class UCustomScriptableToolBuilderContainer final : public UBaseScriptableToolBuilder
-{
-public:
-	class UCustomScriptableToolBuilderComponentBase* BuilderInstance;                                // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CustomScriptableToolBuilderContainer")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CustomScriptableToolBuilderContainer")
-	}
-	static class UCustomScriptableToolBuilderContainer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCustomScriptableToolBuilderContainer>();
-	}
-};
-DUMPER7_ASSERTS_UCustomScriptableToolBuilderContainer;
 
 // Class ScriptableToolsFramework.CustomScriptableToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -559,6 +498,34 @@ public:
 };
 DUMPER7_ASSERTS_UCustomScriptableToolBuilder;
 
+// Class ScriptableToolsFramework.ScriptableToolTargetRequirements
+// 0x0040 (0x0068 - 0x0028)
+class UScriptableToolTargetRequirements final : public UObject
+{
+public:
+	int32                                         MinMatchingTargets;                                // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxMatchingTargets;                                // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30[0x38];                                      // 0x0030(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UScriptableToolTargetRequirements* BuildToolTargetRequirements(const TArray<class UClass*>& RequirementInterfaces);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ScriptableToolTargetRequirements")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ScriptableToolTargetRequirements")
+	}
+	static class UScriptableToolTargetRequirements* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UScriptableToolTargetRequirements>();
+	}
+};
+DUMPER7_ASSERTS_UScriptableToolTargetRequirements;
+
 // Class ScriptableToolsFramework.ToolTargetScriptableToolBuilder
 // 0x0010 (0x0038 - 0x0028)
 class UToolTargetScriptableToolBuilder final : public UCustomScriptableToolBuilderComponentBase
@@ -586,6 +553,39 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UToolTargetScriptableToolBuilder;
+
+// Class ScriptableToolsFramework.ScriptableToolClickDragBehavior
+// 0x0080 (0x00A8 - 0x0028)
+class UScriptableToolClickDragBehavior final : public UScriptableToolBehavior
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UScriptableModularBehaviorTool*         BehaviorHost;                                      // 0x0030(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class UClickDragInputBehavior*                Behavior;                                          // 0x0038(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TDelegate<void(const struct FInputDeviceState& InputDeviceState)> ModifierCheckFunc;             // 0x0040(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TDelegate<void(const struct FInputDeviceRay& PressPos, const struct FScriptableToolModifierStates& Modifiers, EScriptableToolMouseButton MouseButton)> TestCanBeginClickDragSequenceFunc; // 0x0050(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TDelegate<void(const struct FInputDeviceRay& PressPos, const struct FScriptableToolModifierStates& Modifiers, EScriptableToolMouseButton MouseButton)> OnClickPressFunc; // 0x0060(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TDelegate<void(const struct FInputDeviceRay& DragPos, const struct FScriptableToolModifierStates& Modifiers, EScriptableToolMouseButton MouseButton)> OnClickDragFunc; // 0x0070(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TDelegate<void(const struct FInputDeviceRay& ReleasePos, const struct FScriptableToolModifierStates& Modifiers, EScriptableToolMouseButton MouseButton)> OnClickReleaseFunc; // 0x0080(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TDelegate<void(const struct FScriptableToolModifierStates& Modifiers, EScriptableToolMouseButton MouseButton)> OnTerminateDragSequenceFunc; // 0x0090(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EScriptableToolMouseButton                    MouseButton;                                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ScriptableToolClickDragBehavior")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ScriptableToolClickDragBehavior")
+	}
+	static class UScriptableToolClickDragBehavior* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UScriptableToolClickDragBehavior>();
+	}
+};
+DUMPER7_ASSERTS_UScriptableToolClickDragBehavior;
 
 // Class ScriptableToolsFramework.ScriptableToolContextObject
 // 0x0000 (0x0028 - 0x0028)

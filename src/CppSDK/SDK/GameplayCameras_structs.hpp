@@ -178,15 +178,6 @@ enum class ECameraAutoRotateDirection : uint32
 	ECameraAutoRotateDirection_MAX           = 2,
 };
 
-// ScriptStruct GameplayCameras.GameplayCamerasActivateCameraRigViaProxyTaskInstanceData
-// 0x0008 (0x0008 - 0x0000)
-struct FGameplayCamerasActivateCameraRigViaProxyTaskInstanceData final
-{
-public:
-	class UCameraRigProxyAsset*                   CameraRigProxy;                                    // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-};
-DUMPER7_ASSERTS_FGameplayCamerasActivateCameraRigViaProxyTaskInstanceData;
-
 // ScriptStruct GameplayCameras.DoubleCameraParameter
 // 0x0010 (0x0010 - 0x0000)
 struct FDoubleCameraParameter final
@@ -857,6 +848,15 @@ public:
 	uint8                                         Pad_2F[0x1];                                       // 0x002F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGameplayCamerasActivateCameraRigTask;
+
+// ScriptStruct GameplayCameras.GameplayCamerasActivateCameraRigViaProxyTaskInstanceData
+// 0x0008 (0x0008 - 0x0000)
+struct FGameplayCamerasActivateCameraRigViaProxyTaskInstanceData final
+{
+public:
+	class UCameraRigProxyAsset*                   CameraRigProxy;                                    // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FGameplayCamerasActivateCameraRigViaProxyTaskInstanceData;
 
 // ScriptStruct GameplayCameras.GameplayCamerasActivateCameraRigViaProxyTask
 // 0x0008 (0x0030 - 0x0028)

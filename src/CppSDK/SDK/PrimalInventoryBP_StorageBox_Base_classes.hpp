@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PrimalInventoryBP_StorageBox_Base.PrimalInventoryBP_StorageBox_Base_C
-// 0x0000 (0x0780 - 0x0780)
+// 0x0000 (0x0788 - 0x0788)
 class UPrimalInventoryBP_StorageBox_Base_C : public UPrimalInventoryComponent
 {
 public:

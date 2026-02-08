@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ConsoleVariablesEditorRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "ConsoleVariablesEditorRuntime_structs.hpp"
 
 
 namespace SDK

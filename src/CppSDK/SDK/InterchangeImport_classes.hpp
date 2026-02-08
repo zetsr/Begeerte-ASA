@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "InterchangeImport_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "InterchangeCore_classes.hpp"
-#include "UnrealUSDWrapper_structs.hpp"
 #include "USDClasses_structs.hpp"
+#include "InterchangeImport_structs.hpp"
+#include "UnrealUSDWrapper_structs.hpp"
 
 
 namespace SDK

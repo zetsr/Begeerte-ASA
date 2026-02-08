@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "DeveloperSettings_classes.hpp"
 #include "TextureUtilitiesCommon_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK

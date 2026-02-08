@@ -12,9 +12,9 @@
 
 #include "MovieScene_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MovieSceneTracks_structs.hpp"
 #include "SequencerScripting_structs.hpp"
 #include "Engine_structs.hpp"
-#include "MovieSceneTracks_structs.hpp"
 
 
 namespace SDK::Params

@@ -13,9 +13,9 @@
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "UnrealUSDWrapper_structs.hpp"
-#include "USDStage_structs.hpp"
 #include "USDClasses_structs.hpp"
+#include "USDStage_structs.hpp"
+#include "UnrealUSDWrapper_structs.hpp"
 
 
 namespace SDK
@@ -44,6 +44,29 @@ public:
 };
 DUMPER7_ASSERTS_UUsdDynamicBindingResolverLibrary;
 
+// Class USDStage.UsdPrimLinkCache
+// 0x0008 (0x0030 - 0x0028)
+class UUsdPrimLinkCache final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdPrimLinkCache")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdPrimLinkCache")
+	}
+	static class UUsdPrimLinkCache* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdPrimLinkCache>();
+	}
+};
+DUMPER7_ASSERTS_UUsdPrimLinkCache;
+
 // Class USDStage.UsdInfoCache
 // 0x0008 (0x0030 - 0x0028)
 class UUsdInfoCache final : public UObject
@@ -67,28 +90,32 @@ public:
 };
 DUMPER7_ASSERTS_UUsdInfoCache;
 
-// Class USDStage.UsdPrimLinkCache
-// 0x0008 (0x0030 - 0x0028)
-class UUsdPrimLinkCache final : public UObject
+// Class USDStage.UsdPrimTwin
+// 0x0088 (0x00B0 - 0x0028)
+class UUsdPrimTwin final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PrimPath;                                          // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class USceneComponent>         SceneComponent;                                    // 0x0050(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class UUsdPrimTwin*>      Children;                                          // 0x0058(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	TWeakObjectPtr<class UUsdPrimTwin>            Parent;                                            // 0x00A8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("UsdPrimLinkCache")
+		STATIC_CLASS_IMPL("UsdPrimTwin")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"UsdPrimLinkCache")
+		STATIC_NAME_IMPL(L"UsdPrimTwin")
 	}
-	static class UUsdPrimLinkCache* GetDefaultObj()
+	static class UUsdPrimTwin* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UUsdPrimLinkCache>();
+		return GetDefaultObjImpl<UUsdPrimTwin>();
 	}
 };
-DUMPER7_ASSERTS_UUsdPrimLinkCache;
+DUMPER7_ASSERTS_UUsdPrimTwin;
 
 // Class USDStage.UsdStageActor
 // 0x03D0 (0x0850 - 0x0480)
@@ -182,33 +209,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AUsdStageActor;
-
-// Class USDStage.UsdPrimTwin
-// 0x0088 (0x00B0 - 0x0028)
-class UUsdPrimTwin final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PrimPath;                                          // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class USceneComponent>         SceneComponent;                                    // 0x0050(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, class UUsdPrimTwin*>      Children;                                          // 0x0058(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	TWeakObjectPtr<class UUsdPrimTwin>            Parent;                                            // 0x00A8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdPrimTwin")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdPrimTwin")
-	}
-	static class UUsdPrimTwin* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdPrimTwin>();
-	}
-};
-DUMPER7_ASSERTS_UUsdPrimTwin;
 
 // Class USDStage.UsdTransactor
 // 0x0010 (0x0038 - 0x0028)

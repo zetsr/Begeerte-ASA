@@ -24,31 +24,25 @@
 namespace SDK
 {
 
-// Class GameplayAbilities.AbilityAsync
-// 0x0008 (0x0038 - 0x0030)
-class UAbilityAsync : public UCancellableAsyncAction
+// Class GameplayAbilities.GameplayEffectComponent
+// 0x0000 (0x0028 - 0x0028)
+class UGameplayEffectComponent : public UObject
 {
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void EndAction();
-
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("AbilityAsync")
+		STATIC_CLASS_IMPL("GameplayEffectComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"AbilityAsync")
+		STATIC_NAME_IMPL(L"GameplayEffectComponent")
 	}
-	static class UAbilityAsync* GetDefaultObj()
+	static class UGameplayEffectComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAbilityAsync>();
+		return GetDefaultObjImpl<UGameplayEffectComponent>();
 	}
 };
-DUMPER7_ASSERTS_UAbilityAsync;
+DUMPER7_ASSERTS_UGameplayEffectComponent;
 
 // Class GameplayAbilities.AbilitySystemDebugHUD
 // 0x0000 (0x0578 - 0x0578)
@@ -70,48 +64,33 @@ public:
 };
 DUMPER7_ASSERTS_AAbilitySystemDebugHUD;
 
-// Class GameplayAbilities.GameplayEffectComponent
-// 0x0000 (0x0028 - 0x0028)
-class UGameplayEffectComponent : public UObject
+// Class GameplayAbilities.AdditionalEffectsGameplayEffectComponent
+// 0x0048 (0x0070 - 0x0028)
+class UAdditionalEffectsGameplayEffectComponent final : public UGameplayEffectComponent
 {
 public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameplayEffectComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameplayEffectComponent")
-	}
-	static class UGameplayEffectComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameplayEffectComponent>();
-	}
-};
-DUMPER7_ASSERTS_UGameplayEffectComponent;
-
-// Class GameplayAbilities.BlockAbilityTagsGameplayEffectComponent
-// 0x0060 (0x0088 - 0x0028)
-class UBlockAbilityTagsGameplayEffectComponent final : public UGameplayEffectComponent
-{
-public:
-	struct FInheritedTagContainer                 InheritableBlockedAbilityTagsContainer;            // 0x0028(0x0060)(Edit, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	bool                                          bOnApplicationCopyDataFromOriginalSpec;            // 0x0028(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FConditionalGameplayEffect>     OnApplicationGameplayEffects;                      // 0x0030(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class UGameplayEffect>>    OnCompleteAlways;                                  // 0x0040(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class UGameplayEffect>>    OnCompleteNormal;                                  // 0x0050(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class UGameplayEffect>>    OnCompletePrematurely;                             // 0x0060(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BlockAbilityTagsGameplayEffectComponent")
+		STATIC_CLASS_IMPL("AdditionalEffectsGameplayEffectComponent")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BlockAbilityTagsGameplayEffectComponent")
+		STATIC_NAME_IMPL(L"AdditionalEffectsGameplayEffectComponent")
 	}
-	static class UBlockAbilityTagsGameplayEffectComponent* GetDefaultObj()
+	static class UAdditionalEffectsGameplayEffectComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBlockAbilityTagsGameplayEffectComponent>();
+		return GetDefaultObjImpl<UAdditionalEffectsGameplayEffectComponent>();
 	}
 };
-DUMPER7_ASSERTS_UBlockAbilityTagsGameplayEffectComponent;
+DUMPER7_ASSERTS_UAdditionalEffectsGameplayEffectComponent;
 
 // Class GameplayAbilities.GameplayEffect
 // 0x0A48 (0x0A70 - 0x0028)
@@ -203,6 +182,32 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAbilitiesGameplayEffectComponent;
+
+// Class GameplayAbilities.AbilityAsync
+// 0x0008 (0x0038 - 0x0030)
+class UAbilityAsync : public UCancellableAsyncAction
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void EndAction();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AbilityAsync")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityAsync")
+	}
+	static class UAbilityAsync* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityAsync>();
+	}
+};
+DUMPER7_ASSERTS_UAbilityAsync;
 
 // Class GameplayAbilities.AbilityAsync_WaitGameplayTagCountChanged
 // 0x0020 (0x0058 - 0x0038)
@@ -352,34 +357,6 @@ public:
 };
 DUMPER7_ASSERTS_UAbilityTask_WaitGameplayTagCountChanged;
 
-// Class GameplayAbilities.AdditionalEffectsGameplayEffectComponent
-// 0x0048 (0x0070 - 0x0028)
-class UAdditionalEffectsGameplayEffectComponent final : public UGameplayEffectComponent
-{
-public:
-	bool                                          bOnApplicationCopyDataFromOriginalSpec;            // 0x0028(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FConditionalGameplayEffect>     OnApplicationGameplayEffects;                      // 0x0030(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class UGameplayEffect>>    OnCompleteAlways;                                  // 0x0040(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class UGameplayEffect>>    OnCompleteNormal;                                  // 0x0050(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class UGameplayEffect>>    OnCompletePrematurely;                             // 0x0060(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AdditionalEffectsGameplayEffectComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AdditionalEffectsGameplayEffectComponent")
-	}
-	static class UAdditionalEffectsGameplayEffectComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAdditionalEffectsGameplayEffectComponent>();
-	}
-};
-DUMPER7_ASSERTS_UAdditionalEffectsGameplayEffectComponent;
-
 // Class GameplayAbilities.AssetTagsGameplayEffectComponent
 // 0x0060 (0x0088 - 0x0028)
 class UAssetTagsGameplayEffectComponent final : public UGameplayEffectComponent
@@ -402,6 +379,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAssetTagsGameplayEffectComponent;
+
+// Class GameplayAbilities.BlockAbilityTagsGameplayEffectComponent
+// 0x0060 (0x0088 - 0x0028)
+class UBlockAbilityTagsGameplayEffectComponent final : public UGameplayEffectComponent
+{
+public:
+	struct FInheritedTagContainer                 InheritableBlockedAbilityTagsContainer;            // 0x0028(0x0060)(Edit, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlockAbilityTagsGameplayEffectComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlockAbilityTagsGameplayEffectComponent")
+	}
+	static class UBlockAbilityTagsGameplayEffectComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlockAbilityTagsGameplayEffectComponent>();
+	}
+};
+DUMPER7_ASSERTS_UBlockAbilityTagsGameplayEffectComponent;
 
 // Class GameplayAbilities.ChanceToApplyGameplayEffectComponent
 // 0x0028 (0x0050 - 0x0028)

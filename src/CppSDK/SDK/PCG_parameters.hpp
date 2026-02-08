@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PCG_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "PCG_structs.hpp"
 
 
 namespace SDK::Params
@@ -76,145 +76,6 @@ public:
 	struct FPCGAssetExporterParameters            Parameters;                                        // 0x0010(0x0030)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PCGAssetExporterUtils_UpdateAssets;
-
-// Function PCG.PCGPointMatchAndSetSettings.SetMatchAndSetType
-// 0x0008 (0x0008 - 0x0000)
-struct PCGPointMatchAndSetSettings_SetMatchAndSetType final
-{
-public:
-	TSubclassOf<class UPCGMatchAndSetBase>        InMatchAndSetType;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPointMatchAndSetSettings_SetMatchAndSetType;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.CopyAndFixLast
-// 0x0058 (0x0058 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast final
-{
-public:
-	struct FPCGAttributePropertyInputSelector     Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	const class UPCGData*                         InData;                                            // 0x0028(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyInputSelector     ReturnValue;                                       // 0x0030(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.CopyAndFixSource
-// 0x0078 (0x0078 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource final
-{
-public:
-	struct FPCGAttributePropertyOutputSelector    OutputSelector;                                    // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyInputSelector     InputSelector;                                     // 0x0028(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPCGAttributePropertyOutputSelector    ReturnValue;                                       // 0x0050(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetAttributeName
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetExtraNames
-// 0x0038 (0x0038 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ReturnValue;                                       // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetExtraProperty
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGExtraProperties                           ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetName
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetName final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetName;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetPointProperty
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGPointProperties                           ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetSelection
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_GetSelection final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGAttributePropertySelection                ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetSelection;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetAttributeName
-// 0x0038 (0x0038 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InAttributeName;                                   // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetExtraProperty
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGExtraProperties                           InExtraProperty;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty;
-
-// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetPointProperty
-// 0x0030 (0x0030 - 0x0000)
-struct PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty final
-{
-public:
-	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCGPointProperties                           InPointProperty;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty;
-
-// Function PCG.PCGMetadataSettingsBase.GetOutputDataFromPinOptions
-// 0x0010 (0x0010 - 0x0000)
-struct PCGMetadataSettingsBase_GetOutputDataFromPinOptions final
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGMetadataSettingsBase_GetOutputDataFromPinOptions;
 
 // Function PCG.PCGSpatialData.CreateEmptyMetadata
 // 0x0008 (0x0008 - 0x0000)
@@ -403,72 +264,6 @@ public:
 };
 DUMPER7_ASSERTS_PCGSpatialData_ToPointDataWithContext;
 
-// Function PCG.PCGPointData.CopyPointsFrom
-// 0x0018 (0x0018 - 0x0000)
-struct PCGPointData_CopyPointsFrom final
-{
-public:
-	const class UPCGPointData*                    InData;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int32>                                 InDataIndices;                                     // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPointData_CopyPointsFrom;
-
-// Function PCG.PCGPointData.SetPoints
-// 0x0010 (0x0010 - 0x0000)
-struct PCGPointData_SetPoints final
-{
-public:
-	TArray<struct FPCGPoint>                      InPoints;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPointData_SetPoints;
-
-// Function PCG.PCGPointData.GetNumPoints
-// 0x0004 (0x0004 - 0x0000)
-struct PCGPointData_GetNumPoints final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPointData_GetNumPoints;
-
-// Function PCG.PCGPointData.GetPoint
-// 0x00E0 (0x00E0 - 0x0000)
-struct PCGPointData_GetPoint final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPCGPoint                              ReturnValue;                                       // 0x0010(0x00D0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPointData_GetPoint;
-
-// Function PCG.PCGPointData.GetPoints
-// 0x0010 (0x0010 - 0x0000)
-struct PCGPointData_GetPoints final
-{
-public:
-	TArray<struct FPCGPoint>                      ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPointData_GetPoints;
-
-// Function PCG.PCGPointData.GetPointsCopy
-// 0x0010 (0x0010 - 0x0000)
-struct PCGPointData_GetPointsCopy final
-{
-public:
-	TArray<struct FPCGPoint>                      ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPointData_GetPointsCopy;
-
-// Function PCG.PCGPointData.IsEmpty
-// 0x0001 (0x0001 - 0x0000)
-struct PCGPointData_IsEmpty final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPointData_IsEmpty;
-
 // Function PCG.PCGBaseTextureData.SetDensityFunctionEquivalent
 // 0x0001 (0x0001 - 0x0000)
 struct PCGBaseTextureData_SetDensityFunctionEquivalent final
@@ -487,16 +282,162 @@ public:
 };
 DUMPER7_ASSERTS_PCGBaseTextureData_GetDensityFunctionEquivalent;
 
-// Function PCG.PCGRenderTargetData.Initialize
-// 0x0070 (0x0070 - 0x0000)
-struct PCGRenderTargetData_Initialize final
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.CopyAndFixLast
+// 0x0058 (0x0058 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast final
 {
 public:
-	class UTextureRenderTarget2D*                 InRenderTarget;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyInputSelector     Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UPCGData*                         InData;                                            // 0x0028(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyInputSelector     ReturnValue;                                       // 0x0030(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PCGRenderTargetData_Initialize;
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixLast;
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.CopyAndFixSource
+// 0x0078 (0x0078 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource final
+{
+public:
+	struct FPCGAttributePropertyOutputSelector    OutputSelector;                                    // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyInputSelector     InputSelector;                                     // 0x0028(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPCGAttributePropertyOutputSelector    ReturnValue;                                       // 0x0050(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_CopyAndFixSource;
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetAttributeName
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetAttributeName;
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetExtraNames
+// 0x0038 (0x0038 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ReturnValue;                                       // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetExtraNames;
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetExtraProperty
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGExtraProperties                           ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetExtraProperty;
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetName
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetName final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetName;
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetPointProperty
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPointProperties                           ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetPointProperty;
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.GetSelection
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_GetSelection final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGAttributePropertySelection                ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_GetSelection;
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetAttributeName
+// 0x0038 (0x0038 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InAttributeName;                                   // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_SetAttributeName;
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetExtraProperty
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGExtraProperties                           InExtraProperty;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_SetExtraProperty;
+
+// Function PCG.PCGAttributePropertySelectorBlueprintHelpers.SetPointProperty
+// 0x0030 (0x0030 - 0x0000)
+struct PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty final
+{
+public:
+	struct FPCGAttributePropertySelector          Selector;                                          // 0x0000(0x0028)(Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCGPointProperties                           InPointProperty;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PCGAttributePropertySelectorBlueprintHelpers_SetPointProperty;
+
+// Function PCG.PCGMetadataSettingsBase.GetOutputDataFromPinOptions
+// 0x0010 (0x0010 - 0x0000)
+struct PCGMetadataSettingsBase_GetOutputDataFromPinOptions final
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGMetadataSettingsBase_GetOutputDataFromPinOptions;
+
+// Function PCG.PCGDifferenceData.Initialize
+// 0x0008 (0x0008 - 0x0000)
+struct PCGDifferenceData_Initialize final
+{
+public:
+	const class UPCGSpatialData*                  InData;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGDifferenceData_Initialize;
+
+// Function PCG.PCGDifferenceData.K2_AddDifference
+// 0x0008 (0x0008 - 0x0000)
+struct PCGDifferenceData_K2_AddDifference final
+{
+public:
+	const class UPCGSpatialData*                  InDifference;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGDifferenceData_K2_AddDifference;
+
+// Function PCG.PCGDifferenceData.SetDensityFunction
+// 0x0001 (0x0001 - 0x0000)
+struct PCGDifferenceData_SetDensityFunction final
+{
+public:
+	EPCGDifferenceDensityFunction                 InDensityFunction;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGDifferenceData_SetDensityFunction;
 
 // Function PCG.PCGManagedComponent.SetGeneratedComponentFromBP
 // 0x0028 (0x0028 - 0x0000)
@@ -506,6 +447,91 @@ public:
 	TSoftObjectPtr<class UActorComponent>         InGeneratedComponent;                              // 0x0000(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PCGManagedComponent_SetGeneratedComponentFromBP;
+
+// Function PCG.PCGTextureSamplerSettings.SetDensityFunctionEquivalent
+// 0x0001 (0x0001 - 0x0000)
+struct PCGTextureSamplerSettings_SetDensityFunctionEquivalent final
+{
+public:
+	EPCGTextureDensityFunction                    DensityFunction;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGTextureSamplerSettings_SetDensityFunctionEquivalent;
+
+// Function PCG.PCGTextureSamplerSettings.GetDensityFunctionEquivalent
+// 0x0001 (0x0001 - 0x0000)
+struct PCGTextureSamplerSettings_GetDensityFunctionEquivalent final
+{
+public:
+	EPCGTextureDensityFunction                    ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGTextureSamplerSettings_GetDensityFunctionEquivalent;
+
+// Function PCG.PCGManagedComponentList.SetGeneratedComponentsFromBP
+// 0x0010 (0x0010 - 0x0000)
+struct PCGManagedComponentList_SetGeneratedComponentsFromBP final
+{
+public:
+	TArray<TSoftObjectPtr<class UActorComponent>> InGeneratedComponent;                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGManagedComponentList_SetGeneratedComponentsFromBP;
+
+// Function PCG.PCGParamData.FindOrAddMetadataKey
+// 0x0010 (0x0010 - 0x0000)
+struct PCGParamData_FindOrAddMetadataKey final
+{
+public:
+	class FName                                   InName;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGParamData_FindOrAddMetadataKey;
+
+// Function PCG.PCGParamData.MutableMetadata
+// 0x0008 (0x0008 - 0x0000)
+struct PCGParamData_MutableMetadata final
+{
+public:
+	class UPCGMetadata*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGParamData_MutableMetadata;
+
+// Function PCG.PCGParamData.ConstMetadata
+// 0x0008 (0x0008 - 0x0000)
+struct PCGParamData_ConstMetadata final
+{
+public:
+	const class UPCGMetadata*                     ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGParamData_ConstMetadata;
+
+// Function PCG.PCGParamData.FindMetadataKey
+// 0x0010 (0x0010 - 0x0000)
+struct PCGParamData_FindMetadataKey final
+{
+public:
+	class FName                                   InName;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGParamData_FindMetadataKey;
+
+// Function PCG.PCGParamData.K2_FilterParamsByKey
+// 0x0010 (0x0010 - 0x0000)
+struct PCGParamData_K2_FilterParamsByKey final
+{
+public:
+	int64                                         InKey;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPCGParamData*                          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGParamData_K2_FilterParamsByKey;
+
+// Function PCG.PCGParamData.K2_FilterParamsByName
+// 0x0010 (0x0010 - 0x0000)
+struct PCGParamData_K2_FilterParamsByName final
+{
+public:
+	class FName                                   InName;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPCGParamData*                          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGParamData_K2_FilterParamsByName;
 
 // Function PCG.PCGBlueprintSettings.SetElementType
 // 0x0010 (0x0010 - 0x0000)
@@ -525,85 +551,6 @@ public:
 	TSubclassOf<class UPCGBlueprintElement>       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PCGBlueprintSettings_GetElementType;
-
-// Function PCG.PCGPin.SetToolTip
-// 0x0010 (0x0010 - 0x0000)
-struct PCGPin_SetToolTip final
-{
-public:
-	class FText                                   InTooltip;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPin_SetToolTip;
-
-// Function PCG.PCGPin.GetTooltip
-// 0x0010 (0x0010 - 0x0000)
-struct PCGPin_GetTooltip final
-{
-public:
-	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPin_GetTooltip;
-
-// Function PCG.PCGPin.IsConnected
-// 0x0001 (0x0001 - 0x0000)
-struct PCGPin_IsConnected final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPin_IsConnected;
-
-// Function PCG.PCGPin.IsOutputPin
-// 0x0001 (0x0001 - 0x0000)
-struct PCGPin_IsOutputPin final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGPin_IsOutputPin;
-
-// Function PCG.PCGNode.AddEdgeTo
-// 0x0020 (0x0020 - 0x0000)
-struct PCGNode_AddEdgeTo final
-{
-public:
-	class FName                                   FromPinLabel;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPCGNode*                               To;                                                // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ToPinLabel;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPCGNode*                               ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGNode_AddEdgeTo;
-
-// Function PCG.PCGNode.RemoveEdgeTo
-// 0x0020 (0x0020 - 0x0000)
-struct PCGNode_RemoveEdgeTo final
-{
-public:
-	class FName                                   FromPinLable;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPCGNode*                               To;                                                // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ToPinLabel;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_PCGNode_RemoveEdgeTo;
-
-// Function PCG.PCGNode.GetGraph
-// 0x0008 (0x0008 - 0x0000)
-struct PCGNode_GetGraph final
-{
-public:
-	class UPCGGraph*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGNode_GetGraph;
-
-// Function PCG.PCGNode.GetSettings
-// 0x0008 (0x0008 - 0x0000)
-struct PCGNode_GetSettings final
-{
-public:
-	class UPCGSettings*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGNode_GetSettings;
 
 // Function PCG.PCGGraphParametersHelpers.GetBoolParameter
 // 0x0018 (0x0018 - 0x0000)
@@ -1079,6 +1026,67 @@ public:
 };
 DUMPER7_ASSERTS_PCGFunctionPrototypes_PrototypeWithPointAndMetadata;
 
+// Function PCG.PCGNode.AddEdgeTo
+// 0x0020 (0x0020 - 0x0000)
+struct PCGNode_AddEdgeTo final
+{
+public:
+	class FName                                   FromPinLabel;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPCGNode*                               To;                                                // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ToPinLabel;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPCGNode*                               ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGNode_AddEdgeTo;
+
+// Function PCG.PCGNode.RemoveEdgeTo
+// 0x0020 (0x0020 - 0x0000)
+struct PCGNode_RemoveEdgeTo final
+{
+public:
+	class FName                                   FromPinLable;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPCGNode*                               To;                                                // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ToPinLabel;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_PCGNode_RemoveEdgeTo;
+
+// Function PCG.PCGNode.GetGraph
+// 0x0008 (0x0008 - 0x0000)
+struct PCGNode_GetGraph final
+{
+public:
+	class UPCGGraph*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGNode_GetGraph;
+
+// Function PCG.PCGNode.GetSettings
+// 0x0008 (0x0008 - 0x0000)
+struct PCGNode_GetSettings final
+{
+public:
+	class UPCGSettings*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGNode_GetSettings;
+
+// Function PCG.PCGStaticMeshSpawnerSettings.SetInstancePackerType
+// 0x0008 (0x0008 - 0x0000)
+struct PCGStaticMeshSpawnerSettings_SetInstancePackerType final
+{
+public:
+	TSubclassOf<class UPCGInstanceDataPackerBase> InInstancePackerType;                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGStaticMeshSpawnerSettings_SetInstancePackerType;
+
+// Function PCG.PCGStaticMeshSpawnerSettings.SetMeshSelectorType
+// 0x0008 (0x0008 - 0x0000)
+struct PCGStaticMeshSpawnerSettings_SetMeshSelectorType final
+{
+public:
+	TSubclassOf<class UPCGMeshSelectorBase>       InMeshSelectorType;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGStaticMeshSpawnerSettings_SetMeshSelectorType;
+
 // Function PCG.PCGOctreeQueries.GetClosestPoint
 // 0x0110 (0x0110 - 0x0000)
 struct PCGOctreeQueries_GetClosestPoint final
@@ -1163,23 +1171,14 @@ public:
 };
 DUMPER7_ASSERTS_PCGOctreeQueries_GetPointsInsideSphere;
 
-// Function PCG.PCGTextureSamplerSettings.SetDensityFunctionEquivalent
-// 0x0001 (0x0001 - 0x0000)
-struct PCGTextureSamplerSettings_SetDensityFunctionEquivalent final
+// Function PCG.PCGPointMatchAndSetSettings.SetMatchAndSetType
+// 0x0008 (0x0008 - 0x0000)
+struct PCGPointMatchAndSetSettings_SetMatchAndSetType final
 {
 public:
-	EPCGTextureDensityFunction                    DensityFunction;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UPCGMatchAndSetBase>        InMatchAndSetType;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PCGTextureSamplerSettings_SetDensityFunctionEquivalent;
-
-// Function PCG.PCGTextureSamplerSettings.GetDensityFunctionEquivalent
-// 0x0001 (0x0001 - 0x0000)
-struct PCGTextureSamplerSettings_GetDensityFunctionEquivalent final
-{
-public:
-	EPCGTextureDensityFunction                    ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGTextureSamplerSettings_GetDensityFunctionEquivalent;
+DUMPER7_ASSERTS_PCGPointMatchAndSetSettings_SetMatchAndSetType;
 
 // Function PCG.PCGProceduralISMComponent.SetCullDistances
 // 0x0008 (0x0008 - 0x0000)
@@ -1246,51 +1245,6 @@ public:
 };
 DUMPER7_ASSERTS_PCGProceduralISMComponent_GetNumInstances;
 
-// Function PCG.PCGStaticMeshSpawnerSettings.SetInstancePackerType
-// 0x0008 (0x0008 - 0x0000)
-struct PCGStaticMeshSpawnerSettings_SetInstancePackerType final
-{
-public:
-	TSubclassOf<class UPCGInstanceDataPackerBase> InInstancePackerType;                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGStaticMeshSpawnerSettings_SetInstancePackerType;
-
-// Function PCG.PCGStaticMeshSpawnerSettings.SetMeshSelectorType
-// 0x0008 (0x0008 - 0x0000)
-struct PCGStaticMeshSpawnerSettings_SetMeshSelectorType final
-{
-public:
-	TSubclassOf<class UPCGMeshSelectorBase>       InMeshSelectorType;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGStaticMeshSpawnerSettings_SetMeshSelectorType;
-
-// Function PCG.PCGDifferenceData.Initialize
-// 0x0008 (0x0008 - 0x0000)
-struct PCGDifferenceData_Initialize final
-{
-public:
-	const class UPCGSpatialData*                  InData;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGDifferenceData_Initialize;
-
-// Function PCG.PCGDifferenceData.K2_AddDifference
-// 0x0008 (0x0008 - 0x0000)
-struct PCGDifferenceData_K2_AddDifference final
-{
-public:
-	const class UPCGSpatialData*                  InDifference;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGDifferenceData_K2_AddDifference;
-
-// Function PCG.PCGDifferenceData.SetDensityFunction
-// 0x0001 (0x0001 - 0x0000)
-struct PCGDifferenceData_SetDensityFunction final
-{
-public:
-	EPCGDifferenceDensityFunction                 InDensityFunction;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGDifferenceData_SetDensityFunction;
-
 // Function PCG.PCGIntersectionData.Initialize
 // 0x0010 (0x0010 - 0x0000)
 struct PCGIntersectionData_Initialize final
@@ -1300,6 +1254,83 @@ public:
 	const class UPCGSpatialData*                  InB;                                               // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PCGIntersectionData_Initialize;
+
+// Function PCG.PCGPointData.CopyPointsFrom
+// 0x0018 (0x0018 - 0x0000)
+struct PCGPointData_CopyPointsFrom final
+{
+public:
+	const class UPCGPointData*                    InData;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 InDataIndices;                                     // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPointData_CopyPointsFrom;
+
+// Function PCG.PCGPointData.SetPoints
+// 0x0010 (0x0010 - 0x0000)
+struct PCGPointData_SetPoints final
+{
+public:
+	TArray<struct FPCGPoint>                      InPoints;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPointData_SetPoints;
+
+// Function PCG.PCGPointData.GetNumPoints
+// 0x0004 (0x0004 - 0x0000)
+struct PCGPointData_GetNumPoints final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPointData_GetNumPoints;
+
+// Function PCG.PCGPointData.GetPoint
+// 0x00E0 (0x00E0 - 0x0000)
+struct PCGPointData_GetPoint final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPCGPoint                              ReturnValue;                                       // 0x0010(0x00D0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPointData_GetPoint;
+
+// Function PCG.PCGPointData.GetPoints
+// 0x0010 (0x0010 - 0x0000)
+struct PCGPointData_GetPoints final
+{
+public:
+	TArray<struct FPCGPoint>                      ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPointData_GetPoints;
+
+// Function PCG.PCGPointData.GetPointsCopy
+// 0x0010 (0x0010 - 0x0000)
+struct PCGPointData_GetPointsCopy final
+{
+public:
+	TArray<struct FPCGPoint>                      ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPointData_GetPointsCopy;
+
+// Function PCG.PCGPointData.IsEmpty
+// 0x0001 (0x0001 - 0x0000)
+struct PCGPointData_IsEmpty final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPointData_IsEmpty;
+
+// Function PCG.PCGRenderTargetData.Initialize
+// 0x0070 (0x0070 - 0x0000)
+struct PCGRenderTargetData_Initialize final
+{
+public:
+	class UTextureRenderTarget2D*                 InRenderTarget;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGRenderTargetData_Initialize;
 
 // Function PCG.PCGUnionData.AddData
 // 0x0008 (0x0008 - 0x0000)
@@ -3622,73 +3653,6 @@ public:
 };
 DUMPER7_ASSERTS_PCGGraph_GetOutputNode;
 
-// Function PCG.PCGManagedComponentList.SetGeneratedComponentsFromBP
-// 0x0010 (0x0010 - 0x0000)
-struct PCGManagedComponentList_SetGeneratedComponentsFromBP final
-{
-public:
-	TArray<TSoftObjectPtr<class UActorComponent>> InGeneratedComponent;                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGManagedComponentList_SetGeneratedComponentsFromBP;
-
-// Function PCG.PCGParamData.FindOrAddMetadataKey
-// 0x0010 (0x0010 - 0x0000)
-struct PCGParamData_FindOrAddMetadataKey final
-{
-public:
-	class FName                                   InName;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGParamData_FindOrAddMetadataKey;
-
-// Function PCG.PCGParamData.MutableMetadata
-// 0x0008 (0x0008 - 0x0000)
-struct PCGParamData_MutableMetadata final
-{
-public:
-	class UPCGMetadata*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGParamData_MutableMetadata;
-
-// Function PCG.PCGParamData.ConstMetadata
-// 0x0008 (0x0008 - 0x0000)
-struct PCGParamData_ConstMetadata final
-{
-public:
-	const class UPCGMetadata*                     ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGParamData_ConstMetadata;
-
-// Function PCG.PCGParamData.FindMetadataKey
-// 0x0010 (0x0010 - 0x0000)
-struct PCGParamData_FindMetadataKey final
-{
-public:
-	class FName                                   InName;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGParamData_FindMetadataKey;
-
-// Function PCG.PCGParamData.K2_FilterParamsByKey
-// 0x0010 (0x0010 - 0x0000)
-struct PCGParamData_K2_FilterParamsByKey final
-{
-public:
-	int64                                         InKey;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPCGParamData*                          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGParamData_K2_FilterParamsByKey;
-
-// Function PCG.PCGParamData.K2_FilterParamsByName
-// 0x0010 (0x0010 - 0x0000)
-struct PCGParamData_K2_FilterParamsByName final
-{
-public:
-	class FName                                   InName;                                            // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPCGParamData*                          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PCGParamData_K2_FilterParamsByName;
-
 // Function PCG.PCGBlueprintPinHelpers.BreakPinProperty
 // 0x0020 (0x0020 - 0x0000)
 struct PCGBlueprintPinHelpers_BreakPinProperty final
@@ -3751,6 +3715,42 @@ public:
 	struct FPCGPinProperties                      ReturnValue;                                       // 0x000C(0x0014)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PCGBlueprintPinHelpers_MakePinProperty;
+
+// Function PCG.PCGPin.SetToolTip
+// 0x0010 (0x0010 - 0x0000)
+struct PCGPin_SetToolTip final
+{
+public:
+	class FText                                   InTooltip;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPin_SetToolTip;
+
+// Function PCG.PCGPin.GetTooltip
+// 0x0010 (0x0010 - 0x0000)
+struct PCGPin_GetTooltip final
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPin_GetTooltip;
+
+// Function PCG.PCGPin.IsConnected
+// 0x0001 (0x0001 - 0x0000)
+struct PCGPin_IsConnected final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPin_IsConnected;
+
+// Function PCG.PCGPin.IsOutputPin
+// 0x0001 (0x0001 - 0x0000)
+struct PCGPin_IsOutputPin final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PCGPin_IsOutputPin;
 
 // Function PCG.PCGPinPropertiesBlueprintHelpers.AllowsMultipleConnections
 // 0x0018 (0x0018 - 0x0000)

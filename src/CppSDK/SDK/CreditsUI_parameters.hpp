@@ -17,6 +17,16 @@
 namespace SDK::Params
 {
 
+// Function CreditsUI.CreditsUI_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct CreditsUI_C_Tick final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_CreditsUI_C_Tick;
+
 // Function CreditsUI.CreditsUI_C.ExecuteUbergraph_CreditsUI
 // 0x00F8 (0x00F8 - 0x0000)
 struct CreditsUI_C_ExecuteUbergraph_CreditsUI final
@@ -54,16 +64,6 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_CreditsUI_C_ExecuteUbergraph_CreditsUI;
-
-// Function CreditsUI.CreditsUI_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct CreditsUI_C_Tick final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_CreditsUI_C_Tick;
 
 }
 

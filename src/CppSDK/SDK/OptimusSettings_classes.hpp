@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "DeveloperSettings_classes.hpp"
 #include "OptimusSettings_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK

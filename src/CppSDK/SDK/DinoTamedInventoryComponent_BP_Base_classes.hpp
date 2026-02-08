@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass DinoTamedInventoryComponent_BP_Base.DinoTamedInventoryComponent_BP_Base_C
-// 0x0000 (0x0780 - 0x0780)
+// 0x0000 (0x0788 - 0x0788)
 class UDinoTamedInventoryComponent_BP_Base_C final : public UPrimalInventoryComponent
 {
 public:

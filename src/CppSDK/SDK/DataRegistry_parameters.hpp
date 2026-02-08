@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "DataRegistry_structs.hpp"
 #include "Engine_structs.hpp"
+#include "DataRegistry_structs.hpp"
 
 
 namespace SDK::Params

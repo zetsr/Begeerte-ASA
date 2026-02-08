@@ -18,29 +18,33 @@
 namespace SDK
 {
 
-// Class LiveLinkInterface.LiveLinkDefaultSourceSettings
-// 0x0008 (0x0030 - 0x0028)
-class ULiveLinkDefaultSourceSettings final : public UObject
+// Class LiveLinkInterface.LiveLinkSourceSettings
+// 0x0088 (0x00B0 - 0x0028)
+class ULiveLinkSourceSettings : public UObject
 {
 public:
-	int32                                         DefaultSourceFrameBufferSize;                      // 0x0028(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	ELiveLinkSourceMode                           Mode;                                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLiveLinkSourceBufferManagementSettings BufferSettings;                                   // 0x0030(0x0060)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class FString                                 ConnectionString;                                  // 0x0090(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULiveLinkSourceFactory>     Factory;                                           // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLiveLinkSubjectName                   ParentSubject;                                     // 0x00A8(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("LiveLinkDefaultSourceSettings")
+		STATIC_CLASS_IMPL("LiveLinkSourceSettings")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"LiveLinkDefaultSourceSettings")
+		STATIC_NAME_IMPL(L"LiveLinkSourceSettings")
 	}
-	static class ULiveLinkDefaultSourceSettings* GetDefaultObj()
+	static class ULiveLinkSourceSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULiveLinkDefaultSourceSettings>();
+		return GetDefaultObjImpl<ULiveLinkSourceSettings>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkDefaultSourceSettings;
+DUMPER7_ASSERTS_ULiveLinkSourceSettings;
 
 // Class LiveLinkInterface.LiveLinkController
 // 0x0000 (0x0028 - 0x0028)
@@ -61,6 +65,50 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ULiveLinkController;
+
+// Class LiveLinkInterface.LiveLinkSubjectRemapper
+// 0x0058 (0x0080 - 0x0028)
+class ULiveLinkSubjectRemapper : public UObject
+{
+public:
+	TMap<class FName, class FName>                BoneNameMap;                                       // 0x0028(0x0050)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LiveLinkSubjectRemapper")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkSubjectRemapper")
+	}
+	static class ULiveLinkSubjectRemapper* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkSubjectRemapper>();
+	}
+};
+DUMPER7_ASSERTS_ULiveLinkSubjectRemapper;
+
+// Class LiveLinkInterface.LiveLinkFrameInterpolationProcessor
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkFrameInterpolationProcessor : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LiveLinkFrameInterpolationProcessor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkFrameInterpolationProcessor")
+	}
+	static class ULiveLinkFrameInterpolationProcessor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkFrameInterpolationProcessor>();
+	}
+};
+DUMPER7_ASSERTS_ULiveLinkFrameInterpolationProcessor;
 
 // Class LiveLinkInterface.LiveLinkRole
 // 0x0000 (0x0028 - 0x0028)
@@ -102,114 +150,6 @@ public:
 };
 DUMPER7_ASSERTS_ULiveLinkBasicRole;
 
-// Class LiveLinkInterface.LiveLinkTransformRole
-// 0x0000 (0x0028 - 0x0028)
-class ULiveLinkTransformRole : public ULiveLinkBasicRole
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LiveLinkTransformRole")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LiveLinkTransformRole")
-	}
-	static class ULiveLinkTransformRole* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkTransformRole>();
-	}
-};
-DUMPER7_ASSERTS_ULiveLinkTransformRole;
-
-// Class LiveLinkInterface.LiveLinkLightRole
-// 0x0000 (0x0028 - 0x0028)
-class ULiveLinkLightRole final : public ULiveLinkTransformRole
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LiveLinkLightRole")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LiveLinkLightRole")
-	}
-	static class ULiveLinkLightRole* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkLightRole>();
-	}
-};
-DUMPER7_ASSERTS_ULiveLinkLightRole;
-
-// Class LiveLinkInterface.LiveLinkFrameInterpolationProcessor
-// 0x0000 (0x0028 - 0x0028)
-class ULiveLinkFrameInterpolationProcessor : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LiveLinkFrameInterpolationProcessor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LiveLinkFrameInterpolationProcessor")
-	}
-	static class ULiveLinkFrameInterpolationProcessor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkFrameInterpolationProcessor>();
-	}
-};
-DUMPER7_ASSERTS_ULiveLinkFrameInterpolationProcessor;
-
-// Class LiveLinkInterface.LiveLinkFramePreProcessor
-// 0x0000 (0x0028 - 0x0028)
-class ULiveLinkFramePreProcessor : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LiveLinkFramePreProcessor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LiveLinkFramePreProcessor")
-	}
-	static class ULiveLinkFramePreProcessor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkFramePreProcessor>();
-	}
-};
-DUMPER7_ASSERTS_ULiveLinkFramePreProcessor;
-
-// Class LiveLinkInterface.LiveLinkSourceSettings
-// 0x0088 (0x00B0 - 0x0028)
-class ULiveLinkSourceSettings : public UObject
-{
-public:
-	ELiveLinkSourceMode                           Mode;                                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLiveLinkSourceBufferManagementSettings BufferSettings;                                   // 0x0030(0x0060)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class FString                                 ConnectionString;                                  // 0x0090(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class ULiveLinkSourceFactory>     Factory;                                           // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLiveLinkSubjectName                   ParentSubject;                                     // 0x00A8(0x0008)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LiveLinkSourceSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LiveLinkSourceSettings")
-	}
-	static class ULiveLinkSourceSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkSourceSettings>();
-	}
-};
-DUMPER7_ASSERTS_ULiveLinkSourceSettings;
-
 // Class LiveLinkInterface.LiveLinkInputDeviceRole
 // 0x0000 (0x0028 - 0x0028)
 class ULiveLinkInputDeviceRole final : public ULiveLinkBasicRole
@@ -230,29 +170,25 @@ public:
 };
 DUMPER7_ASSERTS_ULiveLinkInputDeviceRole;
 
-// Class LiveLinkInterface.LiveLinkSubjectRemapper
-// 0x0058 (0x0080 - 0x0028)
-class ULiveLinkSubjectRemapper : public UObject
+// Class LiveLinkInterface.LiveLinkFramePreProcessor
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkFramePreProcessor : public UObject
 {
-public:
-	TMap<class FName, class FName>                BoneNameMap;                                       // 0x0028(0x0050)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("LiveLinkSubjectRemapper")
+		STATIC_CLASS_IMPL("LiveLinkFramePreProcessor")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"LiveLinkSubjectRemapper")
+		STATIC_NAME_IMPL(L"LiveLinkFramePreProcessor")
 	}
-	static class ULiveLinkSubjectRemapper* GetDefaultObj()
+	static class ULiveLinkFramePreProcessor* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULiveLinkSubjectRemapper>();
+		return GetDefaultObjImpl<ULiveLinkFramePreProcessor>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkSubjectRemapper;
+DUMPER7_ASSERTS_ULiveLinkFramePreProcessor;
 
 // Class LiveLinkInterface.LiveLinkCurveRemapSettings
 // 0x0050 (0x0100 - 0x00B0)
@@ -316,6 +252,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ULiveLinkSourceFactory;
+
+// Class LiveLinkInterface.LiveLinkDefaultSourceSettings
+// 0x0008 (0x0030 - 0x0028)
+class ULiveLinkDefaultSourceSettings final : public UObject
+{
+public:
+	int32                                         DefaultSourceFrameBufferSize;                      // 0x0028(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LiveLinkDefaultSourceSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkDefaultSourceSettings")
+	}
+	static class ULiveLinkDefaultSourceSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkDefaultSourceSettings>();
+	}
+};
+DUMPER7_ASSERTS_ULiveLinkDefaultSourceSettings;
 
 // Class LiveLinkInterface.LiveLinkDefaultSubjectSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -424,6 +384,26 @@ public:
 };
 DUMPER7_ASSERTS_ULiveLinkAnimationRole;
 
+// Class LiveLinkInterface.LiveLinkTransformRole
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkTransformRole : public ULiveLinkBasicRole
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LiveLinkTransformRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkTransformRole")
+	}
+	static class ULiveLinkTransformRole* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkTransformRole>();
+	}
+};
+DUMPER7_ASSERTS_ULiveLinkTransformRole;
+
 // Class LiveLinkInterface.LiveLinkCameraRole
 // 0x0000 (0x0028 - 0x0028)
 class ULiveLinkCameraRole final : public ULiveLinkTransformRole
@@ -443,6 +423,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ULiveLinkCameraRole;
+
+// Class LiveLinkInterface.LiveLinkLightRole
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkLightRole final : public ULiveLinkTransformRole
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LiveLinkLightRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkLightRole")
+	}
+	static class ULiveLinkLightRole* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkLightRole>();
+	}
+};
+DUMPER7_ASSERTS_ULiveLinkLightRole;
 
 }
 

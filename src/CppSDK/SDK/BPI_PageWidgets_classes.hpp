@@ -21,8 +21,8 @@ namespace SDK
 class IBPI_PageWidgets_C final
 {
 public:
-	void OnSearch(const class FText& Search_Input);
 	void UpdateSearch(const class FText& SearchInput);
+	void OnSearch(const class FText& Search_Input);
 
 public:
 	static class UClass* StaticClass()

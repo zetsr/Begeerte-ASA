@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ScriptableToolsFramework_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "InputCore_structs.hpp"
+#include "ScriptableToolsFramework_structs.hpp"
 #include "InteractiveToolsFramework_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -698,6 +698,118 @@ public:
 };
 DUMPER7_ASSERTS_ScriptableToolsUtilityLibrary_MakeInputRayHit_Miss;
 
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.GetActiveModifiers
+// 0x0003 (0x0003 - 0x0000)
+struct ScriptableSingleClickTool_GetActiveModifiers final
+{
+public:
+	struct FScriptableToolModifierStates          ReturnValue;                                       // 0x0000(0x0003)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_GetActiveModifiers;
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHitByClick
+// 0x0050 (0x0050 - 0x0000)
+struct ScriptableSingleClickTool_OnHitByClick final
+{
+public:
+	struct FInputDeviceRay                        ClickPos;                                          // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0048(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_OnHitByClick;
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverBegin
+// 0x0050 (0x0050 - 0x0000)
+struct ScriptableSingleClickTool_OnHoverBegin final
+{
+public:
+	struct FInputDeviceRay                        HoverPos;                                          // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0048(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_OnHoverBegin;
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverEnd
+// 0x0003 (0x0003 - 0x0000)
+struct ScriptableSingleClickTool_OnHoverEnd final
+{
+public:
+	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0000(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_OnHoverEnd;
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverHitTest
+// 0x0090 (0x0090 - 0x0000)
+struct ScriptableSingleClickTool_OnHoverHitTest final
+{
+public:
+	struct FInputDeviceRay                        HoverPos;                                          // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0048(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputRayHit                           ReturnValue;                                       // 0x0050(0x0040)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_OnHoverHitTest;
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverUpdate
+// 0x0050 (0x0050 - 0x0000)
+struct ScriptableSingleClickTool_OnHoverUpdate final
+{
+public:
+	struct FInputDeviceRay                        HoverPos;                                          // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0048(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x004B(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_OnHoverUpdate;
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.TestIfHitByClick
+// 0x0090 (0x0090 - 0x0000)
+struct ScriptableSingleClickTool_TestIfHitByClick final
+{
+public:
+	struct FInputDeviceRay                        ClickPos;                                          // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0048(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputRayHit                           ReturnValue;                                       // 0x0050(0x0040)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_TestIfHitByClick;
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.InActiveHover
+// 0x0001 (0x0001 - 0x0000)
+struct ScriptableSingleClickTool_InActiveHover final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_InActiveHover;
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsAltDown
+// 0x0001 (0x0001 - 0x0000)
+struct ScriptableSingleClickTool_IsAltDown final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_IsAltDown;
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsCtrlDown
+// 0x0001 (0x0001 - 0x0000)
+struct ScriptableSingleClickTool_IsCtrlDown final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_IsCtrlDown;
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsShiftDown
+// 0x0001 (0x0001 - 0x0000)
+struct ScriptableSingleClickTool_IsShiftDown final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScriptableSingleClickTool_IsShiftDown;
+
 // Function ScriptableToolsFramework.ScriptableModularBehaviorTool.AddClickDragBehavior
 // 0x0068 (0x0068 - 0x0000)
 struct ScriptableModularBehaviorTool_AddClickDragBehavior final
@@ -879,128 +991,6 @@ public:
 };
 DUMPER7_ASSERTS_ScriptableModularBehaviorTool_IsShiftDown;
 
-// Function ScriptableToolsFramework.ScriptableToolTargetRequirements.BuildToolTargetRequirements
-// 0x0018 (0x0018 - 0x0000)
-struct ScriptableToolTargetRequirements_BuildToolTargetRequirements final
-{
-public:
-	TArray<class UClass*>                         RequirementInterfaces;                             // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UScriptableToolTargetRequirements*      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScriptableToolTargetRequirements_BuildToolTargetRequirements;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.GetActiveModifiers
-// 0x0003 (0x0003 - 0x0000)
-struct ScriptableSingleClickTool_GetActiveModifiers final
-{
-public:
-	struct FScriptableToolModifierStates          ReturnValue;                                       // 0x0000(0x0003)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_GetActiveModifiers;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHitByClick
-// 0x0050 (0x0050 - 0x0000)
-struct ScriptableSingleClickTool_OnHitByClick final
-{
-public:
-	struct FInputDeviceRay                        ClickPos;                                          // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0048(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_OnHitByClick;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverBegin
-// 0x0050 (0x0050 - 0x0000)
-struct ScriptableSingleClickTool_OnHoverBegin final
-{
-public:
-	struct FInputDeviceRay                        HoverPos;                                          // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0048(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_OnHoverBegin;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverEnd
-// 0x0003 (0x0003 - 0x0000)
-struct ScriptableSingleClickTool_OnHoverEnd final
-{
-public:
-	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0000(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_OnHoverEnd;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverHitTest
-// 0x0090 (0x0090 - 0x0000)
-struct ScriptableSingleClickTool_OnHoverHitTest final
-{
-public:
-	struct FInputDeviceRay                        HoverPos;                                          // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0048(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputRayHit                           ReturnValue;                                       // 0x0050(0x0040)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_OnHoverHitTest;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverUpdate
-// 0x0050 (0x0050 - 0x0000)
-struct ScriptableSingleClickTool_OnHoverUpdate final
-{
-public:
-	struct FInputDeviceRay                        HoverPos;                                          // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0048(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x004B(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_OnHoverUpdate;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.TestIfHitByClick
-// 0x0090 (0x0090 - 0x0000)
-struct ScriptableSingleClickTool_TestIfHitByClick final
-{
-public:
-	struct FInputDeviceRay                        ClickPos;                                          // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FScriptableToolModifierStates          Modifiers;                                         // 0x0048(0x0003)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputRayHit                           ReturnValue;                                       // 0x0050(0x0040)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_TestIfHitByClick;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.InActiveHover
-// 0x0001 (0x0001 - 0x0000)
-struct ScriptableSingleClickTool_InActiveHover final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_InActiveHover;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsAltDown
-// 0x0001 (0x0001 - 0x0000)
-struct ScriptableSingleClickTool_IsAltDown final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_IsAltDown;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsCtrlDown
-// 0x0001 (0x0001 - 0x0000)
-struct ScriptableSingleClickTool_IsCtrlDown final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_IsCtrlDown;
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsShiftDown
-// 0x0001 (0x0001 - 0x0000)
-struct ScriptableSingleClickTool_IsShiftDown final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ScriptableSingleClickTool_IsShiftDown;
-
 // Function ScriptableToolsFramework.CustomScriptableToolBuilder.OnCanBuildTool
 // 0x0028 (0x0028 - 0x0000)
 struct CustomScriptableToolBuilder_OnCanBuildTool final
@@ -1023,6 +1013,16 @@ public:
 	TArray<class UActorComponent*>                SelectedComponents;                                // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CustomScriptableToolBuilder_OnSetupTool;
+
+// Function ScriptableToolsFramework.ScriptableToolTargetRequirements.BuildToolTargetRequirements
+// 0x0018 (0x0018 - 0x0000)
+struct ScriptableToolTargetRequirements_BuildToolTargetRequirements final
+{
+public:
+	TArray<class UClass*>                         RequirementInterfaces;                             // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UScriptableToolTargetRequirements*      ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ScriptableToolTargetRequirements_BuildToolTargetRequirements;
 
 // Function ScriptableToolsFramework.ToolTargetScriptableToolBuilder.GetToolTargetRequirements
 // 0x0008 (0x0008 - 0x0000)

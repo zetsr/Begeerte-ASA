@@ -285,25 +285,14 @@ public:
 };
 DUMPER7_ASSERTS_FWeightmapLayerAllocationInfo;
 
-// ScriptStruct Landscape.WeightmapData
-// 0x0030 (0x0030 - 0x0000)
-struct FWeightmapData final
-{
-public:
-	TArray<class UTexture2D*>                     Textures;                                          // 0x0000(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	TArray<struct FWeightmapLayerAllocationInfo>  LayerAllocations;                                  // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class ULandscapeWeightmapUsage*>       TextureUsages;                                     // 0x0020(0x0010)(ZeroConstructor, Transient, NonTransactional, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-};
-DUMPER7_ASSERTS_FWeightmapData;
-
-// ScriptStruct Landscape.HeightmapData
+// ScriptStruct Landscape.LandscapeLayerBrush
 // 0x0008 (0x0008 - 0x0000)
-struct FHeightmapData final
+struct alignas(0x08) FLandscapeLayerBrush final
 {
 public:
-	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FHeightmapData;
+DUMPER7_ASSERTS_FLandscapeLayerBrush;
 
 // ScriptStruct Landscape.LandscapePerLODMaterialOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -315,15 +304,6 @@ public:
 	class UMaterialInterface*                     Material;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
 DUMPER7_ASSERTS_FLandscapePerLODMaterialOverride;
-
-// ScriptStruct Landscape.LandscapeLayerBrush
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FLandscapeLayerBrush final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FLandscapeLayerBrush;
 
 // ScriptStruct Landscape.LandscapeLayer
 // 0x0098 (0x0098 - 0x0000)
@@ -373,6 +353,26 @@ public:
 	class UMaterialInterface*                     Material;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
 DUMPER7_ASSERTS_FLandscapeComponentMaterialOverride;
+
+// ScriptStruct Landscape.WeightmapData
+// 0x0030 (0x0030 - 0x0000)
+struct FWeightmapData final
+{
+public:
+	TArray<class UTexture2D*>                     Textures;                                          // 0x0000(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	TArray<struct FWeightmapLayerAllocationInfo>  LayerAllocations;                                  // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class ULandscapeWeightmapUsage*>       TextureUsages;                                     // 0x0020(0x0010)(ZeroConstructor, Transient, NonTransactional, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FWeightmapData;
+
+// ScriptStruct Landscape.HeightmapData
+// 0x0008 (0x0008 - 0x0000)
+struct FHeightmapData final
+{
+public:
+	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FHeightmapData;
 
 // ScriptStruct Landscape.LandscapeLayerComponentData
 // 0x0038 (0x0038 - 0x0000)

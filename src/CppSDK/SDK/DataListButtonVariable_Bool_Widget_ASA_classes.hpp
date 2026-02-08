@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass DataListButtonVariable_Bool_Widget_ASA.DataListButtonVariable_Bool_Widget_ASA_C
-// 0x0028 (0x04F0 - 0x04C8)
+// 0x0028 (0x0500 - 0x04D8)
 class UDataListButtonVariable_Bool_Widget_ASA_C final : public UDataListButtonVariable_Widget_ASA_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_DataListButtonVariable_Bool_Widget_ASA_C; // 0x04C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class FString                                 TrueBoolString;                                    // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 FalseBoolString;                                   // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_DataListButtonVariable_Bool_Widget_ASA_C; // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class FString                                 TrueBoolString;                                    // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 FalseBoolString;                                   // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 public:
-	void SetupTextValue(const class FText& Text, class FText* ReturnText);
-	void PreConstruct(bool IsDesignTime);
-	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
-	void ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA(int32 EntryPoint);
+	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
+	void PreConstruct(bool IsDesignTime);
+	void SetupTextValue(const class FText& Text, class FText* ReturnText);
 
 public:
 	static class UClass* StaticClass()

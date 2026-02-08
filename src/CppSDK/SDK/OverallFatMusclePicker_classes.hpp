@@ -36,14 +36,14 @@ public:
 	double                                        LastTimeUpdateRender;                              // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateSaturationBar(const struct FLinearColor& Value);
-	void UpdateColorSlider2D();
-	void UpdateColorPickerValue(const struct FVector2D& Value);
-	class UWidget* GetOverrideHighligteableWidgetBP();
-	void ExecuteUbergraph_OverallFatMusclePicker(int32 EntryPoint);
-	void Construct();
-	void BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value);
 	void BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value);
+	void BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value);
+	void Construct();
+	void ExecuteUbergraph_OverallFatMusclePicker(int32 EntryPoint);
+	class UWidget* GetOverrideHighligteableWidgetBP();
+	void UpdateColorPickerValue(const struct FVector2D& Value);
+	void UpdateColorSlider2D();
+	void UpdateSaturationBar(const struct FLinearColor& Value);
 
 public:
 	static class UClass* StaticClass()

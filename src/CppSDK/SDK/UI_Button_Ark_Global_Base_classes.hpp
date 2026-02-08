@@ -15,8 +15,8 @@
 #include "ENUM_ButtonType_structs.hpp"
 #include "ShooterGame_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "STRUCT_FullButtonDesign_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK

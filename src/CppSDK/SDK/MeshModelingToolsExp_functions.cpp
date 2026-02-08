@@ -117,6 +117,56 @@ const TArray<class FString> UBakeMultiTexture2DProperties::GetUVLayerNamesFunc()
 }
 
 
+// Function MeshModelingToolsExp.MeshConstraintProperties.IsPreventNormalFlipsEnabled
+// (Native, Protected, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMeshConstraintProperties::IsPreventNormalFlipsEnabled() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeshConstraintProperties", "IsPreventNormalFlipsEnabled");
+
+	Params::MeshConstraintProperties_IsPreventNormalFlipsEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MeshModelingToolsExp.MeshConstraintProperties.IsPreventTinyTrianglesEnabled
+// (Native, Protected, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMeshConstraintProperties::IsPreventTinyTrianglesEnabled() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeshConstraintProperties", "IsPreventTinyTrianglesEnabled");
+
+	Params::MeshConstraintProperties_IsPreventTinyTrianglesEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MeshModelingToolsExp.MeshGroupPaintToolFreezeActions.ClearAll
 // (Final, Native, Public)
 
@@ -402,132 +452,6 @@ void UMeshSelectionMeshEditActions::SmoothBorder()
 }
 
 
-// Function MeshModelingToolsExp.MeshVertexPaintToolQuickActions.EraseAll
-// (Final, Native, Public)
-
-void UMeshVertexPaintToolQuickActions::EraseAll()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeshVertexPaintToolQuickActions", "EraseAll");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingToolsExp.MeshVertexPaintToolQuickActions.FillBlack
-// (Final, Native, Public)
-
-void UMeshVertexPaintToolQuickActions::FillBlack()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeshVertexPaintToolQuickActions", "FillBlack");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingToolsExp.MeshVertexPaintToolQuickActions.FillWhite
-// (Final, Native, Public)
-
-void UMeshVertexPaintToolQuickActions::FillWhite()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeshVertexPaintToolQuickActions", "FillWhite");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingToolsExp.MeshVertexPaintToolQuickActions.PaintAll
-// (Final, Native, Public)
-
-void UMeshVertexPaintToolQuickActions::PaintAll()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeshVertexPaintToolQuickActions", "PaintAll");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingToolsExp.MeshConstraintProperties.IsPreventNormalFlipsEnabled
-// (Native, Protected, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMeshConstraintProperties::IsPreventNormalFlipsEnabled() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeshConstraintProperties", "IsPreventNormalFlipsEnabled");
-
-	Params::MeshConstraintProperties_IsPreventNormalFlipsEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MeshModelingToolsExp.MeshConstraintProperties.IsPreventTinyTrianglesEnabled
-// (Native, Protected, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMeshConstraintProperties::IsPreventTinyTrianglesEnabled() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MeshConstraintProperties", "IsPreventTinyTrianglesEnabled");
-
-	Params::MeshConstraintProperties_IsPreventTinyTrianglesEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function MeshModelingToolsExp.RevolveSplineToolActionPropertySet.ResetAxis
 // (Final, Native, Public)
 
@@ -560,6 +484,31 @@ const TArray<class FString> UBakeMeshAttributeMapsToolProperties::GetMapPreviewN
 		Func = Class->GetFunction("BakeMeshAttributeMapsToolProperties", "GetMapPreviewNamesFunc");
 
 	Params::BakeMeshAttributeMapsToolProperties_GetMapPreviewNamesFunc Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MeshModelingToolsExp.BakeMultiMeshAttributeMapsToolProperties.GetMapPreviewNamesFunc
+// (Final, Native, Public)
+// Parameters:
+// const TArray<class FString>             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const TArray<class FString> UBakeMultiMeshAttributeMapsToolProperties::GetMapPreviewNamesFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BakeMultiMeshAttributeMapsToolProperties", "GetMapPreviewNamesFunc");
+
+	Params::BakeMultiMeshAttributeMapsToolProperties_GetMapPreviewNamesFunc Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -683,31 +632,6 @@ void USimpleCollisionEditorToolActionProperties::Duplicate()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingToolsExp.BakeMultiMeshAttributeMapsToolProperties.GetMapPreviewNamesFunc
-// (Final, Native, Public)
-// Parameters:
-// const TArray<class FString>             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const TArray<class FString> UBakeMultiMeshAttributeMapsToolProperties::GetMapPreviewNamesFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BakeMultiMeshAttributeMapsToolProperties", "GetMapPreviewNamesFunc");
-
-	Params::BakeMultiMeshAttributeMapsToolProperties_GetMapPreviewNamesFunc Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -982,6 +906,132 @@ void UDynamicSculptToolActions::DiscardAttributes()
 }
 
 
+// Function MeshModelingToolsExp.MeshVertexPaintToolQuickActions.EraseAll
+// (Final, Native, Public)
+
+void UMeshVertexPaintToolQuickActions::EraseAll()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeshVertexPaintToolQuickActions", "EraseAll");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshModelingToolsExp.MeshVertexPaintToolQuickActions.FillBlack
+// (Final, Native, Public)
+
+void UMeshVertexPaintToolQuickActions::FillBlack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeshVertexPaintToolQuickActions", "FillBlack");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshModelingToolsExp.MeshVertexPaintToolQuickActions.FillWhite
+// (Final, Native, Public)
+
+void UMeshVertexPaintToolQuickActions::FillWhite()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeshVertexPaintToolQuickActions", "FillWhite");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshModelingToolsExp.MeshVertexPaintToolQuickActions.PaintAll
+// (Final, Native, Public)
+
+void UMeshVertexPaintToolQuickActions::PaintAll()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeshVertexPaintToolQuickActions", "PaintAll");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshModelingToolsExp.TransferMeshToolProperties.GetSourceLODNamesFunc
+// (Final, Native, Public, Const)
+// Parameters:
+// const TArray<class FString>             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const TArray<class FString> UTransferMeshToolProperties::GetSourceLODNamesFunc() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TransferMeshToolProperties", "GetSourceLODNamesFunc");
+
+	Params::TransferMeshToolProperties_GetSourceLODNamesFunc Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MeshModelingToolsExp.TransferMeshToolProperties.GetTargetLODNamesFunc
+// (Final, Native, Public, Const)
+// Parameters:
+// const TArray<class FString>             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const TArray<class FString> UTransferMeshToolProperties::GetTargetLODNamesFunc() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TransferMeshToolProperties", "GetTargetLODNamesFunc");
+
+	Params::TransferMeshToolProperties_GetTargetLODNamesFunc Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MeshModelingToolsExp.EditPivotToolActionPropertySet.Back
 // (Final, Native, Public)
 
@@ -1131,56 +1181,6 @@ void UEditPivotToolActionPropertySet::WorldOrigin()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingToolsExp.TransferMeshToolProperties.GetSourceLODNamesFunc
-// (Final, Native, Public, Const)
-// Parameters:
-// const TArray<class FString>             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const TArray<class FString> UTransferMeshToolProperties::GetSourceLODNamesFunc() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TransferMeshToolProperties", "GetSourceLODNamesFunc");
-
-	Params::TransferMeshToolProperties_GetSourceLODNamesFunc Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MeshModelingToolsExp.TransferMeshToolProperties.GetTargetLODNamesFunc
-// (Final, Native, Public, Const)
-// Parameters:
-// const TArray<class FString>             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const TArray<class FString> UTransferMeshToolProperties::GetTargetLODNamesFunc() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TransferMeshToolProperties", "GetTargetLODNamesFunc");
-
-	Params::TransferMeshToolProperties_GetTargetLODNamesFunc Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 

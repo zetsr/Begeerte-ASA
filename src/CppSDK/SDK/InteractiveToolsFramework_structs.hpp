@@ -313,6 +313,18 @@ public:
 };
 DUMPER7_ASSERTS_FInputRayHit;
 
+// ScriptStruct InteractiveToolsFramework.InputDeviceRay
+// 0x0048 (0x0048 - 0x0000)
+struct FInputDeviceRay final
+{
+public:
+	struct FRay                                   WorldRay;                                          // 0x0000(0x0030)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bHas2D;                                            // 0x0030(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ScreenPosition;                                    // 0x0038(0x0010)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FInputDeviceRay;
+
 // ScriptStruct InteractiveToolsFramework.GizmoVec2ParameterChange
 // 0x0020 (0x0020 - 0x0000)
 struct FGizmoVec2ParameterChange final
@@ -332,18 +344,6 @@ public:
 	uint8                                         Pad_8[0x28];                                       // 0x0008(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FActiveGizmo;
-
-// ScriptStruct InteractiveToolsFramework.InputDeviceRay
-// 0x0048 (0x0048 - 0x0000)
-struct FInputDeviceRay final
-{
-public:
-	struct FRay                                   WorldRay;                                          // 0x0000(0x0030)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bHas2D;                                            // 0x0030(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              ScreenPosition;                                    // 0x0038(0x0010)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FInputDeviceRay;
 
 // ScriptStruct InteractiveToolsFramework.KeyboardInputDeviceState
 // 0x0020 (0x0020 - 0x0000)

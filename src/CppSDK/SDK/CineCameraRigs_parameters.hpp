@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CineCameraRigs_structs.hpp"
 #include "AnimationCore_structs.hpp"
+#include "CineCameraRigs_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

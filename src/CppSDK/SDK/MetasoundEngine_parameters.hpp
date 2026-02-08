@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "MetasoundFrontend_structs.hpp"
-#include "AudioExtensions_structs.hpp"
 #include "MetasoundEngine_structs.hpp"
+#include "AudioExtensions_structs.hpp"
 
 
 namespace SDK::Params

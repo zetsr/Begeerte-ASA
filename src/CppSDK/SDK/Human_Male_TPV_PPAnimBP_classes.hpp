@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ControlRig_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "ControlRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

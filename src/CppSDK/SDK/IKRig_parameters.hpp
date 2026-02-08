@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "IKRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "IKRig_structs.hpp"
 
 
 namespace SDK::Params

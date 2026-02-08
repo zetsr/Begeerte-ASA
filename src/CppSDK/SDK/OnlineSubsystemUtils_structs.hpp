@@ -171,19 +171,17 @@ public:
 };
 DUMPER7_ASSERTS_FOnlineProxyStoreOffer;
 
-// ScriptStruct OnlineSubsystemUtils.PlayerReservation
-// 0x0058 (0x0058 - 0x0000)
-struct FPlayerReservation final
+// ScriptStruct OnlineSubsystemUtils.OnlineAccountStoredCredentials
+// 0x0040 (0x0040 - 0x0000)
+struct FOnlineAccountStoredCredentials final
 {
 public:
-	struct FUniqueNetIdRepl                       UniqueID;                                          // 0x0000(0x0030)(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ValidationStr;                                     // 0x0030(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Platform;                                          // 0x0040(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowCrossplay;                                   // 0x0050(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ElapsedTime;                                       // 0x0054(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ID;                                                // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 token;                                             // 0x0010(0x0010)(Edit, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Type;                                              // 0x0020(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 TokenBytes;                                        // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlayerReservation;
+DUMPER7_ASSERTS_FOnlineAccountStoredCredentials;
 
 // ScriptStruct OnlineSubsystemUtils.InAppPurchaseRestoreInfo2
 // 0x0030 (0x0030 - 0x0000)
@@ -207,17 +205,19 @@ public:
 };
 DUMPER7_ASSERTS_FInAppPurchaseProductRequest2;
 
-// ScriptStruct OnlineSubsystemUtils.OnlineAccountStoredCredentials
-// 0x0040 (0x0040 - 0x0000)
-struct FOnlineAccountStoredCredentials final
+// ScriptStruct OnlineSubsystemUtils.PlayerReservation
+// 0x0058 (0x0058 - 0x0000)
+struct FPlayerReservation final
 {
 public:
-	class FString                                 ID;                                                // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 token;                                             // 0x0010(0x0010)(Edit, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Type;                                              // 0x0020(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 TokenBytes;                                        // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UniqueID;                                          // 0x0000(0x0030)(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ValidationStr;                                     // 0x0030(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Platform;                                          // 0x0040(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowCrossplay;                                   // 0x0050(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ElapsedTime;                                       // 0x0054(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOnlineAccountStoredCredentials;
+DUMPER7_ASSERTS_FPlayerReservation;
 
 // ScriptStruct OnlineSubsystemUtils.InAppPurchaseProductInfo2
 // 0x00F8 (0x00F8 - 0x0000)

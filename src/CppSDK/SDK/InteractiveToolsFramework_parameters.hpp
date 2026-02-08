@@ -34,6 +34,24 @@ public:
 };
 DUMPER7_ASSERTS_GizmoBaseComponent_UpdateWorldLocalState;
 
+// Function InteractiveToolsFramework.GizmoClickTarget.UpdateHoverState
+// 0x0001 (0x0001 - 0x0000)
+struct GizmoClickTarget_UpdateHoverState final
+{
+public:
+	bool                                          bHovering;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GizmoClickTarget_UpdateHoverState;
+
+// Function InteractiveToolsFramework.GizmoClickTarget.UpdateInteractingState
+// 0x0001 (0x0001 - 0x0000)
+struct GizmoClickTarget_UpdateInteractingState final
+{
+public:
+	bool                                          bInteracting;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GizmoClickTarget_UpdateInteractingState;
+
 // Function InteractiveToolsFramework.GizmoTransformSource.SetTransform
 // 0x0060 (0x0060 - 0x0000)
 struct GizmoTransformSource_SetTransform final
@@ -88,24 +106,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GizmoAxisSource_HasTangentVectors;
-
-// Function InteractiveToolsFramework.GizmoClickTarget.UpdateHoverState
-// 0x0001 (0x0001 - 0x0000)
-struct GizmoClickTarget_UpdateHoverState final
-{
-public:
-	bool                                          bHovering;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GizmoClickTarget_UpdateHoverState;
-
-// Function InteractiveToolsFramework.GizmoClickTarget.UpdateInteractingState
-// 0x0001 (0x0001 - 0x0000)
-struct GizmoClickTarget_UpdateInteractingState final
-{
-public:
-	bool                                          bInteracting;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GizmoClickTarget_UpdateInteractingState;
 
 // Function InteractiveToolsFramework.GizmoClickMultiTarget.UpdateHittableState
 // 0x0008 (0x0008 - 0x0000)

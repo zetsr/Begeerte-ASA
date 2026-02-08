@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ArrayOfStrings_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ArrayOfStrings_structs.hpp"
 #include "PrimalItem_Note_classes.hpp"
 
 

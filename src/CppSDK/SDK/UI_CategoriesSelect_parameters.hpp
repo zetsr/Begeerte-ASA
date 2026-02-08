@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "cfcore_structs.hpp"
 #include "STRUCT_CustomComboBoxOption_structs.hpp"
+#include "cfcore_structs.hpp"
 #include "STRUCT_SubOptions_structs.hpp"
 #include "SlateCore_structs.hpp"
 

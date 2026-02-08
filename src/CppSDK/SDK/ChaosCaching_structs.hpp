@@ -106,15 +106,6 @@ public:
 };
 DUMPER7_ASSERTS_FCollisionEvent;
 
-// ScriptStruct ChaosCaching.CompressedRichCurves
-// 0x0010 (0x0010 - 0x0000)
-struct FCompressedRichCurves final
-{
-public:
-	TArray<struct FCompressedRichCurve>           CompressedRichCurves;                              // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCompressedRichCurves;
-
 // ScriptStruct ChaosCaching.TrailingEvent
 // 0x0080 (0x0088 - 0x0008)
 struct FTrailingEvent final : public FCacheEventBase
@@ -201,6 +192,15 @@ public:
 	TArray<struct FRichCurve>                     RichCurves;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRichCurves;
+
+// ScriptStruct ChaosCaching.CompressedRichCurves
+// 0x0010 (0x0010 - 0x0000)
+struct FCompressedRichCurves final
+{
+public:
+	TArray<struct FCompressedRichCurve>           CompressedRichCurves;                              // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCompressedRichCurves;
 
 // ScriptStruct ChaosCaching.MovieSceneChaosCacheParams
 // 0x0008 (0x0028 - 0x0020)
