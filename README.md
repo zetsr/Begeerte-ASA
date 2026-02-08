@@ -1,8 +1,8 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/485e987f-d15f-465b-97d3-ca8cb7eb27b1" />
-
 # ✨ Begeerte for ARK: Survival Ascended
 
 基于 [MinHook](https://github.com/TsudaKageyu/minhook) [Minimal-D3D12-Hook-ImGui](https://github.com/zetsr/Minimal-D3D12-Hook-ImGui) [ImGui](https://github.com/ocornut/imgui) [Dumper-7](https://github.com/Encryqed/Dumper-7) 开发的 C++ 内部作弊
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/485e987f-d15f-465b-97d3-ca8cb7eb27b1" />
 
 # 🚀 Lua API
 
