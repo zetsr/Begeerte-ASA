@@ -545,29 +545,48 @@ namespace g_DrawImGui {
 						ImGui::TextColored(ThemeColors::ACCENT, U8("世界信息"));
 						DrawAnimatedSeparator();
 
-						DrawCustomCheckbox(U8("掉落的物品"), &g_Config::bDrawDroppedItems);
+						DrawColorPickerRow(U8("掉落的物品"), &g_Config::bDrawDroppedItems, "DroppedItemNameCol", g_Config::DroppedItemNameColor);
+						// DrawCustomCheckbox(U8("掉落的物品"), &g_Config::bDrawDroppedItems);
 						if (g_Config::bDrawDroppedItems) {
-							DrawCustomColorPicker("DroppedItemNameCol", g_Config::DroppedItemNameColor, U8("物品名称"));
+							// DrawCustomColorPicker("DroppedItemNameCol", g_Config::DroppedItemNameColor, U8("物品名称"));
 							DrawCustomColorPicker("DroppedItemDistanceCol", g_Config::DroppedItemDistanceColor, U8("物品距离"));
-							DrawCustomColorPicker("DroppedItemMeatCol", g_Config::DroppedItemMeatColor, U8("肉类颜色"));
-							DrawCustomColorPicker("DroppedItemCryopodCol", g_Config::DroppedItemCryopodColor, U8("低温仓颜色"));
 							DrawCustomColorPicker("DroppedItemPiledCol", g_Config::DroppedItemPiledColor, U8("堆叠颜色"));
+							DrawCustomColorPicker("DroppedItemCryopodCol", g_Config::DroppedItemCryopodColor, U8("低温仓颜色"));
+							DrawCustomColorPicker("DroppedItemEggCol", g_Config::DroppedItemEggColor, U8("蛋颜色"));
+							DrawCustomColorPicker("DroppedItemMeatCol", g_Config::DroppedItemMeatColor, U8("肉类颜色"));
+							DrawCustomColorPicker("DroppedItemSpoiledMeatCol", g_Config::DroppedItemSpoiledMeatColor, U8("腐肉颜色"));
+							DrawCustomColorPicker("DroppedItemWoodCol", g_Config::DroppedItemWoodColor, U8("木头颜色"));
+							DrawCustomColorPicker("DroppedItemThatchCol", g_Config::DroppedItemThatchColor, U8("茅草颜色"));
+							DrawCustomColorPicker("DroppedItemMetalCol", g_Config::DroppedItemMetalColor, U8("金属颜色"));
+							DrawCustomColorPicker("DroppedItemStoneCol", g_Config::DroppedItemStoneColor, U8("石头颜色"));
+							DrawCustomColorPicker("DroppedItemCrystalCol", g_Config::DroppedItemCrystalColor, U8("水晶颜色"));
+							DrawCustomColorPicker("DroppedItemGemCol", g_Config::DroppedItemGemColor, U8("宝石颜色"));
+							DrawCustomColorPicker("DroppedItemPearlCol", g_Config::DroppedItemPearlColor, U8("珍珠颜色"));
+							DrawCustomColorPicker("DroppedItemHideCol", g_Config::DroppedItemHideColor, U8("兽皮颜色"));
+							DrawCustomColorPicker("DroppedItemPeltCol", g_Config::DroppedItemPeltColor, U8("毛皮颜色"));
+							DrawCustomColorPicker("DroppedItemKeratinCol", g_Config::DroppedItemKeratinColor, U8("角质颜色"));
+							DrawCustomColorPicker("DroppedItemChitinCol", g_Config::DroppedItemChitinColor, U8("甲壳素颜色"));
+							DrawCustomColorPicker("DroppedItemCorruptedPolymerCol", g_Config::DroppedItemCorruptedPolymerColor, U8("腐化瘤颜色"));
+							DrawCustomColorPicker("DroppedItemPolymer_OrganicCol", g_Config::DroppedItemPolymer_OrganicColor, U8("有机聚合物颜色"));
+							DrawCustomColorPicker("DroppedItemPolymerCol", g_Config::DroppedItemPolymerColor, U8("聚合物颜色"));
 							DrawCustomSliderFloat(U8("物品显示距离"), &g_Config::DroppedItemMaxDistance, 1.0f, 500.0f, "%.0f", 1.0f, "m");
 						}
 						DrawAnimatedSeparator();
 
-						DrawCustomCheckbox(U8("显示建筑"), &g_Config::bDrawStructures);
+						DrawColorPickerRow(U8("显示建筑"), &g_Config::bDrawStructures, "StructureNameCol", g_Config::StructureNameColor);
+						// DrawCustomCheckbox(U8("显示建筑"), &g_Config::bDrawStructures);
 						if (g_Config::bDrawStructures) {
-							DrawCustomColorPicker("StructureNameCol", g_Config::StructureNameColor, U8("建筑名称"));
+							// DrawCustomColorPicker("StructureNameCol", g_Config::StructureNameColor, U8("建筑名称"));
 							DrawCustomColorPicker("StructureOwnerCol", g_Config::StructureOwnerColor, U8("建筑所有者"));
 							DrawCustomColorPicker("StructureDistanceCol", g_Config::StructureDistanceColor, U8("建筑距离"));
 							DrawCustomSliderFloat(U8("建筑显示距离"), &g_Config::StructureMaxDistance, 1.0f, 10000.0f, "%.0f", 1.0f, "m");
 						}
 						DrawAnimatedSeparator();
 
-						DrawCustomCheckbox(U8("显示水源"), &g_Config::bDrawWater);
+						DrawColorPickerRow(U8("显示水源"), &g_Config::bDrawWater, "WaterNameCol", g_Config::WaterNameColor);
+						// DrawCustomCheckbox(U8("显示水源"), &g_Config::bDrawWater);
 						if (g_Config::bDrawWater) {
-							DrawCustomColorPicker("WaterNameCol", g_Config::WaterNameColor, U8("水源名称"));
+							// DrawCustomColorPicker("WaterNameCol", g_Config::WaterNameColor, U8("水源名称"));
 							DrawCustomColorPicker("WaterDistanceCol", g_Config::WaterDistanceColor, U8("水源距离"));
 							DrawCustomSliderFloat(U8("水源显示距离"), &g_Config::WaterMaxDistance, 1.0f, 10000.0f, "%.0f", 1.0f, "m");
 						}

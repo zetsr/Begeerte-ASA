@@ -27,7 +27,23 @@ namespace g_Config {
     inline float DroppedItemDistanceColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
     inline float DroppedItemMeatColor[4] = { 1.0f, 0.62f, 0.34f, 1.0f };
     inline float DroppedItemCryopodColor[4] = { 1.0f, 0.39f, 1.0f, 1.0f };
+    inline float DroppedItemEggColor[4] = { 1.0f, 0.96f, 0.92f, 1.0f };
     inline float DroppedItemPiledColor[4] = { 0.19f, 1.0f, 0.19f, 1.0f };
+    inline float DroppedItemWoodColor[4] = { 0.92f, 0.53f, 0.2f, 1.0f };
+    inline float DroppedItemThatchColor[4] = { 0.94f, 0.94f, 0.71f, 1.0f };
+    inline float DroppedItemHideColor[4] = { 1.0f, 0.82f, 0.67f, 1.0f };
+    inline float DroppedItemPeltColor[4] = { 0.69f, 0.69f, 0.69f, 1.0f };
+    inline float DroppedItemKeratinColor[4] = { 0.57f, 1.0f, 0.88f, 1.0f };
+    inline float DroppedItemChitinColor[4] = { 0.57f, 1.0f, 0.88f, 1.0f };
+    inline float DroppedItemCorruptedPolymerColor[4] = { 0.57f, 1.0f, 0.88f, 1.0f };
+    inline float DroppedItemPolymer_OrganicColor[4] = { 0.57f, 1.0f, 0.88f, 1.0f };
+    inline float DroppedItemPolymerColor[4] = { 0.57f, 1.0f, 0.88f, 1.0f };
+    inline float DroppedItemMetalColor[4] = { 0.75f, 0.75f, 0.75f, 1.0f };
+    inline float DroppedItemStoneColor[4] = { 0.5f, 0.5f, 0.5f, 1.0f };
+    inline float DroppedItemCrystalColor[4] = { 0.78f, 0.96f, 1.0f, 1.0f };
+    inline float DroppedItemGemColor[4] = { 0.0f, 1.0f, 0.5f, 1.0f };
+    inline float DroppedItemPearlColor[4] = { 0.29f, 0.0f, 0.51f, 1.0f };
+    inline float DroppedItemSpoiledMeatColor[4] = { 0.39f, 0.69f, 0.39f, 1.0f };
 
     // ±¶œ‰
     inline bool bDrawSupplyDrops = true;

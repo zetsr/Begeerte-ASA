@@ -473,22 +473,139 @@ namespace g_DrawESP {
                         std::string className = Item->Class ? Item->Class->GetName() : "";
                         int quantity = Item->ItemQuantity;
 
-                        if (className.find("Cryopod") != std::string::npos) {
+                        // 优先判断特殊容器（如低温仓）
+                        if (className.find("PrimalItem_WeaponEmptyCryopod") != std::string::npos) {
                             finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemCryopodColor);
                         }
+
+                        // 蛋
+                        else if (className.find("Egg") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemEggColor);
+                        }
+
+                        // 堆叠包
                         else if (quantity >= 1000) {
                             finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPiledColor);
                         }
-                        else if (className.find("Meat") != std::string::npos) {
+
+                        // 木头
+                        else if (
+                            className.find("PrimalItemResource_Wood") != std::string::npos || 
+                            className.find("PrimalItemResource_FungalWood") != std::string::npos
+                            ) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemWoodColor);
+                        }
+
+                        // 茅草
+                        else if (className.find("PrimalItemResource_Thatch") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemThatchColor);
+                        }
+
+                        // 兽皮
+                        else if (className.find("PrimalItemResource_Hide") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemHideColor);
+                        }
+
+                        // 毛皮
+                        else if (className.find("PrimalItemResource_Pelt") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPeltColor);
+                        }
+
+                        // 角质
+                        else if (className.find("PrimalItemResource_Keratin") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemKeratinColor);
+                        }
+
+                        // 甲壳素
+                        else if (className.find("PrimalItemResource_Chitin") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemChitinColor);
+                        }
+
+                        // 腐化瘤
+                        else if (className.find("PrimalItemResource_CorruptedPolymer") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemCorruptedPolymerColor);
+                        }
+
+                        // 有机聚合物
+                        else if (className.find("PrimalItemResource_Polymer_Organic") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPolymer_OrganicColor);
+                        }
+
+                        // 聚合物
+                        else if (className.find("PrimalItemResource_Polymer") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPolymerColor);
+                        }
+
+                        // 金属
+                        else if (
+                            className.find("PrimalItemResource_Metal") != std::string::npos ||
+                            className.find("PrimalItemResource_ScrapMetal") != std::string::npos ||
+                            className.find("PrimalItemResource_MetalIngot") != std::string::npos ||
+                            className.find("PrimalItemResource_ScrapMetalIngot") != std::string::npos
+                            ) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemMetalColor);
+                        }
+
+                        // 石头
+                        else if (className.find("PrimalItemResource_Stone") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemStoneColor);
+                        }
+
+                        // 水晶
+                        else if (className.find("PrimalItemResource_Crystal") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemCrystalColor);
+                        }
+
+                        // 宝石/精化树脂
+                        else if (
+                            className.find("PrimalItemResource_Gem_Fertile") != std::string::npos ||
+                            className.find("PrimalItemResource_Gem_BioLum") != std::string::npos ||
+                            className.find("PrimalItemResource_Gem_Element") != std::string::npos ||
+                            className.find("PrimalItemResource_BlueSap") != std::string::npos ||
+                            className.find("PrimalItemResource_RedSap") != std::string::npos
+                            ) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemGemColor);
+                        }
+
+                        // 珍珠
+                        else if (
+                            className.find("PrimalItemResource_Silicon") != std::string::npos ||
+                            className.find("PrimalItemResource_BlackPearl") != std::string::npos
+                            ) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPearlColor);
+                        }
+
+                        // 腐肉
+                        else if (className.find("PrimalItemConsumable_SpoiledMeat") != std::string::npos) {
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemSpoiledMeatColor);
+                        }
+
+                        // 熟肉
+                        else if (
+                            className.find("PrimalItemConsumable_RawMeat") != std::string::npos || 
+                            className.find("PrimalItemConsumable_RawPrimeMeat") != std::string::npos || 
+                            className.find("PrimalItemConsumable_RawMutton") != std::string::npos ||
+                            className.find("PrimalItemConsumable_RawPrimeMeat_Fish") != std::string::npos ||
+                            className.find("PrimalItemConsumable_RawMeat_Fish") != std::string::npos ||
+                            className.find("PrimalItemConsumable_CookedMeat") != std::string::npos ||
+                            className.find("PrimalItemConsumable_CookedPrimeMeat") != std::string::npos ||
+                            className.find("PrimalItemConsumable_CookedLambChop") != std::string::npos ||
+                            className.find("PrimalItemConsumable_CookedPrimeMeat_Fish") != std::string::npos ||
+                            className.find("PrimalItemConsumable_CookedMeat_Fish") != std::string::npos ||
+                            className.find("PrimalItemConsumable_CookedMeat_Jerky") != std::string::npos ||
+                            className.find("PrimalItemConsumable_CookedPrimeMeat_Jerky") != std::string::npos
+                            ) {
                             finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemMeatColor);
                         }
+
+                        // 品质
                         else {
                             float rating = Item->ItemRating;
-                            if (rating >= 10.0f)      finalCol = ToImColor(0, 255, 255, 255);
-                            else if (rating >= 7.0f)  finalCol = ToImColor(255, 255, 0, 255);
-                            else if (rating >= 4.5f)  finalCol = ToImColor(160, 32, 240, 255);
-                            else if (rating >= 2.5f)  finalCol = ToImColor(0, 191, 255, 255);
-                            else if (rating >= 1.25f) finalCol = ToImColor(50, 205, 50, 255);
+                            if (rating >= 10.0f)      finalCol = ToImColor(0, 255, 255, 255);   // 青色 (传说)
+                            else if (rating >= 7.0f)  finalCol = ToImColor(255, 255, 0, 255);   // 黄色 (史诗)
+                            else if (rating >= 4.5f)  finalCol = ToImColor(160, 32, 240, 255);  // 紫色 (卓越)
+                            else if (rating >= 2.5f)  finalCol = ToImColor(0, 191, 255, 255);   // 蓝色 (精良)
+                            else if (rating >= 1.25f) finalCol = ToImColor(50, 205, 50, 255);   // 绿色 (优良)
                         }
 
                         entry.flags.clear();

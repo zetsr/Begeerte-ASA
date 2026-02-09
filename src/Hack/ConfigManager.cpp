@@ -132,7 +132,23 @@ bool ConfigManager::SaveConfig(const std::string& filename) {
         CONFIG_COLOR(g_Config::DroppedItemDistanceColor);
         CONFIG_COLOR(g_Config::DroppedItemMeatColor);
         CONFIG_COLOR(g_Config::DroppedItemCryopodColor);
+        CONFIG_COLOR(g_Config::DroppedItemEggColor);
         CONFIG_COLOR(g_Config::DroppedItemPiledColor);
+        CONFIG_COLOR(g_Config::DroppedItemWoodColor);
+        CONFIG_COLOR(g_Config::DroppedItemThatchColor);
+        CONFIG_COLOR(g_Config::DroppedItemHideColor);
+        CONFIG_COLOR(g_Config::DroppedItemPeltColor);
+        CONFIG_COLOR(g_Config::DroppedItemKeratinColor);
+        CONFIG_COLOR(g_Config::DroppedItemChitinColor);
+        CONFIG_COLOR(g_Config::DroppedItemCorruptedPolymerColor);
+        CONFIG_COLOR(g_Config::DroppedItemPolymer_OrganicColor);
+        CONFIG_COLOR(g_Config::DroppedItemPolymerColor);
+        CONFIG_COLOR(g_Config::DroppedItemMetalColor);
+        CONFIG_COLOR(g_Config::DroppedItemStoneColor);
+        CONFIG_COLOR(g_Config::DroppedItemCrystalColor);
+        CONFIG_COLOR(g_Config::DroppedItemGemColor);
+        CONFIG_COLOR(g_Config::DroppedItemPearlColor);
+        CONFIG_COLOR(g_Config::DroppedItemSpoiledMeatColor);
         file << "\n";
 
         // ±¦Ïä
@@ -262,7 +278,23 @@ bool ConfigManager::LoadConfig(const std::string& filename) {
         LOAD_COLOR(g_Config::DroppedItemDistanceColor);
         LOAD_COLOR(g_Config::DroppedItemMeatColor);
         LOAD_COLOR(g_Config::DroppedItemCryopodColor);
+        LOAD_COLOR(g_Config::DroppedItemEggColor);
         LOAD_COLOR(g_Config::DroppedItemPiledColor);
+        LOAD_COLOR(g_Config::DroppedItemWoodColor);
+        LOAD_COLOR(g_Config::DroppedItemThatchColor);
+        LOAD_COLOR(g_Config::DroppedItemHideColor);
+        LOAD_COLOR(g_Config::DroppedItemPeltColor);
+        LOAD_COLOR(g_Config::DroppedItemKeratinColor);
+        LOAD_COLOR(g_Config::DroppedItemChitinColor);
+        LOAD_COLOR(g_Config::DroppedItemCorruptedPolymerColor);
+        LOAD_COLOR(g_Config::DroppedItemPolymer_OrganicColor);
+        LOAD_COLOR(g_Config::DroppedItemPolymerColor);
+        LOAD_COLOR(g_Config::DroppedItemMetalColor);
+        LOAD_COLOR(g_Config::DroppedItemStoneColor);
+        LOAD_COLOR(g_Config::DroppedItemCrystalColor);
+        LOAD_COLOR(g_Config::DroppedItemGemColor);
+        LOAD_COLOR(g_Config::DroppedItemPearlColor);
+        LOAD_COLOR(g_Config::DroppedItemSpoiledMeatColor);
 
         // ±¦Ïä
         LOAD_BOOL(g_Config::bDrawSupplyDrops);
