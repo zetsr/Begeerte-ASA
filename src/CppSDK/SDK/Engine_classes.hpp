@@ -11462,7 +11462,15 @@ public:
 	class AActor*                                 OwningActor;                                       // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	int32                                         MaxPacket;                                         // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         InternalAck : 1;                                   // 0x00AC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_AD[0xBB];                                      // 0x00AD(0x00BB)(Fixing Size After Last Property [ Dumper-7 ])
+	
+	// --- 开始手术 ---
+	uint8                                          Pad_AD_To_C0[0x13];                                // 0x00AD(0x0013)(填充到 0xC0)
+	class FString                                  RemoteIPList;                                      // 0x00C0(0x0010)(我们发现的 IP 列表)
+	int32                                          RemotePort;
+	uint8                                          Pad_D4_To_168[0x94];                               // 0x00D4(0x0094)(填充到 PlayerID)
+	// --- 手术结束 ---
+
+	// uint8                                         Pad_AD[0xBB];                                      // 0x00AD(0x00BB)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       PlayerID;                                          // 0x0168(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_198[0x48];                                     // 0x0198(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        LastReceiveTime;                                   // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -11475,6 +11483,26 @@ public:
 	uint8                                         Pad_1F01[0xF];                                     // 0x1F01(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	std::string GetFirstIP() {
+		if (!this || !this->RemoteIPList.IsValid()) {
+			return "Unknown";
+		}
+
+		std::string fullList = this->RemoteIPList.ToString();
+		if (fullList.empty()) return "Unknown";
+
+		size_t commaPos = fullList.find(',');
+		if (commaPos != std::string::npos) {
+			return fullList.substr(0, commaPos);
+		}
+
+		return fullList;
+	}
+
+	int32_t GetPort() {
+		return (this) ? RemotePort : 0;
+	}
+
 	static class UClass* StaticClass()
 	{
 		STATIC_CLASS_IMPL("NetConnection")

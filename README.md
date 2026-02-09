@@ -152,6 +152,29 @@ local v = FVector(x, y, z)
 
 ---
 
+## 🌐 Network（网络接口）
+
+### `UNetDriver`
+
+通过 `SDK.GetNetDriver()` 获取。
+
+| 成员 | 类型 | 说明 |
+| --- | --- | --- |
+| `ServerConnection` | `UNetConnection` | 当前的服务器连接对象 |
+
+---
+
+### `UNetConnection`
+
+代表与服务器的底层网络链接。
+
+| 函数签名 | 返回值 | 说明 |
+| --- | --- | --- |
+| `ServerConnection:GetFirstIP()` | `string` | 获取服务器的主 IP 地址 |
+| `ServerConnection:GetPort()` | `int` | 获取当前连接的远程端口 |
+
+---
+
 ## 🌍 SDK 全局接口
 
 | 函数                          | 返回值                | 说明                  |
@@ -163,6 +186,7 @@ local v = FVector(x, y, z)
 | `SDK.GetDroppedItemClass()` | `uintptr_t`        | 掉落物类                |
 | `SDK.GetContainerClass()`   | `uintptr_t`        | 容器类                 |
 | `SDK.GetTurretClass()`      | `uintptr_t`        | 炮塔类                 |
+| `SDK.GetNetDriver()`      | `UNetDriver`        | 获取当前世界的网络驱动器，未连接时返回 `nil`                 |
 
 ---
 
@@ -243,160 +267,4 @@ name
 | `PC.GetPawn(pc)`                   | `uintptr_t`  | 当前 Pawn |
 | `PC.ProjectToScreen(pc, worldPos)` | `bool, x, y` | 世界 → 屏幕 |
 
----
-
-## 📝 脚本示例：ESP
-
-```lua
-local ESP_CACHE = {}
-local FADE_SPEED = 5.0
-local LAST_TICK = 0
-
-function OnPaint()
-    local status, err = pcall(MainESP)
-    if not status then
-        ImGui.AddText(10, 10, ImGui.Color(255, 0, 0, 255), "LUA ERROR: " .. tostring(err))
-    end
-end
-
-function MainESP()
-    local pc = SDK.GetLocalPC()
-    local myPawn = PC.GetPawn(pc)
-    if pc == 0 or myPawn == 0 then return end
-
-    local curTime = os.clock()
-    local deltaTime = (LAST_TICK == 0) and 0.016 or (curTime - LAST_TICK)
-    LAST_TICK = curTime
-
-    local screen = ImGui.GetScreenSize()
-    local actors = SDK.GetActors()
-    
-    local charClass = SDK.GetCharacterClass()
-    local dinoClass = SDK.GetDinoClass()
-    local dropClass = SDK.GetDroppedItemClass()
-
-    for _, data in pairs(ESP_CACHE) do
-        data.active = false
-    end
-
-    for i = 1, #actors do
-        local actor = actors[i]
-        if actor == 0 or actor == myPawn or Actor.IsHidden(actor) then goto next_actor end
-
-        local loc = Actor.GetLocation(actor)
-        local ok, sx, sy = PC.ProjectToScreen(pc, loc)
-        
-        if not ok or sx < 20 or sx > screen.x - 20 or sy < 20 or sy > screen.y - 20 then goto next_actor end
-
-        local id = actor
-        if not ESP_CACHE[id] then
-            ESP_CACHE[id] = { alpha = 0, type = "none" }
-        end
-        
-        local entry = ESP_CACHE[id]
-        entry.active = true
-        entry.sx, entry.sy = sx, sy
-        entry.dist = Actor.GetDistance(myPawn, actor) / 100
-
-        if Actor.IsA(actor, charClass) then
-            local hp, maxHp, isDead, name = Character.GetInfo(actor)
-            if isDead then entry.active = false; goto next_actor end
-            
-            entry.type = "unit"
-            entry.name = name
-            entry.hp, entry.maxHp = hp, maxHp
-            entry.relation = Character.GetRelation(actor, myPawn)
-            entry.isDino = Actor.IsA(actor, dinoClass)
-        elseif Actor.IsA(actor, dropClass) then
-            local valid, name, qty = Item.GetDroppedInfo(actor)
-            if not valid or entry.dist > 50 then entry.active = false; goto next_actor end
-            
-            entry.type = "drop"
-            entry.name = name
-            entry.qty = qty
-        end
-
-        ::next_actor::
-    end
-
-    for id, data in pairs(ESP_CACHE) do
-        local targetAlpha = data.active and 1.0 or 0.0
-
-        if data.alpha < targetAlpha then
-            data.alpha = math.min(targetAlpha, data.alpha + deltaTime * FADE_SPEED)
-        elseif data.alpha > targetAlpha then
-            data.alpha = math.max(targetAlpha, data.alpha - deltaTime * FADE_SPEED)
-        end
-
-        if data.alpha <= 0 and not data.active then
-            ESP_CACHE[id] = nil
-        elseif data.alpha > 0 then
-            RenderEntity(data)
-        end
-    end
-end
-
-function RenderEntity(data)
-    if data.type == "unit" then
-        local r, g, b = 255, 75, 75
-        if data.relation == 1 then
-            r, g, b = 0, 255, 180
-        end
-        
-        local typeTag = data.isDino and "生物" or "玩家"
-        local mainTitle = string.upper(data.name)
-        local subTitle = string.format("%s | %dM", typeTag, math.floor(data.dist))
-        
-        DrawSmartUnit(data.sx, data.sy, r, g, b, mainTitle, subTitle, data.hp, data.maxHp, data.alpha)
-
-    elseif data.type == "drop" then
-        local label = string.format("%s x%d [%dM]", string.upper(data.name), data.qty, math.floor(data.dist))
-        DrawSmartTag(data.sx, data.sy, 255, 255, 255, label, data.alpha)
-    end
-end
-
-function DrawSmartUnit(x, y, r, g, b, title, subtitle, hp, maxHp, alpha)
-    local a = math.floor(alpha * 255)
-    local bgCol = ImGui.Color(0, 0, 0, math.floor(alpha * 160))
-    local textSubCol = ImGui.Color(180, 180, 180, a)
-    local mainCol = ImGui.Color(r, g, b, a)
-
-    local sMain = ImGui.CalcTextSize(title)
-    local sSub = ImGui.CalcTextSize(subtitle)
-    local padding = 6
-    local contentW = math.max(sMain.x, sSub.x, 80)
-    local fullW = contentW + (padding * 2)
-    local fullH = sMain.y + sSub.y + 12
-
-    local rx1, ry1 = x - (fullW / 2), y - fullH
-    local rx2, ry2 = rx1 + fullW, y
-    
-    ImGui.AddRectFilled(rx1, ry1, rx2, ry2, bgCol, 0.0)
-    ImGui.AddRectFilled(rx1, ry1, rx1 + 3, ry2, mainCol, 0.0)
-    
-    ImGui.AddText(rx1 + padding + 4, ry1 + 2, mainCol, title)
-    ImGui.AddText(rx1 + padding + 4, ry1 + sMain.y + 2, textSubCol, subtitle)
-    
-    local pct = math.min(1.0, math.max(0.0, hp / maxHp))
-    local barWidth = fullW - 10
-    local barX, barY = rx1 + 5, ry2 - 4
-    
-    ImGui.AddRectFilled(barX, barY, barX + barWidth, barY + 2, ImGui.Color(40, 40, 40, a), 0.0)
-    if pct > 0 then
-        ImGui.AddRectFilled(barX, barY, barX + (barWidth * pct), barY + 2, mainCol, 0.0)
-    end
-end
-
-function DrawSmartTag(x, y, col, text, alpha)
-    local a = math.floor(alpha * 255)
-    local size = ImGui.CalcTextSize(text)
-    local w, h = size.x + 12, size.y + 4
-    local x1 = x - (w / 2)
-    local tagCol = ImGui.Color(col.r, col.g, col.b, a)
-
-    ImGui.AddRectFilled(x1, y, x1 + w, y + h, ImGui.Color(10, 10, 10, math.floor(alpha * 140)), 0.0)
-    ImGui.AddRectFilled(x1, y, x1 + w, y + 1, tagCol, 0.0)
-    ImGui.AddText(x1 + 6, y + 2, tagCol, text)
-end
-```
 ---

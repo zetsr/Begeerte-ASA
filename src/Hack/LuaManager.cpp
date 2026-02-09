@@ -257,7 +257,28 @@ void LuaManager::BindSDK() {
         "X", &SDK::FVector::X, "Y", &SDK::FVector::Y, "Z", &SDK::FVector::Z
         );
 
+    // --- 注册 UNetConnection 类 ---
+    m_lua->new_usertype<SDK::UNetConnection>("UNetConnection",
+        // 绑定我们封装的成员函数
+        "GetFirstIP", &SDK::UNetConnection::GetFirstIP,
+        "GetPort", &SDK::UNetConnection::GetPort
+        );
+
+    // --- 注册 UNetDriver 类 ---
+    m_lua->new_usertype<SDK::UNetDriver>("UNetDriver",
+        // 绑定 ServerConnection 指针
+        "ServerConnection", &SDK::UNetDriver::ServerConnection
+        );
+
     auto sdk = m_lua->create_named_table("SDK");
+    sdk.set_function("GetNetDriver", []() -> sol::optional<SDK::UNetDriver*> {
+        auto W = SDK::UWorld::GetWorld();
+        if (W && W->NetDriver) {
+            return W->NetDriver;
+        }
+        return sol::nullopt;
+        });
+
     sdk.set_function("GetLocalPC", []() {
         auto pc = g_ESP::GetLocalPC();
         return (pc) ? (uintptr_t)pc : 0;
