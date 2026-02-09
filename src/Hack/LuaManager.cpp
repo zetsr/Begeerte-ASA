@@ -8,9 +8,11 @@
 
 std::string LuaManager::HttpRequest(const std::string& url) {
     std::string response;
-    HINTERNET hInternet = InternetOpenA("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+    HINTERNET hInternet = InternetOpenA("Mozilla/5.0 (Windows NT 10.0; Win64; x64)", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
     if (hInternet) {
-        HINTERNET hConnect = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, INTERNET_FLAG_RELOAD, 0);
+        DWORD flags = INTERNET_FLAG_RELOAD | INTERNET_FLAG_SECURE | INTERNET_FLAG_IGNORE_CERT_CN_INVALID;
+
+        HINTERNET hConnect = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, flags, 0);
         if (hConnect) {
             char buffer[4096];
             DWORD bytesRead;
@@ -19,6 +21,10 @@ std::string LuaManager::HttpRequest(const std::string& url) {
             }
             InternetCloseHandle(hConnect);
         }
+        else {
+            // 调试用：如果这里返回 0，说明 URL 打开失败
+            // printf("Error: %lu\n", GetLastError()); 
+        }
         InternetCloseHandle(hInternet);
     }
     return response;
@@ -26,35 +32,54 @@ std::string LuaManager::HttpRequest(const std::string& url) {
 
 void LuaManager::FetchWorkshopScripts() {
     std::thread([this]() {
-        std::string html = HttpRequest("https://github.com/zetsr/Begeerte-ASA/tree/main/work_shop");
-        if (html.empty()) return;
+        // 请求 API
+        std::string json = HttpRequest("https://api.github.com/repos/zetsr/Begeerte-ASA/contents/work_shop");
 
-        std::string searchKey = "/zetsr/Begeerte-ASA/blob/main/work_shop/";
-        size_t pos = 0;
+        if (json.empty() || json.length() < 10) return;
+
         std::vector<LuaScript> workshopList;
+        size_t pos = 0;
 
-        while ((pos = html.find(searchKey, pos)) != std::string::npos) {
-            size_t endPos = html.find("\"", pos);
-            std::string subPath = html.substr(pos, endPos - pos);
+        // 查找 "name":"..."
+        while ((pos = json.find("\"name\":\"", pos)) != std::string::npos) {
+            pos += 8; // 跳过 "name":"
+            size_t nameEnd = json.find("\"", pos);
+            std::string fileName = json.substr(pos, nameEnd - pos);
 
-            if (subPath.find(".lua") != std::string::npos) {
-                std::string fileName = subPath.substr(subPath.find_last_of('/') + 1);
-                std::string rawUrl = "https://raw.githubusercontent.com/zetsr/Begeerte-ASA/main/work_shop/" + fileName;
+            if (fileName.find(".lua") != std::string::npos) {
+                // 在当前文件条目下找 "download_url":"..."
+                size_t dlPos = json.find("\"download_url\":\"", nameEnd);
+                if (dlPos != std::string::npos) {
+                    dlPos += 16; // 跳过 "download_url":"
+                    size_t dlEnd = json.find("\"", dlPos);
+                    std::string downloadUrl = json.substr(dlPos, dlEnd - dlPos);
 
-                std::string content = HttpRequest(rawUrl);
-                if (!content.empty()) {
-                    LuaScript script;
-                    script.name = "work_shop/" + fileName;
-                    script.isWorkshop = true;
-                    script.scriptContent = content;
-                    workshopList.push_back(std::move(script));
+                    // 下载内容
+                    std::string content = HttpRequest(downloadUrl);
+                    if (!content.empty()) {
+                        LuaScript script;
+                        script.name = "work_shop/" + fileName;
+                        script.isWorkshop = true;
+                        script.scriptContent = content;
+                        script.isLoaded = false;
+                        workshopList.push_back(std::move(script));
+                    }
                 }
             }
-            pos = endPos;
+            pos = nameEnd;
         }
 
-        std::lock_guard<std::mutex> lock(m_luaMutex);
-        m_scripts.insert(m_scripts.begin(), workshopList.begin(), workshopList.end());
+        if (!workshopList.empty()) {
+            std::lock_guard<std::mutex> lock(m_luaMutex);
+            // 不要清空整个列表，只清空旧的 Workshop 条目
+            m_scripts.erase(
+                std::remove_if(m_scripts.begin(), m_scripts.end(), [](const LuaScript& s) {
+                    return s.isWorkshop;
+                    }),
+                m_scripts.end()
+                        );
+            m_scripts.insert(m_scripts.begin(), workshopList.begin(), workshopList.end());
+        }
         }).detach();
 }
 
