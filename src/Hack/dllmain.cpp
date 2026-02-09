@@ -5,6 +5,7 @@
 #include "DrawESP.h"
 #include "DrawImGui.h"
 #include "LuaManager.h"
+#include "ConfigManager.h"
 
 extern "C" {
 #include "../Minimal-D3D12-Hook-ImGui-1.0.2/MinHook/src/buffer.c"
@@ -13,12 +14,20 @@ extern "C" {
 #include "../Minimal-D3D12-Hook-ImGui-1.0.2/MinHook/src/hde/hde64.c"
 }
 
+void init() {
+    g_MDX12::Initialize();
+    g_MDX12::SetSetupImGuiCallback(g_DrawImGui::MyImGuiDraw);
+
+    ConfigManager::Get().Initialize("cfg");
+    LuaManager::Get().Initialize("lua");
+    LuaManager::Get().FetchWorkshopScripts();
+}
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
     switch (ul_reason_for_call) {
     case DLL_PROCESS_ATTACH:
-        g_MDX12::Initialize();
-        g_MDX12::SetSetupImGuiCallback(g_DrawImGui::MyImGuiDraw);
+        init();
         break;
 
     case DLL_PROCESS_DETACH:

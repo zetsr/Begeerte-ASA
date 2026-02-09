@@ -6,6 +6,58 @@
 #include <algorithm>
 #include <iostream>
 
+std::string LuaManager::HttpRequest(const std::string& url) {
+    std::string response;
+    HINTERNET hInternet = InternetOpenA("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+    if (hInternet) {
+        HINTERNET hConnect = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, INTERNET_FLAG_RELOAD, 0);
+        if (hConnect) {
+            char buffer[4096];
+            DWORD bytesRead;
+            while (InternetReadFile(hConnect, buffer, sizeof(buffer), &bytesRead) && bytesRead > 0) {
+                response.append(buffer, bytesRead);
+            }
+            InternetCloseHandle(hConnect);
+        }
+        InternetCloseHandle(hInternet);
+    }
+    return response;
+}
+
+void LuaManager::FetchWorkshopScripts() {
+    std::thread([this]() {
+        std::string html = HttpRequest("https://github.com/zetsr/Begeerte-ASA/tree/main/work_shop");
+        if (html.empty()) return;
+
+        std::string searchKey = "/zetsr/Begeerte-ASA/blob/main/work_shop/";
+        size_t pos = 0;
+        std::vector<LuaScript> workshopList;
+
+        while ((pos = html.find(searchKey, pos)) != std::string::npos) {
+            size_t endPos = html.find("\"", pos);
+            std::string subPath = html.substr(pos, endPos - pos);
+
+            if (subPath.find(".lua") != std::string::npos) {
+                std::string fileName = subPath.substr(subPath.find_last_of('/') + 1);
+                std::string rawUrl = "https://raw.githubusercontent.com/zetsr/Begeerte-ASA/main/work_shop/" + fileName;
+
+                std::string content = HttpRequest(rawUrl);
+                if (!content.empty()) {
+                    LuaScript script;
+                    script.name = "work_shop/" + fileName;
+                    script.isWorkshop = true;
+                    script.scriptContent = content;
+                    workshopList.push_back(std::move(script));
+                }
+            }
+            pos = endPos;
+        }
+
+        std::lock_guard<std::mutex> lock(m_luaMutex);
+        m_scripts.insert(m_scripts.begin(), workshopList.begin(), workshopList.end());
+        }).detach();
+}
+
 void LuaManager::Initialize(const std::string& scriptDir) {
     if (scriptDir.empty()) return;
 
@@ -278,11 +330,49 @@ void LuaManager::InitVM() {
     }
 
     m_lua.reset(new sol::state());
-
     m_lua->open_libraries();
+
     BindImGui();
     BindSDK();
     BindSystem();
+
+    const char* FIX_REQUIRE = R"(
+        local _raw_require = require -- 捕获当前原生的 require 到局部变量
+        
+        function require(module_name)
+            local old_module = package.loaded[module_name]
+            
+            if not old_module then 
+                -- 第一次加载：必须调用 _raw_require，否则会死循环
+                return _raw_require(module_name) 
+            end
+            
+            -- 非第一次加载（热重载）：使用你的逻辑
+            -- package.searchers[2] 是文件搜索器
+            local loader = package.searchers[2](module_name)
+            if type(loader) ~= 'function' then
+                return _raw_require(module_name) -- 兜底：如果搜索器没找到，交给原生处理报错
+            end
+            
+            local new_module = loader()
+            
+            -- 强制覆盖逻辑
+            if type(old_module) == "table" and type(new_module) == "table" then
+                for k, v in pairs(new_module) do
+                    old_module[k] = v
+                end
+            end
+            
+            return old_module
+        end
+    )";
+
+    try {
+        m_lua->script(FIX_REQUIRE);
+    }
+    catch (const sol::error& e) {
+        // 捕捉可能的 Lua 语法异常
+    }
 }
 
 void LuaManager::Shutdown() {
@@ -361,7 +451,14 @@ bool LuaManager::ExecuteScript(LuaScript& script) {
     env_table[sol::metatable_key] = env_mt;
     script.env = sol::environment(*m_lua, env_table);
 
-    auto load_result = m_lua->load_file(script.path.string());
+    sol::load_result load_result;
+    if (script.isWorkshop) {
+        load_result = m_lua->load(script.scriptContent, script.name);
+    }
+    else {
+        load_result = m_lua->load_file(script.path.string());
+    }
+
     if (!load_result.valid()) {
         sol::error err = load_result;
         script.hasError = true;
@@ -384,33 +481,40 @@ bool LuaManager::ExecuteScript(LuaScript& script) {
 }
 
 void LuaManager::RefreshFileList() {
-    if (m_scriptDir.empty()) { m_scripts.clear(); return; }
-    fs::path dirPath = fs::absolute(m_scriptDir);
-    if (!fs::exists(dirPath) || !fs::is_directory(dirPath)) return;
-
-    std::vector<fs::path> currentFiles;
-    for (const auto& entry : fs::directory_iterator(dirPath)) {
-        if (entry.is_regular_file() && entry.path().extension() == ".lua") {
-            currentFiles.push_back(fs::absolute(entry.path()));
+    std::lock_guard<std::mutex> lock(m_luaMutex);
+    std::vector<LuaScript> nextList;
+    for (auto& s : m_scripts) {
+        if (s.isWorkshop) {
+            nextList.push_back(std::move(s));
         }
     }
 
-    m_scripts.erase(std::remove_if(m_scripts.begin(), m_scripts.end(), [&](const LuaScript& s) {
-        return std::find(currentFiles.begin(), currentFiles.end(), s.path) == currentFiles.end();
-        }), m_scripts.end());
+    if (!m_scriptDir.empty() && fs::exists(m_scriptDir)) {
+        for (const auto& entry : fs::directory_iterator(m_scriptDir)) {
+            if (entry.is_regular_file() && entry.path().extension() == ".lua") {
+                fs::path fullPath = fs::absolute(entry.path());
 
-    for (const auto& filePath : currentFiles) {
-        auto it = std::find_if(m_scripts.begin(), m_scripts.end(), [&](const LuaScript& s) {
-            return s.path == filePath;
-            });
+                auto it = std::find_if(m_scripts.begin(), m_scripts.end(), [&](const LuaScript& old) {
+                    return !old.isWorkshop && fs::absolute(old.path) == fullPath;
+                    });
 
-        if (it == m_scripts.end()) {
-            LuaScript newScript;
-            newScript.name = filePath.filename().string();
-            newScript.path = filePath;
-            m_scripts.push_back(std::move(newScript));
+                if (it != m_scripts.end()) {
+                    nextList.push_back(std::move(*it));
+                }
+                else {
+                    LuaScript s;
+                    s.name = entry.path().filename().string();
+                    s.path = fullPath;
+                    s.isWorkshop = false;
+                    s.isLoaded = false;
+                    s.hasError = false;
+                    nextList.push_back(std::move(s));
+                }
+            }
         }
     }
+
+    m_scripts = std::move(nextList);
 }
 
 void LuaManager::Lua_OnPaint() {

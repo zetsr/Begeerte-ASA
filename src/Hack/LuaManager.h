@@ -6,6 +6,10 @@
 #include <mutex>
 #include <atomic>
 #include <memory>
+#include <windows.h>
+#include <wininet.h>
+
+#pragma comment(lib, "wininet.lib")
 
 #include "../Minimal-D3D12-Hook-ImGui-1.0.2/Main/mdx12_api.h"
 
@@ -19,6 +23,9 @@ struct LuaScript {
     fs::path path;
     bool isLoaded = false;
     bool hasError = false;
+    bool isWorkshop = false;
+
+    std::string scriptContent;
     std::string lastError;
 
     sol::environment env;
@@ -45,6 +52,8 @@ public:
     void Update();
     void ActualReloadAll();
 
+    void FetchWorkshopScripts();
+
 private:
     bool m_needsReload = false;
     std::mutex m_luaMutex;
@@ -62,4 +71,6 @@ private:
     void BindSDK();
     void BindSystem();
     bool ExecuteScript(LuaScript& script);
+
+    std::string HttpRequest(const std::string& url);
 };

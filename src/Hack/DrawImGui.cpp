@@ -788,12 +788,6 @@ namespace g_DrawImGui {
 						ImGui::EndTabItem();
 					}
 
-					static bool configInitialized = false;
-					if (!configInitialized) {
-						ConfigManager::Get().Initialize("cfg");
-						configInitialized = true;
-					}
-
 					if (ImGui::BeginTabItem(U8("配置"))) {
 						auto& mgr = ConfigManager::Get();
 						auto& configs = mgr.GetConfigs();
@@ -817,7 +811,7 @@ namespace g_DrawImGui {
 
 						static char configNameBuf[65] = { 0 };
 						ImGui::SetNextItemWidth(150.0f);
-						ImGui::InputTextWithHint("##ConfigName", U8("输入你想使用的参数名称 (如: MyCFG)..."), configNameBuf, sizeof(configNameBuf));
+						ImGui::InputTextWithHint("##ConfigName", U8("输入参数名称..."), configNameBuf, sizeof(configNameBuf));
 						ImGui::SameLine();
 						if (ImGui::Button(U8("创建"))) {
 							std::string configName(configNameBuf);
@@ -901,12 +895,6 @@ namespace g_DrawImGui {
 
 					LuaManager::Get().Update();
 					if (ImGui::BeginTabItem(U8("脚本"))) {
-						static bool initialized = false;
-						if (!initialized) {
-							LuaManager::Get().Initialize("lua");
-							initialized = true;
-						}
-
 						auto& mgr = LuaManager::Get();
 						auto& scripts = mgr.GetScripts();
 
@@ -930,7 +918,7 @@ namespace g_DrawImGui {
 						if (ImGui::BeginChild("##LuaScriptListChild", ImVec2(0, 300), true)) {
 							if (scripts.empty()) {
 								ImGui::SetCursorPosY(ImGui::GetWindowHeight() / 2 - 10);
-								ImGui::TextDisabled(U8(""));
+								// ImGui::TextDisabled(U8("无可用脚本"));
 							}
 							else {
 								for (int i = 0; i < (int)scripts.size(); i++) {
@@ -950,20 +938,30 @@ namespace g_DrawImGui {
 
 									if (ImGui::Selectable(displayName.c_str(), false, ImGuiSelectableFlags_SpanAllColumns)) {
 										bool targetState = !script.isLoaded;
-										if (targetState) {
-											if (!mgr.SetScriptState(i, true)) {
-
-											}
-										}
-										else {
-											mgr.SetScriptState(i, false);
-										}
+										mgr.SetScriptState(i, targetState);
 									}
 
 									ImGui::PopStyleColor();
 
 									if (script.hasError) {
+										ImGui::SameLine(ImGui::GetWindowWidth() - 35);
+										ImGui::TextDisabled("[!] ");
 
+										if (ImGui::IsItemHovered()) {
+											ImGui::BeginTooltip();
+											ImGui::TextUnformatted(U8("右键点击图标以复制错误详情"));
+											ImGui::Separator();
+											ImGui::TextUnformatted(script.lastError.c_str());
+											ImGui::EndTooltip();
+										}
+
+										std::string popupId = "ErrorPopup_" + std::to_string(i);
+										if (ImGui::BeginPopupContextItem(popupId.c_str())) {
+											if (ImGui::Selectable(U8("复制错误信息"))) {
+												ImGui::SetClipboardText(script.lastError.c_str());
+											}
+											ImGui::EndPopup();
+										}
 									}
 
 									ImGui::PopID();
