@@ -25,6 +25,9 @@ namespace g_Config {
     inline float DroppedItemMaxDistance = 500.0f;
     inline float DroppedItemNameColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
     inline float DroppedItemDistanceColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    inline float DroppedItemMeatColor[4] = { 1.0f, 0.62f, 0.34f, 1.0f };
+    inline float DroppedItemCryopodColor[4] = { 1.0f, 0.39f, 1.0f, 1.0f };
+    inline float DroppedItemPiledColor[4] = { 0.19f, 1.0f, 0.19f, 1.0f };
 
     // ±¶œ‰
     inline bool bDrawSupplyDrops = true;

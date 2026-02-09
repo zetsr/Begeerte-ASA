@@ -128,6 +128,11 @@ bool ConfigManager::SaveConfig(const std::string& filename) {
         file << "[DroppedItems]\n";
         CONFIG_BOOL(g_Config::bDrawDroppedItems);
         CONFIG_FLOAT(g_Config::DroppedItemMaxDistance);
+        CONFIG_COLOR(g_Config::DroppedItemNameColor);
+        CONFIG_COLOR(g_Config::DroppedItemDistanceColor);
+        CONFIG_COLOR(g_Config::DroppedItemMeatColor);
+        CONFIG_COLOR(g_Config::DroppedItemCryopodColor);
+        CONFIG_COLOR(g_Config::DroppedItemPiledColor);
         file << "\n";
 
         // ±¦Ïä
@@ -253,7 +258,12 @@ bool ConfigManager::LoadConfig(const std::string& filename) {
         // µôÂäÎï
         LOAD_BOOL(g_Config::bDrawDroppedItems);
         LOAD_FLOAT(g_Config::DroppedItemMaxDistance);
-        
+        LOAD_COLOR(g_Config::DroppedItemNameColor);
+        LOAD_COLOR(g_Config::DroppedItemDistanceColor);
+        LOAD_COLOR(g_Config::DroppedItemMeatColor);
+        LOAD_COLOR(g_Config::DroppedItemCryopodColor);
+        LOAD_COLOR(g_Config::DroppedItemPiledColor);
+
         // ±¦Ïä
         LOAD_BOOL(g_Config::bDrawSupplyDrops);
         LOAD_FLOAT(g_Config::SupplyDropMaxDistance);

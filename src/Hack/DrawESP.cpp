@@ -474,13 +474,13 @@ namespace g_DrawESP {
                         int quantity = Item->ItemQuantity;
 
                         if (className.find("Cryopod") != std::string::npos) {
-                            finalCol = ToImColor(255, 100, 255, 255);
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemCryopodColor);
                         }
                         else if (quantity >= 1000) {
-                            finalCol = ToImColor(50, 255, 50, 255);
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPiledColor);
                         }
                         else if (className.find("Meat") != std::string::npos) {
-                            finalCol = ToImColor(139, 69, 19, 255);
+                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemMeatColor);
                         }
                         else {
                             float rating = Item->ItemRating;

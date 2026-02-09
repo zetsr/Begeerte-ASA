@@ -549,6 +549,9 @@ namespace g_DrawImGui {
 						if (g_Config::bDrawDroppedItems) {
 							DrawCustomColorPicker("DroppedItemNameCol", g_Config::DroppedItemNameColor, U8("物品名称"));
 							DrawCustomColorPicker("DroppedItemDistanceCol", g_Config::DroppedItemDistanceColor, U8("物品距离"));
+							DrawCustomColorPicker("DroppedItemMeatCol", g_Config::DroppedItemMeatColor, U8("肉类颜色"));
+							DrawCustomColorPicker("DroppedItemCryopodCol", g_Config::DroppedItemCryopodColor, U8("低温仓颜色"));
+							DrawCustomColorPicker("DroppedItemPiledCol", g_Config::DroppedItemPiledColor, U8("堆叠颜色"));
 							DrawCustomSliderFloat(U8("物品显示距离"), &g_Config::DroppedItemMaxDistance, 1.0f, 500.0f, "%.0f", 1.0f, "m");
 						}
 						DrawAnimatedSeparator();
