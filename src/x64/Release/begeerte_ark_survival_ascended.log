@@ -12,8 +12,8 @@ C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7
 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\Engine_structs.hpp(7102,48): warning C4369: “SDK::EStreamingSourcePriority::EStreamingSourcePriority_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,2): warning C4309: “初始化”: 截断常量值
 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\CppSDK\SDK\ShooterGame_structs.hpp(1039,48): warning C4369: “SDK::EPlayerHeatMapHeatLevel::EPlayerHeatMapHeatLevel_MAX”: 枚举数的值“256”不能表示为“unsigned char”，值是“0”
-C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\LuaManager.cpp(94,40): warning C4101: “e”: 未引用的局部变量
-C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\LuaManager.cpp(398,30): warning C4101: “e”: 未引用的局部变量
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\LuaManager.cpp(122,40): warning C4101: “e”: 未引用的局部变量
+C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\Hack\LuaManager.cpp(426,30): warning C4101: “e”: 未引用的局部变量
     正在创建库 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\..\release\begeerte_ark_survival_ascended.lib 和对象 C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\src\..\release\begeerte_ark_survival_ascended.exp
   LINK : 已指定 /LTCG，但不需要生成代码；从链接命令行中移除 /LTCG 以提高链接器性能
   begeerte_ark_survival_ascended.vcxproj -> C:\Users\zetsr\Documents\GitHub\Begeerte-ASA\release\begeerte_ark_survival_ascended.dll

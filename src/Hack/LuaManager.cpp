@@ -32,52 +32,80 @@ std::string LuaManager::HttpRequest(const std::string& url) {
 
 void LuaManager::FetchWorkshopScripts() {
     std::thread([this]() {
-        // 请求 API
+        // 请求 GitHub API 获取文件列表 JSON
         std::string json = HttpRequest("https://api.github.com/repos/zetsr/Begeerte-ASA/contents/work_shop");
 
         if (json.empty() || json.length() < 10) return;
 
         std::vector<LuaScript> workshopList;
-        size_t pos = 0;
 
-        // 查找 "name":"..."
-        while ((pos = json.find("\"name\":\"", pos)) != std::string::npos) {
-            pos += 8; // 跳过 "name":"
-            size_t nameEnd = json.find("\"", pos);
-            std::string fileName = json.substr(pos, nameEnd - pos);
+        // 关键点：GitHub API 返回的是 [{...}, {...}]
+        // 我们按每个条目的分隔符 "}," 来定位每个文件的完整块
+        size_t entryStart = 0;
+        size_t entryEnd = 0;
 
-            if (fileName.find(".lua") != std::string::npos) {
-                // 在当前文件条目下找 "download_url":"..."
-                size_t dlPos = json.find("\"download_url\":\"", nameEnd);
-                if (dlPos != std::string::npos) {
-                    dlPos += 16; // 跳过 "download_url":"
-                    size_t dlEnd = json.find("\"", dlPos);
-                    std::string downloadUrl = json.substr(dlPos, dlEnd - dlPos);
+        while ((entryStart = json.find("{", entryStart)) != std::string::npos) {
+            // 找到当前条目的结束位置
+            entryEnd = json.find("}", entryStart);
+            if (entryEnd == std::string::npos) break;
 
-                    // 下载内容
-                    std::string content = HttpRequest(downloadUrl);
-                    if (!content.empty()) {
-                        LuaScript script;
-                        script.name = "work_shop/" + fileName;
-                        script.isWorkshop = true;
-                        script.scriptContent = content;
-                        script.isLoaded = false;
-                        workshopList.push_back(std::move(script));
+            // 截取当前文件的完整 JSON 块，防止 cross-talk (跨条目解析错误)
+            std::string entryBlock = json.substr(entryStart, entryEnd - entryStart);
+
+            // 在当前块内查找文件名
+            std::string nameKey = "\"name\":\"";
+            size_t nPos = entryBlock.find(nameKey);
+
+            if (nPos != std::string::npos) {
+                nPos += nameKey.length();
+                size_t nEnd = entryBlock.find("\"", nPos);
+                std::string fileName = entryBlock.substr(nPos, nEnd - nPos);
+
+                // 过滤：必须是 .lua 文件
+                if (fileName.find(".lua") != std::string::npos) {
+
+                    // 在同一个块内查找该文件对应的 download_url
+                    std::string urlKey = "\"download_url\":\"";
+                    size_t dPos = entryBlock.find(urlKey);
+
+                    if (dPos != std::string::npos) {
+                        dPos += urlKey.length();
+                        size_t dEnd = entryBlock.find("\"", dPos);
+                        std::string downloadUrl = entryBlock.substr(dPos, dEnd - dPos);
+
+                        // 执行内存下载
+                        std::string content = HttpRequest(downloadUrl);
+                        if (!content.empty()) {
+                            LuaScript script;
+                            script.name = "work_shop/" + fileName;
+                            script.isWorkshop = true;
+                            script.scriptContent = content;
+                            script.isLoaded = false;
+                            script.hasError = false;
+
+                            workshopList.push_back(std::move(script));
+                        }
                     }
                 }
             }
-            pos = nameEnd;
+
+            // 移动到下一个条目
+            entryStart = entryEnd + 1;
         }
 
+        // 线程安全地更新到主脚本列表
         if (!workshopList.empty()) {
             std::lock_guard<std::mutex> lock(m_luaMutex);
-            // 不要清空整个列表，只清空旧的 Workshop 条目
+
+            // 移除旧的 Workshop 缓存，保留本地脚本
             m_scripts.erase(
                 std::remove_if(m_scripts.begin(), m_scripts.end(), [](const LuaScript& s) {
                     return s.isWorkshop;
                     }),
                 m_scripts.end()
                         );
+
+            // 将新下载的脚本插入到列表最前方（或按需调整顺序）
             m_scripts.insert(m_scripts.begin(), workshopList.begin(), workshopList.end());
         }
         }).detach();
