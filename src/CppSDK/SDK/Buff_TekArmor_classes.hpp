@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Buff_OverrideVelocity_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Buff_OverrideVelocity_classes.hpp"
 
 
 namespace SDK

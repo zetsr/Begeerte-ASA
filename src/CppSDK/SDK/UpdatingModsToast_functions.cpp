@@ -17,73 +17,71 @@
 namespace SDK
 {
 
-// Function UpdatingModsToast.UpdatingModsToast_C.UpdateProgressBar
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function UpdatingModsToast.UpdatingModsToast_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UUpdatingModsToast_C::UpdateProgressBar()
+void UUpdatingModsToast_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "UpdateProgressBar");
+		Func = Class->GetFunction("UpdatingModsToast_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UpdatingModsToast.UpdatingModsToast_C.UpdateMainText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UUpdatingModsToast_C::UpdateMainText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "UpdateMainText");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UpdatingModsToast.UpdatingModsToast_C.SetCounter
-// (Event, Public, BlueprintEvent)
+// Function UpdatingModsToast.UpdatingModsToast_C.ExecuteUbergraph_UpdatingModsToast
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// int32                                   NewCounter                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUpdatingModsToast_C::SetCounter(int32 NewCounter)
+void UUpdatingModsToast_C::ExecuteUbergraph_UpdatingModsToast(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "SetCounter");
+		Func = Class->GetFunction("UpdatingModsToast_C", "ExecuteUbergraph_UpdatingModsToast");
 
-	Params::UpdatingModsToast_C_SetCounter Parms{};
+	Params::UpdatingModsToast_C_ExecuteUbergraph_UpdatingModsToast Parms{};
 
-	Parms.NewCounter = NewCounter;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function UpdatingModsToast.UpdatingModsToast_C.OverrideTextValueWithString
+// Function UpdatingModsToast.UpdatingModsToast_C.incrementCounter
 // (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FString&                    NewText                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    HideProgressBar                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    HideCounter_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUpdatingModsToast_C::OverrideTextValueWithString(const class FString& NewText, bool HideProgressBar, bool HideCounter_0)
+void UUpdatingModsToast_C::incrementCounter()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "OverrideTextValueWithString");
+		Func = Class->GetFunction("UpdatingModsToast_C", "incrementCounter");
 
-	Params::UpdatingModsToast_C_OverrideTextValueWithString Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.NewText = std::move(NewText);
-	Parms.HideProgressBar = HideProgressBar;
-	Parms.HideCounter_0 = HideCounter_0;
+
+// Function UpdatingModsToast.UpdatingModsToast_C.InitCounter
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   NewCounterMax                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInWillSetCounter                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUpdatingModsToast_C::InitCounter(int32 NewCounterMax, bool bInWillSetCounter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UpdatingModsToast_C", "InitCounter");
+
+	Params::UpdatingModsToast_C_InitCounter Parms{};
+
+	Parms.NewCounterMax = NewCounterMax;
+	Parms.bInWillSetCounter = bInWillSetCounter;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -113,71 +111,73 @@ void UUpdatingModsToast_C::OverrideTextValue(const class FText& NewText, bool Hi
 }
 
 
-// Function UpdatingModsToast.UpdatingModsToast_C.InitCounter
+// Function UpdatingModsToast.UpdatingModsToast_C.OverrideTextValueWithString
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   NewCounterMax                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInWillSetCounter                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    NewText                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    HideProgressBar                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    HideCounter_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUpdatingModsToast_C::InitCounter(int32 NewCounterMax, bool bInWillSetCounter)
+void UUpdatingModsToast_C::OverrideTextValueWithString(const class FString& NewText, bool HideProgressBar, bool HideCounter_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "InitCounter");
+		Func = Class->GetFunction("UpdatingModsToast_C", "OverrideTextValueWithString");
 
-	Params::UpdatingModsToast_C_InitCounter Parms{};
+	Params::UpdatingModsToast_C_OverrideTextValueWithString Parms{};
 
-	Parms.NewCounterMax = NewCounterMax;
-	Parms.bInWillSetCounter = bInWillSetCounter;
+	Parms.NewText = std::move(NewText);
+	Parms.HideProgressBar = HideProgressBar;
+	Parms.HideCounter_0 = HideCounter_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function UpdatingModsToast.UpdatingModsToast_C.incrementCounter
+// Function UpdatingModsToast.UpdatingModsToast_C.SetCounter
 // (Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   NewCounter                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUpdatingModsToast_C::incrementCounter()
+void UUpdatingModsToast_C::SetCounter(int32 NewCounter)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "incrementCounter");
+		Func = Class->GetFunction("UpdatingModsToast_C", "SetCounter");
+
+	Params::UpdatingModsToast_C_SetCounter Parms{};
+
+	Parms.NewCounter = NewCounter;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UpdatingModsToast.UpdatingModsToast_C.UpdateMainText
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UUpdatingModsToast_C::UpdateMainText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UpdatingModsToast_C", "UpdateMainText");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UpdatingModsToast.UpdatingModsToast_C.ExecuteUbergraph_UpdatingModsToast
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function UpdatingModsToast.UpdatingModsToast_C.UpdateProgressBar
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UUpdatingModsToast_C::ExecuteUbergraph_UpdatingModsToast(int32 EntryPoint)
+void UUpdatingModsToast_C::UpdateProgressBar()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "ExecuteUbergraph_UpdatingModsToast");
-
-	Params::UpdatingModsToast_C_ExecuteUbergraph_UpdatingModsToast Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UpdatingModsToast.UpdatingModsToast_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UUpdatingModsToast_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UpdatingModsToast_C", "Construct");
+		Func = Class->GetFunction("UpdatingModsToast_C", "UpdateProgressBar");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

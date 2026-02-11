@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CheatMapJumpInfo_structs.hpp"
-#include "ShooterGame_classes.hpp"
-#include "CheatMenuOptionTypes_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CheatMenuCharacterLevelPreset_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CheatMapJumpInfo_structs.hpp"
+#include "CheatMenuOptionTypes_structs.hpp"
+#include "ShooterGame_classes.hpp"
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 

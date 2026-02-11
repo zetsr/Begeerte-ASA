@@ -11463,7 +11463,7 @@ public:
 	int32                                         MaxPacket;                                         // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         InternalAck : 1;                                   // 0x00AC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
 	
-	// --- 开始手术 ---
+    // --- 开始手术 ---
 	uint8                                          Pad_AD_To_C0[0x13];                                // 0x00AD(0x0013)(填充到 0xC0)
 	class FString                                  RemoteIPList;                                      // 0x00C0(0x0010)(我们发现的 IP 列表)
 	int32                                          RemotePort;
@@ -42702,7 +42702,7 @@ public:
 DUMPER7_ASSERTS_ARectLight;
 
 // Class Engine.RendererSettings
-// 0x01F8 (0x0230 - 0x0038)
+// 0x01F0 (0x0228 - 0x0038)
 class URendererSettings final : public UDeveloperSettings
 {
 public:
@@ -42934,11 +42934,9 @@ public:
 	struct FPerPlatformBool                       bStreamSkeletalMeshLODs;                           // 0x01C4(0x0001)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPerPlatformBool                       bDiscardSkeletalMeshOptionalLODs;                  // 0x01C5(0x0001)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C6[0x2];                                      // 0x01C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPerPlatformInt                        DefaultSkeletalMeshMinLod;                         // 0x01C8(0x0004)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        VisualizeCalibrationColorMaterialPath;             // 0x01D0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        VisualizeCalibrationCustomMaterialPath;            // 0x01F0(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        VisualizeCalibrationGrayscaleMaterialPath;         // 0x0210(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        VisualizeCalibrationColorMaterialPath;             // 0x01C8(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        VisualizeCalibrationCustomMaterialPath;            // 0x01E8(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        VisualizeCalibrationGrayscaleMaterialPath;         // 0x0208(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -43202,7 +43200,7 @@ public:
 DUMPER7_ASSERTS_USimpleConstructionScript;
 
 // Class Engine.SkeletalMesh
-// 0x04B8 (0x0600 - 0x0148)
+// 0x04C0 (0x0608 - 0x0148)
 class USkeletalMesh final : public USkinnedAsset
 {
 public:
@@ -43260,7 +43258,18 @@ public:
 	float                                         InterpolationSpeed;                                // 0x05F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InterpolationSpeedUpward;                          // 0x05F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CachedInitialSphereRadiusBounds;                   // 0x05F8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5FC[0x4];                                      // 0x05FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         bIgnoreMasterPoseLODs : 1;                         // 0x05FC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAllowParallelAnimations : 1;                      // 0x05FC(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAllowLODStreaming : 1;                            // 0x05FC(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bFullLODStreaming : 1;                             // 0x05FC(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bCookRemoveLOD0 : 1;                               // 0x05FC(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bConsoleDropLOD0 : 1;                              // 0x05FC(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bConsoleDropLOD0onLowMemPlatform : 1;              // 0x05FC(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bPreventLODStreamingOnWindows : 1;                 // 0x05FC(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_5FD[0x3];                                      // 0x05FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ConsoleDropLODNewTriangleCount;                    // 0x0600(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPerPlatformBool                       bRemovingLOD0FromCook;                             // 0x0604(0x0001)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_605[0x3];                                      // 0x0605(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetDefaultAnimatingRig(TSoftObjectPtr<class UObject> InAnimatingRig);

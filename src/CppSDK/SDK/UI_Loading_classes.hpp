@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CFCoreUIWidget_classes.hpp"
 #include "ENUM_LoadingProgress_structs.hpp"
+#include "CFCoreUIWidget_classes.hpp"
 
 
 namespace SDK

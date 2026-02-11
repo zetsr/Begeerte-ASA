@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "cfcore_ui_structs.hpp"
 #include "CFCoreUIWidget_classes.hpp"
+#include "cfcore_ui_structs.hpp"
 #include "cfcore_structs.hpp"
 
 

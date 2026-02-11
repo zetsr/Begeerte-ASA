@@ -9,17 +9,13 @@
 // FORWARD DECLARATIONS
 
 
-namespace Human_Male_TPV_GroundConform_AnimBP { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace SimpleHumanTPoseAnimBP { struct FAnimBlueprintGeneratedConstantData; }
-
 namespace Human_Female_TPV_PPAnimBP { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
 
 namespace WeaponFistsAnimBlueprint { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace TPV_ClimbPick_MaleAnimBP { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
 
 namespace Human_Male_Face_Retargeting_AnimBP { struct FAnimBlueprintGeneratedConstantData; }
 
@@ -30,6 +26,10 @@ namespace HM_TPV_ClimbPick_AnimBP { struct FAnimBlueprintGeneratedConstantData; 
 namespace Human_Male_TPV_PPAnimBP { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace HM_TPV_Empty_PoseLayer_AnimBP { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace Human_Male_TPV_GroundConform_AnimBP { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace SimpleHumanTPoseAnimBP { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace TPV_Lance_MaleAnimBP { struct FAnimBlueprintGeneratedConstantData; }
 
@@ -42,7 +42,7 @@ namespace BaseHumanAnimBP
 	struct FAnimBlueprintGeneratedConstantData;
 }
 
-namespace FPVMeleeWeaponAnimBP_Lance
+namespace FPVClimbPickWeaponAnimBP_Base
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -54,7 +54,7 @@ namespace FPVWeaponAnimBP_Base_Carrying
 	struct FAnimBlueprintGeneratedMutableData;
 }
 
-namespace FPVClimbPickWeaponAnimBP_Base
+namespace FPVMeleeWeaponAnimBP_Lance
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -62,6 +62,6 @@ namespace FPVClimbPickWeaponAnimBP_Base
 
 namespace Human_FaceCustomization_AnimBP
 {
-	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
 }
