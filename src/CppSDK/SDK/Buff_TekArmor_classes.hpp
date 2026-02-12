@@ -20,7 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass Buff_TekArmor.Buff_TekArmor_C
 // 0x0120 (0x0D00 - 0x0BE0)
-class ABuff_TekArmor_C final : public ABuff_OverrideVelocity_C
+class ABuff_TekArmor_C : public ABuff_OverrideVelocity_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

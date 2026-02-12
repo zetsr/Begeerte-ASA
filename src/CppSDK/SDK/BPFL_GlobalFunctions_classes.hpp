@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "ENUM_InputDevices_structs.hpp"
 #include "Engine_classes.hpp"
 #include "cfcore_structs.hpp"
 #include "cfcore_ui_structs.hpp"
-#include "ENUM_InputDevices_structs.hpp"
 
 
 namespace SDK

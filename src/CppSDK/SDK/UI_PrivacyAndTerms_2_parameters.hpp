@@ -17,23 +17,14 @@
 namespace SDK::Params
 {
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct UI_PrivacyAndTerms_2_C_PreConstruct final
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.Event Update Terms Of Use On Error
+// 0x0038 (0x0038 - 0x0000)
+struct UI_PrivacyAndTerms_2_C_Event_Update_Terms_Of_Use_On_Error final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_PrivacyAndTerms_2_C_PreConstruct;
-
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.OnSuccess_UpdateTermsOfUse
-// 0x00D0 (0x00D0 - 0x0000)
-struct UI_PrivacyAndTerms_2_C_OnSuccess_UpdateTermsOfUse final
-{
-public:
-	struct FTerms                                 Terms;                                             // 0x0000(0x00D0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-DUMPER7_ASSERTS_UI_PrivacyAndTerms_2_C_OnSuccess_UpdateTermsOfUse;
+DUMPER7_ASSERTS_UI_PrivacyAndTerms_2_C_Event_Update_Terms_Of_Use_On_Error;
 
 // Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.ExecuteUbergraph_UI_PrivacyAndTerms_2
 // 0x01A0 (0x01A0 - 0x0000)
@@ -58,14 +49,23 @@ public:
 };
 DUMPER7_ASSERTS_UI_PrivacyAndTerms_2_C_ExecuteUbergraph_UI_PrivacyAndTerms_2;
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.Event Update Terms Of Use On Error
-// 0x0038 (0x0038 - 0x0000)
-struct UI_PrivacyAndTerms_2_C_Event_Update_Terms_Of_Use_On_Error final
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.OnSuccess_UpdateTermsOfUse
+// 0x00D0 (0x00D0 - 0x0000)
+struct UI_PrivacyAndTerms_2_C_OnSuccess_UpdateTermsOfUse final
 {
 public:
-	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FTerms                                 Terms;                                             // 0x0000(0x00D0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_PrivacyAndTerms_2_C_Event_Update_Terms_Of_Use_On_Error;
+DUMPER7_ASSERTS_UI_PrivacyAndTerms_2_C_OnSuccess_UpdateTermsOfUse;
+
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct UI_PrivacyAndTerms_2_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_UI_PrivacyAndTerms_2_C_PreConstruct;
 
 }
 

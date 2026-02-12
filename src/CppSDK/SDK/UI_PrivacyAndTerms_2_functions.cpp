@@ -17,75 +17,141 @@
 namespace SDK
 {
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_Btn_Exit_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UUI_PrivacyAndTerms_2_C::PreConstruct(bool IsDesignTime)
+void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_Btn_Exit_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "PreConstruct");
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_Btn_Exit_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
 
-	Params::UI_PrivacyAndTerms_2_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.OnSuccess_UpdateTermsOfUse
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FTerms&                    Terms                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_Close_B_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UUI_PrivacyAndTerms_2_C::OnSuccess_UpdateTermsOfUse(const struct FTerms& Terms)
+void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_Close_B_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "OnSuccess_UpdateTermsOfUse");
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_Close_B_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 
-	Params::UI_PrivacyAndTerms_2_C_OnSuccess_UpdateTermsOfUse Parms{};
-
-	Parms.Terms = std::move(Terms);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.ExecuteUbergraph_UI_PrivacyAndTerms_2
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UUI_PrivacyAndTerms_2_C::ExecuteUbergraph_UI_PrivacyAndTerms_2(int32 EntryPoint)
+void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "ExecuteUbergraph_UI_PrivacyAndTerms_2");
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
-	Params::UI_PrivacyAndTerms_2_C_ExecuteUbergraph_UI_PrivacyAndTerms_2 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.Event Update Terms Of Use Text
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.Event Privacy Policy
 // (BlueprintCallable, BlueprintEvent)
 
-void UUI_PrivacyAndTerms_2_C::Event_Update_Terms_Of_Use_Text()
+void UUI_PrivacyAndTerms_2_C::Event_Privacy_Policy()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "Event Update Terms Of Use Text");
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "Event Privacy Policy");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.Event Terms Of Use
+// (BlueprintCallable, BlueprintEvent)
+
+void UUI_PrivacyAndTerms_2_C::Event_Terms_Of_Use()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "Event Terms Of Use");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -111,143 +177,77 @@ void UUI_PrivacyAndTerms_2_C::Event_Update_Terms_Of_Use_On_Error(const struct FC
 }
 
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.Event Terms Of Use
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.Event Update Terms Of Use Text
 // (BlueprintCallable, BlueprintEvent)
 
-void UUI_PrivacyAndTerms_2_C::Event_Terms_Of_Use()
+void UUI_PrivacyAndTerms_2_C::Event_Update_Terms_Of_Use_Text()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "Event Terms Of Use");
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "Event Update Terms Of Use Text");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.Event Privacy Policy
-// (BlueprintCallable, BlueprintEvent)
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.ExecuteUbergraph_UI_PrivacyAndTerms_2
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_PrivacyAndTerms_2_C::Event_Privacy_Policy()
+void UUI_PrivacyAndTerms_2_C::ExecuteUbergraph_UI_PrivacyAndTerms_2(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "Event Privacy Policy");
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "ExecuteUbergraph_UI_PrivacyAndTerms_2");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::UI_PrivacyAndTerms_2_C_ExecuteUbergraph_UI_PrivacyAndTerms_2 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.OnSuccess_UpdateTermsOfUse
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FTerms&                    Terms                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature()
+void UUI_PrivacyAndTerms_2_C::OnSuccess_UpdateTermsOfUse(const struct FTerms& Terms)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_7_OnButtonHoverEvent__DelegateSignature");
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "OnSuccess_UpdateTermsOfUse");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::UI_PrivacyAndTerms_2_C_OnSuccess_UpdateTermsOfUse Parms{};
+
+	Parms.Terms = std::move(Terms);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
+// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature()
+void UUI_PrivacyAndTerms_2_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_6_OnButtonHoverEvent__DelegateSignature");
+		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::UI_PrivacyAndTerms_2_C_PreConstruct Parms{};
 
+	Parms.IsDesignTime = IsDesignTime;
 
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_TermsOfUse_B_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_9_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_8_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_PrivacyPolicy_B_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_Close_B_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_Close_B_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_Close_B_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UI_PrivacyAndTerms_2.UI_PrivacyAndTerms_2_C.BndEvt__PrivacyAndTerms_UI_2_Btn_Exit_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UUI_PrivacyAndTerms_2_C::BndEvt__PrivacyAndTerms_UI_2_Btn_Exit_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_PrivacyAndTerms_2_C", "BndEvt__PrivacyAndTerms_UI_2_Btn_Exit_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

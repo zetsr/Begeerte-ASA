@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass PrimalItemResource_Polymer.PrimalItemResource_Polymer_C
 // 0x0000 (0x0B60 - 0x0B60)
-class UPrimalItemResource_Polymer_C final : public UPrimalItemResource_Craftable_C
+class UPrimalItemResource_Polymer_C : public UPrimalItemResource_Craftable_C
 {
 public:
 	static class UClass* StaticClass()

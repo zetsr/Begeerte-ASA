@@ -18,7 +18,8 @@ namespace SDK
 
 // BlueprintGeneratedClass PrimalItem_WeaponBaseClub.PrimalItem_WeaponBaseClub_C
 // 0x0000 (0x0B60 - 0x0B60)
-class UPrimalItem_WeaponBaseClub_C : public UPrimalItemWeaponGenericAmmoless_C
+#pragma pack(push, 0x1)
+class alignas(0x10) UPrimalItem_WeaponBaseClub_C : public UPrimalItemWeaponGenericAmmoless_C
 {
 public:
 	static class UClass* StaticClass()
@@ -34,6 +35,7 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponBaseClub_C>();
 	}
 };
+#pragma pack(pop)
 DUMPER7_ASSERTS_UPrimalItem_WeaponBaseClub_C;
 
 }

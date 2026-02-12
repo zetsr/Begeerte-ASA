@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass PrimalItemConsumable_RawPrimeMeat.PrimalItemConsumable_RawPrimeMeat_C
 // 0x0000 (0x0B60 - 0x0B60)
-class UPrimalItemConsumable_RawPrimeMeat_C final : public UPrimalItemConsumableEatable_C
+class UPrimalItemConsumable_RawPrimeMeat_C : public UPrimalItemConsumableEatable_C
 {
 public:
 	static class UClass* StaticClass()

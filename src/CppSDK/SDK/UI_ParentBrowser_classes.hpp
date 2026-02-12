@@ -11,14 +11,14 @@
 #include "Basic.hpp"
 
 #include "cfcore_structs.hpp"
-#include "ENUM_TimeFilters_structs.hpp"
-#include "Engine_structs.hpp"
-#include "cfcore_ui_structs.hpp"
-#include "UI_BasePage_classes.hpp"
 #include "ENUM_SideTabs_structs.hpp"
+#include "ENUM_InputDevices_structs.hpp"
+#include "UI_BasePage_classes.hpp"
+#include "Engine_structs.hpp"
+#include "ENUM_TimeFilters_structs.hpp"
+#include "cfcore_ui_structs.hpp"
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "ENUM_InputDevices_structs.hpp"
 
 
 namespace SDK

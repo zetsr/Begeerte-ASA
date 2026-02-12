@@ -20,7 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_PrimalWindSourceComponent_Base.BP_PrimalWindSourceComponent_Base_C
 // 0x0118 (0x03B0 - 0x0298)
-class UBP_PrimalWindSourceComponent_Base_C final : public UPrimalWindSourceComponent
+class UBP_PrimalWindSourceComponent_Base_C : public UPrimalWindSourceComponent
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

@@ -18,7 +18,8 @@ namespace SDK
 
 // BlueprintGeneratedClass PrimalItemConsumable_Kibble_Base.PrimalItemConsumable_Kibble_Base_C
 // 0x0000 (0x0B60 - 0x0B60)
-class UPrimalItemConsumable_Kibble_Base_C final : public UPrimalItemConsumableEatable_C
+#pragma pack(push, 0x1)
+class alignas(0x10) UPrimalItemConsumable_Kibble_Base_C : public UPrimalItemConsumableEatable_C
 {
 public:
 	static class UClass* StaticClass()
@@ -34,6 +35,7 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Kibble_Base_C>();
 	}
 };
+#pragma pack(pop)
 DUMPER7_ASSERTS_UPrimalItemConsumable_Kibble_Base_C;
 
 }
