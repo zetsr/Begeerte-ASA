@@ -409,44 +409,6 @@ void LuaManager::InitVM() {
     BindImGui();
     BindSDK();
     BindSystem();
-
-    const char* FIX_REQUIRE = R"(
-        local _raw_require = require -- 捕获当前原生的 require 到局部变量
-        
-        function require(module_name)
-            local old_module = package.loaded[module_name]
-            
-            if not old_module then 
-                -- 第一次加载：必须调用 _raw_require，否则会死循环
-                return _raw_require(module_name) 
-            end
-            
-            -- 非第一次加载（热重载）：使用你的逻辑
-            -- package.searchers[2] 是文件搜索器
-            local loader = package.searchers[2](module_name)
-            if type(loader) ~= 'function' then
-                return _raw_require(module_name) -- 兜底：如果搜索器没找到，交给原生处理报错
-            end
-            
-            local new_module = loader()
-            
-            -- 强制覆盖逻辑
-            if type(old_module) == "table" and type(new_module) == "table" then
-                for k, v in pairs(new_module) do
-                    old_module[k] = v
-                end
-            end
-            
-            return old_module
-        end
-    )";
-
-    try {
-        m_lua->script(FIX_REQUIRE);
-    }
-    catch (const sol::error& e) {
-        // 捕捉可能的 Lua 语法异常
-    }
 }
 
 void LuaManager::Shutdown() {

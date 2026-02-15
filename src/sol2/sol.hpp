@@ -2948,16 +2948,16 @@ struct pre_main {
 // beginning of sol/compatibility/lua_version.hpp
 
 #if SOL_IS_ON(SOL_USE_CXX_LUA)
-#include "../lua-5.4.8/src/lua.h"
-#include "../lua-5.4.8/src/lauxlib.h"
-#include "../lua-5.4.8/src/lualib.h"
+#include "../LuaJIT-2.1/src/lua.h"
+#include "../LuaJIT-2.1/src/lauxlib.h"
+#include "../LuaJIT-2.1/src/lualib.h"
 #elif SOL_IS_ON(SOL_USE_LUA_HPP)
-    #include "../lua-5.4.8/src/lua.hpp"
+    #include "../LuaJIT-2.1/src/lua.hpp"
 #else
 	extern "C" {
-		#include "../lua-5.4.8/src/lua.h"
-		#include "../lua-5.4.8/src/lauxlib.h"
-		#include "../lua-5.4.8/src/lualib.h"
+		#include "../LuaJIT-2.1/src/lua.h"
+		#include "../LuaJIT-2.1/src/lauxlib.h"
+		#include "../LuaJIT-2.1/src/lualib.h"
 	}
 #endif // C++ Mangling for Lua vs. Not
 
@@ -3152,9 +3152,9 @@ struct pre_main {
 #if defined(__cplusplus) && !defined(COMPAT53_LUA_CPP)
 extern "C" {
 #endif
-#include "../lua-5.4.8/src/lua.h"
-#include "../lua-5.4.8/src/lauxlib.h"
-#include "../lua-5.4.8/src/lualib.h"
+#include "../LuaJIT-2.1/src/lua.h"
+#include "../LuaJIT-2.1/src/lauxlib.h"
+#include "../LuaJIT-2.1/src/lualib.h"
 #if defined(__cplusplus) && !defined(COMPAT53_LUA_CPP)
 }
 #endif
@@ -4412,9 +4412,9 @@ COMPAT53_API void luaL_requiref(lua_State* L, const char* modname, lua_CFunction
 #if defined(__cplusplus) && !defined(COMPAT53_LUA_CPP)
 extern "C" {
 #endif
-#include "../lua-5.4.8/src/lua.h"
-#include "../lua-5.4.8/src/lauxlib.h"
-#include "../lua-5.4.8/src/lualib.h"
+#include "../LuaJIT-2.1/src/lua.h"
+#include "../LuaJIT-2.1/src/lauxlib.h"
+#include "../LuaJIT-2.1/src/lualib.h"
 #if defined(__cplusplus) && !defined(COMPAT53_LUA_CPP)
 }
 #endif

@@ -34,8 +34,11 @@ struct LuaScript {
 class LuaManager {
 public:
     static LuaManager& Get() {
-        static LuaManager instance;
-        return instance;
+        static LuaManager* instance = nullptr;
+        if (!instance) {
+            instance = new LuaManager();
+        }
+        return *instance;
     }
 
     void Initialize(const std::string& scriptDir);
