@@ -58,6 +58,7 @@ namespace g_Config {
 
     // ˮԴ
     inline bool bDrawWater = true;
+    inline float WaterMaxCount = 3;
     inline float WaterMaxDistance = 500.0f;
     inline float WaterNameColor[4] = { 0.0f, 0.75f, 1.0f, 1.0f };
     inline float WaterDistanceColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };

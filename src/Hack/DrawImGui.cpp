@@ -591,7 +591,8 @@ namespace g_DrawImGui {
 						if (g_Config::bDrawWater) {
 							// DrawCustomColorPicker("WaterNameCol", g_Config::WaterNameColor, U8("水源名称"));
 							DrawCustomColorPicker("WaterDistanceCol", g_Config::WaterDistanceColor, U8("水源距离"));
-							DrawCustomSliderFloat(U8("水源显示距离"), &g_Config::WaterMaxDistance, 1.0f, 10000.0f, "%.0f", 1.0f, "m");
+							// DrawCustomSliderFloat(U8("水源显示距离"), &g_Config::WaterMaxDistance, 1.0f, 10000.0f, "%.0f", 1.0f, "m");
+							DrawCustomSliderFloat(U8("显示最近水源数量"), &g_Config::WaterMaxCount, 1.0f, 10.0f, "%.0f", 1.0f, U8("个"));
 						}
 						DrawAnimatedSeparator();
 

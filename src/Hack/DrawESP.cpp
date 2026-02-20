@@ -59,6 +59,14 @@ namespace g_DrawESP {
 
     static std::unordered_map<uintptr_t, ESPEntry> s_entries;
 
+    struct WaterCandidate {
+        SDK::AActor* actor;
+        float dist;
+        SDK::FVector2D screenPos;
+        SDK::FVector surfaceLoc;
+    };
+    std::vector<WaterCandidate> waterCandidates;
+
     static float ApproachAlpha(float cur, float target, float deltaSeconds, float fadeTime) {
         if (fadeTime <= 0.0f) return target;
         float diff = target - cur;
@@ -95,6 +103,8 @@ namespace g_DrawESP {
         float deltaTime = ImGui::GetIO().DeltaTime;
 
         SDK::TArray<SDK::AActor*>& Actors = World->PersistentLevel->Actors;
+
+        waterCandidates.clear();
 
         for (auto& kv : s_entries) {
             kv.second.aliveThisFrame = false;
@@ -358,43 +368,14 @@ namespace g_DrawESP {
                     dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
                 }
 
-                if (dist > g_Config::WaterMaxDistance) {
-                    entry.targetAlpha = 0.0f;
-                    entry.aliveThisFrame = false;
-                    continue;
-                }
+                entry.targetAlpha = 0.0f;
+                entry.aliveThisFrame = false;
 
                 SDK::FVector2D screenPos;
                 if (LocalPC->ProjectWorldLocationToScreen(WaterSurfaceLocation, &screenPos, false)) {
                     if (screenPos.X > 0 && screenPos.X < screenW && screenPos.Y > 0 && screenPos.Y < screenH) {
-                        entry.aliveThisFrame = true;
-                        entry.targetAlpha = 1.0f;
-                        entry.isItem = true;
-                        entry.cachedRect.topLeft = ImVec2(screenPos.X - 2, screenPos.Y - 2);
-                        entry.cachedRect.bottomRight = ImVec2(screenPos.X + 2, screenPos.Y + 2);
-                        entry.cachedRect.valid = true;
-                        entry.flags.clear();
-                        entry.bars.clear();
-                        ImU32 waterColor = g_Util::GetU32Color(g_Config::WaterNameColor);
-
-                        SDK::FString waterString = L"水源";
-                        entry.flags.push_back({ waterString.ToString(), waterColor, g_ESP::FlagPos::Right });
-                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_Util::GetU32Color(g_Config::WaterDistanceColor), g_ESP::FlagPos::Right });
-
-                        entry.shouldDrawBox = false;
-                        entry.shouldDrawHealthBar = false;
-                        entry.shouldDrawName = false;
-                        entry.shouldDrawDistance = true;
-                        entry.shouldDrawTorpor = false;
+                        waterCandidates.push_back({ TargetActor, dist, screenPos, WaterSurfaceLocation });
                     }
-                    else {
-                        entry.targetAlpha = 0.0f;
-                        entry.aliveThisFrame = false;
-                    }
-                }
-                else {
-                    entry.targetAlpha = 0.0f;
-                    entry.aliveThisFrame = false;
                 }
             }
 
@@ -702,6 +683,42 @@ namespace g_DrawESP {
         for (auto& kv : s_entries) {
             if (!kv.second.aliveThisFrame) {
                 kv.second.targetAlpha = 0.0f;
+            }
+        }
+
+        // ---- 水源数量过滤：只显示最近的 WaterMaxCount 个 ----
+        if (g_Config::bDrawWater && !waterCandidates.empty()) {
+            // 按距离升序排序
+            std::sort(waterCandidates.begin(), waterCandidates.end(),
+                [](const WaterCandidate& a, const WaterCandidate& b) {
+                    return a.dist < b.dist;
+                });
+
+            int showCount = min((int)waterCandidates.size(), g_Config::WaterMaxCount);
+            for (int wi = 0; wi < showCount; wi++) {
+                auto& wc = waterCandidates[wi];
+                uintptr_t key = reinterpret_cast<uintptr_t>(wc.actor);
+                ESPEntry& entry = s_entries[key];
+
+                entry.aliveThisFrame = true;
+                entry.targetAlpha = 1.0f;
+                entry.isItem = true;
+                entry.cachedRect.topLeft = ImVec2(wc.screenPos.X - 2, wc.screenPos.Y - 2);
+                entry.cachedRect.bottomRight = ImVec2(wc.screenPos.X + 2, wc.screenPos.Y + 2);
+                entry.cachedRect.valid = true;
+                entry.flags.clear();
+                entry.bars.clear();
+
+                ImU32 waterColor = g_Util::GetU32Color(g_Config::WaterNameColor);
+                SDK::FString waterString = L"[水源]";
+                entry.flags.push_back({ waterString.ToString(), waterColor, g_ESP::FlagPos::Right });
+                entry.flags.push_back({ std::to_string((int)wc.dist) + "m", g_Util::GetU32Color(g_Config::WaterDistanceColor), g_ESP::FlagPos::Right });
+
+                entry.shouldDrawBox = false;
+                entry.shouldDrawHealthBar = false;
+                entry.shouldDrawName = false;
+                entry.shouldDrawDistance = true;
+                entry.shouldDrawTorpor = false;
             }
         }
 
