@@ -7,6 +7,8 @@ namespace g_Aimbot {
 		SDK::APrimalCharacter* Character = nullptr;
 		SDK::FVector BestComponentLocation;
 		float FovDistance = 999999.0f;
+		float Health = 0.f;
+		float Distance = 0.f;
 		int BestBoneIndex = -1;
 		bool bIsValid = false;
 		bool bIsLocked = false;
