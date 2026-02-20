@@ -1,72 +1,100 @@
 #include "../Minimal-D3D12-Hook-ImGui/Main/mdx12_api.h"
 #include "SDK_Headers.hpp"
-
 #include "Aimbot.h"
 #include "Configs.h"
 #include "ESP.h"
 #include "Util.h"
 #include <chrono>
-#include <random>
 
 namespace g_Aimbot {
-    SDK::APrimalCharacter* CurrentTarget = nullptr;
-    auto LastTriggerTime = std::chrono::steady_clock::now();
+    static bool bIsAutoFiring = false;
 
-    float GetRandomDelay(float BaseMS, float RandomPercent) {
-        if (RandomPercent <= 0) return BaseMS;
-        static std::default_random_engine e;
-        std::uniform_real_distribution<float> d(1.0f - (RandomPercent / 100.0f), 1.0f + (RandomPercent / 100.0f));
-        return BaseMS * d(e);
+    void DrawStatusText(TargetInfo& best) {
+        SDK::APlayerController* LocalPC = g_Util::GetLocalPC();
+        if (!LocalPC || !best.bIsValid || !best.Character) return;
+
+        SDK::FVector2D ScreenPos;
+        if (LocalPC->ProjectWorldLocationToScreen(best.BestComponentLocation, &ScreenPos, false)) {
+            ImColor textColor = best.bIsTriggering ? ImColor(255, 0, 0) : (best.bIsLocked ? ImColor(0, 255, 0) : ImColor(255, 255, 0));
+
+            char buf[128];
+            _snprintf_s(buf, sizeof(buf), "BONE: %d | FOV: %.2f | SPEED: %.0f%%", best.BestBoneIndex, best.FovDistance, g_Config::AimbotSmooth);
+            ImGui::GetBackgroundDrawList()->AddText(ImVec2(ScreenPos.X, ScreenPos.Y - 40), textColor, buf);
+
+            if (best.bIsTriggering) {
+                ImGui::GetBackgroundDrawList()->AddText(ImVec2(ScreenPos.X, ScreenPos.Y - 60), ImColor(255, 0, 0), "!!! TRIGGER ACTIVE !!!");
+                ImGui::GetBackgroundDrawList()->AddCircle(ImVec2(ScreenPos.X, ScreenPos.Y), 10.0f, ImColor(255, 0, 0), 12, 2.0f);
+            }
+        }
+    }
+
+    void VisualizeTargetBones(SDK::APrimalCharacter* Char, SDK::APlayerController* PC) {
+        if (!Char || !Char->Mesh || !PC) return;
+
+        int BoneCount = Char->Mesh->GetNumBones();
+        SDK::FVector2D lastPos = { 0, 0 };
+
+        for (int i = 0; i < BoneCount; i++) {
+            SDK::FVector BoneLoc = Char->Mesh->GetSocketLocation(Char->Mesh->GetBoneName(i));
+            SDK::FVector2D sPos;
+
+            if (PC->ProjectWorldLocationToScreen(BoneLoc, &sPos, false)) {
+                ImGui::GetBackgroundDrawList()->AddCircleFilled(ImVec2(sPos.X, sPos.Y), 0.5f, g_Util::GetU32Color(g_Config::AimPointsColor));
+
+                if (lastPos.X != 0 && lastPos.Y != 0) {
+                    ImGui::GetBackgroundDrawList()->AddLine(ImVec2(lastPos.X, lastPos.Y), ImVec2(sPos.X, sPos.Y), g_Util::GetU32Color(g_Config::AimSkeletonColor));
+                }
+                lastPos = sPos;
+            }
+        }
+    }
+
+    float GetAngleDistance(SDK::FVector CamLoc, SDK::FVector TargetLoc, SDK::FRotator CamRot) {
+        SDK::FVector Diff = { TargetLoc.X - CamLoc.X, TargetLoc.Y - CamLoc.Y, TargetLoc.Z - CamLoc.Z };
+        SDK::FVector DirToTarget = SDK::UKismetMathLibrary::Normal(Diff, 0.0001f);
+        SDK::FVector CamForward = SDK::UKismetMathLibrary::GetForwardVector(CamRot);
+        float Dot = SDK::UKismetMathLibrary::Dot_VectorVector(DirToTarget, CamForward);
+        Dot = SDK::UKismetMathLibrary::FClamp(Dot, -1.0f, 1.0f);
+        return SDK::UKismetMathLibrary::DegAcos(Dot);
     }
 
     TargetInfo GetBestTarget() {
         TargetInfo Best;
         SDK::UWorld* World = SDK::UWorld::GetWorld();
+        if (!World || !World->PersistentLevel) return Best;
+
         SDK::APlayerController* LocalPC = g_Util::GetLocalPC();
+        if (!LocalPC || !LocalPC->Pawn || !LocalPC->PlayerCameraManager) return Best;
 
-        if (!World || !LocalPC || !LocalPC->Pawn) {
-            return Best;
-        }
+        SDK::FVector CamLoc; SDK::FRotator CamRot;
+        LocalPC->GetPlayerViewPoint(&CamLoc, &CamRot);
 
-        if (!LocalPC->PlayerCameraManager) {
-            return Best;
-        }
-
-        SDK::FVector CameraLoc;
-        SDK::FRotator CameraRot;
-        LocalPC->GetPlayerViewPoint(&CameraLoc, &CameraRot);
-
-        SDK::TArray<SDK::AActor*> Actors = World->PersistentLevel->Actors;
+        auto& Actors = World->PersistentLevel->Actors;
+        if (Actors.Num() <= 0) return Best;
         for (int i = 0; i < Actors.Num(); i++) {
             SDK::AActor* Actor = Actors[i];
-            if (!Actor || Actor == LocalPC->Pawn || Actor->bHidden) continue;
+            if (!Actor || !Actor->Class || Actor == LocalPC->Pawn || Actor->bHidden || !Actor->IsA(SDK::APrimalCharacter::StaticClass())) continue;
 
-            if (Actor->IsA(SDK::APrimalCharacter::StaticClass())) {
-                SDK::APrimalCharacter* Char = (SDK::APrimalCharacter*)Actor;
-                if (!Char || Char->IsDead()) continue;
-                if (g_ESP::GetRelation(Char, (SDK::APrimalCharacter*)LocalPC->Pawn) == g_ESP::RelationType::Team)
-                    continue;
+            SDK::APrimalCharacter* Char = (SDK::APrimalCharacter*)Actor;
+            if (!Char->Mesh) continue;
+            if (Char->IsDead() || g_ESP::GetRelation(Char, (SDK::APrimalCharacter*)LocalPC->Pawn) == g_ESP::RelationType::Team) continue;
 
-                SDK::ACharacter* CharacterBase = (SDK::ACharacter*)Char;
+            int BoneCount = Char->Mesh->GetNumBones();
+            for (int j = 0; j < BoneCount; j++) {
+                SDK::FVector BoneLoc = Char->Mesh->GetSocketLocation(Char->Mesh->GetBoneName(j));
+                if (BoneLoc.IsZero()) continue;
 
-                if (!CharacterBase || !CharacterBase->Mesh) continue;
-
-                if (!LocalPC->LineOfSightTo(Char, { 0, 0, 0 }, false))
-                    continue;
-
-                SDK::FName TargetBone = SDK::UKismetStringLibrary::Conv_StringToName(L"head");
-                SDK::FVector TargetPos = CharacterBase->Mesh->GetSocketLocation(TargetBone);
-
-                SDK::FVector2D ScreenPos;
-                if (LocalPC->ProjectWorldLocationToScreen(TargetPos, &ScreenPos, false)) {
-                    ImVec2 MousePos = ImGui::GetIO().MousePos;
-                    float Dist = sqrtf(powf(ScreenPos.X - MousePos.x, 2) + powf(ScreenPos.Y - MousePos.y, 2));
-
-                    if (Dist < g_Config::AimbotFOV && Dist < Best.FovDistance) {
-                        Best.Character = Char;
-                        Best.BestComponentLocation = TargetPos;
-                        Best.FovDistance = Dist;
-                        Best.bIsValid = true;
+                float Angle = GetAngleDistance(CamLoc, BoneLoc, CamRot);
+                if (Angle < g_Config::AimbotFOV) {
+                    if (LocalPC->LineOfSightTo(Char, { 0,0,0 }, false)) {
+                        if (Angle < Best.FovDistance) {
+                            Best.Character = Char;
+                            Best.BestComponentLocation = BoneLoc;
+                            Best.FovDistance = Angle;
+                            Best.BestBoneIndex = j;
+                            Best.bIsValid = true;
+                            Best.bIsLocked = (Angle < 0.5f);
+                        }
                     }
                 }
             }
@@ -74,118 +102,71 @@ namespace g_Aimbot {
         return Best;
     }
 
-    bool CalculateSpreadHitChance(SDK::AShooterWeapon* Weapon, SDK::AActor* Target, float RequiredChance) {
-        if (!Weapon || !Target) return false;
-        float CurrentSpread = Weapon->CurrentFiringSpread;
-        SDK::APlayerController* LocalPC = g_Util::GetLocalPC();
-
-        float dist = 0.0f;
-        if (LocalPC->Pawn && Target) {
-            dist = LocalPC->Pawn->GetDistanceTo(Target) / 100.0f;
-        }
-
-        float SpreadRadius = dist * tanf(CurrentSpread);
-        float TargetRadius = 45.0f;
-
-        float Chance = (TargetRadius * TargetRadius) / (SpreadRadius * SpreadRadius);
-        return (Chance * 100.0f) >= RequiredChance;
-    }
-
     void Tick() {
-        static bool bIsAutoFiring = false;
         if (!g_Config::bAimbotEnabled && !g_Config::bTriggerbotEnabled) return;
 
         SDK::UWorld* World = SDK::UWorld::GetWorld();
-        if (!World || !World->PersistentLevel) return;
+        if (!World || !World->PersistentLevel) {
+            if (bIsAutoFiring) bIsAutoFiring = false;
+            return;
+        }
 
         SDK::APlayerController* LocalPC = g_Util::GetLocalPC();
-        if (!LocalPC || !LocalPC->Class || !LocalPC->PlayerCameraManager ||
-            !LocalPC->PlayerCameraManager->Class || !LocalPC->Pawn ||
-            !LocalPC->Pawn->Class) {
-            bIsAutoFiring = false;
-            CurrentTarget = nullptr;
-            return;
-        }
+        if (!LocalPC || !LocalPC->Pawn || !LocalPC->PlayerCameraManager) return;
+
+        SDK::AShooterPlayerController* ShooterPC = (SDK::AShooterPlayerController*)LocalPC;
+        if (!ShooterPC) return;
+
+        SDK::AShooterCharacter* MyChar = (SDK::AShooterCharacter*)ShooterPC->Pawn;
+        if (!MyChar) return;
+
+        SDK::AShooterWeapon* MyWeapon = MyChar->CurrentWeapon;
+        if (!MyWeapon || MyWeapon->GetAmmoReloadState() != SDK::EWeaponAmmoReloadState::Ready || MyWeapon->GetCurrentAmmo() <= 0) return;
 
         TargetInfo Best = GetBestTarget();
-        if (!Best.bIsValid) {
-            CurrentTarget = nullptr;
-            return;
+
+        if (g_Config::bDrawAimPoints && Best.bIsValid) {
+            VisualizeTargetBones(Best.Character, LocalPC);
         }
 
-        if (g_Config::bAimbotEnabled) {
-            if (!LocalPC->PlayerCameraManager || !LocalPC->PlayerCameraManager->Class) {
-                CurrentTarget = nullptr;
-                return;
-            }
-
-            SDK::FVector CamLoc = LocalPC->PlayerCameraManager->GetCameraLocation();
+        if (g_Config::bAimbotEnabled && Best.Character && Best.bIsValid) {
+            SDK::FVector CamLoc; SDK::FRotator CamRot;
+            LocalPC->GetPlayerViewPoint(&CamLoc, &CamRot);
             SDK::FRotator TargetRot = SDK::UKismetMathLibrary::FindLookAtRotation(CamLoc, Best.BestComponentLocation);
-            SDK::FRotator CurrentRot = LocalPC->ControlRotation;
 
-            float Smooth = g_Config::AimbotSmooth / 100.0f;
-            SDK::FRotator FinalRot = SDK::UKismetMathLibrary::RLerp(CurrentRot, TargetRot, Smooth, true);
-
-            LocalPC->SetControlRotation(FinalRot);
+            if (g_Config::AimbotSmooth >= 100.0f) {
+                LocalPC->SetControlRotation(TargetRot);
+            }
+            else {
+                SDK::FRotator CurrentRot = LocalPC->ControlRotation;
+                float Alpha = SDK::UKismetMathLibrary::FClamp(g_Config::AimbotSmooth / 100.0f, 0.0f, 1.0f);
+                SDK::FRotator InterpRot = SDK::UKismetMathLibrary::RLerp(CurrentRot, TargetRot, Alpha, true);
+                LocalPC->SetControlRotation(InterpRot);
+            }
         }
 
-        if (g_Config::bTriggerbotEnabled) {
-            auto Now = std::chrono::steady_clock::now();
-            float Delay = GetRandomDelay(g_Config::TriggerDelay, g_Config::TriggerRandomPercent);
-
-            if (!LocalPC->Pawn || !LocalPC->Pawn->IsA(SDK::AShooterCharacter::StaticClass())) {
-                if (bIsAutoFiring) {
-                    ((SDK::AShooterPlayerController*)LocalPC)->OnStopFire();
-                    bIsAutoFiring = false;
-                }
-                CurrentTarget = nullptr;
-                return;
-            }
-
-            SDK::AShooterCharacter* MyChar = (SDK::AShooterCharacter*)LocalPC->Pawn;
-
-            if (!MyChar) {
-                if (bIsAutoFiring) {
-                    ((SDK::AShooterPlayerController*)LocalPC)->OnStopFire();
-                    bIsAutoFiring = false;
-                }
-                CurrentTarget = nullptr;
-                return;
-            }
-
-            SDK::AShooterWeapon* MyWeapon = MyChar ? MyChar->CurrentWeapon : nullptr;
-
-            if (MyWeapon && MyWeapon->GetAmmoReloadState() == SDK::EWeaponAmmoReloadState::Ready && MyWeapon->GetCurrentAmmo() > 0) {
-
-                bool ShouldShoot = CalculateSpreadHitChance(MyWeapon, Best.Character, g_Config::TriggerHitChance);
-
-                if (ShouldShoot) {
-                    if (std::chrono::duration_cast<std::chrono::milliseconds>(Now - LastTriggerTime).count() > Delay) {
-                        SDK::AShooterPlayerController* ShooterPC = (SDK::AShooterPlayerController*)LocalPC;
-
-                        if (!bIsAutoFiring) {
-                            ShooterPC->OnStartFire();
-                            bIsAutoFiring = true;
-                        }
-
-                        LastTriggerTime = Now;
-                    }
+        if (g_Config::bTriggerbotEnabled && Best.Character && Best.bIsValid) {
+            if (MyChar && MyChar->CurrentWeapon) {
+                if (Best.Character && Best.bIsValid && Best.bIsLocked) {
+                    g_Util::MimicMouseClick(true);
+                    bIsAutoFiring = true;
+                    Best.bIsTriggering = true;
                 }
                 else {
-                    if (bIsAutoFiring) {
-                        ((SDK::AShooterPlayerController*)LocalPC)->OnStopFire();
+                    if (bIsAutoFiring && ShooterPC) {
+                        g_Util::MimicMouseClick(false);
                         bIsAutoFiring = false;
                     }
                 }
             }
-            else {
-                if (bIsAutoFiring) {
-                    if (LocalPC) {
-                        ((SDK::AShooterPlayerController*)LocalPC)->OnStopFire();
-                    }
-                    bIsAutoFiring = false;
-                }
-            }
         }
+        else if (bIsAutoFiring) {
+            if (LocalPC && LocalPC->IsA(SDK::AShooterPlayerController::StaticClass())) {
+                g_Util::MimicMouseClick(false);
+            }
+            bIsAutoFiring = false;
+        }
+
+        DrawStatusText(Best);
     }
 }

@@ -11,7 +11,7 @@
 #include "Configs.h"
 #include "DrawESP.h"
 #include "DrawImGui.h"
-// #include "Aimbot.h"
+#include "Aimbot.h"
 #include "ConfigManager.h"
 #include "LuaManager.h"
 #include "Util.h"
@@ -527,6 +527,23 @@ namespace g_DrawImGui {
 
 				if (ImGui::BeginTabBar("MainTabBar", ImGuiTabBarFlags_None)) {
 
+					if (ImGui::BeginTabItem(U8("自瞄"))) {
+						ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(14.0f, 14.0f));
+						BeginTabRegion("AimBotRegion");
+
+						ImGui::TextColored(ThemeColors::ACCENT, U8("队友设置"));
+						DrawAnimatedSeparator();
+						DrawCustomCheckbox(U8("自动瞄准"), &g_Config::bAimbotEnabled);
+						DrawCustomSliderFloat(U8("瞄准范围"), &g_Config::AimbotFOV, 0.1f, 180.0f, "%.1f", 0.1f, U8("°"));
+						DrawCustomSliderFloat(U8("瞄准速度"), &g_Config::AimbotSmooth, 0.1f, 100.0f, "%.1f", 0.1f, "%");
+						DrawCustomCheckbox(U8("自动射击"), &g_Config::bTriggerbotEnabled);
+						DrawAnimatedSeparator();
+
+						EndTabRegion();
+						ImGui::PopStyleVar();
+						ImGui::EndTabItem();
+					}
+
 					if (ImGui::BeginTabItem(U8("视觉"))) {
 						ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(14.0f, 14.0f));
 						BeginTabRegion("VisualsRegion");
@@ -543,6 +560,8 @@ namespace g_DrawImGui {
 						ImGui::TextColored(ThemeColors::ACCENT, U8("额外信息"));
 						DrawAnimatedSeparator();
 						DrawColorPickerRow(U8("距离"), &g_Config::bDrawDistance, "DistCol1", g_Config::DistanceColor);
+						DrawColorPickerRow(U8("显示瞄准点"), &g_Config::bDrawAimPoints, "AimPointsCol1", g_Config::AimPointsColor);
+						DrawColorPickerRow(U8("显示瞄准骨骼"), &g_Config::bDrawAimSkeleton, "AimSkeletonCol1", g_Config::AimSkeletonColor);
 						DrawAnimatedSeparator();
 
 						ImGui::TextColored(ThemeColors::ACCENT, U8("世界信息"));
@@ -997,6 +1016,7 @@ namespace g_DrawImGui {
 
 		ImGui::PopFont();
 
+		g_Aimbot::Tick();
 		g_DrawESP::DrawESP();
 		LuaManager::Get().Lua_OnPaint();
 	}

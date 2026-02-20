@@ -189,6 +189,10 @@ bool ConfigManager::SaveConfig(const std::string& filename) {
         CONFIG_COLOR(g_Config::RagdollColor);
         CONFIG_BOOL(g_Config::bDrawDistance);
         CONFIG_COLOR(g_Config::DistanceColor);
+        CONFIG_BOOL(g_Config::bDrawAimPoints);
+        CONFIG_COLOR(g_Config::AimPointsColor);
+        CONFIG_BOOL(g_Config::bDrawAimSkeleton);
+        CONFIG_COLOR(g_Config::AimSkeletonColor);
         file << "\n";
 
         // ╤сся
@@ -327,7 +331,11 @@ bool ConfigManager::LoadConfig(const std::string& filename) {
         LOAD_COLOR(g_Config::RagdollColor);
         LOAD_BOOL(g_Config::bDrawDistance);
         LOAD_COLOR(g_Config::DistanceColor);
-        
+        LOAD_BOOL(g_Config::bDrawAimPoints);
+        LOAD_COLOR(g_Config::AimPointsColor);
+        LOAD_BOOL(g_Config::bDrawAimSkeleton);
+        LOAD_COLOR(g_Config::AimSkeletonColor);
+
         // ╤сся
         LOAD_BOOL(g_Config::bDrawBoxTeam);
         LOAD_COLOR(g_Config::BoxColorTeam);

@@ -11,8 +11,8 @@ namespace g_Config {
 
     // ×ÔÃé
     inline bool bAimbotEnabled = false;
-    inline float AimbotFOV = 180.0f;
-    inline float AimbotSmooth = 5.0f;
+    inline float AimbotFOV = 30.0f;
+    inline float AimbotSmooth = 50.0f;
 
     // °â»ú
     inline bool bTriggerbotEnabled = false;
@@ -77,6 +77,10 @@ namespace g_Config {
     inline float RagdollColor[4] = { 1.0f, 0.0f, 0.25f, 0.75f };
     inline bool bDrawDistance = true;
     inline float DistanceColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    inline bool bDrawAimPoints = true;
+    inline float AimPointsColor[4] = { 1.0f, 0.0f, 0.0f, 0.5f };
+    inline bool bDrawAimSkeleton = true;
+    inline float AimSkeletonColor[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 
     // ¶ÓÓÑ
     inline bool bDrawBoxTeam = true;

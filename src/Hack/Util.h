@@ -105,4 +105,20 @@ namespace g_Util {
 
         return PC;
     }
+
+    inline float GetAngleDistance(SDK::FVector CamLoc, SDK::FVector TargetLoc, SDK::FRotator CamRot) {
+        SDK::FVector Diff = { TargetLoc.X - CamLoc.X, TargetLoc.Y - CamLoc.Y, TargetLoc.Z - CamLoc.Z };
+        SDK::FVector DirToTarget = SDK::UKismetMathLibrary::Normal(Diff, 0.0001f);
+        SDK::FVector CamForward = SDK::UKismetMathLibrary::GetForwardVector(CamRot);
+        float Dot = SDK::UKismetMathLibrary::Dot_VectorVector(DirToTarget, CamForward);
+        Dot = SDK::UKismetMathLibrary::FClamp(Dot, -1.0f, 1.0f);
+        return SDK::UKismetMathLibrary::DegAcos(Dot);
+    }
+
+    inline void MimicMouseClick(bool bPress) {
+        INPUT input = { 0 };
+        input.type = INPUT_MOUSE;
+        input.mi.dwFlags = bPress ? MOUSEEVENTF_LEFTDOWN : MOUSEEVENTF_LEFTUP;
+        SendInput(1, &input, sizeof(INPUT));
+    }
 }
