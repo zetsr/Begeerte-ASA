@@ -357,6 +357,9 @@
     <ClInclude Include="Minimal-D3D12-Hook-ImGui\Font\Alibaba-PuHuiTi-Regular.h">
       <Filter>Minimal-D3D12-Hook-ImGui\Font</Filter>
     </ClInclude>
+    <ClInclude Include="Hack\Util.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hack\dllmain.cpp">

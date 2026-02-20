@@ -14,6 +14,7 @@
 // #include "Aimbot.h"
 #include "ConfigManager.h"
 #include "LuaManager.h"
+#include "Util.h"
 
 #include <cstdio>
 #include <string>
@@ -657,7 +658,7 @@ namespace g_DrawImGui {
 						if (ImGui::BeginChild("##EntityListChild", ImVec2(0, 0), true)) {
 
 							SDK::UWorld* World = SDK::UWorld::GetWorld();
-							SDK::APlayerController* LocalPC = g_ESP::GetLocalPC();
+							SDK::APlayerController* LocalPC = g_Util::GetLocalPC();
 
 							if (World && World->PersistentLevel && LocalPC && LocalPC->Pawn) {
 								SDK::TArray<SDK::AActor*>& Actors = World->PersistentLevel->Actors;
@@ -689,7 +690,7 @@ namespace g_DrawImGui {
 
 									if (displayName.empty() || displayName == "None") continue;
 
-									if (g_ESP::IsEntityMatch(displayName, g_Config::entitySearchBuf)) {
+									if (g_Util::IsEntityMatch(displayName, g_Config::entitySearchBuf)) {
 										float dist = 0.0f;
 										if (LocalPC->Pawn && TargetActor) {
 											dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
@@ -734,7 +735,7 @@ namespace g_DrawImGui {
 						if (ImGui::BeginChild("##StructureListChild", ImVec2(0, 0), true)) {
 
 							SDK::UWorld* World = SDK::UWorld::GetWorld();
-							SDK::APlayerController* LocalPC = g_ESP::GetLocalPC();
+							SDK::APlayerController* LocalPC = g_Util::GetLocalPC();
 
 							if (World && World->PersistentLevel && LocalPC && LocalPC->Pawn) {
 								SDK::TArray<SDK::AActor*>& Actors = World->PersistentLevel->Actors;
@@ -756,7 +757,7 @@ namespace g_DrawImGui {
 										structureName = "Structure";
 									}
 
-									if (g_ESP::IsStructureMatch(structureName, g_Config::structureSearchBuf)) {
+									if (g_Util::IsStructureMatch(structureName, g_Config::structureSearchBuf)) {
 										float dist = 0.0f;
 										if (LocalPC->Pawn && TargetActor) {
 											dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;

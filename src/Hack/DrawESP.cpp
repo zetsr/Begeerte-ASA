@@ -4,6 +4,7 @@
 #include "ESP.h"
 #include "Configs.h"
 #include "DrawESP.h"
+#include "Util.h"
 #include <vector>
 #include <string>
 #include <unordered_map>
@@ -11,34 +12,6 @@
 #include <memory>
 
 namespace g_DrawESP {
-    inline ImU32 GetU32Color(float color[4]) {
-        return ImGui::ColorConvertFloat4ToU32(*(ImVec4*)color);
-    }
-
-    inline ImU32 ToImColor(float r, float g, float b, float a) {
-        return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
-    }
-
-    inline ImU32 GetHealthColor(float healthPercent) {
-        healthPercent = (healthPercent < 0.0f) ? 0.0f : (healthPercent > 1.0f) ? 1.0f : healthPercent;
-
-        float r, g, b;
-        if (healthPercent > 0.5f) {
-            float t = (healthPercent - 0.5f) * 2.0f;
-            r = 1.0f - t;
-            g = 1.0f;
-            b = 0.0f;
-        }
-        else {
-            float t = healthPercent * 2.0f;
-            r = 1.0f;
-            g = t;
-            b = 0.0f;
-        }
-
-        return ToImColor(r * 255.0f, g * 255.0f, b * 255.0f, 255.0f);
-    }
-
     static constexpr float FADE_IN_TIME = 0.10f;
     static constexpr float FADE_OUT_TIME = 0.20f;
 
@@ -98,7 +71,7 @@ namespace g_DrawESP {
         SDK::UWorld* World = SDK::UWorld::GetWorld();
         if (!World || !World->GameState || !World->PersistentLevel) return;
 
-        SDK::APlayerController* LocalPC = g_ESP::GetLocalPC();
+        SDK::APlayerController* LocalPC = g_Util::GetLocalPC();
         if (!LocalPC || !LocalPC->Pawn) {
             for (auto& kv : s_entries) {
                 kv.second.targetAlpha = 0.0f;
@@ -194,7 +167,7 @@ namespace g_DrawESP {
                     }
 
                     entry.cachedRect = rect;
-                    entry.boxColor = g_DrawESP::GetU32Color(RagdollCol);
+                    entry.boxColor = g_Util::GetU32Color(RagdollCol);
                     entry.configBoxAlpha = RagdollCol[3];
                     entry.targetAlpha = 1.0f;
                     entry.aliveThisFrame = true;
@@ -215,7 +188,7 @@ namespace g_DrawESP {
                     if (LocalPC->Pawn && TargetActor) {
                         dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
                     }
-                    entry.flags.push_back({ std::to_string((int)dist) + "m", ToImColor(200, 200, 200, 255), g_ESP::FlagPos::Right });
+                    entry.flags.push_back({ std::to_string((int)dist) + "m", g_Util::ToImColor(200, 200, 200, 255), g_ESP::FlagPos::Right });
 
                     continue;
                 }
@@ -225,7 +198,7 @@ namespace g_DrawESP {
                         TargetChar->PlayerState->GetPlayerName().ToString() :
                         TargetChar->GetDescriptiveName().ToString();
 
-                    if (!g_ESP::IsEntityMatch(nameForESP, searchFilter)) {
+                    if (!g_Util::IsEntityMatch(nameForESP, searchFilter)) {
                         entry.targetAlpha = 0.0f;
                         entry.aliveThisFrame = false;
                         continue;
@@ -273,8 +246,8 @@ namespace g_DrawESP {
                     BoxColor[2] * 255.0f, BoxColor[3] * 255.0f, 0.5f, true);
 
                 entry.cachedRect = rect;
-                entry.boxColor = g_DrawESP::GetU32Color(BoxColor);
-                entry.nameColor = g_DrawESP::GetU32Color(NameColor);
+                entry.boxColor = g_Util::GetU32Color(BoxColor);
+                entry.nameColor = g_Util::GetU32Color(NameColor);
                 entry.configBoxAlpha = BoxColor[3];
                 entry.isItem = false;
                 entry.isOOF = false;
@@ -324,7 +297,7 @@ namespace g_DrawESP {
                 if (bDrawHealthBar) {
                     std::string hpStr = std::to_string((int)entry.cachedHP);
                     float healthPercent = (entry.cachedMaxHP > 0) ? (entry.cachedHP / entry.cachedMaxHP) : 0.0f;
-                    ImU32 hpCol = GetHealthColor(healthPercent);
+                    ImU32 hpCol = g_Util::GetHealthColor(healthPercent);
                     entry.flags.push_back({ hpStr, hpCol, g_ESP::FlagPos::Left });
                     entry.bars.push_back({ entry.cachedHP, entry.cachedMaxHP, hpCol, g_ESP::BarPos::Left, g_ESP::BarOrientation::Vertical });
                 }
@@ -332,7 +305,7 @@ namespace g_DrawESP {
                 if (bDrawTorpor && entry.cachedMaxTorpor > 0) {
                     std::string torporStr = std::to_string((int)entry.cachedTorpor) + "/" + std::to_string((int)entry.cachedMaxTorpor);
                     float torporPercent = (entry.cachedMaxTorpor > 0) ? (entry.cachedTorpor / entry.cachedMaxTorpor) : 0.0f;
-                    ImU32 torporCol = g_DrawESP::GetU32Color(TorporColor);
+                    ImU32 torporCol = g_Util::GetU32Color(TorporColor);
                     entry.flags.push_back({ torporStr, torporCol, g_ESP::FlagPos::Bottom });
                     entry.bars.push_back({ entry.cachedTorpor, entry.cachedMaxTorpor, torporCol, g_ESP::BarPos::Bottom, g_ESP::BarOrientation::Horizontal });
                 }
@@ -342,7 +315,7 @@ namespace g_DrawESP {
                     if (LocalPC->Pawn && TargetActor) {
                         dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
                     }
-                    entry.flags.push_back({ std::to_string((int)dist) + "m", g_DrawESP::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
+                    entry.flags.push_back({ std::to_string((int)dist) + "m", g_Util::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
                 }
 
                 SDK::FVector2D screenPos;
@@ -361,7 +334,7 @@ namespace g_DrawESP {
                             if (LocalPC->Pawn && TargetActor) {
                                 dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
                             }
-                            if (bDrawDistance) entry.flags.push_back({ std::to_string((int)(dist)) + "m", g_DrawESP::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
+                            if (bDrawDistance) entry.flags.push_back({ std::to_string((int)(dist)) + "m", g_Util::GetU32Color(DistanceColor), g_ESP::FlagPos::Right });
                         }
                         else {
                             entry.targetAlpha = 0.0f;
@@ -402,10 +375,11 @@ namespace g_DrawESP {
                         entry.cachedRect.valid = true;
                         entry.flags.clear();
                         entry.bars.clear();
-                        ImU32 waterColor = g_DrawESP::GetU32Color(g_Config::WaterNameColor);
+                        ImU32 waterColor = g_Util::GetU32Color(g_Config::WaterNameColor);
 
-                        entry.flags.push_back({ "[Water]", waterColor, g_ESP::FlagPos::Right });
-                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_DrawESP::GetU32Color(g_Config::WaterDistanceColor), g_ESP::FlagPos::Right });
+                        SDK::FString waterString = L"水源";
+                        entry.flags.push_back({ waterString.ToString(), waterColor, g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_Util::GetU32Color(g_Config::WaterDistanceColor), g_ESP::FlagPos::Right });
 
                         entry.shouldDrawBox = false;
                         entry.shouldDrawHealthBar = false;
@@ -469,23 +443,23 @@ namespace g_DrawESP {
                             itemName = Item->Class ? Item->Class->GetName() : "Unknown Item";
                         }
 
-                        ImU32 finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemNameColor);
+                        ImU32 finalCol = g_Util::GetU32Color(g_Config::DroppedItemNameColor);
                         std::string className = Item->Class ? Item->Class->GetName() : "";
                         int quantity = Item->ItemQuantity;
 
                         // 优先判断特殊容器（如低温仓）
                         if (className.find("PrimalItem_WeaponEmptyCryopod") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemCryopodColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemCryopodColor);
                         }
 
                         // 蛋
                         else if (className.find("Egg") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemEggColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemEggColor);
                         }
 
                         // 堆叠包
                         else if (quantity >= 1000) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPiledColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemPiledColor);
                         }
 
                         // 木头
@@ -493,47 +467,47 @@ namespace g_DrawESP {
                             className.find("PrimalItemResource_Wood") != std::string::npos || 
                             className.find("PrimalItemResource_FungalWood") != std::string::npos
                             ) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemWoodColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemWoodColor);
                         }
 
                         // 茅草
                         else if (className.find("PrimalItemResource_Thatch") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemThatchColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemThatchColor);
                         }
 
                         // 兽皮
                         else if (className.find("PrimalItemResource_Hide") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemHideColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemHideColor);
                         }
 
                         // 毛皮
                         else if (className.find("PrimalItemResource_Pelt") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPeltColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemPeltColor);
                         }
 
                         // 角质
                         else if (className.find("PrimalItemResource_Keratin") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemKeratinColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemKeratinColor);
                         }
 
                         // 甲壳素
                         else if (className.find("PrimalItemResource_Chitin") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemChitinColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemChitinColor);
                         }
 
                         // 腐化瘤
                         else if (className.find("PrimalItemResource_CorruptedPolymer") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemCorruptedPolymerColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemCorruptedPolymerColor);
                         }
 
                         // 有机聚合物
                         else if (className.find("PrimalItemResource_Polymer_Organic") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPolymer_OrganicColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemPolymer_OrganicColor);
                         }
 
                         // 聚合物
                         else if (className.find("PrimalItemResource_Polymer") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPolymerColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemPolymerColor);
                         }
 
                         // 金属
@@ -543,17 +517,17 @@ namespace g_DrawESP {
                             className.find("PrimalItemResource_MetalIngot") != std::string::npos ||
                             className.find("PrimalItemResource_ScrapMetalIngot") != std::string::npos
                             ) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemMetalColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemMetalColor);
                         }
 
                         // 石头
                         else if (className.find("PrimalItemResource_Stone") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemStoneColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemStoneColor);
                         }
 
                         // 水晶
                         else if (className.find("PrimalItemResource_Crystal") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemCrystalColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemCrystalColor);
                         }
 
                         // 宝石/精化树脂
@@ -564,7 +538,7 @@ namespace g_DrawESP {
                             className.find("PrimalItemResource_BlueSap") != std::string::npos ||
                             className.find("PrimalItemResource_RedSap") != std::string::npos
                             ) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemGemColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemGemColor);
                         }
 
                         // 珍珠
@@ -572,12 +546,12 @@ namespace g_DrawESP {
                             className.find("PrimalItemResource_Silicon") != std::string::npos ||
                             className.find("PrimalItemResource_BlackPearl") != std::string::npos
                             ) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemPearlColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemPearlColor);
                         }
 
                         // 腐肉
                         else if (className.find("PrimalItemConsumable_SpoiledMeat") != std::string::npos) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemSpoiledMeatColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemSpoiledMeatColor);
                         }
 
                         // 熟肉
@@ -595,17 +569,17 @@ namespace g_DrawESP {
                             className.find("PrimalItemConsumable_CookedMeat_Jerky") != std::string::npos ||
                             className.find("PrimalItemConsumable_CookedPrimeMeat_Jerky") != std::string::npos
                             ) {
-                            finalCol = g_DrawESP::GetU32Color(g_Config::DroppedItemMeatColor);
+                            finalCol = g_Util::GetU32Color(g_Config::DroppedItemMeatColor);
                         }
 
                         // 品质
                         else {
                             float rating = Item->ItemRating;
-                            if (rating >= 10.0f)      finalCol = ToImColor(0, 255, 255, 255);   // 青色 (传说)
-                            else if (rating >= 7.0f)  finalCol = ToImColor(255, 255, 0, 255);   // 黄色 (史诗)
-                            else if (rating >= 4.5f)  finalCol = ToImColor(160, 32, 240, 255);  // 紫色 (卓越)
-                            else if (rating >= 2.5f)  finalCol = ToImColor(0, 191, 255, 255);   // 蓝色 (精良)
-                            else if (rating >= 1.25f) finalCol = ToImColor(50, 205, 50, 255);   // 绿色 (优良)
+                            if (rating >= 10.0f)      finalCol = g_Util::ToImColor(0, 255, 255, 255);   // 青色 (传说)
+                            else if (rating >= 7.0f)  finalCol = g_Util::ToImColor(255, 255, 0, 255);   // 黄色 (史诗)
+                            else if (rating >= 4.5f)  finalCol = g_Util::ToImColor(160, 32, 240, 255);  // 紫色 (卓越)
+                            else if (rating >= 2.5f)  finalCol = g_Util::ToImColor(0, 191, 255, 255);   // 蓝色 (精良)
+                            else if (rating >= 1.25f) finalCol = g_Util::ToImColor(50, 205, 50, 255);   // 绿色 (优良)
                         }
 
                         entry.flags.clear();
@@ -615,10 +589,10 @@ namespace g_DrawESP {
                         if (Item->bIsBlueprint) label = "[BP] " + label;
 
                         entry.flags.push_back({ label, finalCol, g_ESP::FlagPos::Right });
-                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_DrawESP::GetU32Color(g_Config::DroppedItemDistanceColor), g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_Util::GetU32Color(g_Config::DroppedItemDistanceColor), g_ESP::FlagPos::Right });
 
                         entry.boxColor = finalCol;
-                        entry.nameColor = g_DrawESP::GetU32Color(g_Config::DroppedItemNameColor);
+                        entry.nameColor = g_Util::GetU32Color(g_Config::DroppedItemNameColor);
 
                         entry.shouldDrawBox = false;
                         entry.shouldDrawHealthBar = false;
@@ -657,7 +631,7 @@ namespace g_DrawESP {
                         structureName = "Structure";
                     }
 
-                    if (!g_ESP::IsStructureMatch(structureName, g_Config::structureSearchBuf)) {
+                    if (!g_Util::IsStructureMatch(structureName, g_Config::structureSearchBuf)) {
                         entry.targetAlpha = 0.0f;
                         entry.aliveThisFrame = false;
                         continue;
@@ -700,12 +674,12 @@ namespace g_DrawESP {
 
                         entry.flags.clear();
                         entry.bars.clear();
-                        entry.flags.push_back({ "[" + sName + "]", g_DrawESP::GetU32Color(g_Config::StructureNameColor), g_ESP::FlagPos::Right });
-                        entry.flags.push_back({ ownerStr, g_DrawESP::GetU32Color(g_Config::StructureOwnerColor), g_ESP::FlagPos::Right });
-                        ImU32 hpColor = GetHealthColor(healthPercent);
+                        entry.flags.push_back({ "[" + sName + "]", g_Util::GetU32Color(g_Config::StructureNameColor), g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ ownerStr, g_Util::GetU32Color(g_Config::StructureOwnerColor), g_ESP::FlagPos::Right });
+                        ImU32 hpColor = g_Util::GetHealthColor(healthPercent);
                         std::string hpText = std::to_string((int)curHP) + " (" + std::to_string(hpPercent) + "%)";
                         entry.flags.push_back({ hpText, hpColor, g_ESP::FlagPos::Right });
-                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_DrawESP::GetU32Color(g_Config::StructureDistanceColor), g_ESP::FlagPos::Right });
+                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_Util::GetU32Color(g_Config::StructureDistanceColor), g_ESP::FlagPos::Right });
 
                         entry.shouldDrawTorpor = false;
                     }

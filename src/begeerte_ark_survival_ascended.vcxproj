@@ -29,6 +29,7 @@
     <ClInclude Include="Hack\infoGPU.h" />
     <ClInclude Include="Hack\LuaManager.h" />
     <ClInclude Include="Hack\SDK_Headers.hpp" />
+    <ClInclude Include="Hack\Util.h" />
     <ClInclude Include="LuaJIT-2.1\src\lauxlib.h" />
     <ClInclude Include="LuaJIT-2.1\src\lj_alloc.h" />
     <ClInclude Include="LuaJIT-2.1\src\lj_arch.h" />

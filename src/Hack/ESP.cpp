@@ -3,88 +3,13 @@
 #include "SDK_Headers.hpp"
 #include "ESP.h"
 #include "Configs.h"
+#include "Util.h"
 #include <cmath>
 #include <algorithm>
 #include <string>
 #include <vector>
 
 namespace g_ESP {
-    SDK::APlayerController* GetLocalPC() {
-        SDK::UWorld* World = SDK::UWorld::GetWorld();
-
-        if (!World) {
-            return nullptr;
-        }
-
-        if (!World->OwningGameInstance) {
-            return nullptr;
-        }
-
-        if (World->OwningGameInstance->LocalPlayers.Num() == 0) {
-            return nullptr;
-        }
-
-        auto LocalPlayer = World->OwningGameInstance->LocalPlayers[0];
-        if (!LocalPlayer) {
-            return nullptr;
-        }
-
-        auto PC = LocalPlayer->PlayerController;
-        if (!PC) {
-            return nullptr;
-        }
-
-        return PC;
-    }
-
-    inline ImU32 ToImColor(float r, float g, float b, float a) {
-        return ImGui::ColorConvertFloat4ToU32(ImVec4(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f));
-    }
-
-    std::string ToLower(std::string s) {
-        std::transform(s.begin(), s.end(), s.begin(), [](unsigned char c) {
-            return std::tolower(c);
-            });
-        return s;
-    }
-
-    bool IsEntityMatch(std::string displayName, std::string filter) {
-        if (filter.empty()) return true;
-
-        std::string nameLower = ToLower(displayName);
-        std::string filterLower = ToLower(filter);
-
-        size_t lastPos = 0;
-        for (size_t j = 0; j < filterLower.length(); ) {
-            unsigned char c = static_cast<unsigned char>(filterLower[j]);
-            int charLen = 1;
-            if (c >= 0xf0) charLen = 4;
-            else if (c >= 0xe0) charLen = 3;
-            else if (c >= 0xc0) charLen = 2;
-
-            std::string sub = filterLower.substr(j, charLen);
-            size_t foundPos = nameLower.find(sub, lastPos);
-
-            if (foundPos == std::string::npos) return false;
-
-            lastPos = foundPos + charLen;
-            j += charLen;
-        }
-        return true;
-    }
-
-    bool IsStructureMatch(const std::string& structureName, const std::string& filter) {
-        if (filter.empty()) return true;
-
-        std::string lowerName = structureName;
-        std::string lowerFilter = filter;
-
-        std::transform(lowerName.begin(), lowerName.end(), lowerName.begin(), ::tolower);
-        std::transform(lowerFilter.begin(), lowerFilter.end(), lowerFilter.begin(), ::tolower);
-
-        return lowerName.find(lowerFilter) != std::string::npos;
-    }
-
     RelationType GetRelation(SDK::APrimalCharacter* TargetChar, SDK::APrimalCharacter* LocalChar) {
         if (!TargetChar || !LocalChar) return RelationType::Enemy;
 
@@ -112,7 +37,7 @@ namespace g_ESP {
             ImVec2 barBgTop = ImVec2(rect.topLeft.x - barMargin - barWidth, rect.topLeft.y);
             ImVec2 barBgBottom = ImVec2(rect.topLeft.x - barMargin, rect.bottomRight.y);
 
-            drawList->AddRectFilled(ImVec2(barBgTop.x - 1, barBgTop.y - 1), ImVec2(barBgBottom.x + 1, barBgBottom.y + 1), ToImColor(0, 0, 0, a * 0.7f));
+            drawList->AddRectFilled(ImVec2(barBgTop.x - 1, barBgTop.y - 1), ImVec2(barBgBottom.x + 1, barBgBottom.y + 1), g_Util::ToImColor(0, 0, 0, a * 0.7f));
 
             ImVec4 col = ImGui::ColorConvertU32ToFloat4(color);
             col.w = a / 255.0f;
@@ -133,7 +58,7 @@ namespace g_ESP {
             ImVec2 barBgTop = ImVec2(rect.bottomRight.x + barMargin, rect.topLeft.y);
             ImVec2 barBgBottom = ImVec2(rect.bottomRight.x + barMargin + barWidth, rect.bottomRight.y);
 
-            drawList->AddRectFilled(ImVec2(barBgTop.x - 1, barBgTop.y - 1), ImVec2(barBgBottom.x + 1, barBgBottom.y + 1), ToImColor(0, 0, 0, a * 0.7f));
+            drawList->AddRectFilled(ImVec2(barBgTop.x - 1, barBgTop.y - 1), ImVec2(barBgBottom.x + 1, barBgBottom.y + 1), g_Util::ToImColor(0, 0, 0, a * 0.7f));
 
             ImVec4 col = ImGui::ColorConvertU32ToFloat4(color);
             col.w = a / 255.0f;
@@ -154,7 +79,7 @@ namespace g_ESP {
             ImVec2 barBgLeft = ImVec2(rect.topLeft.x, rect.topLeft.y - barMargin - barHeight);
             ImVec2 barBgRight = ImVec2(rect.bottomRight.x, rect.topLeft.y - barMargin);
 
-            drawList->AddRectFilled(ImVec2(barBgLeft.x - 1, barBgLeft.y - 1), ImVec2(barBgRight.x + 1, barBgRight.y + 1), ToImColor(0, 0, 0, a * 0.7f));
+            drawList->AddRectFilled(ImVec2(barBgLeft.x - 1, barBgLeft.y - 1), ImVec2(barBgRight.x + 1, barBgRight.y + 1), g_Util::ToImColor(0, 0, 0, a * 0.7f));
 
             ImVec4 col = ImGui::ColorConvertU32ToFloat4(color);
             col.w = a / 255.0f;
@@ -175,7 +100,7 @@ namespace g_ESP {
             ImVec2 barBgLeft = ImVec2(rect.topLeft.x, rect.bottomRight.y + barMargin);
             ImVec2 barBgRight = ImVec2(rect.bottomRight.x, rect.bottomRight.y + barMargin + barHeight);
 
-            drawList->AddRectFilled(ImVec2(barBgLeft.x - 1, barBgLeft.y - 1), ImVec2(barBgRight.x + 1, barBgRight.y + 1), ToImColor(0, 0, 0, a * 0.7f));
+            drawList->AddRectFilled(ImVec2(barBgLeft.x - 1, barBgLeft.y - 1), ImVec2(barBgRight.x + 1, barBgRight.y + 1), g_Util::ToImColor(0, 0, 0, a * 0.7f));
 
             ImVec4 col = ImGui::ColorConvertU32ToFloat4(color);
             col.w = a / 255.0f;
@@ -311,7 +236,7 @@ namespace g_ESP {
     BoxRect DrawBox(SDK::AActor* entity, float r, float g, float b, float a, float width_scale, bool bTestOnly) {
         BoxRect rect;
         if (!entity || entity->bHidden) return rect;
-        auto PC = GetLocalPC();
+        auto PC = g_Util::GetLocalPC();
         if (!PC) return rect;
 
         SDK::FVector origin, extent;
@@ -334,8 +259,8 @@ namespace g_ESP {
                 ImDrawList* drawList = ImGui::GetBackgroundDrawList();
                 drawList->AddRect(ImVec2(rect.topLeft.x - 1, rect.topLeft.y - 1),
                     ImVec2(rect.bottomRight.x + 1, rect.bottomRight.y + 1),
-                    ToImColor(0, 0, 0, a), 0.0f, 0, 1.5f);
-                drawList->AddRect(rect.topLeft, rect.bottomRight, ToImColor(r, g, b, a), 0.0f, 0, 1.0f);
+                    g_Util::ToImColor(0, 0, 0, a), 0.0f, 0, 1.5f);
+                drawList->AddRect(rect.topLeft, rect.bottomRight, g_Util::ToImColor(r, g, b, a), 0.0f, 0, 1.0f);
             }
         }
         return rect;
@@ -350,7 +275,7 @@ namespace g_ESP {
         ImVec2 barBgTop = ImVec2(rect.topLeft.x - barMargin - barWidth, rect.topLeft.y);
         ImVec2 barBgBottom = ImVec2(rect.topLeft.x - barMargin, rect.bottomRight.y);
 
-        drawList->AddRectFilled(ImVec2(barBgTop.x - 1, barBgTop.y - 1), ImVec2(barBgBottom.x + 1, barBgBottom.y + 1), ToImColor(0, 0, 0, a * 0.7f));
+        drawList->AddRectFilled(ImVec2(barBgTop.x - 1, barBgTop.y - 1), ImVec2(barBgBottom.x + 1, barBgBottom.y + 1), g_Util::ToImColor(0, 0, 0, a * 0.7f));
 
         float percentage = healthPercent / maxHealth;
         percentage = std::clamp(percentage, 0.0f, 1.0f);
@@ -390,7 +315,7 @@ namespace g_ESP {
         ImVec2 textSize = ImGui::CalcTextSize(nameStr.c_str());
         ImVec2 textPos = ImVec2(rect.topLeft.x + (rect.bottomRight.x - rect.topLeft.x) / 2.0f - textSize.x / 2.0f, rect.topLeft.y - textSize.y - 5.0f);
 
-        drawList->AddText(ImVec2(textPos.x + 1, textPos.y + 1), ToImColor(0, 0, 0, a), nameStr.c_str());
-        drawList->AddText(textPos, ToImColor(r, g, b, a), nameStr.c_str());
+        drawList->AddText(ImVec2(textPos.x + 1, textPos.y + 1), g_Util::ToImColor(0, 0, 0, a), nameStr.c_str());
+        drawList->AddText(textPos, g_Util::ToImColor(r, g, b, a), nameStr.c_str());
     }
 }

@@ -4,6 +4,7 @@
 #include "Aimbot.h"
 #include "Configs.h"
 #include "ESP.h"
+#include "Util.h"
 #include <chrono>
 #include <random>
 
@@ -21,7 +22,7 @@ namespace g_Aimbot {
     TargetInfo GetBestTarget() {
         TargetInfo Best;
         SDK::UWorld* World = SDK::UWorld::GetWorld();
-        SDK::APlayerController* LocalPC = g_ESP::GetLocalPC();
+        SDK::APlayerController* LocalPC = g_Util::GetLocalPC();
 
         if (!World || !LocalPC || !LocalPC->Pawn) {
             return Best;
@@ -76,9 +77,14 @@ namespace g_Aimbot {
     bool CalculateSpreadHitChance(SDK::AShooterWeapon* Weapon, SDK::AActor* Target, float RequiredChance) {
         if (!Weapon || !Target) return false;
         float CurrentSpread = Weapon->CurrentFiringSpread;
+        SDK::APlayerController* LocalPC = g_Util::GetLocalPC();
 
-        float Dist = g_ESP::GetLocalPC()->Pawn->GetDistanceTo(Target);
-        float SpreadRadius = Dist * tanf(CurrentSpread);
+        float dist = 0.0f;
+        if (LocalPC->Pawn && Target) {
+            dist = LocalPC->Pawn->GetDistanceTo(Target) / 100.0f;
+        }
+
+        float SpreadRadius = dist * tanf(CurrentSpread);
         float TargetRadius = 45.0f;
 
         float Chance = (TargetRadius * TargetRadius) / (SpreadRadius * SpreadRadius);
@@ -92,7 +98,7 @@ namespace g_Aimbot {
         SDK::UWorld* World = SDK::UWorld::GetWorld();
         if (!World || !World->PersistentLevel) return;
 
-        SDK::APlayerController* LocalPC = g_ESP::GetLocalPC();
+        SDK::APlayerController* LocalPC = g_Util::GetLocalPC();
         if (!LocalPC || !LocalPC->Class || !LocalPC->PlayerCameraManager ||
             !LocalPC->PlayerCameraManager->Class || !LocalPC->Pawn ||
             !LocalPC->Pawn->Class) {

@@ -3,6 +3,7 @@
 #include "ESP.h"
 #include "infoCPU.h"
 #include "infoGPU.h"
+#include "Util.h"
 #include <algorithm>
 #include <iostream>
 
@@ -280,7 +281,7 @@ void LuaManager::BindSDK() {
         });
 
     sdk.set_function("GetLocalPC", []() {
-        auto pc = g_ESP::GetLocalPC();
+        auto pc = g_Util::GetLocalPC();
         return (pc) ? (uintptr_t)pc : 0;
         });
 
