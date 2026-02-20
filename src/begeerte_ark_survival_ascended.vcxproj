@@ -19,13 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Minimal-D3D12-Hook-ImGui-1.0.2\LICENSE" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\LICENSE.txt" />
-    <Text Include="Minimal-D3D12-Hook-ImGui-1.0.2\MinHook\LICENSE.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Hack\Aimbot.h" />
     <ClInclude Include="Hack\ConfigManager.h" />
     <ClInclude Include="Hack\Configs.h" />
@@ -116,16 +109,21 @@
     <ClInclude Include="LuaJIT-2.1\src\luajit.h" />
     <ClInclude Include="LuaJIT-2.1\src\luajit_rolling.h" />
     <ClInclude Include="LuaJIT-2.1\src\lualib.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imconfig.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_impl_dx12.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_impl_win32.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_internal.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imstb_rectpack.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imstb_textedit.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imstb_truetype.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\mdx12_api.h" />
-    <ClInclude Include="Minimal-D3D12-Hook-ImGui-1.0.2\MinHook\include\MinHook.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\Font\Alibaba-PuHuiTi-Bold.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\Font\Alibaba-PuHuiTi-Heavy.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\Font\Alibaba-PuHuiTi-Light.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\Font\Alibaba-PuHuiTi-Medium.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\Font\Alibaba-PuHuiTi-Regular.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imconfig.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_impl_dx12.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_internal.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imstb_textedit.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\Main\mdx12_api.h" />
+    <ClInclude Include="Minimal-D3D12-Hook-ImGui\MinHook\include\MinHook.h" />
     <ClInclude Include="sol2\config.hpp" />
     <ClInclude Include="sol2\forward.hpp" />
     <ClInclude Include="sol2\sol.hpp" />
@@ -143,21 +141,28 @@
     <ClCompile Include="Hack\SDK_Impl.cpp" />
     <ClCompile Include="LuaJIT-2.1\src\ljamalg.c" />
     <ClCompile Include="LuaJIT-2.1\src\luajit.c" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_demo.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_draw.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_impl_dx12.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_impl_win32.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_tables.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\ImGui\imgui_widgets.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\hook.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\input.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\mdx12_globals.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\render.cpp" />
-    <ClCompile Include="Minimal-D3D12-Hook-ImGui-1.0.2\Main\setup_imgui.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_impl_dx12.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\hook.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\input.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\mdx12_globals.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\render.cpp" />
+    <ClCompile Include="Minimal-D3D12-Hook-ImGui\Main\setup_imgui.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="LuaJIT-2.1\src\lj_vm.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Minimal-D3D12-Hook-ImGui\LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Minimal-D3D12-Hook-ImGui\ImGui\LICENSE.txt" />
+    <Text Include="Minimal-D3D12-Hook-ImGui\MinHook\LICENSE.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

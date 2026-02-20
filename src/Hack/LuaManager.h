@@ -11,7 +11,7 @@
 
 #pragma comment(lib, "wininet.lib")
 
-#include "../Minimal-D3D12-Hook-ImGui-1.0.2/Main/mdx12_api.h"
+#include "../Minimal-D3D12-Hook-ImGui/Main/mdx12_api.h"
 
 #define SOL_ALL_SAFETIES_ON 1
 #include "../sol2/sol.hpp"

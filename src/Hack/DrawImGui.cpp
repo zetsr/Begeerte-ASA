@@ -5,7 +5,7 @@
 #define U8(str) u8##str
 #endif
 
-#include "../Minimal-D3D12-Hook-ImGui-1.0.2/Main/mdx12_api.h"
+#include "../Minimal-D3D12-Hook-ImGui/Main/mdx12_api.h"
 #include "SDK_Headers.hpp"
 #include "ESP.h"
 #include "Configs.h"
@@ -464,6 +464,8 @@ namespace g_DrawImGui {
 	void MyImGuiDraw(IDXGISwapChain3* pSwapChain, UINT SyncInterval, UINT Flags)
 	{
 		if (!style_initialized) { SetupCustomImGuiStyle(); style_initialized = true; }
+
+		ImGui::PushFont(g_MDX12::g_Alibaba_PuHuiTi_Medium);
 
 		static float g_MenuAlpha = 0.0f;
 		const float FADE_SPEED = 5.0f;
@@ -990,6 +992,8 @@ namespace g_DrawImGui {
 
 			ImGui::PopStyleVar();
 		}
+
+		ImGui::PopFont();
 
 		g_DrawESP::DrawESP();
 		LuaManager::Get().Lua_OnPaint();
