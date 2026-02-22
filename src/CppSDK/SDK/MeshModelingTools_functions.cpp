@@ -17,6 +17,25 @@
 namespace SDK
 {
 
+// Function MeshModelingTools.PolyEditTopologyProperties.RegenerateExtraCorners
+// (Final, Native, Public)
+
+void UPolyEditTopologyProperties::RegenerateExtraCorners()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PolyEditTopologyProperties", "RegenerateExtraCorners");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function MeshModelingTools.EditMeshPolygonsToolActions.Bevel
 // (Final, Native, Public)
 
@@ -349,25 +368,6 @@ void UEditMeshPolygonsToolActions::SimplifyByGroups()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("EditMeshPolygonsToolActions", "SimplifyByGroups");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MeshModelingTools.PolyEditTopologyProperties.RegenerateExtraCorners
-// (Final, Native, Public)
-
-void UPolyEditTopologyProperties::RegenerateExtraCorners()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PolyEditTopologyProperties", "RegenerateExtraCorners");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

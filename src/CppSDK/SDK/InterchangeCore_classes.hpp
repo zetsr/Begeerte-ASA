@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "InterchangeCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "InterchangeCore_structs.hpp"
 
 
 namespace SDK

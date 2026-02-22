@@ -13,12 +13,12 @@
 #include "SmartObjectsModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "WorldConditions_structs.hpp"
+#include "WorldConditions_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "AIModule_classes.hpp"
 #include "GameplayTags_structs.hpp"
 #include "Engine_classes.hpp"
-#include "WorldConditions_structs.hpp"
-#include "WorldConditions_classes.hpp"
 
 
 namespace SDK
@@ -100,6 +100,26 @@ public:
 };
 DUMPER7_ASSERTS_USmartObjectSettings;
 
+// Class SmartObjectsModule.SmartObjectRenderingComponent
+// 0x0000 (0x0600 - 0x0600)
+class USmartObjectRenderingComponent final : public UPrimitiveComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectRenderingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectRenderingComponent")
+	}
+	static class USmartObjectRenderingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectRenderingComponent>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectRenderingComponent;
+
 // Class SmartObjectsModule.BlackboardKeyType_SOClaimHandle
 // 0x0020 (0x0050 - 0x0030)
 class UBlackboardKeyType_SOClaimHandle final : public UBlackboardKeyType
@@ -145,6 +165,46 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AGenericSmartObject;
+
+// Class SmartObjectsModule.SmartObjectDebugRenderingComponent
+// 0x0000 (0x0650 - 0x0650)
+class USmartObjectDebugRenderingComponent : public UDebugDrawComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectDebugRenderingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectDebugRenderingComponent")
+	}
+	static class USmartObjectDebugRenderingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectDebugRenderingComponent>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectDebugRenderingComponent;
+
+// Class SmartObjectsModule.SmartObjectTestRenderingComponent
+// 0x0000 (0x0650 - 0x0650)
+class USmartObjectTestRenderingComponent final : public USmartObjectDebugRenderingComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SmartObjectTestRenderingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SmartObjectTestRenderingComponent")
+	}
+	static class USmartObjectTestRenderingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmartObjectTestRenderingComponent>();
+	}
+};
+DUMPER7_ASSERTS_USmartObjectTestRenderingComponent;
 
 // Class SmartObjectsModule.SmartObjectBlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -287,26 +347,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USmartObjectContainerRenderingComponent;
-
-// Class SmartObjectsModule.SmartObjectDebugRenderingComponent
-// 0x0000 (0x0650 - 0x0650)
-class USmartObjectDebugRenderingComponent : public UDebugDrawComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectDebugRenderingComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectDebugRenderingComponent")
-	}
-	static class USmartObjectDebugRenderingComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectDebugRenderingComponent>();
-	}
-};
-DUMPER7_ASSERTS_USmartObjectDebugRenderingComponent;
 
 // Class SmartObjectsModule.SmartObjectBehaviorDefinition
 // 0x0000 (0x0028 - 0x0028)
@@ -468,26 +508,6 @@ public:
 };
 DUMPER7_ASSERTS_ASmartObjectPersistentCollection;
 
-// Class SmartObjectsModule.SmartObjectRenderingComponent
-// 0x0000 (0x0600 - 0x0600)
-class USmartObjectRenderingComponent final : public UPrimitiveComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectRenderingComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectRenderingComponent")
-	}
-	static class USmartObjectRenderingComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectRenderingComponent>();
-	}
-};
-DUMPER7_ASSERTS_USmartObjectRenderingComponent;
-
 // Class SmartObjectsModule.SmartObjectSubsystem
 // 0x0170 (0x01A0 - 0x0030)
 class USmartObjectSubsystem final : public UWorldSubsystem
@@ -636,26 +656,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_USmartObjectSimpleQueryTest;
-
-// Class SmartObjectsModule.SmartObjectTestRenderingComponent
-// 0x0000 (0x0650 - 0x0650)
-class USmartObjectTestRenderingComponent final : public USmartObjectDebugRenderingComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SmartObjectTestRenderingComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SmartObjectTestRenderingComponent")
-	}
-	static class USmartObjectTestRenderingComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmartObjectTestRenderingComponent>();
-	}
-};
-DUMPER7_ASSERTS_USmartObjectTestRenderingComponent;
 
 // Class SmartObjectsModule.SmartObjectTestingActor
 // 0x0028 (0x04A8 - 0x0480)

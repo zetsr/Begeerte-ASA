@@ -122,24 +122,6 @@ public:
 };
 DUMPER7_ASSERTS_SelectiveTessellationProperties_GetMaterialIDsFunc;
 
-// Function MeshModelingToolsExp.TransferMeshToolProperties.GetSourceLODNamesFunc
-// 0x0010 (0x0010 - 0x0000)
-struct TransferMeshToolProperties_GetSourceLODNamesFunc final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TransferMeshToolProperties_GetSourceLODNamesFunc;
-
-// Function MeshModelingToolsExp.TransferMeshToolProperties.GetTargetLODNamesFunc
-// 0x0010 (0x0010 - 0x0000)
-struct TransferMeshToolProperties_GetTargetLODNamesFunc final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_TransferMeshToolProperties_GetTargetLODNamesFunc;
-
 // Function MeshModelingToolsExp.MeshAttributePaintToolProperties.GetAttributeNames
 // 0x0010 (0x0010 - 0x0000)
 struct MeshAttributePaintToolProperties_GetAttributeNames final
@@ -175,6 +157,24 @@ public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MeshVertexPaintToolUtilityActions_GetLODNamesFunc;
+
+// Function MeshModelingToolsExp.TransferMeshToolProperties.GetSourceLODNamesFunc
+// 0x0010 (0x0010 - 0x0000)
+struct TransferMeshToolProperties_GetSourceLODNamesFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TransferMeshToolProperties_GetSourceLODNamesFunc;
+
+// Function MeshModelingToolsExp.TransferMeshToolProperties.GetTargetLODNamesFunc
+// 0x0010 (0x0010 - 0x0000)
+struct TransferMeshToolProperties_GetTargetLODNamesFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TransferMeshToolProperties_GetTargetLODNamesFunc;
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MovieScene_structs.hpp"
 #include "LiveLinkInterface_structs.hpp"
+#include "MovieScene_structs.hpp"
 #include "MovieSceneTracks_structs.hpp"
 
 

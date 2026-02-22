@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "ENUM_InputDevices_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "cfcore_structs.hpp"
+#include "ENUM_InputDevices_structs.hpp"
 
 
 namespace SDK::Params
@@ -52,7 +52,7 @@ DUMPER7_ASSERTS_UI_Prompt_SignIn_C_Event_Failed_To_Send_Security_Code;
 struct UI_Prompt_SignIn_C_Event_On_Input_Device_Changed final
 {
 public:
-	ENUM_InputDevices                             Device;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_InputDevices                             device;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_UI_Prompt_SignIn_C_Event_On_Input_Device_Changed;
 
@@ -72,7 +72,7 @@ public:
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_5;                    // 0x0074(0x0014)()
 	ENUM_InputDevices                             Temp_byte_Variable;                                // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(ENUM_InputDevices Device)>     K2Node_CreateDelegate_OutputDelegate;              // 0x008C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(ENUM_InputDevices device)>     K2Node_CreateDelegate_OutputDelegate;              // 0x008C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x009E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

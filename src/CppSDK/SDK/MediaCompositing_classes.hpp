@@ -13,8 +13,8 @@
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
 #include "MovieSceneTracks_classes.hpp"
-#include "MediaAssets_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MediaAssets_structs.hpp"
 
 
 namespace SDK

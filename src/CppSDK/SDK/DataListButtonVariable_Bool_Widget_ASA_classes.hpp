@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "DataListButtonVariable_Widget_ASA_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -27,11 +27,11 @@ public:
 	class FString                                 FalseBoolString;                                   // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 public:
-	void SetupTextValue(const class FText& Text, class FText* ReturnText);
-	void PreConstruct(bool IsDesignTime);
-	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
-	void ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_DataListButtonVariable_Bool_Widget_ASA(int32 EntryPoint);
+	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
+	void PreConstruct(bool IsDesignTime);
+	void SetupTextValue(const class FText& Text, class FText* ReturnText);
 
 public:
 	static class UClass* StaticClass()

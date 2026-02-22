@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
 #include "Sentry_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -152,7 +152,7 @@ public:
 	static class USentryAttachment* CreateSentryAttachmentWithPath(const class FString& Path, const class FString& Filename, const class FString& ContentType);
 	static class USentryBreadcrumb* CreateSentryBreadcrumb(const class FString& Message, const class FString& Type, const class FString& Category, const TMap<class FString, class FString>& Data, ESentryLevel Level);
 	static class USentryEvent* CreateSentryEvent(const class FString& Message, ESentryLevel Level);
-	static class USentryUser* CreateSentryUser(const class FString& email, const class FString& ID, const class FString& username, const class FString& IpAddress, const TMap<class FString, class FString>& Data);
+	static class USentryUser* CreateSentryUser(const class FString& email, const class FString& ID, const class FString& Username, const class FString& IpAddress, const TMap<class FString, class FString>& Data);
 	static class USentryUserFeedback* CreateSentryUserFeedback(class USentryId* EventId, const class FString& Name_0, const class FString& email, const class FString& Comments);
 	static class FString SaveStringToFile(const class FString& InString, const class FString& Filename);
 	static TArray<uint8> StringToBytesArray(const class FString& InString);
@@ -318,7 +318,7 @@ public:
 	void SetEmail(const class FString& email);
 	void SetId(const class FString& ID);
 	void SetIpAddress(const class FString& IpAddress);
-	void SetUsername(const class FString& username);
+	void SetUsername(const class FString& Username);
 
 	TMap<class FString, class FString> GetData() const;
 	class FString GetEmail() const;

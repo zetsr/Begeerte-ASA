@@ -250,7 +250,7 @@ DUMPER7_ASSERTS_UScriptStruct;
 class UUserDefinedStruct : public UScriptStruct
 {
 public:
-	EUserDefinedStructureStatus                   status;                                            // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUserDefinedStructureStatus                   Status;                                            // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  Guid;                                              // 0x00C4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D4[0x34];                                      // 0x00D4(0x0034)(Fixing Struct Size After Last Property [ Dumper-7 ])

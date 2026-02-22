@@ -14,8 +14,8 @@
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "GeometryCollectionEngine_structs.hpp"
 #include "Chaos_structs.hpp"
+#include "GeometryCollectionEngine_structs.hpp"
 #include "ChaosSolverEngine_structs.hpp"
 
 
@@ -133,7 +133,7 @@ DUMPER7_ASSERTS_UGeometryCollectionISMPoolSubSystem;
 
 // Class GeometryCollectionEngine.PrimalDestructibleActor
 // 0x0010 (0x0490 - 0x0480)
-class APrimalDestructibleActor : public AActor
+class APrimalDestructibleActor final : public AActor
 {
 public:
 	class UGeometryCollectionComponent*           GeoCollectionComponent;                            // 0x0480(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)

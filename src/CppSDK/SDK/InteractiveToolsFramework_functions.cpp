@@ -67,21 +67,59 @@ void UGizmoBaseComponent::UpdateWorldLocalState(bool bWorldIn)
 }
 
 
-// Function InteractiveToolsFramework.GizmoClickTarget.UpdateHoverState
+// Function InteractiveToolsFramework.GizmoVec2ParameterSource.BeginModify
 // (Native, Public)
-// Parameters:
-// bool                                    bHovering                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void IGizmoClickTarget::UpdateHoverState(bool bHovering)
+void IGizmoVec2ParameterSource::BeginModify()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("GizmoClickTarget", "UpdateHoverState");
+		Func = AsUObject()->Class->GetFunction("GizmoVec2ParameterSource", "BeginModify");
 
-	Params::GizmoClickTarget_UpdateHoverState Parms{};
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	Parms.bHovering = bHovering;
+	AsUObject()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function InteractiveToolsFramework.GizmoVec2ParameterSource.EndModify
+// (Native, Public)
+
+void IGizmoVec2ParameterSource::EndModify()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("GizmoVec2ParameterSource", "EndModify");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function InteractiveToolsFramework.GizmoVec2ParameterSource.SetParameter
+// (Native, Public, HasOutParams, HasDefaults)
+// Parameters:
+// const struct FVector2D&                 NewValue                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IGizmoVec2ParameterSource::SetParameter(const struct FVector2D& NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("GizmoVec2ParameterSource", "SetParameter");
+
+	Params::GizmoVec2ParameterSource_SetParameter Parms{};
+
+	Parms.NewValue = std::move(NewValue);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -92,21 +130,19 @@ void IGizmoClickTarget::UpdateHoverState(bool bHovering)
 }
 
 
-// Function InteractiveToolsFramework.GizmoClickTarget.UpdateInteractingState
-// (Native, Public)
+// Function InteractiveToolsFramework.GizmoVec2ParameterSource.GetParameter
+// (Native, Public, HasDefaults, Const)
 // Parameters:
-// bool                                    bInteracting                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void IGizmoClickTarget::UpdateInteractingState(bool bInteracting)
+struct FVector2D IGizmoVec2ParameterSource::GetParameter() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("GizmoClickTarget", "UpdateInteractingState");
+		Func = AsUObject()->Class->GetFunction("GizmoVec2ParameterSource", "GetParameter");
 
-	Params::GizmoClickTarget_UpdateInteractingState Parms{};
-
-	Parms.bInteracting = bInteracting;
+	Params::GizmoVec2ParameterSource_GetParameter Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -114,6 +150,8 @@ void IGizmoClickTarget::UpdateInteractingState(bool bInteracting)
 	AsUObject()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -269,6 +307,56 @@ bool IGizmoAxisSource::HasTangentVectors() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function InteractiveToolsFramework.GizmoClickTarget.UpdateHoverState
+// (Native, Public)
+// Parameters:
+// bool                                    bHovering                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IGizmoClickTarget::UpdateHoverState(bool bHovering)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("GizmoClickTarget", "UpdateHoverState");
+
+	Params::GizmoClickTarget_UpdateHoverState Parms{};
+
+	Parms.bHovering = bHovering;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function InteractiveToolsFramework.GizmoClickTarget.UpdateInteractingState
+// (Native, Public)
+// Parameters:
+// bool                                    bInteracting                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IGizmoClickTarget::UpdateInteractingState(bool bInteracting)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("GizmoClickTarget", "UpdateInteractingState");
+
+	Params::GizmoClickTarget_UpdateInteractingState Parms{};
+
+	Parms.bInteracting = bInteracting;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -494,94 +582,6 @@ float IGizmoFloatParameterSource::GetParameter() const
 		Func = AsUObject()->Class->GetFunction("GizmoFloatParameterSource", "GetParameter");
 
 	Params::GizmoFloatParameterSource_GetParameter Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function InteractiveToolsFramework.GizmoVec2ParameterSource.BeginModify
-// (Native, Public)
-
-void IGizmoVec2ParameterSource::BeginModify()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("GizmoVec2ParameterSource", "BeginModify");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function InteractiveToolsFramework.GizmoVec2ParameterSource.EndModify
-// (Native, Public)
-
-void IGizmoVec2ParameterSource::EndModify()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("GizmoVec2ParameterSource", "EndModify");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function InteractiveToolsFramework.GizmoVec2ParameterSource.SetParameter
-// (Native, Public, HasOutParams, HasDefaults)
-// Parameters:
-// const struct FVector2D&                 NewValue                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void IGizmoVec2ParameterSource::SetParameter(const struct FVector2D& NewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("GizmoVec2ParameterSource", "SetParameter");
-
-	Params::GizmoVec2ParameterSource_SetParameter Parms{};
-
-	Parms.NewValue = std::move(NewValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function InteractiveToolsFramework.GizmoVec2ParameterSource.GetParameter
-// (Native, Public, HasDefaults, Const)
-// Parameters:
-// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector2D IGizmoVec2ParameterSource::GetParameter() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("GizmoVec2ParameterSource", "GetParameter");
-
-	Params::GizmoVec2ParameterSource_GetParameter Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

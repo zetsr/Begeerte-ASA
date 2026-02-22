@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "ShooterGame_structs.hpp"
 #include "ShooterGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK

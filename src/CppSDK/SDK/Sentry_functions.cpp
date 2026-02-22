@@ -713,12 +713,12 @@ class USentryEvent* USentryLibrary::CreateSentryEvent(const class FString& Messa
 // Parameters:
 // const class FString&                    email                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    ID                                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    username                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Username                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    IpAddress                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TMap<class FString, class FString>&Data                                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class USentryUser*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class USentryUser* USentryLibrary::CreateSentryUser(const class FString& email, const class FString& ID, const class FString& username, const class FString& IpAddress, const TMap<class FString, class FString>& Data)
+class USentryUser* USentryLibrary::CreateSentryUser(const class FString& email, const class FString& ID, const class FString& Username, const class FString& IpAddress, const TMap<class FString, class FString>& Data)
 {
 	static class UFunction* Func = nullptr;
 
@@ -729,7 +729,7 @@ class USentryUser* USentryLibrary::CreateSentryUser(const class FString& email, 
 
 	Parms.email = std::move(email);
 	Parms.ID = std::move(ID);
-	Parms.username = std::move(username);
+	Parms.Username = std::move(Username);
 	Parms.IpAddress = std::move(IpAddress);
 	Parms.Data = std::move(Data);
 
@@ -2047,9 +2047,9 @@ void USentryUser::SetIpAddress(const class FString& IpAddress)
 // Function Sentry.SentryUser.SetUsername
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    username                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Username                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USentryUser::SetUsername(const class FString& username)
+void USentryUser::SetUsername(const class FString& Username)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2058,7 +2058,7 @@ void USentryUser::SetUsername(const class FString& username)
 
 	Params::SentryUser_SetUsername Parms{};
 
-	Parms.username = std::move(username);
+	Parms.Username = std::move(Username);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

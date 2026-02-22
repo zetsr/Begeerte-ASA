@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_InputDevices_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ShooterGame_classes.hpp"
+#include "ENUM_InputDevices_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -73,7 +73,7 @@ public:
 	void Construct();
 	void Event_Bind_On_Input_Device_Changed(class UUI_StoreMenu_C* StoreMenuRef);
 	void Event_On_Failed_To_Generate_Auth_Code(const struct FCFCoreError& Error);
-	void Event_On_Input_Device_Changed(ENUM_InputDevices Device);
+	void Event_On_Input_Device_Changed(ENUM_InputDevices device);
 	void Event_On_Valid_Auth_Code_Generated();
 	void ExecuteUbergraph_UI_Verification(int32 EntryPoint);
 	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);

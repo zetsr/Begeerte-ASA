@@ -12,13 +12,13 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
 #include "GameplayCameras_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
 #include "StateTreeModule_structs.hpp"
 #include "StateTreeModule_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK

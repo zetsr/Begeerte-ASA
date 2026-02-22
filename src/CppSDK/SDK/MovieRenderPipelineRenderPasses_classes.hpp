@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "MovieRenderPipelineCore_classes.hpp"
 #include "OpenColorIO_structs.hpp"
 #include "Engine_structs.hpp"
 #include "MovieRenderPipelineRenderPasses_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ActorLayerUtilities_structs.hpp"
 
 

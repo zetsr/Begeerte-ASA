@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "ShooterGame_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ShooterGame_classes.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -51,32 +51,32 @@ public:
 	TMulticastInlineDelegate<void(bool bExtended, class UDataListButtonVariable_Widget_ASA_C* This)> ReturnIsExtended; // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void SetupTextValueOverride(const class FText& Text, class FText* ReturnText);
-	void SetupTextValue(const class FText& Text, class FText* ReturnText);
-	void SetupOptionWidgets();
-	void SetupNewValueWidget(const class FString& InString, int32 InputPin, bool PreventParentCall);
-	void Setup_Values_Index(const int32& Index_0, bool PreventCallParent);
-	void SetParameterValue(const class FString& Value, bool bPreventCallParent);
-	void SetIsSelectedBP(bool Selected);
-	void PreConstruct(bool IsDesignTime);
-	void OnOverridedParameterValue(const class FString& Value, bool bPreventCallParent);
-	bool IsExpanded();
-	void HideValueLabel(bool HideValue);
-	class USlider* HasSlider();
-	class USlider* HasExpandedSlider();
-	void GetWidgetsToAdd(TArray<class UPrimalUserWidget*>* UserWidgets);
-	bool GetIsSelectedBP();
-	TArray<class UWidget*> GetAllValueWidgets();
-	void ExtraSetupWidget(class UPrimalUserWidget* UserWidget, int32 Index_0);
-	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
-	void ExecuteUbergraph_DataListButtonVariable_Widget_ASA(int32 EntryPoint);
-	void Construct();
-	void CloseSlider();
-	void BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams);
-	void BndEvt__DataListButtonVariable_Widget_ASA_MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__DataListButtonVariable_Widget_ASA_DataListButton_Widget_ASA_K2Node_ComponentBoundEvent_2_ToggledState__DelegateSignature(bool Set, bool FromSelectOtherOption);
+	void BndEvt__DataListButtonVariable_Widget_ASA_MainButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams);
+	void CloseSlider();
+	void Construct();
+	void ExecuteUbergraph_DataListButtonVariable_Widget_ASA(int32 EntryPoint);
+	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
+	void ExtraSetupWidget(class UPrimalUserWidget* UserWidget, int32 Index_0);
+	TArray<class UWidget*> GetAllValueWidgets();
+	bool GetIsSelectedBP();
+	void GetWidgetsToAdd(TArray<class UPrimalUserWidget*>* UserWidgets);
+	class USlider* HasExpandedSlider();
+	class USlider* HasSlider();
+	void HideValueLabel(bool HideValue);
+	bool IsExpanded();
+	void OnOverridedParameterValue(const class FString& Value, bool bPreventCallParent);
+	void PreConstruct(bool IsDesignTime);
+	void SetIsSelectedBP(bool Selected);
+	void SetParameterValue(const class FString& Value, bool bPreventCallParent);
+	void Setup_Values_Index(const int32& Index_0, bool PreventCallParent);
+	void SetupNewValueWidget(const class FString& InString, int32 InputPin, bool PreventParentCall);
+	void SetupOptionWidgets();
+	void SetupTextValue(const class FText& Text, class FText* ReturnText);
+	void SetupTextValueOverride(const class FText& Text, class FText* ReturnText);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue);
 
 public:
 	static class UClass* StaticClass()

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "UMG_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "MovieRenderPipelineCore_structs.hpp"
 #include "MovieRenderPipelineCore_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK

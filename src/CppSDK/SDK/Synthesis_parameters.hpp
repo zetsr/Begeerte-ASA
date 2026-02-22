@@ -969,24 +969,6 @@ public:
 };
 DUMPER7_ASSERTS_SourceEffectRingModulationPreset_SetSettings;
 
-// Function Synthesis.SynthComponentToneGenerator.SetFrequency
-// 0x0004 (0x0004 - 0x0000)
-struct SynthComponentToneGenerator_SetFrequency final
-{
-public:
-	float                                         InFrequency;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SynthComponentToneGenerator_SetFrequency;
-
-// Function Synthesis.SynthComponentToneGenerator.SetVolume
-// 0x0004 (0x0004 - 0x0000)
-struct SynthComponentToneGenerator_SetVolume final
-{
-public:
-	float                                         InVolume;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SynthComponentToneGenerator_SetVolume;
-
 // Function Synthesis.SourceEffectSimpleDelayPreset.SetSettings
 // 0x0018 (0x0018 - 0x0000)
 struct SourceEffectSimpleDelayPreset_SetSettings final
@@ -1004,15 +986,6 @@ public:
 	struct FSourceEffectStereoDelaySettings       InSettings;                                        // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SourceEffectStereoDelayPreset_SetSettings;
-
-// Function Synthesis.SubmixEffectStereoDelayPreset.SetSettings
-// 0x0024 (0x0024 - 0x0000)
-struct SubmixEffectStereoDelayPreset_SetSettings final
-{
-public:
-	struct FSubmixEffectStereoDelaySettings       InSettings;                                        // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SubmixEffectStereoDelayPreset_SetSettings;
 
 // Function Synthesis.SourceEffectWaveShaperPreset.SetSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -1217,6 +1190,15 @@ public:
 	struct FSubmixEffectMultibandCompressorSettings InSettings;                                      // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SubmixEffectMultibandCompressorPreset_SetSettings;
+
+// Function Synthesis.SubmixEffectStereoDelayPreset.SetSettings
+// 0x0024 (0x0024 - 0x0000)
+struct SubmixEffectStereoDelayPreset_SetSettings final
+{
+public:
+	struct FSubmixEffectStereoDelaySettings       InSettings;                                        // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SubmixEffectStereoDelayPreset_SetSettings;
 
 // Function Synthesis.SubmixEffectStereoToQuadPreset.SetSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -1897,6 +1879,24 @@ public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SynthComponentMonoWaveTable_GetMaxTableIndex;
+
+// Function Synthesis.SynthComponentToneGenerator.SetFrequency
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentToneGenerator_SetFrequency final
+{
+public:
+	float                                         InFrequency;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SynthComponentToneGenerator_SetFrequency;
+
+// Function Synthesis.SynthComponentToneGenerator.SetVolume
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentToneGenerator_SetVolume final
+{
+public:
+	float                                         InVolume;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SynthComponentToneGenerator_SetVolume;
 
 // Function Synthesis.SynthSamplePlayer.SeekToTime
 // 0x0008 (0x0008 - 0x0000)

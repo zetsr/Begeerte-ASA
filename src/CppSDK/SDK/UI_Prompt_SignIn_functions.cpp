@@ -318,9 +318,9 @@ void UUI_Prompt_SignIn_C::Event_Failed_To_Send_Security_Code(const struct FCFCor
 // Function UI_Prompt_SignIn.UI_Prompt_SignIn_C.Event On Input Device Changed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ENUM_InputDevices                       Device                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ENUM_InputDevices                       device                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_Prompt_SignIn_C::Event_On_Input_Device_Changed(ENUM_InputDevices Device)
+void UUI_Prompt_SignIn_C::Event_On_Input_Device_Changed(ENUM_InputDevices device)
 {
 	static class UFunction* Func = nullptr;
 
@@ -329,7 +329,7 @@ void UUI_Prompt_SignIn_C::Event_On_Input_Device_Changed(ENUM_InputDevices Device
 
 	Params::UI_Prompt_SignIn_C_Event_On_Input_Device_Changed Parms{};
 
-	Parms.Device = Device;
+	Parms.device = device;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

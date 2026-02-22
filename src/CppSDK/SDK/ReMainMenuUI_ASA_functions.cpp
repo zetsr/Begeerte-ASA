@@ -157,6 +157,20 @@ void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_LandingScreen_
 }
 
 
+// Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.BndEvt__ReMainMenuUI_ASA_DiscordButton_K2Node_ComponentBoundEvent_10_OnButtonClicked__DelegateSignature
+// (BlueprintEvent)
+
+void UReMainMenuUI_ASA_C::BndEvt__ReMainMenuUI_ASA_DiscordButton_K2Node_ComponentBoundEvent_10_OnButtonClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "BndEvt__ReMainMenuUI_ASA_DiscordButton_K2Node_ComponentBoundEvent_10_OnButtonClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.BndEvt__ReMainMenuUI_ASA_SettingsButton_K2Node_ComponentBoundEvent_5_OnButtonClicked__DelegateSignature
 // (BlueprintEvent)
 
@@ -287,6 +301,40 @@ void UReMainMenuUI_ASA_C::ExecuteUbergraph_ReMainMenuUI_ASA(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.Get_DiscordButton_bIsEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UReMainMenuUI_ASA_C::Get_DiscordButton_bIsEnabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "Get_DiscordButton_bIsEnabled");
+
+	Params::ReMainMenuUI_ASA_C_Get_DiscordButton_bIsEnabled Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.HandleDiscordButtonVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UReMainMenuUI_ASA_C::HandleDiscordButtonVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ReMainMenuUI_ASA_C", "HandleDiscordButtonVisibility");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

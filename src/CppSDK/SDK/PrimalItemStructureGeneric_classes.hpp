@@ -18,8 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass PrimalItemStructureGeneric.PrimalItemStructureGeneric_C
 // 0x0000 (0x0B60 - 0x0B60)
-#pragma pack(push, 0x1)
-class alignas(0x10) UPrimalItemStructureGeneric_C : public UPrimalItemConsumableGeneric_C
+class UPrimalItemStructureGeneric_C : public UPrimalItemConsumableGeneric_C
 {
 public:
 	static class UClass* StaticClass()
@@ -35,7 +34,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemStructureGeneric_C>();
 	}
 };
-#pragma pack(pop)
 DUMPER7_ASSERTS_UPrimalItemStructureGeneric_C;
 
 }

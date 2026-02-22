@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "Engine_structs.hpp"
-#include "ENUM_SideTabs_structs.hpp"
-#include "cfcore_ui_structs.hpp"
-#include "cfcore_structs.hpp"
 #include "STRUCT_CustomComboBoxOption_structs.hpp"
+#include "cfcore_ui_structs.hpp"
+#include "ENUM_SideTabs_structs.hpp"
+#include "cfcore_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ENUM_TimeFilters_structs.hpp"
 #include "ENUM_InputDevices_structs.hpp"
 
@@ -66,7 +66,7 @@ public:
 	TScriptInterface<class IBPI_CustomComboBoxInterface_C> K2Node_DynamicCast_AsBPI_Custom_Combo_Box_Interface; // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(ENUM_InputDevices Device)>     K2Node_CreateDelegate_OutputDelegate;              // 0x008C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(ENUM_InputDevices device)>     K2Node_CreateDelegate_OutputDelegate;              // 0x008C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -1063,7 +1063,7 @@ DUMPER7_ASSERTS_UI_ParentBrowser_C_CheckWhichTextAppearsFirst;
 struct UI_ParentBrowser_C_Event_On_Input_Device_Changed final
 {
 public:
-	ENUM_InputDevices                             Device;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_InputDevices                             device;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_UI_ParentBrowser_C_Event_On_Input_Device_Changed;
 

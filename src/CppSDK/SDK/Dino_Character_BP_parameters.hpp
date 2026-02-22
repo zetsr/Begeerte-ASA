@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "ShooterGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ShooterGame_structs.hpp"
 #include "DinoContentData_structs.hpp"
 
 

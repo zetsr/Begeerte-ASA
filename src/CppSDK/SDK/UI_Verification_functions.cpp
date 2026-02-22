@@ -304,9 +304,9 @@ void UUI_Verification_C::Event_On_Failed_To_Generate_Auth_Code(const struct FCFC
 // Function UI_Verification.UI_Verification_C.Event On Input Device Changed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ENUM_InputDevices                       Device                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ENUM_InputDevices                       device                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_Verification_C::Event_On_Input_Device_Changed(ENUM_InputDevices Device)
+void UUI_Verification_C::Event_On_Input_Device_Changed(ENUM_InputDevices device)
 {
 	static class UFunction* Func = nullptr;
 
@@ -315,7 +315,7 @@ void UUI_Verification_C::Event_On_Input_Device_Changed(ENUM_InputDevices Device)
 
 	Params::UI_Verification_C_Event_On_Input_Device_Changed Parms{};
 
-	Parms.Device = Device;
+	Parms.device = device;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

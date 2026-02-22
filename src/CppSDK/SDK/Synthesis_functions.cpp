@@ -2621,56 +2621,6 @@ void USourceEffectRingModulationPreset::SetSettings(const struct FSourceEffectRi
 }
 
 
-// Function Synthesis.SynthComponentToneGenerator.SetFrequency
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InFrequency                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponentToneGenerator::SetFrequency(float InFrequency)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponentToneGenerator", "SetFrequency");
-
-	Params::SynthComponentToneGenerator_SetFrequency Parms{};
-
-	Parms.InFrequency = InFrequency;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SynthComponentToneGenerator.SetVolume
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InVolume                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USynthComponentToneGenerator::SetVolume(float InVolume)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynthComponentToneGenerator", "SetVolume");
-
-	Params::SynthComponentToneGenerator_SetVolume Parms{};
-
-	Parms.InVolume = InVolume;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function Synthesis.SourceEffectSimpleDelayPreset.SetSettings
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -2709,31 +2659,6 @@ void USourceEffectStereoDelayPreset::SetSettings(const struct FSourceEffectStere
 		Func = Class->GetFunction("SourceEffectStereoDelayPreset", "SetSettings");
 
 	Params::SourceEffectStereoDelayPreset_SetSettings Parms{};
-
-	Parms.InSettings = std::move(InSettings);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Synthesis.SubmixEffectStereoDelayPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSubmixEffectStereoDelaySettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void USubmixEffectStereoDelayPreset::SetSettings(const struct FSubmixEffectStereoDelaySettings& InSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectStereoDelayPreset", "SetSettings");
-
-	Params::SubmixEffectStereoDelayPreset_SetSettings Parms{};
 
 	Parms.InSettings = std::move(InSettings);
 
@@ -3324,6 +3249,31 @@ void USubmixEffectMultibandCompressorPreset::SetSettings(const struct FSubmixEff
 		Func = Class->GetFunction("SubmixEffectMultibandCompressorPreset", "SetSettings");
 
 	Params::SubmixEffectMultibandCompressorPreset_SetSettings Parms{};
+
+	Parms.InSettings = std::move(InSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Synthesis.SubmixEffectStereoDelayPreset.SetSettings
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSubmixEffectStereoDelaySettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void USubmixEffectStereoDelayPreset::SetSettings(const struct FSubmixEffectStereoDelaySettings& InSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubmixEffectStereoDelayPreset", "SetSettings");
+
+	Params::SubmixEffectStereoDelayPreset_SetSettings Parms{};
 
 	Parms.InSettings = std::move(InSettings);
 
@@ -5203,6 +5153,56 @@ int32 USynthComponentMonoWaveTable::GetMaxTableIndex() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function Synthesis.SynthComponentToneGenerator.SetFrequency
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InFrequency                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponentToneGenerator::SetFrequency(float InFrequency)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponentToneGenerator", "SetFrequency");
+
+	Params::SynthComponentToneGenerator_SetFrequency Parms{};
+
+	Parms.InFrequency = InFrequency;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Synthesis.SynthComponentToneGenerator.SetVolume
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InVolume                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USynthComponentToneGenerator::SetVolume(float InVolume)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynthComponentToneGenerator", "SetVolume");
+
+	Params::SynthComponentToneGenerator_SetVolume Parms{};
+
+	Parms.InVolume = InVolume;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 

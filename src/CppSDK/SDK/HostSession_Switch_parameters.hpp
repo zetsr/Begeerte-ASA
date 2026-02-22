@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "cfcore_structs.hpp"
-#include "ShooterGame_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "ShooterGame_structs.hpp"
 
 
 namespace SDK::Params

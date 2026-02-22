@@ -55,14 +55,14 @@ public:
 };
 DUMPER7_ASSERTS_FTypedElementChildAlertColumn;
 
-// ScriptStruct TypedElementFramework.TestColumnC
-// 0x0001 (0x0001 - 0x0000)
-struct FTestColumnC final : public FEditorDataStorageColumn
+// ScriptStruct TypedElementFramework.TypedElementPackageReference
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FTypedElementPackageReference final : public FEditorDataStorageColumn
 {
 public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTestColumnC;
+DUMPER7_ASSERTS_FTypedElementPackageReference;
 
 // ScriptStruct TypedElementFramework.ScriptTypedElementHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -347,15 +347,6 @@ public:
 };
 DUMPER7_ASSERTS_FTypedElementPackageUnresolvedReference;
 
-// ScriptStruct TypedElementFramework.TypedElementPackageReference
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FTypedElementPackageReference final : public FEditorDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTypedElementPackageReference;
-
 // ScriptStruct TypedElementFramework.TypedElementPackageUpdatedTag
 // 0x0000 (0x0001 - 0x0001)
 struct FTypedElementPackageUpdatedTag final : public FEditorDataStorageTag
@@ -548,6 +539,15 @@ public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FTestColumnB;
+
+// ScriptStruct TypedElementFramework.TestColumnC
+// 0x0001 (0x0001 - 0x0000)
+struct FTestColumnC final : public FEditorDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTestColumnC;
 
 // ScriptStruct TypedElementFramework.TestColumnD
 // 0x0001 (0x0001 - 0x0000)

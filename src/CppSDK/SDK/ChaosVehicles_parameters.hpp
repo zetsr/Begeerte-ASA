@@ -575,7 +575,7 @@ DUMPER7_ASSERTS_ChaosWheeledVehicleMovementComponent_BreakWheelSnapshot;
 struct ChaosWheeledVehicleMovementComponent_BreakWheelStatus final
 {
 public:
-	struct FWheelStatus                           status;                                            // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWheelStatus                           Status;                                            // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bInContact;                                        // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ContactPoint;                                      // 0x0090(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

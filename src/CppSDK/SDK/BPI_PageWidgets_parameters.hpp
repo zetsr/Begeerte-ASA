@@ -14,15 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BPI_PageWidgets.BPI_PageWidgets_C.OnSearch
-// 0x0010 (0x0010 - 0x0000)
-struct BPI_PageWidgets_C_OnSearch final
-{
-public:
-	class FText                                   Search_Input;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-DUMPER7_ASSERTS_BPI_PageWidgets_C_OnSearch;
-
 // Function BPI_PageWidgets.BPI_PageWidgets_C.UpdateSearch
 // 0x0010 (0x0010 - 0x0000)
 struct BPI_PageWidgets_C_UpdateSearch final
@@ -31,6 +22,15 @@ public:
 	class FText                                   SearchInput;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 DUMPER7_ASSERTS_BPI_PageWidgets_C_UpdateSearch;
+
+// Function BPI_PageWidgets.BPI_PageWidgets_C.OnSearch
+// 0x0010 (0x0010 - 0x0000)
+struct BPI_PageWidgets_C_OnSearch final
+{
+public:
+	class FText                                   Search_Input;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+DUMPER7_ASSERTS_BPI_PageWidgets_C_OnSearch;
 
 }
 

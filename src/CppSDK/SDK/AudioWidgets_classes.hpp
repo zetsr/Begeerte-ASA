@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
-#include "SlateCore_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "AudioWidgets_structs.hpp"
 #include "UMG_classes.hpp"
-#include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "SlateCore_classes.hpp"
 
 
 namespace SDK

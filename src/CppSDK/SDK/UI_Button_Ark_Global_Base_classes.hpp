@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "STRUCT_FullButtonDesign_structs.hpp"
 #include "ENUM_ButtonType_structs.hpp"
-#include "ShooterGame_classes.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ShooterGame_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "ENUM_ButtonStates_structs.hpp"
 

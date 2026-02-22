@@ -24,25 +24,99 @@
 namespace SDK
 {
 
-// Class GameplayAbilities.GameplayEffectComponent
+// Class GameplayAbilities.AbilitySystemCheatManagerExtension
 // 0x0000 (0x0028 - 0x0028)
-class UGameplayEffectComponent : public UObject
+class UAbilitySystemCheatManagerExtension final : public UCheatManagerExtension
 {
+public:
+	void AbilityActivate(const class FString& PartialName) const;
+	void AbilityCancel(const class FString& PartialName) const;
+	void AbilityGrant(const class FString& AssetSearchString) const;
+	void AbilityListGranted() const;
+	void EffectApply(const class FString& PartialName, float EffectLevel) const;
+	void EffectListActive() const;
+	void EffectRemove(const class FString& NameOrHandle) const;
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("GameplayEffectComponent")
+		STATIC_CLASS_IMPL("AbilitySystemCheatManagerExtension")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"GameplayEffectComponent")
+		STATIC_NAME_IMPL(L"AbilitySystemCheatManagerExtension")
 	}
-	static class UGameplayEffectComponent* GetDefaultObj()
+	static class UAbilitySystemCheatManagerExtension* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UGameplayEffectComponent>();
+		return GetDefaultObjImpl<UAbilitySystemCheatManagerExtension>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayEffectComponent;
+DUMPER7_ASSERTS_UAbilitySystemCheatManagerExtension;
+
+// Class GameplayAbilities.GameplayAbilityTargetActor
+// 0x0140 (0x05C0 - 0x0480)
+class AGameplayAbilityTargetActor : public AActor
+{
+public:
+	bool                                          ShouldProduceTargetDataOnServer;                   // 0x0480(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_481[0xF];                                      // 0x0481(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetingLocationInfo  StartLocation;                                     // 0x0490(0x0090)(BlueprintVisible, BlueprintReadOnly, Net, ContainsInstancedReference, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	uint8                                         Pad_520[0x30];                                     // 0x0520(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      PrimaryPC;                                         // 0x0550(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0558(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	bool                                          bDestroyOnConfirmation;                            // 0x0560(0x0001)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_561[0x7];                                      // 0x0561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 SourceActor;                                       // 0x0568(0x0008)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	struct FWorldReticleParameters                ReticleParams;                                     // 0x0570(0x0018)(BlueprintVisible, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	TSubclassOf<class AGameplayAbilityWorldReticle> ReticleClass;                                    // 0x0588(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTargetDataFilterHandle        Filter;                                            // 0x0590(0x0010)(BlueprintVisible, Net, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	bool                                          bDebug;                                            // 0x05A0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5A1[0x17];                                     // 0x05A1(0x0017)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                GenericDelegateBoundASC;                           // 0x05B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	void CancelTargeting();
+	void ConfirmTargeting();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayAbilityTargetActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityTargetActor")
+	}
+	static class AGameplayAbilityTargetActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AGameplayAbilityTargetActor>();
+	}
+};
+DUMPER7_ASSERTS_AGameplayAbilityTargetActor;
+
+// Class GameplayAbilities.GameplayAbilityTargetActor_Radius
+// 0x0010 (0x05D0 - 0x05C0)
+class AGameplayAbilityTargetActor_Radius final : public AGameplayAbilityTargetActor
+{
+public:
+	float                                         Radius;                                            // 0x05C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C4[0xC];                                      // 0x05C4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayAbilityTargetActor_Radius")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityTargetActor_Radius")
+	}
+	static class AGameplayAbilityTargetActor_Radius* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AGameplayAbilityTargetActor_Radius>();
+	}
+};
+DUMPER7_ASSERTS_AGameplayAbilityTargetActor_Radius;
 
 // Class GameplayAbilities.AbilitySystemDebugHUD
 // 0x0000 (0x0578 - 0x0578)
@@ -63,34 +137,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AAbilitySystemDebugHUD;
-
-// Class GameplayAbilities.AdditionalEffectsGameplayEffectComponent
-// 0x0048 (0x0070 - 0x0028)
-class UAdditionalEffectsGameplayEffectComponent final : public UGameplayEffectComponent
-{
-public:
-	bool                                          bOnApplicationCopyDataFromOriginalSpec;            // 0x0028(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FConditionalGameplayEffect>     OnApplicationGameplayEffects;                      // 0x0030(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class UGameplayEffect>>    OnCompleteAlways;                                  // 0x0040(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class UGameplayEffect>>    OnCompleteNormal;                                  // 0x0050(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class UGameplayEffect>>    OnCompletePrematurely;                             // 0x0060(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AdditionalEffectsGameplayEffectComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AdditionalEffectsGameplayEffectComponent")
-	}
-	static class UAdditionalEffectsGameplayEffectComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAdditionalEffectsGameplayEffectComponent>();
-	}
-};
-DUMPER7_ASSERTS_UAdditionalEffectsGameplayEffectComponent;
 
 // Class GameplayAbilities.GameplayEffect
 // 0x0A48 (0x0A70 - 0x0028)
@@ -159,6 +205,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGameplayEffect;
+
+// Class GameplayAbilities.GameplayEffectComponent
+// 0x0000 (0x0028 - 0x0028)
+class UGameplayEffectComponent : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayEffectComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayEffectComponent")
+	}
+	static class UGameplayEffectComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameplayEffectComponent>();
+	}
+};
+DUMPER7_ASSERTS_UGameplayEffectComponent;
 
 // Class GameplayAbilities.AbilitiesGameplayEffectComponent
 // 0x0010 (0x0038 - 0x0028)
@@ -235,35 +301,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAbilityAsync_WaitGameplayTagCountChanged;
-
-// Class GameplayAbilities.AbilitySystemCheatManagerExtension
-// 0x0000 (0x0028 - 0x0028)
-class UAbilitySystemCheatManagerExtension final : public UCheatManagerExtension
-{
-public:
-	void AbilityActivate(const class FString& PartialName) const;
-	void AbilityCancel(const class FString& PartialName) const;
-	void AbilityGrant(const class FString& AssetSearchString) const;
-	void AbilityListGranted() const;
-	void EffectApply(const class FString& PartialName, float EffectLevel) const;
-	void EffectListActive() const;
-	void EffectRemove(const class FString& NameOrHandle) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AbilitySystemCheatManagerExtension")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AbilitySystemCheatManagerExtension")
-	}
-	static class UAbilitySystemCheatManagerExtension* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAbilitySystemCheatManagerExtension>();
-	}
-};
-DUMPER7_ASSERTS_UAbilitySystemCheatManagerExtension;
 
 // Class GameplayAbilities.AbilityTask
 // 0x0018 (0x0080 - 0x0068)
@@ -356,6 +393,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAbilityTask_WaitGameplayTagCountChanged;
+
+// Class GameplayAbilities.AdditionalEffectsGameplayEffectComponent
+// 0x0048 (0x0070 - 0x0028)
+class UAdditionalEffectsGameplayEffectComponent final : public UGameplayEffectComponent
+{
+public:
+	bool                                          bOnApplicationCopyDataFromOriginalSpec;            // 0x0028(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FConditionalGameplayEffect>     OnApplicationGameplayEffects;                      // 0x0030(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class UGameplayEffect>>    OnCompleteAlways;                                  // 0x0040(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class UGameplayEffect>>    OnCompleteNormal;                                  // 0x0050(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class UGameplayEffect>>    OnCompletePrematurely;                             // 0x0060(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AdditionalEffectsGameplayEffectComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AdditionalEffectsGameplayEffectComponent")
+	}
+	static class UAdditionalEffectsGameplayEffectComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAdditionalEffectsGameplayEffectComponent>();
+	}
+};
+DUMPER7_ASSERTS_UAdditionalEffectsGameplayEffectComponent;
 
 // Class GameplayAbilities.AssetTagsGameplayEffectComponent
 // 0x0060 (0x0088 - 0x0028)
@@ -826,7 +891,7 @@ DUMPER7_ASSERTS_UAbilityAsync_WaitGameplayTag;
 class UAbilityAsync_WaitGameplayTagAdded final : public UAbilityAsync_WaitGameplayTag
 {
 public:
-	TMulticastInlineDelegate<void()>              Added;                                             // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              added;                                             // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UAbilityAsync_WaitGameplayTagAdded* WaitGameplayTagAddToActor(class AActor* TargetActor, const struct FGameplayTag& Tag, bool OnlyTriggerOnce);
@@ -1043,47 +1108,6 @@ public:
 };
 DUMPER7_ASSERTS_UGameplayAbilitySet;
 
-// Class GameplayAbilities.GameplayAbilityTargetActor
-// 0x0140 (0x05C0 - 0x0480)
-class AGameplayAbilityTargetActor : public AActor
-{
-public:
-	bool                                          ShouldProduceTargetDataOnServer;                   // 0x0480(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_481[0xF];                                      // 0x0481(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityTargetingLocationInfo  StartLocation;                                     // 0x0490(0x0090)(BlueprintVisible, BlueprintReadOnly, Net, ContainsInstancedReference, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	uint8                                         Pad_520[0x30];                                     // 0x0520(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      PrimaryPC;                                         // 0x0550(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0558(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	bool                                          bDestroyOnConfirmation;                            // 0x0560(0x0001)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_561[0x7];                                      // 0x0561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 SourceActor;                                       // 0x0568(0x0008)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	struct FWorldReticleParameters                ReticleParams;                                     // 0x0570(0x0018)(BlueprintVisible, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	TSubclassOf<class AGameplayAbilityWorldReticle> ReticleClass;                                    // 0x0588(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTargetDataFilterHandle        Filter;                                            // 0x0590(0x0010)(BlueprintVisible, Net, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	bool                                          bDebug;                                            // 0x05A0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5A1[0x17];                                     // 0x05A1(0x0017)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                GenericDelegateBoundASC;                           // 0x05B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-
-public:
-	void CancelTargeting();
-	void ConfirmTargeting();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameplayAbilityTargetActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameplayAbilityTargetActor")
-	}
-	static class AGameplayAbilityTargetActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AGameplayAbilityTargetActor>();
-	}
-};
-DUMPER7_ASSERTS_AGameplayAbilityTargetActor;
-
 // Class GameplayAbilities.GameplayAbilityTargetActor_Trace
 // 0x0020 (0x05E0 - 0x05C0)
 #pragma pack(push, 0x1)
@@ -1163,30 +1187,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AGameplayAbilityTargetActor_ActorPlacement;
-
-// Class GameplayAbilities.GameplayAbilityTargetActor_Radius
-// 0x0010 (0x05D0 - 0x05C0)
-class AGameplayAbilityTargetActor_Radius final : public AGameplayAbilityTargetActor
-{
-public:
-	float                                         Radius;                                            // 0x05C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C4[0xC];                                      // 0x05C4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameplayAbilityTargetActor_Radius")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameplayAbilityTargetActor_Radius")
-	}
-	static class AGameplayAbilityTargetActor_Radius* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AGameplayAbilityTargetActor_Radius>();
-	}
-};
-DUMPER7_ASSERTS_AGameplayAbilityTargetActor_Radius;
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_SingleLineTrace
 // 0x0000 (0x05E0 - 0x05E0)
@@ -2276,7 +2276,7 @@ DUMPER7_ASSERTS_UAbilityTask_WaitGameplayTag;
 class UAbilityTask_WaitGameplayTagAdded final : public UAbilityTask_WaitGameplayTag
 {
 public:
-	TMulticastInlineDelegate<void()>              Added;                                             // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              added;                                             // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class UAbilityTask_WaitGameplayTagAdded* WaitGameplayTagAdd(class UGameplayAbility* OwningAbility, const struct FGameplayTag& Tag, class AActor* InOptionalExternalTarget, bool OnlyTriggerOnce);

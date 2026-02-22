@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "CFCoreUIWidget_MainModShop_classes.hpp"
-#include "ENUM_InputDevices_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ENUM_SideTabs_structs.hpp"
 #include "cfcore_ui_structs.hpp"
+#include "ENUM_SideTabs_structs.hpp"
+#include "ENUM_InputDevices_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 
@@ -62,7 +62,7 @@ public:
 	TMulticastInlineDelegate<void()>              OnCFCoreInitialized;                               // 0x1070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsPlayerUsingGamepad;                              // 0x1080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1081[0x7];                                     // 0x1081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(ENUM_InputDevices Device)> OnInputDeviceChanged;                   // 0x1088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(ENUM_InputDevices device)> OnInputDeviceChanged;                   // 0x1088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UUI_BasePage_C*                         CurrentActivePage;                                 // 0x1098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                FocusdWidget;                                      // 0x10A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<class UUI_Button_Sidebar_C*>           Sidebuttons;                                       // 0x10A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ZoneGraph_structs.hpp"
 #include "SmartObjectsModule_classes.hpp"
 #include "MassEntity_classes.hpp"
 #include "MassSignals_classes.hpp"
+#include "ZoneGraph_structs.hpp"
 #include "MassSpawner_classes.hpp"
 #include "GameplayTags_structs.hpp"
 #include "MassSmartObjects_structs.hpp"

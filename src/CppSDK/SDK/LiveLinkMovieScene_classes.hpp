@@ -12,8 +12,8 @@
 
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
-#include "LiveLinkInterface_structs.hpp"
 #include "LiveLinkMovieScene_structs.hpp"
+#include "LiveLinkInterface_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "MovieSceneTracks_classes.hpp"
 

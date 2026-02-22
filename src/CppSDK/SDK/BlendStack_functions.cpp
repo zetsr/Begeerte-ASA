@@ -17,6 +17,104 @@
 namespace SDK
 {
 
+// Function BlendStack.BlendStackInputAnimNodeLibrary.ConvertToBlendStackInputNode
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EAnimNodeReferenceConversionResult*     Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlendStackInputAnimNodeReferenceReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlendStackInputAnimNodeReference UBlendStackInputAnimNodeLibrary::ConvertToBlendStackInputNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendStackInputAnimNodeLibrary", "ConvertToBlendStackInputNode");
+
+	Params::BlendStackInputAnimNodeLibrary_ConvertToBlendStackInputNode Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BlendStack.BlendStackInputAnimNodeLibrary.ConvertToBlendStackInputNodePure
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FBlendStackInputAnimNodeReference*BlendStackInputNode                                    (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlendStackInputAnimNodeLibrary::ConvertToBlendStackInputNodePure(const struct FAnimNodeReference& Node, struct FBlendStackInputAnimNodeReference* BlendStackInputNode, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendStackInputAnimNodeLibrary", "ConvertToBlendStackInputNodePure");
+
+	Params::BlendStackInputAnimNodeLibrary_ConvertToBlendStackInputNodePure Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (BlendStackInputNode != nullptr)
+		*BlendStackInputNode = std::move(Parms.BlendStackInputNode);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function BlendStack.BlendStackInputAnimNodeLibrary.GetProperties
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FBlendStackInputAnimNodeReference&BlendStackInputNode                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UAnimationAsset**                 AnimationAsset                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  AccumulatedTime                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlendStackInputAnimNodeLibrary::GetProperties(const struct FBlendStackInputAnimNodeReference& BlendStackInputNode, class UAnimationAsset** AnimationAsset, float* AccumulatedTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendStackInputAnimNodeLibrary", "GetProperties");
+
+	Params::BlendStackInputAnimNodeLibrary_GetProperties Parms{};
+
+	Parms.BlendStackInputNode = std::move(BlendStackInputNode);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (AnimationAsset != nullptr)
+		*AnimationAsset = Parms.AnimationAsset;
+
+	if (AccumulatedTime != nullptr)
+		*AccumulatedTime = Parms.AccumulatedTime;
+}
+
+
 // Function BlendStack.BlendStackAnimNodeLibrary.BlendTo
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -364,104 +462,6 @@ bool UBlendStackAnimNodeLibrary::IsCurrentAssetLooping(const struct FBlendStackA
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function BlendStack.BlendStackInputAnimNodeLibrary.ConvertToBlendStackInputNode
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EAnimNodeReferenceConversionResult*     Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBlendStackInputAnimNodeReferenceReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FBlendStackInputAnimNodeReference UBlendStackInputAnimNodeLibrary::ConvertToBlendStackInputNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendStackInputAnimNodeLibrary", "ConvertToBlendStackInputNode");
-
-	Params::BlendStackInputAnimNodeLibrary_ConvertToBlendStackInputNode Parms{};
-
-	Parms.Node = std::move(Node);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BlendStack.BlendStackInputAnimNodeLibrary.ConvertToBlendStackInputNodePure
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// const struct FAnimNodeReference&        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FBlendStackInputAnimNodeReference*BlendStackInputNode                                    (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBlendStackInputAnimNodeLibrary::ConvertToBlendStackInputNodePure(const struct FAnimNodeReference& Node, struct FBlendStackInputAnimNodeReference* BlendStackInputNode, bool* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendStackInputAnimNodeLibrary", "ConvertToBlendStackInputNodePure");
-
-	Params::BlendStackInputAnimNodeLibrary_ConvertToBlendStackInputNodePure Parms{};
-
-	Parms.Node = std::move(Node);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (BlendStackInputNode != nullptr)
-		*BlendStackInputNode = std::move(Parms.BlendStackInputNode);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
-}
-
-
-// Function BlendStack.BlendStackInputAnimNodeLibrary.GetProperties
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FBlendStackInputAnimNodeReference&BlendStackInputNode                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UAnimationAsset**                 AnimationAsset                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float*                                  AccumulatedTime                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBlendStackInputAnimNodeLibrary::GetProperties(const struct FBlendStackInputAnimNodeReference& BlendStackInputNode, class UAnimationAsset** AnimationAsset, float* AccumulatedTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendStackInputAnimNodeLibrary", "GetProperties");
-
-	Params::BlendStackInputAnimNodeLibrary_GetProperties Parms{};
-
-	Parms.BlendStackInputNode = std::move(BlendStackInputNode);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (AnimationAsset != nullptr)
-		*AnimationAsset = Parms.AnimationAsset;
-
-	if (AccumulatedTime != nullptr)
-		*AccumulatedTime = Parms.AccumulatedTime;
 }
 
 }

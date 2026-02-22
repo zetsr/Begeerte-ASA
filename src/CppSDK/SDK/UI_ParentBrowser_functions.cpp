@@ -1073,9 +1073,9 @@ void UUI_ParentBrowser_C::CheckWhichTextAppearsFirst(const class FText& NameOne,
 // Function UI_ParentBrowser.UI_ParentBrowser_C.Event On Input Device Changed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// ENUM_InputDevices                       Device                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ENUM_InputDevices                       device                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_ParentBrowser_C::Event_On_Input_Device_Changed(ENUM_InputDevices Device)
+void UUI_ParentBrowser_C::Event_On_Input_Device_Changed(ENUM_InputDevices device)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1084,7 +1084,7 @@ void UUI_ParentBrowser_C::Event_On_Input_Device_Changed(ENUM_InputDevices Device
 
 	Params::UI_ParentBrowser_C_Event_On_Input_Device_Changed Parms{};
 
-	Parms.Device = Device;
+	Parms.device = device;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

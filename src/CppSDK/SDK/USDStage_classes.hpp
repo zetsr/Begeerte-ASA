@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "USDClasses_structs.hpp"
 #include "Engine_classes.hpp"
+#include "USDStage_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "USDClasses_structs.hpp"
-#include "USDStage_structs.hpp"
 #include "UnrealUSDWrapper_structs.hpp"
 
 
@@ -44,29 +44,6 @@ public:
 };
 DUMPER7_ASSERTS_UUsdDynamicBindingResolverLibrary;
 
-// Class USDStage.UsdPrimLinkCache
-// 0x0008 (0x0030 - 0x0028)
-class UUsdPrimLinkCache final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("UsdPrimLinkCache")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"UsdPrimLinkCache")
-	}
-	static class UUsdPrimLinkCache* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UUsdPrimLinkCache>();
-	}
-};
-DUMPER7_ASSERTS_UUsdPrimLinkCache;
-
 // Class USDStage.UsdInfoCache
 // 0x0008 (0x0030 - 0x0028)
 class UUsdInfoCache final : public UObject
@@ -89,6 +66,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UUsdInfoCache;
+
+// Class USDStage.UsdPrimLinkCache
+// 0x0008 (0x0030 - 0x0028)
+class UUsdPrimLinkCache final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("UsdPrimLinkCache")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UsdPrimLinkCache")
+	}
+	static class UUsdPrimLinkCache* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UUsdPrimLinkCache>();
+	}
+};
+DUMPER7_ASSERTS_UUsdPrimLinkCache;
 
 // Class USDStage.UsdPrimTwin
 // 0x0088 (0x00B0 - 0x0028)

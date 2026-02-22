@@ -19,13 +19,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Dino_AIController_BP.Dino_AIController_BP_C
-// 0x0038 (0x0A50 - 0x0A18)
+// 0x0038 (0x0A58 - 0x0A20)
 class ADino_AIController_BP_C final : public APrimalDinoAIController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A18(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UGameplayTasksComponent*                GameplayTasks;                                     // 0x0A20(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FBlackboardKeySelector                 NavKey;                                            // 0x0A28(0x0028)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A20(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UGameplayTasksComponent*                GameplayTasks;                                     // 0x0A28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FBlackboardKeySelector                 NavKey;                                            // 0x0A30(0x0028)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_Dino_AIController_BP(int32 EntryPoint);

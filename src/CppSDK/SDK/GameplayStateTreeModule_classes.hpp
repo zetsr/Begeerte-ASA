@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
 #include "StateTreeModule_structs.hpp"
 #include "StateTreeModule_classes.hpp"
-#include "GameplayTags_structs.hpp"
 #include "AIModule_classes.hpp"
 
 

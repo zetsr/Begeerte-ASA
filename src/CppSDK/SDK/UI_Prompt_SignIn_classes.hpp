@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_InputDevices_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ShooterGame_classes.hpp"
+#include "ENUM_InputDevices_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -78,7 +78,7 @@ public:
 	void Event_Close();
 	void Event_CloseD();
 	void Event_Failed_To_Send_Security_Code(const struct FCFCoreError& Error);
-	void Event_On_Input_Device_Changed(ENUM_InputDevices Device);
+	void Event_On_Input_Device_Changed(ENUM_InputDevices device);
 	void Event_On_Security_Code_Sent();
 	void Event_Send_Security_Code();
 	void ExecuteUbergraph_UI_Prompt_SignIn(int32 EntryPoint);

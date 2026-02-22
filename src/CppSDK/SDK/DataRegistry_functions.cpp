@@ -21,10 +21,10 @@ namespace SDK
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // const struct FDataRegistryId&           ItemID                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(const struct FDataRegistryId& ItemID, const struct FDataRegistryLookup& ResolvedLookup, EDataRegistryAcquireStatus status)>AcquireCallback                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const struct FDataRegistryId& ItemID, const struct FDataRegistryLookup& ResolvedLookup, EDataRegistryAcquireStatus Status)>AcquireCallback                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UDataRegistrySubsystem::AcquireItemBP(const struct FDataRegistryId& ItemID, TDelegate<void(const struct FDataRegistryId& ItemID, const struct FDataRegistryLookup& ResolvedLookup, EDataRegistryAcquireStatus status)> AcquireCallback)
+bool UDataRegistrySubsystem::AcquireItemBP(const struct FDataRegistryId& ItemID, TDelegate<void(const struct FDataRegistryId& ItemID, const struct FDataRegistryLookup& ResolvedLookup, EDataRegistryAcquireStatus Status)> AcquireCallback)
 {
 	static class UFunction* Func = nullptr;
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "GeometryScriptingCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -5135,6 +5135,258 @@ public:
 };
 DUMPER7_ASSERTS_GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount;
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiply
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply final
+{
+public:
+	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiplyInPlace
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace final
+{
+public:
+	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0008(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiply
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply final
+{
+public:
+	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiplyInPlace
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace final
+{
+public:
+	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0008(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlend
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarBlend final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarBlend;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlendInPlace
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvert
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarInvert final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        Numerator;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SetOnFailure;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Epsilon;                                           // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarInvert;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvertInPlace
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        Numerator;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SetOnFailure;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Epsilon;                                           // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiply
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ConstantMultiplier;                                // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiplyInPlace
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        ConstantMultiplier;                                // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiply
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ScalarMultiplier;                                  // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiplyInPlace
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace final
+{
+public:
+	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        ScalarMultiplier;                                  // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlend
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorBlend final
+{
+public:
+	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorBlend;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlendInPlace
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace final
+{
+public:
+	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorCross
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorCross final
+{
+public:
+	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorCross;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorDot
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorDot final
+{
+public:
+	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorDot;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorInverseTransformInPlace
+// 0x0080 (0x0080 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorInverseTransformInPlace final
+{
+public:
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAsPosition;                                       // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorInverseTransformInPlace;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorLength
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorLength final
+{
+public:
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorLength;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorNormalizeInPlace
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace final
+{
+public:
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVector                                SetOnFailure;                                      // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorPlaneProjectInPlace
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorPlaneProjectInPlace final
+{
+public:
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FPlane                                 Plane;                                             // 0x0010(0x0020)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorPlaneProjectInPlace;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorToScalar
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorToScalar final
+{
+public:
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ConstantX;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantY;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ConstantZ;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorToScalar;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorTransformInPlace
+// 0x0080 (0x0080 - 0x0000)
+struct GeometryScriptLibrary_VectorMathFunctions_VectorTransformInPlace final
+{
+public:
+	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAsPosition;                                       // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorTransformInPlace;
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshSpatial.BuildBVHForMesh
 // 0x0038 (0x0038 - 0x0000)
 struct GeometryScriptLibrary_MeshSpatial_BuildBVHForMesh final
@@ -5300,6 +5552,250 @@ public:
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GeometryScriptLibrary_MeshSubdivideFunctions_ApplyUniformTessellation;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.Conv_ArrayOfVector2DToGeometryScriptPolyPath
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_Conv_ArrayOfVector2DToGeometryScriptPolyPath final
+{
+public:
+	TArray<struct FVector2D>                      PathVertices;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_Conv_ArrayOfVector2DToGeometryScriptPolyPath;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.Conv_ArrayToGeometryScriptPolyPath
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_Conv_ArrayToGeometryScriptPolyPath final
+{
+public:
+	TArray<struct FVector>                        PathVertices;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_Conv_ArrayToGeometryScriptPolyPath;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.Conv_GeometryScriptPolyPathToArray
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_Conv_GeometryScriptPolyPathToArray final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_Conv_GeometryScriptPolyPathToArray;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.Conv_GeometryScriptPolyPathToArrayOfVector2D
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_Conv_GeometryScriptPolyPathToArrayOfVector2D final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_Conv_GeometryScriptPolyPathToArrayOfVector2D;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.ConvertArrayOfVector2DToPolyPath
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_ConvertArrayOfVector2DToPolyPath final
+{
+public:
+	TArray<struct FVector2D>                      VertexArray;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0010(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_ConvertArrayOfVector2DToPolyPath;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.ConvertArrayToPolyPath
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_ConvertArrayToPolyPath final
+{
+public:
+	TArray<struct FVector>                        VertexArray;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0010(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_ConvertArrayToPolyPath;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.ConvertPolyPathToArray
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_ConvertPolyPathToArray final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        VertexArray;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_ConvertPolyPathToArray;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.ConvertPolyPathToArrayOfVector2D
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_ConvertPolyPathToArrayOfVector2D final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      VertexArray;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_ConvertPolyPathToArrayOfVector2D;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.ConvertSplineToPolyPath
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_ConvertSplineToPolyPath final
+{
+public:
+	const class USplineComponent*                 Spline;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0008(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSplineSamplingOptions   SamplingOptions;                                   // 0x0020(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_ConvertSplineToPolyPath;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.CreateArcPath2D
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_CreateArcPath2D final
+{
+public:
+	struct FVector2D                              Center;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPoints;                                         // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         startAngle;                                        // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         endAngle;                                          // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_CreateArcPath2D;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.CreateArcPath3D
+// 0x0090 (0x0090 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_CreateArcPath3D final
+{
+public:
+	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x0060(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPoints;                                         // 0x0064(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         startAngle;                                        // 0x0068(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         endAngle;                                          // 0x006C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0070(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_CreateArcPath3D;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.CreateCirclePath2D
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_CreateCirclePath2D final
+{
+public:
+	struct FVector2D                              Center;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPoints;                                         // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_CreateCirclePath2D;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.CreateCirclePath3D
+// 0x0080 (0x0080 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_CreateCirclePath3D final
+{
+public:
+	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x0060(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPoints;                                         // 0x0064(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0068(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_CreateCirclePath3D;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.FlattenTo2DOnAxis
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_FlattenTo2DOnAxis final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	EGeometryScriptAxis                           DropAxis;                                          // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_FlattenTo2DOnAxis;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetNearestVertexIndex
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_GetNearestVertexIndex final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	struct FVector                                Point;                                             // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetNearestVertexIndex;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetPolyPathArcLength
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathArcLength final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetPolyPathArcLength;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetPolyPathLastIndex
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathLastIndex final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetPolyPathLastIndex;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetPolyPathNumVertices
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathNumVertices final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetPolyPathNumVertices;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetPolyPathTangent
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathTangent final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValidIndex;                                     // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetPolyPathTangent;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetPolyPathVertex
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathVertex final
+{
+public:
+	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValidIndex;                                     // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetPolyPathVertex;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.SampleSplineToTransforms
+// 0x00B0 (0x00B0 - 0x0000)
+struct GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms final
+{
+public:
+	const class USplineComponent*                 Spline;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Frames;                                            // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<double>                                FrameTimes;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSplineSamplingOptions   SamplingOptions;                                   // 0x0028(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             RelativeTransform;                                 // 0x0040(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIncludeScale;                                     // 0x00A0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00A1(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A2[0xE];                                       // 0x00A2(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms;
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshTransformFunctions.RotateMesh
 // 0x0048 (0x0048 - 0x0000)
@@ -5964,6 +6460,185 @@ public:
 };
 DUMPER7_ASSERTS_GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify;
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.FindBoxBoxIntersection
+// 0x00B0 (0x00B0 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection final
+{
+public:
+	struct FBox                                   Box1;                                              // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   Box2;                                              // 0x0038(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsIntersecting;                                   // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBox                                   ReturnValue;                                       // 0x0078(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.FindClosestPointOnBox
+// 0x0070 (0x0070 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox final
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Point;                                             // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInside;                                         // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0058(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxBoxDistance
+// 0x0078 (0x0078 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance final
+{
+public:
+	struct FBox                                   Box1;                                              // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   Box2;                                              // 0x0038(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxCenterSize
+// 0x0068 (0x0068 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize final
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Center;                                            // 0x0038(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Dimensions;                                        // 0x0050(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxCorner
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxCorner final
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         CornerIndex;                                       // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxCorner;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxFaceCenter
+// 0x0070 (0x0070 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter final
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         FaceIndex;                                         // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                FaceNormal;                                        // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0058(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxPointDistance
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance final
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Point;                                             // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxVolumeArea
+// 0x0048 (0x0048 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea final
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        Volume;                                            // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SurfaceArea;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetExpandedBox
+// 0x0088 (0x0088 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetExpandedBox final
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                ExpandBy;                                          // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x0050(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetExpandedBox;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetTransformedBox
+// 0x00E0 (0x00E0 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetTransformedBox final
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0040(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x00A0(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetTransformedBox;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.MakeBoxFromCenterExtents
+// 0x0068 (0x0068 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents final
+{
+public:
+	struct FVector                                Center;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Extents;                                           // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x0030(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.MakeBoxFromCenterSize
+// 0x0068 (0x0068 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize final
+{
+public:
+	struct FVector                                Center;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Dimensions;                                        // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x0030(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.TestBoxBoxIntersection
+// 0x0078 (0x0078 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection final
+{
+public:
+	struct FBox                                   Box1;                                              // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   Box2;                                              // 0x0038(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.TestBoxSphereIntersection
+// 0x0060 (0x0060 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection final
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                SphereCenter;                                      // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SphereRadius;                                      // 0x0050(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection;
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.TestPointInsideBox
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_TestPointInsideBox final
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Point;                                             // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConsiderOnBoxAsInside;                            // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0051(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_TestPointInsideBox;
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions.DownsamplePoints
 // 0x0050 (0x0050 - 0x0000)
 struct GeometryScriptLibrary_PointSetSamplingFunctions_DownsamplePoints final
@@ -6528,250 +7203,6 @@ public:
 };
 DUMPER7_ASSERTS_GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion;
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.Conv_ArrayOfVector2DToGeometryScriptPolyPath
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_Conv_ArrayOfVector2DToGeometryScriptPolyPath final
-{
-public:
-	TArray<struct FVector2D>                      PathVertices;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_Conv_ArrayOfVector2DToGeometryScriptPolyPath;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.Conv_ArrayToGeometryScriptPolyPath
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_Conv_ArrayToGeometryScriptPolyPath final
-{
-public:
-	TArray<struct FVector>                        PathVertices;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_Conv_ArrayToGeometryScriptPolyPath;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.Conv_GeometryScriptPolyPathToArray
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_Conv_GeometryScriptPolyPathToArray final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_Conv_GeometryScriptPolyPathToArray;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.Conv_GeometryScriptPolyPathToArrayOfVector2D
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_Conv_GeometryScriptPolyPathToArrayOfVector2D final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	TArray<struct FVector2D>                      ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_Conv_GeometryScriptPolyPathToArrayOfVector2D;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.ConvertArrayOfVector2DToPolyPath
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_ConvertArrayOfVector2DToPolyPath final
-{
-public:
-	TArray<struct FVector2D>                      VertexArray;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0010(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_ConvertArrayOfVector2DToPolyPath;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.ConvertArrayToPolyPath
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_ConvertArrayToPolyPath final
-{
-public:
-	TArray<struct FVector>                        VertexArray;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0010(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_ConvertArrayToPolyPath;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.ConvertPolyPathToArray
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_ConvertPolyPathToArray final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        VertexArray;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_ConvertPolyPathToArray;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.ConvertPolyPathToArrayOfVector2D
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_ConvertPolyPathToArrayOfVector2D final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	TArray<struct FVector2D>                      VertexArray;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_ConvertPolyPathToArrayOfVector2D;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.ConvertSplineToPolyPath
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_ConvertSplineToPolyPath final
-{
-public:
-	const class USplineComponent*                 Spline;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0008(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptSplineSamplingOptions   SamplingOptions;                                   // 0x0020(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_ConvertSplineToPolyPath;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.CreateArcPath2D
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_CreateArcPath2D final
-{
-public:
-	struct FVector2D                              Center;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Radius;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumPoints;                                         // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         startAngle;                                        // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         endAngle;                                          // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_CreateArcPath2D;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.CreateArcPath3D
-// 0x0090 (0x0090 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_CreateArcPath3D final
-{
-public:
-	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Radius;                                            // 0x0060(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumPoints;                                         // 0x0064(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         startAngle;                                        // 0x0068(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         endAngle;                                          // 0x006C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0070(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_CreateArcPath3D;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.CreateCirclePath2D
-// 0x0030 (0x0030 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_CreateCirclePath2D final
-{
-public:
-	struct FVector2D                              Center;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Radius;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumPoints;                                         // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_CreateCirclePath2D;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.CreateCirclePath3D
-// 0x0080 (0x0080 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_CreateCirclePath3D final
-{
-public:
-	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Radius;                                            // 0x0060(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumPoints;                                         // 0x0064(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0068(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_CreateCirclePath3D;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.FlattenTo2DOnAxis
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_FlattenTo2DOnAxis final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	EGeometryScriptAxis                           DropAxis;                                          // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_FlattenTo2DOnAxis;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetNearestVertexIndex
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_GetNearestVertexIndex final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	struct FVector                                Point;                                             // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetNearestVertexIndex;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetPolyPathArcLength
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathArcLength final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetPolyPathArcLength;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetPolyPathLastIndex
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathLastIndex final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetPolyPathLastIndex;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetPolyPathNumVertices
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathNumVertices final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetPolyPathNumVertices;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetPolyPathTangent
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathTangent final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsValidIndex;                                     // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetPolyPathTangent;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.GetPolyPathVertex
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathVertex final
-{
-public:
-	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
-	int32                                         Index_0;                                           // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsValidIndex;                                     // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_GetPolyPathVertex;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.SampleSplineToTransforms
-// 0x00B0 (0x00B0 - 0x0000)
-struct GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms final
-{
-public:
-	const class USplineComponent*                 Spline;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FTransform>                     Frames;                                            // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<double>                                FrameTimes;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FGeometryScriptSplineSamplingOptions   SamplingOptions;                                   // 0x0028(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             RelativeTransform;                                 // 0x0040(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncludeScale;                                     // 0x00A0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00A1(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A2[0xE];                                       // 0x00A2(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms;
-
 // Function GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions.CopyCollisionMeshesFromObject
 // 0x00A0 (0x00A0 - 0x0000)
 struct GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject final
@@ -7078,185 +7509,6 @@ public:
 };
 DUMPER7_ASSERTS_GeometryScriptLibrary_RayFunctions_MakeRayFromPoints;
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.FindBoxBoxIntersection
-// 0x00B0 (0x00B0 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection final
-{
-public:
-	struct FBox                                   Box1;                                              // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBox                                   Box2;                                              // 0x0038(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bIsIntersecting;                                   // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBox                                   ReturnValue;                                       // 0x0078(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.FindClosestPointOnBox
-// 0x0070 (0x0070 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox final
-{
-public:
-	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Point;                                             // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInside;                                         // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0058(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxBoxDistance
-// 0x0078 (0x0078 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance final
-{
-public:
-	struct FBox                                   Box1;                                              // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBox                                   Box2;                                              // 0x0038(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxCenterSize
-// 0x0068 (0x0068 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize final
-{
-public:
-	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Center;                                            // 0x0038(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Dimensions;                                        // 0x0050(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxCorner
-// 0x0058 (0x0058 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_GetBoxCorner final
-{
-public:
-	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         CornerIndex;                                       // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReturnValue;                                       // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxCorner;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxFaceCenter
-// 0x0070 (0x0070 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter final
-{
-public:
-	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         FaceIndex;                                         // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                FaceNormal;                                        // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0058(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxPointDistance
-// 0x0058 (0x0058 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance final
-{
-public:
-	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Point;                                             // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxVolumeArea
-// 0x0048 (0x0048 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea final
-{
-public:
-	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	double                                        Volume;                                            // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        SurfaceArea;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetExpandedBox
-// 0x0088 (0x0088 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_GetExpandedBox final
-{
-public:
-	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                ExpandBy;                                          // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   ReturnValue;                                       // 0x0050(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetExpandedBox;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetTransformedBox
-// 0x00E0 (0x00E0 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_GetTransformedBox final
-{
-public:
-	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Transform;                                         // 0x0040(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   ReturnValue;                                       // 0x00A0(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_GetTransformedBox;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.MakeBoxFromCenterExtents
-// 0x0068 (0x0068 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents final
-{
-public:
-	struct FVector                                Center;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Extents;                                           // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   ReturnValue;                                       // 0x0030(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.MakeBoxFromCenterSize
-// 0x0068 (0x0068 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize final
-{
-public:
-	struct FVector                                Center;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Dimensions;                                        // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   ReturnValue;                                       // 0x0030(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.TestBoxBoxIntersection
-// 0x0078 (0x0078 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection final
-{
-public:
-	struct FBox                                   Box1;                                              // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBox                                   Box2;                                              // 0x0038(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.TestBoxSphereIntersection
-// 0x0060 (0x0060 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection final
-{
-public:
-	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                SphereCenter;                                      // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        SphereRadius;                                      // 0x0050(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.TestPointInsideBox
-// 0x0058 (0x0058 - 0x0000)
-struct GeometryScriptLibrary_BoxFunctions_TestPointInsideBox final
-{
-public:
-	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Point;                                             // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bConsiderOnBoxAsInside;                            // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0051(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_BoxFunctions_TestPointInsideBox;
-
 // Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTexture2DAtUVPositions
 // 0x0058 (0x0058 - 0x0000)
 struct GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions final
@@ -7282,258 +7534,6 @@ public:
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0050(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiply
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply final
-{
-public:
-	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiply;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiplyInPlace
-// 0x0018 (0x0018 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace final
-{
-public:
-	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0008(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ConstantScalarMultiplyInPlace;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiply
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply final
-{
-public:
-	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiply;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantVectorMultiplyInPlace
-// 0x0018 (0x0018 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace final
-{
-public:
-	double                                        Constant;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0008(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ConstantVectorMultiplyInPlace;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlend
-// 0x0040 (0x0040 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarBlend final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarBlend;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarBlendInPlace
-// 0x0030 (0x0030 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarBlendInPlace;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvert
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarInvert final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        Numerator;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        SetOnFailure;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Epsilon;                                           // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarInvert;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarInvertInPlace
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        Numerator;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        SetOnFailure;                                      // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Epsilon;                                           // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarInvertInPlace;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiply
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        ConstantMultiplier;                                // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarMultiply;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarMultiplyInPlace
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ScalarListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        ConstantMultiplier;                                // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarMultiplyInPlace;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiply
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        ScalarMultiplier;                                  // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiply;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ScalarVectorMultiplyInPlace
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace final
-{
-public:
-	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        ScalarMultiplier;                                  // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_ScalarVectorMultiplyInPlace;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlend
-// 0x0040 (0x0040 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorBlend final
-{
-public:
-	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorBlend;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorBlendInPlace
-// 0x0030 (0x0030 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace final
-{
-public:
-	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	double                                        ConstantA;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantB;                                         // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorBlendInPlace;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorCross
-// 0x0030 (0x0030 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorCross final
-{
-public:
-	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorCross;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorDot
-// 0x0030 (0x0030 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorDot final
-{
-public:
-	struct FGeometryScriptVectorList              VectorListA;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptVectorList              VectorListB;                                       // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorDot;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorInverseTransformInPlace
-// 0x0080 (0x0080 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorInverseTransformInPlace final
-{
-public:
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAsPosition;                                       // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorInverseTransformInPlace;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorLength
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorLength final
-{
-public:
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorLength;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorNormalizeInPlace
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace final
-{
-public:
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FVector                                SetOnFailure;                                      // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorNormalizeInPlace;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorPlaneProjectInPlace
-// 0x0030 (0x0030 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorPlaneProjectInPlace final
-{
-public:
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FPlane                                 Plane;                                             // 0x0010(0x0020)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorPlaneProjectInPlace;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorToScalar
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorToScalar final
-{
-public:
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        ConstantX;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantY;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        ConstantZ;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptScalarList              ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorToScalar;
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.VectorTransformInPlace
-// 0x0080 (0x0080 - 0x0000)
-struct GeometryScriptLibrary_VectorMathFunctions_VectorTransformInPlace final
-{
-public:
-	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAsPosition;                                       // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_GeometryScriptLibrary_VectorMathFunctions_VectorTransformInPlace;
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_VolumeTextureBakeFunctions.BakeSignedDistanceToVolumeTexture
 // 0x0038 (0x0038 - 0x0000)

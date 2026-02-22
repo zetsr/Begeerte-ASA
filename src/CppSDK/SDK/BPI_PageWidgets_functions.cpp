@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BPI_PageWidgets.BPI_PageWidgets_C.OnSearch
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Search_Input                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void IBPI_PageWidgets_C::OnSearch(const class FText& Search_Input)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_PageWidgets_C", "OnSearch");
-
-	Params::BPI_PageWidgets_C_OnSearch Parms{};
-
-	Parms.Search_Input = std::move(Search_Input);
-
-	AsUObject()->ProcessEvent(Func, &Parms);
-}
-
-
 // Function BPI_PageWidgets.BPI_PageWidgets_C.UpdateSearch
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void IBPI_PageWidgets_C::UpdateSearch(const class FText& SearchInput)
 	Params::BPI_PageWidgets_C_UpdateSearch Parms{};
 
 	Parms.SearchInput = std::move(SearchInput);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_PageWidgets.BPI_PageWidgets_C.OnSearch
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Search_Input                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void IBPI_PageWidgets_C::OnSearch(const class FText& Search_Input)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_PageWidgets_C", "OnSearch");
+
+	Params::BPI_PageWidgets_C_OnSearch Parms{};
+
+	Parms.Search_Input = std::move(Search_Input);
 
 	AsUObject()->ProcessEvent(Func, &Parms);
 }

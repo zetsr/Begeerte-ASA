@@ -40,15 +40,6 @@ enum class ETargetingTraceType : uint8
 	ETargetingTraceType_MAX                  = 4,
 };
 
-// ScriptStruct TargetingSystem.TargetingAsyncTaskData
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FTargetingAsyncTaskData final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTargetingAsyncTaskData;
-
 // ScriptStruct TargetingSystem.TargetingRequestHandle
 // 0x0004 (0x0004 - 0x0000)
 struct alignas(0x04) FTargetingRequestHandle final
@@ -118,6 +109,15 @@ public:
 	TDelegate<void(const struct FTargetingRequestHandle& TargetingRequestHandle)> TargetingRequestDynamicDelegate; // 0x0020(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FTargetingRequestData;
+
+// ScriptStruct TargetingSystem.TargetingAsyncTaskData
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x04) FTargetingAsyncTaskData final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTargetingAsyncTaskData;
 
 // ScriptStruct TargetingSystem.TargetingImmediateTaskData
 // 0x0001 (0x0001 - 0x0000)

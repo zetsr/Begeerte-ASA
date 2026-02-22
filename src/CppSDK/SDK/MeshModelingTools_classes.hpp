@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "ModelingOperators_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "ModelingComponents_structs.hpp"
-#include "ModelingComponents_classes.hpp"
 #include "MeshModelingTools_structs.hpp"
 #include "InteractiveToolsFramework_classes.hpp"
-#include "ModelingOperators_structs.hpp"
+#include "ModelingComponents_structs.hpp"
+#include "ModelingComponents_classes.hpp"
 
 
 namespace SDK
@@ -78,26 +78,6 @@ public:
 };
 DUMPER7_ASSERTS_UPolyEditExtrudeEdgeActivityProperties;
 
-// Class MeshModelingTools.DrawPolygonToolBuilder
-// 0x0000 (0x0028 - 0x0028)
-class UDrawPolygonToolBuilder final : public UInteractiveToolBuilder
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("DrawPolygonToolBuilder")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"DrawPolygonToolBuilder")
-	}
-	static class UDrawPolygonToolBuilder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDrawPolygonToolBuilder>();
-	}
-};
-DUMPER7_ASSERTS_UDrawPolygonToolBuilder;
-
 // Class MeshModelingTools.PolyEditExtrudeEdgeActivity
 // 0x02C0 (0x02F0 - 0x0030)
 class alignas(0x10) UPolyEditExtrudeEdgeActivity final : public UInteractiveToolActivity
@@ -128,69 +108,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPolyEditExtrudeEdgeActivity;
-
-// Class MeshModelingTools.EditMeshPolygonsToolActionPropertySet
-// 0x0008 (0x00B0 - 0x00A8)
-class UEditMeshPolygonsToolActionPropertySet : public UInteractiveToolPropertySet
-{
-public:
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EditMeshPolygonsToolActionPropertySet")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EditMeshPolygonsToolActionPropertySet")
-	}
-	static class UEditMeshPolygonsToolActionPropertySet* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEditMeshPolygonsToolActionPropertySet>();
-	}
-};
-DUMPER7_ASSERTS_UEditMeshPolygonsToolActionPropertySet;
-
-// Class MeshModelingTools.EditMeshPolygonsToolActions
-// 0x0000 (0x00B0 - 0x00B0)
-class UEditMeshPolygonsToolActions final : public UEditMeshPolygonsToolActionPropertySet
-{
-public:
-	void Bevel();
-	void CutFaces();
-	void Decompose();
-	void Delete();
-	void Disconnect();
-	void Duplicate();
-	void Extrude();
-	void Flip();
-	void InsertEdge();
-	void InsertEdgeLoop();
-	void Inset();
-	void Merge();
-	void Offset();
-	void Outset();
-	void PushPull();
-	void RecalcNormals();
-	void Retriangulate();
-	void SimplifyByGroups();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EditMeshPolygonsToolActions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EditMeshPolygonsToolActions")
-	}
-	static class UEditMeshPolygonsToolActions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEditMeshPolygonsToolActions>();
-	}
-};
-DUMPER7_ASSERTS_UEditMeshPolygonsToolActions;
 
 // Class MeshModelingTools.AddPrimitiveToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -596,46 +513,6 @@ public:
 };
 DUMPER7_ASSERTS_UAddCylinderPrimitiveTool;
 
-// Class MeshModelingTools.ModifyGeometrySelectionCommand
-// 0x0000 (0x0028 - 0x0028)
-class UModifyGeometrySelectionCommand : public UGeometrySelectionEditCommand
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ModifyGeometrySelectionCommand")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ModifyGeometrySelectionCommand")
-	}
-	static class UModifyGeometrySelectionCommand* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UModifyGeometrySelectionCommand>();
-	}
-};
-DUMPER7_ASSERTS_UModifyGeometrySelectionCommand;
-
-// Class MeshModelingTools.ModifyGeometrySelectionCommand_ExpandToConnected
-// 0x0000 (0x0028 - 0x0028)
-class UModifyGeometrySelectionCommand_ExpandToConnected final : public UModifyGeometrySelectionCommand
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ModifyGeometrySelectionCommand_ExpandToConnected")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ModifyGeometrySelectionCommand_ExpandToConnected")
-	}
-	static class UModifyGeometrySelectionCommand_ExpandToConnected* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UModifyGeometrySelectionCommand_ExpandToConnected>();
-	}
-};
-DUMPER7_ASSERTS_UModifyGeometrySelectionCommand_ExpandToConnected;
-
 // Class MeshModelingTools.AddCapsulePrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
 class UAddCapsulePrimitiveTool final : public UAddPrimitiveTool
@@ -675,33 +552,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAddConePrimitiveTool;
-
-// Class MeshModelingTools.CombineMeshesToolProperties
-// 0x0028 (0x00D0 - 0x00A8)
-class UCombineMeshesToolProperties final : public UInteractiveToolPropertySet
-{
-public:
-	bool                                          bIsDuplicateMode;                                  // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	EBaseCreateFromSelectedTargetType             OutputWriteTo;                                     // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OutputNewName;                                     // 0x00B0(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OutputExistingName;                                // 0x00C0(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CombineMeshesToolProperties")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CombineMeshesToolProperties")
-	}
-	static class UCombineMeshesToolProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCombineMeshesToolProperties>();
-	}
-};
-DUMPER7_ASSERTS_UCombineMeshesToolProperties;
 
 // Class MeshModelingTools.AddRectanglePrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -846,6 +696,33 @@ public:
 };
 DUMPER7_ASSERTS_UCombineMeshesToolBuilder;
 
+// Class MeshModelingTools.CombineMeshesToolProperties
+// 0x0028 (0x00D0 - 0x00A8)
+class UCombineMeshesToolProperties final : public UInteractiveToolPropertySet
+{
+public:
+	bool                                          bIsDuplicateMode;                                  // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	EBaseCreateFromSelectedTargetType             OutputWriteTo;                                     // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OutputNewName;                                     // 0x00B0(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OutputExistingName;                                // 0x00C0(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CombineMeshesToolProperties")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CombineMeshesToolProperties")
+	}
+	static class UCombineMeshesToolProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCombineMeshesToolProperties>();
+	}
+};
+DUMPER7_ASSERTS_UCombineMeshesToolProperties;
+
 // Class MeshModelingTools.CombineMeshesTool
 // 0x0028 (0x00E0 - 0x00B8)
 class UCombineMeshesTool final : public UMultiSelectionMeshEditingTool
@@ -913,6 +790,26 @@ public:
 };
 DUMPER7_ASSERTS_UDisconnectGeometrySelectionCommand;
 
+// Class MeshModelingTools.ModifyGeometrySelectionCommand
+// 0x0000 (0x0028 - 0x0028)
+class UModifyGeometrySelectionCommand : public UGeometrySelectionEditCommand
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ModifyGeometrySelectionCommand")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ModifyGeometrySelectionCommand")
+	}
+	static class UModifyGeometrySelectionCommand* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UModifyGeometrySelectionCommand>();
+	}
+};
+DUMPER7_ASSERTS_UModifyGeometrySelectionCommand;
+
 // Class MeshModelingTools.ModifyGeometrySelectionCommand_Invert
 // 0x0000 (0x0028 - 0x0028)
 class UModifyGeometrySelectionCommand_Invert final : public UModifyGeometrySelectionCommand
@@ -932,6 +829,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UModifyGeometrySelectionCommand_Invert;
+
+// Class MeshModelingTools.ModifyGeometrySelectionCommand_ExpandToConnected
+// 0x0000 (0x0028 - 0x0028)
+class UModifyGeometrySelectionCommand_ExpandToConnected final : public UModifyGeometrySelectionCommand
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ModifyGeometrySelectionCommand_ExpandToConnected")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ModifyGeometrySelectionCommand_ExpandToConnected")
+	}
+	static class UModifyGeometrySelectionCommand_ExpandToConnected* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UModifyGeometrySelectionCommand_ExpandToConnected>();
+	}
+};
+DUMPER7_ASSERTS_UModifyGeometrySelectionCommand_ExpandToConnected;
 
 // Class MeshModelingTools.ModifyGeometrySelectionCommand_InvertConnected
 // 0x0000 (0x0028 - 0x0028)
@@ -1347,6 +1264,26 @@ public:
 };
 DUMPER7_ASSERTS_UDrawAndRevolveTool;
 
+// Class MeshModelingTools.DrawPolygonToolBuilder
+// 0x0000 (0x0028 - 0x0028)
+class UDrawPolygonToolBuilder final : public UInteractiveToolBuilder
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("DrawPolygonToolBuilder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DrawPolygonToolBuilder")
+	}
+	static class UDrawPolygonToolBuilder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDrawPolygonToolBuilder>();
+	}
+};
+DUMPER7_ASSERTS_UDrawPolygonToolBuilder;
+
 // Class MeshModelingTools.DrawPolygonToolStandardProperties
 // 0x0018 (0x00C0 - 0x00A8)
 class UDrawPolygonToolStandardProperties final : public UInteractiveToolPropertySet
@@ -1544,6 +1481,29 @@ public:
 };
 DUMPER7_ASSERTS_UEditMeshPolygonsSelectionModeToolBuilder;
 
+// Class MeshModelingTools.EditMeshPolygonsToolActionPropertySet
+// 0x0008 (0x00B0 - 0x00A8)
+class UEditMeshPolygonsToolActionPropertySet : public UInteractiveToolPropertySet
+{
+public:
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EditMeshPolygonsToolActionPropertySet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditMeshPolygonsToolActionPropertySet")
+	}
+	static class UEditMeshPolygonsToolActionPropertySet* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEditMeshPolygonsToolActionPropertySet>();
+	}
+};
+DUMPER7_ASSERTS_UEditMeshPolygonsToolActionPropertySet;
+
 // Class MeshModelingTools.PolyEditTopologyProperties
 // 0x0010 (0x00C0 - 0x00B0)
 class UPolyEditTopologyProperties final : public UEditMeshPolygonsToolActionPropertySet
@@ -1571,6 +1531,46 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPolyEditTopologyProperties;
+
+// Class MeshModelingTools.EditMeshPolygonsToolActions
+// 0x0000 (0x00B0 - 0x00B0)
+class UEditMeshPolygonsToolActions final : public UEditMeshPolygonsToolActionPropertySet
+{
+public:
+	void Bevel();
+	void CutFaces();
+	void Decompose();
+	void Delete();
+	void Disconnect();
+	void Duplicate();
+	void Extrude();
+	void Flip();
+	void InsertEdge();
+	void InsertEdgeLoop();
+	void Inset();
+	void Merge();
+	void Offset();
+	void Outset();
+	void PushPull();
+	void RecalcNormals();
+	void Retriangulate();
+	void SimplifyByGroups();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EditMeshPolygonsToolActions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditMeshPolygonsToolActions")
+	}
+	static class UEditMeshPolygonsToolActions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEditMeshPolygonsToolActions>();
+	}
+};
+DUMPER7_ASSERTS_UEditMeshPolygonsToolActions;
 
 // Class MeshModelingTools.EditMeshPolygonsToolActions_Triangles
 // 0x0000 (0x00B0 - 0x00B0)

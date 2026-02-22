@@ -13,9 +13,9 @@
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "DataRegistry_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "DataRegistry_structs.hpp"
 
 
 namespace SDK
@@ -238,7 +238,7 @@ public:
 	uint8                                         Pad_30[0xB0];                                      // 0x0030(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static bool AcquireItemBP(const struct FDataRegistryId& ItemID, TDelegate<void(const struct FDataRegistryId& ItemID, const struct FDataRegistryLookup& ResolvedLookup, EDataRegistryAcquireStatus status)> AcquireCallback);
+	static bool AcquireItemBP(const struct FDataRegistryId& ItemID, TDelegate<void(const struct FDataRegistryId& ItemID, const struct FDataRegistryLookup& ResolvedLookup, EDataRegistryAcquireStatus Status)> AcquireCallback);
 	static class FString Conv_DataRegistryIdToString(const struct FDataRegistryId& DataRegistryId);
 	static class FString Conv_DataRegistryTypeToString(const struct FDataRegistryType& DataRegistryType);
 	static bool EqualEqual_DataRegistryId(const struct FDataRegistryId& A, const struct FDataRegistryId& B);

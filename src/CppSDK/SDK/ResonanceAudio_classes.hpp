@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "ResonanceAudio_structs.hpp"
 #include "AudioExtensions_classes.hpp"
+#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
@@ -128,6 +128,33 @@ public:
 };
 DUMPER7_ASSERTS_UResonanceAudioReverbPluginPreset;
 
+// Class ResonanceAudio.ResonanceAudioSettings
+// 0x0068 (0x0090 - 0x0028)
+class UResonanceAudioSettings final : public UObject
+{
+public:
+	struct FSoftObjectPath                        OutputSubmix;                                      // 0x0028(0x0020)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERaQualityMode                                QualityMode;                                       // 0x0048(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        GlobalReverbPreset;                                // 0x0050(0x0020)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        GlobalSourcePreset;                                // 0x0070(0x0020)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ResonanceAudioSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ResonanceAudioSettings")
+	}
+	static class UResonanceAudioSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UResonanceAudioSettings>();
+	}
+};
+DUMPER7_ASSERTS_UResonanceAudioSettings;
+
 // Class ResonanceAudio.ResonanceAudioSpatializationSourceSettings
 // 0x0028 (0x0050 - 0x0028)
 class UResonanceAudioSpatializationSourceSettings final : public USpatializationPluginSourceSettingsBase
@@ -166,33 +193,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UResonanceAudioSpatializationSourceSettings;
-
-// Class ResonanceAudio.ResonanceAudioSettings
-// 0x0068 (0x0090 - 0x0028)
-class UResonanceAudioSettings final : public UObject
-{
-public:
-	struct FSoftObjectPath                        OutputSubmix;                                      // 0x0028(0x0020)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERaQualityMode                                QualityMode;                                       // 0x0048(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        GlobalReverbPreset;                                // 0x0050(0x0020)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        GlobalSourcePreset;                                // 0x0070(0x0020)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ResonanceAudioSettings")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ResonanceAudioSettings")
-	}
-	static class UResonanceAudioSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UResonanceAudioSettings>();
-	}
-};
-DUMPER7_ASSERTS_UResonanceAudioSettings;
 
 }
 

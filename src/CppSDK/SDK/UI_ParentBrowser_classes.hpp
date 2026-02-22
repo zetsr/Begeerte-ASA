@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "cfcore_structs.hpp"
-#include "ENUM_SideTabs_structs.hpp"
-#include "ENUM_InputDevices_structs.hpp"
 #include "UI_BasePage_classes.hpp"
 #include "Engine_structs.hpp"
-#include "ENUM_TimeFilters_structs.hpp"
+#include "cfcore_structs.hpp"
+#include "ENUM_SideTabs_structs.hpp"
 #include "cfcore_ui_structs.hpp"
 #include "UMG_structs.hpp"
+#include "ENUM_TimeFilters_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "ENUM_InputDevices_structs.hpp"
 
 
 namespace SDK
@@ -149,7 +149,7 @@ public:
 	void SelectClass();
 	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void CheckWhichTextAppearsFirst(const class FText& NameOne, const class FText& NameTwo, bool* Name_One_Appears_First);
-	void Event_On_Input_Device_Changed(ENUM_InputDevices Device);
+	void Event_On_Input_Device_Changed(ENUM_InputDevices device);
 	void BndEvt__ParentPageWidget_SortBySelect_K2Node_ComponentBoundEvent_4_OnOptionSelected__DelegateSignature(const class FString& Option);
 	void Event_Update_Filter_By_Options(int64 Current_Class_Category_ID);
 	void UpdateSearch(const class FText& SearchInput);

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "ENUM_InputDevices_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "cfcore_structs.hpp"
+#include "ENUM_InputDevices_structs.hpp"
 
 
 namespace SDK::Params
@@ -52,7 +52,7 @@ DUMPER7_ASSERTS_UI_Verification_C_Event_On_Failed_To_Generate_Auth_Code;
 struct UI_Verification_C_Event_On_Input_Device_Changed final
 {
 public:
-	ENUM_InputDevices                             Device;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENUM_InputDevices                             device;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_UI_Verification_C_Event_On_Input_Device_Changed;
 
@@ -70,7 +70,7 @@ public:
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_5;                    // 0x0068(0x0014)()
 	ENUM_InputDevices                             Temp_byte_Variable;                                // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(ENUM_InputDevices Device)>     K2Node_CreateDelegate_OutputDelegate;              // 0x0080(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(ENUM_InputDevices device)>     K2Node_CreateDelegate_OutputDelegate;              // 0x0080(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])

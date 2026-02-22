@@ -1823,300 +1823,6 @@ struct FInputRayHit UScriptableToolsUtilityLibrary::MakeInputRayHit_Miss()
 }
 
 
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.GetActiveModifiers
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FScriptableToolModifierStates    ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FScriptableToolModifierStates UScriptableSingleClickTool::GetActiveModifiers()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "GetActiveModifiers");
-
-	Params::ScriptableSingleClickTool_GetActiveModifiers Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHitByClick
-// (Native, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FInputDeviceRay&           ClickPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UScriptableSingleClickTool::OnHitByClick(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "OnHitByClick");
-
-	Params::ScriptableSingleClickTool_OnHitByClick Parms{};
-
-	Parms.ClickPos = std::move(ClickPos);
-	Parms.Modifiers = std::move(Modifiers);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverBegin
-// (Native, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UScriptableSingleClickTool::OnHoverBegin(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "OnHoverBegin");
-
-	Params::ScriptableSingleClickTool_OnHoverBegin Parms{};
-
-	Parms.HoverPos = std::move(HoverPos);
-	Parms.Modifiers = std::move(Modifiers);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverEnd
-// (Native, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UScriptableSingleClickTool::OnHoverEnd(const struct FScriptableToolModifierStates& Modifiers)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "OnHoverEnd");
-
-	Params::ScriptableSingleClickTool_OnHoverEnd Parms{};
-
-	Parms.Modifiers = std::move(Modifiers);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverHitTest
-// (Native, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FInputRayHit                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FInputRayHit UScriptableSingleClickTool::OnHoverHitTest(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "OnHoverHitTest");
-
-	Params::ScriptableSingleClickTool_OnHoverHitTest Parms{};
-
-	Parms.HoverPos = std::move(HoverPos);
-	Parms.Modifiers = std::move(Modifiers);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverUpdate
-// (Native, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UScriptableSingleClickTool::OnHoverUpdate(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "OnHoverUpdate");
-
-	Params::ScriptableSingleClickTool_OnHoverUpdate Parms{};
-
-	Parms.HoverPos = std::move(HoverPos);
-	Parms.Modifiers = std::move(Modifiers);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.TestIfHitByClick
-// (Native, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FInputDeviceRay&           ClickPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FInputRayHit                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FInputRayHit UScriptableSingleClickTool::TestIfHitByClick(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "TestIfHitByClick");
-
-	Params::ScriptableSingleClickTool_TestIfHitByClick Parms{};
-
-	Parms.ClickPos = std::move(ClickPos);
-	Parms.Modifiers = std::move(Modifiers);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.InActiveHover
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UScriptableSingleClickTool::InActiveHover() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "InActiveHover");
-
-	Params::ScriptableSingleClickTool_InActiveHover Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsAltDown
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UScriptableSingleClickTool::IsAltDown() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "IsAltDown");
-
-	Params::ScriptableSingleClickTool_IsAltDown Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsCtrlDown
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UScriptableSingleClickTool::IsCtrlDown() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "IsCtrlDown");
-
-	Params::ScriptableSingleClickTool_IsCtrlDown Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsShiftDown
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UScriptableSingleClickTool::IsShiftDown() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ScriptableSingleClickTool", "IsShiftDown");
-
-	Params::ScriptableSingleClickTool_IsShiftDown Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ScriptableToolsFramework.ScriptableModularBehaviorTool.AddClickDragBehavior
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -2544,6 +2250,300 @@ bool UScriptableModularBehaviorTool::IsShiftDown() const
 		Func = Class->GetFunction("ScriptableModularBehaviorTool", "IsShiftDown");
 
 	Params::ScriptableModularBehaviorTool_IsShiftDown Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.GetActiveModifiers
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FScriptableToolModifierStates    ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FScriptableToolModifierStates UScriptableSingleClickTool::GetActiveModifiers()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "GetActiveModifiers");
+
+	Params::ScriptableSingleClickTool_GetActiveModifiers Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHitByClick
+// (Native, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FInputDeviceRay&           ClickPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UScriptableSingleClickTool::OnHitByClick(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "OnHitByClick");
+
+	Params::ScriptableSingleClickTool_OnHitByClick Parms{};
+
+	Parms.ClickPos = std::move(ClickPos);
+	Parms.Modifiers = std::move(Modifiers);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverBegin
+// (Native, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UScriptableSingleClickTool::OnHoverBegin(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "OnHoverBegin");
+
+	Params::ScriptableSingleClickTool_OnHoverBegin Parms{};
+
+	Parms.HoverPos = std::move(HoverPos);
+	Parms.Modifiers = std::move(Modifiers);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverEnd
+// (Native, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UScriptableSingleClickTool::OnHoverEnd(const struct FScriptableToolModifierStates& Modifiers)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "OnHoverEnd");
+
+	Params::ScriptableSingleClickTool_OnHoverEnd Parms{};
+
+	Parms.Modifiers = std::move(Modifiers);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverHitTest
+// (Native, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FInputRayHit                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FInputRayHit UScriptableSingleClickTool::OnHoverHitTest(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "OnHoverHitTest");
+
+	Params::ScriptableSingleClickTool_OnHoverHitTest Parms{};
+
+	Parms.HoverPos = std::move(HoverPos);
+	Parms.Modifiers = std::move(Modifiers);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.OnHoverUpdate
+// (Native, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FInputDeviceRay&           HoverPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UScriptableSingleClickTool::OnHoverUpdate(const struct FInputDeviceRay& HoverPos, const struct FScriptableToolModifierStates& Modifiers)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "OnHoverUpdate");
+
+	Params::ScriptableSingleClickTool_OnHoverUpdate Parms{};
+
+	Parms.HoverPos = std::move(HoverPos);
+	Parms.Modifiers = std::move(Modifiers);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.TestIfHitByClick
+// (Native, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FInputDeviceRay&           ClickPos                                               (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FScriptableToolModifierStates&Modifiers                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FInputRayHit                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FInputRayHit UScriptableSingleClickTool::TestIfHitByClick(const struct FInputDeviceRay& ClickPos, const struct FScriptableToolModifierStates& Modifiers)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "TestIfHitByClick");
+
+	Params::ScriptableSingleClickTool_TestIfHitByClick Parms{};
+
+	Parms.ClickPos = std::move(ClickPos);
+	Parms.Modifiers = std::move(Modifiers);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.InActiveHover
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UScriptableSingleClickTool::InActiveHover() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "InActiveHover");
+
+	Params::ScriptableSingleClickTool_InActiveHover Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsAltDown
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UScriptableSingleClickTool::IsAltDown() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "IsAltDown");
+
+	Params::ScriptableSingleClickTool_IsAltDown Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsCtrlDown
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UScriptableSingleClickTool::IsCtrlDown() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "IsCtrlDown");
+
+	Params::ScriptableSingleClickTool_IsCtrlDown Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ScriptableToolsFramework.ScriptableSingleClickTool.IsShiftDown
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UScriptableSingleClickTool::IsShiftDown() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ScriptableSingleClickTool", "IsShiftDown");
+
+	Params::ScriptableSingleClickTool_IsShiftDown Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

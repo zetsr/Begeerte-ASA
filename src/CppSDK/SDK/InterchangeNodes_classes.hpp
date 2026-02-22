@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_classes.hpp"
 #include "InterchangeCore_classes.hpp"
 #include "InterchangeNodes_structs.hpp"
-#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -122,7 +122,7 @@ public:
 
 public:
 	bool SetCustomActorDependencyUid(const class FString& DependencyUid);
-	bool SetCustomAnimationPayloadKey(const class FString& InUniqueId, const EInterchangeAnimationPayLoadType& InType);
+	bool SetCustomAnimationPayloadKey(const class FString& InUniqueID, const EInterchangeAnimationPayLoadType& InType);
 	bool SetCustomFrameCount(const int32& AttributeValue);
 	bool SetCustomPropertyTrack(EInterchangePropertyTracks PropertyTrack);
 
@@ -183,8 +183,8 @@ public:
 	uint8                                         Pad_70[0x220];                                     // 0x0070(0x0220)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	bool SetAnimationPayloadKeyForMorphTargetNodeUid(const class FString& MorphTargetNodeUid, const class FString& InUniqueId, const EInterchangeAnimationPayLoadType& InType);
-	bool SetAnimationPayloadKeyForSceneNodeUid(const class FString& SceneNodeUid, const class FString& InUniqueId, const EInterchangeAnimationPayLoadType& InType);
+	bool SetAnimationPayloadKeyForMorphTargetNodeUid(const class FString& MorphTargetNodeUid, const class FString& InUniqueID, const EInterchangeAnimationPayLoadType& InType);
+	bool SetAnimationPayloadKeyForSceneNodeUid(const class FString& SceneNodeUid, const class FString& InUniqueID, const EInterchangeAnimationPayLoadType& InType);
 	bool SetCustomAnimationSampleRate(const double& SampleRate);
 	bool SetCustomAnimationStartTime(const double& StartTime);
 	bool SetCustomAnimationStopTime(const double& StopTime);

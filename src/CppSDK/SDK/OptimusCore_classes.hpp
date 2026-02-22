@@ -12,9 +12,9 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
 #include "ComputeFramework_structs.hpp"
 #include "ComputeFramework_classes.hpp"
+#include "Engine_classes.hpp"
 #include "OptimusCore_structs.hpp"
 
 
@@ -2748,7 +2748,7 @@ public:
 	TMap<TWeakObjectPtr<class UComputeDataInterface>, struct FOptimusDataInterfacePropertyOverrideInfo> DataInterfacePropertyOverrideMap; // 0x0060(0x0050)(Protected, NativeAccessSpecifierProtected)
 	TMap<struct FOptimusValueIdentifier, struct FOptimusValueDescription> ValueMap;                  // 0x00B0(0x0050)(Protected, NativeAccessSpecifierProtected)
 	class UOptimusActionStack*                    ActionStack;                                       // 0x0100(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
-	EOptimusDeformerStatus                        status;                                            // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EOptimusDeformerStatus                        Status;                                            // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UOptimusNodeGraph*>              Graphs;                                            // 0x0110(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	class UOptimusComponentSourceBindingContainer* Bindings;                                         // 0x0120(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)

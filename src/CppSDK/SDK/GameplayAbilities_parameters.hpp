@@ -19,17 +19,6 @@
 namespace SDK::Params
 {
 
-// Function GameplayAbilities.AbilityAsync_WaitGameplayTagCountChanged.WaitGameplayTagCountChangedOnActor
-// 0x0018 (0x0018 - 0x0000)
-struct AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor final
-{
-public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           Tag;                                               // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityAsync_WaitGameplayTagCountChanged* ReturnValue;                                    // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor;
-
 // Function GameplayAbilities.AbilitySystemCheatManagerExtension.AbilityActivate
 // 0x0010 (0x0010 - 0x0000)
 struct AbilitySystemCheatManagerExtension_AbilityActivate final
@@ -76,6 +65,17 @@ public:
 	class FString                                 NameOrHandle;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AbilitySystemCheatManagerExtension_EffectRemove;
+
+// Function GameplayAbilities.AbilityAsync_WaitGameplayTagCountChanged.WaitGameplayTagCountChangedOnActor
+// 0x0018 (0x0018 - 0x0000)
+struct AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor final
+{
+public:
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           Tag;                                               // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityAsync_WaitGameplayTagCountChanged* ReturnValue;                                    // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor;
 
 // Function GameplayAbilities.AbilityTask_PlayAnimAndWait.CreatePlayAnimAndWaitProxy
 // 0x0040 (0x0040 - 0x0000)
