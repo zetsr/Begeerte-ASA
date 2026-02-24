@@ -33,83 +33,88 @@ std::string LuaManager::HttpRequest(const std::string& url) {
 
 void LuaManager::FetchWorkshopScripts() {
     std::thread([this]() {
-        // 请求 GitHub API 获取文件列表 JSON
-        std::string json = HttpRequest("https://api.github.com/repos/zetsr/Begeerte-ASA/contents/work_shop");
+        // --- 修复点 1: 进入无限循环 ---
+        while (true) {
+            // 请求 GitHub API 获取文件列表 JSON
+            std::string json = HttpRequest("https://api.github.com/repos/zetsr/Begeerte-ASA/contents/work_shop");
 
-        if (json.empty() || json.length() < 10) return;
+            // --- 修复点 2: 如果 API 请求失败，等待并重试 ---
+            if (json.empty() || json.length() < 10) {
+                // 等待 1 秒后重试，避免请求过快
+                std::this_thread::sleep_for(std::chrono::seconds(1));
+                continue;
+            }
 
-        std::vector<LuaScript> workshopList;
+            std::vector<LuaScript> workshopList;
+            size_t entryStart = 0;
+            size_t entryEnd = 0;
 
-        // 关键点：GitHub API 返回的是 [{...}, {...}]
-        // 我们按每个条目的分隔符 "}," 来定位每个文件的完整块
-        size_t entryStart = 0;
-        size_t entryEnd = 0;
+            // 解析 JSON 逻辑保持不变...
+            while ((entryStart = json.find("{", entryStart)) != std::string::npos) {
+                entryEnd = json.find("}", entryStart);
+                if (entryEnd == std::string::npos) break;
 
-        while ((entryStart = json.find("{", entryStart)) != std::string::npos) {
-            // 找到当前条目的结束位置
-            entryEnd = json.find("}", entryStart);
-            if (entryEnd == std::string::npos) break;
+                std::string entryBlock = json.substr(entryStart, entryEnd - entryStart);
+                std::string nameKey = "\"name\":\"";
+                size_t nPos = entryBlock.find(nameKey);
 
-            // 截取当前文件的完整 JSON 块，防止 cross-talk (跨条目解析错误)
-            std::string entryBlock = json.substr(entryStart, entryEnd - entryStart);
+                if (nPos != std::string::npos) {
+                    nPos += nameKey.length();
+                    size_t nEnd = entryBlock.find("\"", nPos);
+                    std::string fileName = entryBlock.substr(nPos, nEnd - nPos);
 
-            // 在当前块内查找文件名
-            std::string nameKey = "\"name\":\"";
-            size_t nPos = entryBlock.find(nameKey);
+                    if (fileName.find(".lua") != std::string::npos) {
+                        std::string urlKey = "\"download_url\":\"";
+                        size_t dPos = entryBlock.find(urlKey);
 
-            if (nPos != std::string::npos) {
-                nPos += nameKey.length();
-                size_t nEnd = entryBlock.find("\"", nPos);
-                std::string fileName = entryBlock.substr(nPos, nEnd - nPos);
+                        if (dPos != std::string::npos) {
+                            dPos += urlKey.length();
+                            size_t dEnd = entryBlock.find("\"", dPos);
+                            std::string downloadUrl = entryBlock.substr(dPos, dEnd - dPos);
 
-                // 过滤：必须是 .lua 文件
-                if (fileName.find(".lua") != std::string::npos) {
+                            // 执行内存下载
+                            std::string content = HttpRequest(downloadUrl);
 
-                    // 在同一个块内查找该文件对应的 download_url
-                    std::string urlKey = "\"download_url\":\"";
-                    size_t dPos = entryBlock.find(urlKey);
+                            // --- 修复点 3: 只要有一个文件下载失败，就视为本次整体失败，重新循环 ---
+                            if (content.empty()) {
+                                workshopList.clear();
+                                break;
+                            }
 
-                    if (dPos != std::string::npos) {
-                        dPos += urlKey.length();
-                        size_t dEnd = entryBlock.find("\"", dPos);
-                        std::string downloadUrl = entryBlock.substr(dPos, dEnd - dPos);
-
-                        // 执行内存下载
-                        std::string content = HttpRequest(downloadUrl);
-                        if (!content.empty()) {
                             LuaScript script;
                             script.name = "work_shop/" + fileName;
                             script.isWorkshop = true;
                             script.scriptContent = content;
                             script.isLoaded = false;
                             script.hasError = false;
-
                             workshopList.push_back(std::move(script));
                         }
                     }
                 }
+                entryStart = entryEnd + 1;
             }
 
-            // 移动到下一个条目
-            entryStart = entryEnd + 1;
+            // --- 修复点 4: 只有当成功获取到脚本且列表不为空时，才更新并退出线程 ---
+            if (!workshopList.empty()) {
+                std::lock_guard<std::mutex> lock(m_luaMutex);
+
+                m_scripts.erase(
+                    std::remove_if(m_scripts.begin(), m_scripts.end(), [](const LuaScript& s) {
+                        return s.isWorkshop;
+                        }),
+                    m_scripts.end()
+                            );
+
+                m_scripts.insert(m_scripts.begin(), workshopList.begin(), workshopList.end());
+
+                // 成功下载并更新后，退出线程
+                break;
+            }
+
+            // 如果走到这里说明解析出的列表是空的，或者部分下载失败了
+            std::this_thread::sleep_for(std::chrono::seconds(1));
         }
-
-        // 线程安全地更新到主脚本列表
-        if (!workshopList.empty()) {
-            std::lock_guard<std::mutex> lock(m_luaMutex);
-
-            // 移除旧的 Workshop 缓存，保留本地脚本
-            m_scripts.erase(
-                std::remove_if(m_scripts.begin(), m_scripts.end(), [](const LuaScript& s) {
-                    return s.isWorkshop;
-                    }),
-                m_scripts.end()
-                        );
-
-            // 将新下载的脚本插入到列表最前方（或按需调整顺序）
-            m_scripts.insert(m_scripts.begin(), workshopList.begin(), workshopList.end());
-        }
-        }).detach();
+        }).detach(); // 使用 detach 确保不阻塞主线程
 }
 
 void LuaManager::Initialize(const std::string& scriptDir) {

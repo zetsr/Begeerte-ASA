@@ -182,23 +182,35 @@ namespace g_DrawESP {
                     entry.targetAlpha = 1.0f;
                     entry.aliveThisFrame = true;
 
-                    entry.shouldDrawBox = true;
-                    entry.shouldDrawHealthBar = false;
-                    entry.shouldDrawTorpor = false;
-                    entry.shouldDrawName = true;
-                    entry.shouldDrawDistance = true;
+                    if (relation == g_ESP::RelationType::Team) {
+                        entry.shouldDrawBox = g_Config::bDrawBoxTeam;
+                        entry.shouldDrawName = g_Config::bDrawNameTeam;
+                        entry.shouldDrawDistance = g_Config::bDrawDistanceTeam;
+                    }
+                    else {
+                        entry.shouldDrawBox = g_Config::bDrawBox;
+                        entry.shouldDrawName = g_Config::bDrawName;
+                        entry.shouldDrawDistance = g_Config::bDrawDistance;
+                    }
+
+                    entry.shouldDrawHealthBar = false; // 尸体不需要血条
+                    entry.shouldDrawTorpor = false;    // 尸体不需要眩晕条
 
                     entry.flags.clear();
                     entry.bars.clear();
 
-                    std::string deadName = (TargetPS ? TargetPS->GetPlayerName().ToString() : TargetChar->GetDescriptiveName().ToString());
-                    entry.flags.push_back({ deadName, entry.boxColor, g_ESP::FlagPos::Top });
-
-                    float dist = 0.0f;
-                    if (LocalPC->Pawn && TargetActor) {
-                        dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                    if (entry.shouldDrawName) {
+                        std::string deadName = (TargetPS ? TargetPS->GetPlayerName().ToString() : TargetChar->GetDescriptiveName().ToString());
+                        entry.flags.push_back({ deadName, entry.boxColor, g_ESP::FlagPos::Top });
                     }
-                    entry.flags.push_back({ std::to_string((int)dist) + "m", g_Util::ToImColor(200, 200, 200, 255), g_ESP::FlagPos::Right });
+
+                    if (entry.shouldDrawDistance) {
+                        float dist = 0.0f;
+                        if (LocalPC->Pawn && TargetActor) {
+                            dist = LocalPC->Pawn->GetDistanceTo(TargetActor) / 100.0f;
+                        }
+                        entry.flags.push_back({ std::to_string((int)dist) + "m", g_Util::ToImColor(200, 200, 200, 255), g_ESP::FlagPos::Right });
+                    }
 
                     continue;
                 }

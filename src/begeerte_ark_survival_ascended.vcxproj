@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Hack\Aimbot.h" />
+    <ClInclude Include="Hack\ConfigImGui.h" />
     <ClInclude Include="Hack\ConfigManager.h" />
     <ClInclude Include="Hack\Configs.h" />
     <ClInclude Include="Hack\DrawESP.h" />
