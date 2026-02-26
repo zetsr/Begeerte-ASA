@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Soundscape_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK::Params

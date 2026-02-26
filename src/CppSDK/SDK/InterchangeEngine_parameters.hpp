@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "InterchangeCore_structs.hpp"
 #include "InterchangeEngine_structs.hpp"
+#include "InterchangeCore_structs.hpp"
 
 
 namespace SDK::Params

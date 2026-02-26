@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "OnlineSubsystemUtils_classes.hpp"
 #include "PacketHandler_classes.hpp"
+#include "OnlineSubsystemUtils_classes.hpp"
 
 
 namespace SDK

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "LiveLinkComponents_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "LiveLinkInterface_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "LiveLinkComponents_structs.hpp"
+#include "LiveLinkInterface_structs.hpp"
 
 
 namespace SDK

@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "ModelingOperators_structs.hpp"
+#include "MeshModelingTools_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MeshModelingTools_structs.hpp"
 #include "InteractiveToolsFramework_classes.hpp"
 #include "ModelingComponents_structs.hpp"
 #include "ModelingComponents_classes.hpp"
+#include "ModelingOperators_structs.hpp"
 
 
 namespace SDK

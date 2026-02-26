@@ -273,15 +273,6 @@ enum class ELandscapeLODFalloff : uint8
 	ELandscapeLODFalloff_MAX                 = 2,
 };
 
-// ScriptStruct Landscape.HeightmapData
-// 0x0008 (0x0008 - 0x0000)
-struct FHeightmapData final
-{
-public:
-	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-};
-DUMPER7_ASSERTS_FHeightmapData;
-
 // ScriptStruct Landscape.WeightmapLayerAllocationInfo
 // 0x0010 (0x0010 - 0x0000)
 struct FWeightmapLayerAllocationInfo final
@@ -383,6 +374,15 @@ public:
 	class UMaterialInterface*                     Material;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
 DUMPER7_ASSERTS_FLandscapeComponentMaterialOverride;
+
+// ScriptStruct Landscape.HeightmapData
+// 0x0008 (0x0008 - 0x0000)
+struct FHeightmapData final
+{
+public:
+	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+};
+DUMPER7_ASSERTS_FHeightmapData;
 
 // ScriptStruct Landscape.LandscapeLayerComponentData
 // 0x0038 (0x0038 - 0x0000)

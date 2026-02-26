@@ -12,10 +12,10 @@
 
 #include "AnimationCore_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CineCameraRigs_structs.hpp"
-#include "CinematicCamera_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "CineCameraRigs_structs.hpp"
+#include "CinematicCamera_classes.hpp"
 
 
 namespace SDK

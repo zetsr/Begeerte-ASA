@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AIModule_structs.hpp"
 #include "MassCommon_structs.hpp"
+#include "AIModule_structs.hpp"
 #include "Engine_structs.hpp"
 #include "MassEntity_structs.hpp"
 

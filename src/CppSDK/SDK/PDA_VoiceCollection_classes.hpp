@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ShooterGame_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ShooterGame_structs.hpp"
 
 
 namespace SDK

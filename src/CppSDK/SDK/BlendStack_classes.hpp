@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Class BlendStack.BlendStackInputAnimNodeLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UBlendStackInputAnimNodeLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FBlendStackInputAnimNodeReference ConvertToBlendStackInputNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToBlendStackInputNodePure(const struct FAnimNodeReference& Node, struct FBlendStackInputAnimNodeReference* BlendStackInputNode, bool* Result);
-	static void GetProperties(const struct FBlendStackInputAnimNodeReference& BlendStackInputNode, class UAnimationAsset** AnimationAsset, float* AccumulatedTime);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BlendStackInputAnimNodeLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BlendStackInputAnimNodeLibrary")
-	}
-	static class UBlendStackInputAnimNodeLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBlendStackInputAnimNodeLibrary>();
-	}
-};
-DUMPER7_ASSERTS_UBlendStackInputAnimNodeLibrary;
-
 // Class BlendStack.BlendStackAnimNodeLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UBlendStackAnimNodeLibrary final : public UBlueprintFunctionLibrary
@@ -74,6 +49,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UBlendStackAnimNodeLibrary;
+
+// Class BlendStack.BlendStackInputAnimNodeLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBlendStackInputAnimNodeLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FBlendStackInputAnimNodeReference ConvertToBlendStackInputNode(const struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
+	static void ConvertToBlendStackInputNodePure(const struct FAnimNodeReference& Node, struct FBlendStackInputAnimNodeReference* BlendStackInputNode, bool* Result);
+	static void GetProperties(const struct FBlendStackInputAnimNodeReference& BlendStackInputNode, class UAnimationAsset** AnimationAsset, float* AccumulatedTime);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BlendStackInputAnimNodeLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlendStackInputAnimNodeLibrary")
+	}
+	static class UBlendStackInputAnimNodeLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlendStackInputAnimNodeLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UBlendStackInputAnimNodeLibrary;
 
 }
 

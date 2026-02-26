@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "AIModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "StateTreeModule_structs.hpp"
-#include "AIModule_structs.hpp"
 
 
 namespace SDK

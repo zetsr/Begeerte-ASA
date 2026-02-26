@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "MovieScene_structs.hpp"
-#include "MovieScene_classes.hpp"
 #include "LiveLinkMovieScene_structs.hpp"
 #include "LiveLinkInterface_structs.hpp"
-#include "CoreUObject_classes.hpp"
+#include "MovieScene_structs.hpp"
+#include "MovieScene_classes.hpp"
 #include "MovieSceneTracks_classes.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "AnimationCore_structs.hpp"
-#include "CineCameraRigs_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "CineCameraRigs_structs.hpp"
 
 
 namespace SDK::Params

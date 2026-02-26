@@ -14,6 +14,15 @@
 namespace SDK::Params
 {
 
+// Function ASAUI_MainMenu_LandingScreen.ASAUI_MainMenu_LandingScreen_C.ModIDLinkRequested
+// 0x0008 (0x0008 - 0x0000)
+struct ASAUI_MainMenu_LandingScreen_C_ModIDLinkRequested final
+{
+public:
+	int64                                         ModIDRequested;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ASAUI_MainMenu_LandingScreen_C_ModIDLinkRequested;
+
 // Function ASAUI_MainMenu_LandingScreen.ASAUI_MainMenu_LandingScreen_C.ExecuteUbergraph_ASAUI_MainMenu_LandingScreen
 // 0x0058 (0x0058 - 0x0000)
 struct ASAUI_MainMenu_LandingScreen_C_ExecuteUbergraph_ASAUI_MainMenu_LandingScreen final
@@ -34,15 +43,6 @@ public:
 	int64                                         K2Node_CustomEvent_ModIDRequested;                 // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ASAUI_MainMenu_LandingScreen_C_ExecuteUbergraph_ASAUI_MainMenu_LandingScreen;
-
-// Function ASAUI_MainMenu_LandingScreen.ASAUI_MainMenu_LandingScreen_C.ModIDLinkRequested
-// 0x0008 (0x0008 - 0x0000)
-struct ASAUI_MainMenu_LandingScreen_C_ModIDLinkRequested final
-{
-public:
-	int64                                         ModIDRequested;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ASAUI_MainMenu_LandingScreen_C_ModIDLinkRequested;
 
 }
 

@@ -12,8 +12,8 @@
 
 #include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "ShooterGame_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "ShooterGame_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -36,12 +36,11 @@ public:
 DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_BPGamepadReleased;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.CreateNotifManager
-// 0x0010 (0x0010 - 0x0000)
+// 0x0001 (0x0001 - 0x0000)
 struct ReMainMenuUI_ASA_C_CreateNotifManager final
 {
 public:
-	class UUI_NotificationManager_C*              CallFunc_Create_ReturnValue;                       // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_CreateNotifManager;
 

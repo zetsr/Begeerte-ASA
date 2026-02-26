@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass BaseHumanAnimBP_Fists.BaseHumanAnimBP_Fists_C
-// 0x0000 (0x1DC70 - 0x1DC70)
+// 0x0000 (0x1E0A0 - 0x1E0A0)
 class UBaseHumanAnimBP_Fists_C : public UBaseHumanAnimBP_C
 {
 public:

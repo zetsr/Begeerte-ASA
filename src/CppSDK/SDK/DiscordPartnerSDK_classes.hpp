@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "DiscordPartnerSDK_structs.hpp"
+#include "Engine_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "CoreUObject_classes.hpp"
 

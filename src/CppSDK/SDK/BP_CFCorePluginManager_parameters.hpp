@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "cfcore_structs.hpp"
 #include "cfcore_ui_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "cfcore_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -211,7 +211,7 @@ public:
 	TDelegate<void(const struct FModsDirInfo& ModsDirInfo)> K2Node_CreateDelegate_OutputDelegate_12; // 0x0180(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_13;           // 0x0190(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(int64 ServerID)>               K2Node_CreateDelegate_OutputDelegate_14;           // 0x01A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int64                                         K2Node_CustomEvent_modId;                          // 0x01B0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         K2Node_CustomEvent_ModId;                          // 0x01B0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int64>                                 K2Node_CustomEvent_ModsId;                         // 0x01B8(0x0010)(ConstParm, ReferenceParm)
 	class UBP_ServerModsWidget_C*                 CallFunc_Create_ReturnValue_3;                     // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

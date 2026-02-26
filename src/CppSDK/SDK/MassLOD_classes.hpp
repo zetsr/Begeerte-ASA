@@ -12,8 +12,8 @@
 
 #include "MassEntity_classes.hpp"
 #include "MassLOD_structs.hpp"
-#include "MassSpawner_classes.hpp"
 #include "Engine_structs.hpp"
+#include "MassSpawner_classes.hpp"
 
 
 namespace SDK

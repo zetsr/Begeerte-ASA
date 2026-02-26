@@ -26,6 +26,70 @@ enum class ESentryLevel : uint8
 	ESentryLevel_MAX                         = 5,
 };
 
+// Enum Sentry.ESentryCrashedLastRun
+// NumValues: 0x0004
+enum class ESentryCrashedLastRun : uint8
+{
+	NotEvaluated                             = 0,
+	NotCrashed                               = 1,
+	Crashed                                  = 2,
+	ESentryCrashedLastRun_MAX                = 3,
+};
+
+// Enum Sentry.EUserConsent
+// NumValues: 0x0004
+enum class EUserConsent : uint8
+{
+	Revoked                                  = 0,
+	Given                                    = 1,
+	Unknown                                  = 2,
+	EUserConsent_MAX                         = 3,
+};
+
+// Enum Sentry.ESentryTracesSamplingType
+// NumValues: 0x0003
+enum class ESentryTracesSamplingType : uint8
+{
+	UniformSampleRate                        = 0,
+	TracesSampler                            = 1,
+	ESentryTracesSamplingType_MAX            = 2,
+};
+
+// Enum Sentry.ESentryCliLogLevel
+// NumValues: 0x0006
+enum class ESentryCliLogLevel : uint8
+{
+	Trace                                    = 0,
+	Debug                                    = 1,
+	Info                                     = 2,
+	Warn                                     = 3,
+	Error                                    = 4,
+	ESentryCliLogLevel_MAX                   = 5,
+};
+
+// Enum Sentry.ESentryDatabaseLocation
+// NumValues: 0x0003
+enum class ESentryDatabaseLocation : uint8
+{
+	ProjectDirectory                         = 0,
+	ProjectUserDirectory                     = 1,
+	ESentryDatabaseLocation_MAX              = 2,
+};
+
+// Enum Sentry.ESentryVariantType
+// NumValues: 0x0008
+enum class ESentryVariantType : uint8
+{
+	Empty                                    = 0,
+	Integer                                  = 1,
+	Float                                    = 2,
+	Bool                                     = 3,
+	String                                   = 4,
+	Array                                    = 5,
+	Map                                      = 6,
+	ESentryVariantType_MAX                   = 7,
+};
+
 // ScriptStruct Sentry.AutomaticBreadcrumbs
 // 0x0005 (0x0005 - 0x0000)
 struct FAutomaticBreadcrumbs final
@@ -38,6 +102,32 @@ public:
 	bool                                          bOnUserActivityStringChanged;                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAutomaticBreadcrumbs;
+
+// ScriptStruct Sentry.AutomaticBreadcrumbsForLogs
+// 0x0005 (0x0005 - 0x0000)
+struct FAutomaticBreadcrumbsForLogs final
+{
+public:
+	bool                                          bOnFatalLog;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnErrorLog;                                       // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnWarningLog;                                     // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnInfoLog;                                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnDebugLog;                                       // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAutomaticBreadcrumbsForLogs;
+
+// ScriptStruct Sentry.StructuredLoggingLevels
+// 0x0005 (0x0005 - 0x0000)
+struct FStructuredLoggingLevels final
+{
+public:
+	bool                                          bOnFatalLog;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnErrorLog;                                       // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnWarningLog;                                     // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnInfoLog;                                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnDebugLog;                                       // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FStructuredLoggingLevels;
 
 // ScriptStruct Sentry.TagsPromotion
 // 0x0006 (0x0006 - 0x0000)
@@ -52,6 +142,52 @@ public:
 	bool                                          bPromoteIsUnattended;                              // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FTagsPromotion;
+
+// ScriptStruct Sentry.EnableBuildConfigurations
+// 0x0005 (0x0005 - 0x0000)
+struct FEnableBuildConfigurations final
+{
+public:
+	bool                                          bEnableDebug;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableDebugGame;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableDevelopment;                                // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableTest;                                       // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableShipping;                                   // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEnableBuildConfigurations;
+
+// ScriptStruct Sentry.EnableBuildTargets
+// 0x0005 (0x0005 - 0x0000)
+struct FEnableBuildTargets final
+{
+public:
+	bool                                          bEnableClient;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableGame;                                       // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableEditor;                                     // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableServer;                                     // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableProgram;                                    // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEnableBuildTargets;
+
+// ScriptStruct Sentry.SentryVariant
+// 0x0020 (0x0020 - 0x0000)
+struct alignas(0x08) FSentryVariant final
+{
+public:
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSentryVariant;
+
+// ScriptStruct Sentry.SentryTransactionOptions
+// 0x0058 (0x0058 - 0x0000)
+struct FSentryTransactionOptions final
+{
+public:
+	TMap<class FString, struct FSentryVariant>    CustomSamplingContext;                             // 0x0000(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          BindToScope;                                       // 0x0050(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSentryTransactionOptions;
 
 }
 

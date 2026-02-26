@@ -11,14 +11,93 @@
 #include "Basic.hpp"
 
 #include "SmartObjectsModule_structs.hpp"
-#include "TargetingSystem_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "TargetingSystem_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function SmartObjectsModule.SmartObjectComponent.ReceiveOnEvent
+// 0x0040 (0x0040 - 0x0000)
+struct SmartObjectComponent_ReceiveOnEvent final
+{
+public:
+	struct FSmartObjectEventData                  EventData;                                         // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	const class AActor*                           Interactor;                                        // 0x0038(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectComponent_ReceiveOnEvent;
+
+// Function SmartObjectsModule.SmartObjectComponent.SetDefinition
+// 0x0008 (0x0008 - 0x0000)
+struct SmartObjectComponent_SetDefinition final
+{
+public:
+	class USmartObjectDefinition*                 DefinitionAsset;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectComponent_SetDefinition;
+
+// Function SmartObjectsModule.SmartObjectComponent.GetDefinition
+// 0x0008 (0x0008 - 0x0000)
+struct SmartObjectComponent_GetDefinition final
+{
+public:
+	const class USmartObjectDefinition*           ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectComponent_GetDefinition;
+
+// Function SmartObjectsModule.SmartObjectComponent.IsBoundToSimulation
+// 0x0001 (0x0001 - 0x0000)
+struct SmartObjectComponent_IsBoundToSimulation final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectComponent_IsBoundToSimulation;
+
+// Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct SmartObjectComponent_IsSmartObjectEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectComponent_IsSmartObjectEnabled;
+
+// Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabledForReason
+// 0x000C (0x000C - 0x0000)
+struct SmartObjectComponent_IsSmartObjectEnabledForReason final
+{
+public:
+	struct FGameplayTag                           ReasonTag;                                         // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectComponent_IsSmartObjectEnabledForReason;
+
+// Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabled
+// 0x0002 (0x0002 - 0x0000)
+struct SmartObjectComponent_SetSmartObjectEnabled final
+{
+public:
+	bool                                          bEnable;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SmartObjectComponent_SetSmartObjectEnabled;
+
+// Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabledForReason
+// 0x000C (0x000C - 0x0000)
+struct SmartObjectComponent_SetSmartObjectEnabledForReason final
+{
+public:
+	struct FGameplayTag                           ReasonTag;                                         // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnabled;                                          // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SmartObjectComponent_SetSmartObjectEnabledForReason;
 
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.AddMultipleSmartObjects
 // 0x0018 (0x0018 - 0x0000)
@@ -394,85 +473,6 @@ public:
 	struct FSmartObjectClaimHandle                ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_SmartObjectBlueprintFunctionLibrary_SmartObjectClaimHandle_Invalid;
-
-// Function SmartObjectsModule.SmartObjectComponent.ReceiveOnEvent
-// 0x0040 (0x0040 - 0x0000)
-struct SmartObjectComponent_ReceiveOnEvent final
-{
-public:
-	struct FSmartObjectEventData                  EventData;                                         // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	const class AActor*                           Interactor;                                        // 0x0038(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SmartObjectComponent_ReceiveOnEvent;
-
-// Function SmartObjectsModule.SmartObjectComponent.SetDefinition
-// 0x0008 (0x0008 - 0x0000)
-struct SmartObjectComponent_SetDefinition final
-{
-public:
-	class USmartObjectDefinition*                 DefinitionAsset;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SmartObjectComponent_SetDefinition;
-
-// Function SmartObjectsModule.SmartObjectComponent.GetDefinition
-// 0x0008 (0x0008 - 0x0000)
-struct SmartObjectComponent_GetDefinition final
-{
-public:
-	const class USmartObjectDefinition*           ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SmartObjectComponent_GetDefinition;
-
-// Function SmartObjectsModule.SmartObjectComponent.IsBoundToSimulation
-// 0x0001 (0x0001 - 0x0000)
-struct SmartObjectComponent_IsBoundToSimulation final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SmartObjectComponent_IsBoundToSimulation;
-
-// Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct SmartObjectComponent_IsSmartObjectEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SmartObjectComponent_IsSmartObjectEnabled;
-
-// Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabledForReason
-// 0x000C (0x000C - 0x0000)
-struct SmartObjectComponent_IsSmartObjectEnabledForReason final
-{
-public:
-	struct FGameplayTag                           ReasonTag;                                         // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SmartObjectComponent_IsSmartObjectEnabledForReason;
-
-// Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabled
-// 0x0002 (0x0002 - 0x0000)
-struct SmartObjectComponent_SetSmartObjectEnabled final
-{
-public:
-	bool                                          bEnable;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SmartObjectComponent_SetSmartObjectEnabled;
-
-// Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabledForReason
-// 0x000C (0x000C - 0x0000)
-struct SmartObjectComponent_SetSmartObjectEnabledForReason final
-{
-public:
-	struct FGameplayTag                           ReasonTag;                                         // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnabled;                                          // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SmartObjectComponent_SetSmartObjectEnabledForReason;
 
 // Function SmartObjectsModule.SmartObjectDefinition.GetMutableSlot
 // 0x00E8 (0x00E8 - 0x0000)

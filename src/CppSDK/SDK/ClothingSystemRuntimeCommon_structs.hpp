@@ -50,6 +50,15 @@ enum class EClothMassMode : uint8
 	EClothMassMode_MAX                       = 4,
 };
 
+// ScriptStruct ClothingSystemRuntimeCommon.ClothTetherData
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FClothTetherData final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FClothTetherData;
+
 // ScriptStruct ClothingSystemRuntimeCommon.ClothConstraintSetup_Legacy
 // 0x0010 (0x0010 - 0x0000)
 struct FClothConstraintSetup_Legacy final
@@ -61,6 +70,35 @@ public:
 	float                                         CompressionLimit;                                  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FClothConstraintSetup_Legacy;
+
+// ScriptStruct ClothingSystemRuntimeCommon.PointWeightMap
+// 0x0010 (0x0010 - 0x0000)
+struct FPointWeightMap final
+{
+public:
+	TArray<float>                                 Values;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPointWeightMap;
+
+// ScriptStruct ClothingSystemRuntimeCommon.ClothPhysicalMeshData
+// 0x0128 (0x0128 - 0x0000)
+struct FClothPhysicalMeshData final
+{
+public:
+	TArray<struct FVector3f>                      Vertices;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVector3f>                      Normals;                                           // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<uint32>                                Indices;                                           // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<uint32, struct FPointWeightMap>          WeightMaps;                                        // 0x0030(0x0050)(Edit, NativeAccessSpecifierPublic)
+	TArray<float>                                 InverseMasses;                                     // 0x0080(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FClothVertBoneData>             BoneData;                                          // 0x0090(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TSet<int32>                                   SelfCollisionVertexSet;                            // 0x00A0(0x0050)(Edit, NativeAccessSpecifierPublic)
+	struct FClothTetherData                       EuclideanTethers;                                  // 0x00F0(0x0010)(Edit, NativeAccessSpecifierPublic)
+	struct FClothTetherData                       GeodesicTethers;                                   // 0x0100(0x0010)(Edit, NativeAccessSpecifierPublic)
+	int32                                         MaxBoneWeights;                                    // 0x0110(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumFixedVerts;                                     // 0x0114(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint32>                                SelfCollisionIndices;                              // 0x0118(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FClothPhysicalMeshData;
 
 // ScriptStruct ClothingSystemRuntimeCommon.ClothConfig_Legacy
 // 0x0130 (0x0130 - 0x0000)
@@ -100,44 +138,6 @@ public:
 	float                                         AnimDriveDamperStiffness;                          // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FClothConfig_Legacy;
-
-// ScriptStruct ClothingSystemRuntimeCommon.PointWeightMap
-// 0x0010 (0x0010 - 0x0000)
-struct FPointWeightMap final
-{
-public:
-	TArray<float>                                 Values;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPointWeightMap;
-
-// ScriptStruct ClothingSystemRuntimeCommon.ClothTetherData
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FClothTetherData final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FClothTetherData;
-
-// ScriptStruct ClothingSystemRuntimeCommon.ClothPhysicalMeshData
-// 0x0128 (0x0128 - 0x0000)
-struct FClothPhysicalMeshData final
-{
-public:
-	TArray<struct FVector3f>                      Vertices;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FVector3f>                      Normals;                                           // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<uint32>                                Indices;                                           // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<uint32, struct FPointWeightMap>          WeightMaps;                                        // 0x0030(0x0050)(Edit, NativeAccessSpecifierPublic)
-	TArray<float>                                 InverseMasses;                                     // 0x0080(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FClothVertBoneData>             BoneData;                                          // 0x0090(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TSet<int32>                                   SelfCollisionVertexSet;                            // 0x00A0(0x0050)(Edit, NativeAccessSpecifierPublic)
-	struct FClothTetherData                       EuclideanTethers;                                  // 0x00F0(0x0010)(Edit, NativeAccessSpecifierPublic)
-	struct FClothTetherData                       GeodesicTethers;                                   // 0x0100(0x0010)(Edit, NativeAccessSpecifierPublic)
-	int32                                         MaxBoneWeights;                                    // 0x0110(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumFixedVerts;                                     // 0x0114(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint32>                                SelfCollisionIndices;                              // 0x0118(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FClothPhysicalMeshData;
 
 // ScriptStruct ClothingSystemRuntimeCommon.ClothLODDataCommon
 // 0x0158 (0x0158 - 0x0000)

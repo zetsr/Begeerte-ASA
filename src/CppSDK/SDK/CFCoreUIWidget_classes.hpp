@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ShooterGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Struct_CfcoreUITheme_structs.hpp"
-#include "ShooterGame_classes.hpp"
 
 
 namespace SDK

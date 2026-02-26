@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ShooterGame_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -43,20 +43,20 @@ public:
 	class UHostSession_Switch_C*                  ParentHostSession;                                 // 0x0848(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SearchAndCreateModMaps();
-	void Select_Map_Button_Clicked();
-	void MapButtonSelected();
-	void GetSelectedMapIndex(int32* Index_0);
-	void SetSelectedMapIndex(int32 Index_0);
-	void ScrollToHoveredItem(class UMapSelect_Entry_C* EntryHovered);
-	struct FEventReply OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void Set_Selected_Map_Entry(class UMapSelect_Entry_C* Entry);
-	void GetMapSelectEntries(TArray<class UMapSelect_Entry_C*>* MapSelectEntries);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void BndEvt__MapSelect_Session_CancelButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__MapSelect_Session_SelectMapButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_MapSelect_Session(int32 EntryPoint);
+	void GetMapSelectEntries(TArray<class UMapSelect_Entry_C*>* MapSelectEntries);
+	void GetSelectedMapIndex(int32* Index_0);
+	void MapButtonSelected();
+	struct FEventReply OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	struct FEventReply OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void ScrollToHoveredItem(class UMapSelect_Entry_C* EntryHovered);
+	void SearchAndCreateModMaps();
+	void Select_Map_Button_Clicked();
+	void Set_Selected_Map_Entry(class UMapSelect_Entry_C* Entry);
+	void SetSelectedMapIndex(int32 Index_0);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()

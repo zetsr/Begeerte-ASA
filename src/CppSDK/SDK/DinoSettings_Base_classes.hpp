@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ShooterGame_classes.hpp"
 #include "Struct_VFX_DinoData_structs.hpp"
+#include "ShooterGame_classes.hpp"
 
 
 namespace SDK

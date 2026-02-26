@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "cfcore_ui_structs.hpp"
 #include "ShooterGame_classes.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -304,7 +304,7 @@ public:
 	int64                                         RequestedID;                                       // 0x22E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FInstallProgressMod>            installedMods;                                     // 0x22E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<EGameModsEvent>                        evts;                                              // 0x22F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UUI_NotificationManager_C*              Ui_Notif_Manager;                                  // 0x2308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Ui_Notif_Manager;                                  // 0x2308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   Class_0;                                           // 0x2310(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:

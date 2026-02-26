@@ -40,6 +40,17 @@ enum class ETargetingTraceType : uint8
 	ETargetingTraceType_MAX                  = 4,
 };
 
+// ScriptStruct TargetingSystem.TargetingDefaultResultData
+// 0x0110 (0x0110 - 0x0000)
+struct FTargetingDefaultResultData final
+{
+public:
+	struct FHitResult                             HitResult;                                         // 0x0000(0x0108)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	float                                         score;                                             // 0x0108(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTargetingDefaultResultData;
+
 // ScriptStruct TargetingSystem.TargetingRequestHandle
 // 0x0004 (0x0004 - 0x0000)
 struct alignas(0x04) FTargetingRequestHandle final
@@ -66,17 +77,6 @@ public:
 	TArray<class UTargetingTask*>                 Tasks;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
 DUMPER7_ASSERTS_FTargetingTaskSet;
-
-// ScriptStruct TargetingSystem.TargetingDefaultResultData
-// 0x0110 (0x0110 - 0x0000)
-struct FTargetingDefaultResultData final
-{
-public:
-	struct FHitResult                             HitResult;                                         // 0x0000(0x0108)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	float                                         score;                                             // 0x0108(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTargetingDefaultResultData;
 
 // ScriptStruct TargetingSystem.TargetingDefaultResultsSet
 // 0x0010 (0x0010 - 0x0000)

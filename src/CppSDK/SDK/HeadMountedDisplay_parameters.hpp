@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "HeadMountedDisplay_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "HeadMountedDisplay_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

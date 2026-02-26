@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "InputCore_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "cfcore_ui_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
-#include "cfcore_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "cfcore_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 

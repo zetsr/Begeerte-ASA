@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ShooterGame_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -33,11 +33,11 @@ public:
 	double                                        AutoScrollWaitAtEnd;                               // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BlueprintInit(const class FString& RawExtraData);
-	void EntryFocusEnd(bool bInstigatedByAutoRollover);
-	void EntryFocusStart(bool bInstigatedByAutoRollover);
-	void EntryFocusTick(float DeltaTime, bool bIsHighlighted);
 	void ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_News_Default(int32 EntryPoint);
+	void EntryFocusTick(float DeltaTime, bool bIsHighlighted);
+	void EntryFocusStart(bool bInstigatedByAutoRollover);
+	void EntryFocusEnd(bool bInstigatedByAutoRollover);
+	void BlueprintInit(const class FString& RawExtraData);
 
 public:
 	static class UClass* StaticClass()

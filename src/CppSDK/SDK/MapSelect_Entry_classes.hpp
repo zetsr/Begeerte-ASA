@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "ShooterGame_structs.hpp"
 #include "ShooterGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -54,21 +54,21 @@ public:
 	double                                        TotalTime;                                         // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void FixupComboBox();
-	void UpdateDeleteSaveButton();
-	void IsSelected(bool* Selected);
-	void Set_To_Map_Select_View(bool IsMapSelectView);
-	void Show_Hide_Locked_Images(bool IsLocked);
-	void SetupUsingHostSession(class UUI_HostSession* HostSession, class UMapSelect_Session_C* MapSelectSession, int32 WithIndex);
-	void BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void Construct();
-	void SetSelected(bool IsSelected_0);
-	void BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__MapSelect_Entry_MapModeComboBox_K2Node_ComponentBoundEvent_4_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
 	void BndEvt__MapSelect_Entry_MapNameComboBox_K2Node_ComponentBoundEvent_5_OnSelectionChangedEvent__DelegateSignature(const class FString& SelectedItem, ESelectInfo SelectionType);
-	void BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void Construct();
 	void ExecuteUbergraph_MapSelect_Entry(int32 EntryPoint);
+	void FixupComboBox();
+	void IsSelected(bool* Selected);
+	void Set_To_Map_Select_View(bool IsMapSelectView);
+	void SetSelected(bool IsSelected_0);
+	void SetupUsingHostSession(class UUI_HostSession* HostSession, class UMapSelect_Session_C* MapSelectSession, int32 WithIndex);
+	void Show_Hide_Locked_Images(bool IsLocked);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void UpdateDeleteSaveButton();
 
 public:
 	static class UClass* StaticClass()

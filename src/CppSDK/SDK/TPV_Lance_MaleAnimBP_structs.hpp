@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // ScriptStruct TPV_Lance_MaleAnimBP.TPV_Lance_MaleAnimBP_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0xC270 - 0xC270)
+// 0x0000 (0xC570 - 0xC570)
 struct TPV_Lance_MaleAnimBP::FAnimBlueprintGeneratedConstantData final : public BaseHumanAnimBP::FAnimBlueprintGeneratedConstantData
 {
 };

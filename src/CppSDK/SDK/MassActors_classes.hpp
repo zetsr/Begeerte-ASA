@@ -10,101 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "MassActors_structs.hpp"
+#include "MassCommon_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "MassEntity_classes.hpp"
-#include "MassCommon_structs.hpp"
-#include "Engine_classes.hpp"
 #include "MassSpawner_structs.hpp"
 #include "MassSpawner_classes.hpp"
+#include "Engine_classes.hpp"
+#include "MassActors_structs.hpp"
 
 
 namespace SDK
 {
-
-// Class MassActors.MassSceneComponentLocationToActorTranslator
-// 0x0320 (0x03F0 - 0x00D0)
-class UMassSceneComponentLocationToActorTranslator final : public UMassTranslator
-{
-public:
-	uint8                                         Pad_D0[0x320];                                     // 0x00D0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MassSceneComponentLocationToActorTranslator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MassSceneComponentLocationToActorTranslator")
-	}
-	static class UMassSceneComponentLocationToActorTranslator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMassSceneComponentLocationToActorTranslator>();
-	}
-};
-DUMPER7_ASSERTS_UMassSceneComponentLocationToActorTranslator;
-
-// Class MassActors.MassActorPoolableInterface
-// 0x0000 (0x0000 - 0x0000)
-class IMassActorPoolableInterface final
-{
-public:
-	bool CanBePooled();
-	void PrepareForGame();
-	void PrepareForPooling();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MassActorPoolableInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MassActorPoolableInterface")
-	}
-	static class IMassActorPoolableInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IMassActorPoolableInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IMassActorPoolableInterface;
-
-// Class MassActors.MassActorSpawnerSubsystem
-// 0x00B8 (0x00F0 - 0x0038)
-class UMassActorSpawnerSubsystem final : public UMassSubsystemBase
-{
-public:
-	TArray<struct FInstancedStruct>               SpawnRequests;                                     // 0x0038(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<class AActor*>                         ActorsToDestroy;                                   // 0x0048(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	TArray<class AActor*>                         DeactivatedActorsToDestroy;                        // 0x0058(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
-	uint8                                         Pad_68[0x88];                                      // 0x0068(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MassActorSpawnerSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MassActorSpawnerSubsystem")
-	}
-	static class UMassActorSpawnerSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMassActorSpawnerSubsystem>();
-	}
-};
-DUMPER7_ASSERTS_UMassActorSpawnerSubsystem;
 
 // Class MassActors.MassAgentSyncTrait
 // 0x0008 (0x0030 - 0x0028)
@@ -150,28 +67,39 @@ public:
 };
 DUMPER7_ASSERTS_UMassAgentMovementSyncTrait;
 
-// Class MassActors.MassActorSubsystem
-// 0x0010 (0x0048 - 0x0038)
-class UMassActorSubsystem final : public UMassSubsystemBase
+// Class MassActors.MassActorPoolableInterface
+// 0x0000 (0x0000 - 0x0000)
+class IMassActorPoolableInterface final
 {
 public:
-	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool CanBePooled();
+	void PrepareForGame();
+	void PrepareForPooling();
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MassActorSubsystem")
+		STATIC_CLASS_IMPL("MassActorPoolableInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MassActorSubsystem")
+		STATIC_NAME_IMPL(L"MassActorPoolableInterface")
 	}
-	static class UMassActorSubsystem* GetDefaultObj()
+	static class IMassActorPoolableInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMassActorSubsystem>();
+		return GetDefaultObjImpl<IMassActorPoolableInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_UMassActorSubsystem;
+DUMPER7_ASSERTS_IMassActorPoolableInterface;
 
 // Class MassActors.MassAgentCapsuleCollisionSyncTrait
 // 0x0008 (0x0038 - 0x0030)
@@ -196,6 +124,55 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMassAgentCapsuleCollisionSyncTrait;
+
+// Class MassActors.MassActorSpawnerSubsystem
+// 0x00B8 (0x00F0 - 0x0038)
+class UMassActorSpawnerSubsystem final : public UMassSubsystemBase
+{
+public:
+	TArray<struct FInstancedStruct>               SpawnRequests;                                     // 0x0038(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<class AActor*>                         ActorsToDestroy;                                   // 0x0048(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	TArray<class AActor*>                         DeactivatedActorsToDestroy;                        // 0x0058(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
+	uint8                                         Pad_68[0x88];                                      // 0x0068(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassActorSpawnerSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassActorSpawnerSubsystem")
+	}
+	static class UMassActorSpawnerSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassActorSpawnerSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UMassActorSpawnerSubsystem;
+
+// Class MassActors.MassActorSubsystem
+// 0x0010 (0x0048 - 0x0038)
+class UMassActorSubsystem final : public UMassSubsystemBase
+{
+public:
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassActorSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassActorSubsystem")
+	}
+	static class UMassActorSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassActorSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UMassActorSubsystem;
 
 // Class MassActors.MassAgentComponent
 // 0x0100 (0x01B8 - 0x00B8)
@@ -459,6 +436,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMassSceneComponentLocationToMassTranslator;
+
+// Class MassActors.MassSceneComponentLocationToActorTranslator
+// 0x0320 (0x03F0 - 0x00D0)
+class UMassSceneComponentLocationToActorTranslator final : public UMassTranslator
+{
+public:
+	uint8                                         Pad_D0[0x320];                                     // 0x00D0(0x0320)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MassSceneComponentLocationToActorTranslator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MassSceneComponentLocationToActorTranslator")
+	}
+	static class UMassSceneComponentLocationToActorTranslator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMassSceneComponentLocationToActorTranslator>();
+	}
+};
+DUMPER7_ASSERTS_UMassSceneComponentLocationToActorTranslator;
 
 // Class MassActors.MassTranslator_BehaviorTree
 // 0x0320 (0x03F0 - 0x00D0)

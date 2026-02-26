@@ -513,15 +513,17 @@ enum class ECFCoreSessionType : uint8
 	ECFCoreSessionType_MAX                   = 2,
 };
 
-// ScriptStruct cfcore.AssureServerModsUpdatedParams
-// 0x0020 (0x0020 - 0x0000)
-struct FAssureServerModsUpdatedParams final
+// ScriptStruct cfcore.ModFileChunkedInfo
+// 0x0038 (0x0038 - 0x0000)
+struct FModFileChunkedInfo final
 {
 public:
-	TArray<int64>                                 modIds;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int64>                                 devModIds;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	int64                                         fileId;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Directory;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 uploadId;                                          // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAssureServerModsUpdatedParams;
+DUMPER7_ASSERTS_FModFileChunkedInfo;
 
 // ScriptStruct cfcore.BlockedDetails
 // 0x0040 (0x0040 - 0x0000)
@@ -535,47 +537,6 @@ public:
 };
 DUMPER7_ASSERTS_FBlockedDetails;
 
-// ScriptStruct cfcore.CFCoreApiResponseError
-// 0x0020 (0x0020 - 0x0000)
-struct FCFCoreApiResponseError final
-{
-public:
-	bool                                          cancelled;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          badRequest;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          entityNotFound;                                    // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          serverUnreachable;                                 // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          missingPriviliges;                                 // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          tokenExpired;                                      // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          resourceExpired;                                   // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          failedToParseServerResponse;                       // 0x0007(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ErrorCode;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Description;                                       // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCFCoreApiResponseError;
-
-// ScriptStruct cfcore.CFCoreError
-// 0x0038 (0x0038 - 0x0000)
-struct FCFCoreError final
-{
-public:
-	bool                                          isError;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECFCoreErrorCodes                             code;                                              // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCFCoreApiResponseError                apiError;                                          // 0x0008(0x0020)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FString                                 Description;                                       // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCFCoreError;
-
-// ScriptStruct cfcore.UploadModFileChunkResponse
-// 0x0001 (0x0001 - 0x0000)
-struct FUploadModFileChunkResponse final
-{
-public:
-	bool                                          Data;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUploadModFileChunkResponse;
-
 // ScriptStruct cfcore.FileHash
 // 0x0018 (0x0018 - 0x0000)
 struct FFileHash final
@@ -586,38 +547,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FFileHash;
-
-// ScriptStruct cfcore.ModFileCookingOptions
-// 0x0018 (0x0018 - 0x0000)
-struct FModFileCookingOptions final
-{
-public:
-	bool                                          isSourceFile;                                      // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECFCoreAutoCookingType                        autoCookingType;                                   // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 cookerVersion;                                     // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FModFileCookingOptions;
-
-// ScriptStruct cfcore.CreateModFileRequest
-// 0x0078 (0x0078 - 0x0000)
-struct FCreateModFileRequest final
-{
-public:
-	ECFCoreChangelogMarkupType                    changelogType;                                     // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 changelog;                                         // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DisplayName;                                       // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int64>                                 gameVersionIds;                                    // 0x0038(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	ECFCoreFileReleaseType                        releaseType;                                       // 0x0048(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FModFileCookingOptions                 cookingOptions;                                    // 0x0050(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	int64                                         fileLength;                                        // 0x0068(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          isMarkedForManualRelease;                          // 0x0070(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FCreateModFileRequest;
 
 // ScriptStruct cfcore.Category
 // 0x0078 (0x0078 - 0x0000)
@@ -722,47 +651,44 @@ public:
 };
 DUMPER7_ASSERTS_FFile;
 
-// ScriptStruct cfcore.GetFilesByIdsRequestDto
+// ScriptStruct cfcore.CFCoreInitializationOptions
 // 0x0010 (0x0010 - 0x0000)
-struct FGetFilesByIdsRequestDto final
+struct FCFCoreInitializationOptions final
 {
 public:
-	TArray<int64>                                 fileIds;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 userContextId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGetFilesByIdsRequestDto;
+DUMPER7_ASSERTS_FCFCoreInitializationOptions;
 
-// ScriptStruct cfcore.FileDeltaDiffExtraDataFileInfo
-// 0x0058 (0x0058 - 0x0000)
-struct FFileDeltaDiffExtraDataFileInfo final
+// ScriptStruct cfcore.UnblockModsRequest
+// 0x0040 (0x0040 - 0x0000)
+struct FUnblockModsRequest final
 {
 public:
-	class FString                                 Path;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 patchFilename;                                     // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 originalFilename;                                  // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 newFilename;                                       // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 newPath;                                           // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECFCoreDiffMethod                             Method;                                            // 0x0050(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<int64>                                 blockedAuthors;                                    // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int64>                                 blockedMods;                                       // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int64>                                 blockedServerMods;                                 // 0x0020(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         blockedServers;                                    // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFileDeltaDiffExtraDataFileInfo;
+DUMPER7_ASSERTS_FUnblockModsRequest;
 
-// ScriptStruct cfcore.EntitlementCampaign
-// 0x0048 (0x0048 - 0x0000)
-struct FEntitlementCampaign final
+// ScriptStruct cfcore.AuthToken
+// 0x0010 (0x0010 - 0x0000)
+struct FAuthToken final
 {
 public:
-	int64                                         ID;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         gameId;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Name;                                              // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              createdAt;                                         // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              expiresAt;                                         // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECFCoreEntitlmentCampaignType                 Type;                                              // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          isDeleted;                                         // 0x0031(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         codeLength;                                        // 0x0034(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 extraData;                                         // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 token;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEntitlementCampaign;
+DUMPER7_ASSERTS_FAuthToken;
+
+// ScriptStruct cfcore.AuthTokenResponse
+// 0x0010 (0x0010 - 0x0000)
+struct FAuthTokenResponse final
+{
+public:
+	struct FAuthToken                             Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAuthTokenResponse;
 
 // ScriptStruct cfcore.LibraryProgressDataTransfer
 // 0x0028 (0x0028 - 0x0000)
@@ -777,6 +703,16 @@ public:
 };
 DUMPER7_ASSERTS_FLibraryProgressDataTransfer;
 
+// ScriptStruct cfcore.AssureServerModsUpdatedParams
+// 0x0020 (0x0020 - 0x0000)
+struct FAssureServerModsUpdatedParams final
+{
+public:
+	TArray<int64>                                 modIds;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int64>                                 devModIds;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAssureServerModsUpdatedParams;
+
 // ScriptStruct cfcore.ModsUpdateProgress
 // 0x0001 (0x0001 - 0x0000)
 struct FModsUpdateProgress final
@@ -785,80 +721,6 @@ public:
 	EModsUpdateProgressState                      State;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FModsUpdateProgress;
-
-// ScriptStruct cfcore.TermsButton
-// 0x0010 (0x0010 - 0x0000)
-struct FTermsButton final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTermsButton;
-
-// ScriptStruct cfcore.TermsButtons
-// 0x0020 (0x0020 - 0x0000)
-struct FTermsButtons final
-{
-public:
-	struct FTermsButton                           agree;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FTermsButton                           disagree;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTermsButtons;
-
-// ScriptStruct cfcore.TermsLink
-// 0x0028 (0x0028 - 0x0000)
-struct FTermsLink final
-{
-public:
-	bool                                          required;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Text;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 URL;                                               // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTermsLink;
-
-// ScriptStruct cfcore.TermsLinks
-// 0x0078 (0x0078 - 0x0000)
-struct FTermsLinks final
-{
-public:
-	struct FTermsLink                             website;                                           // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FTermsLink                             Terms;                                             // 0x0028(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FTermsLink                             Privacy;                                           // 0x0050(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTermsLinks;
-
-// ScriptStruct cfcore.TermsContent
-// 0x00C8 (0x00C8 - 0x0000)
-struct FTermsContent final
-{
-public:
-	class FString                                 Language;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 plainText;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 html;                                              // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTermsButtons                          buttons;                                           // 0x0030(0x0020)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FTermsLinks                            links;                                             // 0x0050(0x0078)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTermsContent;
-
-// ScriptStruct cfcore.Terms
-// 0x00D0 (0x00D0 - 0x0000)
-struct FTerms final
-{
-public:
-	struct FDateTime                              updateDate;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTermsContent                          Content;                                           // 0x0008(0x00C8)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTerms;
-
-// ScriptStruct cfcore.GeneratePremiumCheckoutUrlResponse
-// 0x0010 (0x0010 - 0x0000)
-struct FGeneratePremiumCheckoutUrlResponse final
-{
-public:
-	class FString                                 Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGeneratePremiumCheckoutUrlResponse;
 
 // ScriptStruct cfcore.GameAssets
 // 0x0030 (0x0030 - 0x0000)
@@ -886,24 +748,6 @@ public:
 	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGame;
-
-// ScriptStruct cfcore.AuthToken
-// 0x0010 (0x0010 - 0x0000)
-struct FAuthToken final
-{
-public:
-	class FString                                 token;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAuthToken;
-
-// ScriptStruct cfcore.AuthTokenResponse
-// 0x0010 (0x0010 - 0x0000)
-struct FAuthTokenResponse final
-{
-public:
-	struct FAuthToken                             Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAuthTokenResponse;
 
 // ScriptStruct cfcore.MePhasingData
 // 0x0014 (0x0014 - 0x0000)
@@ -935,6 +779,15 @@ public:
 	struct FDateTime                              eulaLastAgreed;                                    // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMe;
+
+// ScriptStruct cfcore.CFCoreSettingsUnmanagedMods
+// 0x0001 (0x0001 - 0x0000)
+struct FCFCoreSettingsUnmanagedMods final
+{
+public:
+	bool                                          Enabled;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCFCoreSettingsUnmanagedMods;
 
 // ScriptStruct cfcore.ModLinks
 // 0x0050 (0x0050 - 0x0000)
@@ -1082,6 +935,99 @@ public:
 };
 DUMPER7_ASSERTS_FCFCoreMod;
 
+// ScriptStruct cfcore.EntitlementCampaign
+// 0x0048 (0x0048 - 0x0000)
+struct FEntitlementCampaign final
+{
+public:
+	int64                                         ID;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         gameId;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Name;                                              // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              createdAt;                                         // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              expiresAt;                                         // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECFCoreEntitlmentCampaignType                 Type;                                              // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          isDeleted;                                         // 0x0031(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         codeLength;                                        // 0x0034(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 extraData;                                         // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEntitlementCampaign;
+
+// ScriptStruct cfcore.CFCoreApiRequestPagination
+// 0x0008 (0x0008 - 0x0000)
+struct FCFCoreApiRequestPagination final
+{
+public:
+	int32                                         Index;                                             // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         pageSize;                                          // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCFCoreApiRequestPagination;
+
+// ScriptStruct cfcore.TermsButton
+// 0x0010 (0x0010 - 0x0000)
+struct FTermsButton final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTermsButton;
+
+// ScriptStruct cfcore.TermsButtons
+// 0x0020 (0x0020 - 0x0000)
+struct FTermsButtons final
+{
+public:
+	struct FTermsButton                           agree;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FTermsButton                           disagree;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTermsButtons;
+
+// ScriptStruct cfcore.TermsLink
+// 0x0028 (0x0028 - 0x0000)
+struct FTermsLink final
+{
+public:
+	bool                                          required;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Text;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 URL;                                               // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTermsLink;
+
+// ScriptStruct cfcore.TermsLinks
+// 0x0078 (0x0078 - 0x0000)
+struct FTermsLinks final
+{
+public:
+	struct FTermsLink                             website;                                           // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FTermsLink                             Terms;                                             // 0x0028(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FTermsLink                             Privacy;                                           // 0x0050(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTermsLinks;
+
+// ScriptStruct cfcore.TermsContent
+// 0x00C8 (0x00C8 - 0x0000)
+struct FTermsContent final
+{
+public:
+	class FString                                 Language;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 plainText;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 html;                                              // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTermsButtons                          buttons;                                           // 0x0030(0x0020)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FTermsLinks                            links;                                             // 0x0050(0x0078)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTermsContent;
+
+// ScriptStruct cfcore.Terms
+// 0x00D0 (0x00D0 - 0x0000)
+struct FTerms final
+{
+public:
+	struct FDateTime                              updateDate;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTermsContent                          Content;                                           // 0x0008(0x00C8)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTerms;
+
 // ScriptStruct cfcore.ModsHighlights
 // 0x0060 (0x0060 - 0x0000)
 struct FModsHighlights final
@@ -1095,15 +1041,6 @@ public:
 	TArray<struct FCFCoreMod>                     latest;                                            // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FModsHighlights;
-
-// ScriptStruct cfcore.CFCoreSettingsUnmanagedMods
-// 0x0001 (0x0001 - 0x0000)
-struct FCFCoreSettingsUnmanagedMods final
-{
-public:
-	bool                                          Enabled;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCFCoreSettingsUnmanagedMods;
 
 // ScriptStruct cfcore.CarouselItemDestination
 // 0x0010 (0x0010 - 0x0000)
@@ -1161,25 +1098,6 @@ public:
 	TArray<struct FThemePage>                     themePages;                                        // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FModsHighlightsV2;
-
-// ScriptStruct cfcore.CFCoreSettingsPremiumMods
-// 0x0010 (0x0010 - 0x0000)
-struct FCFCoreSettingsPremiumMods final
-{
-public:
-	class FString                                 publicKeyPem;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCFCoreSettingsPremiumMods;
-
-// ScriptStruct cfcore.CFCoreApiRequestPagination
-// 0x0008 (0x0008 - 0x0000)
-struct FCFCoreApiRequestPagination final
-{
-public:
-	int32                                         Index;                                             // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         pageSize;                                          // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCFCoreApiRequestPagination;
 
 // ScriptStruct cfcore.QueryParams
 // 0x0020 (0x0020 - 0x0000)
@@ -1251,27 +1169,6 @@ public:
 };
 DUMPER7_ASSERTS_FModsHighlightsV3;
 
-// ScriptStruct cfcore.ModFileChunkedInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FModFileChunkedInfo final
-{
-public:
-	int64                                         fileId;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Directory;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 uploadId;                                          // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FModFileChunkedInfo;
-
-// ScriptStruct cfcore.CreateModFileChunkedResponse
-// 0x0038 (0x0038 - 0x0000)
-struct FCreateModFileChunkedResponse final
-{
-public:
-	struct FModFileChunkedInfo                    Data;                                              // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCreateModFileChunkedResponse;
-
 // ScriptStruct cfcore.PurchaseDetails
 // 0x0020 (0x0020 - 0x0000)
 struct FPurchaseDetails final
@@ -1307,17 +1204,6 @@ public:
 };
 DUMPER7_ASSERTS_FCFCoreApiResponsePagination;
 
-// ScriptStruct cfcore.CFCoreFileSize
-// 0x000C (0x000C - 0x0000)
-struct FCFCoreFileSize final
-{
-public:
-	int32                                         kb;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         mb;                                                // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         gb;                                                // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCFCoreFileSize;
-
 // ScriptStruct cfcore.MyRatings
 // 0x0020 (0x0020 - 0x0000)
 struct FMyRatings final
@@ -1340,37 +1226,23 @@ public:
 };
 DUMPER7_ASSERTS_FReportingReason;
 
-// ScriptStruct cfcore.FileDeltaDiff
-// 0x0090 (0x0090 - 0x0000)
-struct FFileDeltaDiff final
+// ScriptStruct cfcore.SDKVersion
+// 0x0004 (0x0004 - 0x0000)
+struct FSDKVersion final
 {
 public:
-	int64                                         ID;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         gameId;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         modId;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         oldFileId;                                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         newFileId;                                         // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECFCoreFileDeltaDiffStatus                    Status;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 downloadUrl;                                       // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              dateCreated;                                       // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              DateModified;                                      // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         fileLength;                                        // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         fileSizeOnDisk;                                    // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FFileHash>                      hashes;                                            // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 extraJsonData;                                     // 0x0080(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Build;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFileDeltaDiff;
+DUMPER7_ASSERTS_FSDKVersion;
 
-// ScriptStruct cfcore.GetModFileDeltaDiffResponse
-// 0x0090 (0x0090 - 0x0000)
-struct FGetModFileDeltaDiffResponse final
+// ScriptStruct cfcore.SDKVersionResponse
+// 0x0004 (0x0004 - 0x0000)
+struct FSDKVersionResponse final
 {
 public:
-	struct FFileDeltaDiff                         Data;                                              // 0x0000(0x0090)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FSDKVersion                            Data;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGetModFileDeltaDiffResponse;
+DUMPER7_ASSERTS_FSDKVersionResponse;
 
 // ScriptStruct cfcore.GameVersionsByType
 // 0x0018 (0x0018 - 0x0000)
@@ -1394,14 +1266,55 @@ public:
 };
 DUMPER7_ASSERTS_FGameVersionType;
 
-// ScriptStruct cfcore.InitiatePurchaseResponse
-// 0x0020 (0x0020 - 0x0000)
-struct FInitiatePurchaseResponse final
+// ScriptStruct cfcore.GeneratePremiumCheckoutUrlResponse
+// 0x0010 (0x0010 - 0x0000)
+struct FGeneratePremiumCheckoutUrlResponse final
 {
 public:
-	struct FPurchaseDetails                       Data;                                              // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FString                                 Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInitiatePurchaseResponse;
+DUMPER7_ASSERTS_FGeneratePremiumCheckoutUrlResponse;
+
+// ScriptStruct cfcore.CFCoreApiResponseError
+// 0x0020 (0x0020 - 0x0000)
+struct FCFCoreApiResponseError final
+{
+public:
+	bool                                          cancelled;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          badRequest;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          entityNotFound;                                    // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          serverUnreachable;                                 // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          missingPriviliges;                                 // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          tokenExpired;                                      // 0x0005(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          resourceExpired;                                   // 0x0006(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          failedToParseServerResponse;                       // 0x0007(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ErrorCode;                                         // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Description;                                       // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCFCoreApiResponseError;
+
+// ScriptStruct cfcore.CFCoreError
+// 0x0038 (0x0038 - 0x0000)
+struct FCFCoreError final
+{
+public:
+	bool                                          isError;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECFCoreErrorCodes                             code;                                              // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCFCoreApiResponseError                apiError;                                          // 0x0008(0x0020)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FString                                 Description;                                       // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCFCoreError;
+
+// ScriptStruct cfcore.GameVersionByTypeArrayResponse
+// 0x0010 (0x0010 - 0x0000)
+struct FGameVersionByTypeArrayResponse final
+{
+public:
+	TArray<struct FGameVersionsByType>            Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameVersionByTypeArrayResponse;
 
 // ScriptStruct cfcore.ModsDirInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -1413,26 +1326,6 @@ public:
 	int64                                         freeDiskSizeInBytes;                               // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FModsDirInfo;
-
-// ScriptStruct cfcore.CFCoreInitializationOptions
-// 0x0010 (0x0010 - 0x0000)
-struct FCFCoreInitializationOptions final
-{
-public:
-	class FString                                 userContextId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCFCoreInitializationOptions;
-
-// ScriptStruct cfcore.ApiResponseErrorInternal
-// 0x0018 (0x0018 - 0x0000)
-struct FApiResponseErrorInternal final
-{
-public:
-	int32                                         statusCode;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ErrorCode;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Message;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FApiResponseErrorInternal;
 
 // ScriptStruct cfcore.InstalledMod
 // 0x0460 (0x0460 - 0x0000)
@@ -1472,56 +1365,6 @@ public:
 };
 DUMPER7_ASSERTS_FGenPremiumCheckoutUrlRequest;
 
-// ScriptStruct cfcore.DirectDownloadDomainEx
-// 0x0010 (0x0010 - 0x0000)
-struct FDirectDownloadDomainEx final
-{
-public:
-	class FString                                 domain;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDirectDownloadDomainEx;
-
-// ScriptStruct cfcore.DirectDownloadDomainExResponse
-// 0x0010 (0x0010 - 0x0000)
-struct FDirectDownloadDomainExResponse final
-{
-public:
-	struct FDirectDownloadDomainEx                Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDirectDownloadDomainExResponse;
-
-// ScriptStruct cfcore.UploadedModFile
-// 0x0028 (0x0028 - 0x0000)
-struct FUploadedModFile final
-{
-public:
-	int64                                         fileId;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Directory;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Filename;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUploadedModFile;
-
-// ScriptStruct cfcore.FileTransferProgress
-// 0x0018 (0x0018 - 0x0000)
-struct FFileTransferProgress final
-{
-public:
-	int32                                         progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         transferredBytes;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         bytesPerSecond;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFileTransferProgress;
-
-// ScriptStruct cfcore.CategoryArrayResponse
-// 0x0010 (0x0010 - 0x0000)
-struct FCategoryArrayResponse final
-{
-public:
-	TArray<struct FCategory>                      Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCategoryArrayResponse;
-
 // ScriptStruct cfcore.CFCoreSettingsThrottling
 // 0x0008 (0x0008 - 0x0000)
 struct FCFCoreSettingsThrottling final
@@ -1530,6 +1373,15 @@ public:
 	int64                                         diskWriteBytesPerSec;                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCFCoreSettingsThrottling;
+
+// ScriptStruct cfcore.CFCoreSettingsPremiumMods
+// 0x0010 (0x0010 - 0x0000)
+struct FCFCoreSettingsPremiumMods final
+{
+public:
+	class FString                                 publicKeyPem;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCFCoreSettingsPremiumMods;
 
 // ScriptStruct cfcore.CFCoreSettingsLogger
 // 0x000C (0x000C - 0x0000)
@@ -1584,6 +1436,60 @@ public:
 };
 DUMPER7_ASSERTS_FCFCoreSettings;
 
+// ScriptStruct cfcore.UploadedModFile
+// 0x0028 (0x0028 - 0x0000)
+struct FUploadedModFile final
+{
+public:
+	int64                                         fileId;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Directory;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FUploadedModFile;
+
+// ScriptStruct cfcore.FileTransferProgress
+// 0x0018 (0x0018 - 0x0000)
+struct FFileTransferProgress final
+{
+public:
+	int32                                         progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         transferredBytes;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         bytesPerSecond;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFileTransferProgress;
+
+// ScriptStruct cfcore.ApiResponseErrorInternal
+// 0x0018 (0x0018 - 0x0000)
+struct FApiResponseErrorInternal final
+{
+public:
+	int32                                         statusCode;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ErrorCode;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Message;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FApiResponseErrorInternal;
+
+// ScriptStruct cfcore.CategoryArrayResponse
+// 0x0010 (0x0010 - 0x0000)
+struct FCategoryArrayResponse final
+{
+public:
+	TArray<struct FCategory>                      Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCategoryArrayResponse;
+
+// ScriptStruct cfcore.CFCoreFileSize
+// 0x000C (0x000C - 0x0000)
+struct FCFCoreFileSize final
+{
+public:
+	int32                                         kb;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         mb;                                                // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         gb;                                                // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCFCoreFileSize;
+
 // ScriptStruct cfcore.CheckDlcRequestDto
 // 0x0010 (0x0010 - 0x0000)
 struct FCheckDlcRequestDto final
@@ -1614,6 +1520,47 @@ public:
 };
 DUMPER7_ASSERTS_FCreateCookedModFileRequest;
 
+// ScriptStruct cfcore.CreateModFileChunkedResponse
+// 0x0038 (0x0038 - 0x0000)
+struct FCreateModFileChunkedResponse final
+{
+public:
+	struct FModFileChunkedInfo                    Data;                                              // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCreateModFileChunkedResponse;
+
+// ScriptStruct cfcore.ModFileCookingOptions
+// 0x0018 (0x0018 - 0x0000)
+struct FModFileCookingOptions final
+{
+public:
+	bool                                          isSourceFile;                                      // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECFCoreAutoCookingType                        autoCookingType;                                   // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 cookerVersion;                                     // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FModFileCookingOptions;
+
+// ScriptStruct cfcore.CreateModFileRequest
+// 0x0078 (0x0078 - 0x0000)
+struct FCreateModFileRequest final
+{
+public:
+	ECFCoreChangelogMarkupType                    changelogType;                                     // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 changelog;                                         // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DisplayName;                                       // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int64>                                 gameVersionIds;                                    // 0x0038(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	ECFCoreFileReleaseType                        releaseType;                                       // 0x0048(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FModFileCookingOptions                 cookingOptions;                                    // 0x0050(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	int64                                         fileLength;                                        // 0x0068(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          isMarkedForManualRelease;                          // 0x0070(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCreateModFileRequest;
+
 // ScriptStruct cfcore.CreateModFileResponse
 // 0x0028 (0x0028 - 0x0000)
 struct FCreateModFileResponse final
@@ -1640,6 +1587,24 @@ public:
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCreateModRequest;
+
+// ScriptStruct cfcore.DirectDownloadDomainEx
+// 0x0010 (0x0010 - 0x0000)
+struct FDirectDownloadDomainEx final
+{
+public:
+	class FString                                 domain;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDirectDownloadDomainEx;
+
+// ScriptStruct cfcore.DirectDownloadDomainExResponse
+// 0x0010 (0x0010 - 0x0000)
+struct FDirectDownloadDomainExResponse final
+{
+public:
+	struct FDirectDownloadDomainEx                Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDirectDownloadDomainExResponse;
 
 // ScriptStruct cfcore.EntitlementsRedeemCodeRequest
 // 0x0010 (0x0010 - 0x0000)
@@ -1688,6 +1653,44 @@ public:
 	struct FCFCoreApiResponsePagination           pagination;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FFileArrayResponse;
+
+// ScriptStruct cfcore.FileDeltaDiff
+// 0x0090 (0x0090 - 0x0000)
+struct FFileDeltaDiff final
+{
+public:
+	int64                                         ID;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         gameId;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         modId;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         oldFileId;                                         // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         newFileId;                                         // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECFCoreFileDeltaDiffStatus                    Status;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 downloadUrl;                                       // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Filename;                                          // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              dateCreated;                                       // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              DateModified;                                      // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         fileLength;                                        // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         fileSizeOnDisk;                                    // 0x0068(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FFileHash>                      hashes;                                            // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 extraJsonData;                                     // 0x0080(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFileDeltaDiff;
+
+// ScriptStruct cfcore.FileDeltaDiffExtraDataFileInfo
+// 0x0058 (0x0058 - 0x0000)
+struct FFileDeltaDiffExtraDataFileInfo final
+{
+public:
+	class FString                                 Path;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 patchFilename;                                     // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 originalFilename;                                  // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 newFilename;                                       // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 newPath;                                           // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECFCoreDiffMethod                             Method;                                            // 0x0050(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FFileDeltaDiffExtraDataFileInfo;
 
 // ScriptStruct cfcore.FileDeltaDiffExtraData
 // 0x0018 (0x0018 - 0x0000)
@@ -1765,15 +1768,6 @@ public:
 };
 DUMPER7_ASSERTS_FGameVersionsDetailedByTypeArrayResponse;
 
-// ScriptStruct cfcore.GameVersionByTypeArrayResponse
-// 0x0010 (0x0010 - 0x0000)
-struct FGameVersionByTypeArrayResponse final
-{
-public:
-	TArray<struct FGameVersionsByType>            Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGameVersionByTypeArrayResponse;
-
 // ScriptStruct cfcore.GameVersionTypeArrayResponse
 // 0x0010 (0x0010 - 0x0000)
 struct FGameVersionTypeArrayResponse final
@@ -1833,6 +1827,15 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FCFCoreGetCategoriesFilter;
+
+// ScriptStruct cfcore.GetFilesByIdsRequestDto
+// 0x0010 (0x0010 - 0x0000)
+struct FGetFilesByIdsRequestDto final
+{
+public:
+	TArray<int64>                                 fileIds;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGetFilesByIdsRequestDto;
 
 // ScriptStruct cfcore.CFCoreGetFilesFilter
 // 0x0010 (0x0010 - 0x0000)
@@ -1929,6 +1932,15 @@ public:
 };
 DUMPER7_ASSERTS_FGetModsHighlightsV3Response;
 
+// ScriptStruct cfcore.GetModFileDeltaDiffResponse
+// 0x0090 (0x0090 - 0x0000)
+struct FGetModFileDeltaDiffResponse final
+{
+public:
+	struct FFileDeltaDiff                         Data;                                              // 0x0000(0x0090)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGetModFileDeltaDiffResponse;
+
 // ScriptStruct cfcore.ModFileDownloadUrl
 // 0x0020 (0x0020 - 0x0000)
 struct FModFileDownloadUrl final
@@ -1960,6 +1972,15 @@ public:
 	class FString                                 token;                                             // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FInitiatePurchaseRequest;
+
+// ScriptStruct cfcore.InitiatePurchaseResponse
+// 0x0020 (0x0020 - 0x0000)
+struct FInitiatePurchaseResponse final
+{
+public:
+	struct FPurchaseDetails                       Data;                                              // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FInitiatePurchaseResponse;
 
 // ScriptStruct cfcore.InstalledModArray
 // 0x0010 (0x0010 - 0x0000)
@@ -2159,24 +2180,6 @@ public:
 };
 DUMPER7_ASSERTS_FReportModRequestDto;
 
-// ScriptStruct cfcore.SDKVersion
-// 0x0004 (0x0004 - 0x0000)
-struct FSDKVersion final
-{
-public:
-	int32                                         Build;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSDKVersion;
-
-// ScriptStruct cfcore.SDKVersionResponse
-// 0x0004 (0x0004 - 0x0000)
-struct FSDKVersionResponse final
-{
-public:
-	struct FSDKVersion                            Data;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSDKVersionResponse;
-
 // ScriptStruct cfcore.CFCoreSearchModsFilter
 // 0x0048 (0x0048 - 0x0000)
 struct FCFCoreSearchModsFilter final
@@ -2254,18 +2257,6 @@ public:
 };
 DUMPER7_ASSERTS_FTermsResponse;
 
-// ScriptStruct cfcore.UnblockModsRequest
-// 0x0040 (0x0040 - 0x0000)
-struct FUnblockModsRequest final
-{
-public:
-	TArray<int64>                                 blockedAuthors;                                    // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int64>                                 blockedMods;                                       // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int64>                                 blockedServerMods;                                 // 0x0020(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         blockedServers;                                    // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FUnblockModsRequest;
-
 // ScriptStruct cfcore.UpdateModRequest
 // 0x0000 (0x0060 - 0x0060)
 struct FUpdateModRequest final : public FCreateModRequest
@@ -2281,6 +2272,15 @@ public:
 	struct FUploadedModFile                       Data;                                              // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FUploadedModFileResponse;
+
+// ScriptStruct cfcore.UploadModFileChunkResponse
+// 0x0001 (0x0001 - 0x0000)
+struct FUploadModFileChunkResponse final
+{
+public:
+	bool                                          Data;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FUploadModFileChunkResponse;
 
 // ScriptStruct cfcore.UserContextInfo
 // 0x0010 (0x0010 - 0x0000)

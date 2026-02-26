@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "cfcore_ui_structs.hpp"
 #include "cfcore_structs.hpp"
-#include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "cfcore_ui_structs.hpp"
+#include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
 
 
@@ -90,12 +90,11 @@ public:
 DUMPER7_ASSERTS_ReHostSession_ASA_C_BPIsPresetDifficultyUIOpen;
 
 // Function ReHostSession_ASA.ReHostSession_ASA_C.CreateNotifManager
-// 0x0010 (0x0010 - 0x0000)
+// 0x0001 (0x0001 - 0x0000)
 struct ReHostSession_ASA_C_CreateNotifManager final
 {
 public:
-	class UUI_NotificationManager_C*              CallFunc_Create_ReturnValue;                       // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_ReHostSession_ASA_C_CreateNotifManager;
 

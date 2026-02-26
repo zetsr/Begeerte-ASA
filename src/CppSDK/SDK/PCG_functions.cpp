@@ -17,169 +17,6 @@
 namespace SDK
 {
 
-// Function PCG.PCGSettings.BP_GetTypeUnionOfIncidentEdges
-// (Final, Native, Protected, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class FName&                      PinLabel                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UPCGSettings::BP_GetTypeUnionOfIncidentEdges(const class FName& PinLabel) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGSettings", "BP_GetTypeUnionOfIncidentEdges");
-
-	Params::PCGSettings_BP_GetTypeUnionOfIncidentEdges Parms{};
-
-	Parms.PinLabel = PinLabel;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGSettings.UseSeed
-// (Native, Public, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UPCGSettings::UseSeed() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGSettings", "UseSeed");
-
-	Params::PCGSettings_UseSeed Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGAssetExporter.BP_ExportToAsset
-// (Native, Event, Protected, BlueprintEvent)
-// Parameters:
-// class UPCGDataAsset*                    Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UPCGAssetExporter::BP_ExportToAsset(class UPCGDataAsset* Asset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGAssetExporter", "BP_ExportToAsset");
-
-	Params::PCGAssetExporter_BP_ExportToAsset Parms{};
-
-	Parms.Asset = Asset;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGAssetExporter.BP_GetAssetType
-// (Native, Event, Protected, BlueprintEvent, Const)
-// Parameters:
-// TSubclassOf<class UPCGDataAsset>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-TSubclassOf<class UPCGDataAsset> UPCGAssetExporter::BP_GetAssetType() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGAssetExporter", "BP_GetAssetType");
-
-	Params::PCGAssetExporter_BP_GetAssetType Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGAssetExporterUtils.CreateAsset
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UPCGAssetExporter*                Exporter                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FPCGAssetExporterParameters&Parameters                                             (Parm, NativeAccessSpecifierPublic)
-// class UPackage*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UPackage* UPCGAssetExporterUtils::CreateAsset(class UPCGAssetExporter* Exporter, const struct FPCGAssetExporterParameters& Parameters)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("PCGAssetExporterUtils", "CreateAsset");
-
-	Params::PCGAssetExporterUtils_CreateAsset Parms{};
-
-	Parms.Exporter = Exporter;
-	Parms.Parameters = std::move(Parameters);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGAssetExporterUtils.UpdateAssets
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FAssetData>&        PCGAssets                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// const struct FPCGAssetExporterParameters&Parameters                                             (Parm, NativeAccessSpecifierPublic)
-
-void UPCGAssetExporterUtils::UpdateAssets(const TArray<struct FAssetData>& PCGAssets, const struct FPCGAssetExporterParameters& Parameters)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("PCGAssetExporterUtils", "UpdateAssets");
-
-	Params::PCGAssetExporterUtils_UpdateAssets Parms{};
-
-	Parms.PCGAssets = std::move(PCGAssets);
-	Parms.Parameters = std::move(Parameters);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function PCG.PCGSpatialData.CreateEmptyMetadata
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -682,83 +519,6 @@ const class UPCGPointData* UPCGSpatialData::ToPointDataWithContext(struct FPCGCo
 }
 
 
-// Function PCG.PCGBaseTextureData.SetDensityFunctionEquivalent
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// EPCGTextureDensityFunction              DensityFunction                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPCGBaseTextureData::SetDensityFunctionEquivalent(EPCGTextureDensityFunction DensityFunction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGBaseTextureData", "SetDensityFunctionEquivalent");
-
-	Params::PCGBaseTextureData_SetDensityFunctionEquivalent Parms{};
-
-	Parms.DensityFunction = DensityFunction;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PCG.PCGBaseTextureData.GetDensityFunctionEquivalent
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EPCGTextureDensityFunction              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EPCGTextureDensityFunction UPCGBaseTextureData::GetDensityFunctionEquivalent() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGBaseTextureData", "GetDensityFunctionEquivalent");
-
-	Params::PCGBaseTextureData_GetDensityFunctionEquivalent Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGRenderTargetData.Initialize
-// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UTextureRenderTarget2D*           InRenderTarget                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPCGRenderTargetData::Initialize(class UTextureRenderTarget2D* InRenderTarget, const struct FTransform& InTransform)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGRenderTargetData", "Initialize");
-
-	Params::PCGRenderTargetData_Initialize Parms{};
-
-	Parms.InRenderTarget = InRenderTarget;
-	Parms.InTransform = std::move(InTransform);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function PCG.PCGDifferenceData.Initialize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -824,6 +584,194 @@ void UPCGDifferenceData::SetDensityFunction(EPCGDifferenceDensityFunction InDens
 	Params::PCGDifferenceData_SetDensityFunction Parms{};
 
 	Parms.InDensityFunction = InDensityFunction;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PCG.PCGSettings.BP_GetTypeUnionOfIncidentEdges
+// (Final, Native, Protected, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class FName&                      PinLabel                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UPCGSettings::BP_GetTypeUnionOfIncidentEdges(const class FName& PinLabel) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGSettings", "BP_GetTypeUnionOfIncidentEdges");
+
+	Params::PCGSettings_BP_GetTypeUnionOfIncidentEdges Parms{};
+
+	Parms.PinLabel = PinLabel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGSettings.UseSeed
+// (Native, Public, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UPCGSettings::UseSeed() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGSettings", "UseSeed");
+
+	Params::PCGSettings_UseSeed Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGAssetExporter.BP_ExportToAsset
+// (Native, Event, Protected, BlueprintEvent)
+// Parameters:
+// class UPCGDataAsset*                    Asset                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UPCGAssetExporter::BP_ExportToAsset(class UPCGDataAsset* Asset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGAssetExporter", "BP_ExportToAsset");
+
+	Params::PCGAssetExporter_BP_ExportToAsset Parms{};
+
+	Parms.Asset = Asset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGAssetExporter.BP_GetAssetType
+// (Native, Event, Protected, BlueprintEvent, Const)
+// Parameters:
+// TSubclassOf<class UPCGDataAsset>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+TSubclassOf<class UPCGDataAsset> UPCGAssetExporter::BP_GetAssetType() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGAssetExporter", "BP_GetAssetType");
+
+	Params::PCGAssetExporter_BP_GetAssetType Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGAssetExporterUtils.CreateAsset
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UPCGAssetExporter*                Exporter                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FPCGAssetExporterParameters&Parameters                                             (Parm, NativeAccessSpecifierPublic)
+// class UPackage*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPackage* UPCGAssetExporterUtils::CreateAsset(class UPCGAssetExporter* Exporter, const struct FPCGAssetExporterParameters& Parameters)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("PCGAssetExporterUtils", "CreateAsset");
+
+	Params::PCGAssetExporterUtils_CreateAsset Parms{};
+
+	Parms.Exporter = Exporter;
+	Parms.Parameters = std::move(Parameters);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGAssetExporterUtils.UpdateAssets
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FAssetData>&        PCGAssets                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FPCGAssetExporterParameters&Parameters                                             (Parm, NativeAccessSpecifierPublic)
+
+void UPCGAssetExporterUtils::UpdateAssets(const TArray<struct FAssetData>& PCGAssets, const struct FPCGAssetExporterParameters& Parameters)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("PCGAssetExporterUtils", "UpdateAssets");
+
+	Params::PCGAssetExporterUtils_UpdateAssets Parms{};
+
+	Parms.PCGAssets = std::move(PCGAssets);
+	Parms.Parameters = std::move(Parameters);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PCG.PCGPointMatchAndSetSettings.SetMatchAndSetType
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UPCGMatchAndSetBase>  InMatchAndSetType                                      (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPCGPointMatchAndSetSettings::SetMatchAndSetType(TSubclassOf<class UPCGMatchAndSetBase> InMatchAndSetType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGPointMatchAndSetSettings", "SetMatchAndSetType");
+
+	Params::PCGPointMatchAndSetSettings_SetMatchAndSetType Parms{};
+
+	Parms.InMatchAndSetType = InMatchAndSetType;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1183,22 +1131,26 @@ TArray<class FName> UPCGMetadataSettingsBase::GetOutputDataFromPinOptions() cons
 }
 
 
-// Function PCG.PCGPartitionActor.GetLocalComponent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function PCG.PCGNode.AddEdgeTo
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class UPCGComponent*              OriginalComponent                                      (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGComponent*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             FromPinLabel                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGNode*                         To                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ToPinLabel                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGNode*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UPCGComponent* APCGPartitionActor::GetLocalComponent(const class UPCGComponent* OriginalComponent) const
+class UPCGNode* UPCGNode::AddEdgeTo(class FName FromPinLabel, class UPCGNode* To, class FName ToPinLabel)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PCGPartitionActor", "GetLocalComponent");
+		Func = Class->GetFunction("PCGNode", "AddEdgeTo");
 
-	Params::PCGPartitionActor_GetLocalComponent Parms{};
+	Params::PCGNode_AddEdgeTo Parms{};
 
-	Parms.OriginalComponent = OriginalComponent;
+	Parms.FromPinLabel = FromPinLabel;
+	Parms.To = To;
+	Parms.ToPinLabel = ToPinLabel;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1211,22 +1163,203 @@ class UPCGComponent* APCGPartitionActor::GetLocalComponent(const class UPCGCompo
 }
 
 
-// Function PCG.PCGPartitionActor.GetOriginalComponent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function PCG.PCGNode.RemoveEdgeTo
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class UPCGComponent*              LocalComponent                                         (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGComponent*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             FromPinLable                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGNode*                         To                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ToPinLabel                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UPCGComponent* APCGPartitionActor::GetOriginalComponent(const class UPCGComponent* LocalComponent) const
+bool UPCGNode::RemoveEdgeTo(class FName FromPinLable, class UPCGNode* To, class FName ToPinLabel)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PCGPartitionActor", "GetOriginalComponent");
+		Func = Class->GetFunction("PCGNode", "RemoveEdgeTo");
 
-	Params::PCGPartitionActor_GetOriginalComponent Parms{};
+	Params::PCGNode_RemoveEdgeTo Parms{};
 
-	Parms.LocalComponent = LocalComponent;
+	Parms.FromPinLable = FromPinLable;
+	Parms.To = To;
+	Parms.ToPinLabel = ToPinLabel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGNode.GetGraph
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UPCGGraph*                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPCGGraph* UPCGNode::GetGraph() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGNode", "GetGraph");
+
+	Params::PCGNode_GetGraph Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGNode.GetSettings
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UPCGSettings*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPCGSettings* UPCGNode::GetSettings() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGNode", "GetSettings");
+
+	Params::PCGNode_GetSettings Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGBaseTextureData.SetDensityFunctionEquivalent
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// EPCGTextureDensityFunction              DensityFunction                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPCGBaseTextureData::SetDensityFunctionEquivalent(EPCGTextureDensityFunction DensityFunction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGBaseTextureData", "SetDensityFunctionEquivalent");
+
+	Params::PCGBaseTextureData_SetDensityFunctionEquivalent Parms{};
+
+	Parms.DensityFunction = DensityFunction;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PCG.PCGBaseTextureData.GetDensityFunctionEquivalent
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EPCGTextureDensityFunction              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EPCGTextureDensityFunction UPCGBaseTextureData::GetDensityFunctionEquivalent() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGBaseTextureData", "GetDensityFunctionEquivalent");
+
+	Params::PCGBaseTextureData_GetDensityFunctionEquivalent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGRenderTargetData.Initialize
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UTextureRenderTarget2D*           InRenderTarget                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPCGRenderTargetData::Initialize(class UTextureRenderTarget2D* InRenderTarget, const struct FTransform& InTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGRenderTargetData", "Initialize");
+
+	Params::PCGRenderTargetData_Initialize Parms{};
+
+	Parms.InRenderTarget = InRenderTarget;
+	Parms.InTransform = std::move(InTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PCG.PCGTextureSamplerSettings.SetDensityFunctionEquivalent
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// EPCGTextureDensityFunction              DensityFunction                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPCGTextureSamplerSettings::SetDensityFunctionEquivalent(EPCGTextureDensityFunction DensityFunction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGTextureSamplerSettings", "SetDensityFunctionEquivalent");
+
+	Params::PCGTextureSamplerSettings_SetDensityFunctionEquivalent Parms{};
+
+	Parms.DensityFunction = DensityFunction;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PCG.PCGTextureSamplerSettings.GetDensityFunctionEquivalent
+// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EPCGTextureDensityFunction              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EPCGTextureDensityFunction UPCGTextureSamplerSettings::GetDensityFunctionEquivalent() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGTextureSamplerSettings", "GetDensityFunctionEquivalent");
+
+	Params::PCGTextureSamplerSettings_GetDensityFunctionEquivalent Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1261,186 +1394,6 @@ void UPCGManagedComponent::SetGeneratedComponentFromBP(TSoftObjectPtr<class UAct
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PCG.PCGPointData.CopyPointsFrom
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class UPCGPointData*              InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<int32>&                    InDataIndices                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UPCGPointData::CopyPointsFrom(const class UPCGPointData* InData, const TArray<int32>& InDataIndices)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGPointData", "CopyPointsFrom");
-
-	Params::PCGPointData_CopyPointsFrom Parms{};
-
-	Parms.InData = InData;
-	Parms.InDataIndices = std::move(InDataIndices);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PCG.PCGPointData.SetPoints
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FPCGPoint>&         InPoints                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UPCGPointData::SetPoints(const TArray<struct FPCGPoint>& InPoints)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGPointData", "SetPoints");
-
-	Params::PCGPointData_SetPoints Parms{};
-
-	Parms.InPoints = std::move(InPoints);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PCG.PCGPointData.GetNumPoints
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UPCGPointData::GetNumPoints() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGPointData", "GetNumPoints");
-
-	Params::PCGPointData_GetNumPoints Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGPointData.GetPoint
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FPCGPoint                        ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FPCGPoint UPCGPointData::GetPoint(int32 Index_0) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGPointData", "GetPoint");
-
-	Params::PCGPointData_GetPoint Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGPointData.GetPoints
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TArray<struct FPCGPoint>          ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const TArray<struct FPCGPoint> UPCGPointData::GetPoints() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGPointData", "GetPoints");
-
-	Params::PCGPointData_GetPoints Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGPointData.GetPointsCopy
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// TArray<struct FPCGPoint>                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FPCGPoint> UPCGPointData::GetPointsCopy() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGPointData", "GetPointsCopy");
-
-	Params::PCGPointData_GetPointsCopy Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGPointData.IsEmpty
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UPCGPointData::IsEmpty() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGPointData", "IsEmpty");
-
-	Params::PCGPointData_IsEmpty Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -3142,6 +3095,186 @@ void UPCGIntersectionData::Initialize(const class UPCGSpatialData* InA, const cl
 }
 
 
+// Function PCG.PCGPointData.CopyPointsFrom
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class UPCGPointData*              InData                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    InDataIndices                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UPCGPointData::CopyPointsFrom(const class UPCGPointData* InData, const TArray<int32>& InDataIndices)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGPointData", "CopyPointsFrom");
+
+	Params::PCGPointData_CopyPointsFrom Parms{};
+
+	Parms.InData = InData;
+	Parms.InDataIndices = std::move(InDataIndices);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PCG.PCGPointData.SetPoints
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FPCGPoint>&         InPoints                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UPCGPointData::SetPoints(const TArray<struct FPCGPoint>& InPoints)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGPointData", "SetPoints");
+
+	Params::PCGPointData_SetPoints Parms{};
+
+	Parms.InPoints = std::move(InPoints);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PCG.PCGPointData.GetNumPoints
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UPCGPointData::GetNumPoints() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGPointData", "GetNumPoints");
+
+	Params::PCGPointData_GetNumPoints Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGPointData.GetPoint
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FPCGPoint                        ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FPCGPoint UPCGPointData::GetPoint(int32 Index_0) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGPointData", "GetPoint");
+
+	Params::PCGPointData_GetPoint Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGPointData.GetPoints
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<struct FPCGPoint>          ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const TArray<struct FPCGPoint> UPCGPointData::GetPoints() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGPointData", "GetPoints");
+
+	Params::PCGPointData_GetPoints Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGPointData.GetPointsCopy
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// TArray<struct FPCGPoint>                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FPCGPoint> UPCGPointData::GetPointsCopy() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGPointData", "GetPointsCopy");
+
+	Params::PCGPointData_GetPointsCopy Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGPointData.IsEmpty
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UPCGPointData::IsEmpty() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGPointData", "IsEmpty");
+
+	Params::PCGPointData_IsEmpty Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PCG.PCGUnionData.AddData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -3992,145 +4125,6 @@ TSubclassOf<class UPCGBlueprintElement> UPCGBlueprintSettings::GetElementType() 
 }
 
 
-// Function PCG.PCGPointMatchAndSetSettings.SetMatchAndSetType
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
-// Parameters:
-// TSubclassOf<class UPCGMatchAndSetBase>  InMatchAndSetType                                      (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPCGPointMatchAndSetSettings::SetMatchAndSetType(TSubclassOf<class UPCGMatchAndSetBase> InMatchAndSetType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGPointMatchAndSetSettings", "SetMatchAndSetType");
-
-	Params::PCGPointMatchAndSetSettings_SetMatchAndSetType Parms{};
-
-	Parms.InMatchAndSetType = InMatchAndSetType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PCG.PCGNode.AddEdgeTo
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             FromPinLabel                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGNode*                         To                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             ToPinLabel                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGNode*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UPCGNode* UPCGNode::AddEdgeTo(class FName FromPinLabel, class UPCGNode* To, class FName ToPinLabel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGNode", "AddEdgeTo");
-
-	Params::PCGNode_AddEdgeTo Parms{};
-
-	Parms.FromPinLabel = FromPinLabel;
-	Parms.To = To;
-	Parms.ToPinLabel = ToPinLabel;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGNode.RemoveEdgeTo
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             FromPinLable                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPCGNode*                         To                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             ToPinLabel                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UPCGNode::RemoveEdgeTo(class FName FromPinLable, class UPCGNode* To, class FName ToPinLabel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGNode", "RemoveEdgeTo");
-
-	Params::PCGNode_RemoveEdgeTo Parms{};
-
-	Parms.FromPinLable = FromPinLable;
-	Parms.To = To;
-	Parms.ToPinLabel = ToPinLabel;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGNode.GetGraph
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UPCGGraph*                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UPCGGraph* UPCGNode::GetGraph() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGNode", "GetGraph");
-
-	Params::PCGNode_GetGraph Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function PCG.PCGNode.GetSettings
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UPCGSettings*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UPCGSettings* UPCGNode::GetSettings() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGNode", "GetSettings");
-
-	Params::PCGNode_GetSettings Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function PCG.PCGStaticMeshSpawnerSettings.SetInstancePackerType
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -4181,56 +4175,6 @@ void UPCGStaticMeshSpawnerSettings::SetMeshSelectorType(TSubclassOf<class UPCGMe
 }
 
 
-// Function PCG.PCGTextureSamplerSettings.SetDensityFunctionEquivalent
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// EPCGTextureDensityFunction              DensityFunction                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPCGTextureSamplerSettings::SetDensityFunctionEquivalent(EPCGTextureDensityFunction DensityFunction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGTextureSamplerSettings", "SetDensityFunctionEquivalent");
-
-	Params::PCGTextureSamplerSettings_SetDensityFunctionEquivalent Parms{};
-
-	Parms.DensityFunction = DensityFunction;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PCG.PCGTextureSamplerSettings.GetDensityFunctionEquivalent
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EPCGTextureDensityFunction              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EPCGTextureDensityFunction UPCGTextureSamplerSettings::GetDensityFunctionEquivalent() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCGTextureSamplerSettings", "GetDensityFunctionEquivalent");
-
-	Params::PCGTextureSamplerSettings_GetDensityFunctionEquivalent Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function PCG.PCGLandscapeCache.ClearCache
 // (Final, Native, Public)
 
@@ -4266,6 +4210,62 @@ void UPCGLandscapeCache::PrimeCache()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PCG.PCGPartitionActor.GetLocalComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UPCGComponent*              OriginalComponent                                      (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGComponent*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPCGComponent* APCGPartitionActor::GetLocalComponent(const class UPCGComponent* OriginalComponent) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGPartitionActor", "GetLocalComponent");
+
+	Params::PCGPartitionActor_GetLocalComponent Parms{};
+
+	Parms.OriginalComponent = OriginalComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PCG.PCGPartitionActor.GetOriginalComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UPCGComponent*              LocalComponent                                         (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPCGComponent*                    ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPCGComponent* APCGPartitionActor::GetOriginalComponent(const class UPCGComponent* LocalComponent) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCGPartitionActor", "GetOriginalComponent");
+
+	Params::PCGPartitionActor_GetOriginalComponent Parms{};
+
+	Parms.LocalComponent = LocalComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass GPSHumanAnimBP.GPSHumanAnimBP_C
-// 0x0000 (0x1DC70 - 0x1DC70)
+// 0x0000 (0x1E0A0 - 0x1E0A0)
 class UGPSHumanAnimBP_C final : public UBaseHumanAnimBP_C
 {
 public:

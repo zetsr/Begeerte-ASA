@@ -17,176 +17,15 @@
 namespace SDK
 {
 
-// Function MapSelect_Entry.MapSelect_Entry_C.FixupComboBox
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UMapSelect_Entry_C::FixupComboBox()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "FixupComboBox");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapSelect_Entry.MapSelect_Entry_C.UpdateDeleteSaveButton
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UMapSelect_Entry_C::UpdateDeleteSaveButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "UpdateDeleteSaveButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapSelect_Entry.MapSelect_Entry_C.IsSelected
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   Selected                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMapSelect_Entry_C::IsSelected(bool* Selected)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "IsSelected");
-
-	Params::MapSelect_Entry_C_IsSelected Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Selected != nullptr)
-		*Selected = Parms.Selected;
-}
-
-
-// Function MapSelect_Entry.MapSelect_Entry_C.Set To Map Select View
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsMapSelectView                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMapSelect_Entry_C::Set_To_Map_Select_View(bool IsMapSelectView)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "Set To Map Select View");
-
-	Params::MapSelect_Entry_C_Set_To_Map_Select_View Parms{};
-
-	Parms.IsMapSelectView = IsMapSelectView;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MapSelect_Entry.MapSelect_Entry_C.Show Hide Locked Images
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsLocked                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMapSelect_Entry_C::Show_Hide_Locked_Images(bool IsLocked)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "Show Hide Locked Images");
-
-	Params::MapSelect_Entry_C_Show_Hide_Locked_Images Parms{};
-
-	Parms.IsLocked = IsLocked;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MapSelect_Entry.MapSelect_Entry_C.SetupUsingHostSession
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUI_HostSession*                  HostSession                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UMapSelect_Session_C*             MapSelectSession                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   WithIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMapSelect_Entry_C::SetupUsingHostSession(class UUI_HostSession* HostSession, class UMapSelect_Session_C* MapSelectSession, int32 WithIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "SetupUsingHostSession");
-
-	Params::MapSelect_Entry_C_SetupUsingHostSession Parms{};
-
-	Parms.HostSession = HostSession;
-	Parms.MapSelectSession = MapSelectSession;
-	Parms.WithIndex = WithIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MapSelect_Entry.MapSelect_Entry_C.BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// Function MapSelect_Entry.MapSelect_Entry_C.BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
-void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapSelect_Entry.MapSelect_Entry_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UMapSelect_Entry_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MapSelect_Entry.MapSelect_Entry_C.SetSelected
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsSelected_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMapSelect_Entry_C::SetSelected(bool IsSelected_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "SetSelected");
-
-	Params::MapSelect_Entry_C_SetSelected Parms{};
-
-	Parms.IsSelected_0 = IsSelected_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MapSelect_Entry.MapSelect_Entry_C.BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -236,17 +75,184 @@ void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_MapNameComboBox_K2Node_Componen
 }
 
 
-// Function MapSelect_Entry.MapSelect_Entry_C.BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
+// Function MapSelect_Entry.MapSelect_Entry_C.BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
-void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
+void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_DeleteSinglePlayerData_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapSelect_Entry.MapSelect_Entry_C.BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UMapSelect_Entry_C::BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapSelect_Entry_C", "BndEvt__MapSelect_Entry_ScrollViewSelectionButton_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapSelect_Entry.MapSelect_Entry_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UMapSelect_Entry_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapSelect_Entry_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapSelect_Entry.MapSelect_Entry_C.ExecuteUbergraph_MapSelect_Entry
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMapSelect_Entry_C::ExecuteUbergraph_MapSelect_Entry(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapSelect_Entry_C", "ExecuteUbergraph_MapSelect_Entry");
+
+	Params::MapSelect_Entry_C_ExecuteUbergraph_MapSelect_Entry Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MapSelect_Entry.MapSelect_Entry_C.FixupComboBox
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UMapSelect_Entry_C::FixupComboBox()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapSelect_Entry_C", "FixupComboBox");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MapSelect_Entry.MapSelect_Entry_C.IsSelected
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   Selected                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMapSelect_Entry_C::IsSelected(bool* Selected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapSelect_Entry_C", "IsSelected");
+
+	Params::MapSelect_Entry_C_IsSelected Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Selected != nullptr)
+		*Selected = Parms.Selected;
+}
+
+
+// Function MapSelect_Entry.MapSelect_Entry_C.Set To Map Select View
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsMapSelectView                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMapSelect_Entry_C::Set_To_Map_Select_View(bool IsMapSelectView)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapSelect_Entry_C", "Set To Map Select View");
+
+	Params::MapSelect_Entry_C_Set_To_Map_Select_View Parms{};
+
+	Parms.IsMapSelectView = IsMapSelectView;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MapSelect_Entry.MapSelect_Entry_C.SetSelected
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsSelected_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMapSelect_Entry_C::SetSelected(bool IsSelected_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapSelect_Entry_C", "SetSelected");
+
+	Params::MapSelect_Entry_C_SetSelected Parms{};
+
+	Parms.IsSelected_0 = IsSelected_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MapSelect_Entry.MapSelect_Entry_C.SetupUsingHostSession
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUI_HostSession*                  HostSession                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UMapSelect_Session_C*             MapSelectSession                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   WithIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMapSelect_Entry_C::SetupUsingHostSession(class UUI_HostSession* HostSession, class UMapSelect_Session_C* MapSelectSession, int32 WithIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapSelect_Entry_C", "SetupUsingHostSession");
+
+	Params::MapSelect_Entry_C_SetupUsingHostSession Parms{};
+
+	Parms.HostSession = HostSession;
+	Parms.MapSelectSession = MapSelectSession;
+	Parms.WithIndex = WithIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MapSelect_Entry.MapSelect_Entry_C.Show Hide Locked Images
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsLocked                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMapSelect_Entry_C::Show_Hide_Locked_Images(bool IsLocked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MapSelect_Entry_C", "Show Hide Locked Images");
+
+	Params::MapSelect_Entry_C_Show_Hide_Locked_Images Parms{};
+
+	Parms.IsLocked = IsLocked;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -272,23 +278,17 @@ void UMapSelect_Entry_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 }
 
 
-// Function MapSelect_Entry.MapSelect_Entry_C.ExecuteUbergraph_MapSelect_Entry
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function MapSelect_Entry.MapSelect_Entry_C.UpdateDeleteSaveButton
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UMapSelect_Entry_C::ExecuteUbergraph_MapSelect_Entry(int32 EntryPoint)
+void UMapSelect_Entry_C::UpdateDeleteSaveButton()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MapSelect_Entry_C", "ExecuteUbergraph_MapSelect_Entry");
+		Func = Class->GetFunction("MapSelect_Entry_C", "UpdateDeleteSaveButton");
 
-	Params::MapSelect_Entry_C_ExecuteUbergraph_MapSelect_Entry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -19,11 +19,11 @@ namespace SDK
 {
 
 // Class Sentry.SentryAttachment
-// 0x0010 (0x0038 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class USentryAttachment final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitializeWithData(const TArray<uint8>& Data, const class FString& Filename, const class FString& ContentType);
@@ -50,22 +50,92 @@ public:
 };
 DUMPER7_ASSERTS_USentryAttachment;
 
+// Class Sentry.SentryBeforeBreadcrumbHandler
+// 0x0000 (0x0028 - 0x0028)
+class USentryBeforeBreadcrumbHandler final : public UObject
+{
+public:
+	class USentryBreadcrumb* HandleBeforeBreadcrumb(class USentryBreadcrumb* Breadcrumb, class USentryHint* Hint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SentryBeforeBreadcrumbHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SentryBeforeBreadcrumbHandler")
+	}
+	static class USentryBeforeBreadcrumbHandler* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USentryBeforeBreadcrumbHandler>();
+	}
+};
+DUMPER7_ASSERTS_USentryBeforeBreadcrumbHandler;
+
+// Class Sentry.SentryBeforeLogHandler
+// 0x0000 (0x0028 - 0x0028)
+class USentryBeforeLogHandler : public UObject
+{
+public:
+	class USentryLog* HandleBeforeLog(class USentryLog* LogData);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SentryBeforeLogHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SentryBeforeLogHandler")
+	}
+	static class USentryBeforeLogHandler* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USentryBeforeLogHandler>();
+	}
+};
+DUMPER7_ASSERTS_USentryBeforeLogHandler;
+
+// Class Sentry.SentryBeforeSendHandler
+// 0x0000 (0x0028 - 0x0028)
+class USentryBeforeSendHandler : public UObject
+{
+public:
+	class USentryEvent* HandleBeforeSend(class USentryEvent* Event, class USentryHint* Hint);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SentryBeforeSendHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SentryBeforeSendHandler")
+	}
+	static class USentryBeforeSendHandler* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USentryBeforeSendHandler>();
+	}
+};
+DUMPER7_ASSERTS_USentryBeforeSendHandler;
+
 // Class Sentry.SentryBreadcrumb
-// 0x0010 (0x0038 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class USentryBreadcrumb final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void Initialize();
 	void SetCategory(const class FString& Category);
-	void SetData(const TMap<class FString, class FString>& Data);
+	void SetData(const TMap<class FString, struct FSentryVariant>& Data);
 	void SetLevel(ESentryLevel Level);
 	void SetMessage(const class FString& Message);
 	void SetType(const class FString& Type);
 
 	class FString GetCategory() const;
-	TMap<class FString, class FString> GetData() const;
+	TMap<class FString, struct FSentryVariant> GetData() const;
 	ESentryLevel GetLevel() const;
 	class FString GetMessage() const;
 	class FString GetType() const;
@@ -87,18 +157,40 @@ public:
 DUMPER7_ASSERTS_USentryBreadcrumb;
 
 // Class Sentry.SentryEvent
-// 0x0010 (0x0038 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class USentryEvent final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void Initialize();
+	void RemoveContext(const class FString& Key);
+	void RemoveExtra(const class FString& Key);
+	void RemoveTag(const class FString& Key);
+	void SetContext(const class FString& Key, const TMap<class FString, struct FSentryVariant>& Values);
+	void SetExtra(const class FString& Key, const struct FSentryVariant& Value);
+	void SetExtras(const TMap<class FString, struct FSentryVariant>& Extras);
+	void SetFingerprint(const TArray<class FString>& fingerprint);
 	void SetLevel(ESentryLevel Level);
 	void SetMessage(const class FString& Message);
+	void SetTag(const class FString& Key, const class FString& Value);
+	void SetTags(const TMap<class FString, class FString>& Tags);
 
+	TMap<class FString, struct FSentryVariant> GetContext(const class FString& Key) const;
+	struct FSentryVariant GetExtra(const class FString& Key) const;
+	TMap<class FString, struct FSentryVariant> GetExtras() const;
+	TArray<class FString> GetFingerprint() const;
+	class FString GetId() const;
 	ESentryLevel GetLevel() const;
 	class FString GetMessage() const;
+	class FString GetTag(const class FString& Key) const;
+	TMap<class FString, class FString> GetTags() const;
+	bool IsAnr() const;
+	bool IsCrash() const;
+	bool TryGetContext(const class FString& Key, TMap<class FString, struct FSentryVariant>* Value) const;
+	bool TryGetExtra(const class FString& Key, struct FSentryVariant* Value) const;
+	bool TryGetTag(const class FString& Key, class FString* Value) const;
 
 public:
 	static class UClass* StaticClass()
@@ -116,46 +208,79 @@ public:
 };
 DUMPER7_ASSERTS_USentryEvent;
 
-// Class Sentry.SentryId
-// 0x0010 (0x0038 - 0x0028)
-class USentryId final : public UObject
+// Class Sentry.SentryFeedback
+// 0x0018 (0x0040 - 0x0028)
+class USentryFeedback final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	class FString ToString() const;
+	void Initialize(const class FString& Message);
+	void SetAssociatedEvent(const class FString& EventId);
+	void SetContactEmail(const class FString& email);
+	void SetName(const class FString& Name_0);
+
+	class FString GetAssociatedEvent() const;
+	class FString GetContactEmail() const;
+	class FString GetMessage() const;
+	class FString GetName() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SentryId")
+		STATIC_CLASS_IMPL("SentryFeedback")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SentryId")
+		STATIC_NAME_IMPL(L"SentryFeedback")
 	}
-	static class USentryId* GetDefaultObj()
+	static class USentryFeedback* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USentryId>();
+		return GetDefaultObjImpl<USentryFeedback>();
 	}
 };
-DUMPER7_ASSERTS_USentryId;
+DUMPER7_ASSERTS_USentryFeedback;
+
+// Class Sentry.SentryHint
+// 0x0018 (0x0040 - 0x0028)
+class USentryHint final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddAttachment(class USentryAttachment* Attachment);
+	void Initialize();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SentryHint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SentryHint")
+	}
+	static class USentryHint* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USentryHint>();
+	}
+};
+DUMPER7_ASSERTS_USentryHint;
 
 // Class Sentry.SentryLibrary
 // 0x0000 (0x0028 - 0x0028)
 class USentryLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static class FString ByteArrayToString(const TArray<uint8>& Array);
 	static class USentryAttachment* CreateSentryAttachmentWithData(const TArray<uint8>& Data, const class FString& Filename, const class FString& ContentType);
 	static class USentryAttachment* CreateSentryAttachmentWithPath(const class FString& Path, const class FString& Filename, const class FString& ContentType);
-	static class USentryBreadcrumb* CreateSentryBreadcrumb(const class FString& Message, const class FString& Type, const class FString& Category, const TMap<class FString, class FString>& Data, ESentryLevel Level);
+	static class USentryBreadcrumb* CreateSentryBreadcrumb(const class FString& Message, const class FString& Type, const class FString& Category, const TMap<class FString, struct FSentryVariant>& Data, ESentryLevel Level);
 	static class USentryEvent* CreateSentryEvent(const class FString& Message, ESentryLevel Level);
+	static class USentryFeedback* CreateSentryFeedback(const class FString& Message, const class FString& Name_0, const class FString& email, const class FString& EventId);
+	static class USentryTransactionContext* CreateSentryTransactionContext(const class FString& Name_0, const class FString& Operation);
 	static class USentryUser* CreateSentryUser(const class FString& email, const class FString& ID, const class FString& Username, const class FString& IpAddress, const TMap<class FString, class FString>& Data);
-	static class USentryUserFeedback* CreateSentryUserFeedback(class USentryId* EventId, const class FString& Name_0, const class FString& email, const class FString& Comments);
-	static class FString SaveStringToFile(const class FString& InString, const class FString& Filename);
-	static TArray<uint8> StringToBytesArray(const class FString& InString);
 
 public:
 	static class UClass* StaticClass()
@@ -173,12 +298,73 @@ public:
 };
 DUMPER7_ASSERTS_USentryLibrary;
 
+// Class Sentry.SentryLog
+// 0x0030 (0x0058 - 0x0028)
+class USentryLog final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Body;                                              // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	ESentryLevel                                  Level;                                             // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Initialize();
+	void SetBody(const class FString& Body_0);
+	void SetLevel(ESentryLevel Level_0);
+
+	class FString GetBody() const;
+	ESentryLevel GetLevel() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SentryLog")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SentryLog")
+	}
+	static class USentryLog* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USentryLog>();
+	}
+};
+DUMPER7_ASSERTS_USentryLog;
+
+// Class Sentry.SentrySamplingContext
+// 0x0018 (0x0040 - 0x0028)
+class USentrySamplingContext final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	TMap<class FString, struct FSentryVariant> GetCustomSamplingContext() const;
+	class USentryTransactionContext* GetTransactionContext() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SentrySamplingContext")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SentrySamplingContext")
+	}
+	static class USentrySamplingContext* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USentrySamplingContext>();
+	}
+};
+DUMPER7_ASSERTS_USentrySamplingContext;
+
 // Class Sentry.SentryScope
-// 0x0010 (0x0038 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class USentryScope final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddAttachment(class USentryAttachment* Attachment);
@@ -186,27 +372,28 @@ public:
 	void Clear();
 	void ClearAttachments();
 	void ClearBreadcrumbs();
+	void Initialize();
 	void RemoveContext(const class FString& Key);
 	void RemoveExtra(const class FString& Key);
 	void RemoveTag(const class FString& Key);
-	void SetContext(const class FString& Key, const TMap<class FString, class FString>& Values);
-	void SetDist(const class FString& Dist);
-	void SetEnvironment(const class FString& environment);
-	void SetExtras(const TMap<class FString, class FString>& Extras);
-	void SetExtraValue(const class FString& Key, const class FString& Value);
+	void SetContext(const class FString& Key, const TMap<class FString, struct FSentryVariant>& Values);
+	void SetExtra(const class FString& Key, const struct FSentryVariant& Value);
+	void SetExtras(const TMap<class FString, struct FSentryVariant>& Extras);
 	void SetFingerprint(const TArray<class FString>& fingerprint);
 	void SetLevel(ESentryLevel Level);
+	void SetTag(const class FString& Key, const class FString& Value);
 	void SetTags(const TMap<class FString, class FString>& Tags);
-	void SetTagValue(const class FString& Key, const class FString& Value);
 
-	class FString GetDist() const;
-	class FString GetEnvironment() const;
-	TMap<class FString, class FString> GetExtras() const;
-	class FString GetExtraValue(const class FString& Key) const;
+	TMap<class FString, struct FSentryVariant> GetContext(const class FString& Key) const;
+	struct FSentryVariant GetExtra(const class FString& Key) const;
+	TMap<class FString, struct FSentryVariant> GetExtras() const;
 	TArray<class FString> GetFingerprint() const;
 	ESentryLevel GetLevel() const;
+	class FString GetTag(const class FString& Key) const;
 	TMap<class FString, class FString> GetTags() const;
-	class FString GetTagValue(const class FString& Key) const;
+	bool TryGetContext(const class FString& Key, TMap<class FString, struct FSentryVariant>* Value) const;
+	bool TryGetExtra(const class FString& Key, struct FSentryVariant* Value) const;
+	bool TryGetTag(const class FString& Key, class FString* Value) const;
 
 public:
 	static class UClass* StaticClass()
@@ -224,27 +411,97 @@ public:
 };
 DUMPER7_ASSERTS_USentryScope;
 
+// Class Sentry.ScopeTestBeforeSendHandler
+// 0x0000 (0x0028 - 0x0028)
+class UScopeTestBeforeSendHandler final : public USentryBeforeSendHandler
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ScopeTestBeforeSendHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ScopeTestBeforeSendHandler")
+	}
+	static class UScopeTestBeforeSendHandler* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UScopeTestBeforeSendHandler>();
+	}
+};
+DUMPER7_ASSERTS_UScopeTestBeforeSendHandler;
+
 // Class Sentry.SentrySettings
-// 0x0088 (0x00B0 - 0x0028)
+// 0x0178 (0x01A0 - 0x0028)
 class USentrySettings final : public UObject
 {
 public:
-	class FString                                 DsnUrl;                                            // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Release;                                           // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InitAutomatically;                                 // 0x0028(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Dsn;                                               // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Debug;                                             // 0x0040(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 environment;                                       // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InitAutomatically;                                 // 0x0058(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableVerboseLogging;                              // 0x0059(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAutomaticBreadcrumbs                  AutomaticBreadcrumbs;                              // 0x005A(0x0005)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTagsPromotion                         TagsPromotion;                                     // 0x005F(0x0006)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          EnableAutoCrashCapturing;                          // 0x0065(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          UploadSymbolsAutomatically;                        // 0x0066(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_67[0x1];                                       // 0x0067(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ProjectName;                                       // 0x0068(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OrgName;                                           // 0x0078(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AuthToken;                                         // 0x0088(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IncludeSources;                                    // 0x0098(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CrashReporterUrl;                                  // 0x00A0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Dist;                                              // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SampleRate;                                        // 0x0068(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableAutoLogAttachment;                           // 0x006C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AttachStacktrace;                                  // 0x006D(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SendDefaultPii;                                    // 0x006E(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AttachScreenshot;                                  // 0x006F(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AttachGpuDump;                                     // 0x0070(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxAttachmentSize;                                 // 0x0074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableStructuredLogging;                           // 0x0078(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         StructuredLoggingCategories;                       // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	struct FStructuredLoggingLevels               StructuredLoggingLevels;                           // 0x0090(0x0005)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bSendBreadcrumbsWithStructuredLogging;             // 0x0095(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_96[0x2];                                       // 0x0096(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxBreadcrumbs;                                    // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAutomaticBreadcrumbs                  AutomaticBreadcrumbs;                              // 0x009C(0x0005)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
+	struct FAutomaticBreadcrumbsForLogs           AutomaticBreadcrumbsForLogs;                       // 0x00A1(0x0005)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          EnableAutoSessionTracking;                         // 0x00A6(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A7[0x1];                                       // 0x00A7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SessionTimeout;                                    // 0x00A8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OverrideReleaseName;                               // 0x00AC(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Release;                                           // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          UseProxy;                                          // 0x00C0(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ProxyUrl;                                          // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class USentryBeforeSendHandler>   BeforeSendHandler;                                 // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class USentryBeforeBreadcrumbHandler> BeforeBreadcrumbHandler;                       // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class USentryBeforeLogHandler>    BeforeLogHandler;                                  // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableAutoCrashCapturing;                          // 0x00F0(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESentryDatabaseLocation                       DatabaseLocation;                                  // 0x00F1(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          CrashpadWaitForUpload;                             // 0x00F2(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F3[0x5];                                       // 0x00F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         InAppInclude;                                      // 0x00F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         InAppExclude;                                      // 0x0108(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	bool                                          EnableAppNotRespondingTracking;                    // 0x0118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableTracing;                                     // 0x0119(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESentryTracesSamplingType                     SamplingType;                                      // 0x011A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11B[0x1];                                      // 0x011B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TracesSampleRate;                                  // 0x011C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class USentryTraceSampler>        TracesSampler;                                     // 0x0120(0x0008)(Edit, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 EditorDsn;                                         // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTagsPromotion                         TagsPromotion;                                     // 0x0138(0x0006)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
+	struct FEnableBuildConfigurations             EnableBuildConfigurations;                         // 0x013E(0x0005)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
+	struct FEnableBuildTargets                    EnableBuildTargets;                                // 0x0143(0x0005)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          EnableForPromotedBuildsOnly;                       // 0x0148(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          UploadSymbolsAutomatically;                        // 0x0149(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14A[0x6];                                      // 0x014A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ProjectName;                                       // 0x0150(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OrgName;                                           // 0x0160(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AuthToken;                                         // 0x0170(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IncludeSources;                                    // 0x0180(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESentryCliLogLevel                            DiagnosticLevel;                                   // 0x0181(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          UseLegacyGradlePlugin;                             // 0x0182(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_183[0x5];                                      // 0x0183(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CrashReporterUrl;                                  // 0x0188(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRequireUserConsent;                               // 0x0198(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDefaultUserConsentGiven;                          // 0x0199(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19A[0x6];                                      // 0x019A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -262,33 +519,94 @@ public:
 };
 DUMPER7_ASSERTS_USentrySettings;
 
-// Class Sentry.SentrySubsystem
-// 0x0038 (0x0068 - 0x0030)
-class USentrySubsystem final : public UGameInstanceSubsystem
+// Class Sentry.SentrySpan
+// 0x0018 (0x0040 - 0x0028)
+class USentrySpan final : public UObject
 {
 public:
-	uint8                                         Pad_30[0x38];                                      // 0x0030(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void Finish();
+	void FinishWithTimestamp(int64 Timestamp);
+	void GetTrace(class FString* Name_0, class FString* Value);
+	void RemoveData(const class FString& Key);
+	void RemoveTag(const class FString& Key);
+	void SetData(const class FString& Key, const TMap<class FString, struct FSentryVariant>& Values);
+	void SetTag(const class FString& Key, const class FString& Value);
+	class USentrySpan* StartChild(const class FString& Operation, const class FString& Description, bool BindToScope);
+	class USentrySpan* StartChildWithTimestamp(const class FString& Operation, const class FString& Description, int64 Timestamp, bool BindToScope);
+
+	bool IsFinished() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SentrySpan")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SentrySpan")
+	}
+	static class USentrySpan* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USentrySpan>();
+	}
+};
+DUMPER7_ASSERTS_USentrySpan;
+
+// Class Sentry.SentrySubsystem
+// 0x0088 (0x00B8 - 0x0030)
+class USentrySubsystem final : public UEngineSubsystem
+{
+public:
+	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	class USentryBeforeSendHandler*               BeforeSendHandler;                                 // 0x0060(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class USentryBeforeBreadcrumbHandler*         BeforeBreadcrumbHandler;                           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class USentryBeforeLogHandler*                BeforeLogHandler;                                  // 0x0070(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	class USentryTraceSampler*                    TraceSampler;                                      // 0x0078(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
+	uint8                                         Pad_80[0x38];                                      // 0x0080(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddAttachment(class USentryAttachment* Attachment);
 	void AddBreadcrumb(class USentryBreadcrumb* Breadcrumb);
-	void AddBreadcrumbWithParams(const class FString& Message, const class FString& Category, const class FString& Type, const TMap<class FString, class FString>& Data, ESentryLevel Level);
-	class USentryId* CaptureEvent(class USentryEvent* Event);
-	class USentryId* CaptureEventWithScope(class USentryEvent* Event, const TDelegate<void(class USentryScope* Scope)>& OnConfigureScope);
-	class USentryId* CaptureMessage(const class FString& Message, ESentryLevel Level);
-	class USentryId* CaptureMessageWithScope(const class FString& Message, const TDelegate<void(class USentryScope* Scope)>& OnConfigureScope, ESentryLevel Level);
-	void CaptureUserFeedback(class USentryUserFeedback* UserFeedback);
-	void CaptureUserFeedbackWithParams(class USentryId* EventId, const class FString& email, const class FString& Comments, const class FString& Name_0);
+	void AddBreadcrumbWithParams(const class FString& Message, const class FString& Category, const class FString& Type, const TMap<class FString, struct FSentryVariant>& Data, ESentryLevel Level);
+	class FString CaptureEvent(class USentryEvent* Event);
+	class FString CaptureEventWithScope(class USentryEvent* Event, const TDelegate<void(class USentryScope* Scope)>& OnConfigureScope);
+	void CaptureFeedback(class USentryFeedback* Feedback);
+	void CaptureFeedbackWithParams(const class FString& Message, const class FString& Name_0, const class FString& email, const class FString& EventId);
+	class FString CaptureMessage(const class FString& Message, ESentryLevel Level);
+	class FString CaptureMessageWithScope(const class FString& Message, const TDelegate<void(class USentryScope* Scope)>& OnConfigureScope, ESentryLevel Level);
+	void ClearAttachments();
 	void ClearBreadcrumbs();
 	void Close();
-	void ConfigureScope(const TDelegate<void(class USentryScope* Scope)>& OnConfigureScope);
+	class USentryTransactionContext* ContinueTrace(const class FString& SentryTrace, const TArray<class FString>& BaggageHeaders);
+	void EndSession();
+	void GiveUserConsent();
 	void Initialize();
 	void InitializeWithSettings(const TDelegate<void(class USentrySettings* Settings)>& OnConfigureSettings);
+	void LogDebug(const class FString& Message, const class FString& Category);
+	void LogError(const class FString& Message, const class FString& Category);
+	void LogFatal(const class FString& Message, const class FString& Category);
+	void LogInfo(const class FString& Message, const class FString& Category);
+	void LogWarning(const class FString& Message, const class FString& Category);
 	void RemoveTag(const class FString& Key);
 	void RemoveUser();
-	void SetContext(const class FString& Key, const TMap<class FString, class FString>& Values);
+	void RevokeUserConsent();
+	void SetContext(const class FString& Key, const TMap<class FString, struct FSentryVariant>& Values);
 	void SetLevel(ESentryLevel Level);
 	void SetTag(const class FString& Key, const class FString& Value);
 	void SetUser(class USentryUser* User);
+	void StartSession();
+	class USentryTransaction* StartTransaction(const class FString& Name_0, const class FString& Operation, bool BindToScope);
+	class USentryTransaction* StartTransactionWithContext(class USentryTransactionContext* Context, bool BindToScope);
+	class USentryTransaction* StartTransactionWithContextAndOptions(class USentryTransactionContext* Context, const struct FSentryTransactionOptions& Options);
+	class USentryTransaction* StartTransactionWithContextAndTimestamp(class USentryTransactionContext* Context, int64 Timestamp, bool BindToScope);
+
+	EUserConsent GetUserConsent() const;
+	ESentryCrashedLastRun IsCrashedLastRun() const;
+	bool IsEnabled() const;
+	bool IsSupportedForCurrentSettings() const;
 
 public:
 	static class UClass* StaticClass()
@@ -306,12 +624,141 @@ public:
 };
 DUMPER7_ASSERTS_USentrySubsystem;
 
+// Class Sentry.TestBeforeLogHandler
+// 0x0000 (0x0028 - 0x0028)
+class UTestBeforeLogHandler final : public USentryBeforeLogHandler
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TestBeforeLogHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestBeforeLogHandler")
+	}
+	static class UTestBeforeLogHandler* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTestBeforeLogHandler>();
+	}
+};
+DUMPER7_ASSERTS_UTestBeforeLogHandler;
+
+// Class Sentry.SentryTraceSampler
+// 0x0000 (0x0028 - 0x0028)
+class USentryTraceSampler : public UObject
+{
+public:
+	bool Sample(class USentrySamplingContext* samplingContext, float* samplingValue);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SentryTraceSampler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SentryTraceSampler")
+	}
+	static class USentryTraceSampler* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USentryTraceSampler>();
+	}
+};
+DUMPER7_ASSERTS_USentryTraceSampler;
+
+// Class Sentry.TraceSamplingTestHandler
+// 0x0000 (0x0028 - 0x0028)
+class UTraceSamplingTestHandler final : public USentryTraceSampler
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TraceSamplingTestHandler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TraceSamplingTestHandler")
+	}
+	static class UTraceSamplingTestHandler* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTraceSamplingTestHandler>();
+	}
+};
+DUMPER7_ASSERTS_UTraceSamplingTestHandler;
+
+// Class Sentry.SentryTransaction
+// 0x0018 (0x0040 - 0x0028)
+class USentryTransaction final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Finish();
+	void FinishWithTimestamp(int64 Timestamp);
+	void GetTrace(class FString* Name_0, class FString* Value);
+	void RemoveData(const class FString& Key);
+	void RemoveTag(const class FString& Key);
+	void SetData(const class FString& Key, const TMap<class FString, struct FSentryVariant>& Values);
+	void SetName(const class FString& Name_0);
+	void SetTag(const class FString& Key, const class FString& Value);
+	class USentrySpan* StartChildSpan(const class FString& Operation, const class FString& Description, bool BindToScope);
+	class USentrySpan* StartChildSpanWithTimestamp(const class FString& Operation, const class FString& Description, int64 Timestamp, bool BindToScope);
+
+	bool IsFinished() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SentryTransaction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SentryTransaction")
+	}
+	static class USentryTransaction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USentryTransaction>();
+	}
+};
+DUMPER7_ASSERTS_USentryTransaction;
+
+// Class Sentry.SentryTransactionContext
+// 0x0018 (0x0040 - 0x0028)
+class USentryTransactionContext final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Initialize(const class FString& Name_0, const class FString& Operation);
+
+	class FString GetName() const;
+	class FString GetOperation() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SentryTransactionContext")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SentryTransactionContext")
+	}
+	static class USentryTransactionContext* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USentryTransactionContext>();
+	}
+};
+DUMPER7_ASSERTS_USentryTransactionContext;
+
 // Class Sentry.SentryUser
-// 0x0010 (0x0038 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class USentryUser final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x18];                                      // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetData(const TMap<class FString, class FString>& Data);
@@ -342,38 +789,52 @@ public:
 };
 DUMPER7_ASSERTS_USentryUser;
 
-// Class Sentry.SentryUserFeedback
-// 0x0010 (0x0038 - 0x0028)
-class USentryUserFeedback final : public UObject
+// Class Sentry.SentryVariantHelper
+// 0x0000 (0x0028 - 0x0028)
+class USentryVariantHelper final : public UBlueprintFunctionLibrary
 {
 public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void Initialize(class USentryId* EventId);
-	void SetComment(const class FString& Comments);
-	void SetEmail(const class FString& email);
-	void SetName(const class FString& Name_0);
-
-	class FString GetComment() const;
-	class FString GetEmail() const;
-	class FString GetName() const;
+	static struct FSentryVariant Conv_ArrayToFSentryVariant(const TArray<struct FSentryVariant>& Value);
+	static struct FSentryVariant Conv_BoolToFSentryVariant(bool Value);
+	static struct FSentryVariant Conv_FloatToFSentryVariant(float Value);
+	static struct FSentryVariant Conv_IntToFSentryVariant(int32 Value);
+	static struct FSentryVariant Conv_MapToFSentryVariant(const TMap<class FString, struct FSentryVariant>& Value);
+	static struct FSentryVariant Conv_StringToFSentryVariant(const class FString& Value);
+	static TArray<struct FSentryVariant> GetArray(const struct FSentryVariant& Variant);
+	static bool GetBool(const struct FSentryVariant& Variant);
+	static float GetFloat(const struct FSentryVariant& Variant);
+	static int32 GetInteger(const struct FSentryVariant& Variant);
+	static TMap<class FString, struct FSentryVariant> GetMap(const struct FSentryVariant& Variant);
+	static class FString GetString(const struct FSentryVariant& Variant);
+	static ESentryVariantType GetType(const struct FSentryVariant& Variant);
+	static struct FSentryVariant MakeSentryVariantFromArray(const TArray<struct FSentryVariant>& Value);
+	static struct FSentryVariant MakeSentryVariantFromBool(bool Value);
+	static struct FSentryVariant MakeSentryVariantFromFloat(float Value);
+	static struct FSentryVariant MakeSentryVariantFromInteger(int32 Value);
+	static struct FSentryVariant MakeSentryVariantFromMap(const TMap<class FString, struct FSentryVariant>& Value);
+	static struct FSentryVariant MakeSentryVariantFromString(const class FString& Value);
+	static bool TryGetArray(const struct FSentryVariant& Variant, TArray<struct FSentryVariant>* Value);
+	static bool TryGetBool(const struct FSentryVariant& Variant, bool* Value);
+	static bool TryGetFloat(const struct FSentryVariant& Variant, float* Value);
+	static bool TryGetInteger(const struct FSentryVariant& Variant, int32* Value);
+	static bool TryGetMap(const struct FSentryVariant& Variant, TMap<class FString, struct FSentryVariant>* Value);
+	static bool TryGetString(const struct FSentryVariant& Variant, class FString* Value);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("SentryUserFeedback")
+		STATIC_CLASS_IMPL("SentryVariantHelper")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"SentryUserFeedback")
+		STATIC_NAME_IMPL(L"SentryVariantHelper")
 	}
-	static class USentryUserFeedback* GetDefaultObj()
+	static class USentryVariantHelper* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USentryUserFeedback>();
+		return GetDefaultObjImpl<USentryVariantHelper>();
 	}
 };
-DUMPER7_ASSERTS_USentryUserFeedback;
+DUMPER7_ASSERTS_USentryVariantHelper;
 
 }
 

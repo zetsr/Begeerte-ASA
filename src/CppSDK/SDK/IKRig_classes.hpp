@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "IKRig_structs.hpp"
 #include "Engine_classes.hpp"
+#include "IKRig_structs.hpp"
 #include "PBIK_structs.hpp"
 
 

@@ -75,7 +75,7 @@ public:
 	struct FTimerHandle                           IntroTimeToShowPanelTimerHandle;                   // 0x1000(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           IntroTimeToShowLoopTimerHandle;                    // 0x1008(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UBinkMediaPlayer*                       IntroBGMediaPlayerLoop_NoLogo;                     // 0x1010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UUI_NotificationManager_C*              Ui_Notif_Manager;                                  // 0x1018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Ui_Notif_Manager;                                  // 0x1018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class FString                                 MainTitleMusicString;                              // 0x1020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, TObjectPtr)
 	double                                        SelectStartDelay;                                  // 0x1030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bWasGamepadSettingsButtonDown;                     // 0x1038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

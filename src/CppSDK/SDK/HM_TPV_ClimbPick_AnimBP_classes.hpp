@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass HM_TPV_ClimbPick_AnimBP.HM_TPV_ClimbPick_AnimBP_C
-// 0x0000 (0x1DC70 - 0x1DC70)
+// 0x0000 (0x1E0A0 - 0x1E0A0)
 class UHM_TPV_ClimbPick_AnimBP_C final : public UBaseHumanAnimBP_Fists_C
 {
 public:

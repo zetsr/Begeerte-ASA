@@ -18,6 +18,29 @@
 namespace SDK
 {
 
+// Class CableComponent.CableActor
+// 0x0008 (0x0488 - 0x0480)
+class ACableActor final : public AActor
+{
+public:
+	class UCableComponent*                        CableComponent;                                    // 0x0480(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("CableActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CableActor")
+	}
+	static class ACableActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ACableActor>();
+	}
+};
+DUMPER7_ASSERTS_ACableActor;
+
 // Class CableComponent.CableComponent
 // 0x00B0 (0x06E0 - 0x0630)
 class UCableComponent final : public UMeshComponent
@@ -71,29 +94,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UCableComponent;
-
-// Class CableComponent.CableActor
-// 0x0008 (0x0488 - 0x0480)
-class ACableActor final : public AActor
-{
-public:
-	class UCableComponent*                        CableComponent;                                    // 0x0480(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CableActor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CableActor")
-	}
-	static class ACableActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ACableActor>();
-	}
-};
-DUMPER7_ASSERTS_ACableActor;
 
 }
 

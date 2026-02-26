@@ -17,6 +17,214 @@
 namespace SDK
 {
 
+// Function SmartObjectsModule.SmartObjectComponent.ReceiveOnEvent
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FSmartObjectEventData&     EventData                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class AActor*                     Interactor                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USmartObjectComponent::ReceiveOnEvent(const struct FSmartObjectEventData& EventData, const class AActor* Interactor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectComponent", "ReceiveOnEvent");
+
+	Params::SmartObjectComponent_ReceiveOnEvent Parms{};
+
+	Parms.EventData = std::move(EventData);
+	Parms.Interactor = Interactor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SmartObjectsModule.SmartObjectComponent.SetDefinition
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USmartObjectDefinition*           DefinitionAsset                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USmartObjectComponent::SetDefinition(class USmartObjectDefinition* DefinitionAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectComponent", "SetDefinition");
+
+	Params::SmartObjectComponent_SetDefinition Parms{};
+
+	Parms.DefinitionAsset = DefinitionAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SmartObjectsModule.SmartObjectComponent.GetDefinition
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class USmartObjectDefinition*     ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const class USmartObjectDefinition* USmartObjectComponent::GetDefinition() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectComponent", "GetDefinition");
+
+	Params::SmartObjectComponent_GetDefinition Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectComponent.IsBoundToSimulation
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectComponent::IsBoundToSimulation() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectComponent", "IsBoundToSimulation");
+
+	Params::SmartObjectComponent_IsBoundToSimulation Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectComponent::IsSmartObjectEnabled() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectComponent", "IsSmartObjectEnabled");
+
+	Params::SmartObjectComponent_IsSmartObjectEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabledForReason
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectComponent::IsSmartObjectEnabledForReason(const struct FGameplayTag& ReasonTag) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectComponent", "IsSmartObjectEnabledForReason");
+
+	Params::SmartObjectComponent_IsSmartObjectEnabledForReason Parms{};
+
+	Parms.ReasonTag = std::move(ReasonTag);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const bool                              bEnable                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectComponent::SetSmartObjectEnabled(const bool bEnable) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectComponent", "SetSmartObjectEnabled");
+
+	Params::SmartObjectComponent_SetSmartObjectEnabled Parms{};
+
+	Parms.bEnable = bEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabledForReason
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool USmartObjectComponent::SetSmartObjectEnabledForReason(const struct FGameplayTag& ReasonTag, const bool bEnabled) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SmartObjectComponent", "SetSmartObjectEnabledForReason");
+
+	Params::SmartObjectComponent_SetSmartObjectEnabledForReason Parms{};
+
+	Parms.ReasonTag = std::move(ReasonTag);
+	Parms.bEnabled = bEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function SmartObjectsModule.SmartObjectBlueprintFunctionLibrary.AddMultipleSmartObjects
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -973,214 +1181,6 @@ struct FSmartObjectClaimHandle USmartObjectBlueprintFunctionLibrary::SmartObject
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectComponent.ReceiveOnEvent
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FSmartObjectEventData&     EventData                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// const class AActor*                     Interactor                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USmartObjectComponent::ReceiveOnEvent(const struct FSmartObjectEventData& EventData, const class AActor* Interactor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectComponent", "ReceiveOnEvent");
-
-	Params::SmartObjectComponent_ReceiveOnEvent Parms{};
-
-	Parms.EventData = std::move(EventData);
-	Parms.Interactor = Interactor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SmartObjectsModule.SmartObjectComponent.SetDefinition
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USmartObjectDefinition*           DefinitionAsset                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USmartObjectComponent::SetDefinition(class USmartObjectDefinition* DefinitionAsset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectComponent", "SetDefinition");
-
-	Params::SmartObjectComponent_SetDefinition Parms{};
-
-	Parms.DefinitionAsset = DefinitionAsset;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SmartObjectsModule.SmartObjectComponent.GetDefinition
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class USmartObjectDefinition*     ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-const class USmartObjectDefinition* USmartObjectComponent::GetDefinition() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectComponent", "GetDefinition");
-
-	Params::SmartObjectComponent_GetDefinition Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectComponent.IsBoundToSimulation
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectComponent::IsBoundToSimulation() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectComponent", "IsBoundToSimulation");
-
-	Params::SmartObjectComponent_IsBoundToSimulation Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectComponent::IsSmartObjectEnabled() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectComponent", "IsSmartObjectEnabled");
-
-	Params::SmartObjectComponent_IsSmartObjectEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectComponent.IsSmartObjectEnabledForReason
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectComponent::IsSmartObjectEnabledForReason(const struct FGameplayTag& ReasonTag) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectComponent", "IsSmartObjectEnabledForReason");
-
-	Params::SmartObjectComponent_IsSmartObjectEnabledForReason Parms{};
-
-	Parms.ReasonTag = std::move(ReasonTag);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const bool                              bEnable                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectComponent::SetSmartObjectEnabled(const bool bEnable) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectComponent", "SetSmartObjectEnabled");
-
-	Params::SmartObjectComponent_SetSmartObjectEnabled Parms{};
-
-	Parms.bEnable = bEnable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function SmartObjectsModule.SmartObjectComponent.SetSmartObjectEnabledForReason
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FGameplayTag&              ReasonTag                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bEnabled                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool USmartObjectComponent::SetSmartObjectEnabledForReason(const struct FGameplayTag& ReasonTag, const bool bEnabled) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SmartObjectComponent", "SetSmartObjectEnabledForReason");
-
-	Params::SmartObjectComponent_SetSmartObjectEnabledForReason Parms{};
-
-	Parms.ReasonTag = std::move(ReasonTag);
-	Parms.bEnabled = bEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 

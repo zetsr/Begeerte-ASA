@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ShooterGame_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -39,15 +39,15 @@ public:
 	TMulticastInlineDelegate<void(int64 ModIDRequested)> OnModIDLinkRequested;                       // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void BndEvt__ASAUI_MainMenu_LandingScreen_GoToLastPlayedButton_K2Node_ComponentBoundEvent_3_OnButtonClicked__DelegateSignature();
 	void BndEvt__ASAUI_MainMenu_LandingScreen_PressAToStartButton_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUI_MainMenu_LandingScreen_GoToLastPlayedButton_K2Node_ComponentBoundEvent_3_OnButtonClicked__DelegateSignature();
 	void Construct();
-	void ExecuteUbergraph_ASAUI_MainMenu_LandingScreen(int32 EntryPoint);
-	void ModIDLinkRequested(int64 ModIDRequested);
-	void PauseCarousels();
 	void RefreshAnim();
+	void ModIDLinkRequested(int64 ModIDRequested);
 	void StartCarousels();
+	void PauseCarousels();
 	void UnpauseCarousels();
+	void ExecuteUbergraph_ASAUI_MainMenu_LandingScreen(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

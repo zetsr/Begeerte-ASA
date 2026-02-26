@@ -12,11 +12,11 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "UMG_classes.hpp"
 #include "Synthesis_structs.hpp"
+#include "AudioMixer_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AudioMixer_classes.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK

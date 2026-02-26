@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PrimalItemResourceGeneric_classes.hpp"
 #include "Engine_structs.hpp"
+#include "PrimalItemResourceGeneric_classes.hpp"
 
 
 namespace SDK

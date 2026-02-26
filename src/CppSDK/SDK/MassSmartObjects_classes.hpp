@@ -16,8 +16,8 @@
 #include "ZoneGraph_structs.hpp"
 #include "MassSpawner_classes.hpp"
 #include "GameplayTags_structs.hpp"
-#include "MassSmartObjects_structs.hpp"
 #include "ZoneGraphAnnotations_classes.hpp"
+#include "MassSmartObjects_structs.hpp"
 
 
 namespace SDK

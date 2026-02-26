@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Niagara_structs.hpp"
-#include "Niagara_classes.hpp"
 #include "ChaosNiagara_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Niagara_structs.hpp"
+#include "Niagara_classes.hpp"
 
 
 namespace SDK

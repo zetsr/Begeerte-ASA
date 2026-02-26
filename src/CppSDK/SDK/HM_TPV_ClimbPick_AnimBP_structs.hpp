@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // ScriptStruct HM_TPV_ClimbPick_AnimBP.HM_TPV_ClimbPick_AnimBP_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0xC270 - 0xC270)
+// 0x0000 (0xC570 - 0xC570)
 struct HM_TPV_ClimbPick_AnimBP::FAnimBlueprintGeneratedConstantData final : public BaseHumanAnimBP_Fists::FAnimBlueprintGeneratedConstantData
 {
 };

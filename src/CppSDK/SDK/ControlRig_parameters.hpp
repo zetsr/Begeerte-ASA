@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "ControlRig_structs.hpp"
 #include "AnimationCore_structs.hpp"
-#include "Engine_structs.hpp"
+#include "ControlRig_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "RigVM_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params

@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "cfcore_ui_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "cfcore_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "cfcore_ui_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "FieldNotification_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -377,7 +377,7 @@ public:
 	bool                                          CallFunc_CanLaunchURL_ReturnValue;                 // 0x0430(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x0431(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_432[0x6];                                      // 0x0432(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         K2Node_CustomEvent_modId;                          // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         K2Node_CustomEvent_ModId;                          // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(const class FString& Description)> K2Node_CreateDelegate_OutputDelegate_15;       // 0x0440(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FCFCoreMod                             K2Node_CustomEvent_mod;                            // 0x0450(0x0200)(ConstParm)
 	struct FCFCoreError                           K2Node_CustomEvent_error_3;                        // 0x0650(0x0038)(ConstParm)

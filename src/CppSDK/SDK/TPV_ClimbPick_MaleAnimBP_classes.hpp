@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass TPV_ClimbPick_MaleAnimBP.TPV_ClimbPick_MaleAnimBP_C
-// 0x0000 (0x1DC70 - 0x1DC70)
+// 0x0000 (0x1E0A0 - 0x1E0A0)
 class UTPV_ClimbPick_MaleAnimBP_C final : public UBaseHumanAnimBP_C
 {
 public:

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "AIModule_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GameplayTasks_structs.hpp"
+#include "AIModule_structs.hpp"
 #include "Engine_structs.hpp"
+#include "GameplayTasks_structs.hpp"
 #include "GameplayTags_structs.hpp"
 
 

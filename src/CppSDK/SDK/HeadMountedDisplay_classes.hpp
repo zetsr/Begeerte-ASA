@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "HeadMountedDisplay_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "HeadMountedDisplay_structs.hpp"
 
 
 namespace SDK

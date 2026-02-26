@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "MovieScene_structs.hpp"
 #include "Constraints_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MovieScene_structs.hpp"
 #include "AnimationCore_structs.hpp"
 
 

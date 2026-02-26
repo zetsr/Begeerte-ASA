@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "PCGGeometryScriptInterop_structs.hpp"
 #include "PCG_structs.hpp"
 #include "PCG_classes.hpp"
-#include "PCGGeometryScriptInterop_structs.hpp"
 #include "GeometryScriptingCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 

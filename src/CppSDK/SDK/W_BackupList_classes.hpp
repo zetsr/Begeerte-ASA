@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ShooterGame_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -30,8 +30,8 @@ public:
 	class UTextBlock*                             CreateBackupSaveButtonLabel;                       // 0x0858(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_W_BackupList(int32 EntryPoint);
 	void BndEvt__W_BackupList_CloseBackupSave_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void ExecuteUbergraph_W_BackupList(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

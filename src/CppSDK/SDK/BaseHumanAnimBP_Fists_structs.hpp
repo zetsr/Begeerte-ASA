@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // ScriptStruct BaseHumanAnimBP_Fists.BaseHumanAnimBP_Fists_C.AnimBlueprintGeneratedConstantData
-// 0x0000 (0xC270 - 0xC270)
+// 0x0000 (0xC570 - 0xC570)
 struct BaseHumanAnimBP_Fists::FAnimBlueprintGeneratedConstantData : public BaseHumanAnimBP::FAnimBlueprintGeneratedConstantData
 {
 };

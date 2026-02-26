@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "MassSpawner_classes.hpp"
-#include "MassReplication_structs.hpp"
 #include "Engine_classes.hpp"
 #include "MassEntity_classes.hpp"
 #include "CoreUObject_classes.hpp"
+#include "MassSpawner_classes.hpp"
+#include "MassReplication_structs.hpp"
 
 
 namespace SDK

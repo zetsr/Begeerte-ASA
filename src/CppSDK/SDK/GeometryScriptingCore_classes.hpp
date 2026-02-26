@@ -449,6 +449,31 @@ public:
 };
 DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshDeformFunctions;
 
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSubdivideFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshSubdivideFunctions final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* ApplyPNTessellation(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPNTessellateOptions& Options, int32 TessellationLevel, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplySelectiveTessellation(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FGeometryScriptSelectiveTessellateOptions& Options, int32 TessellationLevel, ESelectiveTessellatePatternType PatternType, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplyUniformTessellation(class UDynamicMesh* TargetMesh, int32 TessellationLevel, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GeometryScriptLibrary_MeshSubdivideFunctions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryScriptLibrary_MeshSubdivideFunctions")
+	}
+	static class UGeometryScriptLibrary_MeshSubdivideFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSubdivideFunctions>();
+	}
+};
+DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSubdivideFunctions;
+
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshGeodesicFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_MeshGeodesicFunctions final : public UBlueprintFunctionLibrary
@@ -512,6 +537,38 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshMaterialFunctions;
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshRepairFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshRepairFunctions final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* CompactMesh(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* FillAllMeshHoles(class UDynamicMesh* TargetMesh, const struct FGeometryScriptFillHolesOptions& FillOptions, int32* NumFilledHoles, int32* NumFailedHoleFills, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* RemoveHiddenTriangles(class UDynamicMesh* TargetMesh, const struct FGeometryScriptRemoveHiddenTrianglesOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* RemoveSmallComponents(class UDynamicMesh* TargetMesh, const struct FGeometryScriptRemoveSmallComponentOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* RemoveUnusedVertices(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* RepairMeshDegenerateGeometry(class UDynamicMesh* TargetMesh, const struct FGeometryScriptDegenerateTriangleOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ResolveMeshTJunctions(class UDynamicMesh* TargetMesh, const struct FGeometryScriptResolveTJunctionOptions& ResolveOptions, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SnapMeshOpenBoundaries(class UDynamicMesh* TargetMesh, const struct FGeometryScriptSnapBoundariesOptions& SnapOptions, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SplitMeshBowties(class UDynamicMesh* TargetMesh, bool bMeshBowties, bool bAttributeBowties, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* WeldMeshEdges(class UDynamicMesh* TargetMesh, const struct FGeometryScriptWeldEdgesOptions& WeldOptions, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GeometryScriptLibrary_MeshRepairFunctions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryScriptLibrary_MeshRepairFunctions")
+	}
+	static class UGeometryScriptLibrary_MeshRepairFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshRepairFunctions>();
+	}
+};
+DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshRepairFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshModelingFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -645,6 +702,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshPoolFunctions;
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshSimplifyFunctions final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* ApplySimplifyToPlanar(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPlanarSimplifyOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplySimplifyToPolygroupTopology(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPolygroupSimplifyOptions& Options, const struct FGeometryScriptGroupLayer& GroupLayer, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplySimplifyToTolerance(class UDynamicMesh* TargetMesh, float Tolerance, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplySimplifyToTriangleCount(class UDynamicMesh* TargetMesh, int32 TriangleCount, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplySimplifyToVertexCount(class UDynamicMesh* TargetMesh, int32 vertexcount, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GeometryScriptLibrary_MeshSimplifyFunctions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryScriptLibrary_MeshSimplifyFunctions")
+	}
+	static class UGeometryScriptLibrary_MeshSimplifyFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSimplifyFunctions>();
+	}
+};
+DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSimplifyFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -798,38 +882,6 @@ public:
 };
 DUMPER7_ASSERTS_UGeometryScriptLibrary_RemeshingFunctions;
 
-// Class GeometryScriptingCore.GeometryScriptLibrary_MeshRepairFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_MeshRepairFunctions final : public UBlueprintFunctionLibrary
-{
-public:
-	static class UDynamicMesh* CompactMesh(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* FillAllMeshHoles(class UDynamicMesh* TargetMesh, const struct FGeometryScriptFillHolesOptions& FillOptions, int32* NumFilledHoles, int32* NumFailedHoleFills, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* RemoveHiddenTriangles(class UDynamicMesh* TargetMesh, const struct FGeometryScriptRemoveHiddenTrianglesOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* RemoveSmallComponents(class UDynamicMesh* TargetMesh, const struct FGeometryScriptRemoveSmallComponentOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* RemoveUnusedVertices(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* RepairMeshDegenerateGeometry(class UDynamicMesh* TargetMesh, const struct FGeometryScriptDegenerateTriangleOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ResolveMeshTJunctions(class UDynamicMesh* TargetMesh, const struct FGeometryScriptResolveTJunctionOptions& ResolveOptions, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* SnapMeshOpenBoundaries(class UDynamicMesh* TargetMesh, const struct FGeometryScriptSnapBoundariesOptions& SnapOptions, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* SplitMeshBowties(class UDynamicMesh* TargetMesh, bool bMeshBowties, bool bAttributeBowties, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* WeldMeshEdges(class UDynamicMesh* TargetMesh, const struct FGeometryScriptWeldEdgesOptions& WeldOptions, class UGeometryScriptDebug* Debug);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GeometryScriptLibrary_MeshRepairFunctions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GeometryScriptLibrary_MeshRepairFunctions")
-	}
-	static class UGeometryScriptLibrary_MeshRepairFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshRepairFunctions>();
-	}
-};
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshRepairFunctions;
-
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshSamplingFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_MeshSamplingFunctions final : public UBlueprintFunctionLibrary
@@ -927,77 +979,6 @@ public:
 };
 DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSelectionQueryFunctions;
 
-// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_MeshSimplifyFunctions final : public UBlueprintFunctionLibrary
-{
-public:
-	static class UDynamicMesh* ApplySimplifyToPlanar(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPlanarSimplifyOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplySimplifyToPolygroupTopology(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPolygroupSimplifyOptions& Options, const struct FGeometryScriptGroupLayer& GroupLayer, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplySimplifyToTolerance(class UDynamicMesh* TargetMesh, float Tolerance, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplySimplifyToTriangleCount(class UDynamicMesh* TargetMesh, int32 TriangleCount, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplySimplifyToVertexCount(class UDynamicMesh* TargetMesh, int32 vertexcount, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GeometryScriptLibrary_MeshSimplifyFunctions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GeometryScriptLibrary_MeshSimplifyFunctions")
-	}
-	static class UGeometryScriptLibrary_MeshSimplifyFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSimplifyFunctions>();
-	}
-};
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSimplifyFunctions;
-
-// Class GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_VectorMathFunctions final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FGeometryScriptScalarList ConstantScalarMultiply(double Constant, const struct FGeometryScriptScalarList& ScalarList);
-	static void ConstantScalarMultiplyInPlace(double Constant, struct FGeometryScriptScalarList& ScalarList);
-	static struct FGeometryScriptVectorList ConstantVectorMultiply(double Constant, const struct FGeometryScriptVectorList& VectorList);
-	static void ConstantVectorMultiplyInPlace(double Constant, struct FGeometryScriptVectorList& VectorList);
-	static struct FGeometryScriptScalarList ScalarBlend(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB);
-	static void ScalarBlendInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB);
-	static struct FGeometryScriptScalarList ScalarInvert(const struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon);
-	static void ScalarInvertInPlace(struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon);
-	static struct FGeometryScriptScalarList ScalarMultiply(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier);
-	static void ScalarMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier);
-	static struct FGeometryScriptVectorList ScalarVectorMultiply(const struct FGeometryScriptScalarList& ScalarList, const struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier);
-	static void ScalarVectorMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarList, struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier);
-	static struct FGeometryScriptVectorList VectorBlend(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB);
-	static void VectorBlendInPlace(const struct FGeometryScriptVectorList& VectorListA, struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB);
-	static struct FGeometryScriptVectorList VectorCross(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB);
-	static struct FGeometryScriptScalarList VectorDot(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB);
-	static void VectorInverseTransformInPlace(struct FGeometryScriptVectorList& VectorList, const struct FTransform& Transform, bool bAsPosition);
-	static struct FGeometryScriptScalarList VectorLength(const struct FGeometryScriptVectorList& VectorList);
-	static void VectorNormalizeInPlace(struct FGeometryScriptVectorList& VectorList, const struct FVector& SetOnFailure);
-	static void VectorPlaneProjectInPlace(struct FGeometryScriptVectorList& VectorList, const struct FPlane& Plane);
-	static struct FGeometryScriptScalarList VectorToScalar(const struct FGeometryScriptVectorList& VectorList, double ConstantX, double ConstantY, double ConstantZ);
-	static void VectorTransformInPlace(struct FGeometryScriptVectorList& VectorList, const struct FTransform& Transform, bool bAsPosition);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GeometryScriptLibrary_VectorMathFunctions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GeometryScriptLibrary_VectorMathFunctions")
-	}
-	static class UGeometryScriptLibrary_VectorMathFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_VectorMathFunctions>();
-	}
-};
-DUMPER7_ASSERTS_UGeometryScriptLibrary_VectorMathFunctions;
-
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshSpatial
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_MeshSpatial final : public UBlueprintFunctionLibrary
@@ -1027,74 +1008,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSpatial;
-
-// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSubdivideFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_MeshSubdivideFunctions final : public UBlueprintFunctionLibrary
-{
-public:
-	static class UDynamicMesh* ApplyPNTessellation(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPNTessellateOptions& Options, int32 TessellationLevel, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplySelectiveTessellation(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FGeometryScriptSelectiveTessellateOptions& Options, int32 TessellationLevel, ESelectiveTessellatePatternType PatternType, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplyUniformTessellation(class UDynamicMesh* TargetMesh, int32 TessellationLevel, class UGeometryScriptDebug* Debug);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GeometryScriptLibrary_MeshSubdivideFunctions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GeometryScriptLibrary_MeshSubdivideFunctions")
-	}
-	static class UGeometryScriptLibrary_MeshSubdivideFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSubdivideFunctions>();
-	}
-};
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSubdivideFunctions;
-
-// Class GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_PolyPathFunctions final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FGeometryScriptPolyPath Conv_ArrayOfVector2DToGeometryScriptPolyPath(const TArray<struct FVector2D>& PathVertices);
-	static struct FGeometryScriptPolyPath Conv_ArrayToGeometryScriptPolyPath(const TArray<struct FVector>& PathVertices);
-	static TArray<struct FVector> Conv_GeometryScriptPolyPathToArray(const struct FGeometryScriptPolyPath& PolyPath);
-	static TArray<struct FVector2D> Conv_GeometryScriptPolyPathToArrayOfVector2D(const struct FGeometryScriptPolyPath& PolyPath);
-	static void ConvertArrayOfVector2DToPolyPath(const TArray<struct FVector2D>& VertexArray, struct FGeometryScriptPolyPath* PolyPath);
-	static void ConvertArrayToPolyPath(const TArray<struct FVector>& VertexArray, struct FGeometryScriptPolyPath* PolyPath);
-	static void ConvertPolyPathToArray(const struct FGeometryScriptPolyPath& PolyPath, TArray<struct FVector>* VertexArray);
-	static void ConvertPolyPathToArrayOfVector2D(const struct FGeometryScriptPolyPath& PolyPath, TArray<struct FVector2D>* VertexArray);
-	static void ConvertSplineToPolyPath(const class USplineComponent* Spline, struct FGeometryScriptPolyPath* PolyPath, const struct FGeometryScriptSplineSamplingOptions& SamplingOptions);
-	static struct FGeometryScriptPolyPath CreateArcPath2D(const struct FVector2D& Center, float Radius, int32 NumPoints, float startAngle, float endAngle);
-	static struct FGeometryScriptPolyPath CreateArcPath3D(const struct FTransform& Transform, float Radius, int32 NumPoints, float startAngle, float endAngle);
-	static struct FGeometryScriptPolyPath CreateCirclePath2D(const struct FVector2D& Center, float Radius, int32 NumPoints);
-	static struct FGeometryScriptPolyPath CreateCirclePath3D(const struct FTransform& Transform, float Radius, int32 NumPoints);
-	static struct FGeometryScriptPolyPath FlattenTo2DOnAxis(const struct FGeometryScriptPolyPath& PolyPath, EGeometryScriptAxis DropAxis);
-	static int32 GetNearestVertexIndex(const struct FGeometryScriptPolyPath& PolyPath, const struct FVector& Point);
-	static double GetPolyPathArcLength(const struct FGeometryScriptPolyPath& PolyPath);
-	static int32 GetPolyPathLastIndex(const struct FGeometryScriptPolyPath& PolyPath);
-	static int32 GetPolyPathNumVertices(const struct FGeometryScriptPolyPath& PolyPath);
-	static struct FVector GetPolyPathTangent(const struct FGeometryScriptPolyPath& PolyPath, int32 Index_0, bool* bIsValidIndex);
-	static struct FVector GetPolyPathVertex(const struct FGeometryScriptPolyPath& PolyPath, int32 Index_0, bool* bIsValidIndex);
-	static bool SampleSplineToTransforms(const class USplineComponent* Spline, TArray<struct FTransform>* Frames, TArray<double>* FrameTimes, const struct FGeometryScriptSplineSamplingOptions& SamplingOptions, const struct FTransform& RelativeTransform, bool bIncludeScale);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GeometryScriptLibrary_PolyPathFunctions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GeometryScriptLibrary_PolyPathFunctions")
-	}
-	static class UGeometryScriptLibrary_PolyPathFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_PolyPathFunctions>();
-	}
-};
-DUMPER7_ASSERTS_UGeometryScriptLibrary_PolyPathFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshTransformFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1228,43 +1141,6 @@ public:
 };
 DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshVoxelFunctions;
 
-// Class GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_BoxFunctions final : public UBlueprintFunctionLibrary
-{
-public:
-	static struct FBox FindBoxBoxIntersection(const struct FBox& Box1, const struct FBox& Box2, bool* bIsIntersecting);
-	static struct FVector FindClosestPointOnBox(const struct FBox& Box, const struct FVector& Point, bool* bIsInside);
-	static double GetBoxBoxDistance(const struct FBox& Box1, const struct FBox& Box2);
-	static void GetBoxCenterSize(const struct FBox& Box, struct FVector* Center, struct FVector* Dimensions);
-	static struct FVector GetBoxCorner(const struct FBox& Box, int32 CornerIndex);
-	static struct FVector GetBoxFaceCenter(const struct FBox& Box, int32 FaceIndex, struct FVector* FaceNormal);
-	static double GetBoxPointDistance(const struct FBox& Box, const struct FVector& Point);
-	static void GetBoxVolumeArea(const struct FBox& Box, double* Volume, double* SurfaceArea);
-	static struct FBox GetExpandedBox(const struct FBox& Box, const struct FVector& ExpandBy);
-	static struct FBox GetTransformedBox(const struct FBox& Box, const struct FTransform& Transform);
-	static struct FBox MakeBoxFromCenterExtents(const struct FVector& Center, const struct FVector& Extents);
-	static struct FBox MakeBoxFromCenterSize(const struct FVector& Center, const struct FVector& Dimensions);
-	static bool TestBoxBoxIntersection(const struct FBox& Box1, const struct FBox& Box2);
-	static bool TestBoxSphereIntersection(const struct FBox& Box, const struct FVector& SphereCenter, double SphereRadius);
-	static bool TestPointInsideBox(const struct FBox& Box, const struct FVector& Point, bool bConsiderOnBoxAsInside);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GeometryScriptLibrary_BoxFunctions")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GeometryScriptLibrary_BoxFunctions")
-	}
-	static class UGeometryScriptLibrary_BoxFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_BoxFunctions>();
-	}
-};
-DUMPER7_ASSERTS_UGeometryScriptLibrary_BoxFunctions;
-
 // Class GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_PointSetSamplingFunctions final : public UBlueprintFunctionLibrary
@@ -1377,6 +1253,49 @@ public:
 };
 DUMPER7_ASSERTS_UGeometryScriptLibrary_PolygonListFunctions;
 
+// Class GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_PolyPathFunctions final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FGeometryScriptPolyPath Conv_ArrayOfVector2DToGeometryScriptPolyPath(const TArray<struct FVector2D>& PathVertices);
+	static struct FGeometryScriptPolyPath Conv_ArrayToGeometryScriptPolyPath(const TArray<struct FVector>& PathVertices);
+	static TArray<struct FVector> Conv_GeometryScriptPolyPathToArray(const struct FGeometryScriptPolyPath& PolyPath);
+	static TArray<struct FVector2D> Conv_GeometryScriptPolyPathToArrayOfVector2D(const struct FGeometryScriptPolyPath& PolyPath);
+	static void ConvertArrayOfVector2DToPolyPath(const TArray<struct FVector2D>& VertexArray, struct FGeometryScriptPolyPath* PolyPath);
+	static void ConvertArrayToPolyPath(const TArray<struct FVector>& VertexArray, struct FGeometryScriptPolyPath* PolyPath);
+	static void ConvertPolyPathToArray(const struct FGeometryScriptPolyPath& PolyPath, TArray<struct FVector>* VertexArray);
+	static void ConvertPolyPathToArrayOfVector2D(const struct FGeometryScriptPolyPath& PolyPath, TArray<struct FVector2D>* VertexArray);
+	static void ConvertSplineToPolyPath(const class USplineComponent* Spline, struct FGeometryScriptPolyPath* PolyPath, const struct FGeometryScriptSplineSamplingOptions& SamplingOptions);
+	static struct FGeometryScriptPolyPath CreateArcPath2D(const struct FVector2D& Center, float Radius, int32 NumPoints, float startAngle, float endAngle);
+	static struct FGeometryScriptPolyPath CreateArcPath3D(const struct FTransform& Transform, float Radius, int32 NumPoints, float startAngle, float endAngle);
+	static struct FGeometryScriptPolyPath CreateCirclePath2D(const struct FVector2D& Center, float Radius, int32 NumPoints);
+	static struct FGeometryScriptPolyPath CreateCirclePath3D(const struct FTransform& Transform, float Radius, int32 NumPoints);
+	static struct FGeometryScriptPolyPath FlattenTo2DOnAxis(const struct FGeometryScriptPolyPath& PolyPath, EGeometryScriptAxis DropAxis);
+	static int32 GetNearestVertexIndex(const struct FGeometryScriptPolyPath& PolyPath, const struct FVector& Point);
+	static double GetPolyPathArcLength(const struct FGeometryScriptPolyPath& PolyPath);
+	static int32 GetPolyPathLastIndex(const struct FGeometryScriptPolyPath& PolyPath);
+	static int32 GetPolyPathNumVertices(const struct FGeometryScriptPolyPath& PolyPath);
+	static struct FVector GetPolyPathTangent(const struct FGeometryScriptPolyPath& PolyPath, int32 Index_0, bool* bIsValidIndex);
+	static struct FVector GetPolyPathVertex(const struct FGeometryScriptPolyPath& PolyPath, int32 Index_0, bool* bIsValidIndex);
+	static bool SampleSplineToTransforms(const class USplineComponent* Spline, TArray<struct FTransform>* Frames, TArray<double>* FrameTimes, const struct FGeometryScriptSplineSamplingOptions& SamplingOptions, const struct FTransform& RelativeTransform, bool bIncludeScale);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GeometryScriptLibrary_PolyPathFunctions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryScriptLibrary_PolyPathFunctions")
+	}
+	static class UGeometryScriptLibrary_PolyPathFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_PolyPathFunctions>();
+	}
+};
+DUMPER7_ASSERTS_UGeometryScriptLibrary_PolyPathFunctions;
+
 // Class GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_SceneUtilityFunctions final : public UBlueprintFunctionLibrary
@@ -1466,6 +1385,43 @@ public:
 };
 DUMPER7_ASSERTS_UGeometryScriptLibrary_RayFunctions;
 
+// Class GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_BoxFunctions final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FBox FindBoxBoxIntersection(const struct FBox& Box1, const struct FBox& Box2, bool* bIsIntersecting);
+	static struct FVector FindClosestPointOnBox(const struct FBox& Box, const struct FVector& Point, bool* bIsInside);
+	static double GetBoxBoxDistance(const struct FBox& Box1, const struct FBox& Box2);
+	static void GetBoxCenterSize(const struct FBox& Box, struct FVector* Center, struct FVector* Dimensions);
+	static struct FVector GetBoxCorner(const struct FBox& Box, int32 CornerIndex);
+	static struct FVector GetBoxFaceCenter(const struct FBox& Box, int32 FaceIndex, struct FVector* FaceNormal);
+	static double GetBoxPointDistance(const struct FBox& Box, const struct FVector& Point);
+	static void GetBoxVolumeArea(const struct FBox& Box, double* Volume, double* SurfaceArea);
+	static struct FBox GetExpandedBox(const struct FBox& Box, const struct FVector& ExpandBy);
+	static struct FBox GetTransformedBox(const struct FBox& Box, const struct FTransform& Transform);
+	static struct FBox MakeBoxFromCenterExtents(const struct FVector& Center, const struct FVector& Extents);
+	static struct FBox MakeBoxFromCenterSize(const struct FVector& Center, const struct FVector& Dimensions);
+	static bool TestBoxBoxIntersection(const struct FBox& Box1, const struct FBox& Box2);
+	static bool TestBoxSphereIntersection(const struct FBox& Box, const struct FVector& SphereCenter, double SphereRadius);
+	static bool TestPointInsideBox(const struct FBox& Box, const struct FVector& Point, bool bConsiderOnBoxAsInside);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GeometryScriptLibrary_BoxFunctions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryScriptLibrary_BoxFunctions")
+	}
+	static class UGeometryScriptLibrary_BoxFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_BoxFunctions>();
+	}
+};
+DUMPER7_ASSERTS_UGeometryScriptLibrary_BoxFunctions;
+
 // Class GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_TextureMapFunctions final : public UBlueprintFunctionLibrary
@@ -1489,6 +1445,50 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGeometryScriptLibrary_TextureMapFunctions;
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_VectorMathFunctions final : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FGeometryScriptScalarList ConstantScalarMultiply(double Constant, const struct FGeometryScriptScalarList& ScalarList);
+	static void ConstantScalarMultiplyInPlace(double Constant, struct FGeometryScriptScalarList& ScalarList);
+	static struct FGeometryScriptVectorList ConstantVectorMultiply(double Constant, const struct FGeometryScriptVectorList& VectorList);
+	static void ConstantVectorMultiplyInPlace(double Constant, struct FGeometryScriptVectorList& VectorList);
+	static struct FGeometryScriptScalarList ScalarBlend(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB);
+	static void ScalarBlendInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantA, double ConstantB);
+	static struct FGeometryScriptScalarList ScalarInvert(const struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon);
+	static void ScalarInvertInPlace(struct FGeometryScriptScalarList& ScalarList, double Numerator, double SetOnFailure, double Epsilon);
+	static struct FGeometryScriptScalarList ScalarMultiply(const struct FGeometryScriptScalarList& ScalarListA, const struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier);
+	static void ScalarMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarListA, struct FGeometryScriptScalarList& ScalarListB, double ConstantMultiplier);
+	static struct FGeometryScriptVectorList ScalarVectorMultiply(const struct FGeometryScriptScalarList& ScalarList, const struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier);
+	static void ScalarVectorMultiplyInPlace(const struct FGeometryScriptScalarList& ScalarList, struct FGeometryScriptVectorList& VectorList, double ScalarMultiplier);
+	static struct FGeometryScriptVectorList VectorBlend(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB);
+	static void VectorBlendInPlace(const struct FGeometryScriptVectorList& VectorListA, struct FGeometryScriptVectorList& VectorListB, double ConstantA, double ConstantB);
+	static struct FGeometryScriptVectorList VectorCross(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB);
+	static struct FGeometryScriptScalarList VectorDot(const struct FGeometryScriptVectorList& VectorListA, const struct FGeometryScriptVectorList& VectorListB);
+	static void VectorInverseTransformInPlace(struct FGeometryScriptVectorList& VectorList, const struct FTransform& Transform, bool bAsPosition);
+	static struct FGeometryScriptScalarList VectorLength(const struct FGeometryScriptVectorList& VectorList);
+	static void VectorNormalizeInPlace(struct FGeometryScriptVectorList& VectorList, const struct FVector& SetOnFailure);
+	static void VectorPlaneProjectInPlace(struct FGeometryScriptVectorList& VectorList, const struct FPlane& Plane);
+	static struct FGeometryScriptScalarList VectorToScalar(const struct FGeometryScriptVectorList& VectorList, double ConstantX, double ConstantY, double ConstantZ);
+	static void VectorTransformInPlace(struct FGeometryScriptVectorList& VectorList, const struct FTransform& Transform, bool bAsPosition);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GeometryScriptLibrary_VectorMathFunctions")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryScriptLibrary_VectorMathFunctions")
+	}
+	static class UGeometryScriptLibrary_VectorMathFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_VectorMathFunctions>();
+	}
+};
+DUMPER7_ASSERTS_UGeometryScriptLibrary_VectorMathFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_VolumeTextureBakeFunctions
 // 0x0000 (0x0028 - 0x0028)

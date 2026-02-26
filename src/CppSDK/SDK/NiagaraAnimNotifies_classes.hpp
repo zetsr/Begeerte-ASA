@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "NiagaraAnimNotifies_structs.hpp"
 #include "Engine_classes.hpp"
+#include "NiagaraAnimNotifies_structs.hpp"
 
 
 namespace SDK
