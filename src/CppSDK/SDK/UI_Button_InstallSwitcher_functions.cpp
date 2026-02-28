@@ -17,80 +17,6 @@
 namespace SDK
 {
 
-// Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.UpdateButtonSwitcherStatus
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FInstallProgressMod&       ModInfo                                                (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-
-void UUI_Button_InstallSwitcher_C::UpdateButtonSwitcherStatus(const struct FInstallProgressMod& ModInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "UpdateButtonSwitcherStatus");
-
-	Params::UI_Button_InstallSwitcher_C_UpdateButtonSwitcherStatus Parms{};
-
-	Parms.ModInfo = std::move(ModInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.UpdateButtonCollor
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ENUM_Install                            ButtonStatus                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UUI_Button_InstallSwitcher_C::UpdateButtonCollor(ENUM_Install ButtonStatus)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "UpdateButtonCollor");
-
-	Params::UI_Button_InstallSwitcher_C_UpdateButtonCollor Parms{};
-
-	Parms.ButtonStatus = ButtonStatus;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.Update All Theme Settings
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UUI_Button_InstallSwitcher_C::Update_All_Theme_Settings()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "Update All Theme Settings");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.SetProgress
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FInstallProgressMod&       InstallProgressMod                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void UUI_Button_InstallSwitcher_C::SetProgress(const struct FInstallProgressMod& InstallProgressMod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "SetProgress");
-
-	Params::UI_Button_InstallSwitcher_C_SetProgress Parms{};
-
-	Parms.InstallProgressMod = std::move(InstallProgressMod);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.BndEvt__UI_Button_InstallSwitcher_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature
 // (BlueprintEvent)
 
@@ -148,6 +74,80 @@ void UUI_Button_InstallSwitcher_C::ExecuteUbergraph_UI_Button_InstallSwitcher(in
 	Params::UI_Button_InstallSwitcher_C_ExecuteUbergraph_UI_Button_InstallSwitcher Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.SetProgress
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FInstallProgressMod&       InstallProgressMod                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void UUI_Button_InstallSwitcher_C::SetProgress(const struct FInstallProgressMod& InstallProgressMod)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "SetProgress");
+
+	Params::UI_Button_InstallSwitcher_C_SetProgress Parms{};
+
+	Parms.InstallProgressMod = std::move(InstallProgressMod);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.Update All Theme Settings
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UUI_Button_InstallSwitcher_C::Update_All_Theme_Settings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "Update All Theme Settings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.UpdateButtonCollor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ENUM_Install                            ButtonStatus                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_Button_InstallSwitcher_C::UpdateButtonCollor(ENUM_Install ButtonStatus)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "UpdateButtonCollor");
+
+	Params::UI_Button_InstallSwitcher_C_UpdateButtonCollor Parms{};
+
+	Parms.ButtonStatus = ButtonStatus;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.UpdateButtonSwitcherStatus
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FInstallProgressMod&       ModInfo                                                (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+
+void UUI_Button_InstallSwitcher_C::UpdateButtonSwitcherStatus(const struct FInstallProgressMod& ModInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Button_InstallSwitcher_C", "UpdateButtonSwitcherStatus");
+
+	Params::UI_Button_InstallSwitcher_C_UpdateButtonSwitcherStatus Parms{};
+
+	Parms.ModInfo = std::move(ModInfo);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

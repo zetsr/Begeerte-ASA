@@ -20,7 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass PlayerPawnTest.PlayerPawnTest_C
 // 0x01D0 (0x2680 - 0x24B0)
-class APlayerPawnTest_C final : public AShooterCharacter
+class APlayerPawnTest_C : public AShooterCharacter
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x24B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

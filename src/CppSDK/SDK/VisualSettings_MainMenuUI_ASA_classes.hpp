@@ -48,22 +48,22 @@ public:
 	float                                         DefaultMaxHDR;                                     // 0x08D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AddedToViewport();
-	void BndEvt__VisualSettings_MainMenuUI_ASA_ApplyButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__VisualSettings_MainMenuUI_ASA_CustomPreset_1_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__VisualSettings_MainMenuUI_ASA_EnableHDRCheckBox_K2Node_ComponentBoundEvent_2_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0);
-	void BndEvt__VisualSettings_MainMenuUI_ASA_HDRMaximumLuminence_K2Node_ComponentBoundEvent_8_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0);
-	void BndEvt__VisualSettings_MainMenuUI_ASA_HDRMidLuminence_K2Node_ComponentBoundEvent_7_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0);
-	void BndEvt__VisualSettings_MainMenuUI_ASA_HDRMinimumLuminence_K2Node_ComponentBoundEvent_6_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0);
-	void BndEvt__VisualSettings_MainMenuUI_ASA_HDRValueSlider_K2Node_ComponentBoundEvent_1_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0);
-	void BndEvt__VisualSettings_MainMenuUI_ASA_RestoreButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
-	void ExecuteUbergraph_VisualSettings_MainMenuUI_ASA(int32 EntryPoint);
-	bool Get_HDRMid_Luminence_B_Is_Enabled();
-	void RefreshHDRValues();
-	void RemovedFromViewport();
-	void SetupGettHdrValue(float Value, double MinValue, double MaxValue, double* RealValue);
-	void SetupSetHdrValue(class UDataListValueGeneric* self2, float Value, double MinValue, double MaxValue);
 	void UpdateHDR();
+	void SetupSetHdrValue(class UDataListValueGeneric* self2, float Value, double MinValue, double MaxValue);
+	void SetupGettHdrValue(float Value, double MinValue, double MaxValue, double* RealValue);
+	void RemovedFromViewport();
+	void RefreshHDRValues();
+	bool Get_HDRMid_Luminence_B_Is_Enabled();
+	void ExecuteUbergraph_VisualSettings_MainMenuUI_ASA(int32 EntryPoint);
+	void BndEvt__VisualSettings_MainMenuUI_ASA_RestoreButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__VisualSettings_MainMenuUI_ASA_HDRValueSlider_K2Node_ComponentBoundEvent_1_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0);
+	void BndEvt__VisualSettings_MainMenuUI_ASA_HDRMinimumLuminence_K2Node_ComponentBoundEvent_6_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0);
+	void BndEvt__VisualSettings_MainMenuUI_ASA_HDRMidLuminence_K2Node_ComponentBoundEvent_7_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0);
+	void BndEvt__VisualSettings_MainMenuUI_ASA_HDRMaximumLuminence_K2Node_ComponentBoundEvent_8_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0);
+	void BndEvt__VisualSettings_MainMenuUI_ASA_EnableHDRCheckBox_K2Node_ComponentBoundEvent_2_ReturnValue__DelegateSignature(const class FText& ReturnValue, int32 Index_0);
+	void BndEvt__VisualSettings_MainMenuUI_ASA_CustomPreset_1_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__VisualSettings_MainMenuUI_ASA_ApplyButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature();
+	void AddedToViewport();
 
 public:
 	static class UClass* StaticClass()

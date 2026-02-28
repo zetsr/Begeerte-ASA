@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "STRUCT_SubOptions_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CFCoreUIWidget_classes.hpp"
 
 

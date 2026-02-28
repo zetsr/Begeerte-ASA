@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Dino_Character_BP_classes.hpp"
 #include "Engine_structs.hpp"
+#include "Dino_Character_BP_classes.hpp"
 
 
 namespace SDK

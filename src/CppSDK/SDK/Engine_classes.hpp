@@ -11792,7 +11792,7 @@ public:
 	int32                                          RemotePort;
 	uint8                                          Pad_D4_To_168[0x94];                               // 0x00D4(0x0094)(填充到 PlayerID)
 	// --- 手术结束 ---
-
+	
 	// uint8                                         Pad_AD[0xBB];                                      // 0x00AD(0x00BB)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       PlayerID;                                          // 0x0168(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_198[0x48];                                     // 0x0198(0x0048)(Fixing Size After Last Property [ Dumper-7 ])

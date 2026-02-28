@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ENUM_SideTabs_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CFCoreUIWidget_classes.hpp"
 
 

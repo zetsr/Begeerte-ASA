@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "ENUM_Install_structs.hpp"
 #include "CFCoreUIWidget_classes.hpp"
+#include "ENUM_Install_structs.hpp"
 
 
 namespace SDK
@@ -50,14 +50,14 @@ public:
 	class UUI_StoreMenu_C*                        StoreMenu;                                         // 0x0908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateButtonSwitcherStatus(const struct FInstallProgressMod& ModInfo);
-	void UpdateButtonCollor(ENUM_Install ButtonStatus);
-	void Update_All_Theme_Settings();
-	void SetProgress(const struct FInstallProgressMod& InstallProgressMod);
 	void BndEvt__UI_Button_InstallSwitcher_UI_Button_Ark_Global_Install_K2Node_ComponentBoundEvent_2_OnClick__DelegateSignature();
 	void BndEvt__UI_Button_InstallSwitcher_UI_Button_Ark_Global_Update_K2Node_ComponentBoundEvent_3_OnClick__DelegateSignature();
 	void Construct();
 	void ExecuteUbergraph_UI_Button_InstallSwitcher(int32 EntryPoint);
+	void SetProgress(const struct FInstallProgressMod& InstallProgressMod);
+	void Update_All_Theme_Settings();
+	void UpdateButtonCollor(ENUM_Install ButtonStatus);
+	void UpdateButtonSwitcherStatus(const struct FInstallProgressMod& ModInfo);
 
 public:
 	static class UClass* StaticClass()

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "cfcore_ui_structs.hpp"
-#include "UI_ParentBrowser_classes.hpp"
 #include "ENUM_SideTabs_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UI_ParentBrowser_classes.hpp"
+#include "cfcore_ui_structs.hpp"
 
 
 namespace SDK
