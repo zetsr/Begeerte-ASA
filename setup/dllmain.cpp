@@ -18,51 +18,62 @@ bool DownloadToMemory(const std::string& url, std::vector<BYTE>& outBuffer) {
     HINTERNET hUrl = NULL;
     bool success = false;
 
-    // 1. 初始化 Internet 环境
-    hInternet = InternetOpenA("Mozilla/5.0", INTERNET_OPEN_TYPE_PRECONFIG, NULL, NULL, 0);
+    // 1. 使用完整的 User-Agent。GitHub 对此非常敏感
+    const char* szUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36";
+
+    hInternet = InternetOpenA(szUserAgent, INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
     if (!hInternet) return false;
 
-    // 2. 开启 URL (包含安全和重定向标志)
-    DWORD flags = INTERNET_FLAG_RELOAD | INTERNET_FLAG_RESYNCHRONIZE | INTERNET_FLAG_SECURE;
+    // 2. 标志位：增加对重定向的自动处理 (FOLLOW_REDIRECTS)
+    // GitHub 的 raw 链接经常会重定向到 codeload.github.com 或其他节点
+    DWORD flags = INTERNET_FLAG_RELOAD |
+        INTERNET_FLAG_RESYNCHRONIZE |
+        INTERNET_FLAG_SECURE |
+        INTERNET_FLAG_IGNORE_CERT_CN_INVALID |
+        INTERNET_FLAG_HYPERLINK |
+        INTERNET_FLAG_KEEP_CONNECTION;
+
     hUrl = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, flags, 0);
+
     if (!hUrl) {
+        DWORD err = GetLastError();
+        // 如果这里报错 12157，说明是 TLS 握手失败
+        // 如果报错 12007，说明是域名解析失败
+        printf("[!] InternetOpenUrlA failed. Error Code: %lu\n", err);
         InternetCloseHandle(hInternet);
         return false;
     }
 
-    // 3. 获取文件大小 (解决大文件处理性能的关键)
-    DWORD contentLength = 0;
-    DWORD dwSize = sizeof(contentLength);
-    DWORD dwIndex = 0;
-
-    // 查询 Content-Length
-    if (HttpQueryInfoA(hUrl, HTTP_QUERY_CONTENT_LENGTH | HTTP_QUERY_FLAG_NUMBER, &contentLength, &dwSize, &dwIndex)) {
-        outBuffer.reserve(contentLength); // 预留空间，防止多次内存重分配
+    // 3. 检查 HTTP 状态码（确保不是 404 或 403）
+    DWORD statusCode = 0;
+    DWORD statusCodeLen = sizeof(statusCode);
+    HttpQueryInfoA(hUrl, HTTP_QUERY_STATUS_CODE | HTTP_QUERY_FLAG_NUMBER, &statusCode, &statusCodeLen, NULL);
+    if (statusCode != 200) {
+        printf("[!] Server returned HTTP %lu\n", statusCode);
+        InternetCloseHandle(hUrl);
+        InternetCloseHandle(hInternet);
+        return false;
     }
 
-    // 4. 高效读取循环
-    const DWORD BUFFER_SIZE = 65536; // 64KB 缓冲区
-    BYTE tempBuffer[BUFFER_SIZE];
+    // 4. 获取长度并预留内存
+    DWORD contentLength = 0;
+    DWORD dwSize = sizeof(contentLength);
+    if (HttpQueryInfoA(hUrl, HTTP_QUERY_CONTENT_LENGTH | HTTP_QUERY_FLAG_NUMBER, &contentLength, &dwSize, NULL)) {
+        outBuffer.reserve(contentLength);
+    }
+
+    // 5. 读取数据
+    BYTE tempBuffer[65536];
     DWORD bytesRead = 0;
     outBuffer.clear();
 
-    try {
-        while (InternetReadFile(hUrl, tempBuffer, BUFFER_SIZE, &bytesRead) && bytesRead > 0) {
-            // 使用 push_back 的批量形式或直接 append
-            // 此时因为已经 reserve 过，这里的操作几乎是纯内存拷贝，非常快
-            outBuffer.insert(outBuffer.end(), tempBuffer, tempBuffer + bytesRead);
-        }
-        success = !outBuffer.empty();
-    }
-    catch (const std::bad_alloc&) {
-        std::cerr << "[!] Memory allocation failed for large file." << std::endl;
-        success = false;
+    while (InternetReadFile(hUrl, tempBuffer, sizeof(tempBuffer), &bytesRead) && bytesRead > 0) {
+        outBuffer.insert(outBuffer.end(), tempBuffer, tempBuffer + bytesRead);
     }
 
-    // 5. 清理资源
-    if (hUrl) InternetCloseHandle(hUrl);
-    if (hInternet) InternetCloseHandle(hInternet);
-
+    success = !outBuffer.empty();
+    InternetCloseHandle(hUrl);
+    InternetCloseHandle(hInternet);
     return success;
 }
 
