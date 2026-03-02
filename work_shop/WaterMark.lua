@@ -205,8 +205,5 @@ end
 
 -- 渲染回调入口
 function OnPaint()
-    local status, err = pcall(Main)
-    if not status then
-        ImGui.AddText(10, 10, ImGui.Color(255, 0, 0, 255), "FATAL: " .. tostring(err))
-    end
+    Main()
 end

@@ -139,8 +139,9 @@ void LuaManager::BindImGui() {
     auto imgui = m_lua->create_named_table("ImGui");
     auto dl = []() { return ImGui::GetBackgroundDrawList(); };
 
-    imgui.set_function("Color", [](int r, int g, int b, int a) { return IM_COL32(r, g, b, a); });
-
+    imgui.set_function("Color", [](int r, int g, int b, int a) {
+        return IM_COL32(r, g, b, a);
+        });
 
     imgui.set_function("GetDeltaTime", []() {
         return ImGui::GetIO().DeltaTime;
@@ -159,30 +160,34 @@ void LuaManager::BindImGui() {
         });
 
     imgui.set_function("GetScreenSize", [](sol::this_state s) {
-        sol::state_view lua(s);
         ImVec2 size = ImGui::GetIO().DisplaySize;
-        sol::table res = lua.create_table();
-        res["x"] = size.x;
-        res["y"] = size.y;
-        return res;
+        lua_newtable(s);
+        lua_pushnumber(s, size.x);
+        lua_setfield(s, -2, "x");
+        lua_pushnumber(s, size.y);
+        lua_setfield(s, -2, "y");
+        return sol::stack_reference(s, -1);
         });
 
     imgui.set_function("GetMousePos", [](sol::this_state s) {
-        sol::state_view lua(s);
         ImVec2 pos = ImGui::GetIO().MousePos;
-        sol::table res = lua.create_table();
-        res["x"] = pos.x;
-        res["y"] = pos.y;
-        return res;
+        lua_newtable(s);
+        lua_pushnumber(s, pos.x);
+        lua_setfield(s, -2, "x");
+        lua_pushnumber(s, pos.y);
+        lua_setfield(s, -2, "y");
+        return sol::stack_reference(s, -1);
         });
 
-    imgui.set_function("CalcTextSize", [](sol::this_state s, const char* text) {
-        sol::state_view lua(s);
-        ImVec2 size = ImGui::CalcTextSize(text);
-        sol::table res = lua.create_table();
-        res["x"] = size.x;
-        res["y"] = size.y;
-        return res;
+    imgui.set_function("CalcTextSize", [](sol::this_state s) {
+        const char* text = lua_tostring(s, 1);
+        ImVec2 size = (text && text[0]) ? ImGui::CalcTextSize(text) : ImVec2(0.0f, 0.0f);
+        lua_newtable(s);
+        lua_pushnumber(s, size.x);
+        lua_setfield(s, -2, "x");
+        lua_pushnumber(s, size.y);
+        lua_setfield(s, -2, "y");
+        return sol::stack_reference(s, -1);
         });
 
     imgui.set_function("AddRect", [dl](float x1, float y1, float x2, float y2, ImU32 col, float rounding, float thickness) {
@@ -249,30 +254,26 @@ void LuaManager::BindImGui() {
         dl()->AddLine(ImVec2(x1, y1), ImVec2(x2, y2), col, thickness);
         });
 
-    imgui.set_function("AddText", [dl](float x, float y, ImU32 col, const char* text) {
-        dl()->AddText(ImVec2(x, y), col, text);
+    imgui.set_function("AddText", [dl](sol::this_state s, float x, float y, ImU32 col) {
+        const char* text = lua_tostring(s, 4);
+        if (text && text[0]) dl()->AddText(ImVec2(x, y), col, text);
         });
 }
 
 void LuaManager::BindSDK() {
     if (!m_lua) return;
 
-    // --- 1. 基础结构 ---
     m_lua->new_usertype<SDK::FVector>("FVector",
         sol::constructors<SDK::FVector(), SDK::FVector(float, float, float)>(),
         "X", &SDK::FVector::X, "Y", &SDK::FVector::Y, "Z", &SDK::FVector::Z
         );
 
-    // --- 注册 UNetConnection 类 ---
     m_lua->new_usertype<SDK::UNetConnection>("UNetConnection",
-        // 绑定我们封装的成员函数
         "GetFirstIP", &SDK::UNetConnection::GetFirstIP,
         "GetPort", &SDK::UNetConnection::GetPort
         );
 
-    // --- 注册 UNetDriver 类 ---
     m_lua->new_usertype<SDK::UNetDriver>("UNetDriver",
-        // 绑定 ServerConnection 指针
         "ServerConnection", &SDK::UNetDriver::ServerConnection
         );
 
@@ -315,10 +316,18 @@ void LuaManager::BindSDK() {
     sdk.set_function("GetTurretClass", []() { return (uintptr_t)SDK::APrimalStructureTurret::StaticClass(); });
 
     auto actor_api = m_lua->create_named_table("Actor");
-    actor_api.set_function("IsA", [](uintptr_t a, uintptr_t cls) { return (a && cls) ? ((SDK::AActor*)a)->IsA((SDK::UClass*)cls) : false; });
-    actor_api.set_function("GetLocation", [](uintptr_t a) -> sol::optional<SDK::FVector> { return (a) ? sol::make_optional(((SDK::AActor*)a)->K2_GetActorLocation()) : sol::nullopt; });
-    actor_api.set_function("GetDistance", [](uintptr_t a, uintptr_t b) { return (a && b) ? ((SDK::AActor*)a)->GetDistanceTo((SDK::AActor*)b) : 0.0f; });
-    actor_api.set_function("IsHidden", [](uintptr_t a) { return a ? (bool)((SDK::AActor*)a)->bHidden : true; });
+    actor_api.set_function("IsA", [](uintptr_t a, uintptr_t cls) {
+        return (a && cls) ? ((SDK::AActor*)a)->IsA((SDK::UClass*)cls) : false;
+        });
+    actor_api.set_function("GetLocation", [](uintptr_t a) -> sol::optional<SDK::FVector> {
+        return a ? sol::make_optional(((SDK::AActor*)a)->K2_GetActorLocation()) : sol::nullopt;
+        });
+    actor_api.set_function("GetDistance", [](uintptr_t a, uintptr_t b) {
+        return (a && b) ? ((SDK::AActor*)a)->GetDistanceTo((SDK::AActor*)b) : 0.0f;
+        });
+    actor_api.set_function("IsHidden", [](uintptr_t a) {
+        return a ? (bool)((SDK::AActor*)a)->bHidden : true;
+        });
     actor_api.set_function("GetClassName", [](uintptr_t a) -> std::string {
         auto act = (SDK::AActor*)a;
         return (act && act->Class) ? act->Class->GetName() : "";
@@ -360,23 +369,27 @@ void LuaManager::BindSDK() {
         std::string name = it->DescriptiveNameBase.ToString();
         if (it->CustomItemName.IsValid() && !it->CustomItemName.ToString().empty()) name = it->CustomItemName.ToString();
 
-        std::string className = it->Class ? it->Class->GetName() : "";
+        std::string className = (it->Class) ? it->Class->GetName() : "";
         return std::make_tuple(true, name, it->ItemQuantity, it->ItemRating, (bool)it->bIsBlueprint, className);
         });
 
     auto cont_api = m_lua->create_named_table("Container");
     cont_api.set_function("GetInfo", [](uintptr_t a) {
         auto c = (SDK::APrimalStructureItemContainer*)a;
-        std::string name = c ? c->GetDescriptiveName().ToString() : "";
+        if (!c) return std::string("Supply Crate");
+        std::string name = c->GetDescriptiveName().ToString();
         if (name.empty() || name == "None") name = "Supply Crate";
         return name;
         });
 
     auto pc_api = m_lua->create_named_table("PC");
-    pc_api.set_function("GetPawn", [](uintptr_t pc) -> uintptr_t { return pc ? (uintptr_t)((SDK::APlayerController*)pc)->Pawn : 0; });
+    pc_api.set_function("GetPawn", [](uintptr_t pc) -> uintptr_t {
+        return pc ? (uintptr_t)((SDK::APlayerController*)pc)->Pawn : 0;
+        });
     pc_api.set_function("ProjectToScreen", [](uintptr_t pc, SDK::FVector worldLoc) -> std::tuple<bool, float, float> {
-        SDK::FVector2D screenPos;
-        bool ok = pc ? ((SDK::APlayerController*)pc)->ProjectWorldLocationToScreen(worldLoc, &screenPos, false) : false;
+        if (!pc) return std::make_tuple(false, 0.0f, 0.0f);
+        SDK::FVector2D screenPos{ 0.0f, 0.0f };
+        bool ok = ((SDK::APlayerController*)pc)->ProjectWorldLocationToScreen(worldLoc, &screenPos, false);
         return std::make_tuple(ok, (float)screenPos.X, (float)screenPos.Y);
         });
 }
@@ -447,21 +460,19 @@ bool LuaManager::SetScriptState(int index, bool load) {
 }
 
 void LuaManager::Update() {
-    std::lock_guard<std::mutex> lock(m_luaMutex);
-
     if (m_pendingReset) {
+        m_pendingReset = false;
+        m_needsReload = false;
         InitVM();
         for (auto& script : m_scripts) {
             if (script.isLoaded) ExecuteScript(script);
         }
-        m_pendingReset = false;
-        m_needsReload = false;
         return;
     }
 
     if (m_needsReload) {
-        ActualReloadAll();
         m_needsReload = false;
+        ActualReloadAll();
     }
 }
 
@@ -560,21 +571,20 @@ void LuaManager::RefreshFileList() {
 }
 
 void LuaManager::Lua_OnPaint() {
-    std::lock_guard<std::mutex> lock(m_luaMutex);
     if (!m_lua || !m_lua->lua_state()) return;
 
     for (auto& script : m_scripts) {
         if (!script.isLoaded || script.hasError || !script.env.valid()) continue;
 
         sol::object drawObj = script.env["OnPaint"];
-        if (drawObj.is<sol::protected_function>()) {
-            sol::protected_function drawFunc = drawObj;
-            auto result = drawFunc();
-            if (!result.valid()) {
-                sol::error err = result;
-                script.hasError = true;
-                script.lastError = "Runtime Error: " + std::string(err.what());
-            }
+        if (!drawObj.is<sol::protected_function>()) continue;
+
+        sol::protected_function drawFunc = drawObj;
+        sol::protected_function_result result = drawFunc();
+        if (!result.valid()) {
+            sol::error err = result;
+            script.hasError = true;
+            script.lastError = "Runtime Error: " + std::string(err.what());
         }
     }
 }
