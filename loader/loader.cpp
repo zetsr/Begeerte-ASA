@@ -87,7 +87,7 @@ DWORD GetProcessIdByName(const std::wstring& processName) {
 }
 
 int main() {
-    const std::string dllUrl = "https://github.com/zetsr/Begeerte-ASA/raw/refs/heads/main/release/setup.dll";
+    const std::string dllUrl = "https://github.com/zetsr/Begeerte-ASA/raw/refs/heads/main/release/begeerte_ark_survival_ascended.dll";
     const std::wstring targetProcess = L"ArkAscended.exe";
     std::vector<BYTE> dllBuffer;
 
