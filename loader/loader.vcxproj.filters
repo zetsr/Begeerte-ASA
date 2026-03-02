@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Manual-Map">
+      <UniqueIdentifier>{7ba8405a-cc04-46ff-9289-f6616c4d5c13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="loader">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Manual-Map\API">
+      <UniqueIdentifier>{c62fffbb-cae6-4861-80dc-983279d0202e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="loader.cpp">
+      <Filter>loader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Manual-Map\API\API.h">
+      <Filter>Manual-Map\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Manual-Map\API\Config.h">
+      <Filter>Manual-Map\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Manual-Map\API\ManualMap.h">
+      <Filter>Manual-Map\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Manual-Map\API\ManualMapInjector.h">
+      <Filter>Manual-Map\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Manual-Map\API\NT.h">
+      <Filter>Manual-Map\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Manual-Map\API\Shellcode.h">
+      <Filter>Manual-Map\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Manual-Map\API\Util.h">
+      <Filter>Manual-Map\API</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
