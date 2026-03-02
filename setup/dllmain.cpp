@@ -18,60 +18,58 @@ bool DownloadToMemory(const std::string& url, std::vector<BYTE>& outBuffer) {
     HINTERNET hUrl = NULL;
     bool success = false;
 
-    // 1. 使用完整的 User-Agent。GitHub 对此非常敏感
-    const char* szUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36";
-
-    hInternet = InternetOpenA(szUserAgent, INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+    // 1. 使用 INTERNET_OPEN_TYPE_DIRECT 绕过可能的系统代理干扰
+    hInternet = InternetOpenA("Mozilla/5.0 (Windows NT 10.0; Win64; x64)", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
     if (!hInternet) return false;
 
-    // 2. 标志位：增加对重定向的自动处理 (FOLLOW_REDIRECTS)
-    // GitHub 的 raw 链接经常会重定向到 codeload.github.com 或其他节点
+    // 2. 强行设置超时限制，防止 12002 错误挂起
+    DWORD timeout = 10000; // 10秒足够了，如果10秒没响应说明链路有问题
+    InternetSetOptionA(hInternet, INTERNET_OPTION_CONNECT_TIMEOUT, &timeout, sizeof(timeout));
+    InternetSetOptionA(hInternet, INTERNET_OPTION_RECEIVE_TIMEOUT, &timeout, sizeof(timeout));
+
+    // 3. 移除可能导致冲突的 flag，只保留核心
     DWORD flags = INTERNET_FLAG_RELOAD |
         INTERNET_FLAG_RESYNCHRONIZE |
         INTERNET_FLAG_SECURE |
         INTERNET_FLAG_IGNORE_CERT_CN_INVALID |
-        INTERNET_FLAG_HYPERLINK |
-        INTERNET_FLAG_KEEP_CONNECTION;
+        INTERNET_FLAG_IGNORE_CERT_DATE_INVALID;
 
     hUrl = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, flags, 0);
 
     if (!hUrl) {
-        DWORD err = GetLastError();
-        // 如果这里报错 12157，说明是 TLS 握手失败
-        // 如果报错 12007，说明是域名解析失败
-        printf("[!] InternetOpenUrlA failed. Error Code: %lu\n", err);
+        printf("[!] InternetOpenUrlA failed. LastError: %lu\n", GetLastError());
         InternetCloseHandle(hInternet);
         return false;
     }
 
-    // 3. 检查 HTTP 状态码（确保不是 404 或 403）
+    // 4. 检查 HTTP 状态码
     DWORD statusCode = 0;
-    DWORD statusCodeLen = sizeof(statusCode);
-    HttpQueryInfoA(hUrl, HTTP_QUERY_STATUS_CODE | HTTP_QUERY_FLAG_NUMBER, &statusCode, &statusCodeLen, NULL);
-    if (statusCode != 200) {
-        printf("[!] Server returned HTTP %lu\n", statusCode);
-        InternetCloseHandle(hUrl);
-        InternetCloseHandle(hInternet);
-        return false;
-    }
-
-    // 4. 获取长度并预留内存
-    DWORD contentLength = 0;
-    DWORD dwSize = sizeof(contentLength);
-    if (HttpQueryInfoA(hUrl, HTTP_QUERY_CONTENT_LENGTH | HTTP_QUERY_FLAG_NUMBER, &contentLength, &dwSize, NULL)) {
-        outBuffer.reserve(contentLength);
+    DWORD dwSize = sizeof(statusCode);
+    if (HttpQueryInfoA(hUrl, HTTP_QUERY_STATUS_CODE | HTTP_QUERY_FLAG_NUMBER, &statusCode, &dwSize, NULL)) {
+        if (statusCode != 200) {
+            printf("[!] Server responded with HTTP %lu\n", statusCode);
+            InternetCloseHandle(hUrl);
+            InternetCloseHandle(hInternet);
+            return false;
+        }
     }
 
     // 5. 读取数据
-    BYTE tempBuffer[65536];
+    const DWORD BUFFER_SIZE = 65536;
+    BYTE tempBuffer[BUFFER_SIZE];
     DWORD bytesRead = 0;
     outBuffer.clear();
 
-    while (InternetReadFile(hUrl, tempBuffer, sizeof(tempBuffer), &bytesRead) && bytesRead > 0) {
+    printf("[+] Receiving data...");
+    while (InternetReadFile(hUrl, tempBuffer, BUFFER_SIZE, &bytesRead) && bytesRead > 0) {
         outBuffer.insert(outBuffer.end(), tempBuffer, tempBuffer + bytesRead);
+        // 实时反馈进度，防止你以为它卡死
+        printf(".");
     }
+    printf("\n");
 
     success = !outBuffer.empty();
+
     InternetCloseHandle(hUrl);
     InternetCloseHandle(hInternet);
     return success;
