@@ -2793,7 +2793,7 @@ public:
 DUMPER7_ASSERTS_FAnimNode_MultiFabrik_Dinos;
 
 // ScriptStruct ShooterGame.ArkTributePlayerData
-// 0x011C (0x0120 - 0x0004)
+// 0x0154 (0x0158 - 0x0004)
 struct FArkTributePlayerData final : public FArkTributeEntity
 {
 public:
@@ -2812,6 +2812,11 @@ public:
 	bool                                          bForClubArkServer;                                 // 0x0119(0x0001)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11A[0x2];                                      // 0x011A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Version;                                           // 0x011C(0x0004)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  DownloadClaimId;                                   // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DownloadClaimServerId;                             // 0x0130(0x0010)(ZeroConstructor, RepSkip, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DownloadClaimTime;                                 // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_144[0x4];                                      // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DownloadClaimServerName;                           // 0x0148(0x0010)(ZeroConstructor, RepSkip, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FArkTributePlayerData;
 
@@ -9627,7 +9632,7 @@ public:
 DUMPER7_ASSERTS_FStableActivatableInfo;
 
 // ScriptStruct ShooterGame.PrimalPlayerDataStruct
-// 0x06D0 (0x06D0 - 0x0000)
+// 0x06E0 (0x06E0 - 0x0000)
 struct FPrimalPlayerDataStruct final
 {
 public:
@@ -9644,40 +9649,41 @@ public:
 	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPrimalPersistentCharacterStatsStruct  MyPersistentCharacterStats;                        // 0x01A8(0x03D8)(BlueprintVisible, NativeAccessSpecifierPublic)
 	int32                                         NumPersonalDinos;                                  // 0x0580(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_584[0x4];                                      // 0x0584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TSoftClassPtr<class UClass>>           LimitedDinoClasses;                                // 0x0588(0x0010)(BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<int32>                                 NumDinosOfLimitedDinoClasses;                      // 0x0598(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         TribeID;                                           // 0x05A8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5AC[0x4];                                      // 0x05AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 AppIDSet;                                          // 0x05B0(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         PlayerDataVersion;                                 // 0x05C0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C4[0x4];                                      // 0x05C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        NextAllowedRespawnTime;                            // 0x05C8(0x0008)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        LastTimeDiedToEnemyTeam;                           // 0x05D0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        LoginTime;                                         // 0x05D8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        LastLoginTime;                                     // 0x05E0(0x0008)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AllowedRespawnInterval;                            // 0x05E8(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5EC[0x4];                                      // 0x05EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSkillCooldown>                 SkillCooldowns;                                    // 0x05F0(0x0010)(ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
-	float                                         NumOfDeaths;                                       // 0x0600(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SpawnDayNumber;                                    // 0x0604(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpawnDayTime;                                      // 0x0608(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_60C[0x4];                                      // 0x060C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LastInventoryRetrievalUTCTime;                     // 0x0610(0x0008)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        SuicideCooldownStartTime;                          // 0x0618(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_620[0x10];                                     // 0x0620(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FLatestMissionScore>            LatestMissionScores;                               // 0x0630(0x0010)(BlueprintVisible, ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
-	TArray<struct FTrackedActorPlusInfoStruct>    PersonalCachedTeamActorList_UpdatedOnInterval;     // 0x0640(0x0010)(BlueprintVisible, ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
-	double                                        LastNetworkTimeUpdatedPersonalCachedTeamActorLists; // 0x0650(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVectorBoolPair>                ServerSavedLastDeathLocations;                     // 0x0658(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FTrackedActorIDCategoryPair>    SavedFavoritedTrackedActorInfo;                    // 0x0668(0x0010)(BlueprintVisible, ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
-	TArray<struct FTrackedActorIDCategoryPairWithBool> SavedWaypointTrackedActorInfo;                // 0x0678(0x0010)(BlueprintVisible, ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
-	TArray<class FString>                         UnlockedPlayerTitles;                              // 0x0688(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         ActivePlayerTitleIndex;                            // 0x0698(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_69C[0x4];                                      // 0x069C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAppliedCosmeticsData>          AppliedCosmetics;                                  // 0x06A0(0x0010)(BlueprintVisible, ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
-	TArray<class FName>                           HeardVoiceOvers;                                   // 0x06B0(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FStableActivatableInfo>         StableActivatablesInfo;                            // 0x06C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGuid                                  LastTributeDownloadClaimId;                        // 0x0584(0x0010)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_594[0x4];                                      // 0x0594(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TSoftClassPtr<class UClass>>           LimitedDinoClasses;                                // 0x0598(0x0010)(BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<int32>                                 NumDinosOfLimitedDinoClasses;                      // 0x05A8(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         TribeID;                                           // 0x05B8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5BC[0x4];                                      // 0x05BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 AppIDSet;                                          // 0x05C0(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         PlayerDataVersion;                                 // 0x05D0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5D4[0x4];                                      // 0x05D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        NextAllowedRespawnTime;                            // 0x05D8(0x0008)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        LastTimeDiedToEnemyTeam;                           // 0x05E0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        LoginTime;                                         // 0x05E8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        LastLoginTime;                                     // 0x05F0(0x0008)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AllowedRespawnInterval;                            // 0x05F8(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5FC[0x4];                                      // 0x05FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSkillCooldown>                 SkillCooldowns;                                    // 0x0600(0x0010)(ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
+	float                                         NumOfDeaths;                                       // 0x0610(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SpawnDayNumber;                                    // 0x0614(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpawnDayTime;                                      // 0x0618(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61C[0x4];                                      // 0x061C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LastInventoryRetrievalUTCTime;                     // 0x0620(0x0008)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SuicideCooldownStartTime;                          // 0x0628(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_630[0x10];                                     // 0x0630(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FLatestMissionScore>            LatestMissionScores;                               // 0x0640(0x0010)(BlueprintVisible, ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
+	TArray<struct FTrackedActorPlusInfoStruct>    PersonalCachedTeamActorList_UpdatedOnInterval;     // 0x0650(0x0010)(BlueprintVisible, ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
+	double                                        LastNetworkTimeUpdatedPersonalCachedTeamActorLists; // 0x0660(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVectorBoolPair>                ServerSavedLastDeathLocations;                     // 0x0668(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FTrackedActorIDCategoryPair>    SavedFavoritedTrackedActorInfo;                    // 0x0678(0x0010)(BlueprintVisible, ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
+	TArray<struct FTrackedActorIDCategoryPairWithBool> SavedWaypointTrackedActorInfo;                // 0x0688(0x0010)(BlueprintVisible, ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
+	TArray<class FString>                         UnlockedPlayerTitles;                              // 0x0698(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         ActivePlayerTitleIndex;                            // 0x06A8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6AC[0x4];                                      // 0x06AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAppliedCosmeticsData>          AppliedCosmetics;                                  // 0x06B0(0x0010)(BlueprintVisible, ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
+	TArray<class FName>                           HeardVoiceOvers;                                   // 0x06C0(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FStableActivatableInfo>         StableActivatablesInfo;                            // 0x06D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPrimalPlayerDataStruct;
 
@@ -11242,13 +11248,13 @@ public:
 DUMPER7_ASSERTS_FDebugActor;
 
 // ScriptStruct ShooterGame.NonClusterCharacterUploadData
-// 0x0138 (0x0138 - 0x0000)
+// 0x0170 (0x0170 - 0x0000)
 struct FNonClusterCharacterUploadData final
 {
 public:
-	struct FArkTributePlayerData                  PlayerData;                                        // 0x0000(0x0120)(NativeAccessSpecifierPublic)
-	uint64                                        TribeID;                                           // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FItemNetInfo>                   Items;                                             // 0x0128(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FArkTributePlayerData                  PlayerData;                                        // 0x0000(0x0158)(NativeAccessSpecifierPublic)
+	uint64                                        TribeID;                                           // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FItemNetInfo>                   Items;                                             // 0x0160(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FNonClusterCharacterUploadData;
 

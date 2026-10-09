@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "cfcore_structs.hpp"
 #include "UI_Button_CFCore_Global_Master_classes.hpp"
+#include "cfcore_structs.hpp"
 
 
 SDK_NAMESPACE_START

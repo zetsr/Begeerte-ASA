@@ -200301,6 +200301,31 @@ void UShooterCheatManager::RegrowFoliage(float Radius)
 }
 
 
+// Function ShooterGame.ShooterCheatManager.ReleaseTributeDownloadClaims
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    PlayerUniqueNetId                                      (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UShooterCheatManager::ReleaseTributeDownloadClaims(const class FString& PlayerUniqueNetId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShooterCheatManager", "ReleaseTributeDownloadClaims");
+
+	Params::ShooterCheatManager_ReleaseTributeDownloadClaims Parms{};
+
+	Parms.PlayerUniqueNetId = std::move(PlayerUniqueNetId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.RemoveAccessories
 // (Final, Exec, Native, Public)
 
@@ -223541,6 +223566,56 @@ void UUI_BackupSaveList::ClickedDeleteBackupEntry(class UWidget* clickedWidget)
 		Func = Class->GetFunction("UI_BackupSaveList", "ClickedDeleteBackupEntry");
 
 	Params::UI_BackupSaveList_ClickedDeleteBackupEntry Parms{};
+
+	Parms.clickedWidget = clickedWidget;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ShooterGame.UI_BackupSaveList.ClickedDeletePreUpgradeBackupEntry
+// (Final, Native, Public)
+// Parameters:
+// class UWidget*                          clickedWidget                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUI_BackupSaveList::ClickedDeletePreUpgradeBackupEntry(class UWidget* clickedWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_BackupSaveList", "ClickedDeletePreUpgradeBackupEntry");
+
+	Params::UI_BackupSaveList_ClickedDeletePreUpgradeBackupEntry Parms{};
+
+	Parms.clickedWidget = clickedWidget;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ShooterGame.UI_BackupSaveList.ClickedPreUpgradeBackupEntry
+// (Final, Native, Public)
+// Parameters:
+// class UWidget*                          clickedWidget                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UUI_BackupSaveList::ClickedPreUpgradeBackupEntry(class UWidget* clickedWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_BackupSaveList", "ClickedPreUpgradeBackupEntry");
+
+	Params::UI_BackupSaveList_ClickedPreUpgradeBackupEntry Parms{};
 
 	Parms.clickedWidget = clickedWidget;
 

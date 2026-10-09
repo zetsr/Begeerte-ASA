@@ -15929,13 +15929,13 @@ public:
 DUMPER7_ASSERTS_UI_Spawn_CalcBoneModifiers;
 
 // Function ShooterGame.UI_Spawn.CharacterIsValidToDownload
-// 0x0128 (0x0128 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct UI_Spawn_CharacterIsValidToDownload final
 {
 public:
 	bool                                          bIsValid;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FArkTributePlayerData                  SelectedCharacter;                                 // 0x0008(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FArkTributePlayerData                  SelectedCharacter;                                 // 0x0008(0x0158)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UI_Spawn_CharacterIsValidToDownload;
 
@@ -16324,11 +16324,11 @@ public:
 DUMPER7_ASSERTS_UI_Spawn_OnSaveToFileEditableCommitted;
 
 // Function ShooterGame.UI_Spawn.OnSelectedUploadedCharacter
-// 0x0120 (0x0120 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct UI_Spawn_OnSelectedUploadedCharacter final
 {
 public:
-	struct FArkTributePlayerData                  SelectedCharacter;                                 // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FArkTributePlayerData                  SelectedCharacter;                                 // 0x0000(0x0158)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UI_Spawn_OnSelectedUploadedCharacter;
 
@@ -61658,13 +61658,13 @@ public:
 DUMPER7_ASSERTS_ShooterPlayerController_ClientOpenShipSkillTree;
 
 // Function ShooterGame.ShooterPlayerController.ClientPlayerIsValidToDownload
-// 0x0128 (0x0128 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct ShooterPlayerController_ClientPlayerIsValidToDownload final
 {
 public:
 	bool                                          bIsValid;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FArkTributePlayerData                  PlayerData;                                        // 0x0008(0x0120)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	struct FArkTributePlayerData                  PlayerData;                                        // 0x0008(0x0158)(ConstParm, Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ShooterPlayerController_ClientPlayerIsValidToDownload;
 
@@ -62698,11 +62698,11 @@ public:
 DUMPER7_ASSERTS_ShooterPlayerController_ClientUpdateItemWeaponClipAmmo;
 
 // Function ShooterGame.ShooterPlayerController.ClientUpdateMyPlayerDataStruct
-// 0x06D0 (0x06D0 - 0x0000)
+// 0x06E0 (0x06E0 - 0x0000)
 struct ShooterPlayerController_ClientUpdateMyPlayerDataStruct final
 {
 public:
-	struct FPrimalPlayerDataStruct                NetMyPlayerDataStruct;                             // 0x0000(0x06D0)(Parm, NativeAccessSpecifierPublic)
+	struct FPrimalPlayerDataStruct                NetMyPlayerDataStruct;                             // 0x0000(0x06E0)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ShooterPlayerController_ClientUpdateMyPlayerDataStruct;
 
@@ -64537,12 +64537,12 @@ public:
 DUMPER7_ASSERTS_ShooterPlayerController_ServerCharacterUploadWithItems_FinishAndCreateCharacter;
 
 // Function ShooterGame.ShooterPlayerController.ServerCharacterUploadWithItems_Start
-// 0x0128 (0x0128 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct ShooterPlayerController_ServerCharacterUploadWithItems_Start final
 {
 public:
 	uint64                                        PlayerDataID;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FArkTributePlayerData                  PlayerData;                                        // 0x0008(0x0120)(Parm, NativeAccessSpecifierPublic)
+	struct FArkTributePlayerData                  PlayerData;                                        // 0x0008(0x0158)(Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ShooterPlayerController_ServerCharacterUploadWithItems_Start;
 
@@ -64557,11 +64557,11 @@ public:
 DUMPER7_ASSERTS_ShooterPlayerController_ServerCharacterUploadWithItems_UploadItem;
 
 // Function ShooterGame.ShooterPlayerController.ServerCheckIsValidPlayerToDownload
-// 0x0120 (0x0120 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct ShooterPlayerController_ServerCheckIsValidPlayerToDownload final
 {
 public:
-	struct FArkTributePlayerData                  PlayerData;                                        // 0x0000(0x0120)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	struct FArkTributePlayerData                  PlayerData;                                        // 0x0000(0x0158)(ConstParm, Parm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ShooterPlayerController_ServerCheckIsValidPlayerToDownload;
 
@@ -65067,13 +65067,13 @@ public:
 DUMPER7_ASSERTS_ShooterPlayerController_ServerRequestDownloadDino;
 
 // Function ShooterGame.ShooterPlayerController.ServerRequestDownloadPlayerCharacter
-// 0x0128 (0x0128 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct ShooterPlayerController_ServerRequestDownloadPlayerCharacter final
 {
 public:
-	struct FArkTributePlayerData                  DownloadedCharacter;                               // 0x0000(0x0120)(Parm, NativeAccessSpecifierPublic)
-	int32                                         SpawnPointID;                                      // 0x0120(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SpawnRegionIndex;                                  // 0x0124(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FArkTributePlayerData                  DownloadedCharacter;                               // 0x0000(0x0158)(Parm, NativeAccessSpecifierPublic)
+	int32                                         SpawnPointID;                                      // 0x0158(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SpawnRegionIndex;                                  // 0x015C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ShooterPlayerController_ServerRequestDownloadPlayerCharacter;
 
@@ -69006,6 +69006,15 @@ public:
 	float                                         Radius;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_ShooterCheatManager_RegrowFoliage;
+
+// Function ShooterGame.ShooterCheatManager.ReleaseTributeDownloadClaims
+// 0x0010 (0x0010 - 0x0000)
+struct ShooterCheatManager_ReleaseTributeDownloadClaims final
+{
+public:
+	class FString                                 PlayerUniqueNetId;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShooterCheatManager_ReleaseTributeDownloadClaims;
 
 // Function ShooterGame.ShooterCheatManager.RemoveDinoTest
 // 0x0008 (0x0008 - 0x0000)
@@ -76792,6 +76801,24 @@ public:
 	class UWidget*                                clickedWidget;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UI_BackupSaveList_ClickedDeleteBackupEntry;
+
+// Function ShooterGame.UI_BackupSaveList.ClickedDeletePreUpgradeBackupEntry
+// 0x0008 (0x0008 - 0x0000)
+struct UI_BackupSaveList_ClickedDeletePreUpgradeBackupEntry final
+{
+public:
+	class UWidget*                                clickedWidget;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UI_BackupSaveList_ClickedDeletePreUpgradeBackupEntry;
+
+// Function ShooterGame.UI_BackupSaveList.ClickedPreUpgradeBackupEntry
+// 0x0008 (0x0008 - 0x0000)
+struct UI_BackupSaveList_ClickedPreUpgradeBackupEntry final
+{
+public:
+	class UWidget*                                clickedWidget;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UI_BackupSaveList_ClickedPreUpgradeBackupEntry;
 
 // Function ShooterGame.UI_ChatBox.HandleChatTextChanged
 // 0x0010 (0x0010 - 0x0000)

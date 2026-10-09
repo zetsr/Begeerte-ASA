@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STRUCT_DeltaMapData_structs.hpp"
 #include "Human_Male_Faces_Enum_structs.hpp"
+#include "STRUCT_DeltaMapData_structs.hpp"
 #include "Engine_structs.hpp"
 
 

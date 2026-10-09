@@ -16,25 +16,25 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C
-// 0x0058 (0x07F8 - 0x07A0)
+// 0x0058 (0x0808 - 0x07B0)
 class UPrimalPlayerDataBP_Base_C final : public UPrimalPlayerData
 {
 public:
-	int32                                         NumAscensions;                                     // 0x07A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7A4[0x4];                                      // 0x07A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<double>                                AscensionData;                                     // 0x07A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, SaveGame, NativeAccessSpecifierPublic)
-	TArray<class FName>                           BossDinoNameTagAscensionDataMap;                   // 0x07B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         SavedPlayerDataVersion;                            // 0x07C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CurrentPlayerDataVersion;                          // 0x07CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         HexagonCount;                                      // 0x07D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumChibiLevelUpsData;                              // 0x07D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FName>                           GeneralizedUnlockedAchievementTags;                // 0x07D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, SaveGame, NativeAccessSpecifierPublic)
-	uint8                                         SigilCountProgressionForExplorerNotes_Crimson;     // 0x07E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         SigilCountProgressionForExplorerNotes_Abb;         // 0x07E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7EA[0x2];                                      // 0x07EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Sigil_Count_Needed_For_Progressing_Explorer_Notes; // 0x07EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Sigil_Unlocked_Explorer_Note_Index_Start;          // 0x07F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Sigil_Unlocked_Explorer_Note_Index_End;            // 0x07F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumAscensions;                                     // 0x07B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7B4[0x4];                                      // 0x07B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<double>                                AscensionData;                                     // 0x07B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, SaveGame, NativeAccessSpecifierPublic)
+	TArray<class FName>                           BossDinoNameTagAscensionDataMap;                   // 0x07C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         SavedPlayerDataVersion;                            // 0x07D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CurrentPlayerDataVersion;                          // 0x07DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         HexagonCount;                                      // 0x07E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumChibiLevelUpsData;                              // 0x07E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           GeneralizedUnlockedAchievementTags;                // 0x07E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, SaveGame, NativeAccessSpecifierPublic)
+	uint8                                         SigilCountProgressionForExplorerNotes_Crimson;     // 0x07F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         SigilCountProgressionForExplorerNotes_Abb;         // 0x07F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7FA[0x2];                                      // 0x07FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Sigil_Count_Needed_For_Progressing_Explorer_Notes; // 0x07FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Sigil_Unlocked_Explorer_Note_Index_Start;          // 0x0800(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Sigil_Unlocked_Explorer_Note_Index_End;            // 0x0804(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BPCreatedNewPlayerData();
