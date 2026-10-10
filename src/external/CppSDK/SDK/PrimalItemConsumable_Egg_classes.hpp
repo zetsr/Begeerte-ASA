@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "PrimalItemConsumableEatable_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 SDK_NAMESPACE_START

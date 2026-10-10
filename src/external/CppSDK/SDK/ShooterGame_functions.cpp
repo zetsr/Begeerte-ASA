@@ -195578,18 +195578,24 @@ void UShooterCheatManager::DoExit()
 
 // Function ShooterGame.ShooterCheatManager.DoHang
 // (Final, Exec, Native, Public)
+// Parameters:
+// float                                   Seconds                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UShooterCheatManager::DoHang()
+void UShooterCheatManager::DoHang(float Seconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ShooterCheatManager", "DoHang");
 
+	Params::ShooterCheatManager_DoHang Parms{};
+
+	Parms.Seconds = Seconds;
+
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

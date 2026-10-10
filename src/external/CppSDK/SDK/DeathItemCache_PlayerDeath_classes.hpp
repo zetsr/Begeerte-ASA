@@ -16,7 +16,7 @@
 SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass DeathItemCache_PlayerDeath.DeathItemCache_PlayerDeath_C
-// 0x0000 (0x13C0 - 0x13C0)
+// 0x0000 (0x13C8 - 0x13C8)
 class ADeathItemCache_PlayerDeath_C final : public ADeathItemCache_C
 {
 public:

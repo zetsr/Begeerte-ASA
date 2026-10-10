@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "cfcore_structs.hpp"
-#include "CFCoreWidget_classes.hpp"
 #include "UMG_structs.hpp"
+#include "CFCoreWidget_classes.hpp"
 
 
 SDK_NAMESPACE_START

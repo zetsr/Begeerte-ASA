@@ -67863,6 +67863,15 @@ public:
 };
 DUMPER7_ASSERTS_ShooterCheatManager_DoDamagePct;
 
+// Function ShooterGame.ShooterCheatManager.DoHang
+// 0x0004 (0x0004 - 0x0000)
+struct ShooterCheatManager_DoHang final
+{
+public:
+	float                                         Seconds;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ShooterCheatManager_DoHang;
+
 // Function ShooterGame.ShooterCheatManager.DoStall
 // 0x0004 (0x0004 - 0x0000)
 struct ShooterCheatManager_DoStall final
