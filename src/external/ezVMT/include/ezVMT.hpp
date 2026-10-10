@@ -6,6 +6,14 @@
 #include <cstring>
 
 namespace ezVMT {
+    // 钩子操作标志
+    constexpr uint32_t All_Hooks = 1 << 0; // 应用于所有钩子
+    constexpr uint32_t NO_Module_Stomping = 1 << 1; // 不使用模块踩踏和 Data Cave，直接申请独立内存
+
+    // 内存配置常量
+    constexpr DWORD VMT_ALLOC_PROTECTION = PAGE_READWRITE;
+    constexpr uint8_t DATA_CAVE_RESET_BYTE = 0x00; // Data Cave 恢复归零的目标字节值
+    constexpr size_t VMT_META_COUNT = 2;           // 虚表前缀元数据指针数量（RTTI 和 Complete Object Locator）
 
     // 内部结构体：保存 Hook 上下文信息
     struct HookEntry {
@@ -17,6 +25,7 @@ namespace ezVMT {
         size_t index;             // 挂钩的虚表索引
         size_t totalCount;        // 虚表函数总数量
         bool isEnabled;           // 当前是否已启用
+        bool isAllocated;         // 标记内存是否为独立申请（非模块 Data Cave）
     };
 
     // 全局钩子记录列表
@@ -26,7 +35,7 @@ namespace ezVMT {
     inline bool IsDataCaveOverlap(uintptr_t start, size_t size) {
         uintptr_t end = start + size;
         for (const auto& entry : g_Hooks) {
-            if (entry.customVmt) {
+            if (entry.customVmt && !entry.isAllocated) {
                 uintptr_t usedStart = reinterpret_cast<uintptr_t>(&(entry.customVmt[-2]));
                 uintptr_t usedEnd = usedStart + ((entry.totalCount + 2) * sizeof(void*));
 
@@ -150,7 +159,7 @@ namespace ezVMT {
      * @param outOriginal [可选输出] 接收原函数指针
      * @return 成功返回 true，失败返回 false
      */
-    inline bool CreateHook(void* detour, void* classInstance, size_t index, void** outOriginal = nullptr) {
+    inline bool CreateHook(void* detour, void* classInstance, size_t index, void** outOriginal = nullptr, uint32_t flags = 0) {
         if (!detour || !classInstance) {
             return false;
         }
@@ -171,15 +180,26 @@ namespace ezVMT {
             return false;
         }
 
-        uintptr_t gameModule = (uintptr_t)GetModuleHandleA(NULL);
         size_t totalVmtBytes = (totalCount + 2) * sizeof(void*);
+        void** shadowVMTBuffer = nullptr;
+        bool isAllocated = false;
 
-        uintptr_t dataCaveRaw = FindGameDataCave(gameModule, totalVmtBytes);
-        if (!dataCaveRaw) {
-            return false;
+        if (flags & NO_Module_Stomping) {
+            shadowVMTBuffer = reinterpret_cast<void**>(VirtualAlloc(nullptr, totalVmtBytes, MEM_COMMIT | MEM_RESERVE, VMT_ALLOC_PROTECTION));
+            if (!shadowVMTBuffer) {
+                return false;
+            }
+            isAllocated = true;
         }
-
-        void** shadowVMTBuffer = reinterpret_cast<void**>(dataCaveRaw);
+        else {
+            uintptr_t gameModule = (uintptr_t)GetModuleHandleA(NULL);
+            uintptr_t dataCaveRaw = FindGameDataCave(gameModule, totalVmtBytes);
+            if (!dataCaveRaw) {
+                return false;
+            }
+            shadowVMTBuffer = reinterpret_cast<void**>(dataCaveRaw);
+            isAllocated = false;
+        }
 
         shadowVMTBuffer[0] = originalVmt[-2];
         shadowVMTBuffer[1] = originalVmt[-1];
@@ -201,6 +221,7 @@ namespace ezVMT {
         entry.index = index;
         entry.totalCount = totalCount;
         entry.isEnabled = false;
+        entry.isAllocated = isAllocated;
 
         g_Hooks.push_back(entry);
         return true;
@@ -211,7 +232,22 @@ namespace ezVMT {
      * @param detour 自定义钩子函数的地址
      * @return 成功返回 true，失败返回 false
      */
-    inline bool EnableHook(void* detour) {
+    inline bool EnableHook(void* detour, uint32_t flags = 0) {
+        if (flags & All_Hooks) {
+            if (g_Hooks.empty()) {
+                return false;
+            }
+            bool anySuccess = false;
+            for (auto& entry : g_Hooks) {
+                if (!entry.isEnabled) {
+                    *(entry.classInstance) = entry.customVmt;
+                    entry.isEnabled = true;
+                    anySuccess = true;
+                }
+            }
+            return anySuccess;
+        }
+
         HookEntry* entry = FindHookEntry(detour);
         if (!entry || entry->isEnabled) {
             return false;
@@ -223,11 +259,35 @@ namespace ezVMT {
     }
 
     /**
+     * @brief 启用钩子（按标志批量操作）
+     * @param flags 钩子标志（如 All_Hooks）
+     * @return 成功返回 true，失败返回 false
+     */
+    inline bool EnableHook(uint32_t flags) {
+        return EnableHook(nullptr, flags);
+    }
+
+    /**
      * @brief 禁用钩子
      * @param detour 自定义钩子函数的地址
      * @return 成功返回 true，失败返回 false
      */
-    inline bool DisableHook(void* detour) {
+    inline bool DisableHook(void* detour, uint32_t flags = 0) {
+        if (flags & All_Hooks) {
+            if (g_Hooks.empty()) {
+                return false;
+            }
+            bool anySuccess = false;
+            for (auto& entry : g_Hooks) {
+                if (entry.isEnabled) {
+                    *(entry.classInstance) = entry.originalVmt;
+                    entry.isEnabled = false;
+                    anySuccess = true;
+                }
+            }
+            return anySuccess;
+        }
+
         HookEntry* entry = FindHookEntry(detour);
         if (!entry || !entry->isEnabled) {
             return false;
@@ -239,11 +299,68 @@ namespace ezVMT {
     }
 
     /**
+     * @brief 禁用钩子（按标志批量操作）
+     * @param flags 钩子标志（如 All_Hooks）
+     * @return 成功返回 true，失败返回 false
+     */
+    inline bool DisableHook(uint32_t flags) {
+        return DisableHook(nullptr, flags);
+    }
+
+    /**
+     * @brief 还原 Data Cave 内存，仅归零未被主模块修改过的字节
+     * @param shadowBuffer 影子虚表缓冲区首地址（包含前缀元数据指针）
+     * @param entry 钩子条目信息
+     */
+    inline void RevertDataCave(void** shadowBuffer, const HookEntry& entry) {
+        auto currentBytes = reinterpret_cast<uint8_t*>(shadowBuffer);
+        for (size_t i = 0; i < entry.totalCount + VMT_META_COUNT; ++i) {
+            void* expectedValue = nullptr;
+            if (i < VMT_META_COUNT) {
+                expectedValue = entry.originalVmt[static_cast<ptrdiff_t>(i) - static_cast<ptrdiff_t>(VMT_META_COUNT)];
+            }
+            else {
+                size_t funcIndex = i - VMT_META_COUNT;
+                expectedValue = (funcIndex == entry.index) ? entry.detour : entry.originalVmt[funcIndex];
+            }
+
+            const auto expectedBytes = reinterpret_cast<const uint8_t*>(&expectedValue);
+            for (size_t b = 0; b < sizeof(void*); ++b) {
+                if (currentBytes[b] == expectedBytes[b]) {
+                    currentBytes[b] = DATA_CAVE_RESET_BYTE;
+                }
+            }
+            currentBytes += sizeof(void*);
+        }
+    }
+
+    /**
      * @brief 移除并销毁钩子
      * @param detour 自定义钩子函数的地址
      * @return 成功返回 true，失败返回 false
      */
-    inline bool RemoveHook(void* detour) {
+    inline bool RemoveHook(void* detour, uint32_t flags = 0) {
+        if (flags & All_Hooks) {
+            if (g_Hooks.empty()) {
+                return false;
+            }
+            for (auto& entry : g_Hooks) {
+                if (entry.isEnabled) {
+                    *(entry.classInstance) = entry.originalVmt;
+                }
+
+                void** shadowBuffer = &(entry.customVmt[-2]);
+                if (entry.isAllocated) {
+                    VirtualFree(shadowBuffer, 0, MEM_RELEASE);
+                }
+                else {
+                    RevertDataCave(shadowBuffer, entry);
+                }
+            }
+            g_Hooks.clear();
+            return true;
+        }
+
         for (auto it = g_Hooks.begin(); it != g_Hooks.end(); ++it) {
             if (it->detour == detour) {
                 if (it->isEnabled) {
@@ -251,13 +368,27 @@ namespace ezVMT {
                 }
 
                 void** shadowBuffer = &(it->customVmt[-2]);
-                std::memset(shadowBuffer, 0, (it->totalCount + 2) * sizeof(void*));
+                if (it->isAllocated) {
+                    VirtualFree(shadowBuffer, 0, MEM_RELEASE);
+                }
+                else {
+                    RevertDataCave(shadowBuffer, *it);
+                }
 
                 g_Hooks.erase(it);
                 return true;
             }
         }
         return false;
+    }
+
+    /**
+     * @brief 移除并销毁钩子（按标志批量操作）
+     * @param flags 钩子标志（如 All_Hooks）
+     * @return 成功返回 true，失败返回 false
+     */
+    inline bool RemoveHook(uint32_t flags) {
+        return RemoveHook(nullptr, flags);
     }
 
     /**

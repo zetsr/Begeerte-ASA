@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{e6c811f5-a6d6-441a-b975-74e9b3790551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external">
+      <UniqueIdentifier>{a59c1857-e9b4-40c6-97a2-ecada1f3b5d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal">
+      <UniqueIdentifier>{ddb1f0b7-4544-40a9-a89c-da7b0d7eb3ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\Cache">
+      <UniqueIdentifier>{13024cb9-d604-49ef-bd64-4eb7ac3d6b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\CheatData">
+      <UniqueIdentifier>{5bad65af-4115-44a9-bed4-efdf9e45399a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\Config">
+      <UniqueIdentifier>{40d56b71-3c67-43a5-8d52-12b6340f3b7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\ESP">
+      <UniqueIdentifier>{8f922a71-850e-42b7-a4bb-0aa2a049c04f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\Hack">
+      <UniqueIdentifier>{b56b49f4-8af8-45c1-914c-4bdf9318553d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\Util">
+      <UniqueIdentifier>{29dc1fd8-2e3a-4f5f-b7d8-15fb33a5752e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\ezVMT">
+      <UniqueIdentifier>{b51d7eef-a68d-424d-9238-2dacbd1e3a9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\ezVMT\include">
+      <UniqueIdentifier>{2095ca16-21ba-4493-9d8d-b9786a2ba3fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\Shadow-Gui">
+      <UniqueIdentifier>{d8bb47e5-8c30-40eb-b265-6282c1483109}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\Shadow-Gui\src">
+      <UniqueIdentifier>{e3aff15a-8b1a-4a2e-892b-4655af721c2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\CppSDK">
+      <UniqueIdentifier>{1b433265-3deb-41aa-928e-0fcdb8e240a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external\CppSDK\SDK">
+      <UniqueIdentifier>{8fccf028-9a15-4456-823f-0bd3a7306008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\Hook">
+      <UniqueIdentifier>{997f0ba5-2965-4add-9b9e-925d0f334759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\MEM">
+      <UniqueIdentifier>{34786024-6cf7-4e93-9262-c577cae46ad9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\CppSDK\SDK\Basic.cpp">
+      <Filter>src\external\CppSDK\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="external\CppSDK\SDK\Engine_functions.cpp">
+      <Filter>src\external\CppSDK\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="external\CppSDK\SDK\CoreUObject_functions.cpp">
+      <Filter>src\external\CppSDK\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="external\CppSDK\SDK\ShooterGame_functions.cpp">
+      <Filter>src\external\CppSDK\SDK</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="internal\Cache\Cache.hpp">
+      <Filter>src\internal\Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\CheatData\CheatData.hpp">
+      <Filter>src\internal\CheatData</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\Config\Config.hpp">
+      <Filter>src\internal\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\ESP\ESP.hpp">
+      <Filter>src\internal\ESP</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\Hack\Hack.hpp">
+      <Filter>src\internal\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\Util\Util.hpp">
+      <Filter>src\internal\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="external\ezVMT\include\ezVMT.hpp">
+      <Filter>src\external\ezVMT\include</Filter>
+    </ClInclude>
+    <ClInclude Include="external\Shadow-Gui\src\Shadow.h">
+      <Filter>src\external\Shadow-Gui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\Shadow-Gui\src\Shadow_Demo.h">
+      <Filter>src\external\Shadow-Gui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\Shadow-Gui\src\Shadow_Nav.h">
+      <Filter>src\external\Shadow-Gui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\Shadow-Gui\src\Shadow_Texture.h">
+      <Filter>src\external\Shadow-Gui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\Hook\Hook.hpp">
+      <Filter>src\internal\Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\MEM\MEM.hpp">
+      <Filter>src\internal\MEM</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1174,6 +1174,10 @@ namespace Shadow {
                     Shadow::TreePop();
 
                     if (Shadow::TreeNode("Font, PixelSnap & ID Stack")) {
+                        Shadow::PushFont(Shadow::g_Ctx.DefaultFont, 1.5f);
+                        Shadow::Text("PushFont 1.5x");
+                        Shadow::PopFont();
+
                         Shadow::PushFontNoSDF(Shadow::g_Ctx.DefaultFont, 1.5f);
                         Shadow::Text("PushFontNoSDF 1.5x");
                         Shadow::PopFont();
