@@ -52,6 +52,12 @@
     <Filter Include="src\internal\MEM">
       <UniqueIdentifier>{34786024-6cf7-4e93-9262-c577cae46ad9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\external\Font">
+      <UniqueIdentifier>{18a52a0f-594c-440f-a69f-17f95b805300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\Menu">
+      <UniqueIdentifier>{44c60591-a20b-4468-ab9e-6e925570c572}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -109,6 +115,12 @@
     </ClInclude>
     <ClInclude Include="internal\MEM\MEM.hpp">
       <Filter>src\internal\MEM</Filter>
+    </ClInclude>
+    <ClInclude Include="external\Font\仓耳舒圆体W03.h">
+      <Filter>src\external\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\Menu\Menu.hpp">
+      <Filter>src\internal\Menu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

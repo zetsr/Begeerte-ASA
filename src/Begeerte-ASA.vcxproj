@@ -27,6 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="external\ezVMT\include\ezVMT.hpp" />
+    <ClInclude Include="external\Font\仓耳舒圆体W03.h" />
     <ClInclude Include="external\Shadow-Gui\src\Shadow.h" />
     <ClInclude Include="external\Shadow-Gui\src\Shadow_Demo.h" />
     <ClInclude Include="external\Shadow-Gui\src\Shadow_Nav.h" />
@@ -38,6 +39,7 @@
     <ClInclude Include="internal\Hack\Hack.hpp" />
     <ClInclude Include="internal\Hook\Hook.hpp" />
     <ClInclude Include="internal\MEM\MEM.hpp" />
+    <ClInclude Include="internal\Menu\Menu.hpp" />
     <ClInclude Include="internal\Util\Util.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
