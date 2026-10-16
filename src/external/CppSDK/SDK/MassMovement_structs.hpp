@@ -23,7 +23,6 @@ struct alignas(0x08) FMassVelocityFragment final : public FMassFragment
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassVelocityFragment;
 
 // ScriptStruct MassMovement.MassForceFragment
 // 0x0018 (0x0018 - 0x0000)
@@ -32,7 +31,6 @@ struct alignas(0x08) FMassForceFragment final : public FMassFragment
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassForceFragment;
 
 // ScriptStruct MassMovement.MassMovementStyleRef
 // 0x0018 (0x0018 - 0x0000)
@@ -42,7 +40,6 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ID;                                                // 0x0008(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassMovementStyleRef;
 
 // ScriptStruct MassMovement.MassMovementStyleSpeedParameters
 // 0x0010 (0x0010 - 0x0000)
@@ -54,7 +51,6 @@ public:
 	float                                         Probability;                                       // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassMovementStyleSpeedParameters;
 
 // ScriptStruct MassMovement.MassMovementStyleParameters
 // 0x0028 (0x0028 - 0x0000)
@@ -64,7 +60,6 @@ public:
 	struct FMassMovementStyleRef                  Style;                                             // 0x0000(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	TArray<struct FMassMovementStyleSpeedParameters> DesiredSpeeds;                                  // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassMovementStyleParameters;
 
 // ScriptStruct MassMovement.MassMovementParameters
 // 0x0028 (0x0028 - 0x0000)
@@ -79,7 +74,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FMassMovementStyleParameters>   MovementStyles;                                    // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassMovementParameters;
 
 // ScriptStruct MassMovement.MassMovementStyle
 // 0x0018 (0x0018 - 0x0000)
@@ -89,13 +83,11 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ID;                                                // 0x0008(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassMovementStyle;
 
 // ScriptStruct MassMovement.MassSimpleMovementTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassSimpleMovementTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassSimpleMovementTag;
 
 SDK_NAMESPACE_END

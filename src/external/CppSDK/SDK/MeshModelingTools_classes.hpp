@@ -47,7 +47,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditActivityContext>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditActivityContext;
 
 // Class MeshModelingTools.PolyEditExtrudeEdgeActivityProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -75,7 +74,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditExtrudeEdgeActivityProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditExtrudeEdgeActivityProperties;
 
 // Class MeshModelingTools.PolyEditExtrudeEdgeActivity
 // 0x02C0 (0x02F0 - 0x0030)
@@ -106,7 +104,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditExtrudeEdgeActivity>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditExtrudeEdgeActivity;
 
 // Class MeshModelingTools.AddPrimitiveToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -129,7 +126,6 @@ public:
 		return GetDefaultObjImpl<UAddPrimitiveToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UAddPrimitiveToolBuilder;
 
 // Class MeshModelingTools.ProceduralShapeToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -160,7 +156,6 @@ public:
 		return GetDefaultObjImpl<UProceduralShapeToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralShapeToolProperties;
 
 // Class MeshModelingTools.ProceduralBoxToolProperties
 // 0x0018 (0x00D0 - 0x00B8)
@@ -188,7 +183,6 @@ public:
 		return GetDefaultObjImpl<UProceduralBoxToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralBoxToolProperties;
 
 // Class MeshModelingTools.ProceduralRectangleToolProperties
 // 0x0020 (0x00D8 - 0x00B8)
@@ -219,7 +213,6 @@ public:
 		return GetDefaultObjImpl<UProceduralRectangleToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralRectangleToolProperties;
 
 // Class MeshModelingTools.ProceduralDiscToolProperties
 // 0x0018 (0x00D0 - 0x00B8)
@@ -247,7 +240,6 @@ public:
 		return GetDefaultObjImpl<UProceduralDiscToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralDiscToolProperties;
 
 // Class MeshModelingTools.ProceduralTorusToolProperties
 // 0x0010 (0x00C8 - 0x00B8)
@@ -273,7 +265,6 @@ public:
 		return GetDefaultObjImpl<UProceduralTorusToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralTorusToolProperties;
 
 // Class MeshModelingTools.ProceduralCylinderToolProperties
 // 0x0010 (0x00C8 - 0x00B8)
@@ -299,7 +290,6 @@ public:
 		return GetDefaultObjImpl<UProceduralCylinderToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralCylinderToolProperties;
 
 // Class MeshModelingTools.ProceduralConeToolProperties
 // 0x0010 (0x00C8 - 0x00B8)
@@ -325,7 +315,6 @@ public:
 		return GetDefaultObjImpl<UProceduralConeToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralConeToolProperties;
 
 // Class MeshModelingTools.ProceduralArrowToolProperties
 // 0x0018 (0x00D0 - 0x00B8)
@@ -353,7 +342,6 @@ public:
 		return GetDefaultObjImpl<UProceduralArrowToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralArrowToolProperties;
 
 // Class MeshModelingTools.ProceduralSphereToolProperties
 // 0x0018 (0x00D0 - 0x00B8)
@@ -381,7 +369,6 @@ public:
 		return GetDefaultObjImpl<UProceduralSphereToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralSphereToolProperties;
 
 // Class MeshModelingTools.ProceduralCapsuleToolProperties
 // 0x0018 (0x00D0 - 0x00B8)
@@ -409,7 +396,6 @@ public:
 		return GetDefaultObjImpl<UProceduralCapsuleToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralCapsuleToolProperties;
 
 // Class MeshModelingTools.ProceduralStairsToolProperties
 // 0x0020 (0x00D8 - 0x00B8)
@@ -439,7 +425,6 @@ public:
 		return GetDefaultObjImpl<UProceduralStairsToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralStairsToolProperties;
 
 // Class MeshModelingTools.AddPrimitiveTool
 // 0x0098 (0x0138 - 0x00A0)
@@ -470,7 +455,6 @@ public:
 		return GetDefaultObjImpl<UAddPrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddPrimitiveTool;
 
 // Class MeshModelingTools.AddBoxPrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -490,7 +474,6 @@ public:
 		return GetDefaultObjImpl<UAddBoxPrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddBoxPrimitiveTool;
 
 // Class MeshModelingTools.AddCylinderPrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -510,7 +493,6 @@ public:
 		return GetDefaultObjImpl<UAddCylinderPrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddCylinderPrimitiveTool;
 
 // Class MeshModelingTools.AddCapsulePrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -530,7 +512,6 @@ public:
 		return GetDefaultObjImpl<UAddCapsulePrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddCapsulePrimitiveTool;
 
 // Class MeshModelingTools.AddConePrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -550,7 +531,6 @@ public:
 		return GetDefaultObjImpl<UAddConePrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddConePrimitiveTool;
 
 // Class MeshModelingTools.AddRectanglePrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -570,7 +550,6 @@ public:
 		return GetDefaultObjImpl<UAddRectanglePrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddRectanglePrimitiveTool;
 
 // Class MeshModelingTools.AddDiscPrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -590,7 +569,6 @@ public:
 		return GetDefaultObjImpl<UAddDiscPrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddDiscPrimitiveTool;
 
 // Class MeshModelingTools.AddTorusPrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -610,7 +588,6 @@ public:
 		return GetDefaultObjImpl<UAddTorusPrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddTorusPrimitiveTool;
 
 // Class MeshModelingTools.AddArrowPrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -630,7 +607,6 @@ public:
 		return GetDefaultObjImpl<UAddArrowPrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddArrowPrimitiveTool;
 
 // Class MeshModelingTools.AddSpherePrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -650,7 +626,6 @@ public:
 		return GetDefaultObjImpl<UAddSpherePrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddSpherePrimitiveTool;
 
 // Class MeshModelingTools.AddStairsPrimitiveTool
 // 0x0000 (0x0138 - 0x0138)
@@ -670,7 +645,6 @@ public:
 		return GetDefaultObjImpl<UAddStairsPrimitiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddStairsPrimitiveTool;
 
 // Class MeshModelingTools.CombineMeshesToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -693,7 +667,6 @@ public:
 		return GetDefaultObjImpl<UCombineMeshesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UCombineMeshesToolBuilder;
 
 // Class MeshModelingTools.CombineMeshesToolProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -720,7 +693,6 @@ public:
 		return GetDefaultObjImpl<UCombineMeshesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UCombineMeshesToolProperties;
 
 // Class MeshModelingTools.CombineMeshesTool
 // 0x0028 (0x00E0 - 0x00B8)
@@ -747,7 +719,6 @@ public:
 		return GetDefaultObjImpl<UCombineMeshesTool>();
 	}
 };
-DUMPER7_ASSERTS_UCombineMeshesTool;
 
 // Class MeshModelingTools.DeleteGeometrySelectionCommand
 // 0x0000 (0x0028 - 0x0028)
@@ -767,7 +738,6 @@ public:
 		return GetDefaultObjImpl<UDeleteGeometrySelectionCommand>();
 	}
 };
-DUMPER7_ASSERTS_UDeleteGeometrySelectionCommand;
 
 // Class MeshModelingTools.DisconnectGeometrySelectionCommand
 // 0x0000 (0x0028 - 0x0028)
@@ -787,7 +757,6 @@ public:
 		return GetDefaultObjImpl<UDisconnectGeometrySelectionCommand>();
 	}
 };
-DUMPER7_ASSERTS_UDisconnectGeometrySelectionCommand;
 
 // Class MeshModelingTools.ModifyGeometrySelectionCommand
 // 0x0000 (0x0028 - 0x0028)
@@ -807,7 +776,6 @@ public:
 		return GetDefaultObjImpl<UModifyGeometrySelectionCommand>();
 	}
 };
-DUMPER7_ASSERTS_UModifyGeometrySelectionCommand;
 
 // Class MeshModelingTools.ModifyGeometrySelectionCommand_Invert
 // 0x0000 (0x0028 - 0x0028)
@@ -827,7 +795,6 @@ public:
 		return GetDefaultObjImpl<UModifyGeometrySelectionCommand_Invert>();
 	}
 };
-DUMPER7_ASSERTS_UModifyGeometrySelectionCommand_Invert;
 
 // Class MeshModelingTools.ModifyGeometrySelectionCommand_ExpandToConnected
 // 0x0000 (0x0028 - 0x0028)
@@ -847,7 +814,6 @@ public:
 		return GetDefaultObjImpl<UModifyGeometrySelectionCommand_ExpandToConnected>();
 	}
 };
-DUMPER7_ASSERTS_UModifyGeometrySelectionCommand_ExpandToConnected;
 
 // Class MeshModelingTools.ModifyGeometrySelectionCommand_InvertConnected
 // 0x0000 (0x0028 - 0x0028)
@@ -867,7 +833,6 @@ public:
 		return GetDefaultObjImpl<UModifyGeometrySelectionCommand_InvertConnected>();
 	}
 };
-DUMPER7_ASSERTS_UModifyGeometrySelectionCommand_InvertConnected;
 
 // Class MeshModelingTools.ModifyGeometrySelectionCommand_Expand
 // 0x0000 (0x0028 - 0x0028)
@@ -887,7 +852,6 @@ public:
 		return GetDefaultObjImpl<UModifyGeometrySelectionCommand_Expand>();
 	}
 };
-DUMPER7_ASSERTS_UModifyGeometrySelectionCommand_Expand;
 
 // Class MeshModelingTools.ModifyGeometrySelectionCommand_Contract
 // 0x0000 (0x0028 - 0x0028)
@@ -907,7 +871,6 @@ public:
 		return GetDefaultObjImpl<UModifyGeometrySelectionCommand_Contract>();
 	}
 };
-DUMPER7_ASSERTS_UModifyGeometrySelectionCommand_Contract;
 
 // Class MeshModelingTools.RetriangulateGeometrySelectionCommand
 // 0x0000 (0x0028 - 0x0028)
@@ -927,7 +890,6 @@ public:
 		return GetDefaultObjImpl<URetriangulateGeometrySelectionCommand>();
 	}
 };
-DUMPER7_ASSERTS_URetriangulateGeometrySelectionCommand;
 
 // Class MeshModelingTools.CSGMeshesToolProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -961,7 +923,6 @@ public:
 		return GetDefaultObjImpl<UCSGMeshesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UCSGMeshesToolProperties;
 
 // Class MeshModelingTools.TrimMeshesToolProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -991,7 +952,6 @@ public:
 		return GetDefaultObjImpl<UTrimMeshesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UTrimMeshesToolProperties;
 
 // Class MeshModelingTools.CSGMeshesTool
 // 0x0058 (0x0160 - 0x0108)
@@ -1020,7 +980,6 @@ public:
 		return GetDefaultObjImpl<UCSGMeshesTool>();
 	}
 };
-DUMPER7_ASSERTS_UCSGMeshesTool;
 
 // Class MeshModelingTools.CSGMeshesToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -1043,7 +1002,6 @@ public:
 		return GetDefaultObjImpl<UCSGMeshesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UCSGMeshesToolBuilder;
 
 // Class MeshModelingTools.CutMeshWithMeshToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1072,7 +1030,6 @@ public:
 		return GetDefaultObjImpl<UCutMeshWithMeshToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UCutMeshWithMeshToolProperties;
 
 // Class MeshModelingTools.CutMeshWithMeshTool
 // 0x0278 (0x0380 - 0x0108)
@@ -1099,7 +1056,6 @@ public:
 		return GetDefaultObjImpl<UCutMeshWithMeshTool>();
 	}
 };
-DUMPER7_ASSERTS_UCutMeshWithMeshTool;
 
 // Class MeshModelingTools.CutMeshWithMeshToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1119,7 +1075,6 @@ public:
 		return GetDefaultObjImpl<UCutMeshWithMeshToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UCutMeshWithMeshToolBuilder;
 
 // Class MeshModelingTools.DrawAndRevolveToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1139,7 +1094,6 @@ public:
 		return GetDefaultObjImpl<UDrawAndRevolveToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UDrawAndRevolveToolBuilder;
 
 // Class MeshModelingTools.RevolveProperties
 // 0x0070 (0x0118 - 0x00A8)
@@ -1178,7 +1132,6 @@ public:
 		return GetDefaultObjImpl<URevolveProperties>();
 	}
 };
-DUMPER7_ASSERTS_URevolveProperties;
 
 // Class MeshModelingTools.RevolveToolProperties
 // 0x0040 (0x0158 - 0x0118)
@@ -1208,7 +1161,6 @@ public:
 		return GetDefaultObjImpl<URevolveToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_URevolveToolProperties;
 
 // Class MeshModelingTools.RevolveOperatorFactory
 // 0x0010 (0x0038 - 0x0028)
@@ -1232,7 +1184,6 @@ public:
 		return GetDefaultObjImpl<URevolveOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_URevolveOperatorFactory;
 
 // Class MeshModelingTools.DrawAndRevolveTool
 // 0x00F8 (0x0190 - 0x0098)
@@ -1261,7 +1212,6 @@ public:
 		return GetDefaultObjImpl<UDrawAndRevolveTool>();
 	}
 };
-DUMPER7_ASSERTS_UDrawAndRevolveTool;
 
 // Class MeshModelingTools.DrawPolygonToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1281,7 +1231,6 @@ public:
 		return GetDefaultObjImpl<UDrawPolygonToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UDrawPolygonToolBuilder;
 
 // Class MeshModelingTools.DrawPolygonToolStandardProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -1313,7 +1262,6 @@ public:
 		return GetDefaultObjImpl<UDrawPolygonToolStandardProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDrawPolygonToolStandardProperties;
 
 // Class MeshModelingTools.DrawPolygonToolSnapProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1345,7 +1293,6 @@ public:
 		return GetDefaultObjImpl<UDrawPolygonToolSnapProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDrawPolygonToolSnapProperties;
 
 // Class MeshModelingTools.DrawPolygonTool
 // 0x04F8 (0x0590 - 0x0098)
@@ -1379,7 +1326,6 @@ public:
 		return GetDefaultObjImpl<UDrawPolygonTool>();
 	}
 };
-DUMPER7_ASSERTS_UDrawPolygonTool;
 
 // Class MeshModelingTools.EditMeshPolygonsToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -1402,7 +1348,6 @@ public:
 		return GetDefaultObjImpl<UEditMeshPolygonsToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UEditMeshPolygonsToolBuilder;
 
 // Class MeshModelingTools.PolyEditCommonProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1432,7 +1377,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditCommonProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditCommonProperties;
 
 // Class MeshModelingTools.EditMeshPolygonsActionModeToolBuilder
 // 0x0008 (0x0038 - 0x0030)
@@ -1455,7 +1399,6 @@ public:
 		return GetDefaultObjImpl<UEditMeshPolygonsActionModeToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UEditMeshPolygonsActionModeToolBuilder;
 
 // Class MeshModelingTools.EditMeshPolygonsSelectionModeToolBuilder
 // 0x0008 (0x0038 - 0x0030)
@@ -1478,7 +1421,6 @@ public:
 		return GetDefaultObjImpl<UEditMeshPolygonsSelectionModeToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UEditMeshPolygonsSelectionModeToolBuilder;
 
 // Class MeshModelingTools.EditMeshPolygonsToolActionPropertySet
 // 0x0008 (0x00B0 - 0x00A8)
@@ -1501,7 +1443,6 @@ public:
 		return GetDefaultObjImpl<UEditMeshPolygonsToolActionPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_UEditMeshPolygonsToolActionPropertySet;
 
 // Class MeshModelingTools.PolyEditTopologyProperties
 // 0x0010 (0x00C0 - 0x00B0)
@@ -1529,7 +1470,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditTopologyProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditTopologyProperties;
 
 // Class MeshModelingTools.EditMeshPolygonsToolActions
 // 0x0000 (0x00B0 - 0x00B0)
@@ -1569,7 +1509,6 @@ public:
 		return GetDefaultObjImpl<UEditMeshPolygonsToolActions>();
 	}
 };
-DUMPER7_ASSERTS_UEditMeshPolygonsToolActions;
 
 // Class MeshModelingTools.EditMeshPolygonsToolActions_Triangles
 // 0x0000 (0x00B0 - 0x00B0)
@@ -1603,7 +1542,6 @@ public:
 		return GetDefaultObjImpl<UEditMeshPolygonsToolActions_Triangles>();
 	}
 };
-DUMPER7_ASSERTS_UEditMeshPolygonsToolActions_Triangles;
 
 // Class MeshModelingTools.EditMeshPolygonsToolUVActions
 // 0x0000 (0x00B0 - 0x00B0)
@@ -1626,7 +1564,6 @@ public:
 		return GetDefaultObjImpl<UEditMeshPolygonsToolUVActions>();
 	}
 };
-DUMPER7_ASSERTS_UEditMeshPolygonsToolUVActions;
 
 // Class MeshModelingTools.EditMeshPolygonsToolEdgeActions
 // 0x0000 (0x00B0 - 0x00B0)
@@ -1658,7 +1595,6 @@ public:
 		return GetDefaultObjImpl<UEditMeshPolygonsToolEdgeActions>();
 	}
 };
-DUMPER7_ASSERTS_UEditMeshPolygonsToolEdgeActions;
 
 // Class MeshModelingTools.EditMeshPolygonsToolEdgeActions_Triangles
 // 0x0000 (0x00B0 - 0x00B0)
@@ -1688,7 +1624,6 @@ public:
 		return GetDefaultObjImpl<UEditMeshPolygonsToolEdgeActions_Triangles>();
 	}
 };
-DUMPER7_ASSERTS_UEditMeshPolygonsToolEdgeActions_Triangles;
 
 // Class MeshModelingTools.EditMeshPolygonsTool
 // 0x07E0 (0x0900 - 0x0120)
@@ -1734,7 +1669,6 @@ public:
 		return GetDefaultObjImpl<UEditMeshPolygonsTool>();
 	}
 };
-DUMPER7_ASSERTS_UEditMeshPolygonsTool;
 
 // Class MeshModelingTools.NewMeshMaterialProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1762,7 +1696,6 @@ public:
 		return GetDefaultObjImpl<UNewMeshMaterialProperties>();
 	}
 };
-DUMPER7_ASSERTS_UNewMeshMaterialProperties;
 
 // Class MeshModelingTools.ExistingMeshMaterialProperties
 // 0x0038 (0x00E0 - 0x00A8)
@@ -1794,7 +1727,6 @@ public:
 		return GetDefaultObjImpl<UExistingMeshMaterialProperties>();
 	}
 };
-DUMPER7_ASSERTS_UExistingMeshMaterialProperties;
 
 // Class MeshModelingTools.MeshEditingViewProperties
 // 0x0050 (0x00F8 - 0x00A8)
@@ -1830,7 +1762,6 @@ public:
 		return GetDefaultObjImpl<UMeshEditingViewProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshEditingViewProperties;
 
 // Class MeshModelingTools.MeshUVChannelProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -1857,7 +1788,6 @@ public:
 		return GetDefaultObjImpl<UMeshUVChannelProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshUVChannelProperties;
 
 // Class MeshModelingTools.RecomputeUVsToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1877,7 +1807,6 @@ public:
 		return GetDefaultObjImpl<URecomputeUVsToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_URecomputeUVsToolBuilder;
 
 // Class MeshModelingTools.RecomputeUVsTool
 // 0x0068 (0x0118 - 0x00B0)
@@ -1910,7 +1839,6 @@ public:
 		return GetDefaultObjImpl<URecomputeUVsTool>();
 	}
 };
-DUMPER7_ASSERTS_URecomputeUVsTool;
 
 // Class MeshModelingTools.PolyEditBevelEdgeProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -1938,7 +1866,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditBevelEdgeProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditBevelEdgeProperties;
 
 // Class MeshModelingTools.PolyEditBevelEdgeActivity
 // 0x0110 (0x0140 - 0x0030)
@@ -1964,7 +1891,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditBevelEdgeActivity>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditBevelEdgeActivity;
 
 // Class MeshModelingTools.PolyEditCutProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -1989,7 +1915,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditCutProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditCutProperties;
 
 // Class MeshModelingTools.PolyEditCutFacesActivity
 // 0x0090 (0x00C0 - 0x0030)
@@ -2017,7 +1942,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditCutFacesActivity>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditCutFacesActivity;
 
 // Class MeshModelingTools.PolyEditExtrudeProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -2050,7 +1974,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditExtrudeProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditExtrudeProperties;
 
 // Class MeshModelingTools.PolyEditOffsetProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -2083,7 +2006,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditOffsetProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditOffsetProperties;
 
 // Class MeshModelingTools.PolyEditPushPullProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -2116,7 +2038,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditPushPullProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditPushPullProperties;
 
 // Class MeshModelingTools.PolyEditExtrudeActivity
 // 0x01A0 (0x01D0 - 0x0030)
@@ -2145,7 +2066,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditExtrudeActivity>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditExtrudeActivity;
 
 // Class MeshModelingTools.GroupEdgeInsertionProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -2171,7 +2091,6 @@ public:
 		return GetDefaultObjImpl<UGroupEdgeInsertionProperties>();
 	}
 };
-DUMPER7_ASSERTS_UGroupEdgeInsertionProperties;
 
 // Class MeshModelingTools.PolyEditInsertEdgeActivity
 // 0x0440 (0x0470 - 0x0030)
@@ -2197,7 +2116,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditInsertEdgeActivity>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditInsertEdgeActivity;
 
 // Class MeshModelingTools.EdgeLoopInsertionProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -2230,7 +2148,6 @@ public:
 		return GetDefaultObjImpl<UEdgeLoopInsertionProperties>();
 	}
 };
-DUMPER7_ASSERTS_UEdgeLoopInsertionProperties;
 
 // Class MeshModelingTools.PolyEditInsertEdgeLoopActivity
 // 0x03D0 (0x0400 - 0x0030)
@@ -2256,7 +2173,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditInsertEdgeLoopActivity>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditInsertEdgeLoopActivity;
 
 // Class MeshModelingTools.PolyEditInsetOutsetProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -2285,7 +2201,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditInsetOutsetProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditInsetOutsetProperties;
 
 // Class MeshModelingTools.PolyEditInsetOutsetActivity
 // 0x0040 (0x0070 - 0x0030)
@@ -2314,7 +2229,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditInsetOutsetActivity>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditInsetOutsetActivity;
 
 // Class MeshModelingTools.PolyEditSetUVProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -2338,7 +2252,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditSetUVProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditSetUVProperties;
 
 // Class MeshModelingTools.PolyEditPlanarProjectionUVActivity
 // 0x00C0 (0x00F0 - 0x0030)
@@ -2366,7 +2279,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditPlanarProjectionUVActivity>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditPlanarProjectionUVActivity;
 
 // Class MeshModelingTools.UVLayoutToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -2386,7 +2298,6 @@ public:
 		return GetDefaultObjImpl<UUVLayoutToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UUVLayoutToolBuilder;
 
 // Class MeshModelingTools.UVLayoutTool
 // 0x00B8 (0x0170 - 0x00B8)
@@ -2417,7 +2328,6 @@ public:
 		return GetDefaultObjImpl<UUVLayoutTool>();
 	}
 };
-DUMPER7_ASSERTS_UUVLayoutTool;
 
 // Class MeshModelingTools.UVProjectionToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -2437,7 +2347,6 @@ public:
 		return GetDefaultObjImpl<UUVProjectionToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UUVProjectionToolBuilder;
 
 // Class MeshModelingTools.UVProjectionToolEditActions
 // 0x0008 (0x00B0 - 0x00A8)
@@ -2465,7 +2374,6 @@ public:
 		return GetDefaultObjImpl<UUVProjectionToolEditActions>();
 	}
 };
-DUMPER7_ASSERTS_UUVProjectionToolEditActions;
 
 // Class MeshModelingTools.UVProjectionToolProperties
 // 0x00E8 (0x0190 - 0x00A8)
@@ -2505,7 +2413,6 @@ public:
 		return GetDefaultObjImpl<UUVProjectionToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UUVProjectionToolProperties;
 
 // Class MeshModelingTools.UVProjectionOperatorFactory
 // 0x0010 (0x0038 - 0x0028)
@@ -2529,7 +2436,6 @@ public:
 		return GetDefaultObjImpl<UUVProjectionOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_UUVProjectionOperatorFactory;
 
 // Class MeshModelingTools.UVProjectionTool
 // 0x03B0 (0x04D0 - 0x0120)
@@ -2564,6 +2470,5 @@ public:
 		return GetDefaultObjImpl<UUVProjectionTool>();
 	}
 };
-DUMPER7_ASSERTS_UUVProjectionTool;
 
 SDK_NAMESPACE_END

@@ -35,7 +35,6 @@ public:
 	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SubscribeViewToEvents_ReturnValue;        // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_BrowseMods_C_ExecuteUbergraph_UI_CFCore_BrowseMods;
 
 // Function UI_CFCore_BrowseMods.UI_CFCore_BrowseMods_C.GetCurrentSearchInput
 // 0x0020 (0x0020 - 0x0000)
@@ -45,7 +44,6 @@ public:
 	class FText                                   CurrentSearchInput_0;                              // 0x0000(0x0010)(Parm, OutParm)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_BrowseMods_C_GetCurrentSearchInput;
 
 // Function UI_CFCore_BrowseMods.UI_CFCore_BrowseMods_C.OnEventBroadcasted
 // 0x0030 (0x0030 - 0x0000)
@@ -59,7 +57,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_BrowseMods_C_OnEventBroadcasted;
 
 // Function UI_CFCore_BrowseMods.UI_CFCore_BrowseMods_C.UpdatePageCount
 // 0x0040 (0x0040 - 0x0000)
@@ -79,7 +76,6 @@ public:
 	int32                                         CallFunc_Int32_AddOne_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Select_Default;                             // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_BrowseMods_C_UpdatePageCount;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

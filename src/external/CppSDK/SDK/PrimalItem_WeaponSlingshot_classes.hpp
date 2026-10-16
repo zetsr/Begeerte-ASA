@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponSlingshot_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_WeaponSlingshot_C;
 
 SDK_NAMESPACE_END

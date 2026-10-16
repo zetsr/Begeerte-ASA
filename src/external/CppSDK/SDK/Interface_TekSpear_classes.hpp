@@ -72,6 +72,5 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IInterface_TekSpear_C;
 
 SDK_NAMESPACE_END

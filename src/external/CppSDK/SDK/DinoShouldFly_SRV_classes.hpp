@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<UDinoShouldFly_SRV_C>();
 	}
 };
-DUMPER7_ASSERTS_UDinoShouldFly_SRV_C;
 
 SDK_NAMESPACE_END

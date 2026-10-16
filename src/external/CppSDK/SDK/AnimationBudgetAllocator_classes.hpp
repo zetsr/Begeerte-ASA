@@ -37,7 +37,6 @@ public:
 		return GetDefaultObjImpl<UAnimationBudgetBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UAnimationBudgetBlueprintLibrary;
 
 // Class AnimationBudgetAllocator.SkeletalMeshComponentBudgeted
 // 0x0020 (0x13E0 - 0x13C0)
@@ -67,6 +66,5 @@ public:
 		return GetDefaultObjImpl<USkeletalMeshComponentBudgeted>();
 	}
 };
-DUMPER7_ASSERTS_USkeletalMeshComponentBudgeted;
 
 SDK_NAMESPACE_END

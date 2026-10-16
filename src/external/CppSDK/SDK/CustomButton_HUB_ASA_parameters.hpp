@@ -21,7 +21,6 @@ struct CustomButton_HUB_ASA_C_BPSetToggledState final
 public:
 	bool                                          IsToggled;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CustomButton_HUB_ASA_C_BPSetToggledState;
 
 // Function CustomButton_HUB_ASA.CustomButton_HUB_ASA_C.ExecuteUbergraph_CustomButton_HUB_ASA
 // 0x0008 (0x0008 - 0x0000)
@@ -31,7 +30,6 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsToggled;                            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CustomButton_HUB_ASA_C_ExecuteUbergraph_CustomButton_HUB_ASA;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

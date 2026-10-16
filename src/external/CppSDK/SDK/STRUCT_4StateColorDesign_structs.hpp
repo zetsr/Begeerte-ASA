@@ -26,6 +26,5 @@ public:
 	struct FSlateColor                            Selected_11_93F7E611476526D980DD359603116C7B;      // 0x003C(0x0014)(Edit, BlueprintVisible)
 	struct FSlateColor                            Disabled_8_DB9CE2AF447766DF073744BE165E7680;       // 0x0050(0x0014)(Edit, BlueprintVisible)
 };
-DUMPER7_ASSERTS_FSTRUCT_4StateColorDesign;
 
 SDK_NAMESPACE_END

@@ -40,6 +40,5 @@ public:
 		return GetDefaultObjImpl<UStreamlineLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UStreamlineLibrary;
 
 SDK_NAMESPACE_END

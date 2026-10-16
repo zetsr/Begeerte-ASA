@@ -72,6 +72,5 @@ public:
 		return GetDefaultObjImpl<UFinalCreditsUI_C>();
 	}
 };
-DUMPER7_ASSERTS_UFinalCreditsUI_C;
 
 SDK_NAMESPACE_END

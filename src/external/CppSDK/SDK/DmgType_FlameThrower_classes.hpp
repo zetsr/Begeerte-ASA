@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDmgType_FlameThrower_C>();
 	}
 };
-DUMPER7_ASSERTS_UDmgType_FlameThrower_C;
 
 SDK_NAMESPACE_END

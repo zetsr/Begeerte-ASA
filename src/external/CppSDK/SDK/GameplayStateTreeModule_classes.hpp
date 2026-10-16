@@ -42,7 +42,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_RunDynamicStateTree>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_RunDynamicStateTree;
 
 // Class GameplayStateTreeModule.BTTask_RunStateTree
 // 0x0048 (0x00B8 - 0x0070)
@@ -69,7 +68,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_RunStateTree>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_RunStateTree;
 
 // Class GameplayStateTreeModule.StateTreeComponent
 // 0x0078 (0x01A0 - 0x0128)
@@ -105,7 +103,6 @@ public:
 		return GetDefaultObjImpl<UStateTreeComponent>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeComponent;
 
 // Class GameplayStateTreeModule.StateTreeAIComponent
 // 0x0000 (0x01A0 - 0x01A0)
@@ -125,7 +122,6 @@ public:
 		return GetDefaultObjImpl<UStateTreeAIComponent>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeAIComponent;
 
 // Class GameplayStateTreeModule.StateTreeComponentSchema
 // 0x0030 (0x0058 - 0x0028)
@@ -150,7 +146,6 @@ public:
 		return GetDefaultObjImpl<UStateTreeComponentSchema>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeComponentSchema;
 
 // Class GameplayStateTreeModule.StateTreeAIComponentSchema
 // 0x0008 (0x0060 - 0x0058)
@@ -173,6 +168,5 @@ public:
 		return GetDefaultObjImpl<UStateTreeAIComponentSchema>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeAIComponentSchema;
 
 SDK_NAMESPACE_END

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Struct_Ground_Attributes_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Struct_VFX_Body_Drop_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -102,7 +102,6 @@ public:
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast_1;    // 0x04EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_DoubleFloat_B_ImplicitCast;      // 0x04F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FL_ControlRigFX_C_ControlRigNotify;
 
 // Function FL_ControlRigFX.FL_ControlRigFX_C.Spawn Phys Mat VFX
 // 0x0318 (0x0318 - 0x0000)
@@ -176,7 +175,6 @@ public:
 	double                                        CallFunc_MakeVector_Z_ImplicitCast;                // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast_8;  // 0x0310(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FL_ControlRigFX_C_Spawn_Phys_Mat_VFX;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

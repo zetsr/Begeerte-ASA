@@ -38,6 +38,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemSkinGeneric_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemSkinGeneric_C;
 
 SDK_NAMESPACE_END

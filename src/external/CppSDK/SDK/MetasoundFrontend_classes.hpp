@@ -43,7 +43,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMetaSoundDocumentInterface;
 
 // Class MetasoundFrontend.MetasoundParameterPack
 // 0x0018 (0x0040 - 0x0028)
@@ -86,7 +85,6 @@ public:
 		return GetDefaultObjImpl<UMetasoundParameterPack>();
 	}
 };
-DUMPER7_ASSERTS_UMetasoundParameterPack;
 
 // Class MetasoundFrontend.MetaSoundFrontendMemberMetadata
 // 0x0000 (0x0028 - 0x0028)
@@ -106,7 +104,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundFrontendMemberMetadata>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundFrontendMemberMetadata;
 
 // Class MetasoundFrontend.MetaSoundBuilderDocument
 // 0x01A8 (0x01D0 - 0x0028)
@@ -132,6 +129,5 @@ public:
 		return GetDefaultObjImpl<UMetaSoundBuilderDocument>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundBuilderDocument;
 
 SDK_NAMESPACE_END

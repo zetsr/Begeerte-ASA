@@ -82,6 +82,5 @@ public:
 		return GetDefaultObjImpl<UDataListButton_Widget_ASA_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListButton_Widget_ASA_C;
 
 SDK_NAMESPACE_END

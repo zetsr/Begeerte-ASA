@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Berry_Stimberry_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumable_Berry_Stimberry_C;
 
 SDK_NAMESPACE_END

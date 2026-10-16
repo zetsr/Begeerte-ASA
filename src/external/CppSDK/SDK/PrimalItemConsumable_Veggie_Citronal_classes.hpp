@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Veggie_Citronal_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumable_Veggie_Citronal_C;
 
 SDK_NAMESPACE_END

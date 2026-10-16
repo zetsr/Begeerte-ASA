@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Gem_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Gem_Base_C;
 
 SDK_NAMESPACE_END

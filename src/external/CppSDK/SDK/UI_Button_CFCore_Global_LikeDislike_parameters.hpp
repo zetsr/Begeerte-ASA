@@ -36,7 +36,6 @@ public:
 	class FText                                   CallFunc_Conv_Int64ToText_ReturnValue_1;           // 0x0058(0x0010)()
 	class FText                                   K2Node_Select_Default;                             // 0x0068(0x0010)()
 };
-DUMPER7_ASSERTS_UI_Button_CFCore_Global_LikeDislike_C_ExecuteUbergraph_UI_Button_CFCore_Global_LikeDislike;
 
 // Function UI_Button_CFCore_Global_LikeDislike.UI_Button_CFCore_Global_LikeDislike_C.IsCurrentButtonEnabled
 // 0x0002 (0x0002 - 0x0000)
@@ -46,7 +45,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Button_CFCore_Global_LikeDislike_C_IsCurrentButtonEnabled;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

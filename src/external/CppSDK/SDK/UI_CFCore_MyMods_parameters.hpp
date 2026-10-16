@@ -44,7 +44,6 @@ public:
 	class UWidget*                                CallFunc_Array_Get_Item_1;                         // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_MyMods_C_ExecuteUbergraph_UI_CFCore_MyMods;
 
 // Function UI_CFCore_MyMods.UI_CFCore_MyMods_C.OnEventBroadcasted
 // 0x0058 (0x0058 - 0x0000)
@@ -65,7 +64,6 @@ public:
 	TArray<struct FInstallProgressMod>            CallFunc_ReturnModsOfCurrentPage_TrueModInfo;      // 0x0040(0x0010)(ReferenceParm, ContainsInstancedReference)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_MyMods_C_OnEventBroadcasted;
 
 // Function UI_CFCore_MyMods.UI_CFCore_MyMods_C.UpdatePagination
 // 0x0038 (0x0038 - 0x0000)
@@ -87,7 +85,6 @@ public:
 	int32                                         CallFunc_Int32_AddOne_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Select_Default;                             // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_MyMods_C_UpdatePagination;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

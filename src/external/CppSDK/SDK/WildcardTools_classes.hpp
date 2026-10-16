@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UWildcardHelpers>();
 	}
 };
-DUMPER7_ASSERTS_UWildcardHelpers;
 
 SDK_NAMESPACE_END

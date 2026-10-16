@@ -46,7 +46,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IStateTreeSchemaProvider;
 
 // Class StateTreeModule.StateTreeSettings
 // 0x0008 (0x0040 - 0x0038)
@@ -70,7 +69,6 @@ public:
 		return GetDefaultObjImpl<UStateTreeSettings>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeSettings;
 
 // Class StateTreeModule.StateTreeNodeBlueprintBase
 // 0x0028 (0x0050 - 0x0028)
@@ -105,7 +103,6 @@ public:
 		return GetDefaultObjImpl<UStateTreeNodeBlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeNodeBlueprintBase;
 
 // Class StateTreeModule.StateTreeConditionBlueprintBase
 // 0x0008 (0x0058 - 0x0050)
@@ -131,7 +128,6 @@ public:
 		return GetDefaultObjImpl<UStateTreeConditionBlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeConditionBlueprintBase;
 
 // Class StateTreeModule.StateTreeConsiderationBlueprintBase
 // 0x0008 (0x0058 - 0x0050)
@@ -157,7 +153,6 @@ public:
 		return GetDefaultObjImpl<UStateTreeConsiderationBlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeConsiderationBlueprintBase;
 
 // Class StateTreeModule.StateTreeEvaluatorBlueprintBase
 // 0x0008 (0x0058 - 0x0050)
@@ -185,7 +180,6 @@ public:
 		return GetDefaultObjImpl<UStateTreeEvaluatorBlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeEvaluatorBlueprintBase;
 
 // Class StateTreeModule.StateTreeTaskBlueprintBase
 // 0x0008 (0x0058 - 0x0050)
@@ -223,7 +217,6 @@ public:
 		return GetDefaultObjImpl<UStateTreeTaskBlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeTaskBlueprintBase;
 
 // Class StateTreeModule.StateTree
 // 0x0168 (0x0198 - 0x0030)
@@ -270,7 +263,6 @@ public:
 		return GetDefaultObjImpl<UStateTree>();
 	}
 };
-DUMPER7_ASSERTS_UStateTree;
 
 // Class StateTreeModule.StateTreeSchema
 // 0x0000 (0x0028 - 0x0028)
@@ -290,6 +282,5 @@ public:
 		return GetDefaultObjImpl<UStateTreeSchema>();
 	}
 };
-DUMPER7_ASSERTS_UStateTreeSchema;
 
 SDK_NAMESPACE_END

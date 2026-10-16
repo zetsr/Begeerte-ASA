@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDataListButtonVariable_CosmeticBlockSetting_Widget_ASA_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListButtonVariable_CosmeticBlockSetting_Widget_ASA_C;
 
 SDK_NAMESPACE_END

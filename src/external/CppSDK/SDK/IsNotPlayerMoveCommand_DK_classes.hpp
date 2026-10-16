@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<UIsNotPlayerMoveCommand_DK_C>();
 	}
 };
-DUMPER7_ASSERTS_UIsNotPlayerMoveCommand_DK_C;
 
 SDK_NAMESPACE_END

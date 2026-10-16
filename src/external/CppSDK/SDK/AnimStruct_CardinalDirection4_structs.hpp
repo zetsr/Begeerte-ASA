@@ -23,6 +23,5 @@ public:
 	class UAnimSequence*                          S_7_336D6C0142C1E5AC36B5B6B56B708056;              // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequence*                          W_8_6DF6135C4BF74EC91483779A4410309E;              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FAnimStruct_CardinalDirection4;
 
 SDK_NAMESPACE_END

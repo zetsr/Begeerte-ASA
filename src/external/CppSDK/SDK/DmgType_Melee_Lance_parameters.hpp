@@ -52,7 +52,6 @@ public:
 	uint8                                         Pad_1CA[0x6];                                      // 0x01CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DmgType_Melee_Lance_C_BPAdjustDamage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

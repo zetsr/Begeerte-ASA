@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "STRUCT_SubOptions_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "STRUCT_SubOptions_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -28,7 +28,6 @@ public:
 	class UUI_Sub_Category_C*                     SubCategoryWidget_Ref;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class FString                                 Text;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Sub_Categories_Scroll_C_Event_Check_If_Selected;
 
 // Function UI_Sub-Categories_Scroll.UI_Sub-Categories_Scroll_C.Event On Subcategory Select Event
 // 0x0018 (0x0018 - 0x0000)
@@ -38,7 +37,6 @@ public:
 	class FString                                 SubCategory;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int64                                         SubCategoryID;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Sub_Categories_Scroll_C_Event_On_Subcategory_Select_Event;
 
 // Function UI_Sub-Categories_Scroll.UI_Sub-Categories_Scroll_C.ExecuteUbergraph_UI_Sub-Categories_Scroll
 // 0x0108 (0x0108 - 0x0000)
@@ -77,7 +75,6 @@ public:
 	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x00F8(0x0008)(NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Sub_Categories_Scroll_C_ExecuteUbergraph_UI_Sub_Categories_Scroll;
 
 // Function UI_Sub-Categories_Scroll.UI_Sub-Categories_Scroll_C.OnAddedToFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -86,7 +83,6 @@ struct UI_Sub_Categories_Scroll_C_OnAddedToFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-DUMPER7_ASSERTS_UI_Sub_Categories_Scroll_C_OnAddedToFocusPath;
 
 // Function UI_Sub-Categories_Scroll.UI_Sub-Categories_Scroll_C.OnKeyDown
 // 0x0150 (0x0150 - 0x0000)
@@ -99,7 +95,6 @@ public:
 	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0130(0x0018)(HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Sub_Categories_Scroll_C_OnKeyDown;
 
 // Function UI_Sub-Categories_Scroll.UI_Sub-Categories_Scroll_C.OnRemovedFromFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -108,7 +103,6 @@ struct UI_Sub_Categories_Scroll_C_OnRemovedFromFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-DUMPER7_ASSERTS_UI_Sub_Categories_Scroll_C_OnRemovedFromFocusPath;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

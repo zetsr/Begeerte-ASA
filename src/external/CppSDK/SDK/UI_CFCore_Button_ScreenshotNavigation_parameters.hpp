@@ -23,7 +23,6 @@ struct UI_CFCore_Button_ScreenshotNavigation_C_ExecuteUbergraph_UI_CFCore_Button
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Button_ScreenshotNavigation_C_ExecuteUbergraph_UI_CFCore_Button_ScreenshotNavigation;
 
 // Function UI_CFCore_Button_ScreenshotNavigation.UI_CFCore_Button_ScreenshotNavigation_C.SimulateDisabled
 // 0x06F0 (0x06F0 - 0x0000)
@@ -35,7 +34,6 @@ public:
 	struct FButtonStyle                           K2Node_MakeStruct_ButtonStyle;                     // 0x0010(0x0370)()
 	struct FButtonStyle                           K2Node_MakeStruct_ButtonStyle_1;                   // 0x0380(0x0370)()
 };
-DUMPER7_ASSERTS_UI_CFCore_Button_ScreenshotNavigation_C_SimulateDisabled;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

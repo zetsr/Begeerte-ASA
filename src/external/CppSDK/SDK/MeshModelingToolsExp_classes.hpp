@@ -69,7 +69,6 @@ public:
 		return GetDefaultObjImpl<UBakeInputMeshProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeInputMeshProperties;
 
 // Class MeshModelingToolsExp.BakeNormalMapToolProperties
 // 0x0000 (0x00A8 - 0x00A8)
@@ -89,7 +88,6 @@ public:
 		return GetDefaultObjImpl<UBakeNormalMapToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeNormalMapToolProperties;
 
 // Class MeshModelingToolsExp.BakeOcclusionMapToolProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -117,7 +115,6 @@ public:
 		return GetDefaultObjImpl<UBakeOcclusionMapToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeOcclusionMapToolProperties;
 
 // Class MeshModelingToolsExp.BakeCurvatureMapToolProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -145,7 +142,6 @@ public:
 		return GetDefaultObjImpl<UBakeCurvatureMapToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeCurvatureMapToolProperties;
 
 // Class MeshModelingToolsExp.BakeUVShellMapToolProperties
 // 0x0038 (0x00E0 - 0x00A8)
@@ -172,7 +168,6 @@ public:
 		return GetDefaultObjImpl<UBakeUVShellMapToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeUVShellMapToolProperties;
 
 // Class MeshModelingToolsExp.BakeTexture2DProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -200,7 +195,6 @@ public:
 		return GetDefaultObjImpl<UBakeTexture2DProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeTexture2DProperties;
 
 // Class MeshModelingToolsExp.BakeMultiTexture2DProperties
 // 0x0040 (0x00E8 - 0x00A8)
@@ -229,7 +223,6 @@ public:
 		return GetDefaultObjImpl<UBakeMultiTexture2DProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMultiTexture2DProperties;
 
 // Class MeshModelingToolsExp.BakeVisualizationProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -256,7 +249,6 @@ public:
 		return GetDefaultObjImpl<UBakeVisualizationProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeVisualizationProperties;
 
 // Class MeshModelingToolsExp.ExtrudeMeshSelectionToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -276,7 +268,6 @@ public:
 		return GetDefaultObjImpl<UExtrudeMeshSelectionToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UExtrudeMeshSelectionToolBuilder;
 
 // Class MeshModelingToolsExp.ExtrudeMeshSelectionToolProperties
 // 0x0048 (0x00F0 - 0x00A8)
@@ -318,7 +309,6 @@ public:
 		return GetDefaultObjImpl<UExtrudeMeshSelectionToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UExtrudeMeshSelectionToolProperties;
 
 // Class MeshModelingToolsExp.ExtrudeMeshSelectionTool
 // 0x0748 (0x0868 - 0x0120)
@@ -346,7 +336,6 @@ public:
 		return GetDefaultObjImpl<UExtrudeMeshSelectionTool>();
 	}
 };
-DUMPER7_ASSERTS_UExtrudeMeshSelectionTool;
 
 // Class MeshModelingToolsExp.MeshSculptBrushOpProps
 // 0x0000 (0x00A8 - 0x00A8)
@@ -366,7 +355,6 @@ public:
 		return GetDefaultObjImpl<UMeshSculptBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSculptBrushOpProps;
 
 // Class MeshModelingToolsExp.BaseKelvinletBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -392,7 +380,6 @@ public:
 		return GetDefaultObjImpl<UBaseKelvinletBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UBaseKelvinletBrushOpProps;
 
 // Class MeshModelingToolsExp.ScaleKelvinletBrushOpProps
 // 0x0008 (0x00C0 - 0x00B8)
@@ -416,7 +403,6 @@ public:
 		return GetDefaultObjImpl<UScaleKelvinletBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UScaleKelvinletBrushOpProps;
 
 // Class MeshModelingToolsExp.PullKelvinletBrushOpProps
 // 0x0008 (0x00C0 - 0x00B8)
@@ -440,7 +426,6 @@ public:
 		return GetDefaultObjImpl<UPullKelvinletBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UPullKelvinletBrushOpProps;
 
 // Class MeshModelingToolsExp.SharpPullKelvinletBrushOpProps
 // 0x0008 (0x00C0 - 0x00B8)
@@ -464,7 +449,6 @@ public:
 		return GetDefaultObjImpl<USharpPullKelvinletBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_USharpPullKelvinletBrushOpProps;
 
 // Class MeshModelingToolsExp.TwistKelvinletBrushOpProps
 // 0x0008 (0x00C0 - 0x00B8)
@@ -488,7 +472,6 @@ public:
 		return GetDefaultObjImpl<UTwistKelvinletBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UTwistKelvinletBrushOpProps;
 
 // Class MeshModelingToolsExp.GroupEraseBrushOpProps
 // 0x0048 (0x00F0 - 0x00A8)
@@ -513,7 +496,6 @@ public:
 		return GetDefaultObjImpl<UGroupEraseBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UGroupEraseBrushOpProps;
 
 // Class MeshModelingToolsExp.GroupPaintBrushOpProps
 // 0x0008 (0x00B0 - 0x00A8)
@@ -538,7 +520,6 @@ public:
 		return GetDefaultObjImpl<UGroupPaintBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UGroupPaintBrushOpProps;
 
 // Class MeshModelingToolsExp.InflateBrushOpProps
 // 0x0008 (0x00B0 - 0x00A8)
@@ -562,7 +543,6 @@ public:
 		return GetDefaultObjImpl<UInflateBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UInflateBrushOpProps;
 
 // Class MeshModelingToolsExp.MoveBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -589,7 +569,6 @@ public:
 		return GetDefaultObjImpl<UMoveBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UMoveBrushOpProps;
 
 // Class MeshModelingToolsExp.PinchBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -616,7 +595,6 @@ public:
 		return GetDefaultObjImpl<UPinchBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UPinchBrushOpProps;
 
 // Class MeshModelingToolsExp.BasePlaneBrushOpProps
 // 0x0000 (0x00A8 - 0x00A8)
@@ -636,7 +614,6 @@ public:
 		return GetDefaultObjImpl<UBasePlaneBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UBasePlaneBrushOpProps;
 
 // Class MeshModelingToolsExp.PlaneBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -663,7 +640,6 @@ public:
 		return GetDefaultObjImpl<UPlaneBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UPlaneBrushOpProps;
 
 // Class MeshModelingToolsExp.ViewAlignedPlaneBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -690,7 +666,6 @@ public:
 		return GetDefaultObjImpl<UViewAlignedPlaneBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UViewAlignedPlaneBrushOpProps;
 
 // Class MeshModelingToolsExp.FixedPlaneBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -717,7 +692,6 @@ public:
 		return GetDefaultObjImpl<UFixedPlaneBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UFixedPlaneBrushOpProps;
 
 // Class MeshModelingToolsExp.StandardSculptBrushOpProps
 // 0x0008 (0x00B0 - 0x00A8)
@@ -741,7 +715,6 @@ public:
 		return GetDefaultObjImpl<UStandardSculptBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UStandardSculptBrushOpProps;
 
 // Class MeshModelingToolsExp.ViewAlignedSculptBrushOpProps
 // 0x0008 (0x00B0 - 0x00A8)
@@ -765,7 +738,6 @@ public:
 		return GetDefaultObjImpl<UViewAlignedSculptBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UViewAlignedSculptBrushOpProps;
 
 // Class MeshModelingToolsExp.SculptMaxBrushOpProps
 // 0x0018 (0x00C0 - 0x00A8)
@@ -794,7 +766,6 @@ public:
 		return GetDefaultObjImpl<USculptMaxBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_USculptMaxBrushOpProps;
 
 // Class MeshModelingToolsExp.BaseSmoothBrushOpProps
 // 0x0000 (0x00A8 - 0x00A8)
@@ -814,7 +785,6 @@ public:
 		return GetDefaultObjImpl<UBaseSmoothBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UBaseSmoothBrushOpProps;
 
 // Class MeshModelingToolsExp.SmoothBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -840,7 +810,6 @@ public:
 		return GetDefaultObjImpl<USmoothBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_USmoothBrushOpProps;
 
 // Class MeshModelingToolsExp.SecondarySmoothBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -866,7 +835,6 @@ public:
 		return GetDefaultObjImpl<USecondarySmoothBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_USecondarySmoothBrushOpProps;
 
 // Class MeshModelingToolsExp.SmoothFillBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -892,7 +860,6 @@ public:
 		return GetDefaultObjImpl<USmoothFillBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_USmoothFillBrushOpProps;
 
 // Class MeshModelingToolsExp.FlattenBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -919,7 +886,6 @@ public:
 		return GetDefaultObjImpl<UFlattenBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UFlattenBrushOpProps;
 
 // Class MeshModelingToolsExp.EraseBrushOpProps
 // 0x0008 (0x00B0 - 0x00A8)
@@ -943,7 +909,6 @@ public:
 		return GetDefaultObjImpl<UEraseBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UEraseBrushOpProps;
 
 // Class MeshModelingToolsExp.VertexColorBaseBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -970,7 +935,6 @@ public:
 		return GetDefaultObjImpl<UVertexColorBaseBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UVertexColorBaseBrushOpProps;
 
 // Class MeshModelingToolsExp.VertexColorPaintBrushOpProps
 // 0x0010 (0x00C8 - 0x00B8)
@@ -993,7 +957,6 @@ public:
 		return GetDefaultObjImpl<UVertexColorPaintBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UVertexColorPaintBrushOpProps;
 
 // Class MeshModelingToolsExp.VertexColorSoftenBrushOpProps
 // 0x0000 (0x00B8 - 0x00B8)
@@ -1013,7 +976,6 @@ public:
 		return GetDefaultObjImpl<UVertexColorSoftenBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UVertexColorSoftenBrushOpProps;
 
 // Class MeshModelingToolsExp.VertexColorSmoothBrushOpProps
 // 0x0000 (0x00B8 - 0x00B8)
@@ -1033,7 +995,6 @@ public:
 		return GetDefaultObjImpl<UVertexColorSmoothBrushOpProps>();
 	}
 };
-DUMPER7_ASSERTS_UVertexColorSmoothBrushOpProps;
 
 // Class MeshModelingToolsExp.OffsetMeshSelectionToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1053,7 +1014,6 @@ public:
 		return GetDefaultObjImpl<UOffsetMeshSelectionToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UOffsetMeshSelectionToolBuilder;
 
 // Class MeshModelingToolsExp.OffsetMeshSelectionToolProperties
 // 0x0038 (0x00E0 - 0x00A8)
@@ -1092,7 +1052,6 @@ public:
 		return GetDefaultObjImpl<UOffsetMeshSelectionToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UOffsetMeshSelectionToolProperties;
 
 // Class MeshModelingToolsExp.OffsetMeshSelectionTool
 // 0x0738 (0x0858 - 0x0120)
@@ -1118,7 +1077,6 @@ public:
 		return GetDefaultObjImpl<UOffsetMeshSelectionTool>();
 	}
 };
-DUMPER7_ASSERTS_UOffsetMeshSelectionTool;
 
 // Class MeshModelingToolsExp.PatternToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -1141,7 +1099,6 @@ public:
 		return GetDefaultObjImpl<UPatternToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UPatternToolBuilder;
 
 // Class MeshModelingToolsExp.PatternToolSettings
 // 0x0018 (0x00C0 - 0x00A8)
@@ -1174,7 +1131,6 @@ public:
 		return GetDefaultObjImpl<UPatternToolSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPatternToolSettings;
 
 // Class MeshModelingToolsExp.PatternTool_BoundingBoxSettings
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1201,7 +1157,6 @@ public:
 		return GetDefaultObjImpl<UPatternTool_BoundingBoxSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPatternTool_BoundingBoxSettings;
 
 // Class MeshModelingToolsExp.PatternTool_LinearSettings
 // 0x0020 (0x00C8 - 0x00A8)
@@ -1230,7 +1185,6 @@ public:
 		return GetDefaultObjImpl<UPatternTool_LinearSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPatternTool_LinearSettings;
 
 // Class MeshModelingToolsExp.PatternTool_GridSettings
 // 0x0038 (0x00E0 - 0x00A8)
@@ -1265,7 +1219,6 @@ public:
 		return GetDefaultObjImpl<UPatternTool_GridSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPatternTool_GridSettings;
 
 // Class MeshModelingToolsExp.PatternTool_RadialSettings
 // 0x0038 (0x00E0 - 0x00A8)
@@ -1297,7 +1250,6 @@ public:
 		return GetDefaultObjImpl<UPatternTool_RadialSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPatternTool_RadialSettings;
 
 // Class MeshModelingToolsExp.PatternTool_RotationSettings
 // 0x0050 (0x00F8 - 0x00A8)
@@ -1325,7 +1277,6 @@ public:
 		return GetDefaultObjImpl<UPatternTool_RotationSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPatternTool_RotationSettings;
 
 // Class MeshModelingToolsExp.PatternTool_TranslationSettings
 // 0x0050 (0x00F8 - 0x00A8)
@@ -1353,7 +1304,6 @@ public:
 		return GetDefaultObjImpl<UPatternTool_TranslationSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPatternTool_TranslationSettings;
 
 // Class MeshModelingToolsExp.PatternTool_ScaleSettings
 // 0x0050 (0x00F8 - 0x00A8)
@@ -1382,7 +1332,6 @@ public:
 		return GetDefaultObjImpl<UPatternTool_ScaleSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPatternTool_ScaleSettings;
 
 // Class MeshModelingToolsExp.PatternTool_OutputSettings
 // 0x0008 (0x00B0 - 0x00A8)
@@ -1410,7 +1359,6 @@ public:
 		return GetDefaultObjImpl<UPatternTool_OutputSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPatternTool_OutputSettings;
 
 // Class MeshModelingToolsExp.PatternTool
 // 0x03B8 (0x0470 - 0x00B8)
@@ -1452,7 +1400,6 @@ public:
 		return GetDefaultObjImpl<UPatternTool>();
 	}
 };
-DUMPER7_ASSERTS_UPatternTool;
 
 // Class MeshModelingToolsExp.MeshConstraintProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -1485,7 +1432,6 @@ public:
 		return GetDefaultObjImpl<UMeshConstraintProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshConstraintProperties;
 
 // Class MeshModelingToolsExp.RemeshProperties
 // 0x0008 (0x00B8 - 0x00B0)
@@ -1512,7 +1458,6 @@ public:
 		return GetDefaultObjImpl<URemeshProperties>();
 	}
 };
-DUMPER7_ASSERTS_URemeshProperties;
 
 // Class MeshModelingToolsExp.RevolveSplineToolProperties
 // 0x0050 (0x0168 - 0x0118)
@@ -1545,7 +1490,6 @@ public:
 		return GetDefaultObjImpl<URevolveSplineToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_URevolveSplineToolProperties;
 
 // Class MeshModelingToolsExp.RevolveSplineToolActionPropertySet
 // 0x0008 (0x00B0 - 0x00A8)
@@ -1571,7 +1515,6 @@ public:
 		return GetDefaultObjImpl<URevolveSplineToolActionPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_URevolveSplineToolActionPropertySet;
 
 // Class MeshModelingToolsExp.BaseMeshFromSplinesTool
 // 0x0068 (0x0100 - 0x0098)
@@ -1600,7 +1543,6 @@ public:
 		return GetDefaultObjImpl<UBaseMeshFromSplinesTool>();
 	}
 };
-DUMPER7_ASSERTS_UBaseMeshFromSplinesTool;
 
 // Class MeshModelingToolsExp.RevolveSplineTool
 // 0x0090 (0x0190 - 0x0100)
@@ -1626,7 +1568,6 @@ public:
 		return GetDefaultObjImpl<URevolveSplineTool>();
 	}
 };
-DUMPER7_ASSERTS_URevolveSplineTool;
 
 // Class MeshModelingToolsExp.BaseMeshFromSplinesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1646,7 +1587,6 @@ public:
 		return GetDefaultObjImpl<UBaseMeshFromSplinesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UBaseMeshFromSplinesToolBuilder;
 
 // Class MeshModelingToolsExp.RevolveSplineToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1666,7 +1606,6 @@ public:
 		return GetDefaultObjImpl<URevolveSplineToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_URevolveSplineToolBuilder;
 
 // Class MeshModelingToolsExp.UVTransferToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1686,7 +1625,6 @@ public:
 		return GetDefaultObjImpl<UUVTransferToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UUVTransferToolBuilder;
 
 // Class MeshModelingToolsExp.UVTransferToolProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -1717,7 +1655,6 @@ public:
 		return GetDefaultObjImpl<UUVTransferToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UUVTransferToolProperties;
 
 // Class MeshModelingToolsExp.UVTransferTool
 // 0x0108 (0x01F0 - 0x00E8)
@@ -1748,7 +1685,6 @@ public:
 		return GetDefaultObjImpl<UUVTransferTool>();
 	}
 };
-DUMPER7_ASSERTS_UUVTransferTool;
 
 // Class MeshModelingToolsExp.AddPatchToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1768,7 +1704,6 @@ public:
 		return GetDefaultObjImpl<UAddPatchToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UAddPatchToolBuilder;
 
 // Class MeshModelingToolsExp.AddPatchToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1794,7 +1729,6 @@ public:
 		return GetDefaultObjImpl<UAddPatchToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UAddPatchToolProperties;
 
 // Class MeshModelingToolsExp.AddPatchTool
 // 0x0088 (0x0128 - 0x00A0)
@@ -1821,7 +1755,6 @@ public:
 		return GetDefaultObjImpl<UAddPatchTool>();
 	}
 };
-DUMPER7_ASSERTS_UAddPatchTool;
 
 // Class MeshModelingToolsExp.AlignObjectsToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1841,7 +1774,6 @@ public:
 		return GetDefaultObjImpl<UAlignObjectsToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UAlignObjectsToolBuilder;
 
 // Class MeshModelingToolsExp.AlignObjectsToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1870,7 +1802,6 @@ public:
 		return GetDefaultObjImpl<UAlignObjectsToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UAlignObjectsToolProperties;
 
 // Class MeshModelingToolsExp.AlignObjectsTool
 // 0x00A0 (0x0158 - 0x00B8)
@@ -1895,7 +1826,6 @@ public:
 		return GetDefaultObjImpl<UAlignObjectsTool>();
 	}
 };
-DUMPER7_ASSERTS_UAlignObjectsTool;
 
 // Class MeshModelingToolsExp.BakeMeshAttributeMapsToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1915,7 +1845,6 @@ public:
 		return GetDefaultObjImpl<UBakeMeshAttributeMapsToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMeshAttributeMapsToolBuilder;
 
 // Class MeshModelingToolsExp.BakeMeshAttributeMapsToolProperties
 // 0x0090 (0x0138 - 0x00A8)
@@ -1950,7 +1879,6 @@ public:
 		return GetDefaultObjImpl<UBakeMeshAttributeMapsToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMeshAttributeMapsToolProperties;
 
 // Class MeshModelingToolsExp.BakeMeshAttributeTool
 // 0x00F0 (0x01A8 - 0x00B8)
@@ -1980,7 +1908,6 @@ public:
 		return GetDefaultObjImpl<UBakeMeshAttributeTool>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMeshAttributeTool;
 
 // Class MeshModelingToolsExp.BakeMeshAttributeMapsToolBase
 // 0x0178 (0x0320 - 0x01A8)
@@ -2013,7 +1940,6 @@ public:
 		return GetDefaultObjImpl<UBakeMeshAttributeMapsToolBase>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMeshAttributeMapsToolBase;
 
 // Class MeshModelingToolsExp.BakeMeshAttributeMapsTool
 // 0x00B8 (0x03D8 - 0x0320)
@@ -2040,7 +1966,6 @@ public:
 		return GetDefaultObjImpl<UBakeMeshAttributeMapsTool>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMeshAttributeMapsTool;
 
 // Class MeshModelingToolsExp.BakeMeshAttributeMapsResultToolProperties
 // 0x0050 (0x00F8 - 0x00A8)
@@ -2063,7 +1988,6 @@ public:
 		return GetDefaultObjImpl<UBakeMeshAttributeMapsResultToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMeshAttributeMapsResultToolProperties;
 
 // Class MeshModelingToolsExp.BakeMeshAttributeVertexToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -2083,7 +2007,6 @@ public:
 		return GetDefaultObjImpl<UBakeMeshAttributeVertexToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMeshAttributeVertexToolBuilder;
 
 // Class MeshModelingToolsExp.BakeMeshAttributeVertexToolProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -2115,7 +2038,6 @@ public:
 		return GetDefaultObjImpl<UBakeMeshAttributeVertexToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMeshAttributeVertexToolProperties;
 
 // Class MeshModelingToolsExp.BakeMeshAttributeVertexTool
 // 0x0108 (0x02B0 - 0x01A8)
@@ -2144,7 +2066,6 @@ public:
 		return GetDefaultObjImpl<UBakeMeshAttributeVertexTool>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMeshAttributeVertexTool;
 
 // Class MeshModelingToolsExp.BakeMultiMeshAttributeMapsToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -2164,7 +2085,6 @@ public:
 		return GetDefaultObjImpl<UBakeMultiMeshAttributeMapsToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMultiMeshAttributeMapsToolBuilder;
 
 // Class MeshModelingToolsExp.BakeMultiMeshAttributeMapsToolProperties
 // 0x0090 (0x0138 - 0x00A8)
@@ -2199,7 +2119,6 @@ public:
 		return GetDefaultObjImpl<UBakeMultiMeshAttributeMapsToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMultiMeshAttributeMapsToolProperties;
 
 // Class MeshModelingToolsExp.BakeMultiMeshInputToolProperties
 // 0x0050 (0x00F8 - 0x00A8)
@@ -2232,7 +2151,6 @@ public:
 		return GetDefaultObjImpl<UBakeMultiMeshInputToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMultiMeshInputToolProperties;
 
 // Class MeshModelingToolsExp.BakeMultiMeshAttributeMapsTool
 // 0x00A8 (0x03C8 - 0x0320)
@@ -2258,7 +2176,6 @@ public:
 		return GetDefaultObjImpl<UBakeMultiMeshAttributeMapsTool>();
 	}
 };
-DUMPER7_ASSERTS_UBakeMultiMeshAttributeMapsTool;
 
 // Class MeshModelingToolsExp.BakeTransformToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -2278,7 +2195,6 @@ public:
 		return GetDefaultObjImpl<UBakeTransformToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UBakeTransformToolBuilder;
 
 // Class MeshModelingToolsExp.BakeTransformToolProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -2306,7 +2222,6 @@ public:
 		return GetDefaultObjImpl<UBakeTransformToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBakeTransformToolProperties;
 
 // Class MeshModelingToolsExp.BakeTransformTool
 // 0x0020 (0x00D8 - 0x00B8)
@@ -2331,7 +2246,6 @@ public:
 		return GetDefaultObjImpl<UBakeTransformTool>();
 	}
 };
-DUMPER7_ASSERTS_UBakeTransformTool;
 
 // Class MeshModelingToolsExp.ConvertMeshesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -2351,7 +2265,6 @@ public:
 		return GetDefaultObjImpl<UConvertMeshesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UConvertMeshesToolBuilder;
 
 // Class MeshModelingToolsExp.ConvertMeshesToolProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -2377,7 +2290,6 @@ public:
 		return GetDefaultObjImpl<UConvertMeshesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UConvertMeshesToolProperties;
 
 // Class MeshModelingToolsExp.ConvertMeshesTool
 // 0x0030 (0x00C8 - 0x0098)
@@ -2404,7 +2316,6 @@ public:
 		return GetDefaultObjImpl<UConvertMeshesTool>();
 	}
 };
-DUMPER7_ASSERTS_UConvertMeshesTool;
 
 // Class MeshModelingToolsExp.ConvertToPolygonsToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -2424,7 +2335,6 @@ public:
 		return GetDefaultObjImpl<UConvertToPolygonsToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UConvertToPolygonsToolBuilder;
 
 // Class MeshModelingToolsExp.ConvertToPolygonsToolProperties
 // 0x0060 (0x0108 - 0x00A8)
@@ -2473,7 +2383,6 @@ public:
 		return GetDefaultObjImpl<UConvertToPolygonsToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UConvertToPolygonsToolProperties;
 
 // Class MeshModelingToolsExp.ConvertToPolygonsOperatorFactory
 // 0x0010 (0x0038 - 0x0028)
@@ -2497,7 +2406,6 @@ public:
 		return GetDefaultObjImpl<UConvertToPolygonsOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_UConvertToPolygonsOperatorFactory;
 
 // Class MeshModelingToolsExp.ConvertToPolygonsTool
 // 0x0090 (0x01B0 - 0x0120)
@@ -2525,7 +2433,6 @@ public:
 		return GetDefaultObjImpl<UConvertToPolygonsTool>();
 	}
 };
-DUMPER7_ASSERTS_UConvertToPolygonsTool;
 
 // Class MeshModelingToolsExp.CubeGridToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -2548,7 +2455,6 @@ public:
 		return GetDefaultObjImpl<UCubeGridToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UCubeGridToolBuilder;
 
 // Class MeshModelingToolsExp.CubeGridToolProperties
 // 0x0100 (0x01A8 - 0x00A8)
@@ -2602,7 +2508,6 @@ public:
 		return GetDefaultObjImpl<UCubeGridToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UCubeGridToolProperties;
 
 // Class MeshModelingToolsExp.CubeGridToolActions
 // 0x0010 (0x00B8 - 0x00A8)
@@ -2636,7 +2541,6 @@ public:
 		return GetDefaultObjImpl<UCubeGridToolActions>();
 	}
 };
-DUMPER7_ASSERTS_UCubeGridToolActions;
 
 // Class MeshModelingToolsExp.CubeGridTool
 // 0x0598 (0x0630 - 0x0098)
@@ -2675,7 +2579,6 @@ public:
 		return GetDefaultObjImpl<UCubeGridTool>();
 	}
 };
-DUMPER7_ASSERTS_UCubeGridTool;
 
 // Class MeshModelingToolsExp.DeformMeshPolygonsToolBuilder
 // 0x0000 (0x0030 - 0x0030)
@@ -2695,7 +2598,6 @@ public:
 		return GetDefaultObjImpl<UDeformMeshPolygonsToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UDeformMeshPolygonsToolBuilder;
 
 // Class MeshModelingToolsExp.DeformMeshPolygonsTransformProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -2729,7 +2631,6 @@ public:
 		return GetDefaultObjImpl<UDeformMeshPolygonsTransformProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDeformMeshPolygonsTransformProperties;
 
 // Class MeshModelingToolsExp.DeformMeshPolygonsTool
 // 0x1700 (0x1800 - 0x0100)
@@ -2756,7 +2657,6 @@ public:
 		return GetDefaultObjImpl<UDeformMeshPolygonsTool>();
 	}
 };
-DUMPER7_ASSERTS_UDeformMeshPolygonsTool;
 
 // Class MeshModelingToolsExp.DisplaceMeshCommonProperties
 // 0x0038 (0x00E0 - 0x00A8)
@@ -2795,7 +2695,6 @@ public:
 		return GetDefaultObjImpl<UDisplaceMeshCommonProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDisplaceMeshCommonProperties;
 
 // Class MeshModelingToolsExp.SelectiveTessellationProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -2825,7 +2724,6 @@ public:
 		return GetDefaultObjImpl<USelectiveTessellationProperties>();
 	}
 };
-DUMPER7_ASSERTS_USelectiveTessellationProperties;
 
 // Class MeshModelingToolsExp.DisplaceMeshTextureMapProperties
 // 0x0048 (0x00F0 - 0x00A8)
@@ -2858,7 +2756,6 @@ public:
 		return GetDefaultObjImpl<UDisplaceMeshTextureMapProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDisplaceMeshTextureMapProperties;
 
 // Class MeshModelingToolsExp.DisplaceMeshDirectionalFilterProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -2885,7 +2782,6 @@ public:
 		return GetDefaultObjImpl<UDisplaceMeshDirectionalFilterProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDisplaceMeshDirectionalFilterProperties;
 
 // Class MeshModelingToolsExp.DisplaceMeshPerlinNoiseProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -2908,7 +2804,6 @@ public:
 		return GetDefaultObjImpl<UDisplaceMeshPerlinNoiseProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDisplaceMeshPerlinNoiseProperties;
 
 // Class MeshModelingToolsExp.DisplaceMeshSineWaveProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -2933,7 +2828,6 @@ public:
 		return GetDefaultObjImpl<UDisplaceMeshSineWaveProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDisplaceMeshSineWaveProperties;
 
 // Class MeshModelingToolsExp.DisplaceMeshToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -2953,7 +2847,6 @@ public:
 		return GetDefaultObjImpl<UDisplaceMeshToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UDisplaceMeshToolBuilder;
 
 // Class MeshModelingToolsExp.DisplaceMeshTool
 // 0x03B0 (0x04D0 - 0x0120)
@@ -2987,7 +2880,6 @@ public:
 		return GetDefaultObjImpl<UDisplaceMeshTool>();
 	}
 };
-DUMPER7_ASSERTS_UDisplaceMeshTool;
 
 // Class MeshModelingToolsExp.DrawPolyPathToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3007,7 +2899,6 @@ public:
 		return GetDefaultObjImpl<UDrawPolyPathToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UDrawPolyPathToolBuilder;
 
 // Class MeshModelingToolsExp.DrawPolyPathProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -3041,7 +2932,6 @@ public:
 		return GetDefaultObjImpl<UDrawPolyPathProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDrawPolyPathProperties;
 
 // Class MeshModelingToolsExp.VolumeToMeshToolProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -3068,7 +2958,6 @@ public:
 		return GetDefaultObjImpl<UVolumeToMeshToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UVolumeToMeshToolProperties;
 
 // Class MeshModelingToolsExp.DrawPolyPathExtrudeProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -3092,7 +2981,6 @@ public:
 		return GetDefaultObjImpl<UDrawPolyPathExtrudeProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDrawPolyPathExtrudeProperties;
 
 // Class MeshModelingToolsExp.DrawPolyPathTool
 // 0x01E8 (0x0280 - 0x0098)
@@ -3127,7 +3015,6 @@ public:
 		return GetDefaultObjImpl<UDrawPolyPathTool>();
 	}
 };
-DUMPER7_ASSERTS_UDrawPolyPathTool;
 
 // Class MeshModelingToolsExp.TransferMeshToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3147,7 +3034,6 @@ public:
 		return GetDefaultObjImpl<UTransferMeshToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UTransferMeshToolBuilder;
 
 // Class MeshModelingToolsExp.DynamicMeshBrushTool
 // 0x0048 (0x02F0 - 0x02A8)
@@ -3171,7 +3057,6 @@ public:
 		return GetDefaultObjImpl<UDynamicMeshBrushTool>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicMeshBrushTool;
 
 // Class MeshModelingToolsExp.DynamicMeshSculptToolBuilder
 // 0x0008 (0x0038 - 0x0030)
@@ -3194,7 +3079,6 @@ public:
 		return GetDefaultObjImpl<UDynamicMeshSculptToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicMeshSculptToolBuilder;
 
 // Class MeshModelingToolsExp.VoxelBlendMeshesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3214,7 +3098,6 @@ public:
 		return GetDefaultObjImpl<UVoxelBlendMeshesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UVoxelBlendMeshesToolBuilder;
 
 // Class MeshModelingToolsExp.DynamicMeshBrushProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -3241,7 +3124,6 @@ public:
 		return GetDefaultObjImpl<UDynamicMeshBrushProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicMeshBrushProperties;
 
 // Class MeshModelingToolsExp.DynamicMeshBrushSculptProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -3273,7 +3155,6 @@ public:
 		return GetDefaultObjImpl<UDynamicMeshBrushSculptProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicMeshBrushSculptProperties;
 
 // Class MeshModelingToolsExp.DynamicSculptToolActions
 // 0x0008 (0x00B0 - 0x00A8)
@@ -3299,7 +3180,6 @@ public:
 		return GetDefaultObjImpl<UDynamicSculptToolActions>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicSculptToolActions;
 
 // Class MeshModelingToolsExp.BrushRemeshProperties
 // 0x0010 (0x00C8 - 0x00B8)
@@ -3326,7 +3206,6 @@ public:
 		return GetDefaultObjImpl<UBrushRemeshProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBrushRemeshProperties;
 
 // Class MeshModelingToolsExp.VoxelSolidifyMeshesToolProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -3355,7 +3234,6 @@ public:
 		return GetDefaultObjImpl<UVoxelSolidifyMeshesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UVoxelSolidifyMeshesToolProperties;
 
 // Class MeshModelingToolsExp.FixedPlaneBrushProperties
 // 0x0048 (0x00F0 - 0x00A8)
@@ -3383,7 +3261,6 @@ public:
 		return GetDefaultObjImpl<UFixedPlaneBrushProperties>();
 	}
 };
-DUMPER7_ASSERTS_UFixedPlaneBrushProperties;
 
 // Class MeshModelingToolsExp.DynamicMeshSculptTool
 // 0x0F20 (0x1020 - 0x0100)
@@ -3424,7 +3301,6 @@ public:
 		return GetDefaultObjImpl<UDynamicMeshSculptTool>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicMeshSculptTool;
 
 // Class MeshModelingToolsExp.TriangulateSplinesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3444,7 +3320,6 @@ public:
 		return GetDefaultObjImpl<UTriangulateSplinesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UTriangulateSplinesToolBuilder;
 
 // Class MeshModelingToolsExp.EditNormalsToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3464,7 +3339,6 @@ public:
 		return GetDefaultObjImpl<UEditNormalsToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UEditNormalsToolBuilder;
 
 // Class MeshModelingToolsExp.EditNormalsToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -3496,7 +3370,6 @@ public:
 		return GetDefaultObjImpl<UEditNormalsToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UEditNormalsToolProperties;
 
 // Class MeshModelingToolsExp.WeldMeshEdgesToolProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -3532,7 +3405,6 @@ public:
 		return GetDefaultObjImpl<UWeldMeshEdgesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UWeldMeshEdgesToolProperties;
 
 // Class MeshModelingToolsExp.EditNormalsOperatorFactory
 // 0x0018 (0x0040 - 0x0028)
@@ -3557,7 +3429,6 @@ public:
 		return GetDefaultObjImpl<UEditNormalsOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_UEditNormalsOperatorFactory;
 
 // Class MeshModelingToolsExp.EditNormalsTool
 // 0x0208 (0x02C0 - 0x00B8)
@@ -3587,7 +3458,6 @@ public:
 		return GetDefaultObjImpl<UEditNormalsTool>();
 	}
 };
-DUMPER7_ASSERTS_UEditNormalsTool;
 
 // Class MeshModelingToolsExp.SmoothMeshToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3607,7 +3477,6 @@ public:
 		return GetDefaultObjImpl<USmoothMeshToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_USmoothMeshToolBuilder;
 
 // Class MeshModelingToolsExp.EditPivotToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3627,7 +3496,6 @@ public:
 		return GetDefaultObjImpl<UEditPivotToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UEditPivotToolBuilder;
 
 // Class MeshModelingToolsExp.EditPivotToolProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -3654,7 +3522,6 @@ public:
 		return GetDefaultObjImpl<UEditPivotToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UEditPivotToolProperties;
 
 // Class MeshModelingToolsExp.EditPivotToolActionPropertySet
 // 0x0010 (0x00B8 - 0x00A8)
@@ -3689,7 +3556,6 @@ public:
 		return GetDefaultObjImpl<UEditPivotToolActionPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_UEditPivotToolActionPropertySet;
 
 // Class MeshModelingToolsExp.EditPivotTool
 // 0x01F8 (0x02B0 - 0x00B8)
@@ -3718,7 +3584,6 @@ public:
 		return GetDefaultObjImpl<UEditPivotTool>();
 	}
 };
-DUMPER7_ASSERTS_UEditPivotTool;
 
 // Class MeshModelingToolsExp.VoxelMorphologyMeshesTool
 // 0x0008 (0x0128 - 0x0120)
@@ -3741,7 +3606,6 @@ public:
 		return GetDefaultObjImpl<UVoxelMorphologyMeshesTool>();
 	}
 };
-DUMPER7_ASSERTS_UVoxelMorphologyMeshesTool;
 
 // Class MeshModelingToolsExp.EditUVIslandsToolBuilder
 // 0x0000 (0x0030 - 0x0030)
@@ -3761,7 +3625,6 @@ public:
 		return GetDefaultObjImpl<UEditUVIslandsToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UEditUVIslandsToolBuilder;
 
 // Class MeshModelingToolsExp.EditUVIslandsTool
 // 0x03E0 (0x04E0 - 0x0100)
@@ -3793,7 +3656,6 @@ public:
 		return GetDefaultObjImpl<UEditUVIslandsTool>();
 	}
 };
-DUMPER7_ASSERTS_UEditUVIslandsTool;
 
 // Class MeshModelingToolsExp.HoleFillToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3813,7 +3675,6 @@ public:
 		return GetDefaultObjImpl<UHoleFillToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UHoleFillToolBuilder;
 
 // Class MeshModelingToolsExp.SmoothHoleFillProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -3845,7 +3706,6 @@ public:
 		return GetDefaultObjImpl<USmoothHoleFillProperties>();
 	}
 };
-DUMPER7_ASSERTS_USmoothHoleFillProperties;
 
 // Class MeshModelingToolsExp.TransformMeshesToolProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -3875,7 +3735,6 @@ public:
 		return GetDefaultObjImpl<UTransformMeshesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UTransformMeshesToolProperties;
 
 // Class MeshModelingToolsExp.HoleFillToolProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -3901,7 +3760,6 @@ public:
 		return GetDefaultObjImpl<UHoleFillToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UHoleFillToolProperties;
 
 // Class MeshModelingToolsExp.HoleFillToolActions
 // 0x0008 (0x00B0 - 0x00A8)
@@ -3928,7 +3786,6 @@ public:
 		return GetDefaultObjImpl<UHoleFillToolActions>();
 	}
 };
-DUMPER7_ASSERTS_UHoleFillToolActions;
 
 // Class MeshModelingToolsExp.HoleFillStatisticsProperties
 // 0x0050 (0x00F8 - 0x00A8)
@@ -3955,7 +3812,6 @@ public:
 		return GetDefaultObjImpl<UHoleFillStatisticsProperties>();
 	}
 };
-DUMPER7_ASSERTS_UHoleFillStatisticsProperties;
 
 // Class MeshModelingToolsExp.HoleFillOperatorFactory
 // 0x0010 (0x0038 - 0x0028)
@@ -3979,7 +3835,6 @@ public:
 		return GetDefaultObjImpl<UHoleFillOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_UHoleFillOperatorFactory;
 
 // Class MeshModelingToolsExp.WeldMeshEdgesTool
 // 0x0080 (0x01A0 - 0x0120)
@@ -4006,7 +3861,6 @@ public:
 		return GetDefaultObjImpl<UWeldMeshEdgesTool>();
 	}
 };
-DUMPER7_ASSERTS_UWeldMeshEdgesTool;
 
 // Class MeshModelingToolsExp.HoleFillTool
 // 0x0190 (0x0240 - 0x00B0)
@@ -4035,7 +3889,6 @@ public:
 		return GetDefaultObjImpl<UHoleFillTool>();
 	}
 };
-DUMPER7_ASSERTS_UHoleFillTool;
 
 // Class MeshModelingToolsExp.LatticeDeformerToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -4055,7 +3908,6 @@ public:
 		return GetDefaultObjImpl<ULatticeDeformerToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_ULatticeDeformerToolBuilder;
 
 // Class MeshModelingToolsExp.LatticeDeformerToolProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -4093,7 +3945,6 @@ public:
 		return GetDefaultObjImpl<ULatticeDeformerToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_ULatticeDeformerToolProperties;
 
 // Class MeshModelingToolsExp.LatticeDeformerOperatorFactory
 // 0x0010 (0x0038 - 0x0028)
@@ -4117,7 +3968,6 @@ public:
 		return GetDefaultObjImpl<ULatticeDeformerOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_ULatticeDeformerOperatorFactory;
 
 // Class MeshModelingToolsExp.VoxelBlendMeshesToolProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -4146,7 +3996,6 @@ public:
 		return GetDefaultObjImpl<UVoxelBlendMeshesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UVoxelBlendMeshesToolProperties;
 
 // Class MeshModelingToolsExp.LatticeDeformerTool
 // 0x0128 (0x0210 - 0x00E8)
@@ -4174,7 +4023,6 @@ public:
 		return GetDefaultObjImpl<ULatticeDeformerTool>();
 	}
 };
-DUMPER7_ASSERTS_ULatticeDeformerTool;
 
 // Class MeshModelingToolsExp.MeshAttributePaintToolBuilder
 // 0x0040 (0x0070 - 0x0030)
@@ -4197,7 +4045,6 @@ public:
 		return GetDefaultObjImpl<UMeshAttributePaintToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMeshAttributePaintToolBuilder;
 
 // Class MeshModelingToolsExp.MeshAttributePaintBrushOperationProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -4221,7 +4068,6 @@ public:
 		return GetDefaultObjImpl<UMeshAttributePaintBrushOperationProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshAttributePaintBrushOperationProperties;
 
 // Class MeshModelingToolsExp.MeshAttributePaintToolProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -4248,7 +4094,6 @@ public:
 		return GetDefaultObjImpl<UMeshAttributePaintToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshAttributePaintToolProperties;
 
 // Class MeshModelingToolsExp.MeshAttributePaintEditActions
 // 0x0008 (0x00B0 - 0x00A8)
@@ -4271,7 +4116,6 @@ public:
 		return GetDefaultObjImpl<UMeshAttributePaintEditActions>();
 	}
 };
-DUMPER7_ASSERTS_UMeshAttributePaintEditActions;
 
 // Class MeshModelingToolsExp.MeshAttributePaintTool
 // 0x0540 (0x0830 - 0x02F0)
@@ -4297,7 +4141,6 @@ public:
 		return GetDefaultObjImpl<UMeshAttributePaintTool>();
 	}
 };
-DUMPER7_ASSERTS_UMeshAttributePaintTool;
 
 // Class MeshModelingToolsExp.MeshBoundaryToolBase
 // 0x00F0 (0x01A0 - 0x00B0)
@@ -4322,7 +4165,6 @@ public:
 		return GetDefaultObjImpl<UMeshBoundaryToolBase>();
 	}
 };
-DUMPER7_ASSERTS_UMeshBoundaryToolBase;
 
 // Class MeshModelingToolsExp.MeshGroupPaintToolBuilder
 // 0x0000 (0x0030 - 0x0030)
@@ -4342,7 +4184,6 @@ public:
 		return GetDefaultObjImpl<UMeshGroupPaintToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMeshGroupPaintToolBuilder;
 
 // Class MeshModelingToolsExp.GroupPaintBrushFilterProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -4386,7 +4227,6 @@ public:
 		return GetDefaultObjImpl<UGroupPaintBrushFilterProperties>();
 	}
 };
-DUMPER7_ASSERTS_UGroupPaintBrushFilterProperties;
 
 // Class MeshModelingToolsExp.MeshGroupPaintToolActionPropertySet
 // 0x0008 (0x00B0 - 0x00A8)
@@ -4409,7 +4249,6 @@ public:
 		return GetDefaultObjImpl<UMeshGroupPaintToolActionPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_UMeshGroupPaintToolActionPropertySet;
 
 // Class MeshModelingToolsExp.MeshGroupPaintToolFreezeActions
 // 0x0000 (0x00B0 - 0x00B0)
@@ -4439,7 +4278,6 @@ public:
 		return GetDefaultObjImpl<UMeshGroupPaintToolFreezeActions>();
 	}
 };
-DUMPER7_ASSERTS_UMeshGroupPaintToolFreezeActions;
 
 // Class MeshModelingToolsExp.MeshSculptToolBase
 // 0x0AA0 (0x0BA0 - 0x0100)
@@ -4478,7 +4316,6 @@ public:
 		return GetDefaultObjImpl<UMeshSculptToolBase>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSculptToolBase;
 
 // Class MeshModelingToolsExp.MeshGroupPaintTool
 // 0x0440 (0x0FE0 - 0x0BA0)
@@ -4511,7 +4348,6 @@ public:
 		return GetDefaultObjImpl<UMeshGroupPaintTool>();
 	}
 };
-DUMPER7_ASSERTS_UMeshGroupPaintTool;
 
 // Class MeshModelingToolsExp.MeshInspectorToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -4531,7 +4367,6 @@ public:
 		return GetDefaultObjImpl<UMeshInspectorToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMeshInspectorToolBuilder;
 
 // Class MeshModelingToolsExp.MeshInspectorProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -4569,7 +4404,6 @@ public:
 		return GetDefaultObjImpl<UMeshInspectorProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshInspectorProperties;
 
 // Class MeshModelingToolsExp.MeshInspectorMaterialProperties
 // 0x0078 (0x0120 - 0x00A8)
@@ -4610,7 +4444,6 @@ public:
 		return GetDefaultObjImpl<UMeshInspectorMaterialProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshInspectorMaterialProperties;
 
 // Class MeshModelingToolsExp.MeshInspectorTool
 // 0x01A0 (0x0250 - 0x00B0)
@@ -4641,7 +4474,6 @@ public:
 		return GetDefaultObjImpl<UMeshInspectorTool>();
 	}
 };
-DUMPER7_ASSERTS_UMeshInspectorTool;
 
 // Class MeshModelingToolsExp.MeshSelectionToolBuilder
 // 0x0000 (0x0030 - 0x0030)
@@ -4661,7 +4493,6 @@ public:
 		return GetDefaultObjImpl<UMeshSelectionToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSelectionToolBuilder;
 
 // Class MeshModelingToolsExp.SmoothWeightMapSetProperties
 // 0x0008 (0x00D0 - 0x00C8)
@@ -4685,7 +4516,6 @@ public:
 		return GetDefaultObjImpl<USmoothWeightMapSetProperties>();
 	}
 };
-DUMPER7_ASSERTS_USmoothWeightMapSetProperties;
 
 // Class MeshModelingToolsExp.MeshSelectionToolActionPropertySet
 // 0x0008 (0x00B0 - 0x00A8)
@@ -4708,7 +4538,6 @@ public:
 		return GetDefaultObjImpl<UMeshSelectionToolActionPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSelectionToolActionPropertySet;
 
 // Class MeshModelingToolsExp.MeshSelectionEditActions
 // 0x0000 (0x00B0 - 0x00B0)
@@ -4740,7 +4569,6 @@ public:
 		return GetDefaultObjImpl<UMeshSelectionEditActions>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSelectionEditActions;
 
 // Class MeshModelingToolsExp.MeshSelectionMeshEditActions
 // 0x0000 (0x00B0 - 0x00B0)
@@ -4769,7 +4597,6 @@ public:
 		return GetDefaultObjImpl<UMeshSelectionMeshEditActions>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSelectionMeshEditActions;
 
 // Class MeshModelingToolsExp.MeshSelectionToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -4797,7 +4624,6 @@ public:
 		return GetDefaultObjImpl<UMeshSelectionToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSelectionToolProperties;
 
 // Class MeshModelingToolsExp.SplitMeshesToolProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -4826,7 +4652,6 @@ public:
 		return GetDefaultObjImpl<USplitMeshesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_USplitMeshesToolProperties;
 
 // Class MeshModelingToolsExp.MeshSelectionTool
 // 0x0468 (0x0758 - 0x02F0)
@@ -4860,7 +4685,6 @@ public:
 		return GetDefaultObjImpl<UMeshSelectionTool>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSelectionTool;
 
 // Class MeshModelingToolsExp.MeshSpaceDeformerToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -4880,7 +4704,6 @@ public:
 		return GetDefaultObjImpl<UMeshSpaceDeformerToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSpaceDeformerToolBuilder;
 
 // Class MeshModelingToolsExp.MeshSpaceDeformerToolProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -4918,7 +4741,6 @@ public:
 		return GetDefaultObjImpl<UMeshSpaceDeformerToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSpaceDeformerToolProperties;
 
 // Class MeshModelingToolsExp.MeshSpaceDeformerToolActionPropertySet
 // 0x0008 (0x00B0 - 0x00A8)
@@ -4944,7 +4766,6 @@ public:
 		return GetDefaultObjImpl<UMeshSpaceDeformerToolActionPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSpaceDeformerToolActionPropertySet;
 
 // Class MeshModelingToolsExp.TransferMeshTool
 // 0x0010 (0x00C8 - 0x00B8)
@@ -4968,7 +4789,6 @@ public:
 		return GetDefaultObjImpl<UTransferMeshTool>();
 	}
 };
-DUMPER7_ASSERTS_UTransferMeshTool;
 
 // Class MeshModelingToolsExp.SpaceDeformerOperatorFactory
 // 0x0010 (0x0038 - 0x0028)
@@ -4992,7 +4812,6 @@ public:
 		return GetDefaultObjImpl<USpaceDeformerOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_USpaceDeformerOperatorFactory;
 
 // Class MeshModelingToolsExp.MeshSpaceDeformerTool
 // 0x0210 (0x02C0 - 0x00B0)
@@ -5029,7 +4848,6 @@ public:
 		return GetDefaultObjImpl<UMeshSpaceDeformerTool>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSpaceDeformerTool;
 
 // Class MeshModelingToolsExp.MeshVertexPaintToolBuilder
 // 0x0000 (0x0030 - 0x0030)
@@ -5049,7 +4867,6 @@ public:
 		return GetDefaultObjImpl<UMeshVertexPaintToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMeshVertexPaintToolBuilder;
 
 // Class MeshModelingToolsExp.VertexPaintBasicProperties
 // 0x0038 (0x00E0 - 0x00A8)
@@ -5083,7 +4900,6 @@ public:
 		return GetDefaultObjImpl<UVertexPaintBasicProperties>();
 	}
 };
-DUMPER7_ASSERTS_UVertexPaintBasicProperties;
 
 // Class MeshModelingToolsExp.TriangulateSplinesToolProperties
 // 0x0038 (0x00E0 - 0x00A8)
@@ -5119,7 +4935,6 @@ public:
 		return GetDefaultObjImpl<UTriangulateSplinesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UTriangulateSplinesToolProperties;
 
 // Class MeshModelingToolsExp.VertexPaintBrushFilterProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -5153,7 +4968,6 @@ public:
 		return GetDefaultObjImpl<UVertexPaintBrushFilterProperties>();
 	}
 };
-DUMPER7_ASSERTS_UVertexPaintBrushFilterProperties;
 
 // Class MeshModelingToolsExp.MeshVertexPaintToolActionPropertySet
 // 0x0008 (0x00B0 - 0x00A8)
@@ -5176,7 +4990,6 @@ public:
 		return GetDefaultObjImpl<UMeshVertexPaintToolActionPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_UMeshVertexPaintToolActionPropertySet;
 
 // Class MeshModelingToolsExp.MeshVertexPaintToolQuickActions
 // 0x0000 (0x00B0 - 0x00B0)
@@ -5202,7 +5015,6 @@ public:
 		return GetDefaultObjImpl<UMeshVertexPaintToolQuickActions>();
 	}
 };
-DUMPER7_ASSERTS_UMeshVertexPaintToolQuickActions;
 
 // Class MeshModelingToolsExp.MeshVertexPaintToolUtilityActions
 // 0x0050 (0x0100 - 0x00B0)
@@ -5243,7 +5055,6 @@ public:
 		return GetDefaultObjImpl<UMeshVertexPaintToolUtilityActions>();
 	}
 };
-DUMPER7_ASSERTS_UMeshVertexPaintToolUtilityActions;
 
 // Class MeshModelingToolsExp.MeshVertexPaintTool
 // 0x05A0 (0x1140 - 0x0BA0)
@@ -5279,7 +5090,6 @@ public:
 		return GetDefaultObjImpl<UMeshVertexPaintTool>();
 	}
 };
-DUMPER7_ASSERTS_UMeshVertexPaintTool;
 
 // Class MeshModelingToolsExp.MeshVertexSculptToolBuilder
 // 0x0000 (0x0030 - 0x0030)
@@ -5299,7 +5109,6 @@ public:
 		return GetDefaultObjImpl<UMeshVertexSculptToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMeshVertexSculptToolBuilder;
 
 // Class MeshModelingToolsExp.VertexBrushSculptProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -5327,7 +5136,6 @@ public:
 		return GetDefaultObjImpl<UVertexBrushSculptProperties>();
 	}
 };
-DUMPER7_ASSERTS_UVertexBrushSculptProperties;
 
 // Class MeshModelingToolsExp.VertexBrushAlphaProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -5356,7 +5164,6 @@ public:
 		return GetDefaultObjImpl<UVertexBrushAlphaProperties>();
 	}
 };
-DUMPER7_ASSERTS_UVertexBrushAlphaProperties;
 
 // Class MeshModelingToolsExp.MeshSymmetryProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -5381,7 +5188,6 @@ public:
 		return GetDefaultObjImpl<UMeshSymmetryProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSymmetryProperties;
 
 // Class MeshModelingToolsExp.MeshVertexSculptTool
 // 0x0960 (0x1500 - 0x0BA0)
@@ -5412,7 +5218,6 @@ public:
 		return GetDefaultObjImpl<UMeshVertexSculptTool>();
 	}
 };
-DUMPER7_ASSERTS_UMeshVertexSculptTool;
 
 // Class MeshModelingToolsExp.MirrorToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -5432,7 +5237,6 @@ public:
 		return GetDefaultObjImpl<UMirrorToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMirrorToolBuilder;
 
 // Class MeshModelingToolsExp.MirrorToolProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -5464,7 +5268,6 @@ public:
 		return GetDefaultObjImpl<UMirrorToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMirrorToolProperties;
 
 // Class MeshModelingToolsExp.MirrorOperatorFactory
 // 0x0018 (0x0040 - 0x0028)
@@ -5489,7 +5292,6 @@ public:
 		return GetDefaultObjImpl<UMirrorOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_UMirrorOperatorFactory;
 
 // Class MeshModelingToolsExp.MirrorToolActionPropertySet
 // 0x0010 (0x00B8 - 0x00A8)
@@ -5523,7 +5325,6 @@ public:
 		return GetDefaultObjImpl<UMirrorToolActionPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_UMirrorToolActionPropertySet;
 
 // Class MeshModelingToolsExp.MirrorTool
 // 0x00C0 (0x0178 - 0x00B8)
@@ -5555,7 +5356,6 @@ public:
 		return GetDefaultObjImpl<UMirrorTool>();
 	}
 };
-DUMPER7_ASSERTS_UMirrorTool;
 
 // Class MeshModelingToolsExp.OffsetMeshToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -5582,7 +5382,6 @@ public:
 		return GetDefaultObjImpl<UOffsetMeshToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UOffsetMeshToolProperties;
 
 // Class MeshModelingToolsExp.OffsetWeightMapSetProperties
 // 0x0008 (0x00D0 - 0x00C8)
@@ -5606,7 +5405,6 @@ public:
 		return GetDefaultObjImpl<UOffsetWeightMapSetProperties>();
 	}
 };
-DUMPER7_ASSERTS_UOffsetWeightMapSetProperties;
 
 // Class MeshModelingToolsExp.IterativeOffsetProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -5634,7 +5432,6 @@ public:
 		return GetDefaultObjImpl<UIterativeOffsetProperties>();
 	}
 };
-DUMPER7_ASSERTS_UIterativeOffsetProperties;
 
 // Class MeshModelingToolsExp.ImplicitOffsetProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -5659,7 +5456,6 @@ public:
 		return GetDefaultObjImpl<UImplicitOffsetProperties>();
 	}
 };
-DUMPER7_ASSERTS_UImplicitOffsetProperties;
 
 // Class MeshModelingToolsExp.OffsetMeshTool
 // 0x0020 (0x0490 - 0x0470)
@@ -5685,7 +5481,6 @@ public:
 		return GetDefaultObjImpl<UOffsetMeshTool>();
 	}
 };
-DUMPER7_ASSERTS_UOffsetMeshTool;
 
 // Class MeshModelingToolsExp.OffsetMeshToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -5705,7 +5500,6 @@ public:
 		return GetDefaultObjImpl<UOffsetMeshToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UOffsetMeshToolBuilder;
 
 // Class MeshModelingToolsExp.PhysicsObjectToolPropertySet
 // 0x0068 (0x0110 - 0x00A8)
@@ -5735,7 +5529,6 @@ public:
 		return GetDefaultObjImpl<UPhysicsObjectToolPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_UPhysicsObjectToolPropertySet;
 
 // Class MeshModelingToolsExp.CollisionGeometryVisualizationProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -5771,7 +5564,6 @@ public:
 		return GetDefaultObjImpl<UCollisionGeometryVisualizationProperties>();
 	}
 };
-DUMPER7_ASSERTS_UCollisionGeometryVisualizationProperties;
 
 // Class MeshModelingToolsExp.ExtractCollisionGeometryToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -5791,7 +5583,6 @@ public:
 		return GetDefaultObjImpl<UExtractCollisionGeometryToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UExtractCollisionGeometryToolBuilder;
 
 // Class MeshModelingToolsExp.ExtractCollisionToolProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -5819,7 +5610,6 @@ public:
 		return GetDefaultObjImpl<UExtractCollisionToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UExtractCollisionToolProperties;
 
 // Class MeshModelingToolsExp.ExtractCollisionGeometryTool
 // 0x0278 (0x0328 - 0x00B0)
@@ -5848,7 +5638,6 @@ public:
 		return GetDefaultObjImpl<UExtractCollisionGeometryTool>();
 	}
 };
-DUMPER7_ASSERTS_UExtractCollisionGeometryTool;
 
 // Class MeshModelingToolsExp.PhysicsInspectorToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -5868,7 +5657,6 @@ public:
 		return GetDefaultObjImpl<UPhysicsInspectorToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UPhysicsInspectorToolBuilder;
 
 // Class MeshModelingToolsExp.PhysicsInspectorTool
 // 0x0040 (0x00F8 - 0x00B8)
@@ -5895,7 +5683,6 @@ public:
 		return GetDefaultObjImpl<UPhysicsInspectorTool>();
 	}
 };
-DUMPER7_ASSERTS_UPhysicsInspectorTool;
 
 // Class MeshModelingToolsExp.SetCollisionGeometryToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -5915,7 +5702,6 @@ public:
 		return GetDefaultObjImpl<USetCollisionGeometryToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_USetCollisionGeometryToolBuilder;
 
 // Class MeshModelingToolsExp.SetCollisionGeometryToolProperties
 // 0x0078 (0x0120 - 0x00A8)
@@ -5977,7 +5763,6 @@ public:
 		return GetDefaultObjImpl<USetCollisionGeometryToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_USetCollisionGeometryToolProperties;
 
 // Class MeshModelingToolsExp.SetCollisionGeometryTool
 // 0x02C8 (0x0380 - 0x00B8)
@@ -6009,7 +5794,6 @@ public:
 		return GetDefaultObjImpl<USetCollisionGeometryTool>();
 	}
 };
-DUMPER7_ASSERTS_USetCollisionGeometryTool;
 
 // Class MeshModelingToolsExp.SimpleCollisionEditorToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -6029,7 +5813,6 @@ public:
 		return GetDefaultObjImpl<USimpleCollisionEditorToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_USimpleCollisionEditorToolBuilder;
 
 // Class MeshModelingToolsExp.SimpleCollisionEditorToolActionProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -6060,7 +5843,6 @@ public:
 		return GetDefaultObjImpl<USimpleCollisionEditorToolActionProperties>();
 	}
 };
-DUMPER7_ASSERTS_USimpleCollisionEditorToolActionProperties;
 
 // Class MeshModelingToolsExp.SimpleCollisionEditorTool
 // 0x0030 (0x00E0 - 0x00B0)
@@ -6085,7 +5867,6 @@ public:
 		return GetDefaultObjImpl<USimpleCollisionEditorTool>();
 	}
 };
-DUMPER7_ASSERTS_USimpleCollisionEditorTool;
 
 // Class MeshModelingToolsExp.PlaneCutToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -6105,7 +5886,6 @@ public:
 		return GetDefaultObjImpl<UPlaneCutToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UPlaneCutToolBuilder;
 
 // Class MeshModelingToolsExp.PlaneCutToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -6136,7 +5916,6 @@ public:
 		return GetDefaultObjImpl<UPlaneCutToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPlaneCutToolProperties;
 
 // Class MeshModelingToolsExp.PlaneCutOperatorFactory
 // 0x0018 (0x0040 - 0x0028)
@@ -6161,7 +5940,6 @@ public:
 		return GetDefaultObjImpl<UPlaneCutOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPlaneCutOperatorFactory;
 
 // Class MeshModelingToolsExp.PlaneCutTool
 // 0x00D8 (0x0190 - 0x00B8)
@@ -6192,7 +5970,6 @@ public:
 		return GetDefaultObjImpl<UPlaneCutTool>();
 	}
 };
-DUMPER7_ASSERTS_UPlaneCutTool;
 
 // Class MeshModelingToolsExp.ProjectToTargetToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -6212,7 +5989,6 @@ public:
 		return GetDefaultObjImpl<UProjectToTargetToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UProjectToTargetToolBuilder;
 
 // Class MeshModelingToolsExp.RemeshMeshToolProperties
 // 0x0028 (0x00E0 - 0x00B8)
@@ -6250,7 +6026,6 @@ public:
 		return GetDefaultObjImpl<URemeshMeshToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_URemeshMeshToolProperties;
 
 // Class MeshModelingToolsExp.ProjectToTargetToolProperties
 // 0x0020 (0x0100 - 0x00E0)
@@ -6283,7 +6058,6 @@ public:
 		return GetDefaultObjImpl<UProjectToTargetToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UProjectToTargetToolProperties;
 
 // Class MeshModelingToolsExp.RemeshMeshTool
 // 0x0050 (0x0108 - 0x00B8)
@@ -6311,7 +6085,6 @@ public:
 		return GetDefaultObjImpl<URemeshMeshTool>();
 	}
 };
-DUMPER7_ASSERTS_URemeshMeshTool;
 
 // Class MeshModelingToolsExp.VoxelSolidifyMeshesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -6331,7 +6104,6 @@ public:
 		return GetDefaultObjImpl<UVoxelSolidifyMeshesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UVoxelSolidifyMeshesToolBuilder;
 
 // Class MeshModelingToolsExp.ProjectToTargetTool
 // 0x0010 (0x0118 - 0x0108)
@@ -6354,7 +6126,6 @@ public:
 		return GetDefaultObjImpl<UProjectToTargetTool>();
 	}
 };
-DUMPER7_ASSERTS_UProjectToTargetTool;
 
 // Class MeshModelingToolsExp.MeshAnalysisProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -6378,7 +6149,6 @@ public:
 		return GetDefaultObjImpl<UMeshAnalysisProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshAnalysisProperties;
 
 // Class MeshModelingToolsExp.MeshStatisticsProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -6403,7 +6173,6 @@ public:
 		return GetDefaultObjImpl<UMeshStatisticsProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshStatisticsProperties;
 
 // Class MeshModelingToolsExp.RemeshMeshToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -6423,7 +6192,6 @@ public:
 		return GetDefaultObjImpl<URemeshMeshToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_URemeshMeshToolBuilder;
 
 // Class MeshModelingToolsExp.RemoveOccludedTrianglesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -6443,7 +6211,6 @@ public:
 		return GetDefaultObjImpl<URemoveOccludedTrianglesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_URemoveOccludedTrianglesToolBuilder;
 
 // Class MeshModelingToolsExp.RemoveOccludedTrianglesToolProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -6478,7 +6245,6 @@ public:
 		return GetDefaultObjImpl<URemoveOccludedTrianglesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_URemoveOccludedTrianglesToolProperties;
 
 // Class MeshModelingToolsExp.RemoveOccludedTrianglesAdvancedProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -6501,7 +6267,6 @@ public:
 		return GetDefaultObjImpl<URemoveOccludedTrianglesAdvancedProperties>();
 	}
 };
-DUMPER7_ASSERTS_URemoveOccludedTrianglesAdvancedProperties;
 
 // Class MeshModelingToolsExp.RemoveOccludedTrianglesOperatorFactory
 // 0x0018 (0x0040 - 0x0028)
@@ -6526,7 +6291,6 @@ public:
 		return GetDefaultObjImpl<URemoveOccludedTrianglesOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_URemoveOccludedTrianglesOperatorFactory;
 
 // Class MeshModelingToolsExp.RemoveOccludedTrianglesTool
 // 0x0118 (0x01D0 - 0x00B8)
@@ -6554,7 +6318,6 @@ public:
 		return GetDefaultObjImpl<URemoveOccludedTrianglesTool>();
 	}
 };
-DUMPER7_ASSERTS_URemoveOccludedTrianglesTool;
 
 // Class MeshModelingToolsExp.RevolveBoundaryToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -6574,7 +6337,6 @@ public:
 		return GetDefaultObjImpl<URevolveBoundaryToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_URevolveBoundaryToolBuilder;
 
 // Class MeshModelingToolsExp.RevolveBoundaryOperatorFactory
 // 0x0010 (0x0038 - 0x0028)
@@ -6598,7 +6360,6 @@ public:
 		return GetDefaultObjImpl<URevolveBoundaryOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_URevolveBoundaryOperatorFactory;
 
 // Class MeshModelingToolsExp.RevolveBoundaryToolProperties
 // 0x0030 (0x0148 - 0x0118)
@@ -6625,7 +6386,6 @@ public:
 		return GetDefaultObjImpl<URevolveBoundaryToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_URevolveBoundaryToolProperties;
 
 // Class MeshModelingToolsExp.RevolveBoundaryTool
 // 0x0070 (0x0210 - 0x01A0)
@@ -6654,7 +6414,6 @@ public:
 		return GetDefaultObjImpl<URevolveBoundaryTool>();
 	}
 };
-DUMPER7_ASSERTS_URevolveBoundaryTool;
 
 // Class MeshModelingToolsExp.SculptBrushProperties
 // 0x0038 (0x00E0 - 0x00A8)
@@ -6691,7 +6450,6 @@ public:
 		return GetDefaultObjImpl<USculptBrushProperties>();
 	}
 };
-DUMPER7_ASSERTS_USculptBrushProperties;
 
 // Class MeshModelingToolsExp.KelvinBrushProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -6717,7 +6475,6 @@ public:
 		return GetDefaultObjImpl<UKelvinBrushProperties>();
 	}
 };
-DUMPER7_ASSERTS_UKelvinBrushProperties;
 
 // Class MeshModelingToolsExp.WorkPlaneProperties
 // 0x0048 (0x00F0 - 0x00A8)
@@ -6745,7 +6502,6 @@ public:
 		return GetDefaultObjImpl<UWorkPlaneProperties>();
 	}
 };
-DUMPER7_ASSERTS_UWorkPlaneProperties;
 
 // Class MeshModelingToolsExp.SculptMaxBrushProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -6770,7 +6526,6 @@ public:
 		return GetDefaultObjImpl<USculptMaxBrushProperties>();
 	}
 };
-DUMPER7_ASSERTS_USculptMaxBrushProperties;
 
 // Class MeshModelingToolsExp.SeamSculptToolBuilder
 // 0x0000 (0x0030 - 0x0030)
@@ -6790,7 +6545,6 @@ public:
 		return GetDefaultObjImpl<USeamSculptToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_USeamSculptToolBuilder;
 
 // Class MeshModelingToolsExp.SeamSculptToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -6816,7 +6570,6 @@ public:
 		return GetDefaultObjImpl<USeamSculptToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_USeamSculptToolProperties;
 
 // Class MeshModelingToolsExp.SeamSculptTool
 // 0x0110 (0x0400 - 0x02F0)
@@ -6842,7 +6595,6 @@ public:
 		return GetDefaultObjImpl<USeamSculptTool>();
 	}
 };
-DUMPER7_ASSERTS_USeamSculptTool;
 
 // Class MeshModelingToolsExp.SelfUnionMeshesToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -6872,7 +6624,6 @@ public:
 		return GetDefaultObjImpl<USelfUnionMeshesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_USelfUnionMeshesToolProperties;
 
 // Class MeshModelingToolsExp.SelfUnionMeshesTool
 // 0x0048 (0x0150 - 0x0108)
@@ -6897,7 +6648,6 @@ public:
 		return GetDefaultObjImpl<USelfUnionMeshesTool>();
 	}
 };
-DUMPER7_ASSERTS_USelfUnionMeshesTool;
 
 // Class MeshModelingToolsExp.SelfUnionMeshesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -6917,7 +6667,6 @@ public:
 		return GetDefaultObjImpl<USelfUnionMeshesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_USelfUnionMeshesToolBuilder;
 
 // Class MeshModelingToolsExp.SmoothMeshToolProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -6941,7 +6690,6 @@ public:
 		return GetDefaultObjImpl<USmoothMeshToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_USmoothMeshToolProperties;
 
 // Class MeshModelingToolsExp.IterativeSmoothProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -6967,7 +6715,6 @@ public:
 		return GetDefaultObjImpl<UIterativeSmoothProperties>();
 	}
 };
-DUMPER7_ASSERTS_UIterativeSmoothProperties;
 
 // Class MeshModelingToolsExp.DiffusionSmoothProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -6993,7 +6740,6 @@ public:
 		return GetDefaultObjImpl<UDiffusionSmoothProperties>();
 	}
 };
-DUMPER7_ASSERTS_UDiffusionSmoothProperties;
 
 // Class MeshModelingToolsExp.ImplicitSmoothProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -7020,7 +6766,6 @@ public:
 		return GetDefaultObjImpl<UImplicitSmoothProperties>();
 	}
 };
-DUMPER7_ASSERTS_UImplicitSmoothProperties;
 
 // Class MeshModelingToolsExp.SmoothMeshTool
 // 0x0030 (0x04A0 - 0x0470)
@@ -7048,7 +6793,6 @@ public:
 		return GetDefaultObjImpl<USmoothMeshTool>();
 	}
 };
-DUMPER7_ASSERTS_USmoothMeshTool;
 
 // Class MeshModelingToolsExp.SplitMeshesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -7068,7 +6812,6 @@ public:
 		return GetDefaultObjImpl<USplitMeshesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_USplitMeshesToolBuilder;
 
 // Class MeshModelingToolsExp.SplitMeshesTool
 // 0x0050 (0x0138 - 0x00E8)
@@ -7095,7 +6838,6 @@ public:
 		return GetDefaultObjImpl<USplitMeshesTool>();
 	}
 };
-DUMPER7_ASSERTS_USplitMeshesTool;
 
 // Class MeshModelingToolsExp.TransferMeshToolProperties
 // 0x0078 (0x0120 - 0x00A8)
@@ -7134,7 +6876,6 @@ public:
 		return GetDefaultObjImpl<UTransferMeshToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UTransferMeshToolProperties;
 
 // Class MeshModelingToolsExp.TransformMeshesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -7154,7 +6895,6 @@ public:
 		return GetDefaultObjImpl<UTransformMeshesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UTransformMeshesToolBuilder;
 
 // Class MeshModelingToolsExp.TransformMeshesTool
 // 0x00E8 (0x01A0 - 0x00B8)
@@ -7181,7 +6921,6 @@ public:
 		return GetDefaultObjImpl<UTransformMeshesTool>();
 	}
 };
-DUMPER7_ASSERTS_UTransformMeshesTool;
 
 // Class MeshModelingToolsExp.TriangulateSplinesTool
 // 0x0018 (0x0118 - 0x0100)
@@ -7205,7 +6944,6 @@ public:
 		return GetDefaultObjImpl<UTriangulateSplinesTool>();
 	}
 };
-DUMPER7_ASSERTS_UTriangulateSplinesTool;
 
 // Class MeshModelingToolsExp.VolumeToMeshToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -7225,7 +6963,6 @@ public:
 		return GetDefaultObjImpl<UVolumeToMeshToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UVolumeToMeshToolBuilder;
 
 // Class MeshModelingToolsExp.VolumeToMeshTool
 // 0x0268 (0x0300 - 0x0098)
@@ -7253,7 +6990,6 @@ public:
 		return GetDefaultObjImpl<UVolumeToMeshTool>();
 	}
 };
-DUMPER7_ASSERTS_UVolumeToMeshTool;
 
 // Class MeshModelingToolsExp.VoxelBlendMeshesTool
 // 0x0008 (0x0128 - 0x0120)
@@ -7276,7 +7012,6 @@ public:
 		return GetDefaultObjImpl<UVoxelBlendMeshesTool>();
 	}
 };
-DUMPER7_ASSERTS_UVoxelBlendMeshesTool;
 
 // Class MeshModelingToolsExp.VoxelMorphologyMeshesToolProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -7305,7 +7040,6 @@ public:
 		return GetDefaultObjImpl<UVoxelMorphologyMeshesToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UVoxelMorphologyMeshesToolProperties;
 
 // Class MeshModelingToolsExp.VoxelMorphologyMeshesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -7325,7 +7059,6 @@ public:
 		return GetDefaultObjImpl<UVoxelMorphologyMeshesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UVoxelMorphologyMeshesToolBuilder;
 
 // Class MeshModelingToolsExp.VoxelSolidifyMeshesTool
 // 0x0008 (0x0128 - 0x0120)
@@ -7348,7 +7081,6 @@ public:
 		return GetDefaultObjImpl<UVoxelSolidifyMeshesTool>();
 	}
 };
-DUMPER7_ASSERTS_UVoxelSolidifyMeshesTool;
 
 // Class MeshModelingToolsExp.WeldMeshEdgesToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -7368,7 +7100,6 @@ public:
 		return GetDefaultObjImpl<UWeldMeshEdgesToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UWeldMeshEdgesToolBuilder;
 
 // Class MeshModelingToolsExp.WeldMeshEdgesOperatorFactory
 // 0x0010 (0x0038 - 0x0028)
@@ -7392,6 +7123,5 @@ public:
 		return GetDefaultObjImpl<UWeldMeshEdgesOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_UWeldMeshEdgesOperatorFactory;
 
 SDK_NAMESPACE_END

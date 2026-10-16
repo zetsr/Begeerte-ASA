@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UASAUIWidget_Button_Style1B_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUIWidget_Button_Style1B_C;
 
 SDK_NAMESPACE_END

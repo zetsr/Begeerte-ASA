@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<ADino_AIController_BP_C>();
 	}
 };
-DUMPER7_ASSERTS_ADino_AIController_BP_C;
 
 SDK_NAMESPACE_END

@@ -36,7 +36,6 @@ public:
 		return GetDefaultObjImpl<UNNEModelData>();
 	}
 };
-DUMPER7_ASSERTS_UNNEModelData;
 
 // Class NNE.NNERuntime
 // 0x0000 (0x0000 - 0x0000)
@@ -65,7 +64,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_INNERuntime;
 
 // Class NNE.NNERuntimeCPU
 // 0x0000 (0x0000 - 0x0000)
@@ -94,7 +92,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_INNERuntimeCPU;
 
 // Class NNE.NNERuntimeGPU
 // 0x0000 (0x0000 - 0x0000)
@@ -123,7 +120,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_INNERuntimeGPU;
 
 // Class NNE.NNERuntimeNPU
 // 0x0000 (0x0000 - 0x0000)
@@ -152,7 +148,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_INNERuntimeNPU;
 
 // Class NNE.NNERuntimeRDG
 // 0x0000 (0x0000 - 0x0000)
@@ -181,6 +176,5 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_INNERuntimeRDG;
 
 SDK_NAMESPACE_END

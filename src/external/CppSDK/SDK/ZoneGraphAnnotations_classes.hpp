@@ -42,7 +42,6 @@ public:
 		return GetDefaultObjImpl<UZoneGraphAnnotationComponent>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphAnnotationComponent;
 
 // Class ZoneGraphAnnotations.ZoneGraphAnnotationSubsystem
 // 0x0070 (0x00B0 - 0x0040)
@@ -69,7 +68,6 @@ public:
 		return GetDefaultObjImpl<UZoneGraphAnnotationSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphAnnotationSubsystem;
 
 // Class ZoneGraphAnnotations.ZoneGraphAnnotationTest
 // 0x0008 (0x0030 - 0x0028)
@@ -92,7 +90,6 @@ public:
 		return GetDefaultObjImpl<UZoneGraphAnnotationTest>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphAnnotationTest;
 
 // Class ZoneGraphAnnotations.ZoneGraphAnnotationTestingComponent
 // 0x0010 (0x0680 - 0x0670)
@@ -115,7 +112,6 @@ public:
 		return GetDefaultObjImpl<UZoneGraphAnnotationTestingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphAnnotationTestingComponent;
 
 // Class ZoneGraphAnnotations.ZoneGraphAnnotationTestingActor
 // 0x0008 (0x0498 - 0x0490)
@@ -141,7 +137,6 @@ public:
 		return GetDefaultObjImpl<AZoneGraphAnnotationTestingActor>();
 	}
 };
-DUMPER7_ASSERTS_AZoneGraphAnnotationTestingActor;
 
 // Class ZoneGraphAnnotations.ZoneGraphDisturbanceAnnotation
 // 0x0070 (0x0700 - 0x0690)
@@ -172,7 +167,6 @@ public:
 		return GetDefaultObjImpl<UZoneGraphDisturbanceAnnotation>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphDisturbanceAnnotation;
 
 // Class ZoneGraphAnnotations.ZoneGraphDisturbanceAnnotationTest
 // 0x0020 (0x0050 - 0x0030)
@@ -197,7 +191,6 @@ public:
 		return GetDefaultObjImpl<UZoneGraphDisturbanceAnnotationTest>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphDisturbanceAnnotationTest;
 
 // Class ZoneGraphAnnotations.ZoneGraphDisturbanceAnnotationBPLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -220,6 +213,5 @@ public:
 		return GetDefaultObjImpl<UZoneGraphDisturbanceAnnotationBPLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphDisturbanceAnnotationBPLibrary;
 
 SDK_NAMESPACE_END

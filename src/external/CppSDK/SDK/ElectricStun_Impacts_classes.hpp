@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<AElectricStun_Impacts_C>();
 	}
 };
-DUMPER7_ASSERTS_AElectricStun_Impacts_C;
 
 SDK_NAMESPACE_END

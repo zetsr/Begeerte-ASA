@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDmgType_GeneScanner_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UDmgType_GeneScanner_Base_C;
 
 SDK_NAMESPACE_END

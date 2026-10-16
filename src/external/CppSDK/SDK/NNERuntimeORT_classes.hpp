@@ -39,7 +39,6 @@ public:
 		return GetDefaultObjImpl<UNNERuntimeORTSettings>();
 	}
 };
-DUMPER7_ASSERTS_UNNERuntimeORTSettings;
 
 // Class NNERuntimeORT.NNERuntimeORTCpu
 // 0x0020 (0x0048 - 0x0028)
@@ -62,7 +61,6 @@ public:
 		return GetDefaultObjImpl<UNNERuntimeORTCpu>();
 	}
 };
-DUMPER7_ASSERTS_UNNERuntimeORTCpu;
 
 // Class NNERuntimeORT.NNERuntimeORTDml
 // 0x0038 (0x0060 - 0x0028)
@@ -85,6 +83,5 @@ public:
 		return GetDefaultObjImpl<UNNERuntimeORTDml>();
 	}
 };
-DUMPER7_ASSERTS_UNNERuntimeORTDml;
 
 SDK_NAMESPACE_END

@@ -30,7 +30,6 @@ public:
 	class FString                                 CallFunc_SelectString_ReturnValue;                 // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_AnimNotify_PlayPlayerVO_C_GetNotifyName;
 
 // Function AnimNotify_PlayPlayerVO.AnimNotify_PlayPlayerVO_C.Received_Notify
 // 0x0278 (0x0278 - 0x0000)
@@ -118,7 +117,6 @@ public:
 	uint8                                         Pad_26D[0x3];                                      // 0x026D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x0270(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_AnimNotify_PlayPlayerVO_C_Received_Notify;
 
 // Function AnimNotify_PlayPlayerVO.AnimNotify_PlayPlayerVO_C.SelectSound
 // 0x0038 (0x0038 - 0x0000)
@@ -136,7 +134,6 @@ public:
 	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundBase*                             K2Node_Select_Default;                             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_AnimNotify_PlayPlayerVO_C_SelectSound;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

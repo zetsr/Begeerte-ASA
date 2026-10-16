@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Audio_Ground_Collection_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Struct_Ground_Attributes_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Audio_Ground_Collection_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -48,7 +48,6 @@ public:
 	struct FStruct_Ground_Attributes              CallFunc_GetDataTableRowFromName_OutRow_1;         // 0x0100(0x0068)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue_1;    // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FL_VFX_Spawn_Ground_Effect_C_Find_Ground_Attributes;
 
 // Function FL_VFX_Spawn_Ground_Effect.FL_VFX_Spawn_Ground_Effect_C.Set Car Track VFX Parameters
 // 0x0040 (0x0040 - 0x0000)
@@ -64,7 +63,6 @@ public:
 	int32                                         CallFunc_Set_Ground_VFX_Parameters_Render_Index;   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Set_Ground_VFX_Parameters_Show_Footprints; // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FL_VFX_Spawn_Ground_Effect_C_Set_Car_Track_VFX_Parameters;
 
 // Function FL_VFX_Spawn_Ground_Effect.FL_VFX_Spawn_Ground_Effect_C.Set Cart Track VFX Parameters
 // 0x00D0 (0x00D0 - 0x0000)
@@ -92,7 +90,6 @@ public:
 	int32                                         CallFunc_Trace_Ground_VFX_Parameters_Render_Index; // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Trace_Ground_VFX_Parameters_Show_Footprints; // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FL_VFX_Spawn_Ground_Effect_C_Set_Cart_Track_VFX_Parameters;
 
 // Function FL_VFX_Spawn_Ground_Effect.FL_VFX_Spawn_Ground_Effect_C.Set Ground VFX Parameters
 // 0x0140 (0x0140 - 0x0000)
@@ -144,7 +141,6 @@ public:
 	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x012C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FL_VFX_Spawn_Ground_Effect_C_Set_Ground_VFX_Parameters;
 
 // Function FL_VFX_Spawn_Ground_Effect.FL_VFX_Spawn_Ground_Effect_C.Set Niagara Parameters
 // 0x0118 (0x0118 - 0x0000)
@@ -188,7 +184,6 @@ public:
 	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast_9;  // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast_10; // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FL_VFX_Spawn_Ground_Effect_C_Set_Niagara_Parameters;
 
 // Function FL_VFX_Spawn_Ground_Effect.FL_VFX_Spawn_Ground_Effect_C.Spawn Ground VFX
 // 0x0450 (0x0450 - 0x0000)
@@ -283,7 +278,6 @@ public:
 	double                                        CallFunc_MakeVector_Y_ImplicitCast;                // 0x0440(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_MakeVector_Z_ImplicitCast;                // 0x0448(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FL_VFX_Spawn_Ground_Effect_C_Spawn_Ground_VFX;
 
 // Function FL_VFX_Spawn_Ground_Effect.FL_VFX_Spawn_Ground_Effect_C.Spawn Ground VFX Attached
 // 0x0468 (0x0468 - 0x0000)
@@ -371,7 +365,6 @@ public:
 	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0448(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x0460(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FL_VFX_Spawn_Ground_Effect_C_Spawn_Ground_VFX_Attached;
 
 // Function FL_VFX_Spawn_Ground_Effect.FL_VFX_Spawn_Ground_Effect_C.Trace Ground VFX Parameters
 // 0x0398 (0x0398 - 0x0000)
@@ -449,7 +442,6 @@ public:
 	uint8                                         Pad_37D[0x3];                                      // 0x037D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAudio_Ground_Collection               CallFunc_Find_Ground_Attributes_Step_Sounds;       // 0x0380(0x0018)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FL_VFX_Spawn_Ground_Effect_C_Trace_Ground_VFX_Parameters;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

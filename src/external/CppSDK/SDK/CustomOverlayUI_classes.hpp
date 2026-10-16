@@ -50,6 +50,5 @@ public:
 		return GetDefaultObjImpl<UCustomOverlayUI_C>();
 	}
 };
-DUMPER7_ASSERTS_UCustomOverlayUI_C;
 
 SDK_NAMESPACE_END

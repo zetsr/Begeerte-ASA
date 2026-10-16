@@ -44,7 +44,6 @@ public:
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Less_DoubleDouble_B_ImplicitCast;         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DinoShouldLand_SRV_C_ExecuteUbergraph_DinoShouldLand_SRV;
 
 // Function DinoShouldLand_SRV.DinoShouldLand_SRV_C.ReceiveTick
 // 0x0010 (0x0010 - 0x0000)
@@ -54,7 +53,6 @@ public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         DeltaSeconds;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DinoShouldLand_SRV_C_ReceiveTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

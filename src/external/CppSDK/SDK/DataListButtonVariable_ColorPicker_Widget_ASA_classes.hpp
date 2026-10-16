@@ -29,13 +29,13 @@ public:
 	TMulticastInlineDelegate<void(bool Toggle)>   SelectedOption;                                    // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams);
-	void Construct();
-	void ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA(int32 EntryPoint);
-	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
-	void PreConstruct(bool IsDesignTime);
+	void UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue_UpdateColorPicker);
 	void SetupTextValue(const class FText& Text, class FText* ReturnText);
-	void UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue);
+	void PreConstruct(bool IsDesignTime_PreConstruct);
+	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
+	void ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA(int32 EntryPoint);
+	void Construct();
+	void BPExecutedCommandForPrimalUI(class FName CommandName_BPExecutedCommandForPrimalUI, const struct FBPNetExecParams& ExecParams_BPExecutedCommandForPrimalUI);
 
 public:
 	static class UClass* StaticClass()
@@ -51,6 +51,5 @@ public:
 		return GetDefaultObjImpl<UDataListButtonVariable_ColorPicker_Widget_ASA_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListButtonVariable_ColorPicker_Widget_ASA_C;
 
 SDK_NAMESPACE_END

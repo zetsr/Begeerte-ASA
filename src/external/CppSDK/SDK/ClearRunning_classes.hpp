@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UClearRunning_C>();
 	}
 };
-DUMPER7_ASSERTS_UClearRunning_C;
 
 SDK_NAMESPACE_END

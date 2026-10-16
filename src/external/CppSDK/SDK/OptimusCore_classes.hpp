@@ -47,7 +47,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusAlternativeSelectedObjectProvider;
 
 // Class OptimusCore.OptimusComponentBindingProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -76,7 +75,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusComponentBindingProvider;
 
 // Class OptimusCore.OptimusComponentBindingReceiver
 // 0x0000 (0x0000 - 0x0000)
@@ -105,7 +103,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusComponentBindingReceiver;
 
 // Class OptimusCore.OptimusNodeGraph
 // 0x0068 (0x0090 - 0x0028)
@@ -174,7 +171,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNodeGraph>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNodeGraph;
 
 // Class OptimusCore.OptimusNodeSubGraph
 // 0x00B8 (0x0148 - 0x0090)
@@ -200,7 +196,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNodeSubGraph>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNodeSubGraph;
 
 // Class OptimusCore.OptimusComputeKernelDataInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -229,7 +224,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusComputeKernelDataInterface;
 
 // Class OptimusCore.OptimusComputeKernelProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -258,7 +252,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusComputeKernelProvider;
 
 // Class OptimusCore.OptimusNode
 // 0x00E0 (0x0108 - 0x0028)
@@ -295,7 +288,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode;
 
 // Class OptimusCore.OptimusNode_ComponentSource
 // 0x0028 (0x0130 - 0x0108)
@@ -320,7 +312,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_ComponentSource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_ComponentSource;
 
 // Class OptimusCore.OptimusDataInterfaceProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -349,7 +340,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusDataInterfaceProvider;
 
 // Class OptimusCore.OptimusDeformerInstanceAccessor
 // 0x0000 (0x0000 - 0x0000)
@@ -378,7 +368,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusDeformerInstanceAccessor;
 
 // Class OptimusCore.OptimusDeprecatedExecutionDataInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -407,7 +396,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusDeprecatedExecutionDataInterface;
 
 // Class OptimusCore.OptimusExecutionDomainProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -436,7 +424,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusExecutionDomainProvider;
 
 // Class OptimusCore.OptimusGeneratedClassDefiner
 // 0x0000 (0x0000 - 0x0000)
@@ -465,7 +452,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusGeneratedClassDefiner;
 
 // Class OptimusCore.OptimusNodeAdderPinProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -494,7 +480,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusNodeAdderPinProvider;
 
 // Class OptimusCore.OptimusNodeFunctionLibraryOwner
 // 0x0000 (0x0000 - 0x0000)
@@ -523,7 +508,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusNodeFunctionLibraryOwner;
 
 // Class OptimusCore.OptimusNodeGraphCollectionOwner
 // 0x0000 (0x0000 - 0x0000)
@@ -552,7 +536,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusNodeGraphCollectionOwner;
 
 // Class OptimusCore.OptimusNode_ResourceAccessorBase
 // 0x00A8 (0x01B0 - 0x0108)
@@ -579,7 +562,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_ResourceAccessorBase>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_ResourceAccessorBase;
 
 // Class OptimusCore.OptimusNodeGraphProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -608,7 +590,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusNodeGraphProvider;
 
 // Class OptimusCore.OptimusNodePairProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -637,7 +618,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusNodePairProvider;
 
 // Class OptimusCore.OptimusNodePinRouter
 // 0x0000 (0x0000 - 0x0000)
@@ -666,7 +646,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusNodePinRouter;
 
 // Class OptimusCore.OptimusNodeSubGraphReferencer
 // 0x0000 (0x0000 - 0x0000)
@@ -695,7 +674,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusNodeSubGraphReferencer;
 
 // Class OptimusCore.OptimusNonCollapsibleNode
 // 0x0000 (0x0000 - 0x0000)
@@ -724,7 +702,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusNonCollapsibleNode;
 
 // Class OptimusCore.OptimusNonCopyableNode
 // 0x0000 (0x0000 - 0x0000)
@@ -753,7 +730,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusNonCopyableNode;
 
 // Class OptimusCore.OptimusOutputBufferWriter
 // 0x0000 (0x0000 - 0x0000)
@@ -782,7 +758,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusOutputBufferWriter;
 
 // Class OptimusCore.OptimusParameterBindingProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -811,7 +786,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusParameterBindingProvider;
 
 // Class OptimusCore.OptimusPathResolver
 // 0x0000 (0x0000 - 0x0000)
@@ -840,7 +814,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusPathResolver;
 
 // Class OptimusCore.OptimusPersistentBufferProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -869,7 +842,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusPersistentBufferProvider;
 
 // Class OptimusCore.OptimusPinMutabilityDefiner
 // 0x0000 (0x0000 - 0x0000)
@@ -898,7 +870,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusPinMutabilityDefiner;
 
 // Class OptimusCore.OptimusPropertyPinProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -927,7 +898,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusPropertyPinProvider;
 
 // Class OptimusCore.OptimusShaderTextProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -956,7 +926,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusShaderTextProvider;
 
 // Class OptimusCore.OptimusUnnamedNodePinProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -985,7 +954,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusUnnamedNodePinProvider;
 
 // Class OptimusCore.OptimusValueProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -1014,7 +982,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IOptimusValueProvider;
 
 // Class OptimusCore.OptimusComputeDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -1034,7 +1001,6 @@ public:
 		return GetDefaultObjImpl<UOptimusComputeDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusComputeDataInterface;
 
 // Class OptimusCore.OptimusSkinnedMeshVertexAttributeDataInterface
 // 0x0008 (0x0030 - 0x0028)
@@ -1057,7 +1023,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshVertexAttributeDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshVertexAttributeDataInterface;
 
 // Class OptimusCore.OptimusSkinnedMeshVertexAttributeDataProvider
 // 0x0028 (0x0050 - 0x0028)
@@ -1084,7 +1049,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshVertexAttributeDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshVertexAttributeDataProvider;
 
 // Class OptimusCore.OptimusSkinWeightsAsVertexMaskDataInterface
 // 0x0058 (0x0080 - 0x0028)
@@ -1114,7 +1078,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinWeightsAsVertexMaskDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinWeightsAsVertexMaskDataInterface;
 
 // Class OptimusCore.OptimusSkinWeightsAsVertexMaskDataProvider
 // 0x00B0 (0x00D8 - 0x0028)
@@ -1141,7 +1104,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinWeightsAsVertexMaskDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinWeightsAsVertexMaskDataProvider;
 
 // Class OptimusCore.OptimusDeformerDynamicInstanceManager
 // 0x0108 (0x0130 - 0x0028)
@@ -1166,7 +1128,6 @@ public:
 		return GetDefaultObjImpl<UOptimusDeformerDynamicInstanceManager>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusDeformerDynamicInstanceManager;
 
 // Class OptimusCore.OptimusKernelSource
 // 0x0010 (0x00A8 - 0x0098)
@@ -1189,7 +1150,6 @@ public:
 		return GetDefaultObjImpl<UOptimusKernelSource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusKernelSource;
 
 // Class OptimusCore.OptimusComponentSource
 // 0x0000 (0x0028 - 0x0028)
@@ -1209,7 +1169,6 @@ public:
 		return GetDefaultObjImpl<UOptimusComponentSource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusComponentSource;
 
 // Class OptimusCore.OptimusSceneComponentSource
 // 0x0000 (0x0028 - 0x0028)
@@ -1229,7 +1188,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSceneComponentSource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSceneComponentSource;
 
 // Class OptimusCore.OptimusSkinnedMeshComponentSource
 // 0x0000 (0x0028 - 0x0028)
@@ -1249,7 +1207,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshComponentSource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshComponentSource;
 
 // Class OptimusCore.OptimusSkeletalMeshComponentSource
 // 0x0000 (0x0028 - 0x0028)
@@ -1269,7 +1226,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkeletalMeshComponentSource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkeletalMeshComponentSource;
 
 // Class OptimusCore.OptimusAdvancedSkeletonDataInterface
 // 0x0050 (0x0078 - 0x0028)
@@ -1296,7 +1252,6 @@ public:
 		return GetDefaultObjImpl<UOptimusAdvancedSkeletonDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusAdvancedSkeletonDataInterface;
 
 // Class OptimusCore.OptimusAdvancedSkeletonDataProvider
 // 0x00B0 (0x00D8 - 0x0028)
@@ -1323,7 +1278,6 @@ public:
 		return GetDefaultObjImpl<UOptimusAdvancedSkeletonDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusAdvancedSkeletonDataProvider;
 
 // Class OptimusCore.OptimusAnimAttributeDataInterface
 // 0x0030 (0x0058 - 0x0028)
@@ -1347,7 +1301,6 @@ public:
 		return GetDefaultObjImpl<UOptimusAnimAttributeDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusAnimAttributeDataInterface;
 
 // Class OptimusCore.OptimusAnimAttributeDataProvider
 // 0x0020 (0x0048 - 0x0028)
@@ -1371,7 +1324,6 @@ public:
 		return GetDefaultObjImpl<UOptimusAnimAttributeDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusAnimAttributeDataProvider;
 
 // Class OptimusCore.OptimusClothDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -1391,7 +1343,6 @@ public:
 		return GetDefaultObjImpl<UOptimusClothDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusClothDataInterface;
 
 // Class OptimusCore.OptimusClothDataProvider
 // 0x0008 (0x0030 - 0x0028)
@@ -1414,7 +1365,6 @@ public:
 		return GetDefaultObjImpl<UOptimusClothDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusClothDataProvider;
 
 // Class OptimusCore.OptimusConnectivityDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -1434,7 +1384,6 @@ public:
 		return GetDefaultObjImpl<UOptimusConnectivityDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusConnectivityDataInterface;
 
 // Class OptimusCore.OptimusConnectivityDataProvider
 // 0x0018 (0x0040 - 0x0028)
@@ -1458,7 +1407,6 @@ public:
 		return GetDefaultObjImpl<UOptimusConnectivityDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusConnectivityDataProvider;
 
 // Class OptimusCore.OptimusCopyKernelDataInterface
 // 0x0020 (0x0048 - 0x0028)
@@ -1483,7 +1431,6 @@ public:
 		return GetDefaultObjImpl<UOptimusCopyKernelDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusCopyKernelDataInterface;
 
 // Class OptimusCore.OptimusCopyKernelDataProvider
 // 0x0010 (0x0038 - 0x0028)
@@ -1506,7 +1453,6 @@ public:
 		return GetDefaultObjImpl<UOptimusCopyKernelDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusCopyKernelDataProvider;
 
 // Class OptimusCore.OptimusCustomComputeKernelDataInterface
 // 0x0038 (0x0060 - 0x0028)
@@ -1532,7 +1478,6 @@ public:
 		return GetDefaultObjImpl<UOptimusCustomComputeKernelDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusCustomComputeKernelDataInterface;
 
 // Class OptimusCore.OptimusCustomComputeKernelDataProvider
 // 0x0010 (0x0038 - 0x0028)
@@ -1555,7 +1500,6 @@ public:
 		return GetDefaultObjImpl<UOptimusCustomComputeKernelDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusCustomComputeKernelDataProvider;
 
 // Class OptimusCore.OptimusDebugDrawDataInterface
 // 0x0018 (0x0040 - 0x0028)
@@ -1580,7 +1524,6 @@ public:
 		return GetDefaultObjImpl<UOptimusDebugDrawDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusDebugDrawDataInterface;
 
 // Class OptimusCore.OptimusDebugDrawDataProvider
 // 0x0020 (0x0048 - 0x0028)
@@ -1605,7 +1548,6 @@ public:
 		return GetDefaultObjImpl<UOptimusDebugDrawDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusDebugDrawDataProvider;
 
 // Class OptimusCore.OptimusDuplicateVerticesDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -1625,7 +1567,6 @@ public:
 		return GetDefaultObjImpl<UOptimusDuplicateVerticesDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusDuplicateVerticesDataInterface;
 
 // Class OptimusCore.OptimusDuplicateVerticesDataProvider
 // 0x0008 (0x0030 - 0x0028)
@@ -1648,7 +1589,6 @@ public:
 		return GetDefaultObjImpl<UOptimusDuplicateVerticesDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusDuplicateVerticesDataProvider;
 
 // Class OptimusCore.OptimusDeformer
 // 0x01A0 (0x01C8 - 0x0028)
@@ -1689,7 +1629,6 @@ public:
 		return GetDefaultObjImpl<UOptimusDeformer>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusDeformer;
 
 // Class OptimusCore.OptimusGraphDataInterface
 // 0x0018 (0x0040 - 0x0028)
@@ -1714,7 +1653,6 @@ public:
 		return GetDefaultObjImpl<UOptimusGraphDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGraphDataInterface;
 
 // Class OptimusCore.OptimusGraphDataProvider
 // 0x0040 (0x0068 - 0x0028)
@@ -1741,7 +1679,6 @@ public:
 		return GetDefaultObjImpl<UOptimusGraphDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGraphDataProvider;
 
 // Class OptimusCore.OptimusNode_LoopTerminal
 // 0x0068 (0x0170 - 0x0108)
@@ -1770,7 +1707,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_LoopTerminal>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_LoopTerminal;
 
 // Class OptimusCore.OptimusHalfEdgeDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -1790,7 +1726,6 @@ public:
 		return GetDefaultObjImpl<UOptimusHalfEdgeDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusHalfEdgeDataInterface;
 
 // Class OptimusCore.OptimusHalfEdgeDataProvider
 // 0x0020 (0x0048 - 0x0028)
@@ -1814,7 +1749,6 @@ public:
 		return GetDefaultObjImpl<UOptimusHalfEdgeDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusHalfEdgeDataProvider;
 
 // Class OptimusCore.OptimusLoopTerminalDataInterface
 // 0x0008 (0x0030 - 0x0028)
@@ -1838,7 +1772,6 @@ public:
 		return GetDefaultObjImpl<UOptimusLoopTerminalDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusLoopTerminalDataInterface;
 
 // Class OptimusCore.OptimusLoopTerminalDataProvider
 // 0x0008 (0x0030 - 0x0028)
@@ -1861,7 +1794,6 @@ public:
 		return GetDefaultObjImpl<UOptimusLoopTerminalDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusLoopTerminalDataProvider;
 
 // Class OptimusCore.OptimusMorphTargetDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -1881,7 +1813,6 @@ public:
 		return GetDefaultObjImpl<UOptimusMorphTargetDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusMorphTargetDataInterface;
 
 // Class OptimusCore.OptimusMorphTargetDataProvider
 // 0x0008 (0x0030 - 0x0028)
@@ -1904,7 +1835,6 @@ public:
 		return GetDefaultObjImpl<UOptimusMorphTargetDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusMorphTargetDataProvider;
 
 // Class OptimusCore.OptimusRawBufferDataInterface
 // 0x0068 (0x0090 - 0x0028)
@@ -1930,7 +1860,6 @@ public:
 		return GetDefaultObjImpl<UOptimusRawBufferDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusRawBufferDataInterface;
 
 // Class OptimusCore.OptimusTransientBufferDataInterface
 // 0x0008 (0x0098 - 0x0090)
@@ -1954,7 +1883,6 @@ public:
 		return GetDefaultObjImpl<UOptimusTransientBufferDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusTransientBufferDataInterface;
 
 // Class OptimusCore.OptimusVariableContainer
 // 0x0010 (0x0038 - 0x0028)
@@ -1977,7 +1905,6 @@ public:
 		return GetDefaultObjImpl<UOptimusVariableContainer>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusVariableContainer;
 
 // Class OptimusCore.OptimusImplicitPersistentBufferDataInterface
 // 0x0008 (0x0098 - 0x0090)
@@ -2001,7 +1928,6 @@ public:
 		return GetDefaultObjImpl<UOptimusImplicitPersistentBufferDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusImplicitPersistentBufferDataInterface;
 
 // Class OptimusCore.OptimusPersistentBufferDataInterface
 // 0x0008 (0x0098 - 0x0090)
@@ -2024,7 +1950,6 @@ public:
 		return GetDefaultObjImpl<UOptimusPersistentBufferDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusPersistentBufferDataInterface;
 
 // Class OptimusCore.OptimusRawBufferDataProvider
 // 0x0058 (0x0080 - 0x0028)
@@ -2047,7 +1972,6 @@ public:
 		return GetDefaultObjImpl<UOptimusRawBufferDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusRawBufferDataProvider;
 
 // Class OptimusCore.OptimusTransientBufferDataProvider
 // 0x0008 (0x0088 - 0x0080)
@@ -2070,7 +1994,6 @@ public:
 		return GetDefaultObjImpl<UOptimusTransientBufferDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusTransientBufferDataProvider;
 
 // Class OptimusCore.OptimusImplicitPersistentBufferDataProvider
 // 0x0028 (0x00A8 - 0x0080)
@@ -2093,7 +2016,6 @@ public:
 		return GetDefaultObjImpl<UOptimusImplicitPersistentBufferDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusImplicitPersistentBufferDataProvider;
 
 // Class OptimusCore.OptimusPersistentBufferDataProvider
 // 0x0020 (0x00A0 - 0x0080)
@@ -2116,7 +2038,6 @@ public:
 		return GetDefaultObjImpl<UOptimusPersistentBufferDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusPersistentBufferDataProvider;
 
 // Class OptimusCore.OptimusSceneDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -2136,7 +2057,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSceneDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSceneDataInterface;
 
 // Class OptimusCore.OptimusSceneDataProvider
 // 0x0008 (0x0030 - 0x0028)
@@ -2159,7 +2079,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSceneDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSceneDataProvider;
 
 // Class OptimusCore.OptimusNodeLink
 // 0x0010 (0x0038 - 0x0028)
@@ -2183,7 +2102,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNodeLink>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNodeLink;
 
 // Class OptimusCore.OptimusSkeletonDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -2203,7 +2121,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkeletonDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkeletonDataInterface;
 
 // Class OptimusCore.OptimusSkeletonDataProvider
 // 0x0008 (0x0030 - 0x0028)
@@ -2226,7 +2143,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkeletonDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkeletonDataProvider;
 
 // Class OptimusCore.OptimusSkinnedMeshDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -2246,7 +2162,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshDataInterface;
 
 // Class OptimusCore.OptimusSkinnedMeshDataProvider
 // 0x0008 (0x0030 - 0x0028)
@@ -2269,7 +2184,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshDataProvider;
 
 // Class OptimusCore.OptimusSkinnedMeshExecDataInterface
 // 0x0010 (0x0038 - 0x0028)
@@ -2294,7 +2208,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshExecDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshExecDataInterface;
 
 // Class OptimusCore.OptimusSkinnedMeshExecDataProvider
 // 0x0010 (0x0038 - 0x0028)
@@ -2319,7 +2232,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshExecDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshExecDataProvider;
 
 // Class OptimusCore.OptimusSkinnedMeshReadDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -2339,7 +2251,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshReadDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshReadDataInterface;
 
 // Class OptimusCore.OptimusSkinnedMeshReadDataProvider
 // 0x0028 (0x0050 - 0x0028)
@@ -2365,7 +2276,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshReadDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshReadDataProvider;
 
 // Class OptimusCore.OptimusSkinnedMeshWriteDataInterface
 // 0x0008 (0x0030 - 0x0028)
@@ -2388,7 +2298,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshWriteDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshWriteDataInterface;
 
 // Class OptimusCore.OptimusSkinnedMeshWriteDataProvider
 // 0x0018 (0x0040 - 0x0028)
@@ -2412,7 +2321,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSkinnedMeshWriteDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSkinnedMeshWriteDataProvider;
 
 // Class OptimusCore.OptimusNode_DataInterface
 // 0x0030 (0x0138 - 0x0108)
@@ -2437,7 +2345,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_DataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_DataInterface;
 
 // Class OptimusCore.OptimusNode_AnimAttributeDataInterface
 // 0x0000 (0x0138 - 0x0138)
@@ -2457,7 +2364,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_AnimAttributeDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_AnimAttributeDataInterface;
 
 // Class OptimusCore.OptimusNode_ComputeKernelBase
 // 0x0008 (0x0110 - 0x0108)
@@ -2480,7 +2386,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_ComputeKernelBase>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_ComputeKernelBase;
 
 // Class OptimusCore.OptimusNode_ComputeKernelFunctionGeneratorClass
 // 0x0070 (0x0288 - 0x0218)
@@ -2510,7 +2415,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_ComputeKernelFunctionGeneratorClass>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_ComputeKernelFunctionGeneratorClass;
 
 // Class OptimusCore.OptimusNode_ComputeKernelFunction
 // 0x0000 (0x0110 - 0x0110)
@@ -2530,7 +2434,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_ComputeKernelFunction>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_ComputeKernelFunction;
 
 // Class OptimusCore.OptimusNode_ConstantValueGeneratorClass
 // 0x0030 (0x0248 - 0x0218)
@@ -2553,7 +2456,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_ConstantValueGeneratorClass>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_ConstantValueGeneratorClass;
 
 // Class OptimusCore.OptimusNode_ConstantValue
 // 0x0018 (0x0120 - 0x0108)
@@ -2576,7 +2478,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_ConstantValue>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_ConstantValue;
 
 // Class OptimusCore.OptimusNode_CustomComputeKernel
 // 0x00F0 (0x0200 - 0x0110)
@@ -2612,7 +2513,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_CustomComputeKernel>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_CustomComputeKernel;
 
 // Class OptimusCore.OptimusNode_FunctionReference
 // 0x0048 (0x0150 - 0x0108)
@@ -2637,7 +2537,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_FunctionReference>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_FunctionReference;
 
 // Class OptimusCore.OptimusNode_GetResource
 // 0x0000 (0x01B0 - 0x01B0)
@@ -2657,7 +2556,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_GetResource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_GetResource;
 
 // Class OptimusCore.OptimusNode_GetVariable
 // 0x0068 (0x0170 - 0x0108)
@@ -2682,7 +2580,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_GetVariable>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_GetVariable;
 
 // Class OptimusCore.OptimusNode_GraphTerminal
 // 0x0038 (0x0140 - 0x0108)
@@ -2708,7 +2605,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_GraphTerminal>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_GraphTerminal;
 
 // Class OptimusCore.OptimusNode_Resource
 // 0x0000 (0x01B0 - 0x01B0)
@@ -2728,7 +2624,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_Resource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_Resource;
 
 // Class OptimusCore.OptimusNode_SetResource
 // 0x0000 (0x01B0 - 0x01B0)
@@ -2748,7 +2643,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_SetResource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_SetResource;
 
 // Class OptimusCore.OptimusNode_SubGraphReference
 // 0x0030 (0x0138 - 0x0108)
@@ -2774,7 +2668,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNode_SubGraphReference>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNode_SubGraphReference;
 
 // Class OptimusCore.OptimusActionStack
 // 0x00B8 (0x00E0 - 0x0028)
@@ -2798,7 +2691,6 @@ public:
 		return GetDefaultObjImpl<UOptimusActionStack>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusActionStack;
 
 // Class OptimusCore.OptimusComponentSourceBinding
 // 0x0028 (0x0050 - 0x0028)
@@ -2825,7 +2717,6 @@ public:
 		return GetDefaultObjImpl<UOptimusComponentSourceBinding>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusComponentSourceBinding;
 
 // Class OptimusCore.OptimusComputeGraph
 // 0x0010 (0x00F0 - 0x00E0)
@@ -2848,7 +2739,6 @@ public:
 		return GetDefaultObjImpl<UOptimusComputeGraph>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusComputeGraph;
 
 // Class OptimusCore.OptimusComponentSourceBindingContainer
 // 0x0010 (0x0038 - 0x0028)
@@ -2871,7 +2761,6 @@ public:
 		return GetDefaultObjImpl<UOptimusComponentSourceBindingContainer>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusComponentSourceBindingContainer;
 
 // Class OptimusCore.OptimusResourceContainer
 // 0x0010 (0x0038 - 0x0028)
@@ -2894,7 +2783,6 @@ public:
 		return GetDefaultObjImpl<UOptimusResourceContainer>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusResourceContainer;
 
 // Class OptimusCore.OptimusDeformerInstanceSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -2918,7 +2806,6 @@ public:
 		return GetDefaultObjImpl<UOptimusDeformerInstanceSettings>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusDeformerInstanceSettings;
 
 // Class OptimusCore.OptimusDeformerInstance
 // 0x0180 (0x01A8 - 0x0028)
@@ -2976,7 +2863,6 @@ public:
 		return GetDefaultObjImpl<UOptimusDeformerInstance>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusDeformerInstance;
 
 // Class OptimusCore.OptimusFunctionNodeGraph
 // 0x0010 (0x0158 - 0x0148)
@@ -3003,7 +2889,6 @@ public:
 		return GetDefaultObjImpl<UOptimusFunctionNodeGraph>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusFunctionNodeGraph;
 
 // Class OptimusCore.OptimusNodePair
 // 0x0010 (0x0038 - 0x0028)
@@ -3027,7 +2912,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNodePair>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNodePair;
 
 // Class OptimusCore.OptimusNodePin
 // 0x0088 (0x00B0 - 0x0028)
@@ -3056,7 +2940,6 @@ public:
 		return GetDefaultObjImpl<UOptimusNodePin>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusNodePin;
 
 // Class OptimusCore.OptimusResourceDescription
 // 0x0088 (0x00B0 - 0x0028)
@@ -3083,7 +2966,6 @@ public:
 		return GetDefaultObjImpl<UOptimusResourceDescription>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusResourceDescription;
 
 // Class OptimusCore.OptimusSource
 // 0x0018 (0x0050 - 0x0038)
@@ -3107,7 +2989,6 @@ public:
 		return GetDefaultObjImpl<UOptimusSource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSource;
 
 // Class OptimusCore.OptimusValueContainerGeneratorClass
 // 0x0030 (0x0248 - 0x0218)
@@ -3130,7 +3011,6 @@ public:
 		return GetDefaultObjImpl<UOptimusValueContainerGeneratorClass>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusValueContainerGeneratorClass;
 
 // Class OptimusCore.OptimusValueContainer
 // 0x0000 (0x0028 - 0x0028)
@@ -3150,7 +3030,6 @@ public:
 		return GetDefaultObjImpl<UOptimusValueContainer>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusValueContainer;
 
 // Class OptimusCore.OptimusVariableDescription
 // 0x0090 (0x00B8 - 0x0028)
@@ -3179,6 +3058,5 @@ public:
 		return GetDefaultObjImpl<UOptimusVariableDescription>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusVariableDescription;
 
 SDK_NAMESPACE_END

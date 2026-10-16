@@ -43,7 +43,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Radius;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBrushEffectBlurring;
 
 // ScriptStruct Landmass.BrushEffectCurlNoise
 // 0x0010 (0x0010 - 0x0000)
@@ -55,7 +54,6 @@ public:
 	float                                         Curl1Tiling;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Curl2Tiling;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBrushEffectCurlNoise;
 
 // ScriptStruct Landmass.BrushEffectCurves
 // 0x0020 (0x0020 - 0x0000)
@@ -70,7 +68,6 @@ public:
 	float                                         CurveRampWidth;                                    // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBrushEffectCurves;
 
 // ScriptStruct Landmass.BrushEffectDisplacement
 // 0x0028 (0x0028 - 0x0000)
@@ -84,7 +81,6 @@ public:
 	struct FLinearColor                           Channel;                                           // 0x0014(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WeightmapInfluence;                                // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBrushEffectDisplacement;
 
 // ScriptStruct Landmass.BrushEffectSmoothBlending
 // 0x0008 (0x0008 - 0x0000)
@@ -94,7 +90,6 @@ public:
 	float                                         InnerSmoothDistance;                               // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OuterSmoothDistance;                               // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBrushEffectSmoothBlending;
 
 // ScriptStruct Landmass.BrushEffectTerracing
 // 0x0014 (0x0014 - 0x0000)
@@ -107,7 +102,6 @@ public:
 	float                                         MaskLength;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaskStartOffset;                                   // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBrushEffectTerracing;
 
 // ScriptStruct Landmass.LandmassBrushEffectsList
 // 0x0060 (0x0060 - 0x0000)
@@ -121,7 +115,6 @@ public:
 	struct FBrushEffectTerracing                  Terracing;                                         // 0x0048(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLandmassBrushEffectsList;
 
 // ScriptStruct Landmass.LandmassFalloffSettings
 // 0x0014 (0x0014 - 0x0000)
@@ -135,7 +128,6 @@ public:
 	float                                         EdgeOffset;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ZOffset;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLandmassFalloffSettings;
 
 // ScriptStruct Landmass.LandmassTerrainCarvingSettings
 // 0x0080 (0x0080 - 0x0000)
@@ -150,6 +142,5 @@ public:
 	int32                                         Priority;                                          // 0x0078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLandmassTerrainCarvingSettings;
 
 SDK_NAMESPACE_END

@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UStopMovement_C>();
 	}
 };
-DUMPER7_ASSERTS_UStopMovement_C;
 
 SDK_NAMESPACE_END

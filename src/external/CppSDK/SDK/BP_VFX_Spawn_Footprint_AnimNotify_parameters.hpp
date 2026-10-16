@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Audio_Ground_Collection_structs.hpp"
 #include "Struct_Ground_Attributes_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Audio_Ground_Collection_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -48,7 +48,6 @@ public:
 	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0100(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_Footprint_AnimNotify_C_LR_FB_Offset;
 
 // Function BP_VFX_Spawn_Footprint_AnimNotify.BP_VFX_Spawn_Footprint_AnimNotify_C.NewFunction_0
 // 0x0002 (0x0002 - 0x0000)
@@ -58,7 +57,6 @@ public:
 	bool                                          Condition;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Condition2;                                        // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_Footprint_AnimNotify_C_NewFunction_0;
 
 // Function BP_VFX_Spawn_Footprint_AnimNotify.BP_VFX_Spawn_Footprint_AnimNotify_C.Do Trace
 // 0x0640 (0x0640 - 0x0000)
@@ -134,7 +132,6 @@ public:
 	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x0528(0x0108)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0630(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_Footprint_AnimNotify_C_Do_Trace;
 
 // Function BP_VFX_Spawn_Footprint_AnimNotify.BP_VFX_Spawn_Footprint_AnimNotify_C.Spawn_Sound
 // 0x0148 (0x0148 - 0x0000)
@@ -188,7 +185,6 @@ public:
 	float                                         CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast_4; // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast_5; // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_Footprint_AnimNotify_C_Spawn_Sound;
 
 // Function BP_VFX_Spawn_Footprint_AnimNotify.BP_VFX_Spawn_Footprint_AnimNotify_C.Received_NotifyBegin
 // 0x07B8 (0x07B8 - 0x0000)
@@ -366,7 +362,6 @@ public:
 	float                                         CallFunc_Multiply_DoubleFloat_B_ImplicitCast_1;    // 0x07AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x07B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_Footprint_AnimNotify_C_Received_NotifyBegin;
 
 // Function BP_VFX_Spawn_Footprint_AnimNotify.BP_VFX_Spawn_Footprint_AnimNotify_C.Received_NotifyEnd
 // 0x0048 (0x0048 - 0x0000)
@@ -378,7 +373,6 @@ public:
 	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_Footprint_AnimNotify_C_Received_NotifyEnd;
 
 // Function BP_VFX_Spawn_Footprint_AnimNotify.BP_VFX_Spawn_Footprint_AnimNotify_C.GetNotifyName
 // 0x0020 (0x0020 - 0x0000)
@@ -388,7 +382,6 @@ public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_Footprint_AnimNotify_C_GetNotifyName;
 
 // Function BP_VFX_Spawn_Footprint_AnimNotify.BP_VFX_Spawn_Footprint_AnimNotify_C.Received_NotifyTick
 // 0x0060 (0x0060 - 0x0000)
@@ -405,7 +398,6 @@ public:
 	class USkeletalMeshComponent*                 Mesh_Comp;                                         // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        Line_End_Distance;                                 // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_Footprint_AnimNotify_C_Received_NotifyTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

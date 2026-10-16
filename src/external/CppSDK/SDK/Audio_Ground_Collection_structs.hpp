@@ -22,6 +22,5 @@ public:
 	class USoundBase*                             Medium_4_4B0B5B2E4202E6221A92A680352543FD;         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USoundBase*                             Soft_6_C435C7BA41D4E7991A8D31AF9E153098;           // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FAudio_Ground_Collection;
 
 SDK_NAMESPACE_END

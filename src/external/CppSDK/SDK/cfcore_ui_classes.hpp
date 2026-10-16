@@ -51,7 +51,6 @@ public:
 		return GetDefaultObjImpl<UBindButtonSystem>();
 	}
 };
-DUMPER7_ASSERTS_UBindButtonSystem;
 
 // Class cfcore_ui.CFCoreButtonImage
 // 0x0160 (0x04A0 - 0x0340)
@@ -77,7 +76,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreButtonImage>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreButtonImage;
 
 // Class cfcore_ui.CFCoreGamepadCursorSettings
 // 0x00C0 (0x00F8 - 0x0038)
@@ -111,7 +109,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreGamepadCursorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreGamepadCursorSettings;
 
 // Class cfcore_ui.CFCoreMathHelperFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -137,7 +134,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreMathHelperFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreMathHelperFunctionLibrary;
 
 // Class cfcore_ui.CFCoreRichText
 // 0x0070 (0x08C0 - 0x0850)
@@ -161,7 +157,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreRichText>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreRichText;
 
 // Class cfcore_ui.CFCoreRichTextBlockImageDecorator
 // 0x0028 (0x0058 - 0x0030)
@@ -189,7 +184,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreRichTextBlockImageDecorator>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreRichTextBlockImageDecorator;
 
 // Class cfcore_ui.CFCoreRichTextBlockICodeBlockDecorator
 // 0x0000 (0x0028 - 0x0028)
@@ -209,7 +203,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreRichTextBlockICodeBlockDecorator>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreRichTextBlockICodeBlockDecorator;
 
 // Class cfcore_ui.CFCoreThemeSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -232,7 +225,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreThemeSettings>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreThemeSettings;
 
 // Class cfcore_ui.CFCoreUIBaseModel
 // 0x0000 (0x0000 - 0x0000)
@@ -266,7 +258,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ICFCoreUIBaseModel;
 
 // Class cfcore_ui.CFCoreUIBaseView
 // 0x0000 (0x0000 - 0x0000)
@@ -298,7 +289,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ICFCoreUIBaseView;
 
 // Class cfcore_ui.CFCoreUIInstallProgressModHelperFunctionsLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -322,7 +312,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreUIInstallProgressModHelperFunctionsLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreUIInstallProgressModHelperFunctionsLibrary;
 
 // Class cfcore_ui.CFCoreUIModel
 // 0x0058 (0x0080 - 0x0028)
@@ -345,7 +334,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreUIModel>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreUIModel;
 
 // Class cfcore_ui.CFCoreUISubsystem
 // 0x0250 (0x0280 - 0x0030)
@@ -429,7 +417,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreUISubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreUISubsystem;
 
 // Class cfcore_ui.CFCoreVirtualCursorFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -454,6 +441,5 @@ public:
 		return GetDefaultObjImpl<UCFCoreVirtualCursorFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreVirtualCursorFunctionLibrary;
 
 SDK_NAMESPACE_END

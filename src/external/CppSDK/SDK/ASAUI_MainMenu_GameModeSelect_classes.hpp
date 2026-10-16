@@ -85,6 +85,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_MainMenu_GameModeSelect_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_MainMenu_GameModeSelect_C;
 
 SDK_NAMESPACE_END

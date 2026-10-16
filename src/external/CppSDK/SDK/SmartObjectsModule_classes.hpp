@@ -49,7 +49,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_SmartObjects>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_SmartObjects;
 
 // Class SmartObjectsModule.EnvQueryItemType_SmartObject
 // 0x0000 (0x0030 - 0x0030)
@@ -69,7 +68,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryItemType_SmartObject>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryItemType_SmartObject;
 
 // Class SmartObjectsModule.SmartObjectSettings
 // 0x0018 (0x0050 - 0x0038)
@@ -97,7 +95,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectSettings>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectSettings;
 
 // Class SmartObjectsModule.BlackboardKeyType_SOClaimHandle
 // 0x0020 (0x0050 - 0x0030)
@@ -120,7 +117,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_SOClaimHandle>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_SOClaimHandle;
 
 // Class SmartObjectsModule.GenericSmartObject
 // 0x0008 (0x0498 - 0x0490)
@@ -143,7 +139,6 @@ public:
 		return GetDefaultObjImpl<AGenericSmartObject>();
 	}
 };
-DUMPER7_ASSERTS_AGenericSmartObject;
 
 // Class SmartObjectsModule.SmartObjectBlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -197,7 +192,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectBlueprintFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectBlueprintFunctionLibrary;
 
 // Class SmartObjectsModule.SmartObjectCollection
 // 0x00B0 (0x0540 - 0x0490)
@@ -224,7 +218,6 @@ public:
 		return GetDefaultObjImpl<ASmartObjectCollection>();
 	}
 };
-DUMPER7_ASSERTS_ASmartObjectCollection;
 
 // Class SmartObjectsModule.SmartObjectComponent
 // 0x0070 (0x02F0 - 0x0280)
@@ -265,7 +258,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectComponent>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectComponent;
 
 // Class SmartObjectsModule.SmartObjectContainerRenderingComponent
 // 0x0000 (0x0620 - 0x0620)
@@ -285,7 +277,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectContainerRenderingComponent>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectContainerRenderingComponent;
 
 // Class SmartObjectsModule.SmartObjectDebugRenderingComponent
 // 0x0000 (0x0670 - 0x0670)
@@ -305,7 +296,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectDebugRenderingComponent>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectDebugRenderingComponent;
 
 // Class SmartObjectsModule.SmartObjectBehaviorDefinition
 // 0x0000 (0x0028 - 0x0028)
@@ -325,7 +315,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectBehaviorDefinition>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectBehaviorDefinition;
 
 // Class SmartObjectsModule.SmartObjectDefinition
 // 0x0110 (0x0140 - 0x0030)
@@ -375,7 +364,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectDefinition>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectDefinition;
 
 // Class SmartObjectsModule.SmartObjectSpacePartition
 // 0x0000 (0x0028 - 0x0028)
@@ -395,7 +383,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectSpacePartition>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectSpacePartition;
 
 // Class SmartObjectsModule.SmartObjectHashGrid
 // 0x00A8 (0x00D0 - 0x0028)
@@ -418,7 +405,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectHashGrid>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectHashGrid;
 
 // Class SmartObjectsModule.SmartObjectOctree
 // 0x00C8 (0x00F0 - 0x0028)
@@ -441,7 +427,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectOctree>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectOctree;
 
 // Class SmartObjectsModule.SmartObjectPersistentCollection
 // 0x00B8 (0x0548 - 0x0490)
@@ -465,7 +450,6 @@ public:
 		return GetDefaultObjImpl<ASmartObjectPersistentCollection>();
 	}
 };
-DUMPER7_ASSERTS_ASmartObjectPersistentCollection;
 
 // Class SmartObjectsModule.SmartObjectRenderingComponent
 // 0x0000 (0x0620 - 0x0620)
@@ -485,7 +469,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectRenderingComponent>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectRenderingComponent;
 
 // Class SmartObjectsModule.SmartObjectSubsystem
 // 0x0170 (0x01A0 - 0x0030)
@@ -544,7 +527,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectSubsystem;
 
 // Class SmartObjectsModule.SmartObjectSubsystemRenderingComponent
 // 0x0000 (0x0670 - 0x0670)
@@ -564,7 +546,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectSubsystemRenderingComponent>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectSubsystemRenderingComponent;
 
 // Class SmartObjectsModule.SmartObjectSubsystemRenderingActor
 // 0x0008 (0x0498 - 0x0490)
@@ -587,7 +568,6 @@ public:
 		return GetDefaultObjImpl<ASmartObjectSubsystemRenderingActor>();
 	}
 };
-DUMPER7_ASSERTS_ASmartObjectSubsystemRenderingActor;
 
 // Class SmartObjectsModule.SmartObjectTest
 // 0x0008 (0x0030 - 0x0028)
@@ -610,7 +590,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectTest>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectTest;
 
 // Class SmartObjectsModule.SmartObjectSimpleQueryTest
 // 0x0120 (0x0150 - 0x0030)
@@ -634,7 +613,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectSimpleQueryTest>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectSimpleQueryTest;
 
 // Class SmartObjectsModule.SmartObjectTestRenderingComponent
 // 0x0000 (0x0670 - 0x0670)
@@ -654,7 +632,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectTestRenderingComponent>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectTestRenderingComponent;
 
 // Class SmartObjectsModule.SmartObjectTestingActor
 // 0x0028 (0x04B8 - 0x0490)
@@ -685,7 +662,6 @@ public:
 		return GetDefaultObjImpl<ASmartObjectTestingActor>();
 	}
 };
-DUMPER7_ASSERTS_ASmartObjectTestingActor;
 
 // Class SmartObjectsModule.SmartObjectSlotValidationFilter
 // 0x0108 (0x0130 - 0x0028)
@@ -711,7 +687,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectSlotValidationFilter>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectSlotValidationFilter;
 
 // Class SmartObjectsModule.SmartObjectUserComponent
 // 0x0008 (0x00D8 - 0x00D0)
@@ -734,7 +709,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectUserComponent>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectUserComponent;
 
 // Class SmartObjectsModule.SmartObjectWorldConditionSchema
 // 0x0040 (0x0078 - 0x0038)
@@ -757,6 +731,5 @@ public:
 		return GetDefaultObjImpl<USmartObjectWorldConditionSchema>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectWorldConditionSchema;
 
 SDK_NAMESPACE_END

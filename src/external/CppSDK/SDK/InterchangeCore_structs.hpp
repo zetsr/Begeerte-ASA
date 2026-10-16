@@ -125,7 +125,6 @@ struct alignas(0x08) FInterchangePipelineContextParams final
 public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FInterchangePipelineContextParams;
 
 // ScriptStruct InterchangeCore.InterchangePipelinePropertyStatePerContext
 // 0x0001 (0x0001 - 0x0000)
@@ -134,7 +133,6 @@ struct FInterchangePipelinePropertyStatePerContext final
 public:
 	bool                                          bVisible;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangePipelinePropertyStatePerContext;
 
 // ScriptStruct InterchangeCore.InterchangePipelinePropertyStates
 // 0x0005 (0x0005 - 0x0000)
@@ -147,7 +145,6 @@ public:
 	struct FInterchangePipelinePropertyStatePerContext ImportStates;                                 // 0x0003(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FInterchangePipelinePropertyStatePerContext ReimportStates;                               // 0x0004(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangePipelinePropertyStates;
 
 // ScriptStruct InterchangeCore.InterchangeUserDefinedAttributeInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -157,6 +154,5 @@ public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x20];                                      // 0x0010(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FInterchangeUserDefinedAttributeInfo;
 
 SDK_NAMESPACE_END

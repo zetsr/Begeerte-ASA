@@ -21,6 +21,5 @@ public:
 	double                                        DeltaPAmt_3_B109F74145B8752AA43961BF72F27995;      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 Description_5_FA2AF0744E0A04ADAE6D41B329057F9B;    // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FSTRUCT_DeltaMapData;
 
 SDK_NAMESPACE_END

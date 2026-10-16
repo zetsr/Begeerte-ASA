@@ -56,7 +56,6 @@ struct alignas(0x08) FMetaSoundOutput final : public FSoundGeneratorOutput
 public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMetaSoundOutput;
 
 // ScriptStruct MetasoundEngine.MetaSoundPageSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -66,7 +65,6 @@ public:
 	struct FGuid                                  UniqueID;                                          // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Name;                                              // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMetaSoundPageSettings;
 
 // ScriptStruct MetasoundEngine.DefaultMetaSoundAssetAutoUpdateSettings
 // 0x0020 (0x0020 - 0x0000)
@@ -75,7 +73,6 @@ struct FDefaultMetaSoundAssetAutoUpdateSettings final
 public:
 	struct FSoftObjectPath                        Metasound;                                         // 0x0000(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDefaultMetaSoundAssetAutoUpdateSettings;
 
 // ScriptStruct MetasoundEngine.MetaSoundQualitySettings
 // 0x0020 (0x0020 - 0x0000)
@@ -87,7 +84,6 @@ public:
 	struct FPerPlatformInt                        SampleRate;                                        // 0x0018(0x0004)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPerPlatformFloat                      BlockRate;                                         // 0x001C(0x0004)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMetaSoundQualitySettings;
 
 // ScriptStruct MetasoundEngine.MetaSoundAssetDirectory
 // 0x0010 (0x0010 - 0x0000)
@@ -96,7 +92,6 @@ struct FMetaSoundAssetDirectory final
 public:
 	struct FDirectoryPath                         Directory;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMetaSoundAssetDirectory;
 
 // ScriptStruct MetasoundEngine.MetaSoundAsyncAssetDependencies
 // 0x0030 (0x0030 - 0x0000)
@@ -107,21 +102,18 @@ public:
 	class UObject*                                Metasound;                                         // 0x0008(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	uint8                                         Pad_10[0x20];                                      // 0x0010(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMetaSoundAsyncAssetDependencies;
 
 // ScriptStruct MetasoundEngine.MetaSoundBuilderNodeInputHandle
 // 0x0000 (0x0020 - 0x0020)
 struct FMetaSoundBuilderNodeInputHandle final : public FMetasoundFrontendVertexHandle
 {
 };
-DUMPER7_ASSERTS_FMetaSoundBuilderNodeInputHandle;
 
 // ScriptStruct MetasoundEngine.MetaSoundBuilderNodeOutputHandle
 // 0x0000 (0x0020 - 0x0020)
 struct FMetaSoundBuilderNodeOutputHandle final : public FMetasoundFrontendVertexHandle
 {
 };
-DUMPER7_ASSERTS_FMetaSoundBuilderNodeOutputHandle;
 
 // ScriptStruct MetasoundEngine.MetaSoundNodeHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -130,7 +122,6 @@ struct FMetaSoundNodeHandle final
 public:
 	struct FGuid                                  NodeID;                                            // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMetaSoundNodeHandle;
 
 // ScriptStruct MetasoundEngine.MetaSoundBuilderOptions
 // 0x0020 (0x0020 - 0x0000)
@@ -143,6 +134,5 @@ public:
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TScriptInterface<class IMetaSoundDocumentInterface> ExistingMetaSound;                           // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMetaSoundBuilderOptions;
 
 SDK_NAMESPACE_END

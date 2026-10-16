@@ -39,6 +39,5 @@ public:
 		return GetDefaultObjImpl<UMultiUseActionWidget_UI_C>();
 	}
 };
-DUMPER7_ASSERTS_UMultiUseActionWidget_UI_C;
 
 SDK_NAMESPACE_END

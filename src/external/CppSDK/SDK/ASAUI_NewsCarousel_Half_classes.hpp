@@ -60,6 +60,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_NewsCarousel_Half_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_NewsCarousel_Half_C;
 
 SDK_NAMESPACE_END

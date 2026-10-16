@@ -26,7 +26,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        damage_multiplier;                                 // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_ProjSpear_Tek_get_damage_multiplier_for_attack;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_ProjSpear_Tek get rotation towards projectile
 // 0x0018 (0x0018 - 0x0000)
@@ -35,7 +34,6 @@ struct Interface_TekSpear_C_Interface_ProjSpear_Tek_get_rotation_towards_project
 public:
 	struct FRotator                               out_rotation;                                      // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_ProjSpear_Tek_get_rotation_towards_projectile;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_ProjSpear_Tek set projectile location
 // 0x0020 (0x0020 - 0x0000)
@@ -45,7 +43,6 @@ public:
 	struct FVector                                Last_Projectile_Location;                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_ProjSpear_Tek_set_projectile_location;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_ProjSpear_Tek set rotation towards projectile
 // 0x0020 (0x0020 - 0x0000)
@@ -55,7 +52,6 @@ public:
 	struct FRotator                               in_rot;                                            // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          success;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_ProjSpear_Tek_set_rotation_towards_projectile;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_ Destroy Projectile
 // 0x0001 (0x0001 - 0x0000)
@@ -64,7 +60,6 @@ struct Interface_TekSpear_C_Interface_TekSpear__Destroy_Projectile final
 public:
 	bool                                          success;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear__Destroy_Projectile;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_ Get Animations
 // 0x01B0 (0x01B0 - 0x0000)
@@ -90,7 +85,6 @@ public:
 	struct FStruct_WeapAnimWith3P_V3              Teleport_To_Spear_Grounded;                        // 0x0180(0x0018)(Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 	struct FStruct_WeapAnimWith3P_V3              Fallback_Standard_Stab_like_in_water;              // 0x0198(0x0018)(Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear__Get_Animations;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_ Get Awaiting Server Response Animations
 // 0x0150 (0x0150 - 0x0000)
@@ -112,7 +106,6 @@ public:
 	struct FStruct_WeapAnimWith3P_V3              Fallback_Stab;                                     // 0x0120(0x0018)(Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 	struct FStruct_WeapAnimWith3P_V3              TPToSpear;                                         // 0x0138(0x0018)(Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear__Get_Awaiting_Server_Response_Animations;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Torp Mode
 // 0x0002 (0x0002 - 0x0000)
@@ -122,7 +115,6 @@ public:
 	bool                                          Is_Damage_Mode;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Is_Tranq_Mode;                                     // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Torp_Mode_0;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_ Get Ground Slam Final Hit dmg types
 // 0x0010 (0x0010 - 0x0000)
@@ -132,7 +124,6 @@ public:
 	class UClass*                                 Regular_dmg_type;                                  // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 torpor_dmg_type;                                   // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear__Get_Ground_Slam_Final_Hit_dmg_types;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_ Get Midair Attack Air Limit Used
 // 0x0001 (0x0001 - 0x0000)
@@ -141,7 +132,6 @@ struct Interface_TekSpear_C_Interface_TekSpear__Get_Midair_Attack_Air_Limit_Used
 public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear__Get_Midair_Attack_Air_Limit_Used;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_ Is Spear Projectile Valid
 // 0x0010 (0x0010 - 0x0000)
@@ -152,7 +142,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AShooterProjectile*                     Projectile_Ref;                                    // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear__Is_Spear_Projectile_Valid;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Torp Mode
 // 0x0002 (0x0002 - 0x0000)
@@ -162,7 +151,6 @@ public:
 	bool                                          _torpor;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Torp_Mode;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_ Set Dynamic Material Parameters
 // 0x0010 (0x0010 - 0x0000)
@@ -172,7 +160,6 @@ public:
 	class UMaterialInstanceDynamic*               Material;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear__Set_Dynamic_Material_Parameters;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_ Set Midair Attack Air Limit Used
 // 0x0002 (0x0002 - 0x0000)
@@ -182,7 +169,6 @@ public:
 	bool                                          Value_To_Set;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear__Set_Midair_Attack_Air_Limit_Used;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_ Set Parameters On Cascade VFX particles
 // 0x0010 (0x0010 - 0x0000)
@@ -192,7 +178,6 @@ public:
 	class UParticleSystemComponent*               Cascade_VFX;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear__Set_Parameters_On_Cascade_VFX_particles;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_ Set Parameters On Niagara VFX particles
 // 0x0010 (0x0010 - 0x0000)
@@ -202,7 +187,6 @@ public:
 	class UNiagaraComponent*                      Niagara_VFX;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear__Set_Parameters_On_Niagara_VFX_particles;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_CanSetWeaponStateTo
 // 0x000C (0x000C - 0x0000)
@@ -214,7 +198,6 @@ public:
 	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Fail_Reason;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_CanSetWeaponStateTo;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_GetAwaitingServerState
 // 0x0001 (0x0001 - 0x0000)
@@ -223,7 +206,6 @@ struct Interface_TekSpear_C_Interface_TekSpear_GetAwaitingServerState final
 public:
 	uint8                                         Awaiting_State;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_GetAwaitingServerState;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_GetFakeExpandedScale
 // 0x0008 (0x0008 - 0x0000)
@@ -232,7 +214,6 @@ struct Interface_TekSpear_C_Interface_TekSpear_GetFakeExpandedScale final
 public:
 	double                                        FakeExpandedScale;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_GetFakeExpandedScale;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_GetLastLocationBeforeTP
 // 0x0018 (0x0018 - 0x0000)
@@ -241,7 +222,6 @@ struct Interface_TekSpear_C_Interface_TekSpear_GetLastLocationBeforeTP final
 public:
 	struct FVector                                Last_PreTPLoc;                                     // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_GetLastLocationBeforeTP;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_GetLastLocationProjectileWasAt
 // 0x0018 (0x0018 - 0x0000)
@@ -250,7 +230,6 @@ struct Interface_TekSpear_C_Interface_TekSpear_GetLastLocationProjectileWasAt fi
 public:
 	struct FVector                                Location;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_GetLastLocationProjectileWasAt;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_GetLastSelectedTeleportSpot
 // 0x0020 (0x0020 - 0x0000)
@@ -261,7 +240,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                LastTPLocation;                                    // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_GetLastSelectedTeleportSpot;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_GetState
 // 0x0007 (0x0007 - 0x0000)
@@ -276,7 +254,6 @@ public:
 	bool                                          IsDoding;                                          // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsDeflecting;                                      // 0x0006(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_GetState;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_GetThrownSpearProjRef
 // 0x0010 (0x0010 - 0x0000)
@@ -287,7 +264,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AShooterProjectile*                     Spear_Ref;                                         // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_GetThrownSpearProjRef;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_GetWantsToBlock
 // 0x0001 (0x0001 - 0x0000)
@@ -296,7 +272,6 @@ struct Interface_TekSpear_C_Interface_TekSpear_GetWantsToBlock final
 public:
 	bool                                          WantsToBlock;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_GetWantsToBlock;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_SetHideWeapon
 // 0x0002 (0x0002 - 0x0000)
@@ -306,7 +281,6 @@ public:
 	bool                                          HiddenState;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_SetHideWeapon;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_SetLastLocationProjectileWasAt
 // 0x0020 (0x0020 - 0x0000)
@@ -316,7 +290,6 @@ public:
 	struct FVector                                Location;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_SetLastLocationProjectileWasAt;
 
 // Function Interface_TekSpear.Interface_TekSpear_C.Interface_TekSpear_SetLastSelectedTeleportSpot
 // 0x0020 (0x0020 - 0x0000)
@@ -326,7 +299,6 @@ public:
 	struct FVector                                TeleportSpot;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_TekSpear_C_Interface_TekSpear_SetLastSelectedTeleportSpot;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

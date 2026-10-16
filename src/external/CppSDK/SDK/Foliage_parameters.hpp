@@ -25,7 +25,6 @@ public:
 	ECollisionChannel                             Channel;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECollisionResponse                            ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FoliageType_GetResponseToChannel;
 
 // Function Foliage.InstancedFoliageActor.BPGetInstancedFoliageActorForCurrentLevel
 // 0x0010 (0x0010 - 0x0000)
@@ -35,7 +34,6 @@ public:
 	class UWorld*                                 World;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AInstancedFoliageActor*                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_InstancedFoliageActor_BPGetInstancedFoliageActorForCurrentLevel;
 
 // Function Foliage.InstancedFoliageActor.BPConvertStaticMeshActorsToFoliage
 // 0x0020 (0x0020 - 0x0000)
@@ -45,7 +43,6 @@ public:
 	TArray<class AStaticMeshActor*>               Actors;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<class AStaticMeshActor*>               ConvertedActors;                                   // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_InstancedFoliageActor_BPConvertStaticMeshActorsToFoliage;
 
 // Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount
 // 0x0050 (0x0050 - 0x0000)
@@ -58,7 +55,6 @@ public:
 	int32                                         ReturnValue;                                       // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FoliageStatistics_FoliageOverlappingBoxCount;
 
 // Function Foliage.FoliageStatistics.FoliageOverlappingBoxTransforms
 // 0x0058 (0x0058 - 0x0000)
@@ -70,7 +66,6 @@ public:
 	struct FBox                                   Box;                                               // 0x0010(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	TArray<struct FTransform>                     OutTransforms;                                     // 0x0048(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FoliageStatistics_FoliageOverlappingBoxTransforms;
 
 // Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount
 // 0x0030 (0x0030 - 0x0000)
@@ -83,7 +78,6 @@ public:
 	float                                         Radius;                                            // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FoliageStatistics_FoliageOverlappingSphereCount;
 
 // Function Foliage.InteractiveFoliageActor.CapsuleTouched
 // 0x0128 (0x0128 - 0x0000)
@@ -98,7 +92,6 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             OverlapInfo;                                       // 0x0020(0x0108)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_InteractiveFoliageActor_CapsuleTouched;
 
 // Function Foliage.ProceduralFoliageSpawner.Simulate
 // 0x0004 (0x0004 - 0x0000)
@@ -107,7 +100,6 @@ struct ProceduralFoliageSpawner_Simulate final
 public:
 	int32                                         NumSteps;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ProceduralFoliageSpawner_Simulate;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

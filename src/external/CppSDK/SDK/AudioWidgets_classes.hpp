@@ -48,7 +48,6 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialButton>();
 	}
 };
-DUMPER7_ASSERTS_UAudioMaterialButton;
 
 // Class AudioWidgets.AudioMaterialEnvelope
 // 0x0080 (0x0280 - 0x0200)
@@ -73,7 +72,6 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialEnvelope>();
 	}
 };
-DUMPER7_ASSERTS_UAudioMaterialEnvelope;
 
 // Class AudioWidgets.AudioMaterialKnob
 // 0x0200 (0x0400 - 0x0200)
@@ -120,7 +118,6 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialKnob>();
 	}
 };
-DUMPER7_ASSERTS_UAudioMaterialKnob;
 
 // Class AudioWidgets.AudioMaterialMeter
 // 0x0128 (0x0328 - 0x0200)
@@ -153,7 +150,6 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialMeter>();
 	}
 };
-DUMPER7_ASSERTS_UAudioMaterialMeter;
 
 // Class AudioWidgets.AudioMaterialSlider
 // 0x0190 (0x0390 - 0x0200)
@@ -202,7 +198,6 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialSlider>();
 	}
 };
-DUMPER7_ASSERTS_UAudioMaterialSlider;
 
 // Class AudioWidgets.AudioMaterialKnobWidgetStyle
 // 0x01C0 (0x01F0 - 0x0030)
@@ -225,7 +220,6 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialKnobWidgetStyle>();
 	}
 };
-DUMPER7_ASSERTS_UAudioMaterialKnobWidgetStyle;
 
 // Class AudioWidgets.AudioMaterialMeterWidgetStyle
 // 0x00F0 (0x0120 - 0x0030)
@@ -248,7 +242,6 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialMeterWidgetStyle>();
 	}
 };
-DUMPER7_ASSERTS_UAudioMaterialMeterWidgetStyle;
 
 // Class AudioWidgets.AudioMaterialButtonWidgetStyle
 // 0x0088 (0x00B8 - 0x0030)
@@ -271,7 +264,6 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialButtonWidgetStyle>();
 	}
 };
-DUMPER7_ASSERTS_UAudioMaterialButtonWidgetStyle;
 
 // Class AudioWidgets.AudioMaterialSliderWidgetStyle
 // 0x0150 (0x0180 - 0x0030)
@@ -294,7 +286,6 @@ public:
 		return GetDefaultObjImpl<UAudioMaterialSliderWidgetStyle>();
 	}
 };
-DUMPER7_ASSERTS_UAudioMaterialSliderWidgetStyle;
 
 // Class AudioWidgets.AudioMeter
 // 0x04E0 (0x06E0 - 0x0200)
@@ -341,7 +332,6 @@ public:
 		return GetDefaultObjImpl<UAudioMeter>();
 	}
 };
-DUMPER7_ASSERTS_UAudioMeter;
 
 // Class AudioWidgets.AudioOscilloscope
 // 0x04C0 (0x06C0 - 0x0200)
@@ -385,7 +375,6 @@ public:
 		return GetDefaultObjImpl<UAudioOscilloscope>();
 	}
 };
-DUMPER7_ASSERTS_UAudioOscilloscope;
 
 // Class AudioWidgets.AudioRadialSlider
 // 0x01F0 (0x03F0 - 0x0200)
@@ -442,7 +431,6 @@ public:
 		return GetDefaultObjImpl<UAudioRadialSlider>();
 	}
 };
-DUMPER7_ASSERTS_UAudioRadialSlider;
 
 // Class AudioWidgets.AudioVolumeRadialSlider
 // 0x0000 (0x03F0 - 0x03F0)
@@ -462,7 +450,6 @@ public:
 		return GetDefaultObjImpl<UAudioVolumeRadialSlider>();
 	}
 };
-DUMPER7_ASSERTS_UAudioVolumeRadialSlider;
 
 // Class AudioWidgets.AudioFrequencyRadialSlider
 // 0x0000 (0x03F0 - 0x03F0)
@@ -482,7 +469,6 @@ public:
 		return GetDefaultObjImpl<UAudioFrequencyRadialSlider>();
 	}
 };
-DUMPER7_ASSERTS_UAudioFrequencyRadialSlider;
 
 // Class AudioWidgets.AudioSliderBase
 // 0x0740 (0x0940 - 0x0200)
@@ -541,7 +527,6 @@ public:
 		return GetDefaultObjImpl<UAudioSliderBase>();
 	}
 };
-DUMPER7_ASSERTS_UAudioSliderBase;
 
 // Class AudioWidgets.AudioSlider
 // 0x0010 (0x0950 - 0x0940)
@@ -565,7 +550,6 @@ public:
 		return GetDefaultObjImpl<UAudioSlider>();
 	}
 };
-DUMPER7_ASSERTS_UAudioSlider;
 
 // Class AudioWidgets.AudioVolumeSlider
 // 0x0000 (0x0950 - 0x0950)
@@ -585,7 +569,6 @@ public:
 		return GetDefaultObjImpl<UAudioVolumeSlider>();
 	}
 };
-DUMPER7_ASSERTS_UAudioVolumeSlider;
 
 // Class AudioWidgets.AudioFrequencySlider
 // 0x0010 (0x0950 - 0x0940)
@@ -608,7 +591,6 @@ public:
 		return GetDefaultObjImpl<UAudioFrequencySlider>();
 	}
 };
-DUMPER7_ASSERTS_UAudioFrequencySlider;
 
 // Class AudioWidgets.AudioVectorscope
 // 0x0210 (0x0410 - 0x0200)
@@ -644,6 +626,5 @@ public:
 		return GetDefaultObjImpl<UAudioVectorscope>();
 	}
 };
-DUMPER7_ASSERTS_UAudioVectorscope;
 
 SDK_NAMESPACE_END

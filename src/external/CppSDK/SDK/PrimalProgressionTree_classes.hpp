@@ -49,7 +49,6 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeAsset>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalProgressionTreeAsset;
 
 // Class PrimalProgressionTree.PrimalProgressionTreeGraph
 // 0x0060 (0x0088 - 0x0028)
@@ -93,7 +92,6 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeGraph>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalProgressionTreeGraph;
 
 // Class PrimalProgressionTree.PrimalProgressionTreeFeature
 // 0x0000 (0x0028 - 0x0028)
@@ -113,7 +111,6 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeFeature>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalProgressionTreeFeature;
 
 // Class PrimalProgressionTree.PrimalProgressionTreeRowFeature
 // 0x0060 (0x0088 - 0x0028)
@@ -145,7 +142,6 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeRowFeature>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalProgressionTreeRowFeature;
 
 // Class PrimalProgressionTree.PrimalProgressionTreeTierFeature
 // 0x00A0 (0x00C8 - 0x0028)
@@ -179,7 +175,6 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeTierFeature>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalProgressionTreeTierFeature;
 
 // Class PrimalProgressionTree.PrimalProgressionTreeGraph_RowsAndTiers
 // 0x0010 (0x0098 - 0x0088)
@@ -206,6 +201,5 @@ public:
 		return GetDefaultObjImpl<UPrimalProgressionTreeGraph_RowsAndTiers>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalProgressionTreeGraph_RowsAndTiers;
 
 SDK_NAMESPACE_END

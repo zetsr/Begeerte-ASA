@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UGamepadButtonLegend_C>();
 	}
 };
-DUMPER7_ASSERTS_UGamepadButtonLegend_C;
 
 SDK_NAMESPACE_END

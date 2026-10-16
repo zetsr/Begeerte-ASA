@@ -21,7 +21,6 @@ struct UI_CFCore_Button_GoToHorizontal_C_ExecuteUbergraph_UI_CFCore_Button_GoToH
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Button_GoToHorizontal_C_ExecuteUbergraph_UI_CFCore_Button_GoToHorizontal;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

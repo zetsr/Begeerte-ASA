@@ -110,7 +110,6 @@ public:
 		return GetDefaultObjImpl<UScriptableInteractiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableInteractiveTool;
 
 // Class ScriptableToolsFramework.ScriptableClickDragTool
 // 0x0038 (0x0320 - 0x02E8)
@@ -158,7 +157,6 @@ public:
 		return GetDefaultObjImpl<UScriptableClickDragTool>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableClickDragTool;
 
 // Class ScriptableToolsFramework.ScriptableTool_RenderAPI
 // 0x0008 (0x0030 - 0x0028)
@@ -185,7 +183,6 @@ public:
 		return GetDefaultObjImpl<UScriptableTool_RenderAPI>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableTool_RenderAPI;
 
 // Class ScriptableToolsFramework.ScriptableTool_HUDAPI
 // 0x0010 (0x0038 - 0x0028)
@@ -213,7 +210,6 @@ public:
 		return GetDefaultObjImpl<UScriptableTool_HUDAPI>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableTool_HUDAPI;
 
 // Class ScriptableToolsFramework.ScriptableInteractiveToolPropertySet
 // 0x0008 (0x00B0 - 0x00A8)
@@ -239,7 +235,6 @@ public:
 		return GetDefaultObjImpl<UScriptableInteractiveToolPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableInteractiveToolPropertySet;
 
 // Class ScriptableToolsFramework.ScriptableToolsUtilityLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -264,7 +259,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolsUtilityLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolsUtilityLibrary;
 
 // Class ScriptableToolsFramework.ScriptableModularBehaviorTool
 // 0x0088 (0x0370 - 0x02E8)
@@ -311,7 +305,6 @@ public:
 		return GetDefaultObjImpl<UScriptableModularBehaviorTool>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableModularBehaviorTool;
 
 // Class ScriptableToolsFramework.ScriptableSingleClickTool
 // 0x0030 (0x0318 - 0x02E8)
@@ -353,7 +346,6 @@ public:
 		return GetDefaultObjImpl<UScriptableSingleClickTool>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableSingleClickTool;
 
 // Class ScriptableToolsFramework.ScriptableToolBehavior
 // 0x0000 (0x0028 - 0x0028)
@@ -373,7 +365,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolBehavior;
 
 // Class ScriptableToolsFramework.BaseScriptableToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -396,7 +387,6 @@ public:
 		return GetDefaultObjImpl<UBaseScriptableToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UBaseScriptableToolBuilder;
 
 // Class ScriptableToolsFramework.CustomScriptableToolBuilderBaseInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -425,7 +415,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ICustomScriptableToolBuilderBaseInterface;
 
 // Class ScriptableToolsFramework.CustomScriptableToolBuilderComponentBase
 // 0x0000 (0x0028 - 0x0028)
@@ -445,7 +434,6 @@ public:
 		return GetDefaultObjImpl<UCustomScriptableToolBuilderComponentBase>();
 	}
 };
-DUMPER7_ASSERTS_UCustomScriptableToolBuilderComponentBase;
 
 // Class ScriptableToolsFramework.CustomScriptableToolBuilderContainer
 // 0x0008 (0x0038 - 0x0030)
@@ -468,7 +456,6 @@ public:
 		return GetDefaultObjImpl<UCustomScriptableToolBuilderContainer>();
 	}
 };
-DUMPER7_ASSERTS_UCustomScriptableToolBuilderContainer;
 
 // Class ScriptableToolsFramework.CustomScriptableToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -495,7 +482,6 @@ public:
 		return GetDefaultObjImpl<UCustomScriptableToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UCustomScriptableToolBuilder;
 
 // Class ScriptableToolsFramework.ScriptableToolTargetRequirements
 // 0x0040 (0x0068 - 0x0028)
@@ -523,7 +509,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolTargetRequirements>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolTargetRequirements;
 
 // Class ScriptableToolsFramework.ToolTargetScriptableToolBuilder
 // 0x0010 (0x0038 - 0x0028)
@@ -551,7 +536,6 @@ public:
 		return GetDefaultObjImpl<UToolTargetScriptableToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UToolTargetScriptableToolBuilder;
 
 // Class ScriptableToolsFramework.ScriptableToolClickDragBehavior
 // 0x0080 (0x00A8 - 0x0028)
@@ -584,7 +568,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolClickDragBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolClickDragBehavior;
 
 // Class ScriptableToolsFramework.ScriptableToolContextObject
 // 0x0000 (0x0028 - 0x0028)
@@ -604,7 +587,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolContextObject>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolContextObject;
 
 // Class ScriptableToolsFramework.ScriptableToolViewportWidgetAPI
 // 0x0098 (0x00C0 - 0x0028)
@@ -627,7 +609,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolViewportWidgetAPI>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolViewportWidgetAPI;
 
 // Class ScriptableToolsFramework.ScriptableToolSingleClickBehavior
 // 0x0050 (0x0078 - 0x0028)
@@ -657,7 +638,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolSingleClickBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolSingleClickBehavior;
 
 // Class ScriptableToolsFramework.ScriptableToolDoubleClickBehavior
 // 0x0000 (0x0078 - 0x0078)
@@ -677,7 +657,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolDoubleClickBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolDoubleClickBehavior;
 
 // Class ScriptableToolsFramework.ScriptableToolGroupTag
 // 0x0010 (0x0038 - 0x0028)
@@ -700,7 +679,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolGroupTag>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolGroupTag;
 
 // Class ScriptableToolsFramework.ScriptableToolKeyInputBehavior
 // 0x0058 (0x0080 - 0x0028)
@@ -729,7 +707,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolKeyInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolKeyInputBehavior;
 
 // Class ScriptableToolsFramework.ScriptableToolLine
 // 0x0048 (0x0070 - 0x0028)
@@ -763,7 +740,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolLine>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolLine;
 
 // Class ScriptableToolsFramework.ScriptableToolLineSet
 // 0x0020 (0x0048 - 0x0028)
@@ -795,7 +771,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolLineSet>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolLineSet;
 
 // Class ScriptableToolsFramework.ScriptableToolMouseHoverBehavior
 // 0x0068 (0x0090 - 0x0028)
@@ -825,7 +800,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolMouseHoverBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolMouseHoverBehavior;
 
 // Class ScriptableToolsFramework.ScriptableToolMouseWheelBehavior
 // 0x0058 (0x0080 - 0x0028)
@@ -854,7 +828,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolMouseWheelBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolMouseWheelBehavior;
 
 // Class ScriptableToolsFramework.ScriptableToolClickSequenceBehavior
 // 0x00B0 (0x00D8 - 0x0028)
@@ -890,7 +863,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolClickSequenceBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolClickSequenceBehavior;
 
 // Class ScriptableToolsFramework.ScriptableToolPoint
 // 0x0030 (0x0058 - 0x0028)
@@ -922,7 +894,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolPoint>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolPoint;
 
 // Class ScriptableToolsFramework.ScriptableToolPointSet
 // 0x0020 (0x0048 - 0x0028)
@@ -954,7 +925,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolPointSet>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolPointSet;
 
 // Class ScriptableToolsFramework.ScriptableToolSingleClickOrDragBehavior
 // 0x00A8 (0x00D0 - 0x0028)
@@ -989,7 +959,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolSingleClickOrDragBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolSingleClickOrDragBehavior;
 
 // Class ScriptableToolsFramework.ScriptableToolTriangle
 // 0x00E8 (0x0110 - 0x0028)
@@ -1022,7 +991,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolTriangle>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolTriangle;
 
 // Class ScriptableToolsFramework.ScriptableToolQuad
 // 0x01D0 (0x01F8 - 0x0028)
@@ -1057,7 +1025,6 @@ public:
 		return GetDefaultObjImpl<UScriptableToolQuad>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolQuad;
 
 // Class ScriptableToolsFramework.ScriptableToolTriangleSet
 // 0x0030 (0x0058 - 0x0028)
@@ -1092,6 +1059,5 @@ public:
 		return GetDefaultObjImpl<UScriptableToolTriangleSet>();
 	}
 };
-DUMPER7_ASSERTS_UScriptableToolTriangleSet;
 
 SDK_NAMESPACE_END

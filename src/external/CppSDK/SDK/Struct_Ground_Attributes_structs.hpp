@@ -36,6 +36,5 @@ public:
 	bool                                          ShowFootprints_34_D3871B734E2F65D166D1EEB436C00A19; // 0x0064(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShowImpacts_36_8A9776F143EDF0F323D6E5A101D53959;   // 0x0065(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FStruct_Ground_Attributes;
 
 SDK_NAMESPACE_END

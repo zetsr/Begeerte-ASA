@@ -40,6 +40,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponMachinedSniper_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_WeaponMachinedSniper_C;
 
 SDK_NAMESPACE_END

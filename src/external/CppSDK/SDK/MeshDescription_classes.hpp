@@ -130,7 +130,6 @@ public:
 		return GetDefaultObjImpl<UMeshDescriptionBase>();
 	}
 };
-DUMPER7_ASSERTS_UMeshDescriptionBase;
 
 // Class MeshDescription.MeshDescriptionBaseBulkData
 // 0x0000 (0x0028 - 0x0028)
@@ -150,6 +149,5 @@ public:
 		return GetDefaultObjImpl<UMeshDescriptionBaseBulkData>();
 	}
 };
-DUMPER7_ASSERTS_UMeshDescriptionBaseBulkData;
 
 SDK_NAMESPACE_END

@@ -42,7 +42,6 @@ public:
 	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_ActionSwitch;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.AddScreenshotToList
 // 0x0070 (0x0070 - 0x0000)
@@ -55,7 +54,6 @@ public:
 	struct FModAsset                              CallFunc_Array_Get_Item;                           // 0x0010(0x0058)()
 	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_AddScreenshotToList;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.Animation_ScreenshotLoaded
 // 0x0008 (0x0008 - 0x0000)
@@ -64,7 +62,6 @@ struct UI_CFCore_ModPage_C_Animation_ScreenshotLoaded final
 public:
 	class UImage*                                 IMG_Screenshot_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_Animation_ScreenshotLoaded;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.Animation_SwapImage
 // 0x0008 (0x0008 - 0x0000)
@@ -73,7 +70,6 @@ struct UI_CFCore_ModPage_C_Animation_SwapImage final
 public:
 	class UImage*                                 IMG_Screenshot_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_Animation_SwapImage;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.Animation_UpdateThumbnail
 // 0x0008 (0x0008 - 0x0000)
@@ -82,7 +78,6 @@ struct UI_CFCore_ModPage_C_Animation_UpdateThumbnail final
 public:
 	class UImage*                                 IMG_Mod;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_Animation_UpdateThumbnail;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.BPCycleHighlighted
 // 0x0001 (0x0001 - 0x0000)
@@ -91,7 +86,6 @@ struct UI_CFCore_ModPage_C_BPCycleHighlighted final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_BPCycleHighlighted;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.BPEscapeClosed
 // 0x0001 (0x0001 - 0x0000)
@@ -100,7 +94,6 @@ struct UI_CFCore_ModPage_C_BPEscapeClosed final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_BPEscapeClosed;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.BPGamepadReleased
 // 0x0098 (0x0098 - 0x0000)
@@ -132,7 +125,6 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_BPGamepadReleased;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.BPHighlightWidgetOnStart
 // 0x0001 (0x0001 - 0x0000)
@@ -141,7 +133,6 @@ struct UI_CFCore_ModPage_C_BPHighlightWidgetOnStart final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_BPHighlightWidgetOnStart;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.ButtonCall
 // 0x0020 (0x0020 - 0x0000)
@@ -151,7 +142,6 @@ public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	EViewState                                    State;                                             // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_ButtonCall;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.CanGoToNextImage
 // 0x001C (0x001C - 0x0000)
@@ -167,7 +157,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_CanGoToNextImage;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.CanGoToPreviousImage
 // 0x001C (0x001C - 0x0000)
@@ -185,7 +174,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_CanGoToPreviousImage;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.CloseBNavigation
 // 0x0010 (0x0010 - 0x0000)
@@ -196,7 +184,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_CloseBNavigation;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.CustomEvent_0
 // 0x0010 (0x0010 - 0x0000)
@@ -205,7 +192,6 @@ struct UI_CFCore_ModPage_C_CustomEvent_0 final
 public:
 	class FString                                 Description;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_CustomEvent_0;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.CustomEvent_3
 // 0x0010 (0x0010 - 0x0000)
@@ -214,7 +200,6 @@ struct UI_CFCore_ModPage_C_CustomEvent_3 final
 public:
 	class FString                                 temp_user_token;                                   // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_CustomEvent_3;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.CustomEvent_4
 // 0x0038 (0x0038 - 0x0000)
@@ -223,7 +208,6 @@ struct UI_CFCore_ModPage_C_CustomEvent_4 final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_CustomEvent_4;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.DebugScreenshotImageIndexing
 // 0x0001 (0x0001 - 0x0000)
@@ -232,7 +216,6 @@ struct UI_CFCore_ModPage_C_DebugScreenshotImageIndexing final
 public:
 	bool                                          Increase;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_DebugScreenshotImageIndexing;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.DestroyPurchaseResponseHandle
 // 0x0001 (0x0001 - 0x0000)
@@ -241,7 +224,6 @@ struct UI_CFCore_ModPage_C_DestroyPurchaseResponseHandle final
 public:
 	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_DestroyPurchaseResponseHandle;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.DisableAllButtonsForDestruct
 // 0x00D0 (0x00D0 - 0x0000)
@@ -252,7 +234,6 @@ public:
 	uint8                                         Pad_14[0xC];                                       // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0020(0x00B0)()
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_DisableAllButtonsForDestruct;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.ExecuteUbergraph_UI_CFCore_ModPage
 // 0x1160 (0x1160 - 0x0000)
@@ -507,7 +488,6 @@ public:
 	struct FCFCoreError                           K2Node_CustomEvent_error;                          // 0x1120(0x0038)(ConstParm)
 	bool                                          CallFunc_DidAllTheModsGetBought_ReturnValue;       // 0x1158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_ExecuteUbergraph_UI_CFCore_ModPage;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.FadeOutAnim
 // 0x0010 (0x0010 - 0x0000)
@@ -516,7 +496,6 @@ struct UI_CFCore_ModPage_C_FadeOutAnim final
 public:
 	class FString                                 OpenedUrl;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_FadeOutAnim;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.FailedPremiumModsChecks
 // 0x0038 (0x0038 - 0x0000)
@@ -525,7 +504,6 @@ struct UI_CFCore_ModPage_C_FailedPremiumModsChecks final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_FailedPremiumModsChecks;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.FindThumbnail
 // 0x0002 (0x0002 - 0x0000)
@@ -535,7 +513,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_FindThumbnail;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.Get_Horizontal_ThumbUpDownButtons
 // 0x0010 (0x0010 - 0x0000)
@@ -545,7 +522,6 @@ public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_Get_Horizontal_ThumbUpDownButtons;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.GetBaseProductIdOfModInCurrentPage
 // 0x0010 (0x0010 - 0x0000)
@@ -554,7 +530,6 @@ struct UI_CFCore_ModPage_C_GetBaseProductIdOfModInCurrentPage final
 public:
 	class FString                                 productId;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_GetBaseProductIdOfModInCurrentPage;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.GetDiscountProductIdOfModInCurrentPage
 // 0x0010 (0x0010 - 0x0000)
@@ -563,7 +538,6 @@ struct UI_CFCore_ModPage_C_GetDiscountProductIdOfModInCurrentPage final
 public:
 	class FString                                 productId;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_GetDiscountProductIdOfModInCurrentPage;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.GetIdOfModInCurrentPage
 // 0x0028 (0x0028 - 0x0000)
@@ -574,7 +548,6 @@ public:
 	TArray<int64>                                 As_Array;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm)
 	TArray<int64>                                 K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ConstParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_GetIdOfModInCurrentPage;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.GetModInCurrentPagePurchased
 // 0x0068 (0x0068 - 0x0000)
@@ -594,7 +567,6 @@ public:
 	struct FPremiumDetailsDiscount                CallFunc_GetIsModPaidStatus_Discount_Data;         // 0x0040(0x0020)()
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_GetModInCurrentPagePurchased;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.GetNumOfCarouselItems
 // 0x0010 (0x0010 - 0x0000)
@@ -606,7 +578,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_GetNumOfCarouselItems;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.GetPlatformProductPriceInfo
 // 0x0070 (0x0070 - 0x0000)
@@ -625,7 +596,6 @@ public:
 	TArray<int64>                                 CallFunc_GetIdOfModInCurrentPage_As_Array_1;       // 0x0058(0x0010)(ReferenceParm)
 	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_GetPlatformProductPriceInfo;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -635,7 +605,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_GetRootCFWidget;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.GetScreenshotPaginationText
 // 0x0070 (0x0070 - 0x0000)
@@ -653,7 +622,6 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0060(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_GetScreenshotPaginationText;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.How could we possibly ever fail
 // 0x0038 (0x0038 - 0x0000)
@@ -662,7 +630,6 @@ struct UI_CFCore_ModPage_C_How_could_we_possibly_ever_fail final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_How_could_we_possibly_ever_fail;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.Init All Widget Refs
 // 0x0002 (0x0002 - 0x0000)
@@ -672,7 +639,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_Init_All_Widget_Refs;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.InitAllVars
 // 0x00D8 (0x00D8 - 0x0000)
@@ -695,7 +661,6 @@ public:
 	class FText                                   CallFunc_Get_Mod_Size_SizeInText;                  // 0x00C0(0x0010)()
 	int64                                         CallFunc_Get_Mod_Size_bytes;                       // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_InitAllVars;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.InitializeForServerMods
 // 0x0001 (0x0001 - 0x0000)
@@ -704,7 +669,6 @@ struct UI_CFCore_ModPage_C_InitializeForServerMods final
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_InitializeForServerMods;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.InitModByID
 // 0x0008 (0x0008 - 0x0000)
@@ -713,7 +677,6 @@ struct UI_CFCore_ModPage_C_InitModByID final
 public:
 	int64                                         modId;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_InitModByID;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.InitModPageDefault
 // 0x0018 (0x0018 - 0x0000)
@@ -725,7 +688,6 @@ public:
 	bool                                          CallFunc_InitializeModView_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SubscribeViewToEvents_ReturnValue;        // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_InitModPageDefault;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.InitRatings
 // 0x0018 (0x0018 - 0x0000)
@@ -735,7 +697,6 @@ public:
 	int64                                         CallFunc_GetIdOfModInCurrentPage_As_ID;            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<int64>                                 CallFunc_GetIdOfModInCurrentPage_As_Array;         // 0x0008(0x0010)(ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_InitRatings;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.InstallBCustomNavigation
 // 0x0038 (0x0038 - 0x0000)
@@ -752,7 +713,6 @@ public:
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_InstallBCustomNavigation;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.IsDiscountedProduct
 // 0x0010 (0x0010 - 0x0000)
@@ -765,7 +725,6 @@ public:
 	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_NearlyEqual_FloatFloat_A_ImplicitCast;    // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_IsDiscountedProduct;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.IsIndexVideo
 // 0x0010 (0x0010 - 0x0000)
@@ -778,7 +737,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_IsIndexVideo;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.LaunchCommentsURL
 // 0x0018 (0x0018 - 0x0000)
@@ -789,7 +747,6 @@ public:
 	bool                                          CallFunc_CanLaunchURL_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CanLaunchURL_ReturnValue_1;               // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_LaunchCommentsURL;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.Load Image If Current Displayed
 // 0x0020 (0x0020 - 0x0000)
@@ -809,7 +766,6 @@ public:
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_Load_Image_If_Current_Displayed;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnCategoryError
 // 0x0038 (0x0038 - 0x0000)
@@ -818,7 +774,6 @@ struct UI_CFCore_ModPage_C_OnCategoryError final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnCategoryError;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnCategoryResults
 // 0x0010 (0x0010 - 0x0000)
@@ -827,7 +782,6 @@ struct UI_CFCore_ModPage_C_OnCategoryResults final
 public:
 	TArray<struct FCategory>                      Categories;                                        // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnCategoryResults;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnDescriptionError
 // 0x0038 (0x0038 - 0x0000)
@@ -836,7 +790,6 @@ struct UI_CFCore_ModPage_C_OnDescriptionError final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnDescriptionError;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnError
 // 0x0038 (0x0038 - 0x0000)
@@ -845,7 +798,6 @@ struct UI_CFCore_ModPage_C_OnError final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnError;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnErrorGetMyRatings
 // 0x0038 (0x0038 - 0x0000)
@@ -854,7 +806,6 @@ struct UI_CFCore_ModPage_C_OnErrorGetMyRatings final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnErrorGetMyRatings;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnEventBroadcasted
 // 0x1280 (0x1280 - 0x0000)
@@ -881,7 +832,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x1278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x127C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnEventBroadcasted;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnFail_13897D64427114E2F64F66A69ECC1173
 // 0x0008 (0x0008 - 0x0000)
@@ -890,7 +840,6 @@ struct UI_CFCore_ModPage_C_OnFail_13897D64427114E2F64F66A69ECC1173 final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnFail_13897D64427114E2F64F66A69ECC1173;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnFail_B48CC73F42DFB1C1D2B1B99E249CD6CA
 // 0x0008 (0x0008 - 0x0000)
@@ -899,7 +848,6 @@ struct UI_CFCore_ModPage_C_OnFail_B48CC73F42DFB1C1D2B1B99E249CD6CA final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnFail_B48CC73F42DFB1C1D2B1B99E249CD6CA;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnFail_FC28BA524F43B59D65346B94C5AD9301
 // 0x0008 (0x0008 - 0x0000)
@@ -908,7 +856,6 @@ struct UI_CFCore_ModPage_C_OnFail_FC28BA524F43B59D65346B94C5AD9301 final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnFail_FC28BA524F43B59D65346B94C5AD9301;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnMouseButtonDown
 // 0x0170 (0x0170 - 0x0000)
@@ -921,7 +868,6 @@ public:
 	bool                                          CallFunc_PointerEvent_IsMouseButtonDown_ReturnValue; // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnMouseButtonDown;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnSearch
 // 0x0010 (0x0010 - 0x0000)
@@ -930,7 +876,6 @@ struct UI_CFCore_ModPage_C_OnSearch final
 public:
 	class FText                                   Search_Input;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnSearch;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnSuccess_13897D64427114E2F64F66A69ECC1173
 // 0x0008 (0x0008 - 0x0000)
@@ -939,7 +884,6 @@ struct UI_CFCore_ModPage_C_OnSuccess_13897D64427114E2F64F66A69ECC1173 final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnSuccess_13897D64427114E2F64F66A69ECC1173;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnSuccess_B48CC73F42DFB1C1D2B1B99E249CD6CA
 // 0x0008 (0x0008 - 0x0000)
@@ -948,7 +892,6 @@ struct UI_CFCore_ModPage_C_OnSuccess_B48CC73F42DFB1C1D2B1B99E249CD6CA final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnSuccess_B48CC73F42DFB1C1D2B1B99E249CD6CA;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnSuccess_FC28BA524F43B59D65346B94C5AD9301
 // 0x0008 (0x0008 - 0x0000)
@@ -957,7 +900,6 @@ struct UI_CFCore_ModPage_C_OnSuccess_FC28BA524F43B59D65346B94C5AD9301 final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnSuccess_FC28BA524F43B59D65346B94C5AD9301;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnSuccessPremiumModsCheck
 // 0x0010 (0x0010 - 0x0000)
@@ -966,7 +908,6 @@ struct UI_CFCore_ModPage_C_OnSuccessPremiumModsCheck final
 public:
 	TArray<int64>                                 modIds;                                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnSuccessPremiumModsCheck;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.OnWidgetSwitched
 // 0x0010 (0x0010 - 0x0000)
@@ -976,7 +917,6 @@ public:
 	class UObject*                                Object;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FFieldNotificationId                   Field;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_OnWidgetSwitched;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.Platform_GetPriceOfProduct_Response
 // 0x0098 (0x0098 - 0x0000)
@@ -1005,7 +945,6 @@ public:
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDiscountedProduct_IsDiscounted;         // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_Platform_GetPriceOfProduct_Response;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.PlayAnimationThumbnail
 // 0x0018 (0x0018 - 0x0000)
@@ -1018,7 +957,6 @@ public:
 	class UWidgetAnimation*                       K2Node_Select_Default;                             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_PlayAnimationThumbnail;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.PlayStartinAnimation
 // 0x0010 (0x0010 - 0x0000)
@@ -1028,7 +966,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_PlayStartinAnimation;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.PlayVideo
 // 0x0030 (0x0030 - 0x0000)
@@ -1042,7 +979,6 @@ public:
 	bool                                          CallFunc_OpenUrl_ReturnValue;                      // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CanPlayUrl_ReturnValue;                   // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_PlayVideo;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.SequenceEvent__ENTRYPOINTUI_CFCore_ModPage
 // 0x0008 (0x0008 - 0x0000)
@@ -1051,7 +987,6 @@ struct UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage final
 public:
 	class UImage*                                 IMG_Mod;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_0
 // 0x0008 (0x0008 - 0x0000)
@@ -1060,7 +995,6 @@ struct UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_0 final
 public:
 	class UImage*                                 IMG_Mod;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_0;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_1
 // 0x0008 (0x0008 - 0x0000)
@@ -1069,7 +1003,6 @@ struct UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_1 final
 public:
 	class UImage*                                 IMG_Screenshot_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_1;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_2
 // 0x0008 (0x0008 - 0x0000)
@@ -1078,7 +1011,6 @@ struct UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_2 final
 public:
 	class UImage*                                 IMG_Screenshot_0;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_SequenceEvent__ENTRYPOINTUI_CFCore_ModPage_2;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.SetScreenshotImageTo
 // 0x0010 (0x0010 - 0x0000)
@@ -1088,7 +1020,6 @@ public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_SetScreenshotImageTo;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.SetThumbnailImage
 // 0x0010 (0x0010 - 0x0000)
@@ -1098,7 +1029,6 @@ public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_SetThumbnailImage;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.ShowCarouselButtons
 // 0x0014 (0x0014 - 0x0000)
@@ -1115,7 +1045,6 @@ public:
 	int32                                         CallFunc_GetNumOfCarouselItems_Videos;             // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_ShowCarouselButtons;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.ShowPhoto
 // 0x0040 (0x0040 - 0x0000)
@@ -1131,7 +1060,6 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2DDynamic*                      CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_ShowPhoto;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.SuccessIGuess
 // 0x0208 (0x0208 - 0x0000)
@@ -1140,7 +1068,6 @@ struct UI_CFCore_ModPage_C_SuccessIGuess final
 public:
 	struct FCFCoreMod                             mod;                                               // 0x0000(0x0208)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_SuccessIGuess;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -1150,7 +1077,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_Tick;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.Update Purchase Button Enabled
 // 0x0060 (0x0060 - 0x0000)
@@ -1169,7 +1095,6 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_Update_Purchase_Button_Enabled;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateCancelButtonState
 // 0x000C (0x000C - 0x0000)
@@ -1189,7 +1114,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateCancelButtonState;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateModCardListVisibility
 // 0x0040 (0x0040 - 0x0000)
@@ -1212,7 +1136,6 @@ public:
 	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateModCardListVisibility;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateModCards
 // 0x001B (0x001B - 0x0000)
@@ -1247,7 +1170,6 @@ public:
 	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateModCards;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateModPaidState
 // 0x0618 (0x0618 - 0x0000)
@@ -1380,7 +1302,6 @@ public:
 	double                                        K2Node_Select_Option_1_ImplicitCast_1;             // 0x0608(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_1;    // 0x0610(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateModPaidState;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateModRating
 // 0x00A8 (0x00A8 - 0x0000)
@@ -1403,7 +1324,6 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0088(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0098(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateModRating;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateModUnavailableState
 // 0x00D0 (0x00D0 - 0x0000)
@@ -1422,7 +1342,6 @@ public:
 	bool                                          CallFunc_GetIsModAvailable_Is_Available;           // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateModUnavailableState;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdatePlayPauseIcon
 // 0x0001 (0x0001 - 0x0000)
@@ -1431,7 +1350,6 @@ struct UI_CFCore_ModPage_C_UpdatePlayPauseIcon final
 public:
 	bool                                          IsPlay;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdatePlayPauseIcon;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateRatingVisibility
 // 0x0068 (0x0068 - 0x0000)
@@ -1459,7 +1377,6 @@ public:
 	bool                                          K2Node_Select_Default;                             // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateRatingVisibility;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateScreenshotButtonsEnabled
 // 0x0018 (0x0018 - 0x0000)
@@ -1472,7 +1389,6 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateScreenshotButtonsEnabled;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateScreenshotImage
 // 0x0020 (0x0020 - 0x0000)
@@ -1489,7 +1405,6 @@ public:
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateScreenshotImage;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateSearch
 // 0x0010 (0x0010 - 0x0000)
@@ -1498,7 +1413,6 @@ struct UI_CFCore_ModPage_C_UpdateSearch final
 public:
 	class FText                                   SearchInput;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateSearch;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateSubCategories
 // 0x00C8 (0x00C8 - 0x0000)
@@ -1521,7 +1435,6 @@ public:
 	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateSubCategories;
 
 // Function UI_CFCore_ModPage.UI_CFCore_ModPage_C.UpdateUninstallButtonState
 // 0x0007 (0x0007 - 0x0000)
@@ -1536,7 +1449,6 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ModPage_C_UpdateUninstallButtonState;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -40,6 +40,5 @@ public:
 		return GetDefaultObjImpl<ABuff_BasedOnDesertKaiju_C>();
 	}
 };
-DUMPER7_ASSERTS_ABuff_BasedOnDesertKaiju_C;
 
 SDK_NAMESPACE_END

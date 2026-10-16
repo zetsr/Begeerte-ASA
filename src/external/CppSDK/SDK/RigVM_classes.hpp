@@ -46,7 +46,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IRigVMGraphFunctionHost;
 
 // Class RigVM.RigVMBlueprintGeneratedClass
 // 0x0028 (0x03A0 - 0x0378)
@@ -70,7 +69,6 @@ public:
 		return GetDefaultObjImpl<URigVMBlueprintGeneratedClass>();
 	}
 };
-DUMPER7_ASSERTS_URigVMBlueprintGeneratedClass;
 
 // Class RigVM.RigVM
 // 0x0390 (0x03B8 - 0x0028)
@@ -133,7 +131,6 @@ public:
 		return GetDefaultObjImpl<URigVM>();
 	}
 };
-DUMPER7_ASSERTS_URigVM;
 
 // Class RigVM.NameSpacedUserData
 // 0x00D8 (0x0100 - 0x0028)
@@ -157,7 +154,6 @@ public:
 		return GetDefaultObjImpl<UNameSpacedUserData>();
 	}
 };
-DUMPER7_ASSERTS_UNameSpacedUserData;
 
 // Class RigVM.DataAssetLink
 // 0x0030 (0x0130 - 0x0100)
@@ -186,7 +182,6 @@ public:
 		return GetDefaultObjImpl<UDataAssetLink>();
 	}
 };
-DUMPER7_ASSERTS_UDataAssetLink;
 
 // Class RigVM.RigVMMemoryStorageGeneratorClass
 // 0x0040 (0x0258 - 0x0218)
@@ -209,7 +204,6 @@ public:
 		return GetDefaultObjImpl<URigVMMemoryStorageGeneratorClass>();
 	}
 };
-DUMPER7_ASSERTS_URigVMMemoryStorageGeneratorClass;
 
 // Class RigVM.RigVMMemoryStorage
 // 0x0000 (0x0028 - 0x0028)
@@ -229,7 +223,6 @@ public:
 		return GetDefaultObjImpl<URigVMMemoryStorage>();
 	}
 };
-DUMPER7_ASSERTS_URigVMMemoryStorage;
 
 // Class RigVM.RigVMNativized
 // 0x0028 (0x03E0 - 0x03B8)
@@ -252,7 +245,6 @@ public:
 		return GetDefaultObjImpl<URigVMNativized>();
 	}
 };
-DUMPER7_ASSERTS_URigVMNativized;
 
 // Class RigVM.RigVMUserWorkflowOptions
 // 0x0070 (0x0098 - 0x0028)
@@ -285,7 +277,6 @@ public:
 		return GetDefaultObjImpl<URigVMUserWorkflowOptions>();
 	}
 };
-DUMPER7_ASSERTS_URigVMUserWorkflowOptions;
 
 // Class RigVM.RigVMHost
 // 0x0250 (0x0278 - 0x0028)
@@ -348,7 +339,6 @@ public:
 		return GetDefaultObjImpl<URigVMHost>();
 	}
 };
-DUMPER7_ASSERTS_URigVMHost;
 
 // Class RigVM.RigVMEditorSettings
 // 0x0000 (0x0038 - 0x0038)
@@ -368,7 +358,6 @@ public:
 		return GetDefaultObjImpl<URigVMEditorSettings>();
 	}
 };
-DUMPER7_ASSERTS_URigVMEditorSettings;
 
 // Class RigVM.RigVMProjectSettings
 // 0x0010 (0x0048 - 0x0038)
@@ -394,6 +383,5 @@ public:
 		return GetDefaultObjImpl<URigVMProjectSettings>();
 	}
 };
-DUMPER7_ASSERTS_URigVMProjectSettings;
 
 SDK_NAMESPACE_END

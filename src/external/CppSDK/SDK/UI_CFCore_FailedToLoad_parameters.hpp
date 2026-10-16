@@ -24,7 +24,6 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_FailedToLoad_C_ExecuteUbergraph_UI_CFCore_FailedToLoad;
 
 // Function UI_CFCore_FailedToLoad.UI_CFCore_FailedToLoad_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -34,7 +33,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_FailedToLoad_C_GetRootCFWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

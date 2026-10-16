@@ -39,6 +39,5 @@ public:
 		return GetDefaultObjImpl<UChaosVDRuntimeBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UChaosVDRuntimeBlueprintLibrary;
 
 SDK_NAMESPACE_END

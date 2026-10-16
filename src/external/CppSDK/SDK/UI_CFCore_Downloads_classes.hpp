@@ -42,6 +42,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Downloads_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Downloads_C;
 
 SDK_NAMESPACE_END

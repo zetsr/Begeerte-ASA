@@ -29,7 +29,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AnimationWarpingLibrary_GetCurveValueFromAnimation;
 
 // Function AnimationWarpingRuntime.AnimationWarpingLibrary.GetOffsetRootTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -39,7 +38,6 @@ public:
 	struct FAnimNodeReference                     Node;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AnimationWarpingLibrary_GetOffsetRootTransform;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

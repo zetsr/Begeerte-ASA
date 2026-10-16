@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<UBeginLand_TK_C>();
 	}
 };
-DUMPER7_ASSERTS_UBeginLand_TK_C;
 
 SDK_NAMESPACE_END

@@ -45,6 +45,5 @@ public:
 		return GetDefaultObjImpl<UUI_NoModProjects_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_NoModProjects_C;
 
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<AWeapChainsaw_Impacts_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapChainsaw_Impacts_C;
 
 SDK_NAMESPACE_END

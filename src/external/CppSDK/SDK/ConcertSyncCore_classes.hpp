@@ -49,6 +49,5 @@ public:
 		return GetDefaultObjImpl<UConcertSyncConfig>();
 	}
 };
-DUMPER7_ASSERTS_UConcertSyncConfig;
 
 SDK_NAMESPACE_END

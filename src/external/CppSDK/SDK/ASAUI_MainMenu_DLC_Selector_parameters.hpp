@@ -30,7 +30,6 @@ public:
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BPGamepadReleased_ReturnValue;            // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_DLC_Selector_C_BPGamepadReleased;
 
 // Function ASAUI_MainMenu_DLC_Selector.ASAUI_MainMenu_DLC_Selector_C.ExecuteUbergraph_ASAUI_MainMenu_DLC_Selector
 // 0x02B8 (0x02B8 - 0x0000)
@@ -130,7 +129,6 @@ public:
 	TDelegate<void(class UASAUI_MainMenuWidget_Card_C* ref)> K2Node_CreateDelegate_OutputDelegate;   // 0x02A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_DLC_Selector_C_ExecuteUbergraph_ASAUI_MainMenu_DLC_Selector;
 
 // Function ASAUI_MainMenu_DLC_Selector.ASAUI_MainMenu_DLC_Selector_C.NextPage
 // 0x0110 (0x0110 - 0x0000)
@@ -212,7 +210,6 @@ public:
 	float                                         CallFunc_IsTimeSince_CheckTimeSince_ImplicitCast;  // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Divide_DoubleFloat_B_ImplicitCast;        // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_DLC_Selector_C_NextPage;
 
 // Function ASAUI_MainMenu_DLC_Selector.ASAUI_MainMenu_DLC_Selector_C.OnCardClickedRef_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -221,7 +218,6 @@ struct ASAUI_MainMenu_DLC_Selector_C_OnCardClickedRef_Event final
 public:
 	class UASAUI_MainMenuWidget_Card_C*           ref;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_DLC_Selector_C_OnCardClickedRef_Event;
 
 // Function ASAUI_MainMenu_DLC_Selector.ASAUI_MainMenu_DLC_Selector_C.OnKeyDownEvent
 // 0x0220 (0x0220 - 0x0000)
@@ -239,7 +235,6 @@ public:
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_2;          // 0x021A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_3;          // 0x021B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_DLC_Selector_C_OnKeyDownEvent;
 
 // Function ASAUI_MainMenu_DLC_Selector.ASAUI_MainMenu_DLC_Selector_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -248,7 +243,6 @@ struct ASAUI_MainMenu_DLC_Selector_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_DLC_Selector_C_PreConstruct;
 
 // Function ASAUI_MainMenu_DLC_Selector.ASAUI_MainMenu_DLC_Selector_C.SelectionChanged
 // 0x0038 (0x0038 - 0x0000)
@@ -268,7 +262,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_DLC_Selector_C_SelectionChanged;
 
 // Function ASAUI_MainMenu_DLC_Selector.ASAUI_MainMenu_DLC_Selector_C.StopAllCardAnims
 // 0x0078 (0x0078 - 0x0000)
@@ -299,7 +292,6 @@ public:
 	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_DLC_Selector_C_StopAllCardAnims;
 
 // Function ASAUI_MainMenu_DLC_Selector.ASAUI_MainMenu_DLC_Selector_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -309,7 +301,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_DLC_Selector_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_FoleyCollection_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Enum_FoleyCollection_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayPlayerFoley_C>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotify_PlayPlayerFoley_C;
 
 SDK_NAMESPACE_END

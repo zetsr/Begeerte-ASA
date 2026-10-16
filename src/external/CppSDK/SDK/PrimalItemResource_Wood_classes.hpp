@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Wood_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Wood_C;
 
 SDK_NAMESPACE_END

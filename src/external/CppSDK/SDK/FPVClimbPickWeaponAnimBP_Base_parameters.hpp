@@ -24,7 +24,6 @@ struct FPVClimbPickWeaponAnimBP_Base_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-DUMPER7_ASSERTS_FPVClimbPickWeaponAnimBP_Base_C_AnimGraph;
 
 // Function FPVClimbPickWeaponAnimBP_Base.FPVClimbPickWeaponAnimBP_Base_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -33,7 +32,6 @@ struct FPVClimbPickWeaponAnimBP_Base_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FPVClimbPickWeaponAnimBP_Base_C_BlueprintUpdateAnimation;
 
 // Function FPVClimbPickWeaponAnimBP_Base.FPVClimbPickWeaponAnimBP_Base_C.ExecuteUbergraph_FPVClimbPickWeaponAnimBP_Base
 // 0x00C0 (0x00C0 - 0x0000)
@@ -73,7 +71,6 @@ public:
 	double                                        K2Node_VariableSet_ClimbingLookingToSide_ImplicitCast; // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_StructMemberSet_Alpha_ImplicitCast;         // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FPVClimbPickWeaponAnimBP_Base_C_ExecuteUbergraph_FPVClimbPickWeaponAnimBP_Base;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

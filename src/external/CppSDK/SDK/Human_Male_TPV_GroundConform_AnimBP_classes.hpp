@@ -79,6 +79,5 @@ public:
 		return GetDefaultObjImpl<UHuman_Male_TPV_GroundConform_AnimBP_C>();
 	}
 };
-DUMPER7_ASSERTS_UHuman_Male_TPV_GroundConform_AnimBP_C;
 
 SDK_NAMESPACE_END

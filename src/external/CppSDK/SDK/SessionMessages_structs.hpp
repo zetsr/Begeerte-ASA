@@ -22,7 +22,6 @@ struct FSessionServicePing final
 public:
 	class FString                                 Username;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSessionServicePing;
 
 // ScriptStruct SessionMessages.SessionServicePong
 // 0x0090 (0x0090 - 0x0000)
@@ -42,7 +41,6 @@ public:
 	bool                                          Standalone;                                        // 0x0088(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSessionServicePong;
 
 // ScriptStruct SessionMessages.SessionServiceLog
 // 0x0038 (0x0038 - 0x0000)
@@ -56,7 +54,6 @@ public:
 	uint8                                         Verbosity;                                         // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSessionServiceLog;
 
 // ScriptStruct SessionMessages.SessionServiceLogSubscribe
 // 0x0001 (0x0001 - 0x0000)
@@ -65,7 +62,6 @@ struct FSessionServiceLogSubscribe final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSessionServiceLogSubscribe;
 
 // ScriptStruct SessionMessages.SessionServiceLogUnsubscribe
 // 0x0001 (0x0001 - 0x0000)
@@ -74,6 +70,5 @@ struct FSessionServiceLogUnsubscribe final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSessionServiceLogUnsubscribe;
 
 SDK_NAMESPACE_END

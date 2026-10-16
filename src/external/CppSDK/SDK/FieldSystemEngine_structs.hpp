@@ -22,6 +22,5 @@ public:
 	TArray<class UFieldNodeBase*>                 RootNodes;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	TArray<class UFieldSystemMetaData*>           MetaDatas;                                         // 0x0020(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FFieldObjectCommands;
 
 SDK_NAMESPACE_END

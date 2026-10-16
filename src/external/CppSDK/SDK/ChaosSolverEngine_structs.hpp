@@ -37,7 +37,6 @@ struct alignas(0x10) FBreakEventCallbackWrapper final
 public:
 	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBreakEventCallbackWrapper;
 
 // ScriptStruct ChaosSolverEngine.ChaosPhysicsCollisionInfo
 // 0x00C0 (0x00C0 - 0x0000)
@@ -56,7 +55,6 @@ public:
 	float                                         Mass;                                              // 0x00B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OtherMass;                                         // 0x00BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FChaosPhysicsCollisionInfo;
 
 // ScriptStruct ChaosSolverEngine.RemovalEventCallbackWrapper
 // 0x0040 (0x0040 - 0x0000)
@@ -65,7 +63,6 @@ struct alignas(0x10) FRemovalEventCallbackWrapper final
 public:
 	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRemovalEventCallbackWrapper;
 
 // ScriptStruct ChaosSolverEngine.CrumblingEventCallbackWrapper
 // 0x0040 (0x0040 - 0x0000)
@@ -74,7 +71,6 @@ struct alignas(0x10) FCrumblingEventCallbackWrapper final
 public:
 	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCrumblingEventCallbackWrapper;
 
 // ScriptStruct ChaosSolverEngine.ChaosHandlerSet
 // 0x0058 (0x0058 - 0x0000)
@@ -84,7 +80,6 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<class UObject*>                          ChaosHandlers;                                     // 0x0008(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FChaosHandlerSet;
 
 // ScriptStruct ChaosSolverEngine.ChaosDebugSubstepControl
 // 0x0003 (0x0003 - 0x0000)
@@ -95,7 +90,6 @@ public:
 	bool                                          bSubstep;                                          // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bStep;                                             // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FChaosDebugSubstepControl;
 
 // ScriptStruct ChaosSolverEngine.DataflowRigidSolverProxy
 // 0x0018 (0x0090 - 0x0078)
@@ -104,6 +98,5 @@ struct FDataflowRigidSolverProxy final : public FDataflowPhysicsSolverProxy
 public:
 	uint8                                         Pad_78[0x18];                                      // 0x0078(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDataflowRigidSolverProxy;
 
 SDK_NAMESPACE_END

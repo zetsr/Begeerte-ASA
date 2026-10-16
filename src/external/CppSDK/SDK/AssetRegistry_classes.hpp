@@ -53,7 +53,6 @@ public:
 		return GetDefaultObjImpl<UAssetRegistryHelpers>();
 	}
 };
-DUMPER7_ASSERTS_UAssetRegistryHelpers;
 
 // Class AssetRegistry.AssetRegistry
 // 0x0000 (0x0000 - 0x0000)
@@ -113,7 +112,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IAssetRegistry;
 
 // Class AssetRegistry.AssetRegistryImpl
 // 0x10E0 (0x1108 - 0x0028)
@@ -136,6 +134,5 @@ public:
 		return GetDefaultObjImpl<UAssetRegistryImpl>();
 	}
 };
-DUMPER7_ASSERTS_UAssetRegistryImpl;
 
 SDK_NAMESPACE_END

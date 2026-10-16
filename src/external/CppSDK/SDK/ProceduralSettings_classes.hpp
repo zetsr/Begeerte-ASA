@@ -155,6 +155,5 @@ public:
 		return GetDefaultObjImpl<UProceduralSettings_C>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralSettings_C;
 
 SDK_NAMESPACE_END

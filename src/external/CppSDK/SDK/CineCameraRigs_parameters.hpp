@@ -25,7 +25,6 @@ struct CineCameraAttachMount_GetConstraint final
 public:
 	class UTickableParentConstraint*              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraAttachMount_GetConstraint;
 
 // Function CineCameraRigs.CineCameraAttachMount.SetEnableLocationLag
 // 0x0001 (0x0001 - 0x0000)
@@ -34,7 +33,6 @@ struct CineCameraAttachMount_SetEnableLocationLag final
 public:
 	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraAttachMount_SetEnableLocationLag;
 
 // Function CineCameraRigs.CineCameraAttachMount.SetEnableRotationLag
 // 0x0001 (0x0001 - 0x0000)
@@ -43,7 +41,6 @@ struct CineCameraAttachMount_SetEnableRotationLag final
 public:
 	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraAttachMount_SetEnableRotationLag;
 
 // Function CineCameraRigs.CineCameraAttachMount.SetLocationLagSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -52,7 +49,6 @@ struct CineCameraAttachMount_SetLocationLagSpeed final
 public:
 	float                                         Speed;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraAttachMount_SetLocationLagSpeed;
 
 // Function CineCameraRigs.CineCameraAttachMount.SetRotationLagSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -61,7 +57,6 @@ struct CineCameraAttachMount_SetRotationLagSpeed final
 public:
 	float                                         Speed;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraAttachMount_SetRotationLagSpeed;
 
 // Function CineCameraRigs.CineCameraAttachMount.SetTransformFilter
 // 0x0009 (0x0009 - 0x0000)
@@ -70,7 +65,6 @@ struct CineCameraAttachMount_SetTransformFilter final
 public:
 	struct FTransformFilter                       InFilter;                                          // 0x0000(0x0009)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraAttachMount_SetTransformFilter;
 
 // Function CineCameraRigs.CineCameraRigRail.IsSequencerDriven
 // 0x0001 (0x0001 - 0x0000)
@@ -79,7 +73,6 @@ struct CineCameraRigRail_IsSequencerDriven final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraRigRail_IsSequencerDriven;
 
 // Function CineCameraRigs.CineCameraRigRail.SetAbsolutePositionOnRail
 // 0x0004 (0x0004 - 0x0000)
@@ -88,7 +81,6 @@ struct CineCameraRigRail_SetAbsolutePositionOnRail final
 public:
 	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraRigRail_SetAbsolutePositionOnRail;
 
 // Function CineCameraRigs.CineCameraRigRail.SetDisplaySpeedHeatmap
 // 0x0001 (0x0001 - 0x0000)
@@ -97,7 +89,6 @@ struct CineCameraRigRail_SetDisplaySpeedHeatmap final
 public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraRigRail_SetDisplaySpeedHeatmap;
 
 // Function CineCameraRigs.CineCameraRigRail.SetDriveMode
 // 0x0001 (0x0001 - 0x0000)
@@ -106,7 +97,6 @@ struct CineCameraRigRail_SetDriveMode final
 public:
 	ECineCameraRigRailDriveMode                   InMode;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraRigRail_SetDriveMode;
 
 // Function CineCameraRigs.CineCameraRigRail.SetSplineMeshMaterial
 // 0x0008 (0x0008 - 0x0000)
@@ -115,7 +105,6 @@ struct CineCameraRigRail_SetSplineMeshMaterial final
 public:
 	class UMaterialInterface*                     InMaterial;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraRigRail_SetSplineMeshMaterial;
 
 // Function CineCameraRigs.CineCameraRigRail.SetSplineMeshTexture
 // 0x0008 (0x0008 - 0x0000)
@@ -124,7 +113,6 @@ struct CineCameraRigRail_SetSplineMeshTexture final
 public:
 	class UTexture2D*                             InTexture;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraRigRail_SetSplineMeshTexture;
 
 // Function CineCameraRigs.CineCameraRigRail.GetCineSplineComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -133,7 +121,6 @@ struct CineCameraRigRail_GetCineSplineComponent final
 public:
 	class UCineSplineComponent*                   ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraRigRail_GetCineSplineComponent;
 
 // Function CineCameraRigs.CineCameraRigRail.GetVelocityAtPosition
 // 0x0020 (0x0020 - 0x0000)
@@ -144,7 +131,6 @@ public:
 	float                                         Delta;                                             // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineCameraRigRail_GetVelocityAtPosition;
 
 // Function CineCameraRigs.CineCameraRigRailHelpers.CreateOrUpdateSplineHeatmapTexture
 // 0x0028 (0x0028 - 0x0000)
@@ -158,7 +144,6 @@ public:
 	float                                         HighValue;                                         // 0x0020(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_CineCameraRigRailHelpers_CreateOrUpdateSplineHeatmapTexture;
 
 // Function CineCameraRigs.CineSplineComponent.AddSplineDataAtPosition
 // 0x0048 (0x0048 - 0x0000)
@@ -169,7 +154,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCineSplinePointData                   InPointData;                                       // 0x0008(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_AddSplineDataAtPosition;
 
 // Function CineCameraRigs.CineSplineComponent.SetAbsolutePositionAtSplinePoint
 // 0x0008 (0x0008 - 0x0000)
@@ -179,7 +163,6 @@ public:
 	int32                                         PointIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_SetAbsolutePositionAtSplinePoint;
 
 // Function CineCameraRigs.CineSplineComponent.SetApertureAtSplinePoint
 // 0x0008 (0x0008 - 0x0000)
@@ -189,7 +172,6 @@ public:
 	int32                                         PointIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_SetApertureAtSplinePoint;
 
 // Function CineCameraRigs.CineSplineComponent.SetFocalLengthAtSplinePoint
 // 0x0008 (0x0008 - 0x0000)
@@ -199,7 +181,6 @@ public:
 	int32                                         PointIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_SetFocalLengthAtSplinePoint;
 
 // Function CineCameraRigs.CineSplineComponent.SetFocusDistanceAtSplinePoint
 // 0x0008 (0x0008 - 0x0000)
@@ -209,7 +190,6 @@ public:
 	int32                                         PointIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_SetFocusDistanceAtSplinePoint;
 
 // Function CineCameraRigs.CineSplineComponent.SetPointRotationAtSplinePoint
 // 0x0030 (0x0030 - 0x0000)
@@ -220,7 +200,6 @@ public:
 	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  Value;                                             // 0x0010(0x0020)(ConstParm, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_SetPointRotationAtSplinePoint;
 
 // Function CineCameraRigs.CineSplineComponent.UpdateSplineDataAtIndex
 // 0x0048 (0x0048 - 0x0000)
@@ -231,7 +210,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCineSplinePointData                   InPointData;                                       // 0x0008(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_UpdateSplineDataAtIndex;
 
 // Function CineCameraRigs.CineSplineComponent.FindSplineDataAtPosition
 // 0x0010 (0x0010 - 0x0000)
@@ -244,7 +222,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_CineSplineComponent_FindSplineDataAtPosition;
 
 // Function CineCameraRigs.CineSplineComponent.GetInputKeyAtPosition
 // 0x0008 (0x0008 - 0x0000)
@@ -254,7 +231,6 @@ public:
 	float                                         InPosition;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_GetInputKeyAtPosition;
 
 // Function CineCameraRigs.CineSplineComponent.GetPointRotationAtSplineInputKey
 // 0x0030 (0x0030 - 0x0000)
@@ -265,7 +241,6 @@ public:
 	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_GetPointRotationAtSplineInputKey;
 
 // Function CineCameraRigs.CineSplineComponent.GetPointRotationAtSplinePoint
 // 0x0030 (0x0030 - 0x0000)
@@ -276,7 +251,6 @@ public:
 	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_GetPointRotationAtSplinePoint;
 
 // Function CineCameraRigs.CineSplineComponent.GetPositionAtInputKey
 // 0x0008 (0x0008 - 0x0000)
@@ -286,7 +260,6 @@ public:
 	float                                         InKey;                                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_GetPositionAtInputKey;
 
 // Function CineCameraRigs.CineSplineComponent.GetSplineDataAtPosition
 // 0x0048 (0x0048 - 0x0000)
@@ -297,7 +270,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCineSplinePointData                   ReturnValue;                                       // 0x0008(0x0040)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CineSplineComponent_GetSplineDataAtPosition;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -121,6 +121,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Discovery_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Discovery_C;
 
 SDK_NAMESPACE_END

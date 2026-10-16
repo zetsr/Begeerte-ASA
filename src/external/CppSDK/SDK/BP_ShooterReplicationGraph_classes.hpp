@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UBP_ShooterReplicationGraph_C>();
 	}
 };
-DUMPER7_ASSERTS_UBP_ShooterReplicationGraph_C;
 
 SDK_NAMESPACE_END

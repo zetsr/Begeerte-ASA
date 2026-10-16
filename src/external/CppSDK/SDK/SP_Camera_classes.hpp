@@ -75,7 +75,6 @@ public:
 		return GetDefaultObjImpl<USPCameraMode>();
 	}
 };
-DUMPER7_ASSERTS_USPCameraMode;
 
 // Class SP_Camera.SPCam_AttachedCamera
 // 0x0370 (0x04C0 - 0x0150)
@@ -110,7 +109,6 @@ public:
 		return GetDefaultObjImpl<USPCam_AttachedCamera>();
 	}
 };
-DUMPER7_ASSERTS_USPCam_AttachedCamera;
 
 // Class SP_Camera.SPCam_ThirdPerson
 // 0x06F0 (0x0840 - 0x0150)
@@ -182,7 +180,6 @@ public:
 		return GetDefaultObjImpl<USPCam_ThirdPerson>();
 	}
 };
-DUMPER7_ASSERTS_USPCam_ThirdPerson;
 
 // Class SP_Camera.SPPlayerCameraManager
 // 0x09C0 (0x3690 - 0x2CD0)
@@ -229,6 +226,5 @@ public:
 		return GetDefaultObjImpl<ASPPlayerCameraManager>();
 	}
 };
-DUMPER7_ASSERTS_ASPPlayerCameraManager;
 
 SDK_NAMESPACE_END

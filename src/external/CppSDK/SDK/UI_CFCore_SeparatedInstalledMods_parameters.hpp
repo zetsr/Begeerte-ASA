@@ -12,8 +12,8 @@
 
 #include "cfcore_ui_structs.hpp"
 #include "cfcore_structs.hpp"
-#include "ENUM_CFCore_SideTabs_structs.hpp"
 #include "UMG_structs.hpp"
+#include "ENUM_CFCore_SideTabs_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 
@@ -40,7 +40,6 @@ public:
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0C3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0C3D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_AssignFirstModFoundToPreview;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.CreatePerList
 // 0x06A0 (0x06A0 - 0x0000)
@@ -59,13 +58,12 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_649[0x3];                                      // 0x0649(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x064C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FInstallProgressMod& ModInfo)> K2Node_CreateDelegate_OutputDelegate; // 0x0650(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FInstallProgressMod& ModInfo)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0660(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FInstallProgressMod& ModInfo_0)> K2Node_CreateDelegate_OutputDelegate; // 0x0650(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FInstallProgressMod& ModInfo_0)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0660(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0670(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0680(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FInstallProgressMod& ModInfo)> K2Node_CreateDelegate_OutputDelegate_4; // 0x0690(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FInstallProgressMod& ModInfo_0)> K2Node_CreateDelegate_OutputDelegate_4; // 0x0690(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_CreatePerList;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.ExecuteUbergraph_UI_CFCore_SeparatedInstalledMods
 // 0x0130 (0x0130 - 0x0000)
@@ -110,7 +108,6 @@ public:
 	bool                                          CallFunc_SubscribeViewToEvents_ReturnValue;        // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_ExecuteUbergraph_UI_CFCore_SeparatedInstalledMods;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.FilterOutNonInstalling
 // 0x0658 (0x0658 - 0x0000)
@@ -130,7 +127,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0655(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0656(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_FilterOutNonInstalling;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.Get_UI_Button_UpdateAllMods_Visibility
 // 0x0648 (0x0648 - 0x0000)
@@ -160,7 +156,6 @@ public:
 	uint8                                         Pad_63D[0x3];                                      // 0x063D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0640(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_Get_UI_Button_UpdateAllMods_Visibility;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.GetAnyInstalledModsExist
 // 0x000C (0x000C - 0x0000)
@@ -172,7 +167,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_GetAnyInstalledModsExist;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.GetCurrentAndOrderIndexes
 // 0x0640 (0x0640 - 0x0000)
@@ -195,7 +189,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x063C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x063D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_GetCurrentAndOrderIndexes;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.MakeAListOfModsToDisable
 // 0x0688 (0x0688 - 0x0000)
@@ -218,7 +211,6 @@ public:
 	struct FInstalledModProperties                K2Node_MakeStruct_InstalledModProperties;          // 0x0660(0x0020)(NoDestructor)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0680(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_MakeAListOfModsToDisable;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.OnEventBroadcasted
 // 0x0048 (0x0048 - 0x0000)
@@ -235,7 +227,6 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_OnEventBroadcasted;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.OnWideSlotClicked
 // 0x0670 (0x0670 - 0x0000)
@@ -260,7 +251,6 @@ public:
 	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0650(0x0010)(ReferenceParm, ContainsInstancedReference)
 	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue_1;             // 0x0660(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_OnWideSlotClicked;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.OnWideSlotEnableToggled
 // 0x0D08 (0x0D08 - 0x0000)
@@ -291,7 +281,6 @@ public:
 	uint8                                         Pad_CFC[0x4];                                      // 0x0CFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_CFCorePluginManager_C*              CallFunc_GetPluginManager_Output_1;                // 0x0D00(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_OnWideSlotEnableToggled;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.OnWideSlotHovered
 // 0x0698 (0x0698 - 0x0000)
@@ -328,7 +317,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x068C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0690(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_OnWideSlotHovered;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.SplitModsInTwoLists
 // 0x0040 (0x0040 - 0x0000)
@@ -340,7 +328,6 @@ public:
 	TArray<struct FInstallProgressMod>            CallFunc_SplitInstallProgressMods_OutFirstInstallProgressMods; // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference)
 	TArray<struct FInstallProgressMod>            CallFunc_SplitInstallProgressMods_OutSecondInstallProgressMods; // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_SplitModsInTwoLists;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -350,7 +337,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_Tick;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.UpdateModCounts
 // 0x00E8 (0x00E8 - 0x0000)
@@ -368,7 +354,6 @@ public:
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C8(0x0010)()
 	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x00D8(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_UpdateModCounts;
 
 // Function UI_CFCore_SeparatedInstalledMods.UI_CFCore_SeparatedInstalledMods_C.UpdateSwitchAllButtonsEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -383,7 +368,6 @@ public:
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_SeparatedInstalledMods_C_UpdateSwitchAllButtonsEnabled;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

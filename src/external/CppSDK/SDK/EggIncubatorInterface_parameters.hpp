@@ -25,7 +25,6 @@ public:
 	int32                                         InSlot;                                            // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SlotFound;                                         // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_EggIncubatorInterface_C_GetItemDisplaySlot;
 
 // Function EggIncubatorInterface.EggIncubatorInterface_C.I_CanEggBeHatched
 // 0x0010 (0x0010 - 0x0000)
@@ -35,7 +34,6 @@ public:
 	class UPrimalItem*                            EggItem;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIsHatchable;                                      // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_EggIncubatorInterface_C_I_CanEggBeHatched;
 
 // Function EggIncubatorInterface.EggIncubatorInterface_C.I_CanEggIncubateAtLocation
 // 0x0028 (0x0028 - 0x0000)
@@ -46,7 +44,6 @@ public:
 	struct FVector                                WorldLocation;                                     // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Return;                                            // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_EggIncubatorInterface_C_I_CanEggIncubateAtLocation;
 
 // Function EggIncubatorInterface.EggIncubatorInterface_C.IsEggItemAllowed
 // 0x0010 (0x0010 - 0x0000)
@@ -56,7 +53,6 @@ public:
 	class UPrimalItem*                            EggItem;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsAllowed;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_EggIncubatorInterface_C_IsEggItemAllowed;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

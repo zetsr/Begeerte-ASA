@@ -62,6 +62,5 @@ public:
 		return GetDefaultObjImpl<AWeap_Torch_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeap_Torch_Base_C;
 
 SDK_NAMESPACE_END

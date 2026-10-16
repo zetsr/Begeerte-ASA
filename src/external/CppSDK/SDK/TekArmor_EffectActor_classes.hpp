@@ -64,6 +64,5 @@ public:
 		return GetDefaultObjImpl<ATekArmor_EffectActor_C>();
 	}
 };
-DUMPER7_ASSERTS_ATekArmor_EffectActor_C;
 
 SDK_NAMESPACE_END

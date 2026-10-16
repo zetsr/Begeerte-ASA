@@ -21,7 +21,6 @@ struct UVEditorTexelDensitySettings_InSamplingMode final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UVEditorTexelDensitySettings_InSamplingMode;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

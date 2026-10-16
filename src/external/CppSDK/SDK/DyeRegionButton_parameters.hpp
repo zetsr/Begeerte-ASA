@@ -23,7 +23,6 @@ struct DyeRegionButton_C_ExecuteUbergraph_DyeRegionButton final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DyeRegionButton_C_ExecuteUbergraph_DyeRegionButton;
 
 // Function DyeRegionButton.DyeRegionButton_C.GetVisibility_0
 // 0x0006 (0x0006 - 0x0000)
@@ -37,7 +36,6 @@ public:
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DyeRegionButton_C_GetVisibility_0;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

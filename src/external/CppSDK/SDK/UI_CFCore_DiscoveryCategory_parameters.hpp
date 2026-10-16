@@ -23,7 +23,6 @@ struct UI_CFCore_DiscoveryCategory_C_CreateCategoryList final
 public:
 	struct FShelf                                 Shelf_0;                                           // 0x0000(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryCategory_C_CreateCategoryList;
 
 // Function UI_CFCore_DiscoveryCategory.UI_CFCore_DiscoveryCategory_C.ExecuteUbergraph_UI_CFCore_DiscoveryCategory
 // 0x0260 (0x0260 - 0x0000)
@@ -61,7 +60,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryCategory_C_ExecuteUbergraph_UI_CFCore_DiscoveryCategory;
 
 // Function UI_CFCore_DiscoveryCategory.UI_CFCore_DiscoveryCategory_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -71,7 +69,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryCategory_C_GetRootCFWidget;
 
 // Function UI_CFCore_DiscoveryCategory.UI_CFCore_DiscoveryCategory_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -80,7 +77,6 @@ struct UI_CFCore_DiscoveryCategory_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryCategory_C_PreConstruct;
 
 // Function UI_CFCore_DiscoveryCategory.UI_CFCore_DiscoveryCategory_C.UpdateShelveTitle
 // 0x00B0 (0x00B0 - 0x0000)
@@ -92,7 +88,6 @@ public:
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x00A0(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryCategory_C_UpdateShelveTitle;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

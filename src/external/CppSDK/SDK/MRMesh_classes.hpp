@@ -24,7 +24,7 @@ SDK_NAMESPACE_START
 class UMockDataMeshTrackerComponent final : public USceneComponent
 {
 public:
-	TMulticastInlineDelegate<void(int32 Index, const TArray<struct FVector>& Vertices, const TArray<int32>& Triangles, const TArray<struct FVector>& Normals, const TArray<float>& Confidence)> OnMeshTrackerUpdated; // 0x0278(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 Index_0, const TArray<struct FVector>& Vertices, const TArray<int32>& Triangles, const TArray<struct FVector>& Normals, const TArray<float>& Confidence)> OnMeshTrackerUpdated; // 0x0278(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                          ScanWorld;                                         // 0x0288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          RequestNormals;                                    // 0x0289(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          RequestVertexConfidence;                           // 0x028A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -56,7 +56,6 @@ public:
 		return GetDefaultObjImpl<UMockDataMeshTrackerComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMockDataMeshTrackerComponent;
 
 // Class MRMesh.MRMeshBodyHolder
 // 0x01C8 (0x01F0 - 0x0028)
@@ -82,7 +81,6 @@ public:
 		return GetDefaultObjImpl<UMRMeshBodyHolder>();
 	}
 };
-DUMPER7_ASSERTS_UMRMeshBodyHolder;
 
 // Class MRMesh.MRMeshComponent
 // 0x0080 (0x06A0 - 0x0620)
@@ -128,7 +126,6 @@ public:
 		return GetDefaultObjImpl<UMRMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMRMeshComponent;
 
 // Class MRMesh.MeshReconstructorBase
 // 0x0000 (0x0028 - 0x0028)
@@ -158,6 +155,5 @@ public:
 		return GetDefaultObjImpl<UMeshReconstructorBase>();
 	}
 };
-DUMPER7_ASSERTS_UMeshReconstructorBase;
 
 SDK_NAMESPACE_END

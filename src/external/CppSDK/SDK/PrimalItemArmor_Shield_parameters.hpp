@@ -46,7 +46,6 @@ public:
 	double                                        CallFunc_MakeVector_Y_ImplicitCast_1;              // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_MakeVector_X_ImplicitCast_1;              // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_Shield_C_BPClientHandleItemNetExecCommand;
 
 // Function PrimalItemArmor_Shield.PrimalItemArmor_Shield_C.BPGetShieldHitImpactEffect
 // 0x0008 (0x0008 - 0x0000)
@@ -55,7 +54,6 @@ struct PrimalItemArmor_Shield_C_BPGetShieldHitImpactEffect final
 public:
 	class UFXSystemAsset*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_Shield_C_BPGetShieldHitImpactEffect;
 
 // Function PrimalItemArmor_Shield.PrimalItemArmor_Shield_C.HandleShieldDamageBlocking
 // 0x0080 (0x0080 - 0x0000)
@@ -77,7 +75,6 @@ public:
 	bool                                          CallFunc_NotEqual_ClassClass_ReturnValue;          // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x007B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_Shield_C_HandleShieldDamageBlocking;
 
 // Function PrimalItemArmor_Shield.PrimalItemArmor_Shield_C.PlayHitShieldEffect
 // 0x01D8 (0x01D8 - 0x0000)
@@ -135,7 +132,6 @@ public:
 	float                                         K2Node_MakeArray__1__ImplicitCast;                 // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_MakeArray__2__ImplicitCast;                 // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_Shield_C_PlayHitShieldEffect;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

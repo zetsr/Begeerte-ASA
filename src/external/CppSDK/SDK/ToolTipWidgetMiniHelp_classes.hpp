@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UToolTipWidgetMiniHelp_C>();
 	}
 };
-DUMPER7_ASSERTS_UToolTipWidgetMiniHelp_C;
 
 SDK_NAMESPACE_END

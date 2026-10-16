@@ -55,6 +55,5 @@ struct alignas(0x02) FGameplayResourceSet final
 public:
 	uint8                                         Pad_0[0x2];                                        // 0x0000(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FGameplayResourceSet;
 
 SDK_NAMESPACE_END

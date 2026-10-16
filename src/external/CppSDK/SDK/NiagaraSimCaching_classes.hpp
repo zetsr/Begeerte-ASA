@@ -40,7 +40,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneNiagaraCacheSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneNiagaraCacheSection;
 
 // Class NiagaraSimCaching.MovieSceneNiagaraCacheTrack
 // 0x0030 (0x0128 - 0x00F8)
@@ -68,6 +67,5 @@ public:
 		return GetDefaultObjImpl<UMovieSceneNiagaraCacheTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneNiagaraCacheTrack;
 
 SDK_NAMESPACE_END

@@ -32,7 +32,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Weap_Torch_Base_C_BPCanEquip;
 
 // Function Weap_Torch_Base.Weap_Torch_Base_C.CanUseNiagaraFire
 // 0x0028 (0x0028 - 0x0000)
@@ -51,7 +50,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Weap_Torch_Base_C_CanUseNiagaraFire;
 
 // Function Weap_Torch_Base.Weap_Torch_Base_C.ExecuteUbergraph_Weap_Torch_Base
 // 0x0170 (0x0170 - 0x0000)
@@ -128,7 +126,6 @@ public:
 	float                                         CallFunc_Add_DoubleFloat_B_ImplicitCast;           // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_DoubleFloat_B_ImplicitCast_1;         // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Weap_Torch_Base_C_ExecuteUbergraph_Weap_Torch_Base;
 
 // Function Weap_Torch_Base.Weap_Torch_Base_C.GetFPVNiagaraFire
 // 0x0008 (0x0008 - 0x0000)
@@ -137,7 +134,6 @@ struct Weap_Torch_Base_C_GetFPVNiagaraFire final
 public:
 	class UNiagaraComponent*                      FPVNiagaraComponent;                               // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Weap_Torch_Base_C_GetFPVNiagaraFire;
 
 // Function Weap_Torch_Base.Weap_Torch_Base_C.GetTPVNiagaraFire
 // 0x0008 (0x0008 - 0x0000)
@@ -146,7 +142,6 @@ struct Weap_Torch_Base_C_GetTPVNiagaraFire final
 public:
 	class UNiagaraComponent*                      TPVNiagaraComponent;                               // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Weap_Torch_Base_C_GetTPVNiagaraFire;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

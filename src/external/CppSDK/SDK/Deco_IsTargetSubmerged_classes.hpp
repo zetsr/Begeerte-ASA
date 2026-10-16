@@ -40,6 +40,5 @@ public:
 		return GetDefaultObjImpl<UDeco_IsTargetSubmerged_C>();
 	}
 };
-DUMPER7_ASSERTS_UDeco_IsTargetSubmerged_C;
 
 SDK_NAMESPACE_END

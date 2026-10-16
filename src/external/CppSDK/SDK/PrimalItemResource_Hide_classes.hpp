@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Hide_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Hide_C;
 
 SDK_NAMESPACE_END

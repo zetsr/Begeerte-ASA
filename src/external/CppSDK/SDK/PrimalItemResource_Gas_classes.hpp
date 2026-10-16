@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Gas_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Gas_C;
 
 SDK_NAMESPACE_END

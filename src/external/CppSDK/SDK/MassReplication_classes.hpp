@@ -40,7 +40,6 @@ public:
 		return GetDefaultObjImpl<AMassClientBubbleInfoBase>();
 	}
 };
-DUMPER7_ASSERTS_AMassClientBubbleInfoBase;
 
 // Class MassReplication.MassNetworkIDFragmentInitializer
 // 0x0328 (0x03F0 - 0x00C8)
@@ -63,7 +62,6 @@ public:
 		return GetDefaultObjImpl<UMassNetworkIDFragmentInitializer>();
 	}
 };
-DUMPER7_ASSERTS_UMassNetworkIDFragmentInitializer;
 
 // Class MassReplication.MassReplicationGridProcessor
 // 0x0960 (0x0A10 - 0x00B0)
@@ -86,7 +84,6 @@ public:
 		return GetDefaultObjImpl<UMassReplicationGridProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassReplicationGridProcessor;
 
 // Class MassReplication.MassReplicationGridRemoverProcessor
 // 0x0328 (0x03F0 - 0x00C8)
@@ -109,7 +106,6 @@ public:
 		return GetDefaultObjImpl<UMassReplicationGridRemoverProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassReplicationGridRemoverProcessor;
 
 // Class MassReplication.MassReplicationProcessor
 // 0x0FB0 (0x1060 - 0x00B0)
@@ -133,7 +129,6 @@ public:
 		return GetDefaultObjImpl<UMassReplicationProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassReplicationProcessor;
 
 // Class MassReplication.MassReplicatorBase
 // 0x0000 (0x0028 - 0x0028)
@@ -153,7 +148,6 @@ public:
 		return GetDefaultObjImpl<UMassReplicatorBase>();
 	}
 };
-DUMPER7_ASSERTS_UMassReplicatorBase;
 
 // Class MassReplication.MassReplicationSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -177,7 +171,6 @@ public:
 		return GetDefaultObjImpl<UMassReplicationSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMassReplicationSettings;
 
 // Class MassReplication.MassReplicationSubsystem
 // 0x01B0 (0x01E8 - 0x0038)
@@ -205,7 +198,6 @@ public:
 		return GetDefaultObjImpl<UMassReplicationSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassReplicationSubsystem;
 
 // Class MassReplication.MassReplicationTrait
 // 0x0058 (0x0080 - 0x0028)
@@ -228,6 +220,5 @@ public:
 		return GetDefaultObjImpl<UMassReplicationTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassReplicationTrait;
 
 SDK_NAMESPACE_END

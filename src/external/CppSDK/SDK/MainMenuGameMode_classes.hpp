@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<AMainMenuGameMode_C>();
 	}
 };
-DUMPER7_ASSERTS_AMainMenuGameMode_C;
 
 SDK_NAMESPACE_END

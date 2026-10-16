@@ -23,13 +23,12 @@ SDK_PARAM_NAMESPACE_START
 struct ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_ShouldHideEntry final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue_ShouldHideEntry;                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_UTCTimeUntilUnixTime_bTimeHasAlreadyPassed; // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              CallFunc_UTCTimeUntilUnixTime_TimeLeft;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_ShouldHideEntry;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.ReplaceTimeCode
 // 0x0100 (0x0100 - 0x0000)
@@ -77,7 +76,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_ReplaceTimeCode;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.HasAnyActiveTimeCodes
 // 0x0020 (0x0020 - 0x0000)
@@ -95,7 +93,6 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_HasAnyActiveTimeCodes;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.GetTimerText
 // 0x0268 (0x0268 - 0x0000)
@@ -144,7 +141,6 @@ public:
 	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0248(0x0010)()
 	class FText                                   K2Node_Select_Default;                             // 0x0258(0x0010)()
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_GetTimerText;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.GetAdjustedTimerFormatText
 // 0x0090 (0x0090 - 0x0000)
@@ -182,7 +178,6 @@ public:
 	int32                                         CallFunc_ReplaceTimeCode_CorrectedCounterValue_2;  // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_ReplaceTimeCode_CorrectedCounterValue_3;  // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_GetAdjustedTimerFormatText;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.Get_CountDownTimerTextBox_Text
 // 0x0020 (0x0020 - 0x0000)
@@ -192,7 +187,6 @@ public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 	class FText                                   CallFunc_GetTimerText_TimerText;                   // 0x0010(0x0010)()
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_Get_CountDownTimerTextBox_Text;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half
 // 0x01B8 (0x01B8 - 0x0000)
@@ -256,44 +250,39 @@ public:
 	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.EntryFocusTick
 // 0x0008 (0x0008 - 0x0000)
 struct ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusTick final
 {
 public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsHighlighted;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaTime_EntryFocusTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsHighlighted_EntryFocusTick;                     // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusTick;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.EntryFocusStart
 // 0x0001 (0x0001 - 0x0000)
 struct ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusStart final
 {
 public:
-	bool                                          bInstigatedByAutoRollover;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInstigatedByAutoRollover_EntryFocusStart;         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusStart;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.EntryFocusEnd
 // 0x0001 (0x0001 - 0x0000)
 struct ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusEnd final
 {
 public:
-	bool                                          bInstigatedByAutoRollover;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInstigatedByAutoRollover_EntryFocusEnd;           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_EntryFocusEnd;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half.ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C.BlueprintInit
 // 0x0010 (0x0010 - 0x0000)
 struct ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_BlueprintInit final
 {
 public:
-	class FString                                 RawExtraData;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 RawExtraData_BlueprintInit;                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C_BlueprintInit;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

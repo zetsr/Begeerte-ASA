@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDmgType_Melee_Human_ElectricStun_C>();
 	}
 };
-DUMPER7_ASSERTS_UDmgType_Melee_Human_ElectricStun_C;
 
 SDK_NAMESPACE_END

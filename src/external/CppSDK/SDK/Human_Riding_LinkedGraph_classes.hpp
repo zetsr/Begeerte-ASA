@@ -211,6 +211,5 @@ public:
 		return GetDefaultObjImpl<UHuman_Riding_LinkedGraph_C>();
 	}
 };
-DUMPER7_ASSERTS_UHuman_Riding_LinkedGraph_C;
 
 SDK_NAMESPACE_END

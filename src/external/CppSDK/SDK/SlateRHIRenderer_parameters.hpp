@@ -26,7 +26,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USlateRHIPostBufferProcessor*           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SlateFXSubsystem_GetSlatePostProcessor;
 
 // Function SlateRHIRenderer.SlateRHIRendererSettings.GetMutableSlatePostSetting
 // 0x0038 (0x0038 - 0x0000)
@@ -37,7 +36,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlatePostSettings                     ReturnValue;                                       // 0x0008(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SlateRHIRendererSettings_GetMutableSlatePostSetting;
 
 // Function SlateRHIRenderer.SlateRHIRendererSettings.GetSlatePostSetting
 // 0x0038 (0x0038 - 0x0000)
@@ -48,7 +46,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlatePostSettings                     ReturnValue;                                       // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SlateRHIRendererSettings_GetSlatePostSetting;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

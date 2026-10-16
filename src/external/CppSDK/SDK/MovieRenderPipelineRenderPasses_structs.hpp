@@ -51,6 +51,5 @@ public:
 	bool                                          bHighPrecisionOutput;                              // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMoviePipelinePostProcessPass;
 
 SDK_NAMESPACE_END

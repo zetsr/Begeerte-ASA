@@ -37,7 +37,6 @@ public:
 		return GetDefaultObjImpl<UNetAnalyticsAggregatorConfig>();
 	}
 };
-DUMPER7_ASSERTS_UNetAnalyticsAggregatorConfig;
 
 // Class NetCore.StatePerObjectConfig
 // 0x0040 (0x0068 - 0x0028)
@@ -63,7 +62,6 @@ public:
 		return GetDefaultObjImpl<UStatePerObjectConfig>();
 	}
 };
-DUMPER7_ASSERTS_UStatePerObjectConfig;
 
 // Class NetCore.EscalationManagerConfig
 // 0x0020 (0x0088 - 0x0068)
@@ -87,6 +85,5 @@ public:
 		return GetDefaultObjImpl<UEscalationManagerConfig>();
 	}
 };
-DUMPER7_ASSERTS_UEscalationManagerConfig;
 
 SDK_NAMESPACE_END

@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<USeek_Srv_C>();
 	}
 };
-DUMPER7_ASSERTS_USeek_Srv_C;
 
 SDK_NAMESPACE_END

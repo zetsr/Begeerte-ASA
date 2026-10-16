@@ -31,7 +31,6 @@ public:
 	uint8                                         Pad_619[0x3];                                      // 0x0619(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Load_Order;                                        // 0x061C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetIsModEnabled;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetModSummary
 // 0x0648 (0x0648 - 0x0000)
@@ -44,7 +43,6 @@ public:
 	class FText                                   OutAsText;                                         // 0x0628(0x0010)(Parm, OutParm)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0638(0x0010)()
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetModSummary;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetPluginManager
 // 0x0020 (0x0020 - 0x0000)
@@ -56,7 +54,6 @@ public:
 	class ABP_CFCorePluginManager_C*              CallFunc_GetActorOfClass_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetPluginManager;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetLastUpdated
 // 0x07F8 (0x07F8 - 0x0000)
@@ -88,7 +85,6 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x07D8(0x0010)()
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x07E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetLastUpdated;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetDateReleased
 // 0x06D8 (0x06D8 - 0x0000)
@@ -116,7 +112,6 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x06B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x06C8(0x0010)()
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetDateReleased;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.IsModIDPurchased
 // 0x0028 (0x0028 - 0x0000)
@@ -131,7 +126,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_IsModIDPurchased;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.AreModIDsPurchased
 // 0x0048 (0x0048 - 0x0000)
@@ -154,7 +148,6 @@ public:
 	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_AreModIDsPurchased;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetUserRatingActionForMod
 // 0x0070 (0x0070 - 0x0000)
@@ -183,7 +176,6 @@ public:
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue_1;      // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetUserRatingActionForMod;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetDateAdded
 // 0x06D0 (0x06D0 - 0x0000)
@@ -209,7 +201,6 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x06B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x06C0(0x0010)()
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetDateAdded;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.DidAllTheModsGetBought
 // 0x0070 (0x0070 - 0x0000)
@@ -234,7 +225,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_DidAllTheModsGetBought;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.DEBUG_Premium_PurchasedMods
 // 0x00E0 (0x00E0 - 0x0000)
@@ -269,7 +259,6 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_DEBUG_Premium_PurchasedMods;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.DEBUG_Premium_WaitingBuyResponse
 // 0x00C8 (0x00C8 - 0x0000)
@@ -298,7 +287,6 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_DEBUG_Premium_WaitingBuyResponse;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetIsModPremium
 // 0x0668 (0x0668 - 0x0000)
@@ -309,7 +297,6 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0610(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FPremiumDetails                        Premium_Details;                                   // 0x0618(0x0050)(Parm, OutParm)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetIsModPremium;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetNotifManager
 // 0x0038 (0x0038 - 0x0000)
@@ -324,7 +311,6 @@ public:
 	class UUI_CFCore_NotificationManager_C*       CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetNotifManager;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetIsModPaidStatus
 // 0x06A8 (0x06A8 - 0x0000)
@@ -354,7 +340,6 @@ public:
 	double                                        K2Node_FunctionResult_Tier_Price_ImplicitCast;     // 0x0698(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_FunctionResult_Tier_Price_ImplicitCast_1;   // 0x06A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetIsModPaidStatus;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.CreateModPageFromStandalone
 // 0x0030 (0x0030 - 0x0000)
@@ -369,7 +354,6 @@ public:
 	class UUI_CFCore_ModPage_C*                   ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUI_CFCore_ModPage_C*                   CallFunc_Create_ReturnValue;                       // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_CreateModPageFromStandalone;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetIsModValid
 // 0x0620 (0x0620 - 0x0000)
@@ -382,7 +366,6 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0619(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x061A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetIsModValid;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.DebugMod
 // 0x10F0 (0x10F0 - 0x0000)
@@ -484,7 +467,6 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_27;             // 0x10D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_DoubleToString_InDouble_ImplicitCast; // 0x10E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_DebugMod;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.Is There Enough Space to Install Mod
 // 0x0650 (0x0650 - 0x0000)
@@ -501,7 +483,6 @@ public:
 	int64                                         CallFunc_Get_Mod_Size_bytes;                       // 0x0640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_Int64Int64_ReturnValue;      // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_Is_There_Enough_Space_to_Install_Mod;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetProcessedBarProgress
 // 0x00B8 (0x00B8 - 0x0000)
@@ -537,7 +518,6 @@ public:
 	double                                        K2Node_Select_Default;                             // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetProcessedBarProgress;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetIsModAvailable
 // 0x0620 (0x0620 - 0x0000)
@@ -548,7 +528,6 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0610(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Is_Available;                                      // 0x0618(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetIsModAvailable;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.CreateModPageFromID
 // 0x0058 (0x0058 - 0x0000)
@@ -569,7 +548,6 @@ public:
 	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUI_CFCore_StoreMenu_C*                 K2Node_Select_Default;                             // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_CreateModPageFromID;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.CreateModPageFromStoreMenu
 // 0x0038 (0x0038 - 0x0000)
@@ -585,7 +563,6 @@ public:
 	class UUI_CFCore_ModPage_C*                   ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUI_CFCore_ModPage_C*                   CallFunc_Create_ReturnValue;                       // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_CreateModPageFromStoreMenu;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.FormatDownloadNumber
 // 0x01C0 (0x01C0 - 0x0000)
@@ -628,7 +605,6 @@ public:
 	bool                                          CallFunc_Less_Int64Int64_ReturnValue;              // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_Int64Int64_ReturnValue_1;            // 0x01BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_FormatDownloadNumber;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetModVersion
 // 0x0858 (0x0858 - 0x0000)
@@ -692,7 +668,6 @@ public:
 	uint8                                         Pad_844[0x4];                                      // 0x0844(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetSubstring_ReturnValue;                 // 0x0848(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetModVersion;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetDownloadCount
 // 0x0638 (0x0638 - 0x0000)
@@ -704,7 +679,6 @@ public:
 	class FText                                   FinalAmount;                                       // 0x0618(0x0010)(Parm, OutParm)
 	class FText                                   CallFunc_FormatDownloadNumber_FinalAmount;         // 0x0628(0x0010)()
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetDownloadCount;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.Get Mod Rating
 // 0x0710 (0x0710 - 0x0000)
@@ -734,7 +708,6 @@ public:
 	class FText                                   K2Node_Select_Default;                             // 0x06F8(0x0010)()
 	double                                        K2Node_FunctionResult_Rating_ImplicitCast;         // 0x0708(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_Get_Mod_Rating;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetModName
 // 0x0628 (0x0628 - 0x0000)
@@ -745,7 +718,6 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0610(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 Name_0;                                            // 0x0618(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetModName;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.Get Mod Size
 // 0x07A0 (0x07A0 - 0x0000)
@@ -773,7 +745,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0794(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0798(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_Get_Mod_Size;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.GetAuthorName
 // 0x06B0 (0x06B0 - 0x0000)
@@ -797,7 +768,6 @@ public:
 	uint8                                         Pad_699[0x7];                                      // 0x0699(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x06A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_GetAuthorName;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.CreateButtonStyleFromSingleColor
 // 0x0A50 (0x0A50 - 0x0000)
@@ -823,7 +793,6 @@ public:
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_3;                    // 0x0630(0x00B0)()
 	struct FButtonStyle                           K2Node_MakeStruct_ButtonStyle;                     // 0x06E0(0x0370)()
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_CreateButtonStyleFromSingleColor;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.HEXtoByte
 // 0x0070 (0x0070 - 0x0000)
@@ -845,7 +814,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_HEXtoByte;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.HEXtoSRGB
 // 0x00C8 (0x00C8 - 0x0000)
@@ -874,7 +842,6 @@ public:
 	uint8                                         Pad_C2[0x2];                                       // 0x00C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 K2Node_MakeStruct_Color;                           // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_HEXtoSRGB;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.SRGBtoHEX
 // 0x0088 (0x0088 - 0x0000)
@@ -901,7 +868,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_SRGBtoHEX;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.ByteToHex
 // 0x0080 (0x0080 - 0x0000)
@@ -922,7 +888,6 @@ public:
 	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_ByteToHex;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.SetFocusedWidget
 // 0x0030 (0x0030 - 0x0000)
@@ -935,7 +900,6 @@ public:
 	class UUI_CFCore_StoreMenu_C*                 CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_SetFocusedWidget;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.TextLimit
 // 0x0070 (0x0070 - 0x0000)
@@ -954,7 +918,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_TextLimit;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.CheckPlayerInputDevices
 // 0x0038 (0x0038 - 0x0000)
@@ -973,7 +936,6 @@ public:
 	ENUM_CFCore_InputDevices                      Temp_byte_Variable_1;                              // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ENUM_CFCore_InputDevices                      K2Node_Select_Default;                             // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_CheckPlayerInputDevices;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.StringLimit
 // 0x00B0 (0x00B0 - 0x0000)
@@ -1007,7 +969,6 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_StringLimit;
 
 // Function BPFL_CFCore_GlobalFunctions.BPFL_CFCore_GlobalFunctions_C.ErrorMessage
 // 0x0020 (0x0020 - 0x0000)
@@ -1018,7 +979,6 @@ public:
 	class FString                                 ErrorMessage_0;                                    // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPFL_CFCore_GlobalFunctions_C_ErrorMessage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

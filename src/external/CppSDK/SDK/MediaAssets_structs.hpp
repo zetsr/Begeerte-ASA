@@ -133,7 +133,6 @@ public:
 	class FString                                 StringData;                                        // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 BinaryData;                                        // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMediaMetadataItemBPT;
 
 // ScriptStruct MediaAssets.MediaMetadataItemsBPT
 // 0x0010 (0x0010 - 0x0000)
@@ -142,7 +141,6 @@ struct FMediaMetadataItemsBPT final
 public:
 	TArray<struct FMediaMetadataItemBPT>          Items;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMediaMetadataItemsBPT;
 
 // ScriptStruct MediaAssets.MediaSoundComponentSpectralData
 // 0x0008 (0x0008 - 0x0000)
@@ -152,7 +150,6 @@ public:
 	float                                         FrequencyHz;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Magnitude;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMediaSoundComponentSpectralData;
 
 // ScriptStruct MediaAssets.MediaSourceCacheSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -163,7 +160,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TimeToLookAhead;                                   // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMediaSourceCacheSettings;
 
 // ScriptStruct MediaAssets.MediaCaptureDevice
 // 0x0020 (0x0020 - 0x0000)
@@ -173,6 +169,5 @@ public:
 	class FText                                   DisplayName;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
 	class FString                                 URL;                                               // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMediaCaptureDevice;
 
 SDK_NAMESPACE_END

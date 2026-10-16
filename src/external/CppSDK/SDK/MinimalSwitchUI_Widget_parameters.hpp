@@ -34,7 +34,6 @@ public:
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MinimalSwitchUI_Widget_C_ExecuteUbergraph_MinimalSwitchUI_Widget;
 
 // Function MinimalSwitchUI_Widget.MinimalSwitchUI_Widget_C.FixConsoleIcons
 // 0x0080 (0x0080 - 0x0000)
@@ -62,7 +61,6 @@ public:
 	class UTexture2D*                             CallFunc_GetIconForKeyName_ReturnValue;            // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MinimalSwitchUI_Widget_C_FixConsoleIcons;
 
 // Function MinimalSwitchUI_Widget.MinimalSwitchUI_Widget_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -72,7 +70,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MinimalSwitchUI_Widget_C_Tick;
 
 // Function MinimalSwitchUI_Widget.MinimalSwitchUI_Widget_C.UpdateTooltipMoreInfo
 // 0x0040 (0x0040 - 0x0000)
@@ -86,7 +83,6 @@ public:
 	class UShooterGameUserSettings*               CallFunc_GetShooterGameUserSettings_ReturnValue;   // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FText                                   K2Node_Select_Default;                             // 0x0030(0x0010)()
 };
-DUMPER7_ASSERTS_MinimalSwitchUI_Widget_C_UpdateTooltipMoreInfo;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

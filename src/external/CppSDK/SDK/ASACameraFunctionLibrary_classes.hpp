@@ -49,6 +49,5 @@ public:
 		return GetDefaultObjImpl<UASACameraFunctionLibrary_C>();
 	}
 };
-DUMPER7_ASSERTS_UASACameraFunctionLibrary_C;
 
 SDK_NAMESPACE_END

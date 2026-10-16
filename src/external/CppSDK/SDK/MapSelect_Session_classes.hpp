@@ -71,6 +71,5 @@ public:
 		return GetDefaultObjImpl<UMapSelect_Session_C>();
 	}
 };
-DUMPER7_ASSERTS_UMapSelect_Session_C;
 
 SDK_NAMESPACE_END

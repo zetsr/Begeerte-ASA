@@ -21,7 +21,6 @@ struct StructureItemContainerBaseBP_C_BPOnTransferAll final
 public:
 	class UPrimalInventoryComponent*              ToInventory;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_StructureItemContainerBaseBP_C_BPOnTransferAll;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

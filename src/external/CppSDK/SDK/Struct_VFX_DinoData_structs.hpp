@@ -32,6 +32,5 @@ public:
 	class UTexture*                               FrontNormalTexture_39_49DD42254279EB13CE20969B3BDB8940; // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraSystem*                         NiagaraSystemImpactOverride_45_F970EE614C9D415E7DA7BF9F9C4673DB; // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FStruct_VFX_DinoData;
 
 SDK_NAMESPACE_END

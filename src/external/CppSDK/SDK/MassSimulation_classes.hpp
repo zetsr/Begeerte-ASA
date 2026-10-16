@@ -43,7 +43,6 @@ public:
 		return GetDefaultObjImpl<UMassSimulationSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMassSimulationSettings;
 
 // Class MassSimulation.MassSimulationSubsystem
 // 0x04B0 (0x04E8 - 0x0038)
@@ -68,6 +67,5 @@ public:
 		return GetDefaultObjImpl<UMassSimulationSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassSimulationSubsystem;
 
 SDK_NAMESPACE_END

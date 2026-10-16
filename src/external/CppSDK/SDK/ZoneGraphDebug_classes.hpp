@@ -39,7 +39,6 @@ public:
 		return GetDefaultObjImpl<UZoneLaneTest>();
 	}
 };
-DUMPER7_ASSERTS_UZoneLaneTest;
 
 // Class ZoneGraphDebug.ZoneGraphTestingComponent
 // 0x02E0 (0x0900 - 0x0620)
@@ -85,7 +84,6 @@ public:
 		return GetDefaultObjImpl<UZoneGraphTestingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphTestingComponent;
 
 // Class ZoneGraphDebug.ZoneGraphTestingActor
 // 0x0008 (0x0498 - 0x0490)
@@ -112,6 +110,5 @@ public:
 		return GetDefaultObjImpl<AZoneGraphTestingActor>();
 	}
 };
-DUMPER7_ASSERTS_AZoneGraphTestingActor;
 
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Oil_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Oil_C;
 
 SDK_NAMESPACE_END

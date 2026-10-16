@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UAutomationUtilsBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UAutomationUtilsBlueprintLibrary;
 
 SDK_NAMESPACE_END

@@ -21,7 +21,6 @@ struct HoldoutCompositeComponent_SetEnabled final
 public:
 	bool                                          bInEnabled;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoldoutCompositeComponent_SetEnabled;
 
 // Function HoldoutComposite.HoldoutCompositeComponent.IsEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -30,7 +29,6 @@ struct HoldoutCompositeComponent_IsEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoldoutCompositeComponent_IsEnabled;
 
 // Function HoldoutComposite.HoldoutCompositeSubsystem.RegisterPrimitive
 // 0x0030 (0x0030 - 0x0000)
@@ -41,7 +39,6 @@ public:
 	bool                                          bInHoldoutState;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_HoldoutCompositeSubsystem_RegisterPrimitive;
 
 // Function HoldoutComposite.HoldoutCompositeSubsystem.UnregisterPrimitive
 // 0x0030 (0x0030 - 0x0000)
@@ -52,7 +49,6 @@ public:
 	bool                                          bInHoldoutState;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_HoldoutCompositeSubsystem_UnregisterPrimitive;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

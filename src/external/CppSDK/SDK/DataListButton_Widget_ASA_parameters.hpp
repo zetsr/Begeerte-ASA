@@ -27,7 +27,6 @@ public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataListButton_Widget_ASA_C_BndEvt__DataListButton_Widget_ASA_DinoExpirationLabel_K2Node_ComponentBoundEvent_3_OnEditableTextCommittedEvent__DelegateSignature;
 
 // Function DataListButton_Widget_ASA.DataListButton_Widget_ASA_C.ExecuteUbergraph_DataListButton_Widget_ASA
 // 0x0160 (0x0160 - 0x0000)
@@ -63,7 +62,6 @@ public:
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasKeyboardFocus_ReturnValue;             // 0x015C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataListButton_Widget_ASA_C_ExecuteUbergraph_DataListButton_Widget_ASA;
 
 // Function DataListButton_Widget_ASA.DataListButton_Widget_ASA_C.GetIsAlternativeColor
 // 0x0078 (0x0078 - 0x0000)
@@ -96,7 +94,6 @@ public:
 	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataListButton_Widget_ASA_C_GetIsAlternativeColor;
 
 // Function DataListButton_Widget_ASA.DataListButton_Widget_ASA_C.GetVisibleChildIndex
 // 0x0050 (0x0050 - 0x0000)
@@ -129,7 +126,6 @@ public:
 	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataListButton_Widget_ASA_C_GetVisibleChildIndex;
 
 // Function DataListButton_Widget_ASA.DataListButton_Widget_ASA_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -138,7 +134,6 @@ struct DataListButton_Widget_ASA_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataListButton_Widget_ASA_C_PreConstruct;
 
 // Function DataListButton_Widget_ASA.DataListButton_Widget_ASA_C.SetTextButton
 // 0x0018 (0x0018 - 0x0000)
@@ -149,7 +144,6 @@ public:
 	bool                                          CanEditTextVariable_0;                             // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseOverrideValueText_0;                            // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataListButton_Widget_ASA_C_SetTextButton;
 
 // Function DataListButton_Widget_ASA.DataListButton_Widget_ASA_C.SetupToggledState
 // 0x003C (0x003C - 0x0000)
@@ -164,7 +158,6 @@ public:
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0018(0x0014)()
 	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataListButton_Widget_ASA_C_SetupToggledState;
 
 // Function DataListButton_Widget_ASA.DataListButton_Widget_ASA_C.SetValueText
 // 0x0010 (0x0010 - 0x0000)
@@ -173,7 +166,6 @@ struct DataListButton_Widget_ASA_C_SetValueText final
 public:
 	class FText                                   ValueText;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_DataListButton_Widget_ASA_C_SetValueText;
 
 // Function DataListButton_Widget_ASA.DataListButton_Widget_ASA_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -183,7 +175,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataListButton_Widget_ASA_C_Tick;
 
 // Function DataListButton_Widget_ASA.DataListButton_Widget_ASA_C.UpdateColorBrush
 // 0x0020 (0x0020 - 0x0000)
@@ -193,7 +184,6 @@ public:
 	struct FLinearColor                           InBrushColor;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataListButton_Widget_ASA_C_UpdateColorBrush;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

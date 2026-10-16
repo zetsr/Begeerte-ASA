@@ -21,7 +21,6 @@ struct BPI_CFCore_PageWidgets_C_UpdateSearch final
 public:
 	class FText                                   SearchInput;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_BPI_CFCore_PageWidgets_C_UpdateSearch;
 
 // Function BPI_CFCore_PageWidgets.BPI_CFCore_PageWidgets_C.OnSearch
 // 0x0010 (0x0010 - 0x0000)
@@ -30,7 +29,6 @@ struct BPI_CFCore_PageWidgets_C_OnSearch final
 public:
 	class FText                                   Search_Input;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_BPI_CFCore_PageWidgets_C_OnSearch;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

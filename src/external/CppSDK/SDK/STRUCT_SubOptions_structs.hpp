@@ -22,6 +22,5 @@ public:
 	int64                                         ID_6_D4738370417C2441EF0CC686B2EA0298;             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 ImageUrl_12_BAEEA6314264A840A88ECBADC10CFCC4;      // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FSTRUCT_SubOptions;
 
 SDK_NAMESPACE_END

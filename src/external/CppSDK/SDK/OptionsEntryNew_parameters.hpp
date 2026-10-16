@@ -28,7 +28,6 @@ public:
 	ECheckBoxState                                CallFunc_GetCheckedState_ReturnValue;              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_OptionsEntryNew_C_ExecuteUbergraph_OptionsEntryNew;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

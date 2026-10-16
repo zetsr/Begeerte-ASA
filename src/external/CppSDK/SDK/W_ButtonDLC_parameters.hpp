@@ -57,7 +57,6 @@ public:
 	struct FButtonStyle                           K2Node_Select_Default_1;                           // 0x0200(0x0370)(ConstParm)
 	class UTexture2D*                             K2Node_Select_Default_2;                           // 0x0570(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_W_ButtonDLC_C_ExecuteUbergraph_W_ButtonDLC;
 
 // Function W_ButtonDLC.W_ButtonDLC_C.OnMouseEnter
 // 0x00B0 (0x00B0 - 0x0000)
@@ -67,7 +66,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_W_ButtonDLC_C_OnMouseEnter;
 
 // Function W_ButtonDLC.W_ButtonDLC_C.OnMouseLeave
 // 0x0078 (0x0078 - 0x0000)
@@ -76,7 +74,6 @@ struct W_ButtonDLC_C_OnMouseLeave final
 public:
 	struct FPointerEvent                          MouseEvent;                                        // 0x0000(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_W_ButtonDLC_C_OnMouseLeave;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

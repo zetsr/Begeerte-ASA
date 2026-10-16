@@ -80,7 +80,6 @@ struct FInterchangeLodSceneNodeContainer final
 public:
 	TArray<class UInterchangeSceneNode*>          SceneNodes;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FInterchangeLodSceneNodeContainer;
 
 // ScriptStruct InterchangePipelines.InterchangeMeshInstance
 // 0x0080 (0x0080 - 0x0000)
@@ -96,7 +95,6 @@ public:
 	TMap<int32, struct FInterchangeLodSceneNodeContainer> SceneNodePerLodIndex;                      // 0x0020(0x0050)(Edit, NativeAccessSpecifierPublic)
 	TArray<class FString>                         ReferencingMeshGeometryUids;                       // 0x0070(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangeMeshInstance;
 
 // ScriptStruct InterchangePipelines.InterchangeMeshGeometry
 // 0x0038 (0x0038 - 0x0000)
@@ -108,7 +106,6 @@ public:
 	TArray<class FString>                         ReferencingMeshInstanceUids;                       // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         AttachedSocketUids;                                // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangeMeshGeometry;
 
 // ScriptStruct InterchangePipelines.InterchangePipelineMeshesUtilitiesContext
 // 0x0006 (0x0006 - 0x0000)
@@ -122,6 +119,5 @@ public:
 	bool                                          bQueryGeometryOnlyIfNoInstance;                    // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIgnoreStaticMeshes;                               // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangePipelineMeshesUtilitiesContext;
 
 SDK_NAMESPACE_END

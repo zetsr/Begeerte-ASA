@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Charcoal_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Charcoal_C;
 
 SDK_NAMESPACE_END

@@ -25,7 +25,6 @@ public:
 	uint8                                         bSupportsHardwareAEC : 1;                          // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAudioInputDeviceInfo;
 
 // ScriptStruct AudioCapture.AudioCaptureDeviceInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -36,6 +35,5 @@ public:
 	int32                                         NumInputChannels;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SampleRate;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAudioCaptureDeviceInfo;
 
 SDK_NAMESPACE_END

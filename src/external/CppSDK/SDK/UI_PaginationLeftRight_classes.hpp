@@ -47,6 +47,5 @@ public:
 		return GetDefaultObjImpl<UUI_PaginationLeftRight_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_PaginationLeftRight_C;
 
 SDK_NAMESPACE_END

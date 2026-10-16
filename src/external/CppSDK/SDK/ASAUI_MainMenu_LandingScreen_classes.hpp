@@ -62,6 +62,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_MainMenu_LandingScreen_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_MainMenu_LandingScreen_C;
 
 SDK_NAMESPACE_END

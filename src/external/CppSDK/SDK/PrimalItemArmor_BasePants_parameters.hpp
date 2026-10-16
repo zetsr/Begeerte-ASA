@@ -36,7 +36,6 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundBase*                             K2Node_Select_Default_2;                           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_BasePants_C_OverrideCrouchingSound;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

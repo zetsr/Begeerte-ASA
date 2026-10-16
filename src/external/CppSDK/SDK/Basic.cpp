@@ -92,8 +92,19 @@ const FName& GetStaticName(const wchar_t* Name, FName& StaticName)
 
 // Predefined Function
 
+bool FWeakObjectPtr::IsValid() const
+{
+	return ObjectIndex > 0;
+}
+
+
+// Predefined Function
+
 class UObject* FWeakObjectPtr::Get() const
 {
+	if (!IsValid())
+		return nullptr;
+
 	return UObject::GObjects->GetByIndex(ObjectIndex);
 }
 

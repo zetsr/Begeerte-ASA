@@ -41,7 +41,6 @@ public:
 		return GetDefaultObjImpl<URetargetOpBase>();
 	}
 };
-DUMPER7_ASSERTS_URetargetOpBase;
 
 // Class IKRig.CurveRemapOp
 // 0x0018 (0x0048 - 0x0030)
@@ -66,7 +65,6 @@ public:
 		return GetDefaultObjImpl<UCurveRemapOp>();
 	}
 };
-DUMPER7_ASSERTS_UCurveRemapOp;
 
 // Class IKRig.RetargetOpStack
 // 0x0010 (0x0038 - 0x0028)
@@ -89,7 +87,6 @@ public:
 		return GetDefaultObjImpl<URetargetOpStack>();
 	}
 };
-DUMPER7_ASSERTS_URetargetOpStack;
 
 // Class IKRig.IKGoalCreatorInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -121,7 +118,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IIKGoalCreatorInterface;
 
 // Class IKRig.PinBoneOp
 // 0x00E0 (0x0110 - 0x0030)
@@ -150,7 +146,6 @@ public:
 		return GetDefaultObjImpl<UPinBoneOp>();
 	}
 };
-DUMPER7_ASSERTS_UPinBoneOp;
 
 // Class IKRig.RootMotionGeneratorOp
 // 0x0220 (0x0250 - 0x0030)
@@ -183,7 +178,6 @@ public:
 		return GetDefaultObjImpl<URootMotionGeneratorOp>();
 	}
 };
-DUMPER7_ASSERTS_URootMotionGeneratorOp;
 
 // Class IKRig.IKRigComponent
 // 0x0018 (0x00E8 - 0x00D0)
@@ -212,7 +206,6 @@ public:
 		return GetDefaultObjImpl<UIKRigComponent>();
 	}
 };
-DUMPER7_ASSERTS_UIKRigComponent;
 
 // Class IKRig.RetargetChainSettings
 // 0x00C0 (0x00E8 - 0x0028)
@@ -237,7 +230,6 @@ public:
 		return GetDefaultObjImpl<URetargetChainSettings>();
 	}
 };
-DUMPER7_ASSERTS_URetargetChainSettings;
 
 // Class IKRig.RetargetRootSettings
 // 0x0068 (0x0090 - 0x0028)
@@ -260,7 +252,6 @@ public:
 		return GetDefaultObjImpl<URetargetRootSettings>();
 	}
 };
-DUMPER7_ASSERTS_URetargetRootSettings;
 
 // Class IKRig.IKRetargetGlobalSettings
 // 0x0028 (0x0050 - 0x0028)
@@ -284,7 +275,6 @@ public:
 		return GetDefaultObjImpl<UIKRetargetGlobalSettings>();
 	}
 };
-DUMPER7_ASSERTS_UIKRetargetGlobalSettings;
 
 // Class IKRig.IKRetargeter
 // 0x01F0 (0x0218 - 0x0028)
@@ -341,7 +331,6 @@ public:
 		return GetDefaultObjImpl<UIKRetargeter>();
 	}
 };
-DUMPER7_ASSERTS_UIKRetargeter;
 
 // Class IKRig.IKRetargetProcessor
 // 0x0378 (0x03A0 - 0x0028)
@@ -368,7 +357,6 @@ public:
 		return GetDefaultObjImpl<UIKRetargetProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UIKRetargetProcessor;
 
 // Class IKRig.IKRigEffectorGoal
 // 0x00D8 (0x0100 - 0x0028)
@@ -396,7 +384,6 @@ public:
 		return GetDefaultObjImpl<UIKRigEffectorGoal>();
 	}
 };
-DUMPER7_ASSERTS_UIKRigEffectorGoal;
 
 // Class IKRig.IKRigDefinition
 // 0x00D8 (0x0100 - 0x0028)
@@ -424,7 +411,6 @@ public:
 		return GetDefaultObjImpl<UIKRigDefinition>();
 	}
 };
-DUMPER7_ASSERTS_UIKRigDefinition;
 
 // Class IKRig.IKRigProcessor
 // 0x0120 (0x0148 - 0x0028)
@@ -449,7 +435,6 @@ public:
 		return GetDefaultObjImpl<UIKRigProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UIKRigProcessor;
 
 // Class IKRig.IKRigSolver
 // 0x0008 (0x0030 - 0x0028)
@@ -473,7 +458,6 @@ public:
 		return GetDefaultObjImpl<UIKRigSolver>();
 	}
 };
-DUMPER7_ASSERTS_UIKRigSolver;
 
 // Class IKRig.IKRig_BodyMoverEffector
 // 0x0018 (0x0040 - 0x0028)
@@ -499,7 +483,6 @@ public:
 		return GetDefaultObjImpl<UIKRig_BodyMoverEffector>();
 	}
 };
-DUMPER7_ASSERTS_UIKRig_BodyMoverEffector;
 
 // Class IKRig.IKRig_BodyMover
 // 0x0050 (0x0080 - 0x0030)
@@ -536,7 +519,6 @@ public:
 		return GetDefaultObjImpl<UIKRig_BodyMover>();
 	}
 };
-DUMPER7_ASSERTS_UIKRig_BodyMover;
 
 // Class IKRig.IKRig_LimbEffector
 // 0x0010 (0x0038 - 0x0028)
@@ -560,7 +542,6 @@ public:
 		return GetDefaultObjImpl<UIKRig_LimbEffector>();
 	}
 };
-DUMPER7_ASSERTS_UIKRig_LimbEffector;
 
 // Class IKRig.IKRig_LimbSolver
 // 0x0060 (0x0090 - 0x0030)
@@ -599,7 +580,6 @@ public:
 		return GetDefaultObjImpl<UIKRig_LimbSolver>();
 	}
 };
-DUMPER7_ASSERTS_UIKRig_LimbSolver;
 
 // Class IKRig.IKRig_FBIKEffector
 // 0x0028 (0x0050 - 0x0028)
@@ -629,7 +609,6 @@ public:
 		return GetDefaultObjImpl<UIKRig_FBIKEffector>();
 	}
 };
-DUMPER7_ASSERTS_UIKRig_FBIKEffector;
 
 // Class IKRig.IKRig_FBIKBoneSettings
 // 0x0050 (0x0078 - 0x0028)
@@ -669,7 +648,6 @@ public:
 		return GetDefaultObjImpl<UIKRig_FBIKBoneSettings>();
 	}
 };
-DUMPER7_ASSERTS_UIKRig_FBIKBoneSettings;
 
 // Class IKRig.IKRigFBIKSolver
 // 0x00C0 (0x00F0 - 0x0030)
@@ -711,7 +689,6 @@ public:
 		return GetDefaultObjImpl<UIKRigFBIKSolver>();
 	}
 };
-DUMPER7_ASSERTS_UIKRigFBIKSolver;
 
 // Class IKRig.IKRig_PoleSolverEffector
 // 0x0018 (0x0040 - 0x0028)
@@ -737,7 +714,6 @@ public:
 		return GetDefaultObjImpl<UIKRig_PoleSolverEffector>();
 	}
 };
-DUMPER7_ASSERTS_UIKRig_PoleSolverEffector;
 
 // Class IKRig.IKRig_PoleSolver
 // 0x0038 (0x0068 - 0x0030)
@@ -763,7 +739,6 @@ public:
 		return GetDefaultObjImpl<UIKRig_PoleSolver>();
 	}
 };
-DUMPER7_ASSERTS_UIKRig_PoleSolver;
 
 // Class IKRig.IKRig_SetTransformEffector
 // 0x0008 (0x0030 - 0x0028)
@@ -789,7 +764,6 @@ public:
 		return GetDefaultObjImpl<UIKRig_SetTransformEffector>();
 	}
 };
-DUMPER7_ASSERTS_UIKRig_SetTransformEffector;
 
 // Class IKRig.IKRig_SetTransform
 // 0x0020 (0x0050 - 0x0030)
@@ -815,6 +789,5 @@ public:
 		return GetDefaultObjImpl<UIKRig_SetTransform>();
 	}
 };
-DUMPER7_ASSERTS_UIKRig_SetTransform;
 
 SDK_NAMESPACE_END

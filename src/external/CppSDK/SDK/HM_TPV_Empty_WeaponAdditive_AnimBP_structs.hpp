@@ -30,6 +30,5 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                           // 0x00D0(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedInputPose;                // 0x0100(0x0030)()
 };
-DUMPER7_ASSERTS_HM_TPV_Empty_WeaponAdditive_AnimBP__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

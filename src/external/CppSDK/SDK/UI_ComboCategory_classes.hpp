@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<UUI_ComboCategory_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ComboCategory_C;
 
 SDK_NAMESPACE_END

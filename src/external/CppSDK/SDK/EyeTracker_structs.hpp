@@ -40,7 +40,6 @@ public:
 	float                                         LeftPupilDiameter;                                 // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RightPupilDiameter;                                // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEyeTrackerGazeData;
 
 // ScriptStruct EyeTracker.EyeTrackerStereoGazeData
 // 0x0080 (0x0080 - 0x0000)
@@ -55,6 +54,5 @@ public:
 	float                                         ConfidenceValue;                                   // 0x0078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEyeTrackerStereoGazeData;
 
 SDK_NAMESPACE_END

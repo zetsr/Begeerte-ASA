@@ -22,7 +22,6 @@ public:
 	class FString                                 Option;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int64                                         ID;                                                // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BPI_CFCore_CustomComboBox_C_OnOptionSelectedInterface;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

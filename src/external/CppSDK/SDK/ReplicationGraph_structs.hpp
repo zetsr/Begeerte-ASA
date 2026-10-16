@@ -23,7 +23,6 @@ public:
 	class UNetConnection*                         NetConnection;                                     // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class UReplicationGraphNode_AlwaysRelevant_ForConnection* Node;                                  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FConnectionAlwaysRelevantNodePair;
 
 // ScriptStruct ReplicationGraph.AlwaysRelevantActorInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -34,7 +33,6 @@ public:
 	class AActor*                                 LastViewer;                                        // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class AActor*                                 LastViewTarget;                                    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FAlwaysRelevantActorInfo;
 
 // ScriptStruct ReplicationGraph.TearOffActorInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -45,7 +43,6 @@ public:
 	class AActor*                                 Actor;                                             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTearOffActorInfo;
 
 // ScriptStruct ReplicationGraph.LastLocationGatherInfo
 // 0x0038 (0x0038 - 0x0000)
@@ -56,7 +53,6 @@ public:
 	struct FVector                                LastLocation;                                      // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                LastOutOfRangeLocationCheck;                       // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLastLocationGatherInfo;
 
 // ScriptStruct ReplicationGraph.ClassReplicationInfo
 // 0x0070 (0x0070 - 0x0000)
@@ -77,6 +73,5 @@ public:
 	float                                         CullDistance;                                      // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         CullDistanceSquared;                               // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FClassReplicationInfo;
 
 SDK_NAMESPACE_END

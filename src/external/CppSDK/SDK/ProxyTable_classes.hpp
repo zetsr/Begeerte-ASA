@@ -46,7 +46,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IChooserParameterProxyTable;
 
 // Class ProxyTable.ProxyAsset
 // 0x0050 (0x0078 - 0x0028)
@@ -74,7 +73,6 @@ public:
 		return GetDefaultObjImpl<UProxyAsset>();
 	}
 };
-DUMPER7_ASSERTS_UProxyAsset;
 
 // Class ProxyTable.ProxyTable
 // 0x0020 (0x0048 - 0x0028)
@@ -98,7 +96,6 @@ public:
 		return GetDefaultObjImpl<UProxyTable>();
 	}
 };
-DUMPER7_ASSERTS_UProxyTable;
 
 // Class ProxyTable.ProxyTableFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -124,6 +121,5 @@ public:
 		return GetDefaultObjImpl<UProxyTableFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UProxyTableFunctionLibrary;
 
 SDK_NAMESPACE_END

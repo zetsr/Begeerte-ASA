@@ -39,6 +39,5 @@ public:
 		return GetDefaultObjImpl<AStructureItemContainerBaseBP_C>();
 	}
 };
-DUMPER7_ASSERTS_AStructureItemContainerBaseBP_C;
 
 SDK_NAMESPACE_END

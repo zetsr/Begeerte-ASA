@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<ALanceDismountedEmitter_C>();
 	}
 };
-DUMPER7_ASSERTS_ALanceDismountedEmitter_C;
 
 SDK_NAMESPACE_END

@@ -36,7 +36,6 @@ public:
 		return GetDefaultObjImpl<ADataflowActor>();
 	}
 };
-DUMPER7_ASSERTS_ADataflowActor;
 
 // Class DataflowEnginePlugin.DataflowComponent
 // 0x0150 (0x0770 - 0x0620)
@@ -59,6 +58,5 @@ public:
 		return GetDefaultObjImpl<UDataflowComponent>();
 	}
 };
-DUMPER7_ASSERTS_UDataflowComponent;
 
 SDK_NAMESPACE_END

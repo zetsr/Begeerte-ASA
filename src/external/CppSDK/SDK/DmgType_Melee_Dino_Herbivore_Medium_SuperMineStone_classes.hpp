@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDmgType_Melee_Dino_Herbivore_Medium_SuperMineStone_C>();
 	}
 };
-DUMPER7_ASSERTS_UDmgType_Melee_Dino_Herbivore_Medium_SuperMineStone_C;
 
 SDK_NAMESPACE_END

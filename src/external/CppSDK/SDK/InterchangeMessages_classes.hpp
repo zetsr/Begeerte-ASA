@@ -36,7 +36,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultMeshWarning>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultMeshWarning;
 
 // Class InterchangeMessages.InterchangeResultTextureDisplay
 // 0x0010 (0x0090 - 0x0080)
@@ -59,7 +58,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultTextureDisplay>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultTextureDisplay;
 
 // Class InterchangeMessages.InterchangeResultTextureWarning
 // 0x0010 (0x0080 - 0x0070)
@@ -82,7 +80,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultTextureWarning>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultTextureWarning;
 
 // Class InterchangeMessages.InterchangeResultMeshError
 // 0x0010 (0x0080 - 0x0070)
@@ -105,7 +102,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultMeshError>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultMeshError;
 
 // Class InterchangeMessages.InterchangeResultMeshWarning_Generic
 // 0x0010 (0x0090 - 0x0080)
@@ -128,7 +124,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultMeshWarning_Generic>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultMeshWarning_Generic;
 
 // Class InterchangeMessages.InterchangeResultMeshError_Generic
 // 0x0010 (0x0090 - 0x0080)
@@ -151,7 +146,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultMeshError_Generic>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultMeshError_Generic;
 
 // Class InterchangeMessages.InterchangeResultMeshWarning_TooManyUVs
 // 0x0008 (0x0088 - 0x0080)
@@ -175,7 +169,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultMeshWarning_TooManyUVs>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultMeshWarning_TooManyUVs;
 
 // Class InterchangeMessages.InterchangeResultTextureDisplay_TextureFileDoNotExist
 // 0x0010 (0x00A0 - 0x0090)
@@ -198,6 +191,5 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultTextureDisplay_TextureFileDoNotExist>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultTextureDisplay_TextureFileDoNotExist;
 
 SDK_NAMESPACE_END

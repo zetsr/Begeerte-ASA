@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<ARagdollKinematicActor_BP_C>();
 	}
 };
-DUMPER7_ASSERTS_ARagdollKinematicActor_BP_C;
 
 SDK_NAMESPACE_END

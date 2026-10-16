@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_BaseBoots_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemArmor_BaseBoots_C;
 
 SDK_NAMESPACE_END

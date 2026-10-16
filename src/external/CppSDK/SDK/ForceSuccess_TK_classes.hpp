@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UForceSuccess_TK_C>();
 	}
 };
-DUMPER7_ASSERTS_UForceSuccess_TK_C;
 
 SDK_NAMESPACE_END

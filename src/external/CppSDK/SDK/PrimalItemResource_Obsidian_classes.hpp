@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Obsidian_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Obsidian_C;
 
 SDK_NAMESPACE_END

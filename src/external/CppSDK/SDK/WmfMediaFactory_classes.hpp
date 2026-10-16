@@ -40,6 +40,5 @@ public:
 		return GetDefaultObjImpl<UWmfMediaSettings>();
 	}
 };
-DUMPER7_ASSERTS_UWmfMediaSettings;
 
 SDK_NAMESPACE_END

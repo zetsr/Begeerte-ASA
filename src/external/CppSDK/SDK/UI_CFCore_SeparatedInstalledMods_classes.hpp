@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "cfcore_ui_structs.hpp"
 #include "UMG_structs.hpp"
-#include "UI_CFCore_BasePage_classes.hpp"
 #include "ENUM_CFCore_SideTabs_structs.hpp"
+#include "UI_CFCore_BasePage_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -105,6 +105,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_SeparatedInstalledMods_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_SeparatedInstalledMods_C;
 
 SDK_NAMESPACE_END

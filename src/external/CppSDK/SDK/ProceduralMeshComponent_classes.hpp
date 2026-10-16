@@ -48,7 +48,6 @@ public:
 		return GetDefaultObjImpl<UKismetProceduralMeshLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UKismetProceduralMeshLibrary;
 
 // Class ProceduralMeshComponent.ProceduralMeshComponent
 // 0x0080 (0x06E0 - 0x0660)
@@ -95,6 +94,5 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UProceduralMeshComponent;
 
 SDK_NAMESPACE_END

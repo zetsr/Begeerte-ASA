@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponMachinedPistol_Cursed_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_WeaponMachinedPistol_Cursed_C;
 
 SDK_NAMESPACE_END

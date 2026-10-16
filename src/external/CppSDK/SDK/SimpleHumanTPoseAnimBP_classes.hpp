@@ -67,6 +67,5 @@ public:
 		return GetDefaultObjImpl<USimpleHumanTPoseAnimBP_C>();
 	}
 };
-DUMPER7_ASSERTS_USimpleHumanTPoseAnimBP_C;
 
 SDK_NAMESPACE_END

@@ -28,7 +28,6 @@ public:
 	double                                        CallFunc_VSize_ReturnValue;                        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CheckIsVectorNonZero_C_ExecuteUbergraph_CheckIsVectorNonZero;
 
 // Function CheckIsVectorNonZero.CheckIsVectorNonZero_C.ReceiveExecute
 // 0x0008 (0x0008 - 0x0000)
@@ -37,7 +36,6 @@ struct CheckIsVectorNonZero_C_ReceiveExecute final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CheckIsVectorNonZero_C_ReceiveExecute;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

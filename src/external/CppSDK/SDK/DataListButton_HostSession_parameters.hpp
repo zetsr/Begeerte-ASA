@@ -32,7 +32,6 @@ public:
 	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataListButton_HostSession_C_OnPaint;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

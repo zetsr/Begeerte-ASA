@@ -23,6 +23,5 @@ public:
 	struct FVector                                Min_2_4BC07A8F49375E5C482C4CB4FE0326F4;            // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Max_4_A9CA25144A48E6CBAE749CAB9E0A9BF7;            // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FStruct_MinMaxVectors;
 
 SDK_NAMESPACE_END

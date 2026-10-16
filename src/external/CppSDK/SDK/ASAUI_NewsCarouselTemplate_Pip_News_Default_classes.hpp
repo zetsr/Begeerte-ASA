@@ -27,8 +27,8 @@ public:
 
 public:
 	void ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Pip_News_Default(int32 EntryPoint);
-	void EntryFocusStart(bool bInstigatedByAutoRollover);
-	void EntryFocusEnd(bool bInstigatedByAutoRollover);
+	void EntryFocusStart(bool bInstigatedByAutoRollover_EntryFocusStart);
+	void EntryFocusEnd(bool bInstigatedByAutoRollover_EntryFocusEnd);
 
 public:
 	static class UClass* StaticClass()
@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_NewsCarouselTemplate_Pip_News_Default_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_NewsCarouselTemplate_Pip_News_Default_C;
 
 SDK_NAMESPACE_END

@@ -25,7 +25,6 @@ public:
 	EEndPlayReason                                EndPlayReason;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_MassLODSubsystem_OnPlayerControllerEndPlay;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

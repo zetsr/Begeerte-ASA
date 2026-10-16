@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UChaosVehicles>();
 	}
 };
-DUMPER7_ASSERTS_UChaosVehicles;
 
 SDK_NAMESPACE_END

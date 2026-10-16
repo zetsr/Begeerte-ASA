@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<ABuff_ASAPreventDismount_C>();
 	}
 };
-DUMPER7_ASSERTS_ABuff_ASAPreventDismount_C;
 
 SDK_NAMESPACE_END

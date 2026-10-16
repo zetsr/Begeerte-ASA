@@ -269,6 +269,5 @@ public:
 		return GetDefaultObjImpl<UOptionsMenu_UWP_C>();
 	}
 };
-DUMPER7_ASSERTS_UOptionsMenu_UWP_C;
 
 SDK_NAMESPACE_END

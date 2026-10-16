@@ -42,6 +42,5 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_INotifyFieldValueChanged;
 
 SDK_NAMESPACE_END

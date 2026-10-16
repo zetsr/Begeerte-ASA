@@ -37,7 +37,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneGeometryCacheSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneGeometryCacheSection;
 
 // Class GeometryCacheTracks.MovieSceneGeometryCacheTrack
 // 0x0018 (0x0110 - 0x00F8)
@@ -61,6 +60,5 @@ public:
 		return GetDefaultObjImpl<UMovieSceneGeometryCacheTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneGeometryCacheTrack;
 
 SDK_NAMESPACE_END

@@ -33,10 +33,10 @@ void UASAUIWidget_HorizontalListSelector_Main_Style1_C::UpdateWidget()
 // Function ASAUIWidget_HorizontalListSelector_Main_Style1.ASAUIWidget_HorizontalListSelector_Main_Style1_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUIWidget_HorizontalListSelector_Main_Style1_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UASAUIWidget_HorizontalListSelector_Main_Style1_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
 {
 	static class UFunction* Func = nullptr;
 
@@ -45,8 +45,8 @@ void UASAUIWidget_HorizontalListSelector_Main_Style1_C::Tick(const struct FGeome
 
 	Params::ASAUIWidget_HorizontalListSelector_Main_Style1_C_Tick Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
+	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -181,9 +181,9 @@ void UASAUIWidget_HorizontalListSelector_Main_Style1_C::Set_All_Buttons_Inactive
 // Function ASAUIWidget_HorizontalListSelector_Main_Style1.ASAUIWidget_HorizontalListSelector_Main_Style1_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUIWidget_HorizontalListSelector_Main_Style1_C::PreConstruct(bool IsDesignTime)
+void UASAUIWidget_HorizontalListSelector_Main_Style1_C::PreConstruct(bool IsDesignTime_PreConstruct)
 {
 	static class UFunction* Func = nullptr;
 
@@ -192,7 +192,7 @@ void UASAUIWidget_HorizontalListSelector_Main_Style1_C::PreConstruct(bool IsDesi
 
 	Params::ASAUIWidget_HorizontalListSelector_Main_Style1_C_PreConstruct Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

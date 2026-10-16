@@ -37,7 +37,6 @@ public:
 	double                                        K2Node_VariableSet_Layering_R_Hand_ImplicitCast;   // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_VariableSet_Layering_R_Arm_ImplicitCast;    // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_Fists_C_UpdateLayeringValues;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

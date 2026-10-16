@@ -36,7 +36,6 @@ public:
 		return GetDefaultObjImpl<UMassSignalProcessorBase>();
 	}
 };
-DUMPER7_ASSERTS_UMassSignalProcessorBase;
 
 // Class MassSignals.MassSignalSubsystem
 // 0x0068 (0x00B0 - 0x0048)
@@ -60,6 +59,5 @@ public:
 		return GetDefaultObjImpl<UMassSignalSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassSignalSubsystem;
 
 SDK_NAMESPACE_END

@@ -37,7 +37,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneGeometryCollectionSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneGeometryCollectionSection;
 
 // Class GeometryCollectionTracks.MovieSceneGeometryCollectionTrack
 // 0x0018 (0x0110 - 0x00F8)
@@ -61,6 +60,5 @@ public:
 		return GetDefaultObjImpl<UMovieSceneGeometryCollectionTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneGeometryCollectionTrack;
 
 SDK_NAMESPACE_END

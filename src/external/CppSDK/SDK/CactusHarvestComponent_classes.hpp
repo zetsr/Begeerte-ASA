@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UCactusHarvestComponent_C>();
 	}
 };
-DUMPER7_ASSERTS_UCactusHarvestComponent_C;
 
 SDK_NAMESPACE_END

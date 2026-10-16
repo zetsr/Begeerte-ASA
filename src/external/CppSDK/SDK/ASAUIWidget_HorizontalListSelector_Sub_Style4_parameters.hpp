@@ -22,10 +22,9 @@ SDK_PARAM_NAMESPACE_START
 struct ASAUIWidget_HorizontalListSelector_Sub_Style4_C_Tick final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_Tick;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.SwitchButton
 // 0x0038 (0x0038 - 0x0000)
@@ -43,7 +42,6 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UASAUIWidget_Button_Style4_C*           CallFunc_Array_Get_Item_1;                         // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_SwitchButton;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.SetEnabledStateOfButtonIndex
 // 0x0010 (0x0010 - 0x0000)
@@ -56,7 +54,6 @@ public:
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UASAUIWidget_Button_Style4_C*           CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_SetEnabledStateOfButtonIndex;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.SetButtonsInactive
 // 0x0020 (0x0020 - 0x0000)
@@ -70,16 +67,14 @@ public:
 	class UASAUIWidget_Button_Style4_C*           CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_SetButtonsInactive;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
 struct ASAUIWidget_HorizontalListSelector_Sub_Style4_C_PreConstruct final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime_PreConstruct;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_PreConstruct;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.GetPreviousAvailableButtonIndex
 // 0x0048 (0x0048 - 0x0000)
@@ -109,7 +104,6 @@ public:
 	class UASAUIWidget_Button_Style4_C*           CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_GetPreviousAvailableButtonIndex;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.GetNextAvailableButtonIndex
 // 0x0048 (0x0048 - 0x0000)
@@ -138,7 +132,6 @@ public:
 	class UASAUIWidget_Button_Style4_C*           CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_GetNextAvailableButtonIndex;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.GetLastAvailableButtonIndex
 // 0x0038 (0x0038 - 0x0000)
@@ -161,7 +154,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_GetLastAvailableButtonIndex;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.GetButtonAtIndex
 // 0x0020 (0x0020 - 0x0000)
@@ -174,7 +166,6 @@ public:
 	class UWidget*                                Result;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_GetButtonAtIndex;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.Get First Available Button Index
 // 0x0030 (0x0030 - 0x0000)
@@ -196,7 +187,6 @@ public:
 	class UASAUIWidget_Button_Style4_C*           CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_Get_First_Available_Button_Index;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.Fix Console Icons
 // 0x0070 (0x0070 - 0x0000)
@@ -222,7 +212,6 @@ public:
 	class UTexture2D*                             CallFunc_GetIconForKeyName_ReturnValue;            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_Fix_Console_Icons;
 
 // Function ASAUIWidget_HorizontalListSelector_Sub_Style4.ASAUIWidget_HorizontalListSelector_Sub_Style4_C.ExecuteUbergraph_ASAUIWidget_HorizontalListSelector_Sub_Style4
 // 0x0248 (0x0248 - 0x0000)
@@ -311,7 +300,6 @@ public:
 	TArray<class UASAUIWidget_Button_Style4_C*>   K2Node_MakeArray_Array;                            // 0x0230(0x0010)(ReferenceParm, ContainsInstancedReference)
 	float                                         CallFunc_Add_DoubleFloat_B_ImplicitCast;           // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_HorizontalListSelector_Sub_Style4_C_ExecuteUbergraph_ASAUIWidget_HorizontalListSelector_Sub_Style4;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

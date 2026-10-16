@@ -1249,7 +1249,6 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_1;                // 0xD758(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose;                  // 0xD788(0x0030)()
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP__FAnimBlueprintGeneratedConstantData;
 
 // ScriptStruct BaseHumanAnimBP.BaseHumanAnimBP_C.AnimBlueprintGeneratedMutableData
 // 0x05FF (0x0600 - 0x0001)
@@ -1641,6 +1640,5 @@ public:
 	class UAnimSequenceBase*                      __AnimSequenceBase_310;                            // 0x05F0(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                          __BoolProperty_311;                                // 0x05F8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP__FAnimBlueprintGeneratedMutableData;
 
 SDK_NAMESPACE_END

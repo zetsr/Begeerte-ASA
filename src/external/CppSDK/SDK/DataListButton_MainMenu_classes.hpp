@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UDataListButton_MainMenu_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListButton_MainMenu_C;
 
 SDK_NAMESPACE_END

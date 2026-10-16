@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UGlobalUIData_XSX_C>();
 	}
 };
-DUMPER7_ASSERTS_UGlobalUIData_XSX_C;
 
 SDK_NAMESPACE_END

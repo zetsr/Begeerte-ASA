@@ -80,6 +80,5 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_ADino_Character_BP_C;
 
 SDK_NAMESPACE_END

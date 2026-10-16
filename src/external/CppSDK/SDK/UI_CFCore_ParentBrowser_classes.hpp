@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "ENUM_CFCore_TimeFilters_structs.hpp"
 #include "Engine_structs.hpp"
 #include "cfcore_ui_structs.hpp"
 #include "cfcore_structs.hpp"
-#include "ENUM_CFCore_TimeFilters_structs.hpp"
-#include "UI_CFCore_BasePage_classes.hpp"
-#include "UMG_structs.hpp"
 #include "ENUM_CFCore_SideTabs_structs.hpp"
+#include "UMG_structs.hpp"
+#include "UI_CFCore_BasePage_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "ENUM_CFCore_InputDevices_structs.hpp"
 
@@ -175,6 +175,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_ParentBrowser_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_ParentBrowser_C;
 
 SDK_NAMESPACE_END

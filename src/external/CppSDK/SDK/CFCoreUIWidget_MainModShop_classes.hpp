@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STRUCT_CFCore_UITheme_structs.hpp"
 #include "Engine_structs.hpp"
+#include "STRUCT_CFCore_UITheme_structs.hpp"
 #include "cfcore_structs.hpp"
 #include "ShooterGame_classes.hpp"
 
@@ -64,6 +64,5 @@ public:
 		return GetDefaultObjImpl<UCFCoreUIWidget_MainModShop_C>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreUIWidget_MainModShop_C;
 
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemWeaponGenericAmmolessConsumeSelf_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemWeaponGenericAmmolessConsumeSelf_C;
 
 SDK_NAMESPACE_END

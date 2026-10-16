@@ -56,21 +56,18 @@ public:
 	uint8                                         NextExpressionDepth;                               // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWorldConditionBase;
 
 // ScriptStruct WorldConditions.WorldConditionCommonBase
 // 0x0000 (0x0010 - 0x0010)
 struct FWorldConditionCommonBase final : public FWorldConditionBase
 {
 };
-DUMPER7_ASSERTS_FWorldConditionCommonBase;
 
 // ScriptStruct WorldConditions.WorldConditionCommonActorBase
 // 0x0000 (0x0010 - 0x0010)
 struct FWorldConditionCommonActorBase final : public FWorldConditionBase
 {
 };
-DUMPER7_ASSERTS_FWorldConditionCommonActorBase;
 
 // ScriptStruct WorldConditions.WorldConditionEditable
 // 0x0001 (0x0001 - 0x0000)
@@ -79,7 +76,6 @@ struct FWorldConditionEditable final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWorldConditionEditable;
 
 // ScriptStruct WorldConditions.WorldConditionQuerySharedDefinition
 // 0x0028 (0x0028 - 0x0000)
@@ -90,7 +86,6 @@ public:
 	TSubclassOf<class UWorldConditionSchema>      SchemaClass;                                       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWorldConditionQuerySharedDefinition;
 
 // ScriptStruct WorldConditions.WorldConditionQueryDefinition
 // 0x0018 (0x0018 - 0x0000)
@@ -100,7 +95,6 @@ public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UWorldConditionSchema>      SchemaClass;                                       // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FWorldConditionQueryDefinition;
 
 // ScriptStruct WorldConditions.WorldConditionItem
 // 0x0003 (0x0003 - 0x0000)
@@ -109,7 +103,6 @@ struct FWorldConditionItem final
 public:
 	uint8                                         Pad_0[0x3];                                        // 0x0000(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWorldConditionItem;
 
 // ScriptStruct WorldConditions.WorldConditionStateObject
 // 0x0008 (0x0008 - 0x0000)
@@ -118,7 +111,6 @@ struct FWorldConditionStateObject final
 public:
 	class UObject*                                Object;                                            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FWorldConditionStateObject;
 
 // ScriptStruct WorldConditions.WorldConditionQueryState
 // 0x0030 (0x0030 - 0x0000)
@@ -128,7 +120,6 @@ public:
 	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Owner;                                             // 0x0028(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FWorldConditionQueryState;
 
 // ScriptStruct WorldConditions.WorldConditionQuery
 // 0x0048 (0x0048 - 0x0000)
@@ -138,7 +129,6 @@ public:
 	struct FWorldConditionQueryDefinition         QueryDefinition;                                   // 0x0000(0x0018)(Edit, Protected, NativeAccessSpecifierProtected)
 	struct FWorldConditionQueryState              QueryState;                                        // 0x0018(0x0030)(Transient, Protected, NativeAccessSpecifierProtected)
 };
-DUMPER7_ASSERTS_FWorldConditionQuery;
 
 // ScriptStruct WorldConditions.WorldConditionResult
 // 0x0002 (0x0002 - 0x0000)
@@ -148,7 +138,6 @@ public:
 	EWorldConditionResultValue                    Value;                                             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCanBeCached;                                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FWorldConditionResult;
 
 // ScriptStruct WorldConditions.WorldConditionContextDataDesc
 // 0x0018 (0x0018 - 0x0000)
@@ -160,7 +149,6 @@ public:
 	EWorldConditionContextDataType                Type;                                              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWorldConditionContextDataDesc;
 
 // ScriptStruct WorldConditions.WorldConditionContextDataRef
 // 0x000C (0x000C - 0x0000)
@@ -171,6 +159,5 @@ public:
 	uint8                                         Index;                                             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWorldConditionContextDataRef;
 
 SDK_NAMESPACE_END

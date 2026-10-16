@@ -25,7 +25,6 @@ struct Buff_TekArmor_C_AllowPostProcessEffect final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_AllowPostProcessEffect;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.AreAnyTekAbilitiesActive
 // 0x0003 (0x0003 - 0x0000)
@@ -36,7 +35,6 @@ public:
 	bool                                          retVal;                                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsTekArmorUsingAbility__result;           // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_AreAnyTekAbilitiesActive;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.BPActivated
 // 0x0020 (0x0020 - 0x0000)
@@ -51,7 +49,6 @@ public:
 	ENetworkModeResult                            CallFunc_IsRunningOnServer_OutNetworkMode;         // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_BPActivated;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.BPDeactivated
 // 0x0010 (0x0010 - 0x0000)
@@ -61,7 +58,6 @@ public:
 	class AActor*                                 ForInstigator;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_BPDeactivated;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.BPSetupForInstigator
 // 0x0058 (0x0058 - 0x0000)
@@ -85,7 +81,6 @@ public:
 	double                                        K2Node_VariableSet_warpFOV_start_ImplicitCast;     // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_VariableSet_warpFOV_target_ImplicitCast;    // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_BPSetupForInstigator;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.CanUseTekAbility
 // 0x0098 (0x0098 - 0x0000)
@@ -139,7 +134,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_CanUseTekAbility;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.check genesis restrictions for player
 // 0x0050 (0x0050 - 0x0000)
@@ -167,7 +161,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_check_genesis_restrictions_for_player;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Client_Consume Element After Time
 // 0x0028 (0x0028 - 0x0000)
@@ -181,7 +174,6 @@ public:
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Client_Consume_Element_After_Time;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.DisplayTekArmorMessage
 // 0x0058 (0x0058 - 0x0000)
@@ -197,7 +189,6 @@ public:
 	float                                         CallFunc_ClientServerNotificationSingle_DisplayTime_ImplicitCast; // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_ClientServerNotificationSingle_DisplayScale_ImplicitCast; // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_DisplayTekArmorMessage;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Equipped_SetToMaxElement
 // 0x0001 (0x0001 - 0x0000)
@@ -206,7 +197,6 @@ struct Buff_TekArmor_C_Equipped_SetToMaxElement final
 public:
 	EPrimalEquipmentType                          ItemSlot;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Equipped_SetToMaxElement;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Equipped_TryToDecreaseElement
 // 0x0008 (0x0008 - 0x0000)
@@ -216,7 +206,6 @@ public:
 	int32                                         AmountToDecreaseBy;                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EPrimalEquipmentType                          ItemSlot;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Equipped_TryToDecreaseElement;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.ExecuteUbergraph_Buff_TekArmor
 // 0x0190 (0x0190 - 0x0000)
@@ -243,7 +232,7 @@ public:
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystem*                        K2Node_CustomEvent_particleTemplate;               // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             K2Node_CustomEvent_sound;                          // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             K2Node_CustomEvent_Sound;                          // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             K2Node_CustomEvent_transform;                      // 0x0070(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_CustomEvent_soundVolume;                    // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_CustomEvent_soundPitch;                     // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -274,7 +263,6 @@ public:
 	double                                        CallFunc_FloatToDouble_value_ImplicitCast;         // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_IsCooldownComplete_CooldownDuration_ImplicitCast; // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_ExecuteUbergraph_Buff_TekArmor;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Get DefaultTekBuff
 // 0x0020 (0x0020 - 0x0000)
@@ -286,7 +274,6 @@ public:
 	class ABuff_TekArmor_C*                       K2Node_DynamicCast_AsBuff_Tek_Armor;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Get_DefaultTekBuff;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Is Player in SealedSpace
 // 0x0020 (0x0020 - 0x0000)
@@ -299,7 +286,6 @@ public:
 	class APrimalCharacter*                       K2Node_DynamicCast_AsPrimal_Character;             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Get_Is_Player_in_SealedSpace;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerController
 // 0x0020 (0x0020 - 0x0000)
@@ -311,7 +297,6 @@ public:
 	class AShooterPlayerController*               K2Node_DynamicCast_AsShooter_Player_Controller;    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Get_Ref_Owning_PlayerController;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Get Ref Owning PlayerMovement
 // 0x0010 (0x0010 - 0x0000)
@@ -321,7 +306,6 @@ public:
 	class UCharacterMovementComponent*            Movement;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AShooterCharacter*                      CallFunc_GetRef_OwningPlayer_player;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Get_Ref_Owning_PlayerMovement;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Get RefOwningPlayer Camera Manager
 // 0x0018 (0x0018 - 0x0000)
@@ -333,7 +317,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Get_RefOwningPlayer_Camera_Manager;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.GetDefaultPlayer
 // 0x0020 (0x0020 - 0x0000)
@@ -345,7 +328,6 @@ public:
 	class APrimalCharacter*                       K2Node_DynamicCast_AsPrimal_Character;             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_GetDefaultPlayer;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.GetRef_OwningPlayer
 // 0x0020 (0x0020 - 0x0000)
@@ -357,7 +339,6 @@ public:
 	class AShooterCharacter*                      K2Node_DynamicCast_AsShooter_Character;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_GetRef_OwningPlayer;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.GetRelatedTekArmorRef
 // 0x0028 (0x0028 - 0x0000)
@@ -370,7 +351,6 @@ public:
 	class UPrimalItemArmor_Base_Tek_C*            K2Node_DynamicCast_AsPrimal_Item_Armor_Base_Tek;   // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_GetRelatedTekArmorRef;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.HasRequiredEngrams
 // 0x00A0 (0x00A0 - 0x0000)
@@ -414,7 +394,6 @@ public:
 	bool                                          CallFunc_HasEngram_ReturnValue;                    // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x009B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_HasRequiredEngrams;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.HideBoostIcon
 // 0x0002 (0x0002 - 0x0000)
@@ -424,7 +403,6 @@ public:
 	bool                                          ShouldSet;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          WithValue;                                         // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_HideBoostIcon;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_0
 // 0x0018 (0x0018 - 0x0000)
@@ -433,7 +411,6 @@ struct Buff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_0 fin
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_0;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_1
 // 0x0018 (0x0018 - 0x0000)
@@ -442,7 +419,6 @@ struct Buff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_1 fin
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_InpActEvt_Gamepad_LeftShoulder_K2Node_InputKeyEvent_1;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Is Restricted Because Of Genesis Map
 // 0x0003 (0x0003 - 0x0000)
@@ -453,7 +429,6 @@ public:
 	bool                                          ret_val;                                           // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_check_genesis_restrictions_for_player_is_restricted; // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Is_Restricted_Because_Of_Genesis_Map;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.IsAbilityValid
 // 0x0005 (0x0005 - 0x0000)
@@ -466,7 +441,6 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_IsAbilityValid;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.IsPlayerGrounded
 // 0x0018 (0x0018 - 0x0000)
@@ -479,7 +453,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_IsPlayerGrounded;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.IsPlayerInWaterVolume
 // 0x00A8 (0x00A8 - 0x0000)
@@ -508,7 +481,6 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_IsPlayerInWaterVolume;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.IsTekArmorUsingAbility?
 // 0x0040 (0x0040 - 0x0000)
@@ -529,7 +501,6 @@ public:
 	class ABuff_TekArmor_C*                       K2Node_DynamicCast_AsBuff_Tek_Armor;               // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_IsTekArmorUsingAbility_;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.IsTekBuffDisabled
 // 0x00E0 (0x00E0 - 0x0000)
@@ -594,7 +565,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_Contains_ReturnValue_1;             // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_IsTekBuffDisabled;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.IsWarping FOV
 // 0x0020 (0x0020 - 0x0000)
@@ -610,7 +580,6 @@ public:
 	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast;   // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_IsWarping_FOV;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Multi_SpawnFX
 // 0x0080 (0x0080 - 0x0000)
@@ -623,7 +592,6 @@ public:
 	double                                        SoundVolume;                                       // 0x0070(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        soundPitch;                                        // 0x0078(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Multi_SpawnFX;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.ResetPlayerFOV
 // 0x0010 (0x0010 - 0x0000)
@@ -633,7 +601,6 @@ public:
 	class AShooterPlayerCameraManager*            CallFunc_Get_RefOwningPlayer_Camera_Manager_ref;   // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_NormalFOV_ImplicitCast;         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_ResetPlayerFOV;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Server_SetTekAbilityActive
 // 0x0001 (0x0001 - 0x0000)
@@ -642,7 +609,6 @@ struct Buff_TekArmor_C_Server_SetTekAbilityActive final
 public:
 	bool                                          newActive;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Server_SetTekAbilityActive;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.SetJetpackOffset
 // 0x0060 (0x0060 - 0x0000)
@@ -651,7 +617,6 @@ struct Buff_TekArmor_C_SetJetpackOffset final
 public:
 	struct FTransform                             AddTransform;                                      // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_SetJetpackOffset;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.SetTekIgnoreLookInput
 // 0x0002 (0x0002 - 0x0000)
@@ -661,7 +626,6 @@ public:
 	bool                                          newIgnore;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_SetTekIgnoreLookInput;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.SetTekIgnoreMoveInput
 // 0x0002 (0x0002 - 0x0000)
@@ -671,7 +635,6 @@ public:
 	bool                                          newIgnore;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_SetTekIgnoreMoveInput;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.Should Damage Actor
 // 0x0030 (0x0030 - 0x0000)
@@ -695,7 +658,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_Should_Damage_Actor;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.SpawnFX
 // 0x00F0 (0x00F0 - 0x0000)
@@ -720,7 +682,6 @@ public:
 	float                                         CallFunc_PlaySoundAtLocation_VolumeMultiplier_ImplicitCast; // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_PlaySoundAtLocation_PitchMultiplier_ImplicitCast; // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_SpawnFX;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.UpdateColorsFromItem
 // 0x0008 (0x0008 - 0x0000)
@@ -729,7 +690,6 @@ struct Buff_TekArmor_C_UpdateColorsFromItem final
 public:
 	class USkeletalMeshComponent*                 CallFunc_GetWeaponMesh_OutMesh;                    // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_UpdateColorsFromItem;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.UpdatePlayerFOV
 // 0x00C8 (0x00C8 - 0x0000)
@@ -766,7 +726,6 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast_1;        // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_NormalFOV_ImplicitCast;         // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_UpdatePlayerFOV;
 
 // Function Buff_TekArmor.Buff_TekArmor_C.GetWeaponMesh
 // 0x0008 (0x0008 - 0x0000)
@@ -775,7 +734,6 @@ struct Buff_TekArmor_C_GetWeaponMesh final
 public:
 	class USkeletalMeshComponent*                 OutMesh;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_TekArmor_C_GetWeaponMesh;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

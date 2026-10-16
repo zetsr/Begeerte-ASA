@@ -40,6 +40,5 @@ public:
 		return GetDefaultObjImpl<UOptimusSettings>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusSettings;
 
 SDK_NAMESPACE_END

@@ -49,6 +49,5 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IAudioLinkBlueprintInterface;
 
 SDK_NAMESPACE_END

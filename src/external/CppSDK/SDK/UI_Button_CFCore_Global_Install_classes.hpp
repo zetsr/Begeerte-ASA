@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UUI_Button_CFCore_Global_Install_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Button_CFCore_Global_Install_C;
 
 SDK_NAMESPACE_END

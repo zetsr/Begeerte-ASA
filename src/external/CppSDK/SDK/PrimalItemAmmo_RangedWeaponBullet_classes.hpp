@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_RangedWeaponBullet_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemAmmo_RangedWeaponBullet_C;
 
 SDK_NAMESPACE_END

@@ -16,24 +16,24 @@
 
 SDK_NAMESPACE_START
 
-// Function DA_DLC_Base.DA_DLC_Base_C.WasntDLCBrowsedBefore
+// Function DA_DLC_Base.DA_DLC_Base_C.IsDLCOwned
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   Wasnt                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Owns                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDA_DLC_Base_C::WasntDLCBrowsedBefore(bool* Wasnt)
+void UDA_DLC_Base_C::IsDLCOwned(bool* Owns)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DA_DLC_Base_C", "WasntDLCBrowsedBefore");
+		Func = Class->GetFunction("DA_DLC_Base_C", "IsDLCOwned");
 
-	Params::DA_DLC_Base_C_WasntDLCBrowsedBefore Parms{};
+	Params::DA_DLC_Base_C_IsDLCOwned Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Wasnt != nullptr)
-		*Wasnt = Parms.Wasnt;
+	if (Owns != nullptr)
+		*Owns = Parms.Owns;
 }
 
 
@@ -61,24 +61,24 @@ void UDA_DLC_Base_C::IsLatestDLC(int32 LatestDLCVersion, bool* Yes)
 }
 
 
-// Function DA_DLC_Base.DA_DLC_Base_C.IsDLCOwned
+// Function DA_DLC_Base.DA_DLC_Base_C.WasntDLCBrowsedBefore
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   Owns                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Wasnt                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDA_DLC_Base_C::IsDLCOwned(bool* Owns)
+void UDA_DLC_Base_C::WasntDLCBrowsedBefore(bool* Wasnt)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DA_DLC_Base_C", "IsDLCOwned");
+		Func = Class->GetFunction("DA_DLC_Base_C", "WasntDLCBrowsedBefore");
 
-	Params::DA_DLC_Base_C_IsDLCOwned Parms{};
+	Params::DA_DLC_Base_C_WasntDLCBrowsedBefore Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Owns != nullptr)
-		*Owns = Parms.Owns;
+	if (Wasnt != nullptr)
+		*Wasnt = Parms.Wasnt;
 }
 
 

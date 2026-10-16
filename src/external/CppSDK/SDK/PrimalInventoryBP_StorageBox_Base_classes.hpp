@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalInventoryBP_StorageBox_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalInventoryBP_StorageBox_Base_C;
 
 SDK_NAMESPACE_END

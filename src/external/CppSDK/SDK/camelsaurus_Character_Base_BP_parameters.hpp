@@ -31,7 +31,6 @@ public:
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FClamp_Max_ImplicitCast;                  // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_camelsaurus_Character_Base_BP_C_AddWater;
 
 // Function camelsaurus_Character_Base_BP.camelsaurus_Character_Base_BP_C.ExecuteUbergraph_camelsaurus_Character_Base_BP
 // 0x0008 (0x0008 - 0x0000)
@@ -41,7 +40,6 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_camelsaurus_Character_Base_BP_C_ExecuteUbergraph_camelsaurus_Character_Base_BP;
 
 // Function camelsaurus_Character_Base_BP.camelsaurus_Character_Base_BP_C.OnRep_WaterAmount
 // 0x0008 (0x0008 - 0x0000)
@@ -50,7 +48,6 @@ struct camelsaurus_Character_Base_BP_C_OnRep_WaterAmount final
 public:
 	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0000(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_camelsaurus_Character_Base_BP_C_OnRep_WaterAmount;
 
 // Function camelsaurus_Character_Base_BP.camelsaurus_Character_Base_BP_C.UpdateWaterAmount
 // 0x0008 (0x0008 - 0x0000)
@@ -60,7 +57,6 @@ public:
 	float                                         CallFunc_ModifyCurrentStatusValue_ReturnValue;     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_ModifyCurrentStatusValue_Amount_ImplicitCast; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_camelsaurus_Character_Base_BP_C_UpdateWaterAmount;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

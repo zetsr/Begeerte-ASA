@@ -152,6 +152,5 @@ public:
 		return GetDefaultObjImpl<UReMainMenuUI_ASA_C>();
 	}
 };
-DUMPER7_ASSERTS_UReMainMenuUI_ASA_C;
 
 SDK_NAMESPACE_END

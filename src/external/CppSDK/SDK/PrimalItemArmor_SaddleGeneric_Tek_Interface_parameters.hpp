@@ -21,7 +21,6 @@ struct PrimalItemArmor_SaddleGeneric_Tek_Interface_C_IGet_Max_Ammo final
 public:
 	int32                                         retVal;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_SaddleGeneric_Tek_Interface_C_IGet_Max_Ammo;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

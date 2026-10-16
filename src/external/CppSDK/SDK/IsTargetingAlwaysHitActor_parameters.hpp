@@ -33,7 +33,6 @@ public:
 	TArray<class AActor*>                         CallFunc_GetAlwaysHitMeleeActors_ReturnValue;      // 0x0040(0x0010)(ReferenceParm)
 	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_IsTargetingAlwaysHitActor_C_ExecuteUbergraph_IsTargetingAlwaysHitActor;
 
 // Function IsTargetingAlwaysHitActor.IsTargetingAlwaysHitActor_C.ReceiveConditionCheck
 // 0x0008 (0x0008 - 0x0000)
@@ -42,7 +41,6 @@ struct IsTargetingAlwaysHitActor_C_ReceiveConditionCheck final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_IsTargetingAlwaysHitActor_C_ReceiveConditionCheck;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

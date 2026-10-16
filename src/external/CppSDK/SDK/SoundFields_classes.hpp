@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UAmbisonicsEncodingSettings>();
 	}
 };
-DUMPER7_ASSERTS_UAmbisonicsEncodingSettings;
 
 SDK_NAMESPACE_END

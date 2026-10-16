@@ -40,7 +40,6 @@ public:
 		return GetDefaultObjImpl<UActorSequence>();
 	}
 };
-DUMPER7_ASSERTS_UActorSequence;
 
 // Class ActorSequence.ActorSequenceComponent
 // 0x0038 (0x0108 - 0x00D0)
@@ -70,7 +69,6 @@ public:
 		return GetDefaultObjImpl<UActorSequenceComponent>();
 	}
 };
-DUMPER7_ASSERTS_UActorSequenceComponent;
 
 // Class ActorSequence.ActorSequencePlayer
 // 0x0000 (0x0490 - 0x0490)
@@ -90,6 +88,5 @@ public:
 		return GetDefaultObjImpl<UActorSequencePlayer>();
 	}
 };
-DUMPER7_ASSERTS_UActorSequencePlayer;
 
 SDK_NAMESPACE_END

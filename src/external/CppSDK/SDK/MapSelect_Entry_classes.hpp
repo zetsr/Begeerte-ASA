@@ -83,6 +83,5 @@ public:
 		return GetDefaultObjImpl<UMapSelect_Entry_C>();
 	}
 };
-DUMPER7_ASSERTS_UMapSelect_Entry_C;
 
 SDK_NAMESPACE_END

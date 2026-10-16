@@ -68,7 +68,6 @@ public:
 		return GetDefaultObjImpl<ULegacyCameraShake>();
 	}
 };
-DUMPER7_ASSERTS_ULegacyCameraShake;
 
 // Class EngineCameras.LegacyCameraShakePattern
 // 0x0000 (0x0028 - 0x0028)
@@ -88,7 +87,6 @@ public:
 		return GetDefaultObjImpl<ULegacyCameraShakePattern>();
 	}
 };
-DUMPER7_ASSERTS_ULegacyCameraShakePattern;
 
 // Class EngineCameras.LegacyCameraShakeFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -111,7 +109,6 @@ public:
 		return GetDefaultObjImpl<ULegacyCameraShakeFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_ULegacyCameraShakeFunctionLibrary;
 
 // Class EngineCameras.CameraAnimationCameraModifier
 // 0x0018 (0x0060 - 0x0048)
@@ -148,7 +145,6 @@ public:
 		return GetDefaultObjImpl<UCameraAnimationCameraModifier>();
 	}
 };
-DUMPER7_ASSERTS_UCameraAnimationCameraModifier;
 
 // Class EngineCameras.EngineCameraAnimationFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -173,7 +169,6 @@ public:
 		return GetDefaultObjImpl<UEngineCameraAnimationFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UEngineCameraAnimationFunctionLibrary;
 
 // Class EngineCameras.EngineCamerasSubsystem
 // 0x0000 (0x0030 - 0x0030)
@@ -201,7 +196,6 @@ public:
 		return GetDefaultObjImpl<UEngineCamerasSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UEngineCamerasSubsystem;
 
 // Class EngineCameras.CompositeCameraShakePattern
 // 0x0010 (0x0038 - 0x0028)
@@ -224,7 +218,6 @@ public:
 		return GetDefaultObjImpl<UCompositeCameraShakePattern>();
 	}
 };
-DUMPER7_ASSERTS_UCompositeCameraShakePattern;
 
 // Class EngineCameras.DefaultCameraShakeBase
 // 0x0000 (0x00E0 - 0x00E0)
@@ -244,7 +237,6 @@ public:
 		return GetDefaultObjImpl<UDefaultCameraShakeBase>();
 	}
 };
-DUMPER7_ASSERTS_UDefaultCameraShakeBase;
 
 // Class EngineCameras.SimpleCameraShakePattern
 // 0x0030 (0x0058 - 0x0028)
@@ -270,7 +262,6 @@ public:
 		return GetDefaultObjImpl<USimpleCameraShakePattern>();
 	}
 };
-DUMPER7_ASSERTS_USimpleCameraShakePattern;
 
 // Class EngineCameras.PerlinNoiseCameraShakePattern
 // 0x0080 (0x00D8 - 0x0058)
@@ -304,7 +295,6 @@ public:
 		return GetDefaultObjImpl<UPerlinNoiseCameraShakePattern>();
 	}
 };
-DUMPER7_ASSERTS_UPerlinNoiseCameraShakePattern;
 
 // Class EngineCameras.WaveOscillatorCameraShakePattern
 // 0x00A0 (0x00F8 - 0x0058)
@@ -338,7 +328,6 @@ public:
 		return GetDefaultObjImpl<UWaveOscillatorCameraShakePattern>();
 	}
 };
-DUMPER7_ASSERTS_UWaveOscillatorCameraShakePattern;
 
 // Class EngineCameras.TestCameraShake
 // 0x0000 (0x00E0 - 0x00E0)
@@ -358,7 +347,6 @@ public:
 		return GetDefaultObjImpl<UTestCameraShake>();
 	}
 };
-DUMPER7_ASSERTS_UTestCameraShake;
 
 // Class EngineCameras.ConstantCameraShakePattern
 // 0x0030 (0x0088 - 0x0058)
@@ -382,6 +370,5 @@ public:
 		return GetDefaultObjImpl<UConstantCameraShakePattern>();
 	}
 };
-DUMPER7_ASSERTS_UConstantCameraShakePattern;
 
 SDK_NAMESPACE_END

@@ -42,7 +42,6 @@ public:
 		return GetDefaultObjImpl<UAchievementBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UAchievementBlueprintLibrary;
 
 // Class OnlineSubsystemUtils.AchievementQueryCallbackProxy
 // 0x0038 (0x0068 - 0x0030)
@@ -71,7 +70,6 @@ public:
 		return GetDefaultObjImpl<UAchievementQueryCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UAchievementQueryCallbackProxy;
 
 // Class OnlineSubsystemUtils.AchievementWriteCallbackProxy
 // 0x0078 (0x00A8 - 0x0030)
@@ -102,7 +100,6 @@ public:
 		return GetDefaultObjImpl<UAchievementWriteCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UAchievementWriteCallbackProxy;
 
 // Class OnlineSubsystemUtils.ConnectionCallbackProxy
 // 0x0048 (0x0078 - 0x0030)
@@ -130,7 +127,6 @@ public:
 		return GetDefaultObjImpl<UConnectionCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UConnectionCallbackProxy;
 
 // Class OnlineSubsystemUtils.CreateSessionCallbackProxy
 // 0x0068 (0x0098 - 0x0030)
@@ -158,7 +154,6 @@ public:
 		return GetDefaultObjImpl<UCreateSessionCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UCreateSessionCallbackProxy;
 
 // Class OnlineSubsystemUtils.DestroySessionCallbackProxy
 // 0x0048 (0x0078 - 0x0030)
@@ -186,7 +181,6 @@ public:
 		return GetDefaultObjImpl<UDestroySessionCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UDestroySessionCallbackProxy;
 
 // Class OnlineSubsystemUtils.EndMatchCallbackProxy
 // 0x0050 (0x0080 - 0x0030)
@@ -214,7 +208,6 @@ public:
 		return GetDefaultObjImpl<UEndMatchCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UEndMatchCallbackProxy;
 
 // Class OnlineSubsystemUtils.EndTurnCallbackProxy
 // 0x0048 (0x0078 - 0x0030)
@@ -242,7 +235,6 @@ public:
 		return GetDefaultObjImpl<UEndTurnCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UEndTurnCallbackProxy;
 
 // Class OnlineSubsystemUtils.FindSessionsCallbackProxy
 // 0x0060 (0x0090 - 0x0030)
@@ -274,7 +266,6 @@ public:
 		return GetDefaultObjImpl<UFindSessionsCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UFindSessionsCallbackProxy;
 
 // Class OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy
 // 0x0058 (0x0088 - 0x0030)
@@ -302,7 +293,6 @@ public:
 		return GetDefaultObjImpl<UFindTurnBasedMatchCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UFindTurnBasedMatchCallbackProxy;
 
 // Class OnlineSubsystemUtils.InAppPurchaseCallbackProxy2
 // 0x0080 (0x00A8 - 0x0028)
@@ -332,7 +322,6 @@ public:
 		return GetDefaultObjImpl<UInAppPurchaseCallbackProxy2>();
 	}
 };
-DUMPER7_ASSERTS_UInAppPurchaseCallbackProxy2;
 
 // Class OnlineSubsystemUtils.InAppPurchaseCheckoutCallbackProxy
 // 0x0078 (0x00A0 - 0x0028)
@@ -360,7 +349,6 @@ public:
 		return GetDefaultObjImpl<UInAppPurchaseCheckoutCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UInAppPurchaseCheckoutCallbackProxy;
 
 // Class OnlineSubsystemUtils.InAppPurchaseFinalizeProxy
 // 0x0000 (0x0028 - 0x0028)
@@ -383,7 +371,6 @@ public:
 		return GetDefaultObjImpl<UInAppPurchaseFinalizeProxy>();
 	}
 };
-DUMPER7_ASSERTS_UInAppPurchaseFinalizeProxy;
 
 // Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2
 // 0x0040 (0x0068 - 0x0028)
@@ -411,7 +398,6 @@ public:
 		return GetDefaultObjImpl<UInAppPurchaseQueryCallbackProxy2>();
 	}
 };
-DUMPER7_ASSERTS_UInAppPurchaseQueryCallbackProxy2;
 
 // Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl
 // 0x0158 (0x0180 - 0x0028)
@@ -434,7 +420,6 @@ public:
 		return GetDefaultObjImpl<UOnlineEngineInterfaceImpl>();
 	}
 };
-DUMPER7_ASSERTS_UOnlineEngineInterfaceImpl;
 
 // Class OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy
 // 0x0060 (0x0088 - 0x0028)
@@ -464,7 +449,6 @@ public:
 		return GetDefaultObjImpl<UInAppPurchaseReceiptsCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UInAppPurchaseReceiptsCallbackProxy;
 
 // Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2
 // 0x0088 (0x00B0 - 0x0028)
@@ -492,7 +476,6 @@ public:
 		return GetDefaultObjImpl<UInAppPurchaseRestoreCallbackProxy2>();
 	}
 };
-DUMPER7_ASSERTS_UInAppPurchaseRestoreCallbackProxy2;
 
 // Class OnlineSubsystemUtils.IpConnection
 // 0x00D0 (0x1FE8 - 0x1F18)
@@ -517,7 +500,6 @@ public:
 		return GetDefaultObjImpl<UIpConnection>();
 	}
 };
-DUMPER7_ASSERTS_UIpConnection;
 
 // Class OnlineSubsystemUtils.IpNetDriver
 // 0x00B0 (0x0960 - 0x08B0)
@@ -554,7 +536,6 @@ public:
 		return GetDefaultObjImpl<UIpNetDriver>();
 	}
 };
-DUMPER7_ASSERTS_UIpNetDriver;
 
 // Class OnlineSubsystemUtils.JoinSessionCallbackProxy
 // 0x0168 (0x0198 - 0x0030)
@@ -582,7 +563,6 @@ public:
 		return GetDefaultObjImpl<UJoinSessionCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UJoinSessionCallbackProxy;
 
 // Class OnlineSubsystemUtils.LeaderboardBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -605,7 +585,6 @@ public:
 		return GetDefaultObjImpl<ULeaderboardBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_ULeaderboardBlueprintLibrary;
 
 // Class OnlineSubsystemUtils.LeaderboardFlushCallbackProxy
 // 0x0040 (0x0068 - 0x0028)
@@ -633,7 +612,6 @@ public:
 		return GetDefaultObjImpl<ULeaderboardFlushCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_ULeaderboardFlushCallbackProxy;
 
 // Class OnlineSubsystemUtils.LeaderboardQueryCallbackProxy
 // 0x0078 (0x00A0 - 0x0028)
@@ -661,7 +639,6 @@ public:
 		return GetDefaultObjImpl<ULeaderboardQueryCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_ULeaderboardQueryCallbackProxy;
 
 // Class OnlineSubsystemUtils.LogoutCallbackProxy
 // 0x0038 (0x0068 - 0x0030)
@@ -689,7 +666,6 @@ public:
 		return GetDefaultObjImpl<ULogoutCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_ULogoutCallbackProxy;
 
 // Class OnlineSubsystemUtils.OnlineBeacon
 // 0x0030 (0x04C0 - 0x0490)
@@ -716,7 +692,6 @@ public:
 		return GetDefaultObjImpl<AOnlineBeacon>();
 	}
 };
-DUMPER7_ASSERTS_AOnlineBeacon;
 
 // Class OnlineSubsystemUtils.OnlineBeaconClient
 // 0x0060 (0x0520 - 0x04C0)
@@ -745,7 +720,6 @@ public:
 		return GetDefaultObjImpl<AOnlineBeaconClient>();
 	}
 };
-DUMPER7_ASSERTS_AOnlineBeaconClient;
 
 // Class OnlineSubsystemUtils.OnlineBeaconHost
 // 0x0110 (0x05D0 - 0x04C0)
@@ -775,7 +749,6 @@ public:
 		return GetDefaultObjImpl<AOnlineBeaconHost>();
 	}
 };
-DUMPER7_ASSERTS_AOnlineBeaconHost;
 
 // Class OnlineSubsystemUtils.OnlineBeaconHostObject
 // 0x0028 (0x04B8 - 0x0490)
@@ -800,7 +773,6 @@ public:
 		return GetDefaultObjImpl<AOnlineBeaconHostObject>();
 	}
 };
-DUMPER7_ASSERTS_AOnlineBeaconHostObject;
 
 // Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl
 // 0x0170 (0x0198 - 0x0028)
@@ -829,7 +801,6 @@ public:
 		return GetDefaultObjImpl<UOnlineEngineInterfaceImpl2>();
 	}
 };
-DUMPER7_ASSERTS_UOnlineEngineInterfaceImpl2;
 
 // Class OnlineSubsystemUtils.OnlinePIESettings
 // 0x0018 (0x0050 - 0x0038)
@@ -854,7 +825,6 @@ public:
 		return GetDefaultObjImpl<UOnlinePIESettings>();
 	}
 };
-DUMPER7_ASSERTS_UOnlinePIESettings;
 
 // Class OnlineSubsystemUtils.OnlineServicesEngineInterfaceImpl
 // 0x0000 (0x0028 - 0x0028)
@@ -874,7 +844,6 @@ public:
 		return GetDefaultObjImpl<UOnlineServicesEngineInterfaceImpl>();
 	}
 };
-DUMPER7_ASSERTS_UOnlineServicesEngineInterfaceImpl;
 
 // Class OnlineSubsystemUtils.OnlineSessionClient
 // 0x01B8 (0x01E0 - 0x0028)
@@ -900,7 +869,6 @@ public:
 		return GetDefaultObjImpl<UOnlineSessionClient>();
 	}
 };
-DUMPER7_ASSERTS_UOnlineSessionClient;
 
 // Class OnlineSubsystemUtils.PartyBeaconClient
 // 0x00C8 (0x05E8 - 0x0520)
@@ -940,7 +908,6 @@ public:
 		return GetDefaultObjImpl<APartyBeaconClient>();
 	}
 };
-DUMPER7_ASSERTS_APartyBeaconClient;
 
 // Class OnlineSubsystemUtils.PartyBeaconHost
 // 0x0078 (0x0530 - 0x04B8)
@@ -970,7 +937,6 @@ public:
 		return GetDefaultObjImpl<APartyBeaconHost>();
 	}
 };
-DUMPER7_ASSERTS_APartyBeaconHost;
 
 // Class OnlineSubsystemUtils.PartyBeaconState
 // 0x0078 (0x00A0 - 0x0028)
@@ -1009,7 +975,6 @@ public:
 		return GetDefaultObjImpl<UPartyBeaconState>();
 	}
 };
-DUMPER7_ASSERTS_UPartyBeaconState;
 
 // Class OnlineSubsystemUtils.QuitMatchCallbackProxy
 // 0x0048 (0x0078 - 0x0030)
@@ -1037,7 +1002,6 @@ public:
 		return GetDefaultObjImpl<UQuitMatchCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UQuitMatchCallbackProxy;
 
 // Class OnlineSubsystemUtils.ShowLoginUICallbackProxy
 // 0x0030 (0x0060 - 0x0030)
@@ -1065,7 +1029,6 @@ public:
 		return GetDefaultObjImpl<UShowLoginUICallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UShowLoginUICallbackProxy;
 
 // Class OnlineSubsystemUtils.SpectatorBeaconClient
 // 0x00F8 (0x0618 - 0x0520)
@@ -1102,7 +1065,6 @@ public:
 		return GetDefaultObjImpl<ASpectatorBeaconClient>();
 	}
 };
-DUMPER7_ASSERTS_ASpectatorBeaconClient;
 
 // Class OnlineSubsystemUtils.SpectatorBeaconHost
 // 0x0078 (0x0530 - 0x04B8)
@@ -1132,7 +1094,6 @@ public:
 		return GetDefaultObjImpl<ASpectatorBeaconHost>();
 	}
 };
-DUMPER7_ASSERTS_ASpectatorBeaconHost;
 
 // Class OnlineSubsystemUtils.SpectatorBeaconState
 // 0x0038 (0x0060 - 0x0028)
@@ -1161,7 +1122,6 @@ public:
 		return GetDefaultObjImpl<USpectatorBeaconState>();
 	}
 };
-DUMPER7_ASSERTS_USpectatorBeaconState;
 
 // Class OnlineSubsystemUtils.TestBeaconClient
 // 0x0000 (0x0520 - 0x0520)
@@ -1185,7 +1145,6 @@ public:
 		return GetDefaultObjImpl<ATestBeaconClient>();
 	}
 };
-DUMPER7_ASSERTS_ATestBeaconClient;
 
 // Class OnlineSubsystemUtils.TestBeaconHost
 // 0x0000 (0x04B8 - 0x04B8)
@@ -1205,7 +1164,6 @@ public:
 		return GetDefaultObjImpl<ATestBeaconHost>();
 	}
 };
-DUMPER7_ASSERTS_ATestBeaconHost;
 
 // Class OnlineSubsystemUtils.OnlineBeaconUnitTestClient
 // 0x0000 (0x0520 - 0x0520)
@@ -1225,7 +1183,6 @@ public:
 		return GetDefaultObjImpl<AOnlineBeaconUnitTestClient>();
 	}
 };
-DUMPER7_ASSERTS_AOnlineBeaconUnitTestClient;
 
 // Class OnlineSubsystemUtils.OnlineBeaconUnitTestHost
 // 0x0000 (0x05D0 - 0x05D0)
@@ -1245,7 +1202,6 @@ public:
 		return GetDefaultObjImpl<AOnlineBeaconUnitTestHost>();
 	}
 };
-DUMPER7_ASSERTS_AOnlineBeaconUnitTestHost;
 
 // Class OnlineSubsystemUtils.OnlineBeaconUnitTestHostObject
 // 0x0000 (0x04B8 - 0x04B8)
@@ -1265,7 +1221,6 @@ public:
 		return GetDefaultObjImpl<AOnlineBeaconUnitTestHostObject>();
 	}
 };
-DUMPER7_ASSERTS_AOnlineBeaconUnitTestHostObject;
 
 // Class OnlineSubsystemUtils.OnlineBeaconUnitTestNetConnection
 // 0x0000 (0x1FE8 - 0x1FE8)
@@ -1285,7 +1240,6 @@ public:
 		return GetDefaultObjImpl<UOnlineBeaconUnitTestNetConnection>();
 	}
 };
-DUMPER7_ASSERTS_UOnlineBeaconUnitTestNetConnection;
 
 // Class OnlineSubsystemUtils.OnlineBeaconUnitTestNetDriver
 // 0x0000 (0x0960 - 0x0960)
@@ -1305,7 +1259,6 @@ public:
 		return GetDefaultObjImpl<UOnlineBeaconUnitTestNetDriver>();
 	}
 };
-DUMPER7_ASSERTS_UOnlineBeaconUnitTestNetDriver;
 
 // Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -1331,7 +1284,6 @@ public:
 		return GetDefaultObjImpl<UTurnBasedBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UTurnBasedBlueprintLibrary;
 
 // Class OnlineSubsystemUtils.VoipListenerSynthComponent
 // 0x0060 (0x0940 - 0x08E0)
@@ -1357,6 +1309,5 @@ public:
 		return GetDefaultObjImpl<UVoipListenerSynthComponent>();
 	}
 };
-DUMPER7_ASSERTS_UVoipListenerSynthComponent;
 
 SDK_NAMESPACE_END

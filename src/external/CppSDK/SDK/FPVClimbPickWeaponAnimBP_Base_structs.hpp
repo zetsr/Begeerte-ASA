@@ -82,7 +82,6 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_1;                // 0x06B0(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose;                  // 0x06E0(0x0030)()
 };
-DUMPER7_ASSERTS_FPVClimbPickWeaponAnimBP_Base__FAnimBlueprintGeneratedConstantData;
 
 // ScriptStruct FPVClimbPickWeaponAnimBP_Base.FPVClimbPickWeaponAnimBP_Base_C.AnimBlueprintGeneratedMutableData
 // 0x0006 (0x0007 - 0x0001)
@@ -96,6 +95,5 @@ public:
 	bool                                          __BoolProperty_3;                                  // 0x0005(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          __BoolProperty_4;                                  // 0x0006(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FPVClimbPickWeaponAnimBP_Base__FAnimBlueprintGeneratedMutableData;
 
 SDK_NAMESPACE_END

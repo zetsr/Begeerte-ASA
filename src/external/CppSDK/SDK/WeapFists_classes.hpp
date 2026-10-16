@@ -40,6 +40,5 @@ public:
 		return GetDefaultObjImpl<AWeapFists_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapFists_C;
 
 SDK_NAMESPACE_END

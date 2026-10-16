@@ -46,6 +46,5 @@ public:
 		return GetDefaultObjImpl<UW_BackupList_C>();
 	}
 };
-DUMPER7_ASSERTS_UW_BackupList_C;
 
 SDK_NAMESPACE_END

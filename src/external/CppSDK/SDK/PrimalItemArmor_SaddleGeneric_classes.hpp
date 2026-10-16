@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "PrimalItemArmorGeneric_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -48,6 +48,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_SaddleGeneric_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemArmor_SaddleGeneric_C;
 
 SDK_NAMESPACE_END

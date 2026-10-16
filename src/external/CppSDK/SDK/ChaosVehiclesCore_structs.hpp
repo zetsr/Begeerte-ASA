@@ -56,7 +56,6 @@ public:
 	EModuleInputValueType                         ValueType;                                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FModuleInputValue;
 
 // ScriptStruct ChaosVehiclesCore.ModuleInputSetup
 // 0x0018 (0x0018 - 0x0000)
@@ -68,7 +67,6 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UDefaultModularVehicleInputModifier> InputModifierClass;                       // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FModuleInputSetup;
 
 // ScriptStruct ChaosVehiclesCore.ModuleInputContainer
 // 0x0010 (0x0010 - 0x0000)
@@ -77,6 +75,5 @@ struct FModuleInputContainer final
 public:
 	TArray<struct FModuleInputValue>              InputValues;                                       // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FModuleInputContainer;
 
 SDK_NAMESPACE_END

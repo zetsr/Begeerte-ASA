@@ -36,7 +36,6 @@ public:
 	double                                        K2Node_VariableSet_OutgoingDamage_ImplicitCast;    // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_FunctionResult_ReturnValue_ImplicitCast;    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DmgType_Melee_Torpidity_None_StoneWeapon_AutoDrag_C_BPAdjustHarvestingDamage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -35,7 +35,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkController>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkController;
 
 // Class LiveLinkInterface.LiveLinkFrameInterpolationProcessor
 // 0x0000 (0x0028 - 0x0028)
@@ -55,7 +54,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkFrameInterpolationProcessor>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkFrameInterpolationProcessor;
 
 // Class LiveLinkInterface.LiveLinkFramePreProcessor
 // 0x0000 (0x0028 - 0x0028)
@@ -75,7 +73,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkFramePreProcessor>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkFramePreProcessor;
 
 // Class LiveLinkInterface.LiveLinkRole
 // 0x0000 (0x0028 - 0x0028)
@@ -95,7 +92,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkRole>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkRole;
 
 // Class LiveLinkInterface.LiveLinkBasicRole
 // 0x0000 (0x0028 - 0x0028)
@@ -115,7 +111,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkBasicRole>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkBasicRole;
 
 // Class LiveLinkInterface.LiveLinkInputDeviceRole
 // 0x0000 (0x0028 - 0x0028)
@@ -135,7 +130,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkInputDeviceRole>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkInputDeviceRole;
 
 // Class LiveLinkInterface.LiveLinkSubjectRemapper
 // 0x0058 (0x0080 - 0x0028)
@@ -159,7 +153,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkSubjectRemapper>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkSubjectRemapper;
 
 // Class LiveLinkInterface.LiveLinkSourceSettings
 // 0x0088 (0x00B0 - 0x0028)
@@ -187,7 +180,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkSourceSettings>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkSourceSettings;
 
 // Class LiveLinkInterface.LiveLinkCurveRemapSettings
 // 0x0050 (0x0100 - 0x00B0)
@@ -210,7 +202,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkCurveRemapSettings>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkCurveRemapSettings;
 
 // Class LiveLinkInterface.LiveLinkFrameTranslator
 // 0x0000 (0x0028 - 0x0028)
@@ -230,7 +221,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkFrameTranslator>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkFrameTranslator;
 
 // Class LiveLinkInterface.LiveLinkSourceFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -250,7 +240,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkSourceFactory>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkSourceFactory;
 
 // Class LiveLinkInterface.LiveLinkDefaultSourceSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -274,7 +263,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkDefaultSourceSettings>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkDefaultSourceSettings;
 
 // Class LiveLinkInterface.LiveLinkDefaultSubjectSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -299,7 +287,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkDefaultSubjectSettings>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkDefaultSubjectSettings;
 
 // Class LiveLinkInterface.LiveLinkSubjectSettings
 // 0x0070 (0x0098 - 0x0028)
@@ -333,7 +320,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkSubjectSettings>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkSubjectSettings;
 
 // Class LiveLinkInterface.LiveLinkVirtualSubject
 // 0x0148 (0x0170 - 0x0028)
@@ -361,7 +347,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkVirtualSubject>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkVirtualSubject;
 
 // Class LiveLinkInterface.LiveLinkAnimationRole
 // 0x0000 (0x0028 - 0x0028)
@@ -381,7 +366,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkAnimationRole>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkAnimationRole;
 
 // Class LiveLinkInterface.LiveLinkTransformRole
 // 0x0000 (0x0028 - 0x0028)
@@ -401,7 +385,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkTransformRole>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkTransformRole;
 
 // Class LiveLinkInterface.LiveLinkCameraRole
 // 0x0000 (0x0028 - 0x0028)
@@ -421,7 +404,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkCameraRole>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkCameraRole;
 
 // Class LiveLinkInterface.LiveLinkLightRole
 // 0x0000 (0x0028 - 0x0028)
@@ -441,6 +423,5 @@ public:
 		return GetDefaultObjImpl<ULiveLinkLightRole>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkLightRole;
 
 SDK_NAMESPACE_END

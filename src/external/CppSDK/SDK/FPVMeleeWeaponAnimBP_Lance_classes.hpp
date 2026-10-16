@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "FPVMeleeWeaponAnimBP_Lance_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -90,6 +90,5 @@ public:
 		return GetDefaultObjImpl<UFPVMeleeWeaponAnimBP_Lance_C>();
 	}
 };
-DUMPER7_ASSERTS_UFPVMeleeWeaponAnimBP_Lance_C;
 
 SDK_NAMESPACE_END

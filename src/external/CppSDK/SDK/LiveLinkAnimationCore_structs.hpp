@@ -29,7 +29,6 @@ public:
 	class ULiveLinkRetargetAsset*                 CurrentRetargetAsset;                              // 0x0038(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	uint8                                         Pad_40[0x28];                                      // 0x0040(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_LiveLinkPose;
 
 // ScriptStruct LiveLinkAnimationCore.LiveLinkInstanceProxy
 // 0x0060 (0x0800 - 0x07A0)
@@ -38,6 +37,5 @@ struct FLiveLinkInstanceProxy final : public FAnimInstanceProxy
 public:
 	struct FAnimNode_LiveLinkPose                 PoseNode;                                          // 0x0798(0x0068)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLiveLinkInstanceProxy;
 
 SDK_NAMESPACE_END

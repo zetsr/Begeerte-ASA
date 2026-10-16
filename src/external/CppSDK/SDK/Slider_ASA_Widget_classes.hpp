@@ -29,12 +29,12 @@ public:
 	float                                         LastValue;                                         // 0x03A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
 	void SetupValue(double float_0, bool PreventRecallParent);
 	void SetupSetPercent(float InputPin, bool PreventRecallParent);
 	class UWidget* GetOverrideHighligteableWidgetBP();
 	void ExecuteUbergraph_Slider_ASA_Widget(int32 EntryPoint);
-	void BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams);
+	void BPExecutedCommandForPrimalUI(class FName CommandName_BPExecutedCommandForPrimalUI, const struct FBPNetExecParams& ExecParams_BPExecutedCommandForPrimalUI);
 
 public:
 	static class UClass* StaticClass()
@@ -50,6 +50,5 @@ public:
 		return GetDefaultObjImpl<USlider_ASA_Widget_C>();
 	}
 };
-DUMPER7_ASSERTS_USlider_ASA_Widget_C;
 
 SDK_NAMESPACE_END

@@ -30,7 +30,6 @@ public:
 	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_OptionsMenuNew_C_ExecuteUbergraph_OptionsMenuNew;
 
 // Function OptionsMenuNew.OptionsMenuNew_C.GetSizeboxForExtraHandheldScaling
 // 0x0008 (0x0008 - 0x0000)
@@ -39,7 +38,6 @@ struct OptionsMenuNew_C_GetSizeboxForExtraHandheldScaling final
 public:
 	class USizeBox*                               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_OptionsMenuNew_C_GetSizeboxForExtraHandheldScaling;
 
 // Function OptionsMenuNew.OptionsMenuNew_C.GetWidgetToScaleForHandheld
 // 0x0008 (0x0008 - 0x0000)
@@ -48,7 +46,6 @@ struct OptionsMenuNew_C_GetWidgetToScaleForHandheld final
 public:
 	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_OptionsMenuNew_C_GetWidgetToScaleForHandheld;
 
 // Function OptionsMenuNew.OptionsMenuNew_C.ShowJoyconText
 // 0x0003 (0x0003 - 0x0000)
@@ -59,7 +56,6 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsStandalone_ReturnValue;                 // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_OptionsMenuNew_C_ShowJoyconText;
 
 // Function OptionsMenuNew.OptionsMenuNew_C.ShowProText
 // 0x0003 (0x0003 - 0x0000)
@@ -70,7 +66,6 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsStandalone_ReturnValue;                 // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_OptionsMenuNew_C_ShowProText;
 
 // Function OptionsMenuNew.OptionsMenuNew_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -80,7 +75,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_OptionsMenuNew_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

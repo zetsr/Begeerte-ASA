@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<AWeapWhip_Impacts_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapWhip_Impacts_C;
 
 SDK_NAMESPACE_END

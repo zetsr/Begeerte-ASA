@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<ABuff_OverrideVelocity_C>();
 	}
 };
-DUMPER7_ASSERTS_ABuff_OverrideVelocity_C;
 
 SDK_NAMESPACE_END

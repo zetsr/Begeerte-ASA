@@ -67,6 +67,5 @@ public:
 		return GetDefaultObjImpl<UHuman_AlternateIK_CtrlRig_C>();
 	}
 };
-DUMPER7_ASSERTS_UHuman_AlternateIK_CtrlRig_C;
 
 SDK_NAMESPACE_END

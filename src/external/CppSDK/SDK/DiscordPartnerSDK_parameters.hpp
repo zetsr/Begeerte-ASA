@@ -23,7 +23,6 @@ struct DiscordLocalPlayerSubsystem_Connect final
 public:
 	class FString                                 token;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLocalPlayerSubsystem_Connect;
 
 // Function DiscordPartnerSDK.DiscordPartnerSDKSettings.GetApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -32,7 +31,6 @@ struct DiscordPartnerSDKSettings_GetApplicationId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordPartnerSDKSettings_GetApplicationId;
 
 // Function DiscordPartnerSDK.DiscordPartnerSDKSettings.GetApplicationIdInt64
 // 0x0008 (0x0008 - 0x0000)
@@ -41,7 +39,6 @@ struct DiscordPartnerSDKSettings_GetApplicationIdInt64 final
 public:
 	int64                                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordPartnerSDKSettings_GetApplicationIdInt64;
 
 // Function DiscordPartnerSDK.DiscordPartnerSDKSettings.GetApplicationIdString
 // 0x0010 (0x0010 - 0x0000)
@@ -50,7 +47,6 @@ struct DiscordPartnerSDKSettings_GetApplicationIdString final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordPartnerSDKSettings_GetApplicationIdString;
 
 // Function DiscordPartnerSDK.DiscordUniqueIDFunctionLibrary.Conv_DiscordUniqueIDToString
 // 0x0018 (0x0018 - 0x0000)
@@ -60,7 +56,6 @@ public:
 	struct FDiscordUniqueID                       InUniqueID;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUniqueIDFunctionLibrary_Conv_DiscordUniqueIDToString;
 
 // Function DiscordPartnerSDK.DiscordUniqueIDFunctionLibrary.EqualEqual_DiscordUniqueIDDiscordUniqueID
 // 0x0018 (0x0018 - 0x0000)
@@ -72,7 +67,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordUniqueIDFunctionLibrary_EqualEqual_DiscordUniqueIDDiscordUniqueID;
 
 // Function DiscordPartnerSDK.DiscordUniqueIDFunctionLibrary.NotEqual_DiscordUniqueIDDiscordUniqueID
 // 0x0018 (0x0018 - 0x0000)
@@ -84,7 +78,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordUniqueIDFunctionLibrary_NotEqual_DiscordUniqueIDDiscordUniqueID;
 
 // Function DiscordPartnerSDK.DiscordUniqueIDFunctionLibrary.Parse_StringToDiscordUniqueID
 // 0x0020 (0x0020 - 0x0000)
@@ -96,7 +89,6 @@ public:
 	bool                                          success;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordUniqueIDFunctionLibrary_Parse_StringToDiscordUniqueID;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.ApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -105,7 +97,6 @@ struct DiscordActivityInvite_ApplicationId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_ApplicationId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.ChannelId
 // 0x0008 (0x0008 - 0x0000)
@@ -114,7 +105,6 @@ struct DiscordActivityInvite_ChannelId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_ChannelId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.IsValid
 // 0x0001 (0x0001 - 0x0000)
@@ -123,7 +113,6 @@ struct DiscordActivityInvite_IsValid final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_IsValid;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.MessageId
 // 0x0008 (0x0008 - 0x0000)
@@ -132,7 +121,6 @@ struct DiscordActivityInvite_MessageId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_MessageId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.ParentApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -141,7 +129,6 @@ struct DiscordActivityInvite_ParentApplicationId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_ParentApplicationId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.PartyId
 // 0x0010 (0x0010 - 0x0000)
@@ -150,7 +137,6 @@ struct DiscordActivityInvite_PartyId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_PartyId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SenderId
 // 0x0008 (0x0008 - 0x0000)
@@ -159,7 +145,6 @@ struct DiscordActivityInvite_SenderId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SenderId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SessionId
 // 0x0010 (0x0010 - 0x0000)
@@ -168,7 +153,6 @@ struct DiscordActivityInvite_SessionId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SessionId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SetApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -177,7 +161,6 @@ struct DiscordActivityInvite_SetApplicationId final
 public:
 	struct FDiscordUniqueID                       ApplicationId;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SetApplicationId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SetChannelId
 // 0x0008 (0x0008 - 0x0000)
@@ -186,7 +169,6 @@ struct DiscordActivityInvite_SetChannelId final
 public:
 	struct FDiscordUniqueID                       ChannelId;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SetChannelId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SetIsValid
 // 0x0001 (0x0001 - 0x0000)
@@ -195,7 +177,6 @@ struct DiscordActivityInvite_SetIsValid final
 public:
 	bool                                          IsValid;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SetIsValid;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SetMessageId
 // 0x0008 (0x0008 - 0x0000)
@@ -204,7 +185,6 @@ struct DiscordActivityInvite_SetMessageId final
 public:
 	struct FDiscordUniqueID                       MessageId;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SetMessageId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SetParentApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -213,7 +193,6 @@ struct DiscordActivityInvite_SetParentApplicationId final
 public:
 	struct FDiscordUniqueID                       ParentApplicationId;                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SetParentApplicationId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SetPartyId
 // 0x0010 (0x0010 - 0x0000)
@@ -222,7 +201,6 @@ struct DiscordActivityInvite_SetPartyId final
 public:
 	class FString                                 PartyId;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SetPartyId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SetSenderId
 // 0x0008 (0x0008 - 0x0000)
@@ -231,7 +209,6 @@ struct DiscordActivityInvite_SetSenderId final
 public:
 	struct FDiscordUniqueID                       SenderId;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SetSenderId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SetSessionId
 // 0x0010 (0x0010 - 0x0000)
@@ -240,7 +217,6 @@ struct DiscordActivityInvite_SetSessionId final
 public:
 	class FString                                 SessionId;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SetSessionId;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.SetType
 // 0x0001 (0x0001 - 0x0000)
@@ -249,7 +225,6 @@ struct DiscordActivityInvite_SetType final
 public:
 	EDiscordActivityActionTypes                   Type_0;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_SetType;
 
 // Function DiscordPartnerSDK.DiscordActivityInvite.Type
 // 0x0001 (0x0001 - 0x0000)
@@ -258,7 +233,6 @@ struct DiscordActivityInvite_Type final
 public:
 	EDiscordActivityActionTypes                   ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityInvite_Type;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.InviteCoverImage
 // 0x0010 (0x0010 - 0x0000)
@@ -267,7 +241,6 @@ struct DiscordActivityAssets_InviteCoverImage final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_InviteCoverImage;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.LargeImage
 // 0x0010 (0x0010 - 0x0000)
@@ -276,7 +249,6 @@ struct DiscordActivityAssets_LargeImage final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_LargeImage;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.LargeText
 // 0x0010 (0x0010 - 0x0000)
@@ -285,7 +257,6 @@ struct DiscordActivityAssets_LargeText final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_LargeText;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.LargeUrl
 // 0x0010 (0x0010 - 0x0000)
@@ -294,7 +265,6 @@ struct DiscordActivityAssets_LargeUrl final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_LargeUrl;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.SetInviteCoverImage
 // 0x0010 (0x0010 - 0x0000)
@@ -303,7 +273,6 @@ struct DiscordActivityAssets_SetInviteCoverImage final
 public:
 	class FString                                 InviteCoverImage;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_SetInviteCoverImage;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.SetLargeImage
 // 0x0010 (0x0010 - 0x0000)
@@ -312,7 +281,6 @@ struct DiscordActivityAssets_SetLargeImage final
 public:
 	class FString                                 LargeImage;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_SetLargeImage;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.SetLargeText
 // 0x0010 (0x0010 - 0x0000)
@@ -321,7 +289,6 @@ struct DiscordActivityAssets_SetLargeText final
 public:
 	class FString                                 LargeText;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_SetLargeText;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.SetLargeUrl
 // 0x0010 (0x0010 - 0x0000)
@@ -330,7 +297,6 @@ struct DiscordActivityAssets_SetLargeUrl final
 public:
 	class FString                                 LargeUrl;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_SetLargeUrl;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.SetSmallImage
 // 0x0010 (0x0010 - 0x0000)
@@ -339,7 +305,6 @@ struct DiscordActivityAssets_SetSmallImage final
 public:
 	class FString                                 SmallImage_0;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_SetSmallImage;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.SetSmallText
 // 0x0010 (0x0010 - 0x0000)
@@ -348,7 +313,6 @@ struct DiscordActivityAssets_SetSmallText final
 public:
 	class FString                                 SmallText_0;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_SetSmallText;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.SetSmallUrl
 // 0x0010 (0x0010 - 0x0000)
@@ -357,7 +321,6 @@ struct DiscordActivityAssets_SetSmallUrl final
 public:
 	class FString                                 SmallUrl_0;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_SetSmallUrl;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.SmallImage
 // 0x0010 (0x0010 - 0x0000)
@@ -366,7 +329,6 @@ struct DiscordActivityAssets_SmallImage final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_SmallImage;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.SmallText
 // 0x0010 (0x0010 - 0x0000)
@@ -375,7 +337,6 @@ struct DiscordActivityAssets_SmallText final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_SmallText;
 
 // Function DiscordPartnerSDK.DiscordActivityAssets.SmallUrl
 // 0x0010 (0x0010 - 0x0000)
@@ -384,7 +345,6 @@ struct DiscordActivityAssets_SmallUrl final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityAssets_SmallUrl;
 
 // Function DiscordPartnerSDK.DiscordActivityTimestamps.End
 // 0x0008 (0x0008 - 0x0000)
@@ -393,7 +353,6 @@ struct DiscordActivityTimestamps_End final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityTimestamps_End;
 
 // Function DiscordPartnerSDK.DiscordActivityTimestamps.SetEnd
 // 0x0008 (0x0008 - 0x0000)
@@ -402,7 +361,6 @@ struct DiscordActivityTimestamps_SetEnd final
 public:
 	struct FDiscordUniqueID                       End;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityTimestamps_SetEnd;
 
 // Function DiscordPartnerSDK.DiscordActivityTimestamps.SetStart
 // 0x0008 (0x0008 - 0x0000)
@@ -411,7 +369,6 @@ struct DiscordActivityTimestamps_SetStart final
 public:
 	struct FDiscordUniqueID                       Start_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityTimestamps_SetStart;
 
 // Function DiscordPartnerSDK.DiscordActivityTimestamps.Start
 // 0x0008 (0x0008 - 0x0000)
@@ -420,7 +377,6 @@ struct DiscordActivityTimestamps_Start final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityTimestamps_Start;
 
 // Function DiscordPartnerSDK.DiscordActivityParty.CurrentSize
 // 0x0004 (0x0004 - 0x0000)
@@ -429,7 +385,6 @@ struct DiscordActivityParty_CurrentSize final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityParty_CurrentSize;
 
 // Function DiscordPartnerSDK.DiscordActivityParty.ID
 // 0x0010 (0x0010 - 0x0000)
@@ -438,7 +393,6 @@ struct DiscordActivityParty_ID final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityParty_ID;
 
 // Function DiscordPartnerSDK.DiscordActivityParty.MaxSize
 // 0x0004 (0x0004 - 0x0000)
@@ -447,7 +401,6 @@ struct DiscordActivityParty_MaxSize final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityParty_MaxSize;
 
 // Function DiscordPartnerSDK.DiscordActivityParty.Privacy
 // 0x0001 (0x0001 - 0x0000)
@@ -456,7 +409,6 @@ struct DiscordActivityParty_Privacy final
 public:
 	EDiscordActivityPartyPrivacy                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityParty_Privacy;
 
 // Function DiscordPartnerSDK.DiscordActivityParty.SetCurrentSize
 // 0x0004 (0x0004 - 0x0000)
@@ -465,7 +417,6 @@ struct DiscordActivityParty_SetCurrentSize final
 public:
 	int32                                         CurrentSize;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityParty_SetCurrentSize;
 
 // Function DiscordPartnerSDK.DiscordActivityParty.SetId
 // 0x0010 (0x0010 - 0x0000)
@@ -474,7 +425,6 @@ struct DiscordActivityParty_SetId final
 public:
 	class FString                                 ID;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityParty_SetId;
 
 // Function DiscordPartnerSDK.DiscordActivityParty.SetMaxSize
 // 0x0004 (0x0004 - 0x0000)
@@ -483,7 +433,6 @@ struct DiscordActivityParty_SetMaxSize final
 public:
 	int32                                         MaxSize;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityParty_SetMaxSize;
 
 // Function DiscordPartnerSDK.DiscordActivityParty.SetPrivacy
 // 0x0001 (0x0001 - 0x0000)
@@ -492,7 +441,6 @@ struct DiscordActivityParty_SetPrivacy final
 public:
 	EDiscordActivityPartyPrivacy                  Privacy;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityParty_SetPrivacy;
 
 // Function DiscordPartnerSDK.DiscordActivitySecrets.Join
 // 0x0010 (0x0010 - 0x0000)
@@ -501,7 +449,6 @@ struct DiscordActivitySecrets_Join final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivitySecrets_Join;
 
 // Function DiscordPartnerSDK.DiscordActivitySecrets.SetJoin
 // 0x0010 (0x0010 - 0x0000)
@@ -510,7 +457,6 @@ struct DiscordActivitySecrets_SetJoin final
 public:
 	class FString                                 Join;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivitySecrets_SetJoin;
 
 // Function DiscordPartnerSDK.DiscordActivityButton.Label
 // 0x0010 (0x0010 - 0x0000)
@@ -519,7 +465,6 @@ struct DiscordActivityButton_Label final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityButton_Label;
 
 // Function DiscordPartnerSDK.DiscordActivityButton.SetLabel
 // 0x0010 (0x0010 - 0x0000)
@@ -528,7 +473,6 @@ struct DiscordActivityButton_SetLabel final
 public:
 	class FString                                 Label;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityButton_SetLabel;
 
 // Function DiscordPartnerSDK.DiscordActivityButton.SetUrl
 // 0x0010 (0x0010 - 0x0000)
@@ -537,7 +481,6 @@ struct DiscordActivityButton_SetUrl final
 public:
 	class FString                                 URL_0;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityButton_SetUrl;
 
 // Function DiscordPartnerSDK.DiscordActivityButton.URL
 // 0x0010 (0x0010 - 0x0000)
@@ -546,7 +489,6 @@ struct DiscordActivityButton_URL final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivityButton_URL;
 
 // Function DiscordPartnerSDK.DiscordActivity.AddButton
 // 0x0008 (0x0008 - 0x0000)
@@ -555,7 +497,6 @@ struct DiscordActivity_AddButton final
 public:
 	class UDiscordActivityButton*                 Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_AddButton;
 
 // Function DiscordPartnerSDK.DiscordActivity.ApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -564,7 +505,6 @@ struct DiscordActivity_ApplicationId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_ApplicationId;
 
 // Function DiscordPartnerSDK.DiscordActivity.Assets
 // 0x0008 (0x0008 - 0x0000)
@@ -573,7 +513,6 @@ struct DiscordActivity_Assets final
 public:
 	class UDiscordActivityAssets*                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_Assets;
 
 // Function DiscordPartnerSDK.DiscordActivity.Details
 // 0x0010 (0x0010 - 0x0000)
@@ -582,7 +521,6 @@ struct DiscordActivity_Details final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_Details;
 
 // Function DiscordPartnerSDK.DiscordActivity.DetailsUrl
 // 0x0010 (0x0010 - 0x0000)
@@ -591,7 +529,6 @@ struct DiscordActivity_DetailsUrl final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_DetailsUrl;
 
 // Function DiscordPartnerSDK.DiscordActivity.Equals
 // 0x0010 (0x0010 - 0x0000)
@@ -602,7 +539,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordActivity_Equals;
 
 // Function DiscordPartnerSDK.DiscordActivity.GetButtons
 // 0x0010 (0x0010 - 0x0000)
@@ -611,7 +547,6 @@ struct DiscordActivity_GetButtons final
 public:
 	TArray<class UDiscordActivityButton*>         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_GetButtons;
 
 // Function DiscordPartnerSDK.DiscordActivity.Name
 // 0x0010 (0x0010 - 0x0000)
@@ -620,7 +555,6 @@ struct DiscordActivity_Name_0 final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_Name_0;
 
 // Function DiscordPartnerSDK.DiscordActivity.ParentApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -629,7 +563,6 @@ struct DiscordActivity_ParentApplicationId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_ParentApplicationId;
 
 // Function DiscordPartnerSDK.DiscordActivity.Party
 // 0x0008 (0x0008 - 0x0000)
@@ -638,7 +571,6 @@ struct DiscordActivity_Party final
 public:
 	class UDiscordActivityParty*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_Party;
 
 // Function DiscordPartnerSDK.DiscordActivity.Secrets
 // 0x0008 (0x0008 - 0x0000)
@@ -647,7 +579,6 @@ struct DiscordActivity_Secrets final
 public:
 	class UDiscordActivitySecrets*                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_Secrets;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -656,7 +587,6 @@ struct DiscordActivity_SetApplicationId final
 public:
 	struct FDiscordUniqueID                       ApplicationId;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetApplicationId;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetAssets
 // 0x0008 (0x0008 - 0x0000)
@@ -665,7 +595,6 @@ struct DiscordActivity_SetAssets final
 public:
 	class UDiscordActivityAssets*                 Assets;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetAssets;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetDetails
 // 0x0010 (0x0010 - 0x0000)
@@ -674,7 +603,6 @@ struct DiscordActivity_SetDetails final
 public:
 	class FString                                 Details;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetDetails;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetDetailsUrl
 // 0x0010 (0x0010 - 0x0000)
@@ -683,7 +611,6 @@ struct DiscordActivity_SetDetailsUrl final
 public:
 	class FString                                 DetailsUrl;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetDetailsUrl;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetName
 // 0x0010 (0x0010 - 0x0000)
@@ -692,7 +619,6 @@ struct DiscordActivity_SetName final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetName;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetParentApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -701,7 +627,6 @@ struct DiscordActivity_SetParentApplicationId final
 public:
 	struct FDiscordUniqueID                       ParentApplicationId;                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetParentApplicationId;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetParty
 // 0x0008 (0x0008 - 0x0000)
@@ -710,7 +635,6 @@ struct DiscordActivity_SetParty final
 public:
 	class UDiscordActivityParty*                  Party;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetParty;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetSecrets
 // 0x0008 (0x0008 - 0x0000)
@@ -719,7 +643,6 @@ struct DiscordActivity_SetSecrets final
 public:
 	class UDiscordActivitySecrets*                Secrets;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetSecrets;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetState
 // 0x0010 (0x0010 - 0x0000)
@@ -728,7 +651,6 @@ struct DiscordActivity_SetState final
 public:
 	class FString                                 State_0;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetState;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetStateUrl
 // 0x0010 (0x0010 - 0x0000)
@@ -737,7 +659,6 @@ struct DiscordActivity_SetStateUrl final
 public:
 	class FString                                 StateUrl_0;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetStateUrl;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetStatusDisplayType
 // 0x0001 (0x0001 - 0x0000)
@@ -746,7 +667,6 @@ struct DiscordActivity_SetStatusDisplayType final
 public:
 	EDiscordStatusDisplayTypes                    StatusDisplayType_0;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetStatusDisplayType;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetSupportedPlatforms
 // 0x0001 (0x0001 - 0x0000)
@@ -755,7 +675,6 @@ struct DiscordActivity_SetSupportedPlatforms final
 public:
 	EDiscordActivityGamePlatforms                 SupportedPlatforms_0;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetSupportedPlatforms;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetTimestamps
 // 0x0008 (0x0008 - 0x0000)
@@ -764,7 +683,6 @@ struct DiscordActivity_SetTimestamps final
 public:
 	class UDiscordActivityTimestamps*             Timestamps_0;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetTimestamps;
 
 // Function DiscordPartnerSDK.DiscordActivity.SetType
 // 0x0001 (0x0001 - 0x0000)
@@ -773,7 +691,6 @@ struct DiscordActivity_SetType final
 public:
 	EDiscordActivityTypes                         Type_0;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SetType;
 
 // Function DiscordPartnerSDK.DiscordActivity.State
 // 0x0010 (0x0010 - 0x0000)
@@ -782,7 +699,6 @@ struct DiscordActivity_State final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_State;
 
 // Function DiscordPartnerSDK.DiscordActivity.StateUrl
 // 0x0010 (0x0010 - 0x0000)
@@ -791,7 +707,6 @@ struct DiscordActivity_StateUrl final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_StateUrl;
 
 // Function DiscordPartnerSDK.DiscordActivity.StatusDisplayType
 // 0x0001 (0x0001 - 0x0000)
@@ -800,7 +715,6 @@ struct DiscordActivity_StatusDisplayType final
 public:
 	EDiscordStatusDisplayTypes                    ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_StatusDisplayType;
 
 // Function DiscordPartnerSDK.DiscordActivity.SupportedPlatforms
 // 0x0001 (0x0001 - 0x0000)
@@ -809,7 +723,6 @@ struct DiscordActivity_SupportedPlatforms final
 public:
 	EDiscordActivityGamePlatforms                 ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_SupportedPlatforms;
 
 // Function DiscordPartnerSDK.DiscordActivity.Timestamps
 // 0x0008 (0x0008 - 0x0000)
@@ -818,7 +731,6 @@ struct DiscordActivity_Timestamps final
 public:
 	class UDiscordActivityTimestamps*             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_Timestamps;
 
 // Function DiscordPartnerSDK.DiscordActivity.Type
 // 0x0001 (0x0001 - 0x0000)
@@ -827,7 +739,6 @@ struct DiscordActivity_Type final
 public:
 	EDiscordActivityTypes                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordActivity_Type;
 
 // Function DiscordPartnerSDK.DiscordClientResult.Error
 // 0x0010 (0x0010 - 0x0000)
@@ -836,7 +747,6 @@ struct DiscordClientResult_Error final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_Error;
 
 // Function DiscordPartnerSDK.DiscordClientResult.ErrorCode
 // 0x0004 (0x0004 - 0x0000)
@@ -845,7 +755,6 @@ struct DiscordClientResult_ErrorCode final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_ErrorCode;
 
 // Function DiscordPartnerSDK.DiscordClientResult.ResponseBody
 // 0x0010 (0x0010 - 0x0000)
@@ -854,7 +763,6 @@ struct DiscordClientResult_ResponseBody final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_ResponseBody;
 
 // Function DiscordPartnerSDK.DiscordClientResult.Retryable
 // 0x0001 (0x0001 - 0x0000)
@@ -863,7 +771,6 @@ struct DiscordClientResult_Retryable final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_Retryable;
 
 // Function DiscordPartnerSDK.DiscordClientResult.RetryAfter
 // 0x0004 (0x0004 - 0x0000)
@@ -872,7 +779,6 @@ struct DiscordClientResult_RetryAfter final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_RetryAfter;
 
 // Function DiscordPartnerSDK.DiscordClientResult.SetError
 // 0x0010 (0x0010 - 0x0000)
@@ -881,7 +787,6 @@ struct DiscordClientResult_SetError final
 public:
 	class FString                                 Error;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_SetError;
 
 // Function DiscordPartnerSDK.DiscordClientResult.SetErrorCode
 // 0x0004 (0x0004 - 0x0000)
@@ -890,7 +795,6 @@ struct DiscordClientResult_SetErrorCode final
 public:
 	int32                                         ErrorCode;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_SetErrorCode;
 
 // Function DiscordPartnerSDK.DiscordClientResult.SetResponseBody
 // 0x0010 (0x0010 - 0x0000)
@@ -899,7 +803,6 @@ struct DiscordClientResult_SetResponseBody final
 public:
 	class FString                                 ResponseBody;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_SetResponseBody;
 
 // Function DiscordPartnerSDK.DiscordClientResult.SetRetryable
 // 0x0001 (0x0001 - 0x0000)
@@ -908,7 +811,6 @@ struct DiscordClientResult_SetRetryable final
 public:
 	bool                                          Retryable;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_SetRetryable;
 
 // Function DiscordPartnerSDK.DiscordClientResult.SetRetryAfter
 // 0x0004 (0x0004 - 0x0000)
@@ -917,7 +819,6 @@ struct DiscordClientResult_SetRetryAfter final
 public:
 	float                                         RetryAfter;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_SetRetryAfter;
 
 // Function DiscordPartnerSDK.DiscordClientResult.SetStatus
 // 0x0004 (0x0004 - 0x0000)
@@ -926,7 +827,6 @@ struct DiscordClientResult_SetStatus final
 public:
 	int32                                         Status_0;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_SetStatus;
 
 // Function DiscordPartnerSDK.DiscordClientResult.SetSuccessful
 // 0x0001 (0x0001 - 0x0000)
@@ -935,7 +835,6 @@ struct DiscordClientResult_SetSuccessful final
 public:
 	bool                                          Successful_0;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_SetSuccessful;
 
 // Function DiscordPartnerSDK.DiscordClientResult.SetType
 // 0x0001 (0x0001 - 0x0000)
@@ -944,7 +843,6 @@ struct DiscordClientResult_SetType final
 public:
 	EDiscordErrorType                             Type_0;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_SetType;
 
 // Function DiscordPartnerSDK.DiscordClientResult.Status
 // 0x0004 (0x0004 - 0x0000)
@@ -953,7 +851,6 @@ struct DiscordClientResult_Status final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_Status;
 
 // Function DiscordPartnerSDK.DiscordClientResult.Successful
 // 0x0001 (0x0001 - 0x0000)
@@ -962,7 +859,6 @@ struct DiscordClientResult_Successful final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_Successful;
 
 // Function DiscordPartnerSDK.DiscordClientResult.ToString
 // 0x0010 (0x0010 - 0x0000)
@@ -971,7 +867,6 @@ struct DiscordClientResult_ToString final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_ToString;
 
 // Function DiscordPartnerSDK.DiscordClientResult.Type
 // 0x0001 (0x0001 - 0x0000)
@@ -980,7 +875,6 @@ struct DiscordClientResult_Type final
 public:
 	EDiscordErrorType                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientResult_Type;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationCodeChallenge.Challenge
 // 0x0010 (0x0010 - 0x0000)
@@ -989,7 +883,6 @@ struct DiscordAuthorizationCodeChallenge_Challenge final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationCodeChallenge_Challenge;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationCodeChallenge.Method
 // 0x0001 (0x0001 - 0x0000)
@@ -998,7 +891,6 @@ struct DiscordAuthorizationCodeChallenge_Method final
 public:
 	EDiscordAuthenticationCodeChallengeMethod     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationCodeChallenge_Method;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationCodeChallenge.SetChallenge
 // 0x0010 (0x0010 - 0x0000)
@@ -1007,7 +899,6 @@ struct DiscordAuthorizationCodeChallenge_SetChallenge final
 public:
 	class FString                                 Challenge;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationCodeChallenge_SetChallenge;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationCodeChallenge.SetMethod
 // 0x0001 (0x0001 - 0x0000)
@@ -1016,7 +907,6 @@ struct DiscordAuthorizationCodeChallenge_SetMethod final
 public:
 	EDiscordAuthenticationCodeChallengeMethod     Method;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationCodeChallenge_SetMethod;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationCodeVerifier.Challenge
 // 0x0008 (0x0008 - 0x0000)
@@ -1025,7 +915,6 @@ struct DiscordAuthorizationCodeVerifier_Challenge final
 public:
 	class UDiscordAuthorizationCodeChallenge*     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationCodeVerifier_Challenge;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationCodeVerifier.SetChallenge
 // 0x0008 (0x0008 - 0x0000)
@@ -1034,7 +923,6 @@ struct DiscordAuthorizationCodeVerifier_SetChallenge final
 public:
 	class UDiscordAuthorizationCodeChallenge*     Challenge;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationCodeVerifier_SetChallenge;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationCodeVerifier.SetVerifier
 // 0x0010 (0x0010 - 0x0000)
@@ -1043,7 +931,6 @@ struct DiscordAuthorizationCodeVerifier_SetVerifier final
 public:
 	class FString                                 Verifier_0;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationCodeVerifier_SetVerifier;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationCodeVerifier.Verifier
 // 0x0010 (0x0010 - 0x0000)
@@ -1052,7 +939,6 @@ struct DiscordAuthorizationCodeVerifier_Verifier final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationCodeVerifier_Verifier;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.ClientId
 // 0x0008 (0x0008 - 0x0000)
@@ -1061,7 +947,6 @@ struct DiscordAuthorizationArgs_ClientId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_ClientId;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.CodeChallenge
 // 0x0008 (0x0008 - 0x0000)
@@ -1070,7 +955,6 @@ struct DiscordAuthorizationArgs_CodeChallenge final
 public:
 	class UDiscordAuthorizationCodeChallenge*     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_CodeChallenge;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.CustomSchemeParam
 // 0x0010 (0x0010 - 0x0000)
@@ -1079,7 +963,6 @@ struct DiscordAuthorizationArgs_CustomSchemeParam final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_CustomSchemeParam;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.IntegrationType
 // 0x0001 (0x0001 - 0x0000)
@@ -1088,7 +971,6 @@ struct DiscordAuthorizationArgs_IntegrationType final
 public:
 	EDiscordIntegrationType                       ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_IntegrationType;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.Nonce
 // 0x0010 (0x0010 - 0x0000)
@@ -1097,7 +979,6 @@ struct DiscordAuthorizationArgs_Nonce final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_Nonce;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.Scopes
 // 0x0010 (0x0010 - 0x0000)
@@ -1106,7 +987,6 @@ struct DiscordAuthorizationArgs_Scopes final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_Scopes;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.SetClientId
 // 0x0008 (0x0008 - 0x0000)
@@ -1115,7 +995,6 @@ struct DiscordAuthorizationArgs_SetClientId final
 public:
 	struct FDiscordUniqueID                       ClientId;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_SetClientId;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.SetCodeChallenge
 // 0x0008 (0x0008 - 0x0000)
@@ -1124,7 +1003,6 @@ struct DiscordAuthorizationArgs_SetCodeChallenge final
 public:
 	class UDiscordAuthorizationCodeChallenge*     CodeChallenge;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_SetCodeChallenge;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.SetCustomSchemeParam
 // 0x0010 (0x0010 - 0x0000)
@@ -1133,7 +1011,6 @@ struct DiscordAuthorizationArgs_SetCustomSchemeParam final
 public:
 	class FString                                 CustomSchemeParam;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_SetCustomSchemeParam;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.SetIntegrationType
 // 0x0001 (0x0001 - 0x0000)
@@ -1142,7 +1019,6 @@ struct DiscordAuthorizationArgs_SetIntegrationType final
 public:
 	EDiscordIntegrationType                       IntegrationType;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_SetIntegrationType;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.SetNonce
 // 0x0010 (0x0010 - 0x0000)
@@ -1151,7 +1027,6 @@ struct DiscordAuthorizationArgs_SetNonce final
 public:
 	class FString                                 Nonce;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_SetNonce;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.SetScopes
 // 0x0010 (0x0010 - 0x0000)
@@ -1160,7 +1035,6 @@ struct DiscordAuthorizationArgs_SetScopes final
 public:
 	class FString                                 Scopes;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_SetScopes;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.SetState
 // 0x0010 (0x0010 - 0x0000)
@@ -1169,7 +1043,6 @@ struct DiscordAuthorizationArgs_SetState final
 public:
 	class FString                                 State_0;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_SetState;
 
 // Function DiscordPartnerSDK.DiscordAuthorizationArgs.State
 // 0x0010 (0x0010 - 0x0000)
@@ -1178,7 +1051,6 @@ struct DiscordAuthorizationArgs_State final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAuthorizationArgs_State;
 
 // Function DiscordPartnerSDK.DiscordDeviceAuthorizationArgs.ClientId
 // 0x0008 (0x0008 - 0x0000)
@@ -1187,7 +1059,6 @@ struct DiscordDeviceAuthorizationArgs_ClientId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordDeviceAuthorizationArgs_ClientId;
 
 // Function DiscordPartnerSDK.DiscordDeviceAuthorizationArgs.Scopes
 // 0x0010 (0x0010 - 0x0000)
@@ -1196,7 +1067,6 @@ struct DiscordDeviceAuthorizationArgs_Scopes final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordDeviceAuthorizationArgs_Scopes;
 
 // Function DiscordPartnerSDK.DiscordDeviceAuthorizationArgs.SetClientId
 // 0x0008 (0x0008 - 0x0000)
@@ -1205,7 +1075,6 @@ struct DiscordDeviceAuthorizationArgs_SetClientId final
 public:
 	struct FDiscordUniqueID                       ClientId;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordDeviceAuthorizationArgs_SetClientId;
 
 // Function DiscordPartnerSDK.DiscordDeviceAuthorizationArgs.SetScopes
 // 0x0010 (0x0010 - 0x0000)
@@ -1214,7 +1083,6 @@ struct DiscordDeviceAuthorizationArgs_SetScopes final
 public:
 	class FString                                 Scopes;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordDeviceAuthorizationArgs_SetScopes;
 
 // Function DiscordPartnerSDK.DiscordVoiceStateHandle.SelfDeaf
 // 0x0001 (0x0001 - 0x0000)
@@ -1223,7 +1091,6 @@ struct DiscordVoiceStateHandle_SelfDeaf final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordVoiceStateHandle_SelfDeaf;
 
 // Function DiscordPartnerSDK.DiscordVoiceStateHandle.SelfMute
 // 0x0001 (0x0001 - 0x0000)
@@ -1232,7 +1099,6 @@ struct DiscordVoiceStateHandle_SelfMute final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordVoiceStateHandle_SelfMute;
 
 // Function DiscordPartnerSDK.DiscordVADThresholdSettings.Automatic
 // 0x0001 (0x0001 - 0x0000)
@@ -1241,7 +1107,6 @@ struct DiscordVADThresholdSettings_Automatic final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordVADThresholdSettings_Automatic;
 
 // Function DiscordPartnerSDK.DiscordVADThresholdSettings.SetAutomatic
 // 0x0001 (0x0001 - 0x0000)
@@ -1250,7 +1115,6 @@ struct DiscordVADThresholdSettings_SetAutomatic final
 public:
 	bool                                          Automatic;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordVADThresholdSettings_SetAutomatic;
 
 // Function DiscordPartnerSDK.DiscordVADThresholdSettings.SetVadThreshold
 // 0x0004 (0x0004 - 0x0000)
@@ -1259,7 +1123,6 @@ struct DiscordVADThresholdSettings_SetVadThreshold final
 public:
 	float                                         VadThreshold_0;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordVADThresholdSettings_SetVadThreshold;
 
 // Function DiscordPartnerSDK.DiscordVADThresholdSettings.VadThreshold
 // 0x0004 (0x0004 - 0x0000)
@@ -1268,7 +1131,6 @@ struct DiscordVADThresholdSettings_VadThreshold final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordVADThresholdSettings_VadThreshold;
 
 // Function DiscordPartnerSDK.DiscordCall.ErrorToString
 // 0x0018 (0x0018 - 0x0000)
@@ -1279,7 +1141,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_ErrorToString;
 
 // Function DiscordPartnerSDK.DiscordCall.StatusToString
 // 0x0018 (0x0018 - 0x0000)
@@ -1290,7 +1151,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_StatusToString;
 
 // Function DiscordPartnerSDK.DiscordCall.GetAudioMode
 // 0x0001 (0x0001 - 0x0000)
@@ -1299,7 +1159,6 @@ struct DiscordCall_GetAudioMode final
 public:
 	EDiscordAudioModeType                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetAudioMode;
 
 // Function DiscordPartnerSDK.DiscordCall.GetChannelId
 // 0x0008 (0x0008 - 0x0000)
@@ -1308,7 +1167,6 @@ struct DiscordCall_GetChannelId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetChannelId;
 
 // Function DiscordPartnerSDK.DiscordCall.GetGuildId
 // 0x0008 (0x0008 - 0x0000)
@@ -1317,7 +1175,6 @@ struct DiscordCall_GetGuildId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetGuildId;
 
 // Function DiscordPartnerSDK.DiscordCall.GetLocalMute
 // 0x0010 (0x0010 - 0x0000)
@@ -1328,7 +1185,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordCall_GetLocalMute;
 
 // Function DiscordPartnerSDK.DiscordCall.GetParticipants
 // 0x0010 (0x0010 - 0x0000)
@@ -1337,7 +1193,6 @@ struct DiscordCall_GetParticipants final
 public:
 	TArray<struct FDiscordUniqueID>               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetParticipants;
 
 // Function DiscordPartnerSDK.DiscordCall.GetParticipantVolume
 // 0x0010 (0x0010 - 0x0000)
@@ -1348,7 +1203,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordCall_GetParticipantVolume;
 
 // Function DiscordPartnerSDK.DiscordCall.GetPTTActive
 // 0x0001 (0x0001 - 0x0000)
@@ -1357,7 +1211,6 @@ struct DiscordCall_GetPTTActive final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetPTTActive;
 
 // Function DiscordPartnerSDK.DiscordCall.GetPTTReleaseDelay
 // 0x0004 (0x0004 - 0x0000)
@@ -1366,7 +1219,6 @@ struct DiscordCall_GetPTTReleaseDelay final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetPTTReleaseDelay;
 
 // Function DiscordPartnerSDK.DiscordCall.GetSelfDeaf
 // 0x0001 (0x0001 - 0x0000)
@@ -1375,7 +1227,6 @@ struct DiscordCall_GetSelfDeaf final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetSelfDeaf;
 
 // Function DiscordPartnerSDK.DiscordCall.GetSelfMute
 // 0x0001 (0x0001 - 0x0000)
@@ -1384,7 +1235,6 @@ struct DiscordCall_GetSelfMute final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetSelfMute;
 
 // Function DiscordPartnerSDK.DiscordCall.GetStatus
 // 0x0001 (0x0001 - 0x0000)
@@ -1393,7 +1243,6 @@ struct DiscordCall_GetStatus final
 public:
 	EDiscordCallStatus                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetStatus;
 
 // Function DiscordPartnerSDK.DiscordCall.GetVADThreshold
 // 0x0008 (0x0008 - 0x0000)
@@ -1402,7 +1251,6 @@ struct DiscordCall_GetVADThreshold final
 public:
 	class UDiscordVADThresholdSettings*           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetVADThreshold;
 
 // Function DiscordPartnerSDK.DiscordCall.GetVoiceStateHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -1412,7 +1260,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordVoiceStateHandle*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_GetVoiceStateHandle;
 
 // Function DiscordPartnerSDK.DiscordCall.SetAudioMode
 // 0x0001 (0x0001 - 0x0000)
@@ -1421,7 +1268,6 @@ struct DiscordCall_SetAudioMode final
 public:
 	EDiscordAudioModeType                         audioMode;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_SetAudioMode;
 
 // Function DiscordPartnerSDK.DiscordCall.SetLocalMute
 // 0x0010 (0x0010 - 0x0000)
@@ -1432,7 +1278,6 @@ public:
 	bool                                          Mute;                                              // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordCall_SetLocalMute;
 
 // Function DiscordPartnerSDK.DiscordCall.SetOnVoiceStateChangedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -1441,7 +1286,6 @@ struct DiscordCall_SetOnVoiceStateChangedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& UserId)> cb;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_SetOnVoiceStateChangedCallback;
 
 // Function DiscordPartnerSDK.DiscordCall.SetParticipantChangedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -1450,7 +1294,6 @@ struct DiscordCall_SetParticipantChangedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& UserId, bool added)> cb;                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_SetParticipantChangedCallback;
 
 // Function DiscordPartnerSDK.DiscordCall.SetParticipantVolume
 // 0x0010 (0x0010 - 0x0000)
@@ -1461,7 +1304,6 @@ public:
 	float                                         Volume;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordCall_SetParticipantVolume;
 
 // Function DiscordPartnerSDK.DiscordCall.SetPTTActive
 // 0x0001 (0x0001 - 0x0000)
@@ -1470,7 +1312,6 @@ struct DiscordCall_SetPTTActive final
 public:
 	bool                                          Active;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_SetPTTActive;
 
 // Function DiscordPartnerSDK.DiscordCall.SetPTTReleaseDelay
 // 0x0004 (0x0004 - 0x0000)
@@ -1479,7 +1320,6 @@ struct DiscordCall_SetPTTReleaseDelay final
 public:
 	int32                                         releaseDelayMs;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_SetPTTReleaseDelay;
 
 // Function DiscordPartnerSDK.DiscordCall.SetSelfDeaf
 // 0x0001 (0x0001 - 0x0000)
@@ -1488,7 +1328,6 @@ struct DiscordCall_SetSelfDeaf final
 public:
 	bool                                          deaf;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_SetSelfDeaf;
 
 // Function DiscordPartnerSDK.DiscordCall.SetSelfMute
 // 0x0001 (0x0001 - 0x0000)
@@ -1497,7 +1336,6 @@ struct DiscordCall_SetSelfMute final
 public:
 	bool                                          Mute;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_SetSelfMute;
 
 // Function DiscordPartnerSDK.DiscordCall.SetSpeakingStatusChangedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -1506,7 +1344,6 @@ struct DiscordCall_SetSpeakingStatusChangedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& UserId, bool isPlayingSound)> cb;                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_SetSpeakingStatusChangedCallback;
 
 // Function DiscordPartnerSDK.DiscordCall.SetStatusChangedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -1515,7 +1352,6 @@ struct DiscordCall_SetStatusChangedCallback final
 public:
 	TDelegate<void(EDiscordCallStatus Status, EDiscordCallError Error, int32 errorDetail)> cb;       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_SetStatusChangedCallback;
 
 // Function DiscordPartnerSDK.DiscordCall.SetVadThreshold
 // 0x0008 (0x0008 - 0x0000)
@@ -1526,7 +1362,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         threshold;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCall_SetVadThreshold;
 
 // Function DiscordPartnerSDK.DiscordChannelHandle.ID
 // 0x0008 (0x0008 - 0x0000)
@@ -1535,7 +1370,6 @@ struct DiscordChannelHandle_ID final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordChannelHandle_ID;
 
 // Function DiscordPartnerSDK.DiscordChannelHandle.Name
 // 0x0010 (0x0010 - 0x0000)
@@ -1544,7 +1378,6 @@ struct DiscordChannelHandle_Name_0 final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordChannelHandle_Name_0;
 
 // Function DiscordPartnerSDK.DiscordChannelHandle.Recipients
 // 0x0010 (0x0010 - 0x0000)
@@ -1553,7 +1386,6 @@ struct DiscordChannelHandle_Recipients final
 public:
 	TArray<struct FDiscordUniqueID>               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordChannelHandle_Recipients;
 
 // Function DiscordPartnerSDK.DiscordChannelHandle.Type
 // 0x0001 (0x0001 - 0x0000)
@@ -1562,7 +1394,6 @@ struct DiscordChannelHandle_Type final
 public:
 	EDiscordChannelType                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordChannelHandle_Type;
 
 // Function DiscordPartnerSDK.DiscordGuildMinimal.ID
 // 0x0008 (0x0008 - 0x0000)
@@ -1571,7 +1402,6 @@ struct DiscordGuildMinimal_ID final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildMinimal_ID;
 
 // Function DiscordPartnerSDK.DiscordGuildMinimal.Name
 // 0x0010 (0x0010 - 0x0000)
@@ -1580,7 +1410,6 @@ struct DiscordGuildMinimal_Name_0 final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildMinimal_Name_0;
 
 // Function DiscordPartnerSDK.DiscordGuildMinimal.SetId
 // 0x0008 (0x0008 - 0x0000)
@@ -1589,7 +1418,6 @@ struct DiscordGuildMinimal_SetId final
 public:
 	struct FDiscordUniqueID                       ID;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildMinimal_SetId;
 
 // Function DiscordPartnerSDK.DiscordGuildMinimal.SetName
 // 0x0010 (0x0010 - 0x0000)
@@ -1598,7 +1426,6 @@ struct DiscordGuildMinimal_SetName final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildMinimal_SetName;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.ID
 // 0x0008 (0x0008 - 0x0000)
@@ -1607,7 +1434,6 @@ struct DiscordGuildChannel_ID final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_ID;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.IsLinkable
 // 0x0001 (0x0001 - 0x0000)
@@ -1616,7 +1442,6 @@ struct DiscordGuildChannel_IsLinkable final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_IsLinkable;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.IsViewableAndWriteableByAllMembers
 // 0x0001 (0x0001 - 0x0000)
@@ -1625,7 +1450,6 @@ struct DiscordGuildChannel_IsViewableAndWriteableByAllMembers final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_IsViewableAndWriteableByAllMembers;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.LinkedLobby
 // 0x0008 (0x0008 - 0x0000)
@@ -1634,7 +1458,6 @@ struct DiscordGuildChannel_LinkedLobby final
 public:
 	class UDiscordLinkedLobby*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_LinkedLobby;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.Name
 // 0x0010 (0x0010 - 0x0000)
@@ -1643,7 +1466,6 @@ struct DiscordGuildChannel_Name_0 final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_Name_0;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.ParentId
 // 0x0008 (0x0008 - 0x0000)
@@ -1652,7 +1474,6 @@ struct DiscordGuildChannel_ParentId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_ParentId;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.position
 // 0x0004 (0x0004 - 0x0000)
@@ -1661,7 +1482,6 @@ struct DiscordGuildChannel_position final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_position;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.SetId
 // 0x0008 (0x0008 - 0x0000)
@@ -1670,7 +1490,6 @@ struct DiscordGuildChannel_SetId final
 public:
 	struct FDiscordUniqueID                       ID;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_SetId;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.SetIsLinkable
 // 0x0001 (0x0001 - 0x0000)
@@ -1679,7 +1498,6 @@ struct DiscordGuildChannel_SetIsLinkable final
 public:
 	bool                                          IsLinkable;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_SetIsLinkable;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.SetIsViewableAndWriteableByAllMembers
 // 0x0001 (0x0001 - 0x0000)
@@ -1688,7 +1506,6 @@ struct DiscordGuildChannel_SetIsViewableAndWriteableByAllMembers final
 public:
 	bool                                          IsViewableAndWriteableByAllMembers;                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_SetIsViewableAndWriteableByAllMembers;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.SetLinkedLobby
 // 0x0008 (0x0008 - 0x0000)
@@ -1697,7 +1514,6 @@ struct DiscordGuildChannel_SetLinkedLobby final
 public:
 	class UDiscordLinkedLobby*                    LinkedLobby;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_SetLinkedLobby;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.SetName
 // 0x0010 (0x0010 - 0x0000)
@@ -1706,7 +1522,6 @@ struct DiscordGuildChannel_SetName final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_SetName;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.SetParentId
 // 0x0008 (0x0008 - 0x0000)
@@ -1715,7 +1530,6 @@ struct DiscordGuildChannel_SetParentId final
 public:
 	struct FDiscordUniqueID                       ParentId;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_SetParentId;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.SetPosition
 // 0x0004 (0x0004 - 0x0000)
@@ -1724,7 +1538,6 @@ struct DiscordGuildChannel_SetPosition final
 public:
 	int32                                         position;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_SetPosition;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.SetType
 // 0x0001 (0x0001 - 0x0000)
@@ -1733,7 +1546,6 @@ struct DiscordGuildChannel_SetType final
 public:
 	EDiscordChannelType                           Type_0;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_SetType;
 
 // Function DiscordPartnerSDK.DiscordGuildChannel.Type
 // 0x0001 (0x0001 - 0x0000)
@@ -1742,7 +1554,6 @@ struct DiscordGuildChannel_Type final
 public:
 	EDiscordChannelType                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordGuildChannel_Type;
 
 // Function DiscordPartnerSDK.DiscordLinkedLobby.ApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -1751,7 +1562,6 @@ struct DiscordLinkedLobby_ApplicationId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLinkedLobby_ApplicationId;
 
 // Function DiscordPartnerSDK.DiscordLinkedLobby.LobbyId
 // 0x0008 (0x0008 - 0x0000)
@@ -1760,7 +1570,6 @@ struct DiscordLinkedLobby_LobbyId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLinkedLobby_LobbyId;
 
 // Function DiscordPartnerSDK.DiscordLinkedLobby.SetApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -1769,7 +1578,6 @@ struct DiscordLinkedLobby_SetApplicationId final
 public:
 	struct FDiscordUniqueID                       ApplicationId;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLinkedLobby_SetApplicationId;
 
 // Function DiscordPartnerSDK.DiscordLinkedLobby.SetLobbyId
 // 0x0008 (0x0008 - 0x0000)
@@ -1778,7 +1586,6 @@ struct DiscordLinkedLobby_SetLobbyId final
 public:
 	struct FDiscordUniqueID                       LobbyId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLinkedLobby_SetLobbyId;
 
 // Function DiscordPartnerSDK.DiscordLinkedChannel.GuildId
 // 0x0008 (0x0008 - 0x0000)
@@ -1787,7 +1594,6 @@ struct DiscordLinkedChannel_GuildId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLinkedChannel_GuildId;
 
 // Function DiscordPartnerSDK.DiscordLinkedChannel.ID
 // 0x0008 (0x0008 - 0x0000)
@@ -1796,7 +1602,6 @@ struct DiscordLinkedChannel_ID final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLinkedChannel_ID;
 
 // Function DiscordPartnerSDK.DiscordLinkedChannel.Name
 // 0x0010 (0x0010 - 0x0000)
@@ -1805,7 +1610,6 @@ struct DiscordLinkedChannel_Name_0 final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLinkedChannel_Name_0;
 
 // Function DiscordPartnerSDK.DiscordLinkedChannel.SetGuildId
 // 0x0008 (0x0008 - 0x0000)
@@ -1814,7 +1618,6 @@ struct DiscordLinkedChannel_SetGuildId final
 public:
 	struct FDiscordUniqueID                       GuildId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLinkedChannel_SetGuildId;
 
 // Function DiscordPartnerSDK.DiscordLinkedChannel.SetId
 // 0x0008 (0x0008 - 0x0000)
@@ -1823,7 +1626,6 @@ struct DiscordLinkedChannel_SetId final
 public:
 	struct FDiscordUniqueID                       ID;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLinkedChannel_SetId;
 
 // Function DiscordPartnerSDK.DiscordLinkedChannel.SetName
 // 0x0010 (0x0010 - 0x0000)
@@ -1832,7 +1634,6 @@ struct DiscordLinkedChannel_SetName final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLinkedChannel_SetName;
 
 // Function DiscordPartnerSDK.DiscordRelationshipHandle.DiscordRelationshipType
 // 0x0001 (0x0001 - 0x0000)
@@ -1841,7 +1642,6 @@ struct DiscordRelationshipHandle_DiscordRelationshipType final
 public:
 	EDiscordRelationshipType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordRelationshipHandle_DiscordRelationshipType;
 
 // Function DiscordPartnerSDK.DiscordRelationshipHandle.GameRelationshipType
 // 0x0001 (0x0001 - 0x0000)
@@ -1850,7 +1650,6 @@ struct DiscordRelationshipHandle_GameRelationshipType final
 public:
 	EDiscordRelationshipType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordRelationshipHandle_GameRelationshipType;
 
 // Function DiscordPartnerSDK.DiscordRelationshipHandle.ID
 // 0x0008 (0x0008 - 0x0000)
@@ -1859,7 +1658,6 @@ struct DiscordRelationshipHandle_ID final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordRelationshipHandle_ID;
 
 // Function DiscordPartnerSDK.DiscordRelationshipHandle.IsSpamRequest
 // 0x0001 (0x0001 - 0x0000)
@@ -1868,7 +1666,6 @@ struct DiscordRelationshipHandle_IsSpamRequest final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordRelationshipHandle_IsSpamRequest;
 
 // Function DiscordPartnerSDK.DiscordRelationshipHandle.User
 // 0x0008 (0x0008 - 0x0000)
@@ -1877,7 +1674,6 @@ struct DiscordRelationshipHandle_User final
 public:
 	class UDiscordUserHandle*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordRelationshipHandle_User;
 
 // Function DiscordPartnerSDK.DiscordUserApplicationProfileHandle.AvatarHash
 // 0x0010 (0x0010 - 0x0000)
@@ -1886,7 +1682,6 @@ struct DiscordUserApplicationProfileHandle_AvatarHash final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserApplicationProfileHandle_AvatarHash;
 
 // Function DiscordPartnerSDK.DiscordUserApplicationProfileHandle.MetaData
 // 0x0010 (0x0010 - 0x0000)
@@ -1895,7 +1690,6 @@ struct DiscordUserApplicationProfileHandle_MetaData final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserApplicationProfileHandle_MetaData;
 
 // Function DiscordPartnerSDK.DiscordUserApplicationProfileHandle.ProviderId
 // 0x0010 (0x0010 - 0x0000)
@@ -1904,7 +1698,6 @@ struct DiscordUserApplicationProfileHandle_ProviderId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserApplicationProfileHandle_ProviderId;
 
 // Function DiscordPartnerSDK.DiscordUserApplicationProfileHandle.ProviderIssuedUserId
 // 0x0010 (0x0010 - 0x0000)
@@ -1913,7 +1706,6 @@ struct DiscordUserApplicationProfileHandle_ProviderIssuedUserId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserApplicationProfileHandle_ProviderIssuedUserId;
 
 // Function DiscordPartnerSDK.DiscordUserApplicationProfileHandle.ProviderType
 // 0x0001 (0x0001 - 0x0000)
@@ -1922,7 +1714,6 @@ struct DiscordUserApplicationProfileHandle_ProviderType final
 public:
 	EDiscordExternalIdentityProviderType          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserApplicationProfileHandle_ProviderType;
 
 // Function DiscordPartnerSDK.DiscordUserApplicationProfileHandle.Username
 // 0x0010 (0x0010 - 0x0000)
@@ -1931,7 +1722,6 @@ struct DiscordUserApplicationProfileHandle_Username final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserApplicationProfileHandle_Username;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.AvatarTypeToString
 // 0x0018 (0x0018 - 0x0000)
@@ -1942,7 +1732,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_AvatarTypeToString;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.Avatar
 // 0x0010 (0x0010 - 0x0000)
@@ -1951,7 +1740,6 @@ struct DiscordUserHandle_Avatar final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_Avatar;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.AvatarUrl
 // 0x0018 (0x0018 - 0x0000)
@@ -1963,7 +1751,6 @@ public:
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_AvatarUrl;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.DisplayName
 // 0x0010 (0x0010 - 0x0000)
@@ -1972,7 +1759,6 @@ struct DiscordUserHandle_DisplayName final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_DisplayName;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.GameActivity
 // 0x0008 (0x0008 - 0x0000)
@@ -1981,7 +1767,6 @@ struct DiscordUserHandle_GameActivity final
 public:
 	class UDiscordActivity*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_GameActivity;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.GlobalName
 // 0x0010 (0x0010 - 0x0000)
@@ -1990,7 +1775,6 @@ struct DiscordUserHandle_GlobalName final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_GlobalName;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.ID
 // 0x0008 (0x0008 - 0x0000)
@@ -1999,7 +1783,6 @@ struct DiscordUserHandle_ID final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_ID;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.IsProvisional
 // 0x0001 (0x0001 - 0x0000)
@@ -2008,7 +1791,6 @@ struct DiscordUserHandle_IsProvisional final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_IsProvisional;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.Relationship
 // 0x0008 (0x0008 - 0x0000)
@@ -2017,7 +1799,6 @@ struct DiscordUserHandle_Relationship final
 public:
 	class UDiscordRelationshipHandle*             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_Relationship;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.Status
 // 0x0001 (0x0001 - 0x0000)
@@ -2026,7 +1807,6 @@ struct DiscordUserHandle_Status final
 public:
 	EDiscordStatusType                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_Status;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.UserApplicationProfiles
 // 0x0010 (0x0010 - 0x0000)
@@ -2035,7 +1815,6 @@ struct DiscordUserHandle_UserApplicationProfiles final
 public:
 	TArray<class UDiscordUserApplicationProfileHandle*> ReturnValue;                                 // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_UserApplicationProfiles;
 
 // Function DiscordPartnerSDK.DiscordUserHandle.Username
 // 0x0010 (0x0010 - 0x0000)
@@ -2044,7 +1823,6 @@ struct DiscordUserHandle_Username final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserHandle_Username;
 
 // Function DiscordPartnerSDK.DiscordLobbyMemberHandle.CanLinkLobby
 // 0x0001 (0x0001 - 0x0000)
@@ -2053,7 +1831,6 @@ struct DiscordLobbyMemberHandle_CanLinkLobby final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyMemberHandle_CanLinkLobby;
 
 // Function DiscordPartnerSDK.DiscordLobbyMemberHandle.Connected
 // 0x0001 (0x0001 - 0x0000)
@@ -2062,7 +1839,6 @@ struct DiscordLobbyMemberHandle_Connected final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyMemberHandle_Connected;
 
 // Function DiscordPartnerSDK.DiscordLobbyMemberHandle.ID
 // 0x0008 (0x0008 - 0x0000)
@@ -2071,7 +1847,6 @@ struct DiscordLobbyMemberHandle_ID final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyMemberHandle_ID;
 
 // Function DiscordPartnerSDK.DiscordLobbyMemberHandle.MetaData
 // 0x0050 (0x0050 - 0x0000)
@@ -2080,7 +1855,6 @@ struct DiscordLobbyMemberHandle_MetaData final
 public:
 	TMap<class FString, class FString>            ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyMemberHandle_MetaData;
 
 // Function DiscordPartnerSDK.DiscordLobbyMemberHandle.User
 // 0x0008 (0x0008 - 0x0000)
@@ -2089,7 +1863,6 @@ struct DiscordLobbyMemberHandle_User final
 public:
 	class UDiscordUserHandle*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyMemberHandle_User;
 
 // Function DiscordPartnerSDK.DiscordLobbyHandle.GetCallInfoHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -2098,7 +1871,6 @@ struct DiscordLobbyHandle_GetCallInfoHandle final
 public:
 	class UDiscordCallInfoHandle*                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyHandle_GetCallInfoHandle;
 
 // Function DiscordPartnerSDK.DiscordLobbyHandle.GetLobbyMemberHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -2108,7 +1880,6 @@ public:
 	struct FDiscordUniqueID                       memberId;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordLobbyMemberHandle*              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyHandle_GetLobbyMemberHandle;
 
 // Function DiscordPartnerSDK.DiscordLobbyHandle.ID
 // 0x0008 (0x0008 - 0x0000)
@@ -2117,7 +1888,6 @@ struct DiscordLobbyHandle_ID final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyHandle_ID;
 
 // Function DiscordPartnerSDK.DiscordLobbyHandle.LinkedChannel
 // 0x0008 (0x0008 - 0x0000)
@@ -2126,7 +1896,6 @@ struct DiscordLobbyHandle_LinkedChannel final
 public:
 	class UDiscordLinkedChannel*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyHandle_LinkedChannel;
 
 // Function DiscordPartnerSDK.DiscordLobbyHandle.LobbyMemberIds
 // 0x0010 (0x0010 - 0x0000)
@@ -2135,7 +1904,6 @@ struct DiscordLobbyHandle_LobbyMemberIds final
 public:
 	TArray<struct FDiscordUniqueID>               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyHandle_LobbyMemberIds;
 
 // Function DiscordPartnerSDK.DiscordLobbyHandle.LobbyMembers
 // 0x0010 (0x0010 - 0x0000)
@@ -2144,7 +1912,6 @@ struct DiscordLobbyHandle_LobbyMembers final
 public:
 	TArray<class UDiscordLobbyMemberHandle*>      ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyHandle_LobbyMembers;
 
 // Function DiscordPartnerSDK.DiscordLobbyHandle.MetaData
 // 0x0050 (0x0050 - 0x0000)
@@ -2153,7 +1920,6 @@ struct DiscordLobbyHandle_MetaData final
 public:
 	TMap<class FString, class FString>            ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordLobbyHandle_MetaData;
 
 // Function DiscordPartnerSDK.DiscordAdditionalContent.TypeToString
 // 0x0018 (0x0018 - 0x0000)
@@ -2164,7 +1930,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAdditionalContent_TypeToString;
 
 // Function DiscordPartnerSDK.DiscordAdditionalContent.Count
 // 0x0001 (0x0001 - 0x0000)
@@ -2173,7 +1938,6 @@ struct DiscordAdditionalContent_Count final
 public:
 	uint8                                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAdditionalContent_Count;
 
 // Function DiscordPartnerSDK.DiscordAdditionalContent.Equals
 // 0x0010 (0x0010 - 0x0000)
@@ -2184,7 +1948,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordAdditionalContent_Equals;
 
 // Function DiscordPartnerSDK.DiscordAdditionalContent.SetCount
 // 0x0001 (0x0001 - 0x0000)
@@ -2193,7 +1956,6 @@ struct DiscordAdditionalContent_SetCount final
 public:
 	uint8                                         Count;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAdditionalContent_SetCount;
 
 // Function DiscordPartnerSDK.DiscordAdditionalContent.SetTitle
 // 0x0010 (0x0010 - 0x0000)
@@ -2202,7 +1964,6 @@ struct DiscordAdditionalContent_SetTitle final
 public:
 	class FString                                 Title_0;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAdditionalContent_SetTitle;
 
 // Function DiscordPartnerSDK.DiscordAdditionalContent.SetType
 // 0x0001 (0x0001 - 0x0000)
@@ -2211,7 +1972,6 @@ struct DiscordAdditionalContent_SetType final
 public:
 	EDiscordAdditionalContentType                 Type_0;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAdditionalContent_SetType;
 
 // Function DiscordPartnerSDK.DiscordAdditionalContent.Title
 // 0x0010 (0x0010 - 0x0000)
@@ -2220,7 +1980,6 @@ struct DiscordAdditionalContent_Title final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAdditionalContent_Title;
 
 // Function DiscordPartnerSDK.DiscordAdditionalContent.Type
 // 0x0001 (0x0001 - 0x0000)
@@ -2229,7 +1988,6 @@ struct DiscordAdditionalContent_Type final
 public:
 	EDiscordAdditionalContentType                 ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAdditionalContent_Type;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.AdditionalContent
 // 0x0008 (0x0008 - 0x0000)
@@ -2238,7 +1996,6 @@ struct DiscordMessageHandle_AdditionalContent final
 public:
 	class UDiscordAdditionalContent*              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_AdditionalContent;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.ApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -2247,7 +2004,6 @@ struct DiscordMessageHandle_ApplicationId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_ApplicationId;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.Author
 // 0x0008 (0x0008 - 0x0000)
@@ -2256,7 +2012,6 @@ struct DiscordMessageHandle_Author final
 public:
 	class UDiscordUserHandle*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_Author;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.AuthorId
 // 0x0008 (0x0008 - 0x0000)
@@ -2265,7 +2020,6 @@ struct DiscordMessageHandle_AuthorId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_AuthorId;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.Channel
 // 0x0008 (0x0008 - 0x0000)
@@ -2274,7 +2028,6 @@ struct DiscordMessageHandle_Channel final
 public:
 	class UDiscordChannelHandle*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_Channel;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.ChannelId
 // 0x0008 (0x0008 - 0x0000)
@@ -2283,7 +2036,6 @@ struct DiscordMessageHandle_ChannelId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_ChannelId;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.Content
 // 0x0010 (0x0010 - 0x0000)
@@ -2292,7 +2044,6 @@ struct DiscordMessageHandle_Content final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_Content;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.DisclosureType
 // 0x0001 (0x0001 - 0x0000)
@@ -2301,7 +2052,6 @@ struct DiscordMessageHandle_DisclosureType final
 public:
 	EDiscordDisclosureTypes                       ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_DisclosureType;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.EditedTimestamp
 // 0x0008 (0x0008 - 0x0000)
@@ -2310,7 +2060,6 @@ struct DiscordMessageHandle_EditedTimestamp final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_EditedTimestamp;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.ID
 // 0x0008 (0x0008 - 0x0000)
@@ -2319,7 +2068,6 @@ struct DiscordMessageHandle_ID final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_ID;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.Lobby
 // 0x0008 (0x0008 - 0x0000)
@@ -2328,7 +2076,6 @@ struct DiscordMessageHandle_Lobby final
 public:
 	class UDiscordLobbyHandle*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_Lobby;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.MetaData
 // 0x0050 (0x0050 - 0x0000)
@@ -2337,7 +2084,6 @@ struct DiscordMessageHandle_MetaData final
 public:
 	TMap<class FString, class FString>            ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_MetaData;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.ModerationMetadata
 // 0x0050 (0x0050 - 0x0000)
@@ -2346,7 +2092,6 @@ struct DiscordMessageHandle_ModerationMetadata final
 public:
 	TMap<class FString, class FString>            ReturnValue;                                       // 0x0000(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_ModerationMetadata;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.RawContent
 // 0x0010 (0x0010 - 0x0000)
@@ -2355,7 +2100,6 @@ struct DiscordMessageHandle_RawContent final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_RawContent;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.Recipient
 // 0x0008 (0x0008 - 0x0000)
@@ -2364,7 +2108,6 @@ struct DiscordMessageHandle_Recipient final
 public:
 	class UDiscordUserHandle*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_Recipient;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.RecipientId
 // 0x0008 (0x0008 - 0x0000)
@@ -2373,7 +2116,6 @@ struct DiscordMessageHandle_RecipientId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_RecipientId;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.SentFromGame
 // 0x0001 (0x0001 - 0x0000)
@@ -2382,7 +2124,6 @@ struct DiscordMessageHandle_SentFromGame final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_SentFromGame;
 
 // Function DiscordPartnerSDK.DiscordMessageHandle.SentTimestamp
 // 0x0008 (0x0008 - 0x0000)
@@ -2391,7 +2132,6 @@ struct DiscordMessageHandle_SentTimestamp final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordMessageHandle_SentTimestamp;
 
 // Function DiscordPartnerSDK.DiscordAudioDevice.Equals
 // 0x0010 (0x0010 - 0x0000)
@@ -2402,7 +2142,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordAudioDevice_Equals;
 
 // Function DiscordPartnerSDK.DiscordAudioDevice.ID
 // 0x0010 (0x0010 - 0x0000)
@@ -2411,7 +2150,6 @@ struct DiscordAudioDevice_ID final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAudioDevice_ID;
 
 // Function DiscordPartnerSDK.DiscordAudioDevice.IsDefault
 // 0x0001 (0x0001 - 0x0000)
@@ -2420,7 +2158,6 @@ struct DiscordAudioDevice_IsDefault final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAudioDevice_IsDefault;
 
 // Function DiscordPartnerSDK.DiscordAudioDevice.Name
 // 0x0010 (0x0010 - 0x0000)
@@ -2429,7 +2166,6 @@ struct DiscordAudioDevice_Name_0 final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAudioDevice_Name_0;
 
 // Function DiscordPartnerSDK.DiscordAudioDevice.SetId
 // 0x0010 (0x0010 - 0x0000)
@@ -2438,7 +2174,6 @@ struct DiscordAudioDevice_SetId final
 public:
 	class FString                                 ID;                                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAudioDevice_SetId;
 
 // Function DiscordPartnerSDK.DiscordAudioDevice.SetIsDefault
 // 0x0001 (0x0001 - 0x0000)
@@ -2447,7 +2182,6 @@ struct DiscordAudioDevice_SetIsDefault final
 public:
 	bool                                          IsDefault;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAudioDevice_SetIsDefault;
 
 // Function DiscordPartnerSDK.DiscordAudioDevice.SetName
 // 0x0010 (0x0010 - 0x0000)
@@ -2456,7 +2190,6 @@ struct DiscordAudioDevice_SetName final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordAudioDevice_SetName;
 
 // Function DiscordPartnerSDK.DiscordUserMessageSummary.LastMessageId
 // 0x0008 (0x0008 - 0x0000)
@@ -2465,7 +2198,6 @@ struct DiscordUserMessageSummary_LastMessageId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserMessageSummary_LastMessageId;
 
 // Function DiscordPartnerSDK.DiscordUserMessageSummary.UserId
 // 0x0008 (0x0008 - 0x0000)
@@ -2474,7 +2206,6 @@ struct DiscordUserMessageSummary_UserId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordUserMessageSummary_UserId;
 
 // Function DiscordPartnerSDK.DiscordClientCreateOptions.ApiBase
 // 0x0010 (0x0010 - 0x0000)
@@ -2483,7 +2214,6 @@ struct DiscordClientCreateOptions_ApiBase final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientCreateOptions_ApiBase;
 
 // Function DiscordPartnerSDK.DiscordClientCreateOptions.CpuAffinityMask
 // 0x0008 (0x0008 - 0x0000)
@@ -2492,7 +2222,6 @@ struct DiscordClientCreateOptions_CpuAffinityMask final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientCreateOptions_CpuAffinityMask;
 
 // Function DiscordPartnerSDK.DiscordClientCreateOptions.ExperimentalAndroidPreventCommsForBluetooth
 // 0x0001 (0x0001 - 0x0000)
@@ -2501,7 +2230,6 @@ struct DiscordClientCreateOptions_ExperimentalAndroidPreventCommsForBluetooth fi
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientCreateOptions_ExperimentalAndroidPreventCommsForBluetooth;
 
 // Function DiscordPartnerSDK.DiscordClientCreateOptions.ExperimentalAudioSystem
 // 0x0001 (0x0001 - 0x0000)
@@ -2510,7 +2238,6 @@ struct DiscordClientCreateOptions_ExperimentalAudioSystem final
 public:
 	EDiscordAudioSystem                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientCreateOptions_ExperimentalAudioSystem;
 
 // Function DiscordPartnerSDK.DiscordClientCreateOptions.SetApiBase
 // 0x0010 (0x0010 - 0x0000)
@@ -2519,7 +2246,6 @@ struct DiscordClientCreateOptions_SetApiBase final
 public:
 	class FString                                 ApiBase;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientCreateOptions_SetApiBase;
 
 // Function DiscordPartnerSDK.DiscordClientCreateOptions.SetCpuAffinityMask
 // 0x0008 (0x0008 - 0x0000)
@@ -2528,7 +2254,6 @@ struct DiscordClientCreateOptions_SetCpuAffinityMask final
 public:
 	struct FDiscordUniqueID                       CpuAffinityMask;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientCreateOptions_SetCpuAffinityMask;
 
 // Function DiscordPartnerSDK.DiscordClientCreateOptions.SetExperimentalAndroidPreventCommsForBluetooth
 // 0x0001 (0x0001 - 0x0000)
@@ -2537,7 +2262,6 @@ struct DiscordClientCreateOptions_SetExperimentalAndroidPreventCommsForBluetooth
 public:
 	bool                                          ExperimentalAndroidPreventCommsForBluetooth;       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientCreateOptions_SetExperimentalAndroidPreventCommsForBluetooth;
 
 // Function DiscordPartnerSDK.DiscordClientCreateOptions.SetExperimentalAudioSystem
 // 0x0001 (0x0001 - 0x0000)
@@ -2546,7 +2270,6 @@ struct DiscordClientCreateOptions_SetExperimentalAudioSystem final
 public:
 	EDiscordAudioSystem                           ExperimentalAudioSystem;                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientCreateOptions_SetExperimentalAudioSystem;
 
 // Function DiscordPartnerSDK.DiscordClientCreateOptions.SetWebBase
 // 0x0010 (0x0010 - 0x0000)
@@ -2555,7 +2278,6 @@ struct DiscordClientCreateOptions_SetWebBase final
 public:
 	class FString                                 WebBase_0;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientCreateOptions_SetWebBase;
 
 // Function DiscordPartnerSDK.DiscordClientCreateOptions.WebBase
 // 0x0010 (0x0010 - 0x0000)
@@ -2564,7 +2286,6 @@ struct DiscordClientCreateOptions_WebBase final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClientCreateOptions_WebBase;
 
 // Function DiscordPartnerSDK.DiscordClient.ErrorToString
 // 0x0018 (0x0018 - 0x0000)
@@ -2575,7 +2296,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_ErrorToString;
 
 // Function DiscordPartnerSDK.DiscordClient.GetDefaultAudioDeviceId
 // 0x0010 (0x0010 - 0x0000)
@@ -2584,7 +2304,6 @@ struct DiscordClient_GetDefaultAudioDeviceId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetDefaultAudioDeviceId;
 
 // Function DiscordPartnerSDK.DiscordClient.GetDefaultCommunicationScopes
 // 0x0010 (0x0010 - 0x0000)
@@ -2593,7 +2312,6 @@ struct DiscordClient_GetDefaultCommunicationScopes final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetDefaultCommunicationScopes;
 
 // Function DiscordPartnerSDK.DiscordClient.GetDefaultPresenceScopes
 // 0x0010 (0x0010 - 0x0000)
@@ -2602,7 +2320,6 @@ struct DiscordClient_GetDefaultPresenceScopes final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetDefaultPresenceScopes;
 
 // Function DiscordPartnerSDK.DiscordClient.GetVersionHash
 // 0x0010 (0x0010 - 0x0000)
@@ -2611,7 +2328,6 @@ struct DiscordClient_GetVersionHash final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetVersionHash;
 
 // Function DiscordPartnerSDK.DiscordClient.GetVersionMajor
 // 0x0004 (0x0004 - 0x0000)
@@ -2620,7 +2336,6 @@ struct DiscordClient_GetVersionMajor final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetVersionMajor;
 
 // Function DiscordPartnerSDK.DiscordClient.GetVersionMinor
 // 0x0004 (0x0004 - 0x0000)
@@ -2629,7 +2344,6 @@ struct DiscordClient_GetVersionMinor final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetVersionMinor;
 
 // Function DiscordPartnerSDK.DiscordClient.GetVersionPatch
 // 0x0004 (0x0004 - 0x0000)
@@ -2638,7 +2352,6 @@ struct DiscordClient_GetVersionPatch final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetVersionPatch;
 
 // Function DiscordPartnerSDK.DiscordClient.StatusToString
 // 0x0018 (0x0018 - 0x0000)
@@ -2649,7 +2362,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_StatusToString;
 
 // Function DiscordPartnerSDK.DiscordClient.ThreadToString
 // 0x0018 (0x0018 - 0x0000)
@@ -2660,7 +2372,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_ThreadToString;
 
 // Function DiscordPartnerSDK.DiscordClient.AcceptActivityInvite
 // 0x0018 (0x0018 - 0x0000)
@@ -2670,7 +2381,6 @@ public:
 	class UDiscordActivityInvite*                 invite;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const class FString& joinSecret)> cb;         // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_AcceptActivityInvite;
 
 // Function DiscordPartnerSDK.DiscordClient.AcceptDiscordFriendRequest
 // 0x0018 (0x0018 - 0x0000)
@@ -2680,7 +2390,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_AcceptDiscordFriendRequest;
 
 // Function DiscordPartnerSDK.DiscordClient.AcceptGameFriendRequest
 // 0x0018 (0x0018 - 0x0000)
@@ -2690,7 +2399,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_AcceptGameFriendRequest;
 
 // Function DiscordPartnerSDK.DiscordClient.AddLogCallback
 // 0x0014 (0x0014 - 0x0000)
@@ -2701,7 +2409,6 @@ public:
 	EDiscordLoggingSeverity                       minSeverity;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordClient_AddLogCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.AddVoiceLogCallback
 // 0x0014 (0x0014 - 0x0000)
@@ -2712,7 +2419,6 @@ public:
 	EDiscordLoggingSeverity                       minSeverity;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordClient_AddVoiceLogCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.Authorize
 // 0x0018 (0x0018 - 0x0000)
@@ -2722,7 +2428,6 @@ public:
 	class UDiscordAuthorizationArgs*              Args;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const class FString& code, const class FString& redirectUri)> Callback; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_Authorize;
 
 // Function DiscordPartnerSDK.DiscordClient.BlockUser
 // 0x0018 (0x0018 - 0x0000)
@@ -2732,7 +2437,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_BlockUser;
 
 // Function DiscordPartnerSDK.DiscordClient.CancelDiscordFriendRequest
 // 0x0018 (0x0018 - 0x0000)
@@ -2742,7 +2446,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_CancelDiscordFriendRequest;
 
 // Function DiscordPartnerSDK.DiscordClient.CancelGameFriendRequest
 // 0x0018 (0x0018 - 0x0000)
@@ -2752,7 +2455,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_CancelGameFriendRequest;
 
 // Function DiscordPartnerSDK.DiscordClient.CanOpenMessageInDiscord
 // 0x0010 (0x0010 - 0x0000)
@@ -2763,7 +2465,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordClient_CanOpenMessageInDiscord;
 
 // Function DiscordPartnerSDK.DiscordClient.CreateAuthorizationCodeVerifier
 // 0x0008 (0x0008 - 0x0000)
@@ -2772,7 +2473,6 @@ struct DiscordClient_CreateAuthorizationCodeVerifier final
 public:
 	class UDiscordAuthorizationCodeVerifier*      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_CreateAuthorizationCodeVerifier;
 
 // Function DiscordPartnerSDK.DiscordClient.CreateOrJoinLobby
 // 0x0020 (0x0020 - 0x0000)
@@ -2782,7 +2482,6 @@ public:
 	class FString                                 secret;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& LobbyId)> Callback; // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_CreateOrJoinLobby;
 
 // Function DiscordPartnerSDK.DiscordClient.CreateOrJoinLobbyWithMetadata
 // 0x00C0 (0x00C0 - 0x0000)
@@ -2794,7 +2493,6 @@ public:
 	TMap<class FString, class FString>            memberMetadata;                                    // 0x0060(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& LobbyId)> Callback; // 0x00B0(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_CreateOrJoinLobbyWithMetadata;
 
 // Function DiscordPartnerSDK.DiscordClient.DeleteUserMessage
 // 0x0020 (0x0020 - 0x0000)
@@ -2805,7 +2503,6 @@ public:
 	struct FDiscordUniqueID                       MessageId;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_DeleteUserMessage;
 
 // Function DiscordPartnerSDK.DiscordClient.EditUserMessage
 // 0x0030 (0x0030 - 0x0000)
@@ -2817,7 +2514,6 @@ public:
 	class FString                                 Content;                                           // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_EditUserMessage;
 
 // Function DiscordPartnerSDK.DiscordClient.EndCall
 // 0x0018 (0x0018 - 0x0000)
@@ -2827,7 +2523,6 @@ public:
 	struct FDiscordUniqueID                       ChannelId;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void()>                             Callback;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_EndCall;
 
 // Function DiscordPartnerSDK.DiscordClient.EndCalls
 // 0x0010 (0x0010 - 0x0000)
@@ -2836,7 +2531,6 @@ struct DiscordClient_EndCalls final
 public:
 	TDelegate<void()>                             Callback;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_EndCalls;
 
 // Function DiscordPartnerSDK.DiscordClient.ExchangeChildToken
 // 0x0028 (0x0028 - 0x0000)
@@ -2847,7 +2541,6 @@ public:
 	struct FDiscordUniqueID                       childApplicationId;                                // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)> Callback; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_ExchangeChildToken;
 
 // Function DiscordPartnerSDK.DiscordClient.FetchCurrentUser
 // 0x0028 (0x0028 - 0x0000)
@@ -2857,9 +2550,8 @@ public:
 	EDiscordAuthorizationTokenType                tokenType;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 token;                                             // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& ID, const class FString& Name)> Callback; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& ID, const class FString& Name_0)> Callback; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_FetchCurrentUser;
 
 // Function DiscordPartnerSDK.DiscordClient.GetApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -2868,7 +2560,6 @@ struct DiscordClient_GetApplicationId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetApplicationId;
 
 // Function DiscordPartnerSDK.DiscordClient.GetCall
 // 0x0010 (0x0010 - 0x0000)
@@ -2878,7 +2569,6 @@ public:
 	struct FDiscordUniqueID                       ChannelId;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordCall*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetCall;
 
 // Function DiscordPartnerSDK.DiscordClient.GetCalls
 // 0x0010 (0x0010 - 0x0000)
@@ -2887,7 +2577,6 @@ struct DiscordClient_GetCalls final
 public:
 	TArray<class UDiscordCall*>                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetCalls;
 
 // Function DiscordPartnerSDK.DiscordClient.GetChannelHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -2897,7 +2586,6 @@ public:
 	struct FDiscordUniqueID                       ChannelId;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordChannelHandle*                  ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetChannelHandle;
 
 // Function DiscordPartnerSDK.DiscordClient.GetCurrentInputDevice
 // 0x0010 (0x0010 - 0x0000)
@@ -2906,7 +2594,6 @@ struct DiscordClient_GetCurrentInputDevice final
 public:
 	TDelegate<void(class UDiscordAudioDevice* device)> cb;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetCurrentInputDevice;
 
 // Function DiscordPartnerSDK.DiscordClient.GetCurrentOutputDevice
 // 0x0010 (0x0010 - 0x0000)
@@ -2915,7 +2602,6 @@ struct DiscordClient_GetCurrentOutputDevice final
 public:
 	TDelegate<void(class UDiscordAudioDevice* device)> cb;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetCurrentOutputDevice;
 
 // Function DiscordPartnerSDK.DiscordClient.GetCurrentUser
 // 0x0008 (0x0008 - 0x0000)
@@ -2924,7 +2610,6 @@ struct DiscordClient_GetCurrentUser final
 public:
 	class UDiscordUserHandle*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetCurrentUser;
 
 // Function DiscordPartnerSDK.DiscordClient.GetCurrentUserV2
 // 0x0008 (0x0008 - 0x0000)
@@ -2933,7 +2618,6 @@ struct DiscordClient_GetCurrentUserV2 final
 public:
 	class UDiscordUserHandle*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetCurrentUserV2;
 
 // Function DiscordPartnerSDK.DiscordClient.GetDiscordClientConnectedUser
 // 0x0018 (0x0018 - 0x0000)
@@ -2943,7 +2627,6 @@ public:
 	struct FDiscordUniqueID                       ApplicationId;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, class UDiscordUserHandle* User)> Callback;    // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetDiscordClientConnectedUser;
 
 // Function DiscordPartnerSDK.DiscordClient.GetGuildChannels
 // 0x0018 (0x0018 - 0x0000)
@@ -2953,7 +2636,6 @@ public:
 	struct FDiscordUniqueID                       GuildId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const TArray<class UDiscordGuildChannel*>& guildChannels)> cb; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetGuildChannels;
 
 // Function DiscordPartnerSDK.DiscordClient.GetInputDevices
 // 0x0010 (0x0010 - 0x0000)
@@ -2962,7 +2644,6 @@ struct DiscordClient_GetInputDevices final
 public:
 	TDelegate<void(const TArray<class UDiscordAudioDevice*>& devices)> cb;                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetInputDevices;
 
 // Function DiscordPartnerSDK.DiscordClient.GetInputVolume
 // 0x0004 (0x0004 - 0x0000)
@@ -2971,7 +2652,6 @@ struct DiscordClient_GetInputVolume final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetInputVolume;
 
 // Function DiscordPartnerSDK.DiscordClient.GetLobbyHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -2981,7 +2661,6 @@ public:
 	struct FDiscordUniqueID                       LobbyId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordLobbyHandle*                    ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetLobbyHandle;
 
 // Function DiscordPartnerSDK.DiscordClient.GetLobbyIds
 // 0x0010 (0x0010 - 0x0000)
@@ -2990,7 +2669,6 @@ struct DiscordClient_GetLobbyIds final
 public:
 	TArray<struct FDiscordUniqueID>               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetLobbyIds;
 
 // Function DiscordPartnerSDK.DiscordClient.GetLobbyMessagesWithLimit
 // 0x0020 (0x0020 - 0x0000)
@@ -3002,7 +2680,6 @@ public:
 	TDelegate<void(class UDiscordClientResult* Result, const TArray<class UDiscordMessageHandle*>& messages)> cb; // 0x000C(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordClient_GetLobbyMessagesWithLimit;
 
 // Function DiscordPartnerSDK.DiscordClient.GetMessageHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -3012,7 +2689,6 @@ public:
 	struct FDiscordUniqueID                       MessageId;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordMessageHandle*                  ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetMessageHandle;
 
 // Function DiscordPartnerSDK.DiscordClient.GetOutputDevices
 // 0x0010 (0x0010 - 0x0000)
@@ -3021,7 +2697,6 @@ struct DiscordClient_GetOutputDevices final
 public:
 	TDelegate<void(const TArray<class UDiscordAudioDevice*>& devices)> cb;                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetOutputDevices;
 
 // Function DiscordPartnerSDK.DiscordClient.GetOutputVolume
 // 0x0004 (0x0004 - 0x0000)
@@ -3030,7 +2705,6 @@ struct DiscordClient_GetOutputVolume final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetOutputVolume;
 
 // Function DiscordPartnerSDK.DiscordClient.GetProvisionalToken
 // 0x0030 (0x0030 - 0x0000)
@@ -3043,7 +2717,6 @@ public:
 	class FString                                 externalAuthToken;                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)> Callback; // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetProvisionalToken;
 
 // Function DiscordPartnerSDK.DiscordClient.GetRelationshipHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -3053,7 +2726,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordRelationshipHandle*             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetRelationshipHandle;
 
 // Function DiscordPartnerSDK.DiscordClient.GetRelationships
 // 0x0010 (0x0010 - 0x0000)
@@ -3062,7 +2734,6 @@ struct DiscordClient_GetRelationships final
 public:
 	TArray<class UDiscordRelationshipHandle*>     ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetRelationships;
 
 // Function DiscordPartnerSDK.DiscordClient.GetRelationshipsByGroup
 // 0x0018 (0x0018 - 0x0000)
@@ -3073,7 +2744,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UDiscordRelationshipHandle*>     ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetRelationshipsByGroup;
 
 // Function DiscordPartnerSDK.DiscordClient.GetSelfDeafAll
 // 0x0001 (0x0001 - 0x0000)
@@ -3082,7 +2752,6 @@ struct DiscordClient_GetSelfDeafAll final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetSelfDeafAll;
 
 // Function DiscordPartnerSDK.DiscordClient.GetSelfMuteAll
 // 0x0001 (0x0001 - 0x0000)
@@ -3091,7 +2760,6 @@ struct DiscordClient_GetSelfMuteAll final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetSelfMuteAll;
 
 // Function DiscordPartnerSDK.DiscordClient.GetStatus
 // 0x0001 (0x0001 - 0x0000)
@@ -3100,7 +2768,6 @@ struct DiscordClient_GetStatus final
 public:
 	EDiscordClientStatus                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetStatus;
 
 // Function DiscordPartnerSDK.DiscordClient.GetToken
 // 0x0048 (0x0048 - 0x0000)
@@ -3113,7 +2780,6 @@ public:
 	class FString                                 redirectUri;                                       // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)> Callback; // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetToken;
 
 // Function DiscordPartnerSDK.DiscordClient.GetTokenFromDevice
 // 0x0018 (0x0018 - 0x0000)
@@ -3123,7 +2789,6 @@ public:
 	class UDiscordDeviceAuthorizationArgs*        Args;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)> Callback; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetTokenFromDevice;
 
 // Function DiscordPartnerSDK.DiscordClient.GetTokenFromDeviceProvisionalMerge
 // 0x0030 (0x0030 - 0x0000)
@@ -3136,7 +2801,6 @@ public:
 	class FString                                 externalAuthToken;                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)> Callback; // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetTokenFromDeviceProvisionalMerge;
 
 // Function DiscordPartnerSDK.DiscordClient.GetTokenFromProvisionalMerge
 // 0x0060 (0x0060 - 0x0000)
@@ -3152,7 +2816,6 @@ public:
 	class FString                                 externalAuthToken;                                 // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)> Callback; // 0x0050(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetTokenFromProvisionalMerge;
 
 // Function DiscordPartnerSDK.DiscordClient.GetUser
 // 0x0010 (0x0010 - 0x0000)
@@ -3162,7 +2825,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordUserHandle*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetUser;
 
 // Function DiscordPartnerSDK.DiscordClient.GetUserGuilds
 // 0x0010 (0x0010 - 0x0000)
@@ -3171,7 +2833,6 @@ struct DiscordClient_GetUserGuilds final
 public:
 	TDelegate<void(class UDiscordClientResult* Result, const TArray<class UDiscordGuildMinimal*>& guilds)> cb; // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetUserGuilds;
 
 // Function DiscordPartnerSDK.DiscordClient.GetUserMessageSummaries
 // 0x0010 (0x0010 - 0x0000)
@@ -3180,7 +2841,6 @@ struct DiscordClient_GetUserMessageSummaries final
 public:
 	TDelegate<void(class UDiscordClientResult* Result, const TArray<class UDiscordUserMessageSummary*>& summaries)> cb; // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_GetUserMessageSummaries;
 
 // Function DiscordPartnerSDK.DiscordClient.GetUserMessagesWithLimit
 // 0x0020 (0x0020 - 0x0000)
@@ -3192,7 +2852,6 @@ public:
 	TDelegate<void(class UDiscordClientResult* Result, const TArray<class UDiscordMessageHandle*>& messages)> cb; // 0x000C(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordClient_GetUserMessagesWithLimit;
 
 // Function DiscordPartnerSDK.DiscordClient.InitWithBases
 // 0x0020 (0x0020 - 0x0000)
@@ -3202,7 +2861,6 @@ public:
 	class FString                                 ApiBase;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 WebBase;                                           // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_InitWithBases;
 
 // Function DiscordPartnerSDK.DiscordClient.InitWithOptions
 // 0x0008 (0x0008 - 0x0000)
@@ -3211,7 +2869,6 @@ struct DiscordClient_InitWithOptions final
 public:
 	class UDiscordClientCreateOptions*            Options;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_InitWithOptions;
 
 // Function DiscordPartnerSDK.DiscordClient.IsAuthenticated
 // 0x0001 (0x0001 - 0x0000)
@@ -3220,7 +2877,6 @@ struct DiscordClient_IsAuthenticated final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_IsAuthenticated;
 
 // Function DiscordPartnerSDK.DiscordClient.IsDiscordAppInstalled
 // 0x0010 (0x0010 - 0x0000)
@@ -3229,7 +2885,6 @@ struct DiscordClient_IsDiscordAppInstalled final
 public:
 	TDelegate<void(bool installed)>               Callback;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_IsDiscordAppInstalled;
 
 // Function DiscordPartnerSDK.DiscordClient.JoinLinkedLobbyGuild
 // 0x0028 (0x0028 - 0x0000)
@@ -3240,7 +2895,6 @@ public:
 	TDelegate<void()>                             provisionalUserMergeRequiredCallback;              // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const class FString& inviteUrl)> Callback;    // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_JoinLinkedLobbyGuild;
 
 // Function DiscordPartnerSDK.DiscordClient.LeaveLobby
 // 0x0018 (0x0018 - 0x0000)
@@ -3250,7 +2904,6 @@ public:
 	struct FDiscordUniqueID                       LobbyId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> Callback;                                    // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_LeaveLobby;
 
 // Function DiscordPartnerSDK.DiscordClient.LinkChannelToLobby
 // 0x0020 (0x0020 - 0x0000)
@@ -3261,7 +2914,6 @@ public:
 	struct FDiscordUniqueID                       ChannelId;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> Callback;                                    // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_LinkChannelToLobby;
 
 // Function DiscordPartnerSDK.DiscordClient.OpenAuthorizeDeviceScreen
 // 0x0018 (0x0018 - 0x0000)
@@ -3271,7 +2923,6 @@ public:
 	struct FDiscordUniqueID                       ClientId;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 userCode;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_OpenAuthorizeDeviceScreen;
 
 // Function DiscordPartnerSDK.DiscordClient.OpenConnectedGamesSettingsInDiscord
 // 0x0010 (0x0010 - 0x0000)
@@ -3280,7 +2931,6 @@ struct DiscordClient_OpenConnectedGamesSettingsInDiscord final
 public:
 	TDelegate<void(class UDiscordClientResult* Result)> Callback;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_OpenConnectedGamesSettingsInDiscord;
 
 // Function DiscordPartnerSDK.DiscordClient.OpenMessageInDiscord
 // 0x0028 (0x0028 - 0x0000)
@@ -3291,7 +2941,6 @@ public:
 	TDelegate<void()>                             provisionalUserMergeRequiredCallback;              // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> Callback;                                    // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_OpenMessageInDiscord;
 
 // Function DiscordPartnerSDK.DiscordClient.ProvisionalUserMergeCompleted
 // 0x0001 (0x0001 - 0x0000)
@@ -3300,7 +2949,6 @@ struct DiscordClient_ProvisionalUserMergeCompleted final
 public:
 	bool                                          success;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_ProvisionalUserMergeCompleted;
 
 // Function DiscordPartnerSDK.DiscordClient.RefreshToken
 // 0x0028 (0x0028 - 0x0000)
@@ -3311,7 +2959,6 @@ public:
 	class FString                                 RefreshToken_0;                                    // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const class FString& accessToken, const class FString& RefreshToken, EDiscordAuthorizationTokenType tokenType, int32 expiresIn, const class FString& Scopes)> Callback; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_RefreshToken;
 
 // Function DiscordPartnerSDK.DiscordClient.RegisterAuthorizeRequestCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3320,7 +2967,6 @@ struct DiscordClient_RegisterAuthorizeRequestCallback final
 public:
 	TDelegate<void()>                             Callback;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_RegisterAuthorizeRequestCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.RegisterLaunchCommand
 // 0x0020 (0x0020 - 0x0000)
@@ -3332,7 +2978,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordClient_RegisterLaunchCommand;
 
 // Function DiscordPartnerSDK.DiscordClient.RegisterLaunchSteamApplication
 // 0x0010 (0x0010 - 0x0000)
@@ -3344,7 +2989,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordClient_RegisterLaunchSteamApplication;
 
 // Function DiscordPartnerSDK.DiscordClient.RejectDiscordFriendRequest
 // 0x0018 (0x0018 - 0x0000)
@@ -3354,7 +2998,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_RejectDiscordFriendRequest;
 
 // Function DiscordPartnerSDK.DiscordClient.RejectGameFriendRequest
 // 0x0018 (0x0018 - 0x0000)
@@ -3364,7 +3007,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_RejectGameFriendRequest;
 
 // Function DiscordPartnerSDK.DiscordClient.RemoveDiscordAndGameFriend
 // 0x0018 (0x0018 - 0x0000)
@@ -3374,7 +3016,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_RemoveDiscordAndGameFriend;
 
 // Function DiscordPartnerSDK.DiscordClient.RemoveGameFriend
 // 0x0018 (0x0018 - 0x0000)
@@ -3384,7 +3025,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_RemoveGameFriend;
 
 // Function DiscordPartnerSDK.DiscordClient.RevokeToken
 // 0x0028 (0x0028 - 0x0000)
@@ -3395,7 +3035,6 @@ public:
 	class FString                                 token;                                             // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> Callback;                                    // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_RevokeToken;
 
 // Function DiscordPartnerSDK.DiscordClient.SearchFriendsByUsername
 // 0x0020 (0x0020 - 0x0000)
@@ -3405,7 +3044,6 @@ public:
 	class FString                                 searchStr;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UDiscordUserHandle*>             ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SearchFriendsByUsername;
 
 // Function DiscordPartnerSDK.DiscordClient.SendActivityInvite
 // 0x0028 (0x0028 - 0x0000)
@@ -3416,7 +3054,6 @@ public:
 	class FString                                 Content;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendActivityInvite;
 
 // Function DiscordPartnerSDK.DiscordClient.SendActivityJoinRequest
 // 0x0018 (0x0018 - 0x0000)
@@ -3426,7 +3063,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendActivityJoinRequest;
 
 // Function DiscordPartnerSDK.DiscordClient.SendActivityJoinRequestReply
 // 0x0018 (0x0018 - 0x0000)
@@ -3436,7 +3072,6 @@ public:
 	class UDiscordActivityInvite*                 invite;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendActivityJoinRequestReply;
 
 // Function DiscordPartnerSDK.DiscordClient.SendDiscordFriendRequest
 // 0x0020 (0x0020 - 0x0000)
@@ -3446,7 +3081,6 @@ public:
 	class FString                                 Username;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendDiscordFriendRequest;
 
 // Function DiscordPartnerSDK.DiscordClient.SendDiscordFriendRequestById
 // 0x0018 (0x0018 - 0x0000)
@@ -3456,7 +3090,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendDiscordFriendRequestById;
 
 // Function DiscordPartnerSDK.DiscordClient.SendGameFriendRequest
 // 0x0020 (0x0020 - 0x0000)
@@ -3466,7 +3099,6 @@ public:
 	class FString                                 Username;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendGameFriendRequest;
 
 // Function DiscordPartnerSDK.DiscordClient.SendGameFriendRequestById
 // 0x0018 (0x0018 - 0x0000)
@@ -3476,7 +3108,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendGameFriendRequestById;
 
 // Function DiscordPartnerSDK.DiscordClient.SendLobbyMessage
 // 0x0028 (0x0028 - 0x0000)
@@ -3487,7 +3118,6 @@ public:
 	class FString                                 Content;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& MessageId)> cb; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendLobbyMessage;
 
 // Function DiscordPartnerSDK.DiscordClient.SendLobbyMessageWithMetadata
 // 0x0078 (0x0078 - 0x0000)
@@ -3499,7 +3129,6 @@ public:
 	TMap<class FString, class FString>            MetaData;                                          // 0x0018(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& MessageId)> cb; // 0x0068(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendLobbyMessageWithMetadata;
 
 // Function DiscordPartnerSDK.DiscordClient.SendUserMessage
 // 0x0028 (0x0028 - 0x0000)
@@ -3510,7 +3139,6 @@ public:
 	class FString                                 Content;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& MessageId)> cb; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendUserMessage;
 
 // Function DiscordPartnerSDK.DiscordClient.SendUserMessageWithMetadata
 // 0x0078 (0x0078 - 0x0000)
@@ -3522,7 +3150,6 @@ public:
 	TMap<class FString, class FString>            MetaData;                                          // 0x0018(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& MessageId)> cb; // 0x0068(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SendUserMessageWithMetadata;
 
 // Function DiscordPartnerSDK.DiscordClient.SetActivityInviteCreatedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3531,7 +3158,6 @@ struct DiscordClient_SetActivityInviteCreatedCallback final
 public:
 	TDelegate<void(class UDiscordActivityInvite* invite)> cb;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetActivityInviteCreatedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetActivityInviteUpdatedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3540,7 +3166,6 @@ struct DiscordClient_SetActivityInviteUpdatedCallback final
 public:
 	TDelegate<void(class UDiscordActivityInvite* invite)> cb;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetActivityInviteUpdatedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetActivityJoinCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3549,7 +3174,6 @@ struct DiscordClient_SetActivityJoinCallback final
 public:
 	TDelegate<void(const class FString& joinSecret)> cb;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetActivityJoinCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetActivityJoinWithApplicationCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3558,7 +3182,6 @@ struct DiscordClient_SetActivityJoinWithApplicationCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& ApplicationId, const class FString& joinSecret)> cb; // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetActivityJoinWithApplicationCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetAecDump
 // 0x0001 (0x0001 - 0x0000)
@@ -3567,7 +3190,6 @@ struct DiscordClient_SetAecDump final
 public:
 	bool                                          On;                                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetAecDump;
 
 // Function DiscordPartnerSDK.DiscordClient.SetApplicationId
 // 0x0008 (0x0008 - 0x0000)
@@ -3576,7 +3198,6 @@ struct DiscordClient_SetApplicationId final
 public:
 	struct FDiscordUniqueID                       ApplicationId;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetApplicationId;
 
 // Function DiscordPartnerSDK.DiscordClient.SetAuthorizeDeviceScreenClosedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3585,7 +3206,6 @@ struct DiscordClient_SetAuthorizeDeviceScreenClosedCallback final
 public:
 	TDelegate<void()>                             cb;                                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetAuthorizeDeviceScreenClosedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetAutomaticGainControl
 // 0x0001 (0x0001 - 0x0000)
@@ -3594,7 +3214,6 @@ struct DiscordClient_SetAutomaticGainControl final
 public:
 	bool                                          On;                                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetAutomaticGainControl;
 
 // Function DiscordPartnerSDK.DiscordClient.SetDeviceChangeCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3603,7 +3222,6 @@ struct DiscordClient_SetDeviceChangeCallback final
 public:
 	TDelegate<void(const TArray<class UDiscordAudioDevice*>& inputDevices, const TArray<class UDiscordAudioDevice*>& outputDevices)> Callback; // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetDeviceChangeCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetEchoCancellation
 // 0x0001 (0x0001 - 0x0000)
@@ -3612,7 +3230,6 @@ struct DiscordClient_SetEchoCancellation final
 public:
 	bool                                          On;                                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetEchoCancellation;
 
 // Function DiscordPartnerSDK.DiscordClient.SetEngineManagedAudioSession
 // 0x0001 (0x0001 - 0x0000)
@@ -3621,7 +3238,6 @@ struct DiscordClient_SetEngineManagedAudioSession final
 public:
 	bool                                          isEngineManaged;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetEngineManagedAudioSession;
 
 // Function DiscordPartnerSDK.DiscordClient.SetGameWindowPid
 // 0x0004 (0x0004 - 0x0000)
@@ -3630,7 +3246,6 @@ struct DiscordClient_SetGameWindowPid final
 public:
 	int32                                         pid;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetGameWindowPid;
 
 // Function DiscordPartnerSDK.DiscordClient.SetHttpRequestTimeout
 // 0x0004 (0x0004 - 0x0000)
@@ -3639,7 +3254,6 @@ struct DiscordClient_SetHttpRequestTimeout final
 public:
 	int32                                         httpTimeoutInMilliseconds;                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetHttpRequestTimeout;
 
 // Function DiscordPartnerSDK.DiscordClient.SetInputDevice
 // 0x0020 (0x0020 - 0x0000)
@@ -3649,7 +3263,6 @@ public:
 	class FString                                 DeviceID;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetInputDevice;
 
 // Function DiscordPartnerSDK.DiscordClient.SetInputVolume
 // 0x0004 (0x0004 - 0x0000)
@@ -3658,7 +3271,6 @@ struct DiscordClient_SetInputVolume final
 public:
 	float                                         InputVolume;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetInputVolume;
 
 // Function DiscordPartnerSDK.DiscordClient.SetLobbyCreatedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3667,7 +3279,6 @@ struct DiscordClient_SetLobbyCreatedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& LobbyId)> cb;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetLobbyCreatedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetLobbyDeletedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3676,7 +3287,6 @@ struct DiscordClient_SetLobbyDeletedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& LobbyId)> cb;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetLobbyDeletedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetLobbyMemberAddedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3685,7 +3295,6 @@ struct DiscordClient_SetLobbyMemberAddedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& LobbyId, const struct FDiscordUniqueID& memberId)> cb; // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetLobbyMemberAddedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetLobbyMemberRemovedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3694,7 +3303,6 @@ struct DiscordClient_SetLobbyMemberRemovedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& LobbyId, const struct FDiscordUniqueID& memberId)> cb; // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetLobbyMemberRemovedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetLobbyMemberUpdatedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3703,7 +3311,6 @@ struct DiscordClient_SetLobbyMemberUpdatedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& LobbyId, const struct FDiscordUniqueID& memberId)> cb; // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetLobbyMemberUpdatedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetLobbyUpdatedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3712,7 +3319,6 @@ struct DiscordClient_SetLobbyUpdatedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& LobbyId)> cb;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetLobbyUpdatedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetLogDir
 // 0x0018 (0x0018 - 0x0000)
@@ -3724,7 +3330,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordClient_SetLogDir;
 
 // Function DiscordPartnerSDK.DiscordClient.SetMessageCreatedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3733,7 +3338,6 @@ struct DiscordClient_SetMessageCreatedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& MessageId)> cb;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetMessageCreatedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetMessageDeletedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3742,7 +3346,6 @@ struct DiscordClient_SetMessageDeletedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& MessageId, const struct FDiscordUniqueID& ChannelId)> cb; // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetMessageDeletedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetMessageUpdatedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3751,7 +3354,6 @@ struct DiscordClient_SetMessageUpdatedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& MessageId)> cb;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetMessageUpdatedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetNoAudioInputCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3760,7 +3362,6 @@ struct DiscordClient_SetNoAudioInputCallback final
 public:
 	TDelegate<void(bool inputDetected)>           Callback;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetNoAudioInputCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetNoAudioInputThreshold
 // 0x0004 (0x0004 - 0x0000)
@@ -3769,7 +3370,6 @@ struct DiscordClient_SetNoAudioInputThreshold final
 public:
 	float                                         dBFSThreshold;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetNoAudioInputThreshold;
 
 // Function DiscordPartnerSDK.DiscordClient.SetNoiseSuppression
 // 0x0001 (0x0001 - 0x0000)
@@ -3778,7 +3378,6 @@ struct DiscordClient_SetNoiseSuppression final
 public:
 	bool                                          On;                                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetNoiseSuppression;
 
 // Function DiscordPartnerSDK.DiscordClient.SetOnlineStatus
 // 0x0014 (0x0014 - 0x0000)
@@ -3789,7 +3388,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UDiscordClientResult* Result)> Callback;                                    // 0x0004(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetOnlineStatus;
 
 // Function DiscordPartnerSDK.DiscordClient.SetOpusHardwareCoding
 // 0x0002 (0x0002 - 0x0000)
@@ -3799,7 +3397,6 @@ public:
 	bool                                          encode;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          decode;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetOpusHardwareCoding;
 
 // Function DiscordPartnerSDK.DiscordClient.SetOutputDevice
 // 0x0020 (0x0020 - 0x0000)
@@ -3809,7 +3406,6 @@ public:
 	class FString                                 DeviceID;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetOutputDevice;
 
 // Function DiscordPartnerSDK.DiscordClient.SetOutputVolume
 // 0x0004 (0x0004 - 0x0000)
@@ -3818,7 +3414,6 @@ struct DiscordClient_SetOutputVolume final
 public:
 	float                                         outputVolume;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetOutputVolume;
 
 // Function DiscordPartnerSDK.DiscordClient.SetRelationshipCreatedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3827,7 +3422,6 @@ struct DiscordClient_SetRelationshipCreatedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& UserId, bool isDiscordRelationshipUpdate)> cb;     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetRelationshipCreatedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetRelationshipDeletedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3836,7 +3430,6 @@ struct DiscordClient_SetRelationshipDeletedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& UserId, bool isDiscordRelationshipUpdate)> cb;     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetRelationshipDeletedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetRelationshipGroupsUpdatedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3845,7 +3438,6 @@ struct DiscordClient_SetRelationshipGroupsUpdatedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& UserId)> cb;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetRelationshipGroupsUpdatedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetSelfDeafAll
 // 0x0001 (0x0001 - 0x0000)
@@ -3854,7 +3446,6 @@ struct DiscordClient_SetSelfDeafAll final
 public:
 	bool                                          deaf;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetSelfDeafAll;
 
 // Function DiscordPartnerSDK.DiscordClient.SetSelfMuteAll
 // 0x0001 (0x0001 - 0x0000)
@@ -3863,7 +3454,6 @@ struct DiscordClient_SetSelfMuteAll final
 public:
 	bool                                          Mute;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetSelfMuteAll;
 
 // Function DiscordPartnerSDK.DiscordClient.SetShowingChat
 // 0x0001 (0x0001 - 0x0000)
@@ -3872,7 +3462,6 @@ struct DiscordClient_SetShowingChat final
 public:
 	bool                                          showingChat;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetShowingChat;
 
 // Function DiscordPartnerSDK.DiscordClient.SetSpeakerMode
 // 0x0002 (0x0002 - 0x0000)
@@ -3882,7 +3471,6 @@ public:
 	bool                                          speakerMode;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetSpeakerMode;
 
 // Function DiscordPartnerSDK.DiscordClient.SetStatusChangedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3891,7 +3479,6 @@ struct DiscordClient_SetStatusChangedCallback final
 public:
 	TDelegate<void(EDiscordClientStatus Status, EDiscordClientError Error, int32 errorDetail)> cb;   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetStatusChangedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetThreadPriority
 // 0x0008 (0x0008 - 0x0000)
@@ -3902,7 +3489,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Priority;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetThreadPriority;
 
 // Function DiscordPartnerSDK.DiscordClient.SetTokenExpirationCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3911,7 +3497,6 @@ struct DiscordClient_SetTokenExpirationCallback final
 public:
 	TDelegate<void()>                             Callback;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetTokenExpirationCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetUserUpdatedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3920,7 +3505,6 @@ struct DiscordClient_SetUserUpdatedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& UserId)> cb;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetUserUpdatedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.SetVoiceLogDir
 // 0x0018 (0x0018 - 0x0000)
@@ -3931,7 +3515,6 @@ public:
 	EDiscordLoggingSeverity                       minSeverity;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_DiscordClient_SetVoiceLogDir;
 
 // Function DiscordPartnerSDK.DiscordClient.SetVoiceParticipantChangedCallback
 // 0x0010 (0x0010 - 0x0000)
@@ -3940,7 +3523,6 @@ struct DiscordClient_SetVoiceParticipantChangedCallback final
 public:
 	TDelegate<void(const struct FDiscordUniqueID& LobbyId, const struct FDiscordUniqueID& memberId, bool added)> cb; // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_SetVoiceParticipantChangedCallback;
 
 // Function DiscordPartnerSDK.DiscordClient.ShowAudioRoutePicker
 // 0x0001 (0x0001 - 0x0000)
@@ -3949,7 +3531,6 @@ struct DiscordClient_ShowAudioRoutePicker final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_ShowAudioRoutePicker;
 
 // Function DiscordPartnerSDK.DiscordClient.StartCall
 // 0x0010 (0x0010 - 0x0000)
@@ -3959,7 +3540,6 @@ public:
 	struct FDiscordUniqueID                       ChannelId;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordCall*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_StartCall;
 
 // Function DiscordPartnerSDK.DiscordClient.StartCallWithAudioCallbacks
 // 0x0030 (0x0030 - 0x0000)
@@ -3971,7 +3551,6 @@ public:
 	TDelegate<void(int64 Data, const struct FDiscordUniqueID& samplesPerChannel, int32 SampleRate, const struct FDiscordUniqueID& Channels)> capturedCb; // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordCall*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_StartCallWithAudioCallbacks;
 
 // Function DiscordPartnerSDK.DiscordClient.UnblockUser
 // 0x0018 (0x0018 - 0x0000)
@@ -3981,7 +3560,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_UnblockUser;
 
 // Function DiscordPartnerSDK.DiscordClient.UnlinkChannelFromLobby
 // 0x0018 (0x0018 - 0x0000)
@@ -3991,7 +3569,6 @@ public:
 	struct FDiscordUniqueID                       LobbyId;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> Callback;                                    // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_UnlinkChannelFromLobby;
 
 // Function DiscordPartnerSDK.DiscordClient.UnmergeIntoProvisionalAccount
 // 0x0030 (0x0030 - 0x0000)
@@ -4004,7 +3581,6 @@ public:
 	class FString                                 externalAuthToken;                                 // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> Callback;                                    // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_UnmergeIntoProvisionalAccount;
 
 // Function DiscordPartnerSDK.DiscordClient.UpdateProvisionalAccountDisplayName
 // 0x0020 (0x0020 - 0x0000)
@@ -4014,7 +3590,6 @@ public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> Callback;                                    // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_UpdateProvisionalAccountDisplayName;
 
 // Function DiscordPartnerSDK.DiscordClient.UpdateRichPresence
 // 0x0018 (0x0018 - 0x0000)
@@ -4024,7 +3599,6 @@ public:
 	class UDiscordActivity*                       Activity;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> cb;                                          // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_UpdateRichPresence;
 
 // Function DiscordPartnerSDK.DiscordClient.UpdateToken
 // 0x0028 (0x0028 - 0x0000)
@@ -4036,7 +3610,6 @@ public:
 	class FString                                 token;                                             // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UDiscordClientResult* Result)> Callback;                                    // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordClient_UpdateToken;
 
 // Function DiscordPartnerSDK.DiscordCallInfoHandle.ChannelId
 // 0x0008 (0x0008 - 0x0000)
@@ -4045,7 +3618,6 @@ struct DiscordCallInfoHandle_ChannelId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCallInfoHandle_ChannelId;
 
 // Function DiscordPartnerSDK.DiscordCallInfoHandle.GetParticipants
 // 0x0010 (0x0010 - 0x0000)
@@ -4054,7 +3626,6 @@ struct DiscordCallInfoHandle_GetParticipants final
 public:
 	TArray<struct FDiscordUniqueID>               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCallInfoHandle_GetParticipants;
 
 // Function DiscordPartnerSDK.DiscordCallInfoHandle.GetVoiceStateHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -4064,7 +3635,6 @@ public:
 	struct FDiscordUniqueID                       UserId;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDiscordVoiceStateHandle*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCallInfoHandle_GetVoiceStateHandle;
 
 // Function DiscordPartnerSDK.DiscordCallInfoHandle.GuildId
 // 0x0008 (0x0008 - 0x0000)
@@ -4073,7 +3643,6 @@ struct DiscordCallInfoHandle_GuildId final
 public:
 	struct FDiscordUniqueID                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DiscordCallInfoHandle_GuildId;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

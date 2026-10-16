@@ -56,6 +56,5 @@ public:
 		return GetDefaultObjImpl<UConsoleVariablesAsset>();
 	}
 };
-DUMPER7_ASSERTS_UConsoleVariablesAsset;
 
 SDK_NAMESPACE_END

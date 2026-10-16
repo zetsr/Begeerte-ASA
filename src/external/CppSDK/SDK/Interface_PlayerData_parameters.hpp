@@ -24,7 +24,6 @@ public:
 	class AShooterPlayerController*               Player_Controller;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_PlayerData_C_Interface_PlayerData_Progress_Abb_Sigil_Count;
 
 // Function Interface_PlayerData.Interface_PlayerData_C.Interface_PlayerData Progress Crimson Sigil Count
 // 0x0018 (0x0018 - 0x0000)
@@ -36,7 +35,6 @@ public:
 	class AShooterPlayerController*               Player_Controller;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          success;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_PlayerData_C_Interface_PlayerData_Progress_Crimson_Sigil_Count;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -66,7 +66,6 @@ public:
 	float                                         EdgeMultiplier;                                    // 0x0320(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BoundMultiplier;                                   // 0x0324(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGeometryCollectionTransferVertexScalarAttributeNode;
 
 // ScriptStruct GeometryCollectionDepNodes.SetVertexColorInCollectionFromFloatArrayDataflowNode
 // 0x00C8 (0x0260 - 0x0198)
@@ -78,7 +77,6 @@ public:
 	float                                         Scale;                                             // 0x0258(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSetVertexColorInCollectionFromFloatArrayDataflowNode;
 
 // ScriptStruct GeometryCollectionDepNodes.SetVertexColorInCollectionFromVertexSelectionDataflowNode
 // 0x00F0 (0x0288 - 0x0198)
@@ -90,6 +88,5 @@ public:
 	struct FLinearColor                           SelectedColor;                                     // 0x0268(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           NonSelectedColor;                                  // 0x0278(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSetVertexColorInCollectionFromVertexSelectionDataflowNode;
 
 SDK_NAMESPACE_END

@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UImageWriteBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UImageWriteBlueprintLibrary;
 
 SDK_NAMESPACE_END

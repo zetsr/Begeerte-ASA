@@ -2261,7 +2261,6 @@ struct FDeferredMovementTick final : public FTickFunction
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDeferredMovementTick;
 
 // ScriptStruct ShooterGame.TargetClassDamageScaler
 // 0x0010 (0x0010 - 0x0000)
@@ -2272,7 +2271,6 @@ public:
 	float                                         DamageScale;                                       // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTargetClassDamageScaler;
 
 // ScriptStruct ShooterGame.CDOClassDebug
 // 0x0048 (0x0048 - 0x0000)
@@ -2285,7 +2283,6 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           PropertyNames;                                     // 0x0038(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCDOClassDebug;
 
 // ScriptStruct ShooterGame.ArkTributeEntity
 // 0x0004 (0x0004 - 0x0000)
@@ -2294,7 +2291,6 @@ struct FArkTributeEntity
 public:
 	int32                                         UploadTime;                                        // 0x0000(0x0004)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FArkTributeEntity;
 
 // ScriptStruct ShooterGame.AnimNode_GroundFollowBones
 // 0x0278 (0x0340 - 0x00C8)
@@ -2345,7 +2341,6 @@ public:
 	float                                         DebugDrawScale;                                    // 0x0258(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_25C[0xE4];                                     // 0x025C(0x00E4)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_GroundFollowBones;
 
 // ScriptStruct ShooterGame.ControllerEvent
 // 0x0020 (0x0040 - 0x0020)
@@ -2354,7 +2349,6 @@ struct FControllerEvent final : public FInputEvent
 public:
 	uint8                                         Pad_20[0x20];                                      // 0x0020(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FControllerEvent;
 
 // ScriptStruct ShooterGame.TribeGovernment
 // 0x0014 (0x0014 - 0x0000)
@@ -2367,7 +2361,6 @@ public:
 	int32                                         TribeGovern_DinoTaming;                            // 0x000C(0x0004)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TribeGovern_DinoUnclaimAdminOnly;                  // 0x0010(0x0004)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTribeGovernment;
 
 // ScriptStruct ShooterGame.MissionRelatedActorData
 // 0x0040 (0x0040 - 0x0000)
@@ -2386,7 +2379,6 @@ public:
 	int32                                         IndexMatchRangeOffset;                             // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMissionRelatedActorData;
 
 // ScriptStruct ShooterGame.MissionPhaseRequirement
 // 0x0090 (0x0090 - 0x0000)
@@ -2412,7 +2404,6 @@ public:
 	struct FLinearColor                           CustomPhaseRequirementProgressBarColor;            // 0x007C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMissionPhaseRequirement;
 
 // ScriptStruct ShooterGame.MissionWorldIndicator
 // 0x00B0 (0x00B0 - 0x0000)
@@ -2450,7 +2441,6 @@ public:
 	uint8                                         bShowProgressLabelWhenOffScreen : 1;               // 0x00A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMissionWorldIndicator;
 
 // ScriptStruct ShooterGame.CustomCosmeticAdditionalSettings
 // 0x0058 (0x0058 - 0x0000)
@@ -2469,7 +2459,6 @@ public:
 	class FName                                   CostumeOverrideRiderSocketName;                    // 0x004C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCustomCosmeticAdditionalSettings;
 
 // ScriptStruct ShooterGame.ItemNetID
 // 0x0008 (0x0008 - 0x0000)
@@ -2479,7 +2468,6 @@ public:
 	uint32                                        ItemID1;                                           // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        ItemID2;                                           // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FItemNetID;
 
 // ScriptStruct ShooterGame.DinoAncestorsEntry
 // 0x0030 (0x0030 - 0x0000)
@@ -2493,7 +2481,6 @@ public:
 	uint32                                        FemaleDinoID1;                                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        FemaleDinoID2;                                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoAncestorsEntry;
 
 // ScriptStruct ShooterGame.CustomItemByteArray
 // 0x0010 (0x0010 - 0x0000)
@@ -2502,7 +2489,6 @@ struct FCustomItemByteArray final
 public:
 	TArray<uint8>                                 Bytes;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomItemByteArray;
 
 // ScriptStruct ShooterGame.CustomItemByteArrays
 // 0x0010 (0x0010 - 0x0000)
@@ -2511,7 +2497,6 @@ struct FCustomItemByteArrays final
 public:
 	TArray<struct FCustomItemByteArray>           ByteArrays;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomItemByteArrays;
 
 // ScriptStruct ShooterGame.CustomItemDoubles
 // 0x0010 (0x0010 - 0x0000)
@@ -2520,7 +2505,6 @@ struct FCustomItemDoubles final
 public:
 	TArray<double>                                Doubles;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomItemDoubles;
 
 // ScriptStruct ShooterGame.PaintingKeyValue
 // 0x0008 (0x0008 - 0x0000)
@@ -2530,7 +2514,6 @@ public:
 	int32                                         Key;                                               // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Value;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPaintingKeyValue;
 
 // ScriptStruct ShooterGame.CustomItemData
 // 0x00A8 (0x00A8 - 0x0000)
@@ -2549,7 +2532,6 @@ public:
 	class FName                                   CustomDataName;                                    // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSoftClassPtr<class UClass>>           CustomDataSoftClasses;                             // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomItemData;
 
 // ScriptStruct ShooterGame.CraftingResourceRequirement
 // 0x0018 (0x0018 - 0x0000)
@@ -2562,7 +2544,6 @@ public:
 	bool                                          bCraftingRequireExactResourceType;                 // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCraftingResourceRequirement;
 
 // ScriptStruct ShooterGame.ItemNetInfo
 // 0x0230 (0x0230 - 0x0000)
@@ -2644,7 +2625,6 @@ public:
 	uint32                                        AssociatedDinoID1;                                 // 0x0228(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        AssociatedDinoID2;                                 // 0x022C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FItemNetInfo;
 
 // ScriptStruct ShooterGame.ClientMissionData
 // 0x0058 (0x0058 - 0x0000)
@@ -2658,7 +2638,6 @@ public:
 	TArray<struct FMissionWorldIndicator>         LocalWorldIndicators;                              // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FItemNetInfo>                   Items;                                             // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FClientMissionData;
 
 // ScriptStruct ShooterGame.LabColor
 // 0x000C (0x000C - 0x0000)
@@ -2667,7 +2646,6 @@ struct alignas(0x04) FLabColor final
 public:
 	uint8                                         Pad_0[0xC];                                        // 0x0000(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLabColor;
 
 // ScriptStruct ShooterGame.BodyTextureMaskDeferredApplication
 // 0x0018 (0x0018 - 0x0000)
@@ -2679,7 +2657,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             PlayerMeshNoItemDefaultTextureMask;                // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBodyTextureMaskDeferredApplication;
 
 // ScriptStruct ShooterGame.SoundWaveAnimTexturePairs
 // 0x0040 (0x0040 - 0x0000)
@@ -2689,7 +2666,6 @@ public:
 	struct FSoftObjectPath                        LocalizedSoundWave;                                // 0x0000(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        MatchingAnimTexture;                               // 0x0020(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSoundWaveAnimTexturePairs;
 
 // ScriptStruct ShooterGame.LocalizedSoundWaveAnimTexturePairArrays
 // 0x0020 (0x0020 - 0x0000)
@@ -2699,7 +2675,6 @@ public:
 	class FString                                 TwoLetterISOLanguageName;                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FSoundWaveAnimTexturePairs>     SoundWaveAnimTexturePairs;                         // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLocalizedSoundWaveAnimTexturePairArrays;
 
 // ScriptStruct ShooterGame.CompanionReactionData
 // 0x00B0 (0x00B0 - 0x0000)
@@ -2740,7 +2715,6 @@ public:
 	int32                                         ExplorerNoteIndexToUnlock;                         // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCompanionReactionData;
 
 // ScriptStruct ShooterGame.ExtraItemAttachmentInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -2750,7 +2724,6 @@ public:
 	class UActorComponent*                        ExtraComponentsToAttach;                           // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   SocketToAttachTo;                                  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FExtraItemAttachmentInfo;
 
 // ScriptStruct ShooterGame.MidasTouchData
 // 0x0018 (0x0018 - 0x0000)
@@ -2762,7 +2735,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        StartTime;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMidasTouchData;
 
 // ScriptStruct ShooterGame.StorageInterfaceItemData
 // 0x0010 (0x0010 - 0x0000)
@@ -2774,7 +2746,6 @@ public:
 	int32                                         ThresholdQty;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         FuelItemQty;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStorageInterfaceItemData;
 
 // ScriptStruct ShooterGame.AnimNode_MultiFabrik_Dinos
 // 0x0030 (0x00F8 - 0x00C8)
@@ -2790,7 +2761,6 @@ public:
 	bool                                          bInitOffset;                                       // 0x00F0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_MultiFabrik_Dinos;
 
 // ScriptStruct ShooterGame.ArkTributePlayerData
 // 0x0154 (0x0158 - 0x0004)
@@ -2818,7 +2788,6 @@ public:
 	uint8                                         Pad_144[0x4];                                      // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 DownloadClaimServerName;                           // 0x0148(0x0010)(ZeroConstructor, RepSkip, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FArkTributePlayerData;
 
 // ScriptStruct ShooterGame.CustomButtonWidgetStyle
 // 0x0040 (0x0048 - 0x0008)
@@ -2830,7 +2799,6 @@ public:
 	struct FLinearColor                           PressedChildTintColor;                             // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           DisabledChildTintColor;                            // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomButtonWidgetStyle;
 
 // ScriptStruct ShooterGame.CustomCosmeticModData
 // 0x0010 (0x0010 - 0x0000)
@@ -2842,7 +2810,6 @@ public:
 	bool                                          bAllowNonDataOnly;                                 // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCustomCosmeticModData;
 
 // ScriptStruct ShooterGame.EmoteGroup
 // 0x0020 (0x0020 - 0x0000)
@@ -2853,7 +2820,6 @@ public:
 	struct FLinearColor                           GroupColor;                                        // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture2D*                             GroupIcon;                                         // 0x0018(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FEmoteGroup;
 
 // ScriptStruct ShooterGame.MarketBaseOrder
 // 0x0038 (0x0038 - 0x0000)
@@ -2871,7 +2837,6 @@ public:
 	double                                        OrderTime;                                         // 0x0028(0x0008)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        LastTimeModifiedOrder;                             // 0x0030(0x0008)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMarketBaseOrder;
 
 // ScriptStruct ShooterGame.BiomeZoneImpactEffect
 // 0x0080 (0x0080 - 0x0000)
@@ -2880,7 +2845,6 @@ struct FBiomeZoneImpactEffect final
 public:
 	TSubclassOf<class AActor>                     SpawnActors[0x10];                                 // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBiomeZoneImpactEffect;
 
 // ScriptStruct ShooterGame.BlueprintHTTPResponseData
 // 0x00A8 (0x00A8 - 0x0000)
@@ -2898,7 +2862,6 @@ public:
 	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 StringResult;                                      // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBlueprintHTTPResponseData;
 
 // ScriptStruct ShooterGame.DamageNegatingItem
 // 0x0010 (0x0010 - 0x0000)
@@ -2909,14 +2872,12 @@ public:
 	float                                         NegationFactor;                                    // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDamageNegatingItem;
 
 // ScriptStruct ShooterGame.Rotator_NetQuantize
 // 0x0000 (0x0018 - 0x0018)
 struct FRotator_NetQuantize final : public FRotator
 {
 };
-DUMPER7_ASSERTS_FRotator_NetQuantize;
 
 // ScriptStruct ShooterGame.HibernationEntity
 // 0x00A8 (0x00A8 - 0x0000)
@@ -2925,7 +2886,6 @@ struct alignas(0x08) FHibernationEntity final
 public:
 	uint8                                         Pad_0[0xA8];                                       // 0x0000(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FHibernationEntity;
 
 // ScriptStruct ShooterGame.AnimNode_GroundBones
 // 0x0088 (0x0150 - 0x00C8)
@@ -2935,7 +2895,6 @@ public:
 	uint8                                         bDebug : 1;                                        // 0x00C8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_C9[0x87];                                      // 0x00C9(0x0087)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_GroundBones;
 
 // ScriptStruct ShooterGame.HordeCrateNPCGroup
 // 0x0050 (0x0050 - 0x0000)
@@ -2948,7 +2907,6 @@ public:
 	TArray<int32>                                 MinLevels;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 MaxLevels;                                         // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FHordeCrateNPCGroup;
 
 // ScriptStruct ShooterGame.HordeCrateWave
 // 0x0060 (0x0060 - 0x0000)
@@ -2961,7 +2919,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHordeCrateNPCGroup                    NPCsToSpawn;                                       // 0x0010(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FHordeCrateWave;
 
 // ScriptStruct ShooterGame.SaddlePassengerSeatDefinition
 // 0x0180 (0x0180 - 0x0000)
@@ -3031,7 +2988,6 @@ public:
 	uint8                                         bForceAllowMountedWeaponry : 1;                    // 0x017B(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSaddlePassengerSeatDefinition;
 
 // ScriptStruct ShooterGame.ExplorerNoteLocationsPair
 // 0x0018 (0x0018 - 0x0000)
@@ -3042,7 +2998,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CheatString;                                       // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FExplorerNoteLocationsPair;
 
 // ScriptStruct ShooterGame.BlueprintHTTPRequestData
 // 0x0088 (0x0088 - 0x0000)
@@ -3056,7 +3011,6 @@ public:
 	float                                         Timeout;                                           // 0x0080(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBlueprintHTTPRequestData;
 
 // ScriptStruct ShooterGame.ColdStoredRichItem
 // 0x0238 (0x0238 - 0x0000)
@@ -3067,7 +3021,6 @@ public:
 	int32                                         OrderIndex;                                        // 0x0230(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FColdStoredRichItem;
 
 // ScriptStruct ShooterGame.ColorizationPalette
 // 0x0030 (0x0030 - 0x0000)
@@ -3093,7 +3046,6 @@ public:
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 Color5;                                            // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FColorizationPalette;
 
 // ScriptStruct ShooterGame.PrimalPlayerCharacterConfigStructReplicated
 // 0x0148 (0x0148 - 0x0000)
@@ -3126,7 +3078,6 @@ public:
 	uint8                                         DynamicFaceIndex[0x3];                             // 0x013E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalPlayerCharacterConfigStructReplicated;
 
 // ScriptStruct ShooterGame.PlayerDeathNotification
 // 0x0088 (0x0088 - 0x0000)
@@ -3146,7 +3097,6 @@ public:
 	int64                                         LinkedPlayerID;                                    // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPrimalPlayerCharacterConfigStructReplicated> PlayersData;                         // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlayerDeathNotification;
 
 // ScriptStruct ShooterGame.EngramsSetSoftReferenceMapping
 // 0x0010 (0x0010 - 0x0000)
@@ -3155,7 +3105,6 @@ struct FEngramsSetSoftReferenceMapping final
 public:
 	TArray<class FString>                         EngramSetToUnlock;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEngramsSetSoftReferenceMapping;
 
 // ScriptStruct ShooterGame.BossEngramsSoftReferenceMapping
 // 0x0010 (0x0010 - 0x0000)
@@ -3164,7 +3113,6 @@ struct FBossEngramsSoftReferenceMapping final
 public:
 	TArray<struct FEngramsSetSoftReferenceMapping> EngramSets;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBossEngramsSoftReferenceMapping;
 
 // ScriptStruct ShooterGame.UI_MainMenuLink
 // 0x0018 (0x0018 - 0x0000)
@@ -3174,7 +3122,6 @@ public:
 	class FString                                 MapName;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UUI_MainMenu>               Class;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUI_MainMenuLink;
 
 // ScriptStruct ShooterGame.DecalData
 // 0x0020 (0x0020 - 0x0000)
@@ -3189,7 +3136,6 @@ public:
 	float                                         RandomAngleRange;                                  // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDecalData;
 
 // ScriptStruct ShooterGame.BiomeZoneVolumeEffect
 // 0x0048 (0x0048 - 0x0000)
@@ -3211,7 +3157,6 @@ public:
 	float                                         ScaleAtMinDistance;                                // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ScaleAtMaxDistance;                                // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBiomeZoneVolumeEffect;
 
 // ScriptStruct ShooterGame.AllyRadarDatas
 // 0x0068 (0x0068 - 0x0000)
@@ -3228,7 +3173,6 @@ public:
 	int32                                         TeamID;                                            // 0x0060(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAllyRadarDatas;
 
 // ScriptStruct ShooterGame.AhoCorasickState
 // 0x0068 (0x0068 - 0x0000)
@@ -3240,7 +3184,6 @@ public:
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Goto;                                              // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAhoCorasickState;
 
 // ScriptStruct ShooterGame.AhoCorasickMatcher
 // 0x0018 (0x0018 - 0x0000)
@@ -3251,7 +3194,6 @@ public:
 	int32                                         MaxC;                                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAhoCorasickMatcher;
 
 // ScriptStruct ShooterGame.EventItem
 // 0x0038 (0x0038 - 0x0000)
@@ -3263,7 +3205,6 @@ public:
 	bool                                          bIsEngram;                                         // 0x0030(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEventItem;
 
 // ScriptStruct ShooterGame.PrimalStructureDBEntry
 // 0x0001 (0x0001 - 0x0000)
@@ -3273,7 +3214,6 @@ public:
 	uint8                                         bTraceThruEncroachmentPoints : 1;                  // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bSpawnCrateOnTopOfStructures : 1;                  // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 };
-DUMPER7_ASSERTS_FPrimalStructureDBEntry;
 
 // ScriptStruct ShooterGame.TransactionLogData
 // 0x0028 (0x0028 - 0x0000)
@@ -3282,7 +3222,6 @@ struct alignas(0x08) FTransactionLogData final
 public:
 	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTransactionLogData;
 
 // ScriptStruct ShooterGame.PrimalWirelessReferences
 // 0x00A0 (0x00A0 - 0x0000)
@@ -3292,7 +3231,6 @@ public:
 	TSet<class APrimalStructureItemContainer*>    WirelessSources;                                   // 0x0000(0x0050)(BlueprintVisible, Transient, NativeAccessSpecifierPublic)
 	TSet<class APrimalStructureItemContainer*>    WirelessConsumers;                                 // 0x0050(0x0050)(BlueprintVisible, Transient, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalWirelessReferences;
 
 // ScriptStruct ShooterGame.FakeStaticMeshSocketData
 // 0x0070 (0x0070 - 0x0000)
@@ -3303,7 +3241,6 @@ public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             RelativeTransform;                                 // 0x0010(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFakeStaticMeshSocketData;
 
 // ScriptStruct ShooterGame.GridIndex
 // 0x0008 (0x0008 - 0x0000)
@@ -3313,7 +3250,6 @@ public:
 	int32                                         X;                                                 // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Y;                                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGridIndex;
 
 // ScriptStruct ShooterGame.MusicTrackEntry
 // 0x0038 (0x0038 - 0x0000)
@@ -3327,7 +3263,6 @@ public:
 	float                                         OverrideTrackDuration;                             // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMusicTrackEntry;
 
 // ScriptStruct ShooterGame.ArkTributeInventoryItem
 // 0x024C (0x0250 - 0x0004)
@@ -3339,7 +3274,6 @@ public:
 	float                                         Version;                                           // 0x0238(0x0004)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_23C[0x14];                                     // 0x023C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FArkTributeInventoryItem;
 
 // ScriptStruct ShooterGame.ARKTributeDino
 // 0x012C (0x0130 - 0x0004)
@@ -3357,7 +3291,6 @@ public:
 	uint32                                        DinoID1;                                           // 0x0128(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        DinoID2;                                           // 0x012C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FARKTributeDino;
 
 // ScriptStruct ShooterGame.ArkInventoryData
 // 0x0058 (0x0058 - 0x0000)
@@ -3372,7 +3305,6 @@ public:
 	TArray<struct FCustomItemData>                CustomCloudDatas;                                  // 0x0038(0x0010)(ZeroConstructor, Transient, SaveGame, NativeAccessSpecifierPublic)
 	TArray<TSoftClassPtr<class UClass>>           PersistentItemUnlocks;                             // 0x0048(0x0010)(ZeroConstructor, Transient, SaveGame, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FArkInventoryData;
 
 // ScriptStruct ShooterGame.IntArray
 // 0x0010 (0x0010 - 0x0000)
@@ -3381,7 +3313,6 @@ struct FIntArray final
 public:
 	TArray<int32>                                 Array;                                             // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FIntArray;
 
 // ScriptStruct ShooterGame.StringArray
 // 0x0010 (0x0010 - 0x0000)
@@ -3390,7 +3321,6 @@ struct FStringArray final
 public:
 	TArray<class FString>                         Array;                                             // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStringArray;
 
 // ScriptStruct ShooterGame.SkinNetMessageParams
 // 0x0040 (0x0040 - 0x0000)
@@ -3402,7 +3332,6 @@ public:
 	TArray<TWeakObjectPtr<class UObject>>         objectParams;                                      // 0x0020(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class FName>                           nameParams;                                        // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSkinNetMessageParams;
 
 // ScriptStruct ShooterGame.PrimalStructureTemplateEntry
 // 0x0130 (0x0130 - 0x0000)
@@ -3427,7 +3356,6 @@ public:
 	TArray<class UMeshComponent*>                 MeshComps;                                         // 0x0110(0x0010)(BlueprintVisible, ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TArray<class UStaticMeshComponent*>           CollisionComps;                                    // 0x0120(0x0010)(BlueprintVisible, ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureTemplateEntry;
 
 // ScriptStruct ShooterGame.SortedTemplateContentsEntry
 // 0x0020 (0x0020 - 0x0000)
@@ -3439,7 +3367,6 @@ public:
 	int32                                         StructureCount;                                    // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         BuiltCount;                                        // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSortedTemplateContentsEntry;
 
 // ScriptStruct ShooterGame.PrimalStructureTemplateData
 // 0x0080 (0x0080 - 0x0000)
@@ -3458,7 +3385,6 @@ public:
 	int32                                         InvalidStructureCount;                             // 0x0078(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InvalidSkinCount;                                  // 0x007C(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureTemplateData;
 
 // ScriptStruct ShooterGame.PlayerAllClustersInventory
 // 0x0048 (0x0048 - 0x0000)
@@ -3467,7 +3393,6 @@ struct alignas(0x08) FPlayerAllClustersInventory final
 public:
 	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPlayerAllClustersInventory;
 
 // ScriptStruct ShooterGame.AnimNode_ApplyBoneMods
 // 0x0008 (0x00D0 - 0x00C8)
@@ -3476,7 +3401,6 @@ struct FAnimNode_ApplyBoneMods final : public FAnimNode_SkeletalControlBase
 public:
 	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_ApplyBoneMods;
 
 // ScriptStruct ShooterGame.TurretAOEAttackType
 // 0x0098 (0x0098 - 0x0000)
@@ -3509,7 +3433,6 @@ public:
 	uint8                                         bForceTargetRidingDinoNotRider : 1;                // 0x0090(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTurretAOEAttackType;
 
 // ScriptStruct ShooterGame.AnimNode_FemaleBoneMods
 // 0x0008 (0x00D0 - 0x00C8)
@@ -3518,7 +3441,6 @@ struct FAnimNode_FemaleBoneMods final : public FAnimNode_SkeletalControlBase
 public:
 	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_FemaleBoneMods;
 
 // ScriptStruct ShooterGame.SublevelOverrideDefinition
 // 0x0010 (0x0010 - 0x0000)
@@ -3528,7 +3450,6 @@ public:
 	class FName                                   SublevelPackageToReplace;                          // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   SublevelPackageToActivate;                         // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSublevelOverrideDefinition;
 
 // ScriptStruct ShooterGame.LevelStaticMeshReskinDefinition
 // 0x0018 (0x0018 - 0x0000)
@@ -3538,7 +3459,6 @@ public:
 	class FString                                 MaterialNameToReplace;                             // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMaterialInterface*                     NewMaterial;                                       // 0x0010(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLevelStaticMeshReskinDefinition;
 
 // ScriptStruct ShooterGame.SublevelOverrideGroup
 // 0x0038 (0x0038 - 0x0000)
@@ -3551,7 +3471,6 @@ public:
 	TArray<struct FSublevelOverrideDefinition>    SublevelOverrides;                                 // 0x0018(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<struct FLevelStaticMeshReskinDefinition> StaticMeshReskins;                               // 0x0028(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSublevelOverrideGroup;
 
 // ScriptStruct ShooterGame.AnimNode_FixVirtualBones
 // 0x0028 (0x00F0 - 0x00C8)
@@ -3564,7 +3483,6 @@ public:
 	TArray<struct FBoneReference>                 VirtualBonesToFix;                                 // 0x00D0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FBoneReference>                 VirtualBoneTargets;                                // 0x00E0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAnimNode_FixVirtualBones;
 
 // ScriptStruct ShooterGame.AnimNode_ModifyBones
 // 0x0008 (0x00D0 - 0x00C8)
@@ -3573,7 +3491,6 @@ struct FAnimNode_ModifyBones final : public FAnimNode_SkeletalControlBase
 public:
 	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_ModifyBones;
 
 // ScriptStruct ShooterGame.ClassNameReplacement
 // 0x0020 (0x0020 - 0x0000)
@@ -3583,7 +3500,6 @@ public:
 	class FString                                 FromClassName;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ToClassName;                                       // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FClassNameReplacement;
 
 // ScriptStruct ShooterGame.AnimNode_MultiFabrik
 // 0x0010 (0x00D8 - 0x00C8)
@@ -3595,7 +3511,6 @@ public:
 	uint8                                         Pad_CD[0x3];                                       // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   NodeName;                                          // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-DUMPER7_ASSERTS_FAnimNode_MultiFabrik;
 
 // ScriptStruct ShooterGame.TradeLogData
 // 0x0070 (0x0070 - 0x0000)
@@ -3604,7 +3519,6 @@ struct alignas(0x08) FTradeLogData final
 public:
 	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTradeLogData;
 
 // ScriptStruct ShooterGame.FunctionParams_NoArrays
 // 0x0310 (0x0310 - 0x0000)
@@ -3669,7 +3583,6 @@ public:
 	uint8                                         ByteParam3;                                        // 0x030A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_30B[0x5];                                      // 0x030B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FFunctionParams_NoArrays;
 
 // ScriptStruct ShooterGame.CustomWheelEntry_v2
 // 0x0380 (0x0380 - 0x0000)
@@ -3695,7 +3608,6 @@ public:
 	struct FFunctionParams_NoArrays               CustomData;                                        // 0x0068(0x0310)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class UTexture2D>              EntryIcon_Automatic;                               // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomWheelEntry_v2;
 
 // ScriptStruct ShooterGame.BattleTribeData
 // 0x0018 (0x0018 - 0x0000)
@@ -3706,7 +3618,6 @@ public:
 	int32                                         TribeID;                                           // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBattleTribeData;
 
 // ScriptStruct ShooterGame.BattlePlayerData
 // 0x0020 (0x0020 - 0x0000)
@@ -3721,7 +3632,6 @@ public:
 	int32                                         PlayerID;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBattlePlayerData;
 
 // ScriptStruct ShooterGame.RVCPortholeStateChange
 // 0x0002 (0x0002 - 0x0000)
@@ -3731,7 +3641,6 @@ public:
 	uint8                                         PortholeIndex;                                     // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         State;                                             // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRVCPortholeStateChange;
 
 // ScriptStruct ShooterGame.WebsocketCallerRegistered
 // 0x0020 (0x0020 - 0x0000)
@@ -3740,7 +3649,6 @@ struct alignas(0x08) FWebsocketCallerRegistered final
 public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWebsocketCallerRegistered;
 
 // ScriptStruct ShooterGame.HarvestFoliageAttackStatus
 // 0x0001 (0x0001 - 0x0000)
@@ -3749,7 +3657,6 @@ struct FHarvestFoliageAttackStatus final
 public:
 	bool                                          bActive;                                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FHarvestFoliageAttackStatus;
 
 // ScriptStruct ShooterGame.SailScaler
 // 0x0010 (0x0010 - 0x0000)
@@ -3760,7 +3667,6 @@ public:
 	float                                         ThrottleForceMultiplier;                           // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SteeringForceMultiplier;                           // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSailScaler;
 
 // ScriptStruct ShooterGame.BucketConfig
 // 0x000C (0x000C - 0x0000)
@@ -3773,7 +3679,6 @@ public:
 	uint8                                         bCanWriteToDataChannels : 1;                       // 0x0008(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBucketConfig;
 
 // ScriptStruct ShooterGame.NetMarketInfo
 // 0x0048 (0x0048 - 0x0000)
@@ -3787,7 +3692,6 @@ public:
 	struct FLinearColor                           MarketIconColor;                                   // 0x0020(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                MarketLocation;                                    // 0x0030(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNetMarketInfo;
 
 // ScriptStruct ShooterGame.NetMarketSellOrder
 // 0x0260 (0x0260 - 0x0000)
@@ -3803,7 +3707,6 @@ public:
 	double                                        OrderTime;                                         // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FItemNetID>                     AdditionalItemIDs;                                 // 0x0250(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNetMarketSellOrder;
 
 // ScriptStruct ShooterGame.NetMarketRequestOrder
 // 0x0048 (0x0048 - 0x0000)
@@ -3818,7 +3721,6 @@ public:
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        OrderTime;                                         // 0x0040(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNetMarketRequestOrder;
 
 // ScriptStruct ShooterGame.NetMarketTradeData
 // 0x0030 (0x0030 - 0x0000)
@@ -3829,7 +3731,6 @@ public:
 	TArray<struct FNetMarketSellOrder>            SellOrders;                                        // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FNetMarketRequestOrder>         RequestOrders;                                     // 0x0020(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNetMarketTradeData;
 
 // ScriptStruct ShooterGame.BucketConfigArray
 // 0x0010 (0x0010 - 0x0000)
@@ -3838,7 +3739,6 @@ struct FBucketConfigArray final
 public:
 	TArray<struct FBucketConfig>                  Buckets;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBucketConfigArray;
 
 // ScriptStruct ShooterGame.ShooterWeaponDBEntry
 // 0x00A8 (0x00A8 - 0x0000)
@@ -3870,7 +3770,6 @@ public:
 	TSoftClassPtr<class UClass>                   ProjectileClass;                                   // 0x0030(0x0028)(Edit, EditConst, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSet<TSoftClassPtr<class UClass>>             IsChildClassOf;                                    // 0x0058(0x0050)(Edit, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FShooterWeaponDBEntry;
 
 // ScriptStruct ShooterGame.PrimalDinoDBEntry
 // 0x0078 (0x0078 - 0x0000)
@@ -3892,7 +3791,6 @@ public:
 	uint8                                         bIfAmphibiousCountAsLandDinoForNPCVolumes : 1;     // 0x0070(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalDinoDBEntry;
 
 // ScriptStruct ShooterGame.CannonAmmoConfig
 // 0x0018 (0x0018 - 0x0000)
@@ -3905,7 +3803,6 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FireInterval;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCannonAmmoConfig;
 
 // ScriptStruct ShooterGame.ShooterDiscordSessionFriendRequestData
 // 0x0020 (0x0020 - 0x0000)
@@ -3920,7 +3817,6 @@ public:
 	bool                                          bIsRead;                                           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FShooterDiscordSessionFriendRequestData;
 
 // ScriptStruct ShooterGame.PrimalInventoryDBEntry
 // 0x0010 (0x0010 - 0x0000)
@@ -3929,7 +3825,6 @@ struct FPrimalInventoryDBEntry final
 public:
 	class FString                                 InventoryNameOverride;                             // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalInventoryDBEntry;
 
 // ScriptStruct ShooterGame.PrimalMissionDBEntry
 // 0x0001 (0x0001 - 0x0000)
@@ -3938,7 +3833,6 @@ struct FPrimalMissionDBEntry final
 public:
 	bool                                          bUsesFallbackSeeds;                                // 0x0000(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalMissionDBEntry;
 
 // ScriptStruct ShooterGame.EngramEntryOverride
 // 0x0028 (0x0028 - 0x0000)
@@ -3954,7 +3848,6 @@ public:
 	bool                                          RemoveEngramPreReq;                                // 0x0020(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEngramEntryOverride;
 
 // ScriptStruct ShooterGame.ColorizationPreset
 // 0x0060 (0x0060 - 0x0000)
@@ -3966,7 +3859,6 @@ public:
 	TArray<class FName>                           Tags;                                              // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FColorizationPalette                   Palette;                                           // 0x0030(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FColorizationPreset;
 
 // ScriptStruct ShooterGame.DataListEntryButtonBorderColors
 // 0x0010 (0x0010 - 0x0000)
@@ -3978,7 +3870,6 @@ public:
 	struct FColor                                 Pressed;                                           // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 Disabled;                                          // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDataListEntryButtonBorderColors;
 
 // ScriptStruct ShooterGame.MarketInfo
 // 0x0058 (0x0058 - 0x0000)
@@ -3993,7 +3884,6 @@ public:
 	double                                        LastTimeRemovedSellOrderFromMarket;                // 0x0048(0x0008)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        LastTimeRemovedRequestOrderFromMarket;             // 0x0050(0x0008)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMarketInfo;
 
 // ScriptStruct ShooterGame.MarketItemInstanceData
 // 0x0058 (0x0058 - 0x0000)
@@ -4016,7 +3906,6 @@ public:
 	class UTexture2D*                             AmmoTypeIcon;                                      // 0x0040(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MiscInfoText;                                      // 0x0048(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMarketItemInstanceData;
 
 // ScriptStruct ShooterGame.PrimalFolderIcons
 // 0x0020 (0x0020 - 0x0000)
@@ -4029,7 +3918,6 @@ public:
 	struct FColor                                 TextColor;                                         // 0x0018(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalFolderIcons;
 
 // ScriptStruct ShooterGame.DeferredMove
 // 0x0010 (0x0010 - 0x0000)
@@ -4041,7 +3929,6 @@ public:
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DeltaTime;                                         // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDeferredMove;
 
 // ScriptStruct ShooterGame.KeyBindingItem
 // 0x0030 (0x0030 - 0x0000)
@@ -4056,7 +3943,6 @@ public:
 	float                                         Scale;                                             // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FKeyBindingItem;
 
 // ScriptStruct ShooterGame.DiscordConversationMessageViewData
 // 0x0050 (0x0050 - 0x0000)
@@ -4074,7 +3960,6 @@ public:
 	bool                                          bIsDeleted;                                        // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDiscordConversationMessageViewData;
 
 // ScriptStruct ShooterGame.DiscordConversationActionViewData
 // 0x0080 (0x0080 - 0x0000)
@@ -4096,7 +3981,6 @@ public:
 	bool                                          bEnableSecondaryAction;                            // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDiscordConversationActionViewData;
 
 // ScriptStruct ShooterGame.DiscordFriendActionPanelState
 // 0x0006 (0x0006 - 0x0000)
@@ -4110,7 +3994,6 @@ public:
 	bool                                          bEnablePrimaryAction;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableSecondaryAction;                            // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDiscordFriendActionPanelState;
 
 // ScriptStruct ShooterGame.AssetPathObjectPair
 // 0x0028 (0x0028 - 0x0000)
@@ -4120,7 +4003,6 @@ public:
 	struct FSoftObjectPath                        AssetPath;                                         // 0x0000(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                AssetObject;                                       // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAssetPathObjectPair;
 
 // ScriptStruct ShooterGame.DiscordFriendViewData
 // 0x00F0 (0x00F0 - 0x0000)
@@ -4171,7 +4053,6 @@ public:
 	bool                                          bShowNotFriendOverlay;                             // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDiscordFriendViewData;
 
 // ScriptStruct ShooterGame.MissionGlobalData
 // 0x0008 (0x0008 - 0x0000)
@@ -4180,7 +4061,6 @@ struct FMissionGlobalData final
 public:
 	double                                        LastMissionDeactivatedUtcTime;                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMissionGlobalData;
 
 // ScriptStruct ShooterGame.DiscordFriendsStatusVisualDefinition
 // 0x00E0 (0x00E0 - 0x0000)
@@ -4194,7 +4074,6 @@ public:
 	struct FSlateBrush                            StateBrush;                                        // 0x0020(0x00B0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FLinearColor                           StateColor;                                        // 0x00D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDiscordFriendsStatusVisualDefinition;
 
 // ScriptStruct ShooterGame.DiscordFriendsPlatformVisualDefinition
 // 0x00B0 (0x00B0 - 0x0000)
@@ -4203,7 +4082,6 @@ struct FDiscordFriendsPlatformVisualDefinition final
 public:
 	struct FSlateBrush                            PlatformBrush;                                     // 0x0000(0x00B0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDiscordFriendsPlatformVisualDefinition;
 
 // ScriptStruct ShooterGame.DiscordFriendsSectionVisualDefinition
 // 0x0010 (0x0010 - 0x0000)
@@ -4212,7 +4090,6 @@ struct FDiscordFriendsSectionVisualDefinition final
 public:
 	class FText                                   DisplayText;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDiscordFriendsSectionVisualDefinition;
 
 // ScriptStruct ShooterGame.RangedValues
 // 0x0008 (0x0008 - 0x0000)
@@ -4222,7 +4099,6 @@ public:
 	int32                                         Range;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Value;                                             // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRangedValues;
 
 // ScriptStruct ShooterGame.DiscordFriendsActivityTextDefinition
 // 0x0060 (0x0060 - 0x0000)
@@ -4236,7 +4112,6 @@ public:
 	class FText                                   DetailServerFormat;                                // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FText                                   DetailPlayersFormat;                               // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDiscordFriendsActivityTextDefinition;
 
 // ScriptStruct ShooterGame.HUDRichTextOverlayData
 // 0x0070 (0x0070 - 0x0000)
@@ -4261,7 +4136,6 @@ public:
 	class AActor*                                 Instigator;                                        // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_60[0x10];                                      // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FHUDRichTextOverlayData;
 
 // ScriptStruct ShooterGame.DragonDashParams
 // 0x0048 (0x0048 - 0x0000)
@@ -4281,7 +4155,6 @@ public:
 	bool                                          bCollideWithPawns;                                 // 0x0042(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDragonDashParams;
 
 // ScriptStruct ShooterGame.DragonFlightModeTuning
 // 0x0030 (0x0030 - 0x0000)
@@ -4299,7 +4172,6 @@ public:
 	float                                         DiveSpeedRiseRateMultiplier;                       // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DiveSpeedFallRateMultiplier;                       // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDragonFlightModeTuning;
 
 // ScriptStruct ShooterGame.DragonManeuverTuning
 // 0x0038 (0x0038 - 0x0000)
@@ -4312,7 +4184,6 @@ public:
 	float                                         ChargeBonusPercent;                                // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDragonManeuverTuning;
 
 // ScriptStruct ShooterGame.BoneDamageAdjuster
 // 0x000C (0x000C - 0x0000)
@@ -4322,7 +4193,6 @@ public:
 	class FName                                   BoneName;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DamageMultiplier;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBoneDamageAdjuster;
 
 // ScriptStruct ShooterGame.DracoTargetData
 // 0x0028 (0x0028 - 0x0000)
@@ -4335,7 +4205,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector_NetQuantize                    TargetLocation;                                    // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDracoTargetData;
 
 // ScriptStruct ShooterGame.AtlasAdminCommandTrackingEntry
 // 0x0068 (0x0068 - 0x0000)
@@ -4351,7 +4220,6 @@ public:
 	class FString                                 CommandType;                                       // 0x0048(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Command;                                           // 0x0058(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAtlasAdminCommandTrackingEntry;
 
 // ScriptStruct ShooterGame.FightAssignment
 // 0x0030 (0x0030 - 0x0000)
@@ -4365,7 +4233,6 @@ public:
 	float                                         AngleRad;                                          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FFightAssignment;
 
 // ScriptStruct ShooterGame.FightCircleRing
 // 0x0020 (0x0020 - 0x0000)
@@ -4378,7 +4245,6 @@ public:
 	float                                         AngleOffsetRad;                                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFightCircleRing;
 
 // ScriptStruct ShooterGame.FightCircleState
 // 0x0080 (0x0080 - 0x0000)
@@ -4389,7 +4255,6 @@ public:
 	TArray<struct FFightCircleRing>               Rings;                                             // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_18[0x68];                                      // 0x0018(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FFightCircleState;
 
 // ScriptStruct ShooterGame.FishSnareData
 // 0x000C (0x000C - 0x0000)
@@ -4399,7 +4264,6 @@ public:
 	TWeakObjectPtr<class APrimalDinoCharacter>    DinoCharacter;                                     // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SnareTime;                                         // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFishSnareData;
 
 // ScriptStruct ShooterGame.AvoidanceArea
 // 0x00C0 (0x00C0 - 0x0000)
@@ -4418,7 +4282,6 @@ public:
 	uint8                                         bIsDynamic : 1;                                    // 0x00B8(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAvoidanceArea;
 
 // ScriptStruct ShooterGame.PrimalStats
 // 0x0030 (0x0030 - 0x0000)
@@ -4431,7 +4294,6 @@ public:
 	int32                                         PrimalStatsValues[0x7];                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalStats;
 
 // ScriptStruct ShooterGame.FlockPersistentData
 // 0x0038 (0x0038 - 0x0000)
@@ -4449,7 +4311,6 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAvoidanceArea>                 DynamicAvoidanceAreas;                             // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFlockPersistentData;
 
 // ScriptStruct ShooterGame.BoidBehavior
 // 0x0040 (0x0040 - 0x0000)
@@ -4471,7 +4332,6 @@ public:
 	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BoundsCullingMultiplier;                           // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBoidBehavior;
 
 // ScriptStruct ShooterGame.Boid
 // 0x0098 (0x0098 - 0x0000)
@@ -4495,7 +4355,6 @@ public:
 	EBoidType                                     Type;                                              // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBoid;
 
 // ScriptStruct ShooterGame.MissionMetaData
 // 0x0010 (0x0010 - 0x0000)
@@ -4505,7 +4364,6 @@ public:
 	class FName                                   MissionTag;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class AMissionType>               MissionMetaDataClass;                              // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMissionMetaData;
 
 // ScriptStruct ShooterGame.FogOfWarInfoStruct
 // 0x0038 (0x0038 - 0x0000)
@@ -4518,7 +4376,6 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<bool>                                  UnlockMask;                                        // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFogOfWarInfoStruct;
 
 // ScriptStruct ShooterGame.DepthOfFieldSetting
 // 0x0020 (0x0020 - 0x0000)
@@ -4535,7 +4392,6 @@ public:
 	bool                                          UseGaussianBlur;                                   // 0x001C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDepthOfFieldSetting;
 
 // ScriptStruct ShooterGame.CreatureGeneTraitSpawnInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -4546,7 +4402,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 GeneTraitTierChanceProbabilityOverride;            // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCreatureGeneTraitSpawnInfo;
 
 // ScriptStruct ShooterGame.CreatureSpawnGeneTraits_Specifications
 // 0x0068 (0x0068 - 0x0000)
@@ -4558,7 +4413,6 @@ public:
 	int32                                         OverrideMaxNumberOfTotalGeneTraitsAllowedOnThisCreature; // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCreatureSpawnGeneTraits_Specifications;
 
 // ScriptStruct ShooterGame.ColdStoredItemStack
 // 0x0038 (0x0038 - 0x0000)
@@ -4575,7 +4429,6 @@ public:
 	int32                                         OrderIndex;                                        // 0x0030(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FColdStoredItemStack;
 
 // ScriptStruct ShooterGame.GeneTraitSpecification
 // 0x00B8 (0x00B8 - 0x0000)
@@ -4585,7 +4438,6 @@ public:
 	struct FCreatureSpawnGeneTraits_Specifications DefaultCreatureSpawnGeneTraits_Specifications;    // 0x0000(0x0068)(Edit, NativeAccessSpecifierPublic)
 	TMap<class FName, struct FCreatureSpawnGeneTraits_Specifications> OverwrittenPerCreatureSpawnGeneTraits_Specifications; // 0x0068(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGeneTraitSpecification;
 
 // ScriptStruct ShooterGame.ClassMultiplier
 // 0x0018 (0x0018 - 0x0000)
@@ -4596,7 +4448,6 @@ public:
 	float                                         Multiplier;                                        // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FClassMultiplier;
 
 // ScriptStruct ShooterGame.CustomGeneTraitSpecification
 // 0x00C0 (0x00C0 - 0x0000)
@@ -4608,7 +4459,6 @@ public:
 	struct FCreatureSpawnGeneTraits_Specifications DefaultCreatureSpawnGeneTraits_Specifications;    // 0x0008(0x0068)(Edit, NativeAccessSpecifierPublic)
 	TMap<class FName, struct FCreatureSpawnGeneTraits_Specifications> OverwrittenPerCreatureSpawnGeneTraits_Specifications; // 0x0070(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomGeneTraitSpecification;
 
 // ScriptStruct ShooterGame.AliveNameAndLocation
 // 0x0048 (0x0048 - 0x0000)
@@ -4622,7 +4472,6 @@ public:
 	uint64                                        PlayerID;                                          // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Location;                                          // 0x0030(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAliveNameAndLocation;
 
 // ScriptStruct ShooterGame.GeneTraitSkipCodeChecksStruct
 // 0x000C (0x000C - 0x0000)
@@ -4633,7 +4482,6 @@ public:
 	bool                                          ThisTraitWeConfirmedHasNoSpecialConditionsBeyondThrallCheck; // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FGeneTraitSkipCodeChecksStruct;
 
 // ScriptStruct ShooterGame.FloorSlopeData
 // 0x0048 (0x0048 - 0x0000)
@@ -4644,7 +4492,6 @@ public:
 	struct FVector                                SlopeDir;                                          // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                SlopeNormal;                                       // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFloorSlopeData;
 
 // ScriptStruct ShooterGame.SkinWeaponTemplatesForAmmoOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -4653,7 +4500,6 @@ struct FSkinWeaponTemplatesForAmmoOverride final
 public:
 	TArray<TSoftClassPtr<class UClass>>           SkinWeaponTemplatesForAmmo;                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSkinWeaponTemplatesForAmmoOverride;
 
 // ScriptStruct ShooterGame.SlideData
 // 0x0078 (0x0078 - 0x0000)
@@ -4673,7 +4519,6 @@ public:
 	struct FVector                                Location;                                          // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FVector                                Tangent;                                           // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FSlideData;
 
 // ScriptStruct ShooterGame.DynamicUndermeshVolumes_Data
 // 0x0014 (0x0014 - 0x0000)
@@ -4687,7 +4532,6 @@ public:
 	EDynamicGameplayVolumeType                    Mode;                                              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDynamicUndermeshVolumes_Data;
 
 // ScriptStruct ShooterGame.DynamicUndermeshVolumes_MapSet
 // 0x0020 (0x0020 - 0x0000)
@@ -4697,7 +4541,6 @@ public:
 	class FString                                 Map;                                               // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FDynamicUndermeshVolumes_Data>  volumes;                                           // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDynamicUndermeshVolumes_MapSet;
 
 // ScriptStruct ShooterGame.DinoClassCount
 // 0x001C (0x001C - 0x0000)
@@ -4712,7 +4555,6 @@ public:
 	int32                                         NumberofWildFemalesClass;                          // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumberofWildLatentSpawns;                          // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoClassCount;
 
 // ScriptStruct ShooterGame.PrimalTriggerEffect
 // 0x0018 (0x0018 - 0x0000)
@@ -4727,7 +4569,6 @@ public:
 	int32                                         EndStrength;                                       // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Frequency;                                         // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalTriggerEffect;
 
 // ScriptStruct ShooterGame.HordeCrateDifficultyLevel
 // 0x00B0 (0x00B0 - 0x0000)
@@ -4754,7 +4595,6 @@ public:
 	float                                         MainNodeElementPct;                                // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FHordeCrateDifficultyLevel;
 
 // ScriptStruct ShooterGame.DinoDownloadData
 // 0x0010 (0x0010 - 0x0000)
@@ -4765,7 +4605,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class APrimalDinoCharacter>       UniqueDino;                                        // 0x0008(0x0008)(ZeroConstructor, SaveGame, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoDownloadData;
 
 // ScriptStruct ShooterGame.HordeCrateEvent
 // 0x0020 (0x0020 - 0x0000)
@@ -4779,7 +4618,6 @@ public:
 	uint8                                         EventType;                                         // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FHordeCrateEvent;
 
 // ScriptStruct ShooterGame.DinoKey
 // 0x0008 (0x0008 - 0x0000)
@@ -4788,7 +4626,6 @@ struct alignas(0x04) FDinoKey final
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDinoKey;
 
 // ScriptStruct ShooterGame.PropertyThunkWrapper
 // 0x0008 (0x0008 - 0x0000)
@@ -4797,7 +4634,6 @@ struct alignas(0x08) FPropertyThunkWrapper final
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPropertyThunkWrapper;
 
 // ScriptStruct ShooterGame.UseItemAddCharacterStatusValue
 // 0x0048 (0x0048 - 0x0000)
@@ -4827,7 +4663,6 @@ public:
 	uint8                                         bForceUseStatOnDinos : 1;                          // 0x0047(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bForceImmediateTick : 1;                           // 0x0047(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 };
-DUMPER7_ASSERTS_FUseItemAddCharacterStatusValue;
 
 // ScriptStruct ShooterGame.LeaderboardRow
 // 0x0048 (0x0048 - 0x0000)
@@ -4844,7 +4679,6 @@ public:
 	class FName                                   NameValue;                                         // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 StringValue;                                       // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLeaderboardRow;
 
 // ScriptStruct ShooterGame.LeaderboardEntry
 // 0x0018 (0x0018 - 0x0000)
@@ -4854,7 +4688,6 @@ public:
 	class FName                                   MissionTag;                                        // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FLeaderboardRow>                Rows;                                              // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLeaderboardEntry;
 
 // ScriptStruct ShooterGame.ActiveEventMainMenuOverride
 // 0x0020 (0x0020 - 0x0000)
@@ -4865,7 +4698,6 @@ public:
 	class UTexture2D*                             MainMenuBG;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MusicFilename;                                     // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
-DUMPER7_ASSERTS_FActiveEventMainMenuOverride;
 
 // ScriptStruct ShooterGame.StructHighlightInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -4875,7 +4707,6 @@ public:
 	TWeakObjectPtr<class APrimalStructure>        Structure;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           HighlightColor;                                    // 0x0008(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStructHighlightInfo;
 
 // ScriptStruct ShooterGame.LeaderboardsContainer
 // 0x0010 (0x0010 - 0x0000)
@@ -4884,7 +4715,6 @@ struct FLeaderboardsContainer final
 public:
 	TArray<struct FLeaderboardEntry>              Leaderboards;                                      // 0x0000(0x0010)(ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLeaderboardsContainer;
 
 // ScriptStruct ShooterGame.LeaderboardColumnDefinition
 // 0x0078 (0x0078 - 0x0000)
@@ -4896,7 +4726,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateFontInfo                         Font;                                              // 0x0018(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLeaderboardColumnDefinition;
 
 // ScriptStruct ShooterGame.MapData
 // 0x0080 (0x0080 - 0x0000)
@@ -4912,7 +4741,6 @@ public:
 	bool                                          PreventFogOfWar;                                   // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMapData;
 
 // ScriptStruct ShooterGame.MinimapMarkerIconEntry
 // 0x0028 (0x0030 - 0x0008)
@@ -4923,7 +4751,6 @@ public:
 	struct FLinearColor                           ActivatedColor;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           DeactivatedColor;                                  // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMinimapMarkerIconEntry;
 
 // ScriptStruct ShooterGame.DamagePrimalCharacterStatusValueModifier
 // 0x0038 (0x0038 - 0x0000)
@@ -4953,7 +4780,6 @@ public:
 	bool                                          bForceImmediateTick;                               // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDamagePrimalCharacterStatusValueModifier;
 
 // ScriptStruct ShooterGame.Int32Array
 // 0x0010 (0x0010 - 0x0000)
@@ -4962,7 +4788,6 @@ struct FInt32Array final
 public:
 	TArray<int32>                                 Array;                                             // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInt32Array;
 
 // ScriptStruct ShooterGame.MetaTagIDInfo
 // 0x000C (0x000C - 0x0000)
@@ -4972,7 +4797,6 @@ public:
 	int32                                         MetaTagEnumIndex;                                  // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   MetaTagDisplayName;                                // 0x0004(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMetaTagIDInfo;
 
 // ScriptStruct ShooterGame.EncapsulatedSubMissionsToPlayEntry
 // 0x0030 (0x0030 - 0x0000)
@@ -4987,7 +4811,6 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AMissionType*                           CurrentRunningSubMissionRef;                       // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEncapsulatedSubMissionsToPlayEntry;
 
 // ScriptStruct ShooterGame.PlatformCommandsToExecute
 // 0x0010 (0x0010 - 0x0000)
@@ -4996,7 +4819,6 @@ struct FPlatformCommandsToExecute final
 public:
 	TArray<class FString>                         PlatformSpecificCommands;                          // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlatformCommandsToExecute;
 
 // ScriptStruct ShooterGame.ShipSoundInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -5010,7 +4832,6 @@ public:
 	float                                         FadeOut;                                           // 0x0020(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FadeIn;                                            // 0x0024(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FShipSoundInfo;
 
 // ScriptStruct ShooterGame.TimeRange
 // 0x0008 (0x0008 - 0x0000)
@@ -5020,7 +4841,6 @@ public:
 	float                                         min_0;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         max_0;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTimeRange;
 
 // ScriptStruct ShooterGame.MissionPhase
 // 0x0048 (0x0048 - 0x0000)
@@ -5042,7 +4862,6 @@ public:
 	class USoundBase*                             PhaseEndSound;                                     // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundBase*                             PhaseMusicLoop;                                    // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMissionPhase;
 
 // ScriptStruct ShooterGame.CustomWheelSettings
 // 0x0048 (0x0048 - 0x0000)
@@ -5059,7 +4878,6 @@ public:
 	uint8                                         bUseCenterTextColorOverride : 1;                   // 0x0044(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCustomWheelSettings;
 
 // ScriptStruct ShooterGame.ItemMultiplier
 // 0x0010 (0x0010 - 0x0000)
@@ -5070,7 +4888,6 @@ public:
 	float                                         ItemMultiplier;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FItemMultiplier;
 
 // ScriptStruct ShooterGame.MissionPhaseData
 // 0x0004 (0x0004 - 0x0000)
@@ -5080,7 +4897,6 @@ public:
 	uint8                                         bPhaseCompleted : 1;                               // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMissionPhaseData;
 
 // ScriptStruct ShooterGame.TeleportedCharacter
 // 0x0040 (0x0040 - 0x0000)
@@ -5092,7 +4908,6 @@ public:
 	struct FVector                                OriginalLocation;                                  // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               OriginalRotation;                                  // 0x0028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTeleportedCharacter;
 
 // ScriptStruct ShooterGame.MissionDinoPath
 // 0x0058 (0x0058 - 0x0000)
@@ -5110,7 +4925,6 @@ public:
 	uint8                                         bReverseAtEnd : 1;                                 // 0x0054(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMissionDinoPath;
 
 // ScriptStruct ShooterGame.ShooterCharacterPostUpdateTickFunction
 // 0x0008 (0x0038 - 0x0030)
@@ -5119,7 +4933,6 @@ struct FShooterCharacterPostUpdateTickFunction final : public FTickFunction
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FShooterCharacterPostUpdateTickFunction;
 
 // ScriptStruct ShooterGame.CharacterAndControllerPair
 // 0x0010 (0x0010 - 0x0000)
@@ -5129,7 +4942,6 @@ public:
 	class AShooterCharacter*                      Character;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AShooterPlayerController*               Controller;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCharacterAndControllerPair;
 
 // ScriptStruct ShooterGame.VO_DataEntry
 // 0x0038 (0x0040 - 0x0008)
@@ -5139,7 +4951,6 @@ public:
 	TSoftObjectPtr<class USoundCue>               SoundCue;                                          // 0x0008(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FDataTableRowHandle                    InstigatorData;                                    // 0x0030(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVO_DataEntry;
 
 // ScriptStruct ShooterGame.PlayerItems
 // 0x0018 (0x0018 - 0x0000)
@@ -5149,7 +4960,6 @@ public:
 	class AShooterCharacter*                      Character;                                         // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FItemNetID>                     ItemIDs;                                           // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlayerItems;
 
 // ScriptStruct ShooterGame.TaggedString
 // 0x0018 (0x0018 - 0x0000)
@@ -5159,7 +4969,6 @@ public:
 	class FName                                   Tag;                                               // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 String;                                            // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTaggedString;
 
 // ScriptStruct ShooterGame.RacePlayerData
 // 0x0038 (0x0038 - 0x0000)
@@ -5173,7 +4982,6 @@ public:
 	TArray<bool>                                  CheckpointsHit;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<float>                                 CheckpointTimes;                                   // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRacePlayerData;
 
 // ScriptStruct ShooterGame.SpawnPointInfo
 // 0x0050 (0x0050 - 0x0000)
@@ -5191,7 +4999,6 @@ public:
 	bool                                          bIsPublicTeleporter;                               // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSpawnPointInfo;
 
 // ScriptStruct ShooterGame.MissionWorldBuffData
 // 0x000C (0x000C - 0x0000)
@@ -5201,7 +5008,6 @@ public:
 	class FName                                   WorldBuffIdentifier;                               // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StacksToGive;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMissionWorldBuffData;
 
 // ScriptStruct ShooterGame.ReplcacingSubMissionModuleEntry
 // 0x0010 (0x0010 - 0x0000)
@@ -5211,7 +5017,6 @@ public:
 	TSubclassOf<class UNewMissionModuleBase>      ModuleToReplace;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UNewMissionModuleBase>      ModuleToRunInstead;                                // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FReplcacingSubMissionModuleEntry;
 
 // ScriptStruct ShooterGame.MountedDLCInfo
 // 0x0040 (0x0040 - 0x0000)
@@ -5223,7 +5028,6 @@ public:
 	class FString                                 Map;                                               // 0x0020(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ID;                                                // 0x0030(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-DUMPER7_ASSERTS_FMountedDLCInfo;
 
 // ScriptStruct ShooterGame.EpicIDToSteamID
 // 0x0030 (0x0030 - 0x0000)
@@ -5234,7 +5038,6 @@ public:
 	class FString                                 SteamID;                                           // 0x0010(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 EpicID;                                            // 0x0020(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEpicIDToSteamID;
 
 // ScriptStruct ShooterGame.CheatTeleportLocation
 // 0x0020 (0x0020 - 0x0000)
@@ -5244,7 +5047,6 @@ public:
 	class FName                                   TeleportName;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                TeleportLocation;                                  // 0x0008(0x0018)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCheatTeleportLocation;
 
 // ScriptStruct ShooterGame.MultiMapPerfTestEntry
 // 0x0048 (0x0048 - 0x0000)
@@ -5258,7 +5060,6 @@ public:
 	float                                         WaitTime;                                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMultiMapPerfTestEntry;
 
 // ScriptStruct ShooterGame.PrimalImageStyle
 // 0x00E0 (0x00E0 - 0x0000)
@@ -5269,7 +5070,6 @@ public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInlineTextImageStyle                  ImageStyle;                                        // 0x0010(0x00D0)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalImageStyle;
 
 // ScriptStruct ShooterGame.AutomationScenarioStep
 // 0x0048 (0x0048 - 0x0000)
@@ -5282,7 +5082,6 @@ public:
 	class FString                                 Command;                                           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Seconds;                                           // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAutomationScenarioStep;
 
 // ScriptStruct ShooterGame.AutomationScenarioDefinition
 // 0x0020 (0x0020 - 0x0000)
@@ -5292,7 +5091,6 @@ public:
 	class FString                                 ScenarioId;                                        // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FAutomationScenarioStep>        Steps;                                             // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAutomationScenarioDefinition;
 
 // ScriptStruct ShooterGame.Struct_MissionModule_Travel
 // 0x0038 (0x0038 - 0x0000)
@@ -5308,7 +5106,6 @@ public:
 	class FName                                   NavPointLabel;                                     // 0x002C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FStruct_MissionModule_Travel;
 
 // ScriptStruct ShooterGame.ARKTributeData
 // 0x0080 (0x0080 - 0x0000)
@@ -5329,7 +5126,6 @@ public:
 	int32                                         Version;                                           // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FARKTributeData;
 
 // ScriptStruct ShooterGame.LinkedZoneSpawnVolumeEntry
 // 0x0050 (0x0050 - 0x0000)
@@ -5344,7 +5140,6 @@ public:
 	float                                         EntryWeight;                                       // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLinkedZoneSpawnVolumeEntry;
 
 // ScriptStruct ShooterGame.ShooterGameSessionParams
 // 0x00B0 (0x00B0 - 0x0000)
@@ -5361,7 +5156,6 @@ public:
 	class FString                                 ServerAdminPassword;                               // 0x0090(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 SpectatorPassword;                                 // 0x00A0(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FShooterGameSessionParams;
 
 // ScriptStruct ShooterGame.HibernationCountInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -5372,7 +5166,6 @@ public:
 	int32                                         Count;                                             // 0x0028(0x0004)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FHibernationCountInfo;
 
 // ScriptStruct ShooterGame.NPCDifficultyLevelRange
 // 0x0030 (0x0030 - 0x0000)
@@ -5383,7 +5176,6 @@ public:
 	TArray<float>                                 EnemyLevelsMax;                                    // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, NativeAccessSpecifierPublic)
 	TArray<float>                                 GameDifficulties;                                  // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNPCDifficultyLevelRange;
 
 // ScriptStruct ShooterGame.OceanDinoSpawnEntry
 // 0x00A8 (0x00A8 - 0x0000)
@@ -5411,7 +5203,6 @@ public:
 	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FNPCDifficultyLevelRange               NPCDifficultyLevelRange;                           // 0x0078(0x0030)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOceanDinoSpawnEntry;
 
 // ScriptStruct ShooterGame.StatValuePair
 // 0x0008 (0x0008 - 0x0000)
@@ -5422,7 +5213,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Value;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStatValuePair;
 
 // ScriptStruct ShooterGame.OceanDinoDepthEntry
 // 0x0038 (0x0038 - 0x0000)
@@ -5434,7 +5224,6 @@ public:
 	float                                         StartAtDepthZ;                                     // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x14];                                      // 0x0024(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FOceanDinoDepthEntry;
 
 // ScriptStruct ShooterGame.BlueprintVisualLogEntry
 // 0x0030 (0x0030 - 0x0000)
@@ -5445,7 +5234,6 @@ public:
 	class FString                                 Key;                                               // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBlueprintVisualLogEntry;
 
 // ScriptStruct ShooterGame.PaintingStreamingJob
 // 0x0050 (0x0050 - 0x0000)
@@ -5454,7 +5242,6 @@ struct alignas(0x08) FPaintingStreamingJob final
 public:
 	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPaintingStreamingJob;
 
 // ScriptStruct ShooterGame.PirateFleetEscort
 // 0x0020 (0x0020 - 0x0000)
@@ -5466,7 +5253,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              FormationOffset;                                   // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPirateFleetEscort;
 
 // ScriptStruct ShooterGame.RepeatableMilestoneXPThreshold
 // 0x0018 (0x0018 - 0x0000)
@@ -5477,7 +5263,6 @@ public:
 	float                                         Pct;                                               // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              clamp;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRepeatableMilestoneXPThreshold;
 
 // ScriptStruct ShooterGame.QueuedLinkAnimGraph
 // 0x0010 (0x0010 - 0x0000)
@@ -5487,7 +5272,6 @@ public:
 	class FName                                   Tag;                                               // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UAnimInstance>              AnimGraphClass;                                    // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FQueuedLinkAnimGraph;
 
 // ScriptStruct ShooterGame.EscapeRoom_RoomItemSetup
 // 0x0038 (0x0038 - 0x0000)
@@ -5501,7 +5285,6 @@ public:
 	struct FVector                                ScaleOverride;                                     // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMaterialInterface*                     MaterialOverride;                                  // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEscapeRoom_RoomItemSetup;
 
 // ScriptStruct ShooterGame.AssetRetainer
 // 0x0010 (0x0010 - 0x0000)
@@ -5512,7 +5295,6 @@ public:
 	float                                         TimeLeft;                                          // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAssetRetainer;
 
 // ScriptStruct ShooterGame.BotEquipmentDefinitions
 // 0x0048 (0x0048 - 0x0000)
@@ -5524,7 +5306,6 @@ public:
 	int16                                         EquipmentDyeColorID[0x6];                          // 0x0038(0x0002)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBotEquipmentDefinitions;
 
 // ScriptStruct ShooterGame.BotWeaponDefinitions
 // 0x0078 (0x0078 - 0x0000)
@@ -5541,7 +5322,6 @@ public:
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                AdditionalAimOffset;                               // 0x0060(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBotWeaponDefinitions;
 
 // ScriptStruct ShooterGame.CachedDBSet
 // 0x0030 (0x0030 - 0x0000)
@@ -5555,7 +5335,6 @@ public:
 	class UPrimalInventoryDB*                     InventoryDB;                                       // 0x0020(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPrimalMissionDB*                       MissionDB;                                         // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCachedDBSet;
 
 // ScriptStruct ShooterGame.PrimalCharacterSparseClassData
 // 0x02C8 (0x02C8 - 0x0000)
@@ -5767,7 +5546,6 @@ public:
 	TSubclassOf<class UPrimalUI>                  PassengerUI;                                       // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPrimalUI>                  BasedUI;                                           // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCharacterSparseClassData;
 
 // ScriptStruct ShooterGame.EngramCustomFolder
 // 0x0020 (0x0020 - 0x0000)
@@ -5777,7 +5555,6 @@ public:
 	class FString                                 FolderName;                                        // 0x0000(0x0010)(ZeroConstructor, Transient, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSubclassOf<class UPrimalItem>>        EngramCustomFolderItemClasses;                     // 0x0010(0x0010)(ZeroConstructor, Transient, SaveGame, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEngramCustomFolder;
 
 // ScriptStruct ShooterGame.SignificanceThresholds
 // 0x0008 (0x0008 - 0x0000)
@@ -5787,7 +5564,6 @@ public:
 	float                                         Significance;                                      // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxDistance;                                       // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSignificanceThresholds;
 
 // ScriptStruct ShooterGame.SecondaryMountedDinoSetup
 // 0x0068 (0x0068 - 0x0000)
@@ -5803,7 +5579,6 @@ public:
 	struct FVector                                MountCharacterProneLocOffset;                      // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               MountCharacterProneRotOffset;                      // 0x0050(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSecondaryMountedDinoSetup;
 
 // ScriptStruct ShooterGame.PrimalDinoCharacterSparseClassData
 // 0x0B48 (0x0E10 - 0x02C8)
@@ -6489,7 +6264,6 @@ public:
 	uint8                                         bGestationAllowPassengers : 1;                     // 0x0E0D(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_E0E[0x2];                                      // 0x0E0E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalDinoCharacterSparseClassData;
 
 // ScriptStruct ShooterGame.DamageHarvestingEntry
 // 0x0028 (0x0028 - 0x0000)
@@ -6505,7 +6279,6 @@ public:
 	TSubclassOf<class UDamageType>                DamageTypeParent;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class AActor>                     HarvestDamageFXOverride;                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDamageHarvestingEntry;
 
 // ScriptStruct ShooterGame.PrimalBotCharacterSparseClassData
 // 0x0200 (0x1010 - 0x0E10)
@@ -6581,7 +6354,6 @@ public:
 	uint8                                         Pad_FB9[0x7];                                      // 0x0FB9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<TSoftObjectPtr<class UAnimSequence>, EPrimalAnimEnum> AnimSharingRidingStates;              // 0x0FC0(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalBotCharacterSparseClassData;
 
 // ScriptStruct ShooterGame.ExplorerNoteSpawn
 // 0x0080 (0x0080 - 0x0000)
@@ -6592,7 +6364,6 @@ public:
 	TMap<class FString, struct FTransform>        SpawnLocationByMap;                                // 0x0008(0x0050)(Edit, NativeAccessSpecifierPublic)
 	TSoftClassPtr<class UClass>                   ExplorerNoteChestClass;                            // 0x0058(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FExplorerNoteSpawn;
 
 // ScriptStruct ShooterGame.MaxStatScaler
 // 0x000C (0x000C - 0x0000)
@@ -6605,7 +6376,6 @@ public:
 	bool                                          TargetValueIsPercent;                              // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMaxStatScaler;
 
 // ScriptStruct ShooterGame.PostProcessMaterialAdjuster
 // 0x0048 (0x0048 - 0x0000)
@@ -6618,7 +6388,6 @@ public:
 	TArray<class FName>                           VectorParameterNames;                              // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<struct FVector>                        VectorParameterValues;                             // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPostProcessMaterialAdjuster;
 
 // ScriptStruct ShooterGame.BuffMPCAdjuster
 // 0x0048 (0x0048 - 0x0000)
@@ -6631,7 +6400,6 @@ public:
 	TArray<class FName>                           VectorParameterNames;                              // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<struct FVector>                        VectorParameterValues;                             // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBuffMPCAdjuster;
 
 // ScriptStruct ShooterGame.ServerCustomFolder
 // 0x0028 (0x0028 - 0x0000)
@@ -6643,7 +6411,6 @@ public:
 	class FString                                 FolderName;                                        // 0x0008(0x0010)(ZeroConstructor, Transient, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FItemNetID>                     CustomFolderItemIds;                               // 0x0018(0x0010)(ZeroConstructor, Transient, SaveGame, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FServerCustomFolder;
 
 // ScriptStruct ShooterGame.ChargeSystemConfig
 // 0x0020 (0x0020 - 0x0000)
@@ -6659,7 +6426,6 @@ public:
 	float                                         MinimumRequiredActivationCharge;                   // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DecrementThreshold;                                // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FChargeSystemConfig;
 
 // ScriptStruct ShooterGame.GrinderItemReplacer
 // 0x0010 (0x0010 - 0x0000)
@@ -6669,7 +6435,6 @@ public:
 	TSubclassOf<class UPrimalItem>                Current;                                           // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPrimalItem>                replacement;                                       // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGrinderItemReplacer;
 
 // ScriptStruct ShooterGame.ChargeSystemState
 // 0x000C (0x000C - 0x0000)
@@ -6682,7 +6447,6 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         RegenDelayTimeRemaining;                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FChargeSystemState;
 
 // ScriptStruct ShooterGame.ReplicatedChargeSystemEntry
 // 0x0014 (0x0014 - 0x0000)
@@ -6692,7 +6456,6 @@ public:
 	class FName                                   ChargeName;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FChargeSystemState                     ChargeState;                                       // 0x0008(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FReplicatedChargeSystemEntry;
 
 // ScriptStruct ShooterGame.ReplicatedChargeSystemData
 // 0x0010 (0x0010 - 0x0000)
@@ -6701,7 +6464,6 @@ struct FReplicatedChargeSystemData final
 public:
 	TArray<struct FReplicatedChargeSystemEntry>   ChargeEntries;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FReplicatedChargeSystemData;
 
 // ScriptStruct ShooterGame.ShipCannonMountSettings
 // 0x0110 (0x0110 - 0x0000)
@@ -6750,7 +6512,6 @@ public:
 	bool                                          bLoadedCharacterAnimLooping;                       // 0x010C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FShipCannonMountSettings;
 
 // ScriptStruct ShooterGame.ShipCannonMount
 // 0x0140 (0x0140 - 0x0000)
@@ -6767,7 +6528,6 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FShipCannonMountSettings               Overrides;                                         // 0x0030(0x0110)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FShipCannonMount;
 
 // ScriptStruct ShooterGame.SerializedMissionData
 // 0x0018 (0x0018 - 0x0000)
@@ -6777,7 +6537,6 @@ public:
 	class FName                                   MissionTag;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 SerializedData;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSerializedMissionData;
 
 // ScriptStruct ShooterGame.GroupMemberTypeCap
 // 0x0008 (0x0008 - 0x0000)
@@ -6788,7 +6547,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MaxNum;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGroupMemberTypeCap;
 
 // ScriptStruct ShooterGame.CompanionEventSegmentData
 // 0x0100 (0x0100 - 0x0000)
@@ -6807,7 +6565,6 @@ public:
 	float                                         CompanionLocationInterpSpeed;                      // 0x00F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CompanionRotationInterpSpeed;                      // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCompanionEventSegmentData;
 
 // ScriptStruct ShooterGame.CompanionEventData
 // 0x0050 (0x0050 - 0x0000)
@@ -6826,7 +6583,6 @@ public:
 	double                                        LastSegmentStartTime;                              // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        EventEndTime;                                      // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCompanionEventData;
 
 // ScriptStruct ShooterGame.GrappleAnchor
 // 0x0050 (0x0050 - 0x0000)
@@ -6840,7 +6596,6 @@ public:
 	class FString                                 AnchoredBoneName;                                  // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                AnchorRelativeOffset;                              // 0x0038(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGrappleAnchor;
 
 // ScriptStruct ShooterGame.PrimalStructureSkinCollisionComponents
 // 0x0078 (0x0078 - 0x0000)
@@ -6853,7 +6608,6 @@ public:
 	TSoftObjectPtr<class UStaticMesh>             StaticMesh;                                        // 0x0048(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USceneComponent*                        AttachTo;                                          // 0x0070(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureSkinCollisionComponents;
 
 // ScriptStruct ShooterGame.GrappleTether
 // 0x01B8 (0x01B8 - 0x0000)
@@ -6884,7 +6638,6 @@ public:
 	float                                         DistToOwner_Current;                               // 0x01B0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OwnerDistFromTetherLimit_Current;                  // 0x01B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGrappleTether;
 
 // ScriptStruct ShooterGame.SubtitleStringEntry
 // 0x0020 (0x0020 - 0x0000)
@@ -6896,7 +6649,6 @@ public:
 	float                                         EndTime;                                           // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   Instigator;                                        // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSubtitleStringEntry;
 
 // ScriptStruct ShooterGame.SubtitleStringMap
 // 0x0048 (0x0048 - 0x0000)
@@ -6907,7 +6659,6 @@ public:
 	TSoftObjectPtr<class UDataTable>              VOColorDataTable;                                  // 0x0010(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FSubtitleStringEntry>           Subtitles;                                         // 0x0038(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSubtitleStringMap;
 
 // ScriptStruct ShooterGame.ReplicatedGrappleTetherData
 // 0x0178 (0x0178 - 0x0000)
@@ -6931,7 +6682,6 @@ public:
 	uint8                                         Rep_bTetherBroken : 1;                             // 0x0170(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FReplicatedGrappleTetherData;
 
 // ScriptStruct ShooterGame.CreateGrappleTetherData
 // 0x0160 (0x0160 - 0x0000)
@@ -6950,7 +6700,6 @@ public:
 	uint8                                         bAnyoneCanControl : 1;                             // 0x015C(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_15D[0x3];                                      // 0x015D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCreateGrappleTetherData;
 
 // ScriptStruct ShooterGame.HotbarItemData
 // 0x0240 (0x0240 - 0x0000)
@@ -6962,7 +6711,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FItemNetInfo                           ItemInfo;                                          // 0x0010(0x0230)(BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FHotbarItemData;
 
 // ScriptStruct ShooterGame.DestructionGeoCollectionInfo
 // 0x0078 (0x0078 - 0x0000)
@@ -6976,7 +6724,6 @@ public:
 	bool                                          bShouldForceOffsetFromActor;                       // 0x0070(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDestructionGeoCollectionInfo;
 
 // ScriptStruct ShooterGame.OverrideMultiuseButtonStyle
 // 0x03C0 (0x03C0 - 0x0000)
@@ -6988,7 +6735,6 @@ public:
 	float                                         ButtonTextSize;                                    // 0x03B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3BC[0x4];                                      // 0x03BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FOverrideMultiuseButtonStyle;
 
 // ScriptStruct ShooterGame.MissionEligibilityData
 // 0x0028 (0x0028 - 0x0000)
@@ -7006,7 +6752,6 @@ public:
 	float                                         MissionMaxDurationSeconds;                         // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        MissionStartNetworkTime;                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMissionEligibilityData;
 
 // ScriptStruct ShooterGame.ClientMissionEligibility
 // 0x0038 (0x0038 - 0x0000)
@@ -7026,7 +6771,6 @@ public:
 	double                                        MissionStartNetworkTime;                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Reason;                                            // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FClientMissionEligibility;
 
 // ScriptStruct ShooterGame.ClientMissionSubscriptionData
 // 0x0038 (0x0038 - 0x0000)
@@ -7036,7 +6780,6 @@ public:
 	TSoftClassPtr<class UClass>                   MissionType;                                       // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FName>                           Keys;                                              // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FClientMissionSubscriptionData;
 
 // ScriptStruct ShooterGame.PrimalStructureSnapPointOverride
 // 0x0088 (0x0088 - 0x0000)
@@ -7052,7 +6795,6 @@ public:
 	uint8                                         PreviewTransformOverride : 1;                      // 0x0080(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalStructureSnapPointOverride;
 
 // ScriptStruct ShooterGame.CableParticle
 // 0x0038 (0x0038 - 0x0000)
@@ -7064,7 +6806,6 @@ public:
 	struct FVector                                position;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                OldPosition;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCableParticle;
 
 // ScriptStruct ShooterGame.PrimalMilestoneLvlReward
 // 0x0070 (0x0070 - 0x0000)
@@ -7075,7 +6816,6 @@ public:
 	TArray<int32>                                 UnlockedExplorerNoteIDs;                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<class UTexture2D*, class FText>          AdditionalRewards;                                 // 0x0020(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalMilestoneLvlReward;
 
 // ScriptStruct ShooterGame.DefaultTextureParamOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -7085,7 +6825,6 @@ public:
 	class FName                                   TextureParamName;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture2D*                             TextureValue;                                      // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDefaultTextureParamOverride;
 
 // ScriptStruct ShooterGame.HandIkTarget
 // 0x0070 (0x0070 - 0x0000)
@@ -7099,7 +6838,6 @@ public:
 	uint8                                         bEnabled : 1;                                      // 0x006C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FHandIkTarget;
 
 // ScriptStruct ShooterGame.PrimalSnapshotPose
 // 0x00A0 (0x00A0 - 0x0000)
@@ -7116,7 +6854,6 @@ public:
 	bool                                          pedestal;                                          // 0x009C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalSnapshotPose;
 
 // ScriptStruct ShooterGame.CustomContextSubmenu
 // 0x0018 (0x0018 - 0x0000)
@@ -7126,7 +6863,6 @@ public:
 	TArray<class FName>                           SubmenuOptions;                                    // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	class FName                                   SubmenuName;                                       // 0x0010(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomContextSubmenu;
 
 // ScriptStruct ShooterGame.VelocityBasedCharacterSoundInfo
 // 0x0038 (0x0038 - 0x0000)
@@ -7142,7 +6878,6 @@ public:
 	bool                                          bAdjustByCharacterSize;                            // 0x0030(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVelocityBasedCharacterSoundInfo;
 
 // ScriptStruct ShooterGame.HintReplacementKeysForKeyboardControls
 // 0x0020 (0x0020 - 0x0000)
@@ -7152,7 +6887,6 @@ public:
 	class FString                                 KeyboardControl;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         ReplacementGamepadControls;                        // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FHintReplacementKeysForKeyboardControls;
 
 // ScriptStruct ShooterGame.CropItemPhaseData
 // 0x0158 (0x0158 - 0x0000)
@@ -7180,7 +6914,6 @@ public:
 	float                                         MinimumRequiredGreenhouseEffectToGrow;             // 0x0150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PhaseTendingIntervalPercent;                       // 0x0154(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCropItemPhaseData;
 
 // ScriptStruct ShooterGame.PrimalCharacterStatusStateThresholds
 // 0x0048 (0x0048 - 0x0000)
@@ -7194,7 +6927,6 @@ public:
 	bool                                          StatusStateThresholdValuesAbsolute;                // 0x0040(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalCharacterStatusStateThresholds;
 
 // ScriptStruct ShooterGame.PrimalCharacterStatusValueModifier
 // 0x0028 (0x0028 - 0x0000)
@@ -7203,7 +6935,6 @@ struct alignas(0x04) FPrimalCharacterStatusValueModifier final
 public:
 	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalCharacterStatusValueModifier;
 
 // ScriptStruct ShooterGame.CinematicMaterial
 // 0x0030 (0x0030 - 0x0000)
@@ -7213,7 +6944,6 @@ public:
 	class UMaterialInstanceDynamic*               Mid;                                               // 0x0000(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UMaterial>               CinematicMaterial;                                 // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCinematicMaterial;
 
 // ScriptStruct ShooterGame.PrimalMapMarkerEntryData
 // 0x0028 (0x0028 - 0x0000)
@@ -7229,7 +6959,6 @@ public:
 	float                                         coord1f;                                           // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         coord2f;                                           // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalMapMarkerEntryData;
 
 // ScriptStruct ShooterGame.MapMarkerPerMapInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -7239,7 +6968,6 @@ public:
 	class FString                                 MapName;                                           // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPrimalMapMarkerEntryData>      MapMarkers;                                        // 0x0010(0x0010)(BlueprintVisible, ZeroConstructor, SaveGame, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMapMarkerPerMapInfo;
 
 // ScriptStruct ShooterGame.ClimbingTypeSettings
 // 0x001C (0x001C - 0x0000)
@@ -7255,7 +6983,6 @@ public:
 	float                                         AttachBackTraceDistance;                           // 0x0014(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AttachForwardTraceDistance;                        // 0x0018(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FClimbingTypeSettings;
 
 // ScriptStruct ShooterGame.DinoMapMarkerInfo
 // 0x0038 (0x0038 - 0x0000)
@@ -7270,7 +6997,6 @@ public:
 	struct FColor                                 MarkerColor;                                       // 0x0030(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDinoMapMarkerInfo;
 
 // ScriptStruct ShooterGame.ClimbingTransitionParams
 // 0x0070 (0x0070 - 0x0000)
@@ -7297,7 +7023,6 @@ public:
 	float                                         CameraSwitchRotationInterpSpeed;                   // 0x0054(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               CameraSwitchOffset;                                // 0x0058(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FClimbingTransitionParams;
 
 // ScriptStruct ShooterGame.ColorSetDefinition
 // 0x0060 (0x0060 - 0x0000)
@@ -7311,7 +7036,6 @@ public:
 	TArray<float>                                 MaxLevel;                                          // 0x0040(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FColorSetDefinition;
 
 // ScriptStruct ShooterGame.ARKDinoData
 // 0x0060 (0x0060 - 0x0000)
@@ -7327,7 +7051,6 @@ public:
 	bool                                          bNetInfoFromClient;                                // 0x0058(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FARKDinoData;
 
 // ScriptStruct ShooterGame.HibernationZoneInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -7338,7 +7061,6 @@ public:
 	float                                         Weight;                                            // 0x0008(0x0004)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FHibernationZoneInfo;
 
 // ScriptStruct ShooterGame.ReplicatePingData
 // 0x0038 (0x0038 - 0x0000)
@@ -7353,7 +7075,6 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AShooterCharacter*                      Rep_PingedByPlayerChar;                            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FReplicatePingData;
 
 // ScriptStruct ShooterGame.CustomContextMenuData
 // 0x0020 (0x0020 - 0x0000)
@@ -7364,7 +7085,6 @@ public:
 	class FName                                   ContextItemName;                                   // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   OptionalKeybindName;                               // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomContextMenuData;
 
 // ScriptStruct ShooterGame.PrimalItemSparseClassData
 // 0x05A8 (0x05A8 - 0x0000)
@@ -7524,7 +7244,6 @@ public:
 	uint8                                         Pad_57A[0x6];                                      // 0x057A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   SaddleBoneModifierRanges;                          // 0x0580(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalItemSparseClassData;
 
 // ScriptStruct ShooterGame.WildFollowerSpawnEntry
 // 0x0048 (0x0048 - 0x0000)
@@ -7540,7 +7259,6 @@ public:
 	uint8                                         bIgnoreConfigSpawnCountMultiplier : 1;             // 0x0040(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWildFollowerSpawnEntry;
 
 // ScriptStruct ShooterGame.DinoExtraDefaultItemList
 // 0x0018 (0x0018 - 0x0000)
@@ -7551,7 +7269,6 @@ public:
 	float                                         ChanceToGive;                                      // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MinimumDinoLevel;                                  // 0x0014(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoExtraDefaultItemList;
 
 // ScriptStruct ShooterGame.DinoBaseLevelWeightEntry
 // 0x000C (0x000C - 0x0000)
@@ -7562,7 +7279,6 @@ public:
 	float                                         BaseLevelMinRange;                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BaseLevelMaxRange;                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoBaseLevelWeightEntry;
 
 // ScriptStruct ShooterGame.PhotoModeMotionControlTrackData
 // 0x0048 (0x0048 - 0x0000)
@@ -7578,7 +7294,6 @@ public:
 	float                                         Aperture;                                          // 0x0040(0x0004)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CameraRoll;                                        // 0x0044(0x0004)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPhotoModeMotionControlTrackData;
 
 // ScriptStruct ShooterGame.PhotoModeMotionControlTrackInfo
 // 0x0040 (0x0040 - 0x0000)
@@ -7589,7 +7304,6 @@ public:
 	struct FRotator                               StartRot;                                          // 0x0018(0x0018)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	TArray<struct FPhotoModeMotionControlTrackData> TickData;                                        // 0x0030(0x0010)(ZeroConstructor, Transient, SaveGame, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPhotoModeMotionControlTrackInfo;
 
 // ScriptStruct ShooterGame.DinoFoodEffectivenessMultipliers
 // 0x0028 (0x0028 - 0x0000)
@@ -7606,7 +7320,6 @@ public:
 	float                                         StaminaEffectivenessMultiplier;                    // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         FoodItemCategory;                                  // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoFoodEffectivenessMultipliers;
 
 // ScriptStruct ShooterGame.AdminPlayerDataInfo
 // 0x0040 (0x0040 - 0x0000)
@@ -7620,7 +7333,6 @@ public:
 	bool                                          IsHost;                                            // 0x0038(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAdminPlayerDataInfo;
 
 // ScriptStruct ShooterGame.StorageInterfaceItemDataCache
 // 0x0060 (0x0060 - 0x0000)
@@ -7633,7 +7345,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<class UPrimalInventoryComponent*>        Inventories;                                       // 0x0010(0x0050)(Edit, BlueprintVisible, ExportObject, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStorageInterfaceItemDataCache;
 
 // ScriptStruct ShooterGame.PrimalSaddleStructure
 // 0x0040 (0x0040 - 0x0000)
@@ -7645,7 +7356,6 @@ public:
 	class FName                                   BoneName;                                          // 0x0030(0x0008)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APrimalStructure*                       MyStructure;                                       // 0x0038(0x0008)(BlueprintVisible, ZeroConstructor, SaveGame, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalSaddleStructure;
 
 // ScriptStruct ShooterGame.DinoAttackInfo
 // 0x0130 (0x0130 - 0x0000)
@@ -7748,7 +7458,6 @@ public:
 	uint8                                         bDisableControllerDesiredRotation : 1;             // 0x012E(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_12F[0x1];                                      // 0x012F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDinoAttackInfo;
 
 // ScriptStruct ShooterGame.DinoSaddleStruct
 // 0x0020 (0x0020 - 0x0000)
@@ -7761,7 +7470,6 @@ public:
 	bool                                          bJustRemoved;                                      // 0x0018(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDinoSaddleStruct;
 
 // ScriptStruct ShooterGame.ClassRemappingWeight
 // 0x0058 (0x0058 - 0x0000)
@@ -7775,7 +7483,6 @@ public:
 	uint8                                         bExactMatch : 1;                                   // 0x0050(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FClassRemappingWeight;
 
 // ScriptStruct ShooterGame.NPCSpawnEntry
 // 0x0128 (0x0128 - 0x0000)
@@ -7810,7 +7517,6 @@ public:
 	float                                         RandGroupSpawnOffsetZMin;                          // 0x0120(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RandGroupSpawnOffsetZMax;                          // 0x0124(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNPCSpawnEntry;
 
 // ScriptStruct ShooterGame.DinoIdleFidgetAnimInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -7831,7 +7537,6 @@ public:
 	uint8                                         bAllowWhileSeated : 1;                             // 0x0011(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDinoIdleFidgetAnimInfo;
 
 // ScriptStruct ShooterGame.ARKTributeDinoListing
 // 0x00F0 (0x00F0 - 0x0000)
@@ -7848,7 +7553,6 @@ public:
 	uint32                                        ExpirationTimeUTC;                                 // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FARKTributeDinoListing;
 
 // ScriptStruct ShooterGame.EngramEntries
 // 0x0010 (0x0010 - 0x0000)
@@ -7857,7 +7561,6 @@ struct FEngramEntries final
 public:
 	TArray<TSubclassOf<class UPrimalEngramEntry>> EngramEntries;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEngramEntries;
 
 // ScriptStruct ShooterGame.PrimalFurPhysicsPointSettings
 // 0x0050 (0x0050 - 0x0000)
@@ -7876,7 +7579,6 @@ public:
 	struct FVector                                RestPos;                                           // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                PivotPos;                                          // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalFurPhysicsPointSettings;
 
 // ScriptStruct ShooterGame.CustomCosmeticModObjectSkinEntry
 // 0x0080 (0x0080 - 0x0000)
@@ -7892,7 +7594,6 @@ public:
 	bool                                          bCosmeticApplyAsItemSkin;                          // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCustomCosmeticModObjectSkinEntry;
 
 // ScriptStruct ShooterGame.ApplyReplicatedCosmetic
 // 0x0078 (0x0078 - 0x0000)
@@ -7907,7 +7608,6 @@ public:
 	int32                                         CustomCosmeticModSkinVariantID;                    // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FApplyReplicatedCosmetic;
 
 // ScriptStruct ShooterGame.CustomCosmeticModSkin
 // 0x0028 (0x0028 - 0x0000)
@@ -7918,7 +7618,6 @@ public:
 	class FString                                 ModSkinName;                                       // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FCustomCosmeticModObjectSkinEntry> ObjectSkinEntries;                              // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomCosmeticModSkin;
 
 // ScriptStruct ShooterGame.CustomCosmeticAlternativeBaseClasses
 // 0x0038 (0x0038 - 0x0000)
@@ -7928,7 +7627,6 @@ public:
 	TSoftClassPtr<class UClass>                   ApplyToClass;                                      // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSoftClassPtr<class UClass>>           AlternativeClasses;                                // 0x0028(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomCosmeticAlternativeBaseClasses;
 
 // ScriptStruct ShooterGame.HairStyleDefinitionMeshAnimbpPair
 // 0x0058 (0x0058 - 0x0000)
@@ -7939,7 +7637,6 @@ public:
 	TSubclassOf<class UAnimInstance>              AnimBlueprint;                                     // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UTexture2D>              PlayerMeshTextureMask;                             // 0x0030(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FHairStyleDefinitionMeshAnimbpPair;
 
 // ScriptStruct ShooterGame.ExtraEggItem
 // 0x0040 (0x0040 - 0x0000)
@@ -7952,7 +7649,6 @@ public:
 	float                                         DropChance;                                        // 0x0038(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FExtraEggItem;
 
 // ScriptStruct ShooterGame.HairStyleDefinition
 // 0x00A8 (0x00A8 - 0x0000)
@@ -7975,14 +7671,12 @@ public:
 	class UTexture2D*                             HairStylePreviewIconImage;                         // 0x0078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UTexture2D>              FemaleOverrideHairStylePreviewIconImage;           // 0x0080(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FHairStyleDefinition;
 
 // ScriptStruct ShooterGame.MassMovementTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassMovementTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassMovementTag;
 
 // ScriptStruct ShooterGame.CustomCosmeticHairStyleDefinition
 // 0x0018 (0x0018 - 0x0000)
@@ -7992,7 +7686,6 @@ public:
 	int64                                         modId;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FHairStyleDefinition>           HairStyleDefinitions;                              // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomCosmeticHairStyleDefinition;
 
 // ScriptStruct ShooterGame.CustomCosmeticHairstyleDataPair
 // 0x0010 (0x0010 - 0x0000)
@@ -8003,7 +7696,6 @@ public:
 	int32                                         HairstyleIndex;                                    // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCustomCosmeticHairstyleDataPair;
 
 // ScriptStruct ShooterGame.MusicAlbumEntry
 // 0x0030 (0x0030 - 0x0000)
@@ -8015,7 +7707,6 @@ public:
 	TArray<struct FMusicTrackEntry>               MusicEntries;                                      // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	int64                                         modId;                                             // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMusicAlbumEntry;
 
 // ScriptStruct ShooterGame.AdditionalStaticMeshSockets
 // 0x0038 (0x0038 - 0x0000)
@@ -8025,7 +7716,6 @@ public:
 	TSoftObjectPtr<class UStaticMesh>             ForStaticMesh;                                     // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FFakeStaticMeshSocketData>      AdditionalRelativeSockets;                         // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAdditionalStaticMeshSockets;
 
 // ScriptStruct ShooterGame.DinoAncestorsEntryBlueprint
 // 0x0030 (0x0030 - 0x0000)
@@ -8039,7 +7729,6 @@ public:
 	int32                                         FemaleDinoID1;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         FemaleDinoID2;                                     // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoAncestorsEntryBlueprint;
 
 // ScriptStruct ShooterGame.ItemTraitModifier
 // 0x0010 (0x0010 - 0x0000)
@@ -8051,7 +7740,6 @@ public:
 	EItemTraitModiferType                         StackingType;                                      // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FItemTraitModifier;
 
 // ScriptStruct ShooterGame.MainMenuIntroData
 // 0x00B0 (0x00B0 - 0x0000)
@@ -8067,7 +7755,6 @@ public:
 	class FString                                 DisplayName;                                       // 0x0090(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DLCRequired;                                       // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
-DUMPER7_ASSERTS_FMainMenuIntroData;
 
 // ScriptStruct ShooterGame.PlayerConfigDynamicMaterialVectorNameVectorTypePairs
 // 0x000C (0x000C - 0x0000)
@@ -8078,7 +7765,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   NameUsedForDynamicMaterialVectorParam;             // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
-DUMPER7_ASSERTS_FPlayerConfigDynamicMaterialVectorNameVectorTypePairs;
 
 // ScriptStruct ShooterGame.PlayerConfigVoiceCollectionInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -8091,7 +7777,6 @@ public:
 	uint8                                         bIsFeminineCategory : 1;                           // 0x0018(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPlayerConfigVoiceCollectionInfo;
 
 // ScriptStruct ShooterGame.ManagedBoneSetup
 // 0x001C (0x001C - 0x0000)
@@ -8107,7 +7792,6 @@ public:
 	float                                         LaunchSpeed;                                       // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         GravityOverride;                                   // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FManagedBoneSetup;
 
 // ScriptStruct ShooterGame.BoneTypeValueStruct
 // 0x0008 (0x0008 - 0x0000)
@@ -8118,7 +7802,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Value;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBoneTypeValueStruct;
 
 // ScriptStruct ShooterGame.TreeSkillPoints
 // 0x0010 (0x0010 - 0x0000)
@@ -8129,7 +7812,6 @@ public:
 	int32                                         Total;                                             // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Free;                                              // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTreeSkillPoints;
 
 // ScriptStruct ShooterGame.PlayerDynamicMaterialFloat
 // 0x0020 (0x0020 - 0x0000)
@@ -8144,7 +7826,6 @@ public:
 	float                                         DefaultValueMale;                                  // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DefaultValueFemale;                                // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlayerDynamicMaterialFloat;
 
 // ScriptStruct ShooterGame.PlayerDynamicMaterialVector
 // 0x0038 (0x0038 - 0x0000)
@@ -8155,7 +7836,6 @@ public:
 	struct FVector                                MinValue;                                          // 0x0008(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                MaxValue;                                          // 0x0020(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlayerDynamicMaterialVector;
 
 // ScriptStruct ShooterGame.PlayerDynamicMaterialColors
 // 0x000C (0x000C - 0x0000)
@@ -8165,7 +7845,6 @@ public:
 	class FName                                   NameUsedForDynamicMaterialByteParam;               // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	struct FColor                                 Value;                                             // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlayerDynamicMaterialColors;
 
 // ScriptStruct ShooterGame.RVCStateBatchEntry
 // 0x0018 (0x0018 - 0x0000)
@@ -8176,7 +7855,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FRVCPortholeStateChange>        PortholeStates;                                    // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRVCStateBatchEntry;
 
 // ScriptStruct ShooterGame.PlayerBoneBodyPreset
 // 0x0060 (0x0060 - 0x0000)
@@ -8193,7 +7871,6 @@ public:
 	uint8                                         bFemaleOnly : 1;                                   // 0x0058(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPlayerBoneBodyPreset;
 
 // ScriptStruct ShooterGame.TemplateSkinStructureData
 // 0x0058 (0x0058 - 0x0000)
@@ -8209,7 +7886,6 @@ public:
 	int32                                         TemplateIndex;                                     // 0x0050(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTemplateSkinStructureData;
 
 // ScriptStruct ShooterGame.TemplateSkinItemData
 // 0x0020 (0x0020 - 0x0000)
@@ -8219,7 +7895,6 @@ public:
 	class FString                                 ItemName;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FTemplateSkinStructureData>     SkinStructures;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTemplateSkinItemData;
 
 // ScriptStruct ShooterGame.NameColorPair
 // 0x0018 (0x0018 - 0x0000)
@@ -8229,7 +7904,6 @@ public:
 	class FName                                   MaterialParamName;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Color;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNameColorPair;
 
 // ScriptStruct ShooterGame.NameScalarPair
 // 0x000C (0x000C - 0x0000)
@@ -8239,7 +7913,6 @@ public:
 	class FName                                   MaterialParamName;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNameScalarPair;
 
 // ScriptStruct ShooterGame.LocalizedSoundCueEntry
 // 0x0030 (0x0030 - 0x0000)
@@ -8249,7 +7922,6 @@ public:
 	class FString                                 TwoLetterISOLanguageName;                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        LocalizedSoundCue;                                 // 0x0010(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLocalizedSoundCueEntry;
 
 // ScriptStruct ShooterGame.ShipColorOption
 // 0x0014 (0x0014 - 0x0000)
@@ -8259,7 +7931,6 @@ public:
 	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Weight;                                            // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FShipColorOption;
 
 // ScriptStruct ShooterGame.ExplorerNoteEntry
 // 0x0190 (0x0190 - 0x0000)
@@ -8304,7 +7975,6 @@ public:
 	class FString                                 MovieFemalePath;                                   // 0x0158(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TSoftObjectPtr<class UBinkMediaPlayer>        ExplorerNoteBinkMediaPlayerFemale;                 // 0x0168(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FExplorerNoteEntry;
 
 // ScriptStruct ShooterGame.ExplorerNoteAchievement
 // 0x0020 (0x0020 - 0x0000)
@@ -8314,7 +7984,6 @@ public:
 	class FString                                 AchievementName;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<int32>                                 ExplorerNoteIndices;                               // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FExplorerNoteAchievement;
 
 // ScriptStruct ShooterGame.UnlockableEmoteEntry
 // 0x00A0 (0x00A0 - 0x0000)
@@ -8335,7 +8004,6 @@ public:
 	bool                                          bHideWeaponDuringEmote;                            // 0x0098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FUnlockableEmoteEntry;
 
 // ScriptStruct ShooterGame.CannonState
 // 0x0010 (0x0010 - 0x0000)
@@ -8346,7 +8014,6 @@ public:
 	int32                                         LastVolleyAmmoIndex;                               // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCannonState;
 
 // ScriptStruct ShooterGame.InventoryComponentDefaultItemsAppend
 // 0x0038 (0x0038 - 0x0000)
@@ -8359,7 +8026,6 @@ public:
 	bool                                          bAddToForceAllowCrafting;                          // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FInventoryComponentDefaultItemsAppend;
 
 // ScriptStruct ShooterGame.DinoOrderID
 // 0x0018 (0x0018 - 0x0000)
@@ -8370,7 +8036,6 @@ public:
 	int32                                         DinoID2;                                           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DinoName;                                          // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoOrderID;
 
 // ScriptStruct ShooterGame.MultiAchievement
 // 0x0020 (0x0020 - 0x0000)
@@ -8380,7 +8045,6 @@ public:
 	class FString                                 UnlockAchievement;                                 // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         RequiredAchievements;                              // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMultiAchievement;
 
 // ScriptStruct ShooterGame.ConfigCraftingResourceRequirement
 // 0x0020 (0x0020 - 0x0000)
@@ -8393,7 +8057,6 @@ public:
 	bool                                          bCraftingRequireExactResourceType;                 // 0x0018(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FConfigCraftingResourceRequirement;
 
 // ScriptStruct ShooterGame.ConfigItemCraftingCostOverride
 // 0x0020 (0x0020 - 0x0000)
@@ -8403,7 +8066,6 @@ public:
 	class FString                                 ItemClassString;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FConfigCraftingResourceRequirement> BaseCraftingResourceRequirements;              // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FConfigItemCraftingCostOverride;
 
 // ScriptStruct ShooterGame.ShooterCharacterSparseClassData
 // 0x02D0 (0x0598 - 0x02C8)
@@ -8519,7 +8181,6 @@ public:
 	float                                         BendMaxAngle;                                      // 0x058C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UNiagaraSystem*                         DataChannelVFX;                                    // 0x0590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FShooterCharacterSparseClassData;
 
 // ScriptStruct ShooterGame.MaxItemQuantityOverride
 // 0x0008 (0x0008 - 0x0000)
@@ -8530,14 +8191,12 @@ public:
 	bool                                          bIgnoreMultiplier;                                 // 0x0004(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMaxItemQuantityOverride;
 
 // ScriptStruct ShooterGame.PrimalShipSparseClassData
 // 0x0000 (0x0E10 - 0x0E10)
 struct FPrimalShipSparseClassData final : public FPrimalDinoCharacterSparseClassData
 {
 };
-DUMPER7_ASSERTS_FPrimalShipSparseClassData;
 
 // ScriptStruct ShooterGame.ConfigMaxItemQuantityOverride
 // 0x0018 (0x0018 - 0x0000)
@@ -8547,7 +8206,6 @@ public:
 	class FString                                 ItemClassString;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMaxItemQuantityOverride               Quantity;                                          // 0x0010(0x0008)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FConfigMaxItemQuantityOverride;
 
 // ScriptStruct ShooterGame.ItemMaxItemQuantityOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -8557,7 +8215,6 @@ public:
 	TSubclassOf<class UPrimalItem>                ItemClass;                                         // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMaxItemQuantityOverride               Quantity;                                          // 0x0008(0x0008)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FItemMaxItemQuantityOverride;
 
 // ScriptStruct ShooterGame.ItemCraftingCostOverride
 // 0x0018 (0x0018 - 0x0000)
@@ -8567,14 +8224,12 @@ public:
 	TSubclassOf<class UPrimalItem>                ItemClass;                                         // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FCraftingResourceRequirement>   BaseCraftingResourceRequirements;                  // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FItemCraftingCostOverride;
 
 // ScriptStruct ShooterGame.Rotator_NetQuantizeNoRoll
 // 0x0000 (0x0018 - 0x0018)
 struct FRotator_NetQuantizeNoRoll final : public FRotator
 {
 };
-DUMPER7_ASSERTS_FRotator_NetQuantizeNoRoll;
 
 // ScriptStruct ShooterGame.ClassRemapping
 // 0x0050 (0x0050 - 0x0000)
@@ -8584,7 +8239,6 @@ public:
 	TSoftClassPtr<class UClass>                   FromClass;                                         // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftClassPtr<class UClass>                   ToClass;                                           // 0x0028(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FClassRemapping;
 
 // ScriptStruct ShooterGame.TrackedActorIDCategoryPairWithBool
 // 0x0008 (0x0008 - 0x0000)
@@ -8596,7 +8250,6 @@ public:
 	bool                                          BoolVal;                                           // 0x0005(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTrackedActorIDCategoryPairWithBool;
 
 // ScriptStruct ShooterGame.ObjectCorrelation
 // 0x0010 (0x0010 - 0x0000)
@@ -8606,7 +8259,6 @@ public:
 	class UObject*                                FromObject;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ToObject;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FObjectCorrelation;
 
 // ScriptStruct ShooterGame.OverrideAnimBlueprintEntry
 // 0x0058 (0x0058 - 0x0000)
@@ -8618,7 +8270,6 @@ public:
 	bool                                          bIsForGenderOverride;                              // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FOverrideAnimBlueprintEntry;
 
 // ScriptStruct ShooterGame.ShooterDiscordSessionActivityInviteData
 // 0x0028 (0x0028 - 0x0000)
@@ -8633,7 +8284,6 @@ public:
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDiscordActivityInvite*                 invite;                                            // 0x0020(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FShooterDiscordSessionActivityInviteData;
 
 // ScriptStruct ShooterGame.ClassAddition
 // 0x0038 (0x0038 - 0x0000)
@@ -8643,7 +8293,6 @@ public:
 	TSoftClassPtr<class UClass>                   ForClass;                                          // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSoftClassPtr<class UClass>>           ClassAdditions;                                    // 0x0028(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FClassAddition;
 
 // ScriptStruct ShooterGame.ShipCannonAimCameraSettings
 // 0x000C (0x000C - 0x0000)
@@ -8654,7 +8303,6 @@ public:
 	float                                         Height;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Distance;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FShipCannonAimCameraSettings;
 
 // ScriptStruct ShooterGame.ActiveEventSupplyCrateWeight
 // 0x0028 (0x0028 - 0x0000)
@@ -8665,7 +8313,6 @@ public:
 	TArray<float>                                 Weights;                                           // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	class FName                                   ActiveEvent;                                       // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FActiveEventSupplyCrateWeight;
 
 // ScriptStruct ShooterGame.BuffAddition
 // 0x0038 (0x0038 - 0x0000)
@@ -8675,7 +8322,6 @@ public:
 	TSoftClassPtr<class UClass>                   ForClass;                                          // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSubclassOf<class APrimalBuff>>        BuffAdditions;                                     // 0x0028(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBuffAddition;
 
 // ScriptStruct ShooterGame.AppIDItem
 // 0x0060 (0x0060 - 0x0000)
@@ -8693,7 +8339,6 @@ public:
 	TSubclassOf<class UPrimalItem>                ItemClass;                                         // 0x0048(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSubclassOf<class UPrimalItem>>        ItemClasses;                                       // 0x0050(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAppIDItem;
 
 // ScriptStruct ShooterGame.AudioComponentWrapper
 // 0x0048 (0x0048 - 0x0000)
@@ -8703,7 +8348,6 @@ public:
 	class UAudioComponent*                        AudioComponent;                                    // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x40];                                       // 0x0008(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAudioComponentWrapper;
 
 // ScriptStruct ShooterGame.BoneModifierRange
 // 0x0070 (0x0070 - 0x0000)
@@ -8718,7 +8362,6 @@ public:
 	bool                                          Recursive;                                         // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBoneModifierRange;
 
 // ScriptStruct ShooterGame.PrimalReverseVacuumDoorInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -8730,7 +8373,6 @@ public:
 	class APrimalStructureDoor*                   PortholeDoor;                                      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMeshComponent*                         DoorFrameMesh;                                     // 0x0010(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalReverseVacuumDoorInfo;
 
 // ScriptStruct ShooterGame.BoneModifierRangeArray
 // 0x0030 (0x0030 - 0x0000)
@@ -8746,7 +8388,6 @@ public:
 	TArray<struct FBoneModifierRange>             BoneArray;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FVector2D                              GlobalFatRemap;                                    // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBoneModifierRangeArray;
 
 // ScriptStruct ShooterGame.RandValueRange
 // 0x000C (0x000C - 0x0000)
@@ -8757,7 +8398,6 @@ public:
 	float                                         MaxVal;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RandPower;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRandValueRange;
 
 // ScriptStruct ShooterGame.DinoBabySetup
 // 0x0038 (0x0038 - 0x0000)
@@ -8769,7 +8409,6 @@ public:
 	TArray<float>                                 WildRandomScaleRangeWeights;                       // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FRandValueRange>                WildRandomScaleRanges;                             // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoBabySetup;
 
 // ScriptStruct ShooterGame.PrimalTargetableActorSparseClassData
 // 0x00A8 (0x00A8 - 0x0000)
@@ -8799,7 +8438,6 @@ public:
 	uint8                                         bUseBPGetDestroyedMeshes : 1;                      // 0x00A5(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_A6[0x2];                                       // 0x00A6(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalTargetableActorSparseClassData;
 
 // ScriptStruct ShooterGame.PlayerCharacterGenderDefinition
 // 0x0A38 (0x0A38 - 0x0000)
@@ -8818,7 +8456,6 @@ public:
 	struct FBoneModifierRangeArray                ExtraCharacterBoneModifierMax[0x1A];               // 0x0550(0x0030)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TSubclassOf<class UGlobalBoneModifiers>       GlobalBoneModifiers;                               // 0x0A30(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlayerCharacterGenderDefinition;
 
 // ScriptStruct ShooterGame.PrimalStructureSkinMaterialData
 // 0x00F8 (0x00F8 - 0x0000)
@@ -8830,7 +8467,6 @@ public:
 	TMap<class FName, class UTexture*>            TextureParams;                                     // 0x00A0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class UMaterialInterface*                     MaterialOverride;                                  // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureSkinMaterialData;
 
 // ScriptStruct ShooterGame.TeamPingData
 // 0x0050 (0x0050 - 0x0000)
@@ -8848,7 +8484,6 @@ public:
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PlayerName;                                        // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTeamPingData;
 
 // ScriptStruct ShooterGame.TeamPingDataForClient
 // 0x0080 (0x0080 - 0x0000)
@@ -8870,7 +8505,6 @@ public:
 	class FString                                 PlayerName;                                        // 0x0068(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundCue*                              SoundOnPing;                                       // 0x0078(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTeamPingDataForClient;
 
 // ScriptStruct ShooterGame.TribeWar
 // 0x0030 (0x0030 - 0x0000)
@@ -8888,7 +8522,6 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 EnemyTribeName;                                    // 0x0020(0x0010)(ZeroConstructor, SaveGame, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTribeWar;
 
 // ScriptStruct ShooterGame.PrimalDroppedItemOnPlatform
 // 0x0040 (0x0040 - 0x0000)
@@ -8900,7 +8533,6 @@ public:
 	class FName                                   BoneName;                                          // 0x0030(0x0008)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APrimalStructureItemContainer*          MyItem;                                            // 0x0038(0x0008)(ZeroConstructor, SaveGame, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalDroppedItemOnPlatform;
 
 // ScriptStruct ShooterGame.TribeAlliance
 // 0x0048 (0x0048 - 0x0000)
@@ -8914,7 +8546,6 @@ public:
 	TArray<uint32>                                MembersTribeID;                                    // 0x0028(0x0010)(ZeroConstructor, SaveGame, NativeAccessSpecifierPublic)
 	TArray<uint32>                                AdminsTribeID;                                     // 0x0038(0x0010)(ZeroConstructor, SaveGame, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTribeAlliance;
 
 // ScriptStruct ShooterGame.ItemCraftingConsumptionReplenishment
 // 0x0018 (0x0018 - 0x0000)
@@ -8924,7 +8555,6 @@ public:
 	TArray<TSubclassOf<class UPrimalItem>>        ItemResourceClasses;                               // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
 	TSubclassOf<class UPrimalItem>                ToReplaceWithClass;                                // 0x0010(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FItemCraftingConsumptionReplenishment;
 
 // ScriptStruct ShooterGame.TribeRankGroup
 // 0x0028 (0x0028 - 0x0000)
@@ -8963,7 +8593,6 @@ public:
 	uint8                                         bAllowRallyPoint : 1;                              // 0x0024(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (BlueprintVisible, SaveGame, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTribeRankGroup;
 
 // ScriptStruct ShooterGame.PrimalPlayerCharacterConfigStruct
 // 0x0140 (0x0140 - 0x0000)
@@ -8995,7 +8624,6 @@ public:
 	uint8                                         DynamicFaceMaterialBytes[0x15];                    // 0x0128(0x0001)(Edit, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         DynamicFaceIndex[0x3];                             // 0x013D(0x0001)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalPlayerCharacterConfigStruct;
 
 // ScriptStruct ShooterGame.CustomTrackedActorInfo
 // 0x00E0 (0x00E0 - 0x0000)
@@ -9046,7 +8674,6 @@ public:
 	bool                                          POIVisible;                                        // 0x00D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCustomTrackedActorInfo;
 
 // ScriptStruct ShooterGame.TrackedActorPlusInfoStruct
 // 0x0128 (0x0128 - 0x0000)
@@ -9064,7 +8691,6 @@ public:
 	uint8                                         NextLinkedListTrackedActorCategory;                // 0x0124(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_125[0x3];                                      // 0x0125(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTrackedActorPlusInfoStruct;
 
 // ScriptStruct ShooterGame.TribeData
 // 0x01C8 (0x01C8 - 0x0000)
@@ -9102,7 +8728,6 @@ public:
 	int16                                         ThreatLevel;                                       // 0x0172(0x0002)(ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_174[0x54];                                     // 0x0174(0x0054)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTribeData;
 
 // ScriptStruct ShooterGame.SeatingSpot
 // 0x0038 (0x0038 - 0x0000)
@@ -9114,7 +8739,6 @@ public:
 	struct FVector                                LocationOffset;                                    // 0x0008(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               RotationOffset;                                    // 0x0020(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSeatingSpot;
 
 // ScriptStruct ShooterGame.AttachmentPoint
 // 0x0060 (0x0060 - 0x0000)
@@ -9123,7 +8747,6 @@ struct alignas(0x08) FAttachmentPoint final
 public:
 	uint8                                         Pad_0[0x60];                                       // 0x0000(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAttachmentPoint;
 
 // ScriptStruct ShooterGame.ItemSetup
 // 0x0028 (0x0028 - 0x0000)
@@ -9140,7 +8763,6 @@ public:
 	uint8                                         bForceBlueprint : 1;                               // 0x0024(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FItemSetup;
 
 // ScriptStruct ShooterGame.DinoSetup
 // 0x0110 (0x0110 - 0x0000)
@@ -9178,7 +8800,6 @@ public:
 	bool                                          bNetInfoFromClient;                                // 0x0108(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDinoSetup;
 
 // ScriptStruct ShooterGame.DinoSetupGroup
 // 0x0030 (0x0030 - 0x0000)
@@ -9191,7 +8812,6 @@ public:
 	TArray<struct FDinoSetup>                     Entries;                                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 EntriesSpawnNumberLimits;                          // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoSetupGroup;
 
 // ScriptStruct ShooterGame.PrimalStructureSoundsOverride
 // 0x0030 (0x0030 - 0x0000)
@@ -9205,7 +8825,6 @@ public:
 	class USoundBase*                             ContainerActivated;                                // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundBase*                             ContainerDeactivated;                              // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureSoundsOverride;
 
 // ScriptStruct ShooterGame.ItemToDinoStatParams
 // 0x0018 (0x0018 - 0x0000)
@@ -9222,7 +8841,6 @@ public:
 	ESimpleCurve                                  ConversionCurve;                                   // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FItemToDinoStatParams;
 
 // ScriptStruct ShooterGame.NamedTeamDefinition
 // 0x0080 (0x0080 - 0x0000)
@@ -9246,7 +8864,6 @@ public:
 	TArray<float>                                 MaximumTargetableDistances;                        // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<float>                                 TargetingMultiplierTeamWeights;                    // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNamedTeamDefinition;
 
 // ScriptStruct ShooterGame.ColorDefinition
 // 0x001C (0x001C - 0x0000)
@@ -9258,7 +8875,6 @@ public:
 	bool                                          bHasOverridePriority;                              // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FColorDefinition;
 
 // ScriptStruct ShooterGame.PatrolPointConnection
 // 0x0028 (0x0028 - 0x0000)
@@ -9272,7 +8888,6 @@ public:
 	int32                                         PathSize;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         OccupiedByGroupID;                                 // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPatrolPointConnection;
 
 // ScriptStruct ShooterGame.MarketTradeLogEntry
 // 0x0050 (0x0050 - 0x0000)
@@ -9290,7 +8905,6 @@ public:
 	int32                                         DayNumber;                                         // 0x0048(0x0004)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DayTime;                                           // 0x004C(0x0004)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMarketTradeLogEntry;
 
 // ScriptStruct ShooterGame.ItemAttachmentInfo
 // 0x0070 (0x0070 - 0x0000)
@@ -9332,7 +8946,6 @@ public:
 	TWeakObjectPtr<class UActorComponent>         AttachedCompReference;                             // 0x0064(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FItemAttachmentInfo;
 
 // ScriptStruct ShooterGame.LevelExperienceRamp
 // 0x0010 (0x0010 - 0x0000)
@@ -9341,7 +8954,6 @@ struct FLevelExperienceRamp final
 public:
 	TArray<float>                                 ExperiencePointsForLevel;                          // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLevelExperienceRamp;
 
 // ScriptStruct ShooterGame.DamageTypeAdjuster
 // 0x0030 (0x0030 - 0x0000)
@@ -9357,7 +8969,6 @@ public:
 	uint8                                         bOnlyUseMultiplierIfTamed : 1;                     // 0x002C(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDamageTypeAdjuster;
 
 // ScriptStruct ShooterGame.DinoOrderGroup
 // 0x0030 (0x0030 - 0x0000)
@@ -9368,7 +8979,6 @@ public:
 	TArray<TSubclassOf<class APrimalDinoCharacter>> DinoOrderClasses;                                // 0x0010(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<struct FDinoOrderID>                   DinoOrderIDs;                                      // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoOrderGroup;
 
 // ScriptStruct ShooterGame.MilestoneTreeLevelAndIndex
 // 0x0010 (0x0010 - 0x0000)
@@ -9378,7 +8988,6 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIntPoint                              LevelAndIndex;                                     // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMilestoneTreeLevelAndIndex;
 
 // ScriptStruct ShooterGame.PrimalPersistentCharacterStatsStruct
 // 0x03D8 (0x03D8 - 0x0000)
@@ -9437,7 +9046,6 @@ public:
 	int8                                          ObtainedSigilCount_Abb;                            // 0x03D1(0x0001)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3D2[0x6];                                      // 0x03D2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalPersistentCharacterStatsStruct;
 
 // ScriptStruct ShooterGame.PrimalCharacterStatusValueDefinition
 // 0x0020 (0x0020 - 0x0000)
@@ -9451,7 +9059,6 @@ public:
 	bool                                          bDisplayAsPercent;                                 // 0x001A(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalCharacterStatusValueDefinition;
 
 // ScriptStruct ShooterGame.PrimalStructureSkinParticleSystemData
 // 0x0118 (0x0118 - 0x0000)
@@ -9466,7 +9073,6 @@ public:
 	TSoftObjectPtr<class UFXSystemAsset>          ParticleSystem;                                    // 0x00E8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USceneComponent*                        AttachTo;                                          // 0x0110(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureSkinParticleSystemData;
 
 // ScriptStruct ShooterGame.PrimalStructureSkinExtraComponents
 // 0x00B8 (0x00B8 - 0x0000)
@@ -9483,7 +9089,6 @@ public:
 	TSoftObjectPtr<class UStaticMesh>             StaticMesh;                                        // 0x0088(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USceneComponent*                        AttachTo;                                          // 0x00B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureSkinExtraComponents;
 
 // ScriptStruct ShooterGame.PrimalStructureSkinVariant
 // 0x0050 (0x0050 - 0x0000)
@@ -9495,7 +9100,6 @@ public:
 	struct FVector                                RootLoc;                                           // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               RootRot;                                           // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureSkinVariant;
 
 // ScriptStruct ShooterGame.PrimalStructureSkinData
 // 0x0148 (0x0148 - 0x0000)
@@ -9519,7 +9123,6 @@ public:
 	TArray<struct FPrimalStructureSkinVariant>    Variants;                                          // 0x0108(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	struct FPrimalStructureSoundsOverride         SoundOverrides;                                    // 0x0118(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureSkinData;
 
 // ScriptStruct ShooterGame.PrimalItemQuality
 // 0x0030 (0x0030 - 0x0000)
@@ -9533,7 +9136,6 @@ public:
 	float                                         RepairingXPMultiplier;                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CraftingResourceRequirementsMultiplier;            // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalItemQuality;
 
 // ScriptStruct ShooterGame.PrimalItemDefinition
 // 0x0020 (0x0020 - 0x0000)
@@ -9545,7 +9147,6 @@ public:
 	struct FColor                                 ItemTypeColor;                                     // 0x0018(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalItemDefinition;
 
 // ScriptStruct ShooterGame.PrimalItemStatDefinition
 // 0x0018 (0x0018 - 0x0000)
@@ -9555,7 +9156,6 @@ public:
 	class UTexture2D*                             ItemStatIcon;                                      // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ItemStatName;                                      // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalItemStatDefinition;
 
 // ScriptStruct ShooterGame.SkillCooldown
 // 0x0018 (0x0018 - 0x0000)
@@ -9567,7 +9167,6 @@ public:
 	float                                         CooldownDuration;                                  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSkillCooldown;
 
 // ScriptStruct ShooterGame.VectorBoolPair
 // 0x0020 (0x0020 - 0x0000)
@@ -9578,7 +9177,6 @@ public:
 	bool                                          BoolVal;                                           // 0x0018(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVectorBoolPair;
 
 // ScriptStruct ShooterGame.LatestMissionScore
 // 0x00A0 (0x00A0 - 0x0000)
@@ -9591,7 +9189,6 @@ public:
 	bool                                          bHasValidScore;                                    // 0x0098(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLatestMissionScore;
 
 // ScriptStruct ShooterGame.TrackedActorIDCategoryPair
 // 0x0008 (0x0008 - 0x0000)
@@ -9602,7 +9199,6 @@ public:
 	ETrackedActorCategory                         Category;                                          // 0x0004(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTrackedActorIDCategoryPair;
 
 // ScriptStruct ShooterGame.AppliedCosmeticsData
 // 0x0080 (0x0080 - 0x0000)
@@ -9618,7 +9214,6 @@ public:
 	int16                                         CosmeticColorID[0x6];                              // 0x0070(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAppliedCosmeticsData;
 
 // ScriptStruct ShooterGame.StableActivatableInfo
 // 0x0014 (0x0014 - 0x0000)
@@ -9629,7 +9224,6 @@ public:
 	bool                                          bIsActivated;                                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FStableActivatableInfo;
 
 // ScriptStruct ShooterGame.PrimalPlayerDataStruct
 // 0x06E0 (0x06E0 - 0x0000)
@@ -9685,7 +9279,6 @@ public:
 	TArray<class FName>                           HeardVoiceOvers;                                   // 0x06C0(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FStableActivatableInfo>         StableActivatablesInfo;                            // 0x06D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalPlayerDataStruct;
 
 // ScriptStruct ShooterGame.PrimalEquipmentDefinition
 // 0x0018 (0x0018 - 0x0000)
@@ -9695,7 +9288,6 @@ public:
 	class UTexture2D*                             EquipmentTypeIcon;                                 // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 EquipmentTypeName;                                 // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalEquipmentDefinition;
 
 // ScriptStruct ShooterGame.StatusValueModifierDescription
 // 0x0050 (0x0050 - 0x0000)
@@ -9716,7 +9308,6 @@ public:
 	bool                                          bPreventDisplayBuffHUD;                            // 0x004C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FStatusValueModifierDescription;
 
 // ScriptStruct ShooterGame.PrimalCharacterStatusStateDefinition
 // 0x0058 (0x0058 - 0x0000)
@@ -9739,7 +9330,6 @@ public:
 	bool                                          bPreventDisplayBuffHUD;                            // 0x0050(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalCharacterStatusStateDefinition;
 
 // ScriptStruct ShooterGame.TutorialDefinition
 // 0x0030 (0x0030 - 0x0000)
@@ -9752,7 +9342,6 @@ public:
 	float                                         TutorialDuration;                                  // 0x0028(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NextTutorialIndex;                                 // 0x002C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTutorialDefinition;
 
 // ScriptStruct ShooterGame.SupplyCrateItemEntry
 // 0x0090 (0x0090 - 0x0000)
@@ -9785,7 +9374,6 @@ public:
 	bool                                          bIgnoreQuantityMultipliers;                        // 0x008C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSupplyCrateItemEntry;
 
 // ScriptStruct ShooterGame.StructureEffectData
 // 0x0040 (0x0048 - 0x0008)
@@ -9801,7 +9389,6 @@ public:
 	uint8                                         bFeedMeshBounds : 1;                               // 0x0040(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FStructureEffectData;
 
 // ScriptStruct ShooterGame.SupplyCrateItemSet
 // 0x0040 (0x0040 - 0x0000)
@@ -9818,7 +9405,6 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UPrimalSupplyCrateItemSet>  ItemSetOverride;                                   // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSupplyCrateItemSet;
 
 // ScriptStruct ShooterGame.ConfigSupplyCrateItemsOverride
 // 0x0038 (0x0038 - 0x0000)
@@ -9836,7 +9422,6 @@ public:
 	bool                                          bAppendPreventIncreasingMinMaxItemSets;            // 0x0031(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FConfigSupplyCrateItemsOverride;
 
 // ScriptStruct ShooterGame.NPCSpawnLimit
 // 0x0040 (0x0040 - 0x0000)
@@ -9848,7 +9433,6 @@ public:
 	float                                         MaxPercentageOfDesiredNumToAllow;                  // 0x0038(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNPCSpawnLimit;
 
 // ScriptStruct ShooterGame.NPCSpawnEntriesContainerAdditions
 // 0x0040 (0x0040 - 0x0000)
@@ -9862,7 +9446,6 @@ public:
 	TArray<struct FNPCSpawnEntry>                 AdditionalNPCSpawnEntries;                         // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<struct FNPCSpawnLimit>                 AdditionalNPCSpawnLimits;                          // 0x0030(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNPCSpawnEntriesContainerAdditions;
 
 // ScriptStruct ShooterGame.InvalidReferenceRedirector
 // 0x0048 (0x0048 - 0x0000)
@@ -9874,7 +9457,6 @@ public:
 	struct FSoftObjectPath                        RedirectedClassSoftReference;                      // 0x0018(0x0020)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         LimitedToMaps;                                     // 0x0038(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInvalidReferenceRedirector;
 
 // ScriptStruct ShooterGame.WorldDefaultItemSet
 // 0x0030 (0x0030 - 0x0000)
@@ -9890,7 +9472,6 @@ public:
 	int32                                         ForceEquipIfAppID;                                 // 0x001C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSubclassOf<class UPrimalItem>>        ItemsToGive;                                       // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FWorldDefaultItemSet;
 
 // ScriptStruct ShooterGame.EscapeRoom_RoomSetup
 // 0x00C0 (0x00C0 - 0x0000)
@@ -9924,7 +9505,6 @@ public:
 	bool                                          ChooseSingleUniqueUnlockReqForRoom;                // 0x00BC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEscapeRoom_RoomSetup;
 
 // ScriptStruct ShooterGame.CryopodPersistantBuffs
 // 0x0018 (0x0018 - 0x0000)
@@ -9935,7 +9515,6 @@ public:
 	int32                                         IDBitMask;                                         // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCryopodPersistantBuffs;
 
 // ScriptStruct ShooterGame.ItemSpawnBlacklistInfo
 // 0x0050 (0x0058 - 0x0008)
@@ -9944,7 +9523,6 @@ struct FItemSpawnBlacklistInfo final : public FTableRowBase
 public:
 	TSet<TSoftClassPtr<class UClass>>             ItemClasses;                                       // 0x0008(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FItemSpawnBlacklistInfo;
 
 // ScriptStruct ShooterGame.MilestoneTreeEntry
 // 0x0018 (0x0018 - 0x0000)
@@ -9955,7 +9533,6 @@ public:
 	uint8                                         bRepeatTier : 1;                                   // 0x0010(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMilestoneTreeEntry;
 
 // ScriptStruct ShooterGame.MilestoneTreeEntryArray
 // 0x0080 (0x0080 - 0x0000)
@@ -9969,7 +9546,6 @@ public:
 	class UTexture2D*                             MilestonesTreeIcon;                                // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<int32, struct FPrimalMilestoneLvlReward> LevelRewards;                                      // 0x0030(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMilestoneTreeEntryArray;
 
 // ScriptStruct ShooterGame.PlayerPawnDefaultAnimInstances
 // 0x0010 (0x0010 - 0x0000)
@@ -9979,7 +9555,6 @@ public:
 	TSubclassOf<class UAnimInstance>              MaleAnimClass;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UAnimInstance>              FemaleAnimClass;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlayerPawnDefaultAnimInstances;
 
 // ScriptStruct ShooterGame.CachedDBAccessor
 // 0x0040 (0x0040 - 0x0000)
@@ -9989,7 +9564,6 @@ public:
 	struct FCachedDBSet                           CachedDBs;                                         // 0x0000(0x0030)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
 	TArray<struct FCachedDBSet>                   OverrideCachedDBs;                                 // 0x0030(0x0010)(Edit, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FCachedDBAccessor;
 
 // ScriptStruct ShooterGame.ComponentAttachmentEntry
 // 0x0038 (0x0038 - 0x0000)
@@ -10000,7 +9574,6 @@ public:
 	struct FVector                                ComponentLocationOffset;                           // 0x0008(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               ComponentRotationOffset;                           // 0x0020(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FComponentAttachmentEntry;
 
 // ScriptStruct ShooterGame.HarvestResourceEntry
 // 0x0078 (0x0078 - 0x0000)
@@ -10025,7 +9598,6 @@ public:
 	uint8                                         bScaleWithDinoBabyAge : 1;                         // 0x0070(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FHarvestResourceEntry;
 
 // ScriptStruct ShooterGame.ItemSpawnActorClassOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -10035,7 +9607,6 @@ public:
 	TSubclassOf<class UPrimalItem>                ItemClass;                                         // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class AActor>                     ActorClassOverride;                                // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FItemSpawnActorClassOverride;
 
 // ScriptStruct ShooterGame.WirelessResourceData
 // 0x0058 (0x0058 - 0x0000)
@@ -10046,7 +9617,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<class UPrimalInventoryComponent*>        Inventories;                                       // 0x0008(0x0050)(Edit, ExportObject, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FWirelessResourceData;
 
 // ScriptStruct ShooterGame.InventoryComponentSet
 // 0x0050 (0x0050 - 0x0000)
@@ -10055,7 +9625,6 @@ struct FInventoryComponentSet final
 public:
 	TSet<class UPrimalInventoryComponent*>        InventorySet;                                      // 0x0000(0x0050)(Edit, ExportObject, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInventoryComponentSet;
 
 // ScriptStruct ShooterGame.ActorClassAttachmentInfo
 // 0x0078 (0x0078 - 0x0000)
@@ -10075,7 +9644,6 @@ public:
 	int32                                         FPVHandsMeshTextureMaskMaterialIndex;              // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         FPVHandsMeshTextureMaskMaterialIndex2;             // 0x0074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FActorClassAttachmentInfo;
 
 // ScriptStruct ShooterGame.RequiresInventorySubclassMapping
 // 0x0038 (0x0038 - 0x0000)
@@ -10085,7 +9653,6 @@ public:
 	TArray<TSoftClassPtr<class UClass>>           RequiresInventoryComponentClassChildren;           // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
 	TSoftClassPtr<class UClass>                   InventoryComponentClassParent;                     // 0x0010(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRequiresInventorySubclassMapping;
 
 // ScriptStruct ShooterGame.ItemStatInfo
 // 0x0024 (0x0024 - 0x0000)
@@ -10108,7 +9675,6 @@ public:
 	uint8                                         bHideStatFromTooltip : 1;                          // 0x0020(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FItemStatInfo;
 
 // ScriptStruct ShooterGame.UnreplicatedEggData
 // 0x0070 (0x0070 - 0x0000)
@@ -10126,7 +9692,6 @@ public:
 	int32                                         EggRandomMutationsMale;                            // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EggGenderOverride;                                 // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUnreplicatedEggData;
 
 // ScriptStruct ShooterGame.ItemCraftQueueEntry
 // 0x0018 (0x0018 - 0x0000)
@@ -10141,7 +9706,6 @@ public:
 	uint8                                         bIgnoreInventoryRequirement : 1;                   // 0x0014(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FItemCraftQueueEntry;
 
 // ScriptStruct ShooterGame.ItemCraftingResourceRequirementQuantityData
 // 0x0010 (0x0010 - 0x0000)
@@ -10154,7 +9718,6 @@ public:
 	bool                                          bHasEnoughResources;                               // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FItemCraftingResourceRequirementQuantityData;
 
 // ScriptStruct ShooterGame.ArkTributePlayerDataListing
 // 0x0120 (0x0120 - 0x0000)
@@ -10175,7 +9738,6 @@ public:
 	uint32                                        ExpirationTimeUTC;                                 // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 PlayerDataBytes;                                   // 0x0110(0x0010)(ZeroConstructor, RepSkip, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FArkTributePlayerDataListing;
 
 // ScriptStruct ShooterGame.PrimalMovementFragment
 // 0x0358 (0x0358 - 0x0000)
@@ -10184,14 +9746,12 @@ struct alignas(0x08) FPrimalMovementFragment final : public FMassFragment
 public:
 	uint8                                         Pad_0[0x358];                                      // 0x0000(0x0358)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalMovementFragment;
 
 // ScriptStruct ShooterGame.NotifyHitTag
 // 0x0000 (0x0001 - 0x0001)
 struct FNotifyHitTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FNotifyHitTag;
 
 // ScriptStruct ShooterGame.PrimalRaftSparseClassData
 // 0x0020 (0x0E30 - 0x0E10)
@@ -10205,7 +9765,6 @@ public:
 	uint8                                         Pad_E24[0x4];                                      // 0x0E24(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             AnchoredIcon;                                      // 0x0E28(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FPrimalRaftSparseClassData;
 
 // ScriptStruct ShooterGame.PrimalChatFontData
 // 0x0020 (0x0020 - 0x0000)
@@ -10216,7 +9775,6 @@ public:
 	int32                                         FontSize;                                          // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSlateColor                            FontColor;                                         // 0x000C(0x0014)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalChatFontData;
 
 // ScriptStruct ShooterGame.ShipGunportMeshEntry
 // 0x0020 (0x0020 - 0x0000)
@@ -10226,7 +9784,6 @@ public:
 	TWeakObjectPtr<class UStaticMeshComponent>    Mesh;                                              // 0x0000(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               RestRelativeRotation;                              // 0x0008(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FShipGunportMeshEntry;
 
 // ScriptStruct ShooterGame.ShipCannonLoadedAmmoVFX
 // 0x0018 (0x0018 - 0x0000)
@@ -10237,7 +9794,6 @@ public:
 	class UNiagaraSystem*                         NiagaraSystem;                                     // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class FName                                   Socket;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FShipCannonLoadedAmmoVFX;
 
 // ScriptStruct ShooterGame.ShipCannonStationGate
 // 0x0010 (0x0010 - 0x0000)
@@ -10249,7 +9805,6 @@ public:
 	float                                         ZAbove;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ZBelow;                                            // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FShipCannonStationGate;
 
 // ScriptStruct ShooterGame.PrimalStructureTemplateMeshOverride
 // 0x0098 (0x0098 - 0x0000)
@@ -10262,7 +9817,6 @@ public:
 	struct FRotator                               MeshRot;                                           // 0x0068(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                MeshScale;                                         // 0x0080(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureTemplateMeshOverride;
 
 // ScriptStruct ShooterGame.PrimalStructureSnapTagSettings
 // 0x0040 (0x0040 - 0x0000)
@@ -10274,7 +9828,6 @@ public:
 	TArray<class FName>                           SnapToStructureTagsToInclude;                      // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<class FName>                           SnapFromStructureTagsToInclude;                    // 0x0030(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureSnapTagSettings;
 
 // ScriptStruct ShooterGame.PrimalStructureSnapPoint
 // 0x01A0 (0x01A0 - 0x0000)
@@ -10314,7 +9867,6 @@ public:
 	struct FPrimalStructureSnapTagSettings        SnapTags;                                          // 0x00D8(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FPrimalStructureSnapPointOverride      SnapPointOverride;                                 // 0x0118(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalStructureSnapPoint;
 
 // ScriptStruct ShooterGame.PlacementData
 // 0x00A0 (0x00A0 - 0x0000)
@@ -10346,7 +9898,6 @@ public:
 	uint8                                         bIsPlacingGhost : 1;                               // 0x0098(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (BlueprintVisible, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPlacementData;
 
 // ScriptStruct ShooterGame.PrimalStructureSparseClassData
 // 0x0678 (0x0720 - 0x00A8)
@@ -10667,7 +10218,6 @@ public:
 	uint8                                         bIgnoreEncroachingDissimilarStructureTypes : 1;    // 0x071E(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_71F[0x1];                                      // 0x071F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalStructureSparseClassData;
 
 // ScriptStruct ShooterGame.ActiveStructureEffectVFX
 // 0x0010 (0x0010 - 0x0000)
@@ -10676,7 +10226,6 @@ struct FActiveStructureEffectVFX final
 public:
 	TArray<class UNiagaraComponent*>              Components;                                        // 0x0000(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FActiveStructureEffectVFX;
 
 // ScriptStruct ShooterGame.ItemToDisplayInStructureTooltip
 // 0x0020 (0x0020 - 0x0000)
@@ -10688,7 +10237,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ModuleGroupHeader;                                 // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FItemToDisplayInStructureTooltip;
 
 // ScriptStruct ShooterGame.PrimalTemplateModBinaryData
 // 0x0020 (0x0020 - 0x0000)
@@ -10698,7 +10246,6 @@ public:
 	class FString                                 TemplateName;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 TemplateBinary;                                    // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalTemplateModBinaryData;
 
 // ScriptStruct ShooterGame.TemplateBuildBatchEntry
 // 0x0020 (0x0020 - 0x0000)
@@ -10713,7 +10260,6 @@ public:
 	bool                                          bApplySkin;                                        // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTemplateBuildBatchEntry;
 
 // ScriptStruct ShooterGame.TemplatePreviewTracker
 // 0x0018 (0x0018 - 0x0000)
@@ -10725,7 +10271,6 @@ public:
 	bool                                          bRequested;                                        // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTemplatePreviewTracker;
 
 // ScriptStruct ShooterGame.InterimTemplateEntry
 // 0x0148 (0x0148 - 0x0000)
@@ -10739,7 +10284,6 @@ public:
 	class APrimalStructure*                       PlacedOnOtherStructure;                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPrimalStructureTemplateEntry          TemplateData;                                      // 0x0018(0x0130)(BlueprintVisible, Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterimTemplateEntry;
 
 // ScriptStruct ShooterGame.InterimTemplateData
 // 0x0020 (0x0020 - 0x0000)
@@ -10749,7 +10293,6 @@ public:
 	TArray<struct FInterimTemplateEntry>          Entries;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TArray<struct FSortedTemplateContentsEntry>   Contents;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterimTemplateData;
 
 // ScriptStruct ShooterGame.StructureTemplateFileData
 // 0x00A0 (0x00A0 - 0x0000)
@@ -10760,7 +10303,6 @@ public:
 	class FString                                 FilePath;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPrimalStructureTemplateData           TemplateInfo;                                      // 0x0020(0x0080)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStructureTemplateFileData;
 
 // ScriptStruct ShooterGame.Porthole
 // 0x0040 (0x0040 - 0x0000)
@@ -10775,7 +10317,6 @@ public:
 	class UPrimitiveComponent*                    ActiveMeshComp;                                    // 0x0030(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMeshComponent*                         DoorFrameMeshComp;                                 // 0x0038(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPorthole;
 
 // ScriptStruct ShooterGame.FrameInterpolationSensitiveBrushEntry
 // 0x000C (0x000C - 0x0000)
@@ -10785,7 +10326,6 @@ public:
 	class FName                                   WidgetName;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         HiddenAlpha;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFrameInterpolationSensitiveBrushEntry;
 
 // ScriptStruct ShooterGame.OwningClientToServerMovementParams
 // 0x00B0 (0x00B0 - 0x0000)
@@ -10794,7 +10334,6 @@ struct alignas(0x10) FOwningClientToServerMovementParams final
 public:
 	uint8                                         Pad_0[0xB0];                                       // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FOwningClientToServerMovementParams;
 
 // ScriptStruct ShooterGame.ServerToSimulatedClientMovementParams
 // 0x00C0 (0x00C0 - 0x0000)
@@ -10803,7 +10342,6 @@ struct alignas(0x10) FServerToSimulatedClientMovementParams final
 public:
 	uint8                                         Pad_0[0xC0];                                       // 0x0000(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FServerToSimulatedClientMovementParams;
 
 // ScriptStruct ShooterGame.PrimalWheeledCharSparseClassData
 // 0x0058 (0x0E68 - 0x0E10)
@@ -10826,7 +10364,6 @@ public:
 	uint8                                         Pad_E59[0x7];                                      // 0x0E59(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             FlipMultiuseIcon;                                  // 0x0E60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FPrimalWheeledCharSparseClassData;
 
 // ScriptStruct ShooterGame.PropertyModifierDefinition
 // 0x0010 (0x0010 - 0x0000)
@@ -10839,7 +10376,6 @@ public:
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ModifierValue;                                     // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPropertyModifierDefinition;
 
 // ScriptStruct ShooterGame.WorldBuffDefinition
 // 0x00D8 (0x00D8 - 0x0000)
@@ -10874,7 +10410,6 @@ public:
 	TSubclassOf<class UPrimalWorldBuffCustomImplement> WorldBuffCustomImplementation;                // 0x00C0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPropertyModifierDefinition>    PropertyModifiers;                                 // 0x00C8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FWorldBuffDefinition;
 
 // ScriptStruct ShooterGame.FoliageReskinDefinition
 // 0x0030 (0x0030 - 0x0000)
@@ -10885,7 +10420,6 @@ public:
 	TArray<class UMaterialInterface*>             NewFoliageMaterials;                               // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<class UMaterialInterface*>             OverrideDestructionMaterials;                      // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFoliageReskinDefinition;
 
 // ScriptStruct ShooterGame.PlatformValueOverrides
 // 0x0050 (0x0050 - 0x0000)
@@ -10894,7 +10428,6 @@ struct FPlatformValueOverrides final
 public:
 	TMap<ECVARTargetPlatformEnum, struct FPerQualityLevelFloat> platformValues;                      // 0x0000(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlatformValueOverrides;
 
 // ScriptStruct ShooterGame.WorldSettingsScalabilityOverrides
 // 0x0050 (0x0050 - 0x0000)
@@ -10903,7 +10436,6 @@ struct FWorldSettingsScalabilityOverrides final
 public:
 	TMap<class FString, struct FPlatformValueOverrides> platformSpecificCVAROverrides;               // 0x0000(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FWorldSettingsScalabilityOverrides;
 
 // ScriptStruct ShooterGame.MissionTriggerActorSet
 // 0x0050 (0x0050 - 0x0000)
@@ -10912,7 +10444,6 @@ struct FMissionTriggerActorSet final
 public:
 	TSet<class AActor*>                           Actors;                                            // 0x0000(0x0050)(NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMissionTriggerActorSet;
 
 // ScriptStruct ShooterGame.ActiveEventGlobalStatusAdjustments
 // 0x0068 (0x0068 - 0x0000)
@@ -10923,7 +10454,6 @@ public:
 	float                                         GlobalStatusAdjustmentRateMultipliersPositive[0xC]; // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         GlobalStatusAdjustmentRateMultipliersNegative[0xC]; // 0x0038(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FActiveEventGlobalStatusAdjustments;
 
 // ScriptStruct ShooterGame.CustomWheelEntry
 // 0x0070 (0x0070 - 0x0000)
@@ -10948,7 +10478,6 @@ public:
 	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 BPDrawEntryTargetRef;                              // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FCustomWheelEntry;
 
 // ScriptStruct ShooterGame.PlayerStatusStateCharacterSound
 // 0x0010 (0x0010 - 0x0000)
@@ -10959,7 +10488,6 @@ public:
 	EPrimalCharacterStatusState                   StateType;                                         // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPlayerStatusStateCharacterSound;
 
 // ScriptStruct ShooterGame.StoredCounter
 // 0x0010 (0x0010 - 0x0000)
@@ -10970,7 +10498,6 @@ public:
 	int32                                         StoredCount;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FStoredCounter;
 
 // ScriptStruct ShooterGame.DinoClassCountStruct
 // 0x0020 (0x0020 - 0x0000)
@@ -10985,14 +10512,12 @@ public:
 	int32                                         NumberofWildBabyClass;                             // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumberofWildFemalesClass;                          // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoClassCountStruct;
 
 // ScriptStruct ShooterGame.Rotator_NetQuantizeYawOnly
 // 0x0000 (0x0018 - 0x0018)
 struct FRotator_NetQuantizeYawOnly final : public FRotator
 {
 };
-DUMPER7_ASSERTS_FRotator_NetQuantizeYawOnly;
 
 // ScriptStruct ShooterGame.OverrideDamageHarvestingEntry
 // 0x0048 (0x0048 - 0x0000)
@@ -11003,7 +10528,6 @@ public:
 	struct FDamageHarvestingEntry                 HarvestEntryOverride;                              // 0x0010(0x0028)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 	TArray<struct FHarvestResourceEntry>          HarvestResourceEntriesOverride;                    // 0x0038(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOverrideDamageHarvestingEntry;
 
 // ScriptStruct ShooterGame.JustInTimeTexture2D
 // 0x0038 (0x0038 - 0x0000)
@@ -11015,7 +10539,6 @@ public:
 	float                                         ExpirationTimeInSeconds;                           // 0x0030(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	float                                         ExpirationCounter;                                 // 0x0034(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-DUMPER7_ASSERTS_FJustInTimeTexture2D;
 
 // ScriptStruct ShooterGame.MarketSellOrder
 // 0x0078 (0x00B0 - 0x0038)
@@ -11028,7 +10551,6 @@ public:
 	class UPrimalItem*                            OrderItemRef_Client;                               // 0x00A0(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FItemNetID                             ItemID;                                            // 0x00A8(0x0008)(BlueprintVisible, SaveGame, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMarketSellOrder;
 
 // ScriptStruct ShooterGame.MarketRequestOrder
 // 0x0068 (0x00A0 - 0x0038)
@@ -11044,7 +10566,6 @@ public:
 	bool                                          bIsTekItem;                                        // 0x009E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsBlueprint;                                      // 0x009F(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMarketRequestOrder;
 
 // ScriptStruct ShooterGame.MarketTradeData
 // 0x00F0 (0x00F0 - 0x0000)
@@ -11055,7 +10576,6 @@ public:
 	TMap<TSoftClassPtr<class UClass>, int64>      ClassBasedSellOrderIndex;                          // 0x0050(0x0050)(BlueprintVisible, SaveGame, NativeAccessSpecifierPublic)
 	TMap<TSoftClassPtr<class UClass>, struct FMarketRequestOrder> RequestOrders;                     // 0x00A0(0x0050)(BlueprintVisible, SaveGame, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMarketTradeData;
 
 // ScriptStruct ShooterGame.PlayerBanInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -11066,7 +10586,6 @@ public:
 	uint32                                        Timeout;                                           // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPlayerBanInfo;
 
 // ScriptStruct ShooterGame.CachedTeamTameListStruct
 // 0x0020 (0x0020 - 0x0000)
@@ -11078,7 +10597,6 @@ public:
 	TArray<struct FTrackedActorPlusInfoStruct>    CachedTeamTameList;                                // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	class AShooterPlayerController*               InitiatedPlayerRef;                                // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCachedTeamTameListStruct;
 
 // ScriptStruct ShooterGame.PlayersAwaitingUpdatedCachedTeamTameListStruct
 // 0x000C (0x000C - 0x0000)
@@ -11089,7 +10607,6 @@ public:
 	bool                                          bIsStaleInfo;                                      // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPlayersAwaitingUpdatedCachedTeamTameListStruct;
 
 // ScriptStruct ShooterGame.DinoSpawnWeightMultiplier
 // 0x0014 (0x0014 - 0x0000)
@@ -11102,7 +10619,6 @@ public:
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SpawnLimitPercentage;                              // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoSpawnWeightMultiplier;
 
 // ScriptStruct ShooterGame.ConfigNPCSpawnEntriesContainer
 // 0x0030 (0x0030 - 0x0000)
@@ -11113,7 +10629,6 @@ public:
 	TArray<struct FNPCSpawnEntry>                 NPCSpawnEntries;                                   // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<struct FNPCSpawnLimit>                 NPCSpawnLimits;                                    // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FConfigNPCSpawnEntriesContainer;
 
 // ScriptStruct ShooterGame.PlayerDeathReason
 // 0x0038 (0x0038 - 0x0000)
@@ -11126,7 +10641,6 @@ public:
 	double                                        DiedAtTime;                                        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                DeathLocation;                                     // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlayerDeathReason;
 
 // ScriptStruct ShooterGame.EngramEntryAutoUnlock
 // 0x0018 (0x0018 - 0x0000)
@@ -11137,7 +10651,6 @@ public:
 	int32                                         LevelToAutoUnlock;                                 // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEngramEntryAutoUnlock;
 
 // ScriptStruct ShooterGame.TributePlayerTribeInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -11147,7 +10660,6 @@ public:
 	TArray<uint64>                                PlayerDataIDs;                                     // 0x0000(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	TArray<uint64>                                TribeIDs;                                          // 0x0010(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTributePlayerTribeInfo;
 
 // ScriptStruct ShooterGame.DynamicUndermeshVolumes_Root
 // 0x0010 (0x0010 - 0x0000)
@@ -11156,7 +10668,6 @@ struct FDynamicUndermeshVolumes_Root final
 public:
 	TArray<struct FDynamicUndermeshVolumes_MapSet> Root;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDynamicUndermeshVolumes_Root;
 
 // ScriptStruct ShooterGame.GameIniData
 // 0x0020 (0x0020 - 0x0000)
@@ -11166,7 +10677,6 @@ public:
 	class FString                                 PropertyName;                                      // 0x0000(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 PropertyValue;                                     // 0x0010(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGameIniData;
 
 // ScriptStruct ShooterGame.WorldBuffPersistantData
 // 0x0018 (0x0018 - 0x0000)
@@ -11178,7 +10688,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        WorldBuffStartTime;                                // 0x0010(0x0008)(BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FWorldBuffPersistantData;
 
 // ScriptStruct ShooterGame.CustomCosmeticUserSetting
 // 0x0020 (0x0020 - 0x0000)
@@ -11190,7 +10699,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         LastSeenTimestamp;                                 // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomCosmeticUserSetting;
 
 // ScriptStruct ShooterGame.ShooterForceFeedback
 // 0x0010 (0x0010 - 0x0000)
@@ -11203,7 +10711,6 @@ public:
 	EHapticEffectType                             Type;                                              // 0x000D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FShooterForceFeedback;
 
 // ScriptStruct ShooterGame.HUDNotification
 // 0x0060 (0x0060 - 0x0000)
@@ -11225,7 +10732,6 @@ public:
 	int32                                         ItemQuantity;                                      // 0x0058(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ItemQuantityFloat;                                 // 0x005C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FHUDNotification;
 
 // ScriptStruct ShooterGame.HintReplacementNameKeysForKeyboardControls
 // 0x0018 (0x0018 - 0x0000)
@@ -11235,7 +10741,6 @@ public:
 	class FName                                   KeyboardControl;                                   // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	TArray<class FName>                           ReplacementGamepadControls;                        // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic, TObjectPtr)
 };
-DUMPER7_ASSERTS_FHintReplacementNameKeysForKeyboardControls;
 
 // ScriptStruct ShooterGame.DebugActor
 // 0x0018 (0x0018 - 0x0000)
@@ -11245,7 +10750,6 @@ public:
 	TWeakObjectPtr<class AActor>                  Actor;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReplicatedDebugOutput;                             // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDebugActor;
 
 // ScriptStruct ShooterGame.NonClusterCharacterUploadData
 // 0x0170 (0x0170 - 0x0000)
@@ -11256,7 +10760,6 @@ public:
 	uint64                                        TribeID;                                           // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FItemNetInfo>                   Items;                                             // 0x0160(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNonClusterCharacterUploadData;
 
 // ScriptStruct ShooterGame.PingData
 // 0x0060 (0x0060 - 0x0000)
@@ -11278,7 +10781,6 @@ public:
 	uint8                                         bIsDead : 1;                                       // 0x0058(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPingData;
 
 // ScriptStruct ShooterGame.StructuresOnFloor
 // 0x0018 (0x0018 - 0x0000)
@@ -11288,7 +10790,6 @@ public:
 	class APrimalStructure*                       FloorStructure;                                    // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class APrimalStructure*>               StructuresOnFloor;                                 // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStructuresOnFloor;
 
 // ScriptStruct ShooterGame.PrimalSnowManager
 // 0x0078 (0x0078 - 0x0000)
@@ -11302,7 +10803,6 @@ public:
 	int32                                         TeleportBatchSize;                                 // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x64];                                      // 0x0014(0x0064)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalSnowManager;
 
 // ScriptStruct ShooterGame.AlivePlayerDataInfo
 // 0x0040 (0x0040 - 0x0000)
@@ -11315,7 +10815,6 @@ public:
 	class FString                                 TribeName;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint64                                        TargetingTeamID;                                   // 0x0038(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAlivePlayerDataInfo;
 
 // ScriptStruct ShooterGame.ServerOptions
 // 0x02A0 (0x02A0 - 0x0000)
@@ -11365,7 +10864,6 @@ public:
 	class FString                                 DisableStructureDecayPvE;                          // 0x0280(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AllowFlyerCarryPvE;                                // 0x0290(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FServerOptions;
 
 // ScriptStruct ShooterGame.ProjectileWeaponData
 // 0x0028 (0x0028 - 0x0000)
@@ -11381,7 +10879,6 @@ public:
 	TSubclassOf<class UDamageType>                DamageType;                                        // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UDamageType>                DirectDamageType;                                  // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FProjectileWeaponData;
 
 // ScriptStruct ShooterGame.BPForces
 // 0x0048 (0x0048 - 0x0000)
@@ -11396,7 +10893,6 @@ public:
 	class FName                                   CustomSocketName;                                  // 0x003C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBPForces;
 
 // ScriptStruct ShooterGame.DataSet
 // 0x0078 (0x0078 - 0x0000)
@@ -11412,7 +10908,6 @@ public:
 	TArray<class AActor*>                         ListActors;                                        // 0x0058(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_68[0x10];                                      // 0x0068(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDataSet;
 
 // ScriptStruct ShooterGame.ActionReportItem
 // 0x0050 (0x0050 - 0x0000)
@@ -11425,7 +10920,6 @@ public:
 	class FString                                 LevelOfDeath;                                      // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DeathMessage;                                      // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FActionReportItem;
 
 // ScriptStruct ShooterGame.TamingDinoInfo
 // 0x0068 (0x0068 - 0x0000)
@@ -11454,7 +10948,6 @@ public:
 	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UPrimalDinoEntry>           DinoEntry;                                         // 0x0060(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTamingDinoInfo;
 
 // ScriptStruct ShooterGame.TooltipTextInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -11466,7 +10959,6 @@ public:
 	bool                                          bOnMinimalUI;                                      // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTooltipTextInfo;
 
 // ScriptStruct ShooterGame.WeightedObjectList
 // 0x0020 (0x0020 - 0x0000)
@@ -11476,7 +10968,6 @@ public:
 	TArray<float>                                 Weights;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<class UObject*>                        AssociatedObjects;                                 // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FWeightedObjectList;
 
 // ScriptStruct ShooterGame.ServerChatMessage
 // 0x0050 (0x0050 - 0x0000)
@@ -11496,7 +10987,6 @@ public:
 	int32                                         MessageTypeID;                                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FServerChatMessage;
 
 // ScriptStruct ShooterGame.PrimalChatMessage
 // 0x00A0 (0x00A0 - 0x0000)
@@ -11525,7 +11015,6 @@ public:
 	uint8                                         SenderIsAdmin : 1;                                 // 0x0098(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalChatMessage;
 
 // ScriptStruct ShooterGame.PrimalTextStyle
 // 0x02F0 (0x02F0 - 0x0000)
@@ -11536,7 +11025,6 @@ public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTextBlockStyle                        TextStyle;                                         // 0x0010(0x02E0)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalTextStyle;
 
 // ScriptStruct ShooterGame.PaintItem
 // 0x0020 (0x0020 - 0x0000)
@@ -11552,7 +11040,6 @@ public:
 	int8                                          MeshTextureIndex;                                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPaintItem;
 
 // ScriptStruct ShooterGame.SaveLoadDyePaintingItem
 // 0x0038 (0x0038 - 0x0000)
@@ -11568,7 +11055,6 @@ public:
 	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 ColorPixels;                                       // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSaveLoadDyePaintingItem;
 
 // ScriptStruct ShooterGame.GamePadKeyName
 // 0x0030 (0x0030 - 0x0000)
@@ -11579,7 +11065,6 @@ public:
 	class FString                                 Name;                                              // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture2D*                             KeyIcon;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FGamePadKeyName;
 
 // ScriptStruct ShooterGame.AvailableMission
 // 0x0028 (0x0028 - 0x0000)
@@ -11590,7 +11075,6 @@ public:
 	uint8                                         Pad_8[0x18];                                       // 0x0008(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	class AVolume*                                LevelInstanceReference;                            // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAvailableMission;
 
 // ScriptStruct ShooterGame.MissionAlertEntry
 // 0x0030 (0x0030 - 0x0000)
@@ -11605,7 +11089,6 @@ public:
 	uint8                                         bShowCount : 1;                                    // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMissionAlertEntry;
 
 // ScriptStruct ShooterGame.LootTableEntry
 // 0x0040 (0x0040 - 0x0000)
@@ -11624,7 +11107,6 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              QualityRange;                                      // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLootTableEntry;
 
 // ScriptStruct ShooterGame.TekGrenadeLauncherSlot
 // 0x0018 (0x0018 - 0x0000)
@@ -11636,7 +11118,6 @@ public:
 	bool                                          bIsLoaded;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTekGrenadeLauncherSlot;
 
 // ScriptStruct ShooterGame.HUDElement
 // 0x01D8 (0x01D8 - 0x0000)
@@ -11697,7 +11178,6 @@ public:
 	float                                         ProgressBarEmptyMarginPercent;                     // 0x01D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RichTextStringScale;                               // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FHUDElement;
 
 // ScriptStruct ShooterGame.LeaderboardDisplayRow
 // 0x0020 (0x0020 - 0x0000)
@@ -11708,7 +11188,6 @@ public:
 	TArray<class FString>                         Columns;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLeaderboardDisplayRow;
 
 // ScriptStruct ShooterGame.MekBackpackData
 // 0x0058 (0x0058 - 0x0000)
@@ -11722,7 +11201,6 @@ public:
 	TArray<struct FVector>                        VectorData;                                        // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         StringData;                                        // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMekBackpackData;
 
 // ScriptStruct ShooterGame.HitMarkerSettings
 // 0x0030 (0x0030 - 0x0000)
@@ -11737,7 +11215,6 @@ public:
 	struct FVector2D                              Scale;                                             // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundBase*                             HitSound;                                          // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FHitMarkerSettings;
 
 // ScriptStruct ShooterGame.PointOfInterestData
 // 0x01E0 (0x01E0 - 0x0000)
@@ -11802,7 +11279,6 @@ public:
 	uint8                                         bPreventTextClose : 1;                             // 0x01D0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_1D1[0xF];                                      // 0x01D1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPointOfInterestData;
 
 // ScriptStruct ShooterGame.PointOfInterestCompanionBehavior
 // 0x0300 (0x0300 - 0x0000)
@@ -11828,7 +11304,6 @@ public:
 	uint8                                         bRandomlyOrbitAroundAndScan : 1;                   // 0x02F8(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPointOfInterestCompanionBehavior;
 
 // ScriptStruct ShooterGame.PointOfInterestData_ForCompanion
 // 0x04E0 (0x04E0 - 0x0000)
@@ -11838,7 +11313,6 @@ public:
 	struct FPointOfInterestData                   PointData;                                         // 0x0000(0x01E0)(Edit, BlueprintVisible, DisableEditOnTemplate, NativeAccessSpecifierPublic)
 	struct FPointOfInterestCompanionBehavior      PointCompanionBehavior;                            // 0x01E0(0x0300)(Edit, BlueprintVisible, DisableEditOnTemplate, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPointOfInterestData_ForCompanion;
 
 // ScriptStruct ShooterGame.MissionWaypointInfo
 // 0x0038 (0x0038 - 0x0000)
@@ -11851,7 +11325,6 @@ public:
 	class FString                                 WaypointTitle;                                     // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   WaypointID;                                        // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMissionWaypointInfo;
 
 // ScriptStruct ShooterGame.TamingWaypointInfo
 // 0x00B0 (0x00B0 - 0x0000)
@@ -11870,7 +11343,6 @@ public:
 	bool                                          bIsTamed;                                          // 0x00AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTamingWaypointInfo;
 
 // ScriptStruct ShooterGame.TrackedActorWaypointInfo
 // 0x0148 (0x0148 - 0x0000)
@@ -11891,7 +11363,6 @@ public:
 	double                                        TamedAtTime;                                       // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                LastPOILocation;                                   // 0x0130(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTrackedActorWaypointInfo;
 
 // ScriptStruct ShooterGame.TeleportDestination
 // 0x0040 (0x0040 - 0x0000)
@@ -11902,7 +11373,6 @@ public:
 	struct FVector                                DestinationLocation;                               // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               DestinationRotation;                               // 0x0028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTeleportDestination;
 
 // ScriptStruct ShooterGame.MinimapMark
 // 0x0078 (0x0078 - 0x0000)
@@ -11926,7 +11396,6 @@ public:
 	uint8                                         CharacterIsPlayer : 1;                             // 0x0074(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMinimapMark;
 
 // ScriptStruct ShooterGame.MinimapMarkerStaticData
 // 0x0038 (0x0038 - 0x0000)
@@ -11937,7 +11406,6 @@ public:
 	struct FRotator                               Rotation;                                          // 0x0018(0x0018)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	class FName                                   MarkerType;                                        // 0x0030(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMinimapMarkerStaticData;
 
 // ScriptStruct ShooterGame.MassTeleportData
 // 0x0120 (0x0120 - 0x0000)
@@ -11962,7 +11430,6 @@ public:
 	uint8                                         bMaintainRotation : 1;                             // 0x0110(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_111[0xF];                                      // 0x0111(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassTeleportData;
 
 // ScriptStruct ShooterGame.CrateTemporaryQualityModifiers
 // 0x0020 (0x0020 - 0x0000)
@@ -11974,7 +11441,6 @@ public:
 	float                                         QualityMultiplierModifier;                         // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCrateTemporaryQualityModifiers;
 
 // ScriptStruct ShooterGame.CrateTemporaryQualityModifierSet
 // 0x0018 (0x0018 - 0x0000)
@@ -11984,7 +11450,6 @@ public:
 	class FName                                   SetTag;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FCrateTemporaryQualityModifiers> Modifiers;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCrateTemporaryQualityModifierSet;
 
 // ScriptStruct ShooterGame.ResourceTemporaryAmountModifiers
 // 0x0020 (0x0020 - 0x0000)
@@ -11996,7 +11461,6 @@ public:
 	float                                         ResourceAmountMultiplierModifier;                  // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FResourceTemporaryAmountModifiers;
 
 // ScriptStruct ShooterGame.ResourceTemporaryAmountModifierSet
 // 0x0018 (0x0018 - 0x0000)
@@ -12006,7 +11470,6 @@ public:
 	class FName                                   SetTag;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FResourceTemporaryAmountModifiers> Modifiers;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FResourceTemporaryAmountModifierSet;
 
 // ScriptStruct ShooterGame.UserCosmeticInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -12015,7 +11478,6 @@ struct FUserCosmeticInfo final
 public:
 	class FString                                 TribeFlagFile;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUserCosmeticInfo;
 
 // ScriptStruct ShooterGame.DinoAbilityInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -12026,7 +11488,6 @@ public:
 	class FString                                 AbilityName;                                       // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AbilityDescription;                                // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoAbilityInfo;
 
 // ScriptStruct ShooterGame.DinoAbilities
 // 0x0018 (0x0018 - 0x0000)
@@ -12036,7 +11497,6 @@ public:
 	class FName                                   DinoTag;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FDinoAbilityInfo>               AbilityInfos;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDinoAbilities;
 
 // ScriptStruct ShooterGame.SOTFScorePlayerData
 // 0x0048 (0x0048 - 0x0000)
@@ -12054,7 +11514,6 @@ public:
 	int32                                         KillerTeam;                                        // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSOTFScorePlayerData;
 
 // ScriptStruct ShooterGame.SOTFScoreTribeData
 // 0x000C (0x000C - 0x0000)
@@ -12065,7 +11524,6 @@ public:
 	int32                                         PlayersKilledByDinos;                              // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DinosKilledByDinos;                                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSOTFScoreTribeData;
 
 // ScriptStruct ShooterGame.PrimalCameraInterpParams
 // 0x000C (0x000C - 0x0000)
@@ -12076,7 +11534,6 @@ public:
 	float                                         CriticalDamping;                                   // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TargetVelocity;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCameraInterpParams;
 
 // ScriptStruct ShooterGame.PrimalCameraPitchBasedModifier
 // 0x0090 (0x0090 - 0x0000)
@@ -12104,7 +11561,6 @@ public:
 	struct FVector                                PivotLocationOffsetStartingLerpValue;              // 0x0060(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                FinalPivotOffset;                                  // 0x0078(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCameraPitchBasedModifier;
 
 // ScriptStruct ShooterGame.PrimalCameraInterpScreenAreaModifier
 // 0x0050 (0x0050 - 0x0000)
@@ -12124,7 +11580,6 @@ public:
 	float                                         ExponentialLerpBase;                               // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPrimalCameraInterpParams              NewInterpParams;                                   // 0x0044(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCameraInterpScreenAreaModifier;
 
 // ScriptStruct ShooterGame.PrimalCameraParamsOverride
 // 0x0088 (0x0088 - 0x0000)
@@ -12145,7 +11600,6 @@ public:
 	TArray<struct FVector2D>                      RemoveOriginalPitchModifiersInPitchRange;          // 0x0068(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<struct FPrimalCameraPitchBasedModifier> PitchBasedModifiers;                              // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCameraParamsOverride;
 
 // ScriptStruct ShooterGame.PrimalCameraParams
 // 0x00D8 (0x00D8 - 0x0000)
@@ -12176,7 +11630,6 @@ public:
 	TArray<struct FPrimalCameraPitchBasedModifier> PitchBasedModifiers;                              // 0x00B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FVector2D                              AnimAimOffsetPitchRange;                           // 0x00C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCameraParams;
 
 // ScriptStruct ShooterGame.PrimalCameraSettingsConditions
 // 0x0002 (0x0002 - 0x0000)
@@ -12186,7 +11639,6 @@ public:
 	ECameraSetting_BoolCondition                  RequireMoving;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECameraSetting_BoolCondition                  RequireSprinting;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCameraSettingsConditions;
 
 // ScriptStruct ShooterGame.PrimalCameraSettings
 // 0x00E8 (0x00E8 - 0x0000)
@@ -12198,7 +11650,6 @@ public:
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPrimalCameraParams                    CameraParams;                                      // 0x0010(0x00D8)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCameraSettings;
 
 // ScriptStruct ShooterGame.PrimalCameraSettingsOverride
 // 0x0098 (0x0098 - 0x0000)
@@ -12210,7 +11661,6 @@ public:
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPrimalCameraParamsOverride            CameraParamsOverride;                              // 0x0010(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCameraSettingsOverride;
 
 // ScriptStruct ShooterGame.PrimalCameraSettingsOverrideGroup
 // 0x0010 (0x0010 - 0x0000)
@@ -12219,7 +11669,6 @@ struct FPrimalCameraSettingsOverrideGroup final
 public:
 	TArray<struct FPrimalCameraSettingsOverride>  SettingsOverrides;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCameraSettingsOverrideGroup;
 
 // ScriptStruct ShooterGame.PrimalCameraPivotZInterpOverrides
 // 0x0034 (0x0034 - 0x0000)
@@ -12237,7 +11686,6 @@ public:
 	struct FPrimalCameraInterpParams              LongFallPivotZInterpParams;                        // 0x0024(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         InterpSpeedToReachLongFallZInterpParams;           // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalCameraPivotZInterpOverrides;
 
 // ScriptStruct ShooterGame.CameraInterpMovementBasedMultipliers
 // 0x0080 (0x0080 - 0x0000)
@@ -12265,7 +11713,6 @@ public:
 	struct FVector                                ExtraWalkingSpringStiffnessMultiplier;             // 0x0050(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ExtraRunningSpringStiffnessMultiplier;             // 0x0068(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCameraInterpMovementBasedMultipliers;
 
 // ScriptStruct ShooterGame.PrimalCameraProfile
 // 0x01C0 (0x01C0 - 0x0000)
@@ -12283,7 +11730,6 @@ public:
 	struct FPrimalCameraPivotZInterpOverrides     CameraPivotZInterpOverrides;                       // 0x0188(0x0034)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalCameraProfile;
 
 // ScriptStruct ShooterGame.StructureVariant
 // 0x0110 (0x0110 - 0x0000)
@@ -12302,7 +11748,6 @@ public:
 	TArray<struct FDestructionGeoCollectionInfo>  DestroyedMeshesOverride;                           // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UTexture2D>              VariantIcon;                                       // 0x00E8(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStructureVariant;
 
 // ScriptStruct ShooterGame.StructureVariantAdditionEntry
 // 0x0018 (0x0018 - 0x0000)
@@ -12312,7 +11757,6 @@ public:
 	class FName                                   ForStructureTierTag;                               // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FStructureVariant>              Variants;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStructureVariantAdditionEntry;
 
 // ScriptStruct ShooterGame.StructureVariantAddition
 // 0x0018 (0x0018 - 0x0000)
@@ -12322,7 +11766,6 @@ public:
 	class FName                                   ForStructureTag;                                   // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FStructureVariantAdditionEntry> VariantEntries;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStructureVariantAddition;
 
 // ScriptStruct ShooterGame.StructureToBuildAddition
 // 0x0038 (0x0038 - 0x0000)
@@ -12332,7 +11775,6 @@ public:
 	TSoftClassPtr<class UClass>                   ForStructureItem;                                  // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSoftClassPtr<class UClass>>           AdditionalStructures;                              // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStructureToBuildAddition;
 
 // ScriptStruct ShooterGame.CDOModification_SinglePropertyBase
 // 0x0038 (0x0038 - 0x0000)
@@ -12345,7 +11787,6 @@ public:
 	bool                                          bDontApplyToChildClassIfVarIsEdited;               // 0x0031(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCDOModification_SinglePropertyBase;
 
 // ScriptStruct ShooterGame.BoolPropertyPair
 // 0x0008 (0x0040 - 0x0038)
@@ -12355,7 +11796,6 @@ public:
 	bool                                          BoolPropertyValue;                                 // 0x0038(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBoolPropertyPair;
 
 // ScriptStruct ShooterGame.FloatPropertyPair
 // 0x0008 (0x0040 - 0x0038)
@@ -12365,7 +11805,6 @@ public:
 	float                                         FloatPropertyValue;                                // 0x0038(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FFloatPropertyPair;
 
 // ScriptStruct ShooterGame.DoublePropertyPair
 // 0x0008 (0x0040 - 0x0038)
@@ -12374,7 +11813,6 @@ struct FDoublePropertyPair final : public FCDOModification_SinglePropertyBase
 public:
 	double                                        DoublePropertyValue;                               // 0x0038(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDoublePropertyPair;
 
 // ScriptStruct ShooterGame.StringPropertyPair
 // 0x0010 (0x0048 - 0x0038)
@@ -12383,7 +11821,6 @@ struct FStringPropertyPair final : public FCDOModification_SinglePropertyBase
 public:
 	class FString                                 StringPropertyValue;                               // 0x0038(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStringPropertyPair;
 
 // ScriptStruct ShooterGame.IntPropertyPair
 // 0x0008 (0x0040 - 0x0038)
@@ -12393,7 +11830,6 @@ public:
 	int32                                         IntPropertyValue;                                  // 0x0038(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FIntPropertyPair;
 
 // ScriptStruct ShooterGame.VectorPropertyPair
 // 0x0018 (0x0050 - 0x0038)
@@ -12402,7 +11838,6 @@ struct FVectorPropertyPair final : public FCDOModification_SinglePropertyBase
 public:
 	struct FVector                                VectorPropertyValue;                               // 0x0038(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVectorPropertyPair;
 
 // ScriptStruct ShooterGame.RotatorPropertyPair
 // 0x0018 (0x0050 - 0x0038)
@@ -12411,7 +11846,6 @@ struct FRotatorPropertyPair final : public FCDOModification_SinglePropertyBase
 public:
 	struct FRotator                               RotatorPropertyValue;                              // 0x0038(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRotatorPropertyPair;
 
 // ScriptStruct ShooterGame.CDOModification_ArrayBase
 // 0x0058 (0x0058 - 0x0000)
@@ -12427,7 +11861,6 @@ public:
 	TArray<uint32>                                IndexesToModify;                                   // 0x0038(0x0010)(Edit, EditFixedSize, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<uint32>                                IndexesToRemove;                                   // 0x0048(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCDOModification_ArrayBase;
 
 // ScriptStruct ShooterGame.CDOModification_BoolArray
 // 0x0010 (0x0068 - 0x0058)
@@ -12436,7 +11869,6 @@ struct FCDOModification_BoolArray final : public FCDOModification_ArrayBase
 public:
 	TArray<bool>                                  Values;                                            // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCDOModification_BoolArray;
 
 // ScriptStruct ShooterGame.CDOModification_IntArray
 // 0x0010 (0x0068 - 0x0058)
@@ -12445,7 +11877,6 @@ struct FCDOModification_IntArray final : public FCDOModification_ArrayBase
 public:
 	TArray<int32>                                 Values;                                            // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCDOModification_IntArray;
 
 // ScriptStruct ShooterGame.CDOModification_FloatArray
 // 0x0010 (0x0068 - 0x0058)
@@ -12454,7 +11885,6 @@ struct FCDOModification_FloatArray final : public FCDOModification_ArrayBase
 public:
 	TArray<float>                                 Values;                                            // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCDOModification_FloatArray;
 
 // ScriptStruct ShooterGame.CDOModification_DoubleArray
 // 0x0010 (0x0068 - 0x0058)
@@ -12463,7 +11893,6 @@ struct FCDOModification_DoubleArray final : public FCDOModification_ArrayBase
 public:
 	TArray<double>                                Values;                                            // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCDOModification_DoubleArray;
 
 // ScriptStruct ShooterGame.CDOModification_StringArray
 // 0x0010 (0x0068 - 0x0058)
@@ -12472,7 +11901,6 @@ struct FCDOModification_StringArray final : public FCDOModification_ArrayBase
 public:
 	TArray<class FString>                         Values;                                            // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCDOModification_StringArray;
 
 // ScriptStruct ShooterGame.CDOModification_VectorArray
 // 0x0010 (0x0068 - 0x0058)
@@ -12481,7 +11909,6 @@ struct FCDOModification_VectorArray final : public FCDOModification_ArrayBase
 public:
 	TArray<struct FVector>                        Values;                                            // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCDOModification_VectorArray;
 
 // ScriptStruct ShooterGame.CDODebugData
 // 0x0018 (0x0018 - 0x0000)
@@ -12492,7 +11919,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FCDOClassDebug>                 TheDebugData;                                      // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCDODebugData;
 
 // ScriptStruct ShooterGame.NetChangeDefaultPropertyValue
 // 0x00D0 (0x00D0 - 0x0000)
@@ -12513,7 +11939,6 @@ public:
 	TArray<struct FCDOModification_VectorArray>   VectorArrayProperties;                             // 0x00B0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<struct FRotatorPropertyPair>           RotatorProperties;                                 // 0x00C0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNetChangeDefaultPropertyValue;
 
 // ScriptStruct ShooterGame.TrackedActorUpdatedArrayInfoStruct
 // 0x0008 (0x0008 - 0x0000)
@@ -12524,7 +11949,6 @@ public:
 	bool                                          bIsPlayer;                                         // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTrackedActorUpdatedArrayInfoStruct;
 
 // ScriptStruct ShooterGame.TrackedActorOverallContainer
 // 0x0050 (0x0050 - 0x0000)
@@ -12533,7 +11957,6 @@ struct FTrackedActorOverallContainer final
 public:
 	TMap<int32, struct FTrackedActorPlusInfoStruct> TrackedActorEntriesAsPerCategory;                // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTrackedActorOverallContainer;
 
 // ScriptStruct ShooterGame.NativeDinoHologramEntry
 // 0x0058 (0x0058 - 0x0000)
@@ -12545,7 +11968,6 @@ public:
 	float                                         Scales;                                            // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ZOffset;                                           // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNativeDinoHologramEntry;
 
 // ScriptStruct ShooterGame.FunctionParams
 // 0x00D0 (0x00D0 - 0x0000)
@@ -12566,7 +11988,6 @@ public:
 	TArray<class FText>                           TextParams;                                        // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 ByteParams;                                        // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFunctionParams;
 
 // ScriptStruct ShooterGame.FloatArray
 // 0x0010 (0x0010 - 0x0000)
@@ -12575,7 +11996,6 @@ struct FFloatArray final
 public:
 	TArray<float>                                 Values;                                            // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFloatArray;
 
 // ScriptStruct ShooterGame.Voiceline
 // 0x0030 (0x0038 - 0x0008)
@@ -12590,7 +12010,6 @@ public:
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CooldownToPlayAgain;                               // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVoiceline;
 
 // ScriptStruct ShooterGame.SkillModifierRef
 // 0x0010 (0x0010 - 0x0000)
@@ -12600,7 +12019,6 @@ public:
 	class FName                                   SkillName;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ModifierName;                                      // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSkillModifierRef;
 
 // ScriptStruct ShooterGame.ReplicatedSkill
 // 0x000C (0x000C - 0x0000)
@@ -12611,7 +12029,6 @@ public:
 	uint8                                         Rank;                                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FReplicatedSkill;
 
 // ScriptStruct ShooterGame.ItemTraitModifierArray
 // 0x0010 (0x0010 - 0x0000)
@@ -12620,7 +12037,6 @@ struct FItemTraitModifierArray final
 public:
 	TArray<struct FItemTraitModifier>             Modifiers;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FItemTraitModifierArray;
 
 // ScriptStruct ShooterGame.AdditionalModifierData
 // 0x0010 (0x0010 - 0x0000)
@@ -12629,7 +12045,6 @@ struct FAdditionalModifierData final
 public:
 	class FText                                   ModifierDisplayName;                               // 0x0000(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAdditionalModifierData;
 
 // ScriptStruct ShooterGame.PrimalSkill
 // 0x00F8 (0x0100 - 0x0008)
@@ -12660,7 +12075,6 @@ public:
 	uint8                                         bReplicateToClients : 1;                           // 0x00F8(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPrimalSkill;
 
 // ScriptStruct ShooterGame.PrimalMilestone
 // 0x0060 (0x0068 - 0x0008)
@@ -12682,7 +12096,6 @@ public:
 	TArray<TSoftClassPtr<class UClass>>           ItemsGranted;                                      // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	class FName                                   RewardSkillTreeTag;                                // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalMilestone;
 
 // ScriptStruct ShooterGame.PrimalMilestoneBranch
 // 0x00A0 (0x00A0 - 0x0000)
@@ -12695,7 +12108,6 @@ public:
 	struct FPrimalMilestone                       BranchReward;                                      // 0x0030(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	class FName                                   BranchRewardID;                                    // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalMilestoneBranch;
 
 // ScriptStruct ShooterGame.ResourceRequirementData
 // 0x0018 (0x0018 - 0x0000)
@@ -12709,7 +12121,6 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AvailableQuantity;                                 // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FResourceRequirementData;
 
 // ScriptStruct ShooterGame.WeaponData
 // 0x003C (0x003C - 0x0000)
@@ -12739,7 +12150,6 @@ public:
 	class FName                                   LoopedReloadAnimLoopSectionName;                   // 0x002C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   LoopedReloadAnimOutSectionName;                    // 0x0034(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FWeaponData;
 
 // ScriptStruct ShooterGame.InstantWeaponData
 // 0x0030 (0x0030 - 0x0000)
@@ -12758,7 +12168,6 @@ public:
 	float                                         ClientSideHitLeeway;                               // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AllowedViewDotHitDir;                              // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInstantWeaponData;
 
 // ScriptStruct ShooterGame.WeaponAnim
 // 0x0010 (0x0010 - 0x0000)
@@ -12768,7 +12177,6 @@ public:
 	class UAnimMontage*                           Pawn1P;                                            // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAnimMontage*                           Pawn3P;                                            // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FWeaponAnim;
 
 // ScriptStruct ShooterGame.ClimbingAnims
 // 0x0400 (0x0400 - 0x0000)
@@ -12778,7 +12186,6 @@ public:
 	struct FWeaponAnim                            LeftHandAnchored[0x20];                            // 0x0000(0x0010)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 	struct FWeaponAnim                            RightHandAnchored[0x20];                           // 0x0200(0x0010)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FClimbingAnims;
 
 // ScriptStruct ShooterGame.SkyBoxLoadedStatus
 // 0x0020 (0x0020 - 0x0000)
@@ -12788,7 +12195,6 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             LoadedTextureResources[0x3];                       // 0x0008(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSkyBoxLoadedStatus;
 
 // ScriptStruct ShooterGame.SOTFNotificationInfo
 // 0x0078 (0x0078 - 0x0000)
@@ -12811,7 +12217,6 @@ public:
 	ESTOFNotificationType                         Type;                                              // 0x0071(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSOTFNotificationInfo;
 
 // ScriptStruct ShooterGame.BannerTextInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -12823,7 +12228,6 @@ public:
 	bool                                          bActive;                                           // 0x0010(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBannerTextInfo;
 
 // ScriptStruct ShooterGame.ScrollingTextInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -12835,7 +12239,6 @@ public:
 	bool                                          bActive;                                           // 0x000C(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FScrollingTextInfo;
 
 // ScriptStruct ShooterGame.PlayerPreviewImage
 // 0x0038 (0x0038 - 0x0000)
@@ -12848,7 +12251,6 @@ public:
 	class UTextRenderComponent*                   TribeComponent;                                    // 0x0028(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTextRenderComponent*                   DeathInfo;                                         // 0x0030(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPlayerPreviewImage;
 
 // ScriptStruct ShooterGame.VehicleEngineDatum
 // 0x0014 (0x0014 - 0x0000)
@@ -12861,7 +12263,6 @@ public:
 	float                                         FadeOutRPMEnd;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxPitchMultiplier;                                // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVehicleEngineDatum;
 
 // ScriptStruct ShooterGame.SupplyCrateSpawnEntry
 // 0x0058 (0x0058 - 0x0000)
@@ -12873,7 +12274,6 @@ public:
 	TSoftClassPtr<class UClass>                   CrateTemplate;                                     // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftClassPtr<class UClass>                   CrateEnemySpawnEntries;                            // 0x0030(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSupplyCrateSpawnEntry;
 
 // ScriptStruct ShooterGame.SupplyCrateSpawnPointEntry
 // 0x0070 (0x0070 - 0x0000)
@@ -12892,7 +12292,6 @@ public:
 	TArray<struct FSupplyCrateSpawnEntry>         OverrideSupplyCrateEntries;                        // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, NativeAccessSpecifierPublic)
 	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSupplyCrateSpawnPointEntry;
 
 // ScriptStruct ShooterGame.TrackItemInfo
 // 0x0048 (0x0048 - 0x0000)
@@ -12905,7 +12304,6 @@ public:
 	class FString                                 ItemName;                                          // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           ItemColor;                                         // 0x0038(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTrackItemInfo;
 
 // ScriptStruct ShooterGame.TriggerEffectLibraryEntry
 // 0x0058 (0x0058 - 0x0000)
@@ -12916,7 +12314,6 @@ public:
 	struct FPrimalTriggerEffect                   HasAmmoEffect;                                     // 0x0028(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPrimalTriggerEffect                   EmptyEffect;                                       // 0x0040(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTriggerEffectLibraryEntry;
 
 // ScriptStruct ShooterGame.ActorWidgetPair
 // 0x0010 (0x0010 - 0x0000)
@@ -12927,7 +12324,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTrackedDinoListEntryWidget*            Widget;                                            // 0x0008(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FActorWidgetPair;
 
 // ScriptStruct ShooterGame.CheatMenuCheatItem
 // 0x0038 (0x0038 - 0x0000)
@@ -12940,7 +12336,6 @@ public:
 	bool                                          Blueprint;                                         // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCheatMenuCheatItem;
 
 // ScriptStruct ShooterGame.CheatMenuCharacterPresetItems
 // 0x0010 (0x0010 - 0x0000)
@@ -12949,7 +12344,6 @@ struct FCheatMenuCharacterPresetItems final
 public:
 	TArray<struct FCheatMenuCheatItem>            CharacterItems;                                    // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCheatMenuCharacterPresetItems;
 
 // ScriptStruct ShooterGame.CarAttachmentTypeData
 // 0x0020 (0x0020 - 0x0000)
@@ -12963,7 +12357,6 @@ public:
 	bool                                          bPreventUnequipManually;                           // 0x001A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCarAttachmentTypeData;
 
 // ScriptStruct ShooterGame.ActiveEventData
 // 0x0018 (0x0018 - 0x0000)
@@ -12973,7 +12366,6 @@ public:
 	class FText                                   DisplayName;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FName                                   ConfigName;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FActiveEventData;
 
 // ScriptStruct ShooterGame.ModPreviewData
 // 0x0030 (0x0030 - 0x0000)
@@ -12988,7 +12380,6 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         DLCDependencies;                                   // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FModPreviewData;
 
 // ScriptStruct ShooterGame.MapDescription
 // 0x0020 (0x0020 - 0x0000)
@@ -13000,7 +12391,6 @@ public:
 	int32                                         MinAscensionLevelRequired;                         // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMapDescription;
 
 // ScriptStruct ShooterGame.DifficultyValues
 // 0x0018 (0x0018 - 0x0000)
@@ -13010,7 +12400,6 @@ public:
 	class FName                                   DataListValueName;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FName>                           ValuesPerDifficulty;                               // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDifficultyValues;
 
 // ScriptStruct ShooterGame.CarouselEntryData
 // 0x0090 (0x0090 - 0x0000)
@@ -13027,7 +12416,6 @@ public:
 	class FString                                 ShowForPlatforms;                                  // 0x0070(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 	class FString                                 AdvertForDLC;                                      // 0x0080(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic, TObjectPtr)
 };
-DUMPER7_ASSERTS_FCarouselEntryData;
 
 // ScriptStruct ShooterGame.NewOptionsItem
 // 0x0028 (0x0028 - 0x0000)
@@ -13042,7 +12430,6 @@ public:
 	bool                                          disabledForNow;                                    // 0x0025(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNewOptionsItem;
 
 // ScriptStruct ShooterGame.OptionsSet
 // 0x0028 (0x0028 - 0x0000)
@@ -13055,7 +12442,6 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FNewOptionsItem>                optionsItems;                                      // 0x0018(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOptionsSet;
 
 // ScriptStruct ShooterGame.SkillTreeSubMenuData
 // 0x0018 (0x0018 - 0x0000)
@@ -13065,7 +12451,6 @@ public:
 	class FText                                   DisplayName;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class UTexture2D*                             MenuIcon;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSkillTreeSubMenuData;
 
 // ScriptStruct ShooterGame.NamePairEntry
 // 0x0010 (0x0010 - 0x0000)
@@ -13075,7 +12460,6 @@ public:
 	class FName                                   FNameA;                                            // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   FNameB;                                            // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNamePairEntry;
 
 // ScriptStruct ShooterGame.CameraLocationSetting
 // 0x0040 (0x0040 - 0x0000)
@@ -13088,7 +12472,6 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               Rotation;                                          // 0x0028(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCameraLocationSetting;
 
 // ScriptStruct ShooterGame.BoneModifierSlider
 // 0x0030 (0x0030 - 0x0000)
@@ -13103,7 +12486,6 @@ public:
 	float                                         DefaultValueFemale;                                // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBoneModifierSlider;
 
 // ScriptStruct ShooterGame.CustomPreviewMeshInfo
 // 0x0A58 (0x0A58 - 0x0000)
@@ -13123,7 +12505,6 @@ public:
 	TArray<struct FNamePairEntry>                 OverwrittenReplacedDynamicMaterialNames;           // 0x0A40(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	class USkeletalMeshComponent*                 MeshCompRef;                                       // 0x0A50(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCustomPreviewMeshInfo;
 
 // ScriptStruct ShooterGame.DynamicMaterialSlider
 // 0x0018 (0x0018 - 0x0000)
@@ -13134,7 +12515,6 @@ public:
 	EPlayerDynamicMaterialType                    PlayerDynamicMaterialSliderType;                   // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0xF];                                        // 0x0009(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDynamicMaterialSlider;
 
 // ScriptStruct ShooterGame.SavedVoiceCollectionActualIndex
 // 0x0028 (0x0028 - 0x0000)
@@ -13146,7 +12526,6 @@ public:
 	uint8                                         bIsCustom : 1;                                     // 0x0024(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSavedVoiceCollectionActualIndex;
 
 // ScriptStruct ShooterGame.CharacterPreset
 // 0x00F8 (0x00F8 - 0x0000)
@@ -13181,7 +12560,6 @@ public:
 	TArray<uint8>                                 DynamicFaceMaterialBytes;                          // 0x00D8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 DynamicFaceIndex;                                  // 0x00E8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCharacterPreset;
 
 // ScriptStruct ShooterGame.VesselKinematicPhysicsState
 // 0x0130 (0x0130 - 0x0000)
@@ -13190,7 +12568,6 @@ struct alignas(0x10) FVesselKinematicPhysicsState final
 public:
 	uint8                                         Pad_0[0x130];                                      // 0x0000(0x0130)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVesselKinematicPhysicsState;
 
 // ScriptStruct ShooterGame.RepSailingShipMovement
 // 0x0070 (0x0070 - 0x0000)
@@ -13203,7 +12580,6 @@ public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  Quaternion;                                        // 0x0050(0x0020)(Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRepSailingShipMovement;
 
 // ScriptStruct ShooterGame.VesselErrorCorrection
 // 0x002C (0x002C - 0x0000)
@@ -13222,7 +12598,6 @@ public:
 	float                                         SimpleInterpModeAngularSpeed;                      // 0x0024(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SimpleInterpModeAngularSpeedAtLowFps;              // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVesselErrorCorrection;
 
 // ScriptStruct ShooterGame.JoyAnim
 // 0x0010 (0x0010 - 0x0000)
@@ -13233,7 +12608,6 @@ public:
 	float                                         Chance;                                            // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FJoyAnim;
 
 // ScriptStruct ShooterGame.PenetrationTraceHit
 // 0x0110 (0x0110 - 0x0000)
@@ -13244,7 +12618,6 @@ public:
 	float                                         DistanceFromLastHit;                               // 0x0108(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TotalDistance;                                     // 0x010C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPenetrationTraceHit;
 
 // ScriptStruct ShooterGame.OverlappedFoliageElement
 // 0x0040 (0x0040 - 0x0000)
@@ -13262,7 +12635,6 @@ public:
 	uint8                                         bIsVisibleAndActive : 1;                           // 0x003C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FOverlappedFoliageElement;
 
 // ScriptStruct ShooterGame.ProjectileArc
 // 0x0058 (0x0058 - 0x0000)
@@ -13278,7 +12650,6 @@ public:
 	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OverrideGravityZ;                                  // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FProjectileArc;
 
 // ScriptStruct ShooterGame.KSphereElem_Blueprint
 // 0x0020 (0x0020 - 0x0000)
@@ -13289,7 +12660,6 @@ public:
 	float                                         Radius;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FKSphereElem_Blueprint;
 
 // ScriptStruct ShooterGame.KBoxElem_Blueprint
 // 0x0040 (0x0040 - 0x0000)
@@ -13303,7 +12673,6 @@ public:
 	float                                         Z;                                                 // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FKBoxElem_Blueprint;
 
 // ScriptStruct ShooterGame.KSphylElem_Blueprint
 // 0x0038 (0x0038 - 0x0000)
@@ -13315,7 +12684,6 @@ public:
 	float                                         Radius;                                            // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Length;                                            // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FKSphylElem_Blueprint;
 
 // ScriptStruct ShooterGame.KConvexElem_Blueprint
 // 0x0020 (0x0020 - 0x0000)
@@ -13325,7 +12693,6 @@ public:
 	TArray<struct FVector>                        VertexData;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 IndexData;                                         // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FKConvexElem_Blueprint;
 
 // ScriptStruct ShooterGame.KTaperedCapsuleElem_Blueprint
 // 0x0040 (0x0040 - 0x0000)
@@ -13339,7 +12706,6 @@ public:
 	float                                         Length;                                            // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FKTaperedCapsuleElem_Blueprint;
 
 // ScriptStruct ShooterGame.KAggregateGeom_Blueprint
 // 0x0050 (0x0050 - 0x0000)
@@ -13352,7 +12718,6 @@ public:
 	TArray<struct FKConvexElem_Blueprint>         ConvexElems;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FKTaperedCapsuleElem_Blueprint> TaperedCapsuleElems;                               // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FKAggregateGeom_Blueprint;
 
 // ScriptStruct ShooterGame.TribeChangeInfo
 // 0x0038 (0x0038 - 0x0000)
@@ -13361,7 +12726,6 @@ struct alignas(0x08) FTribeChangeInfo final
 public:
 	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTribeChangeInfo;
 
 // ScriptStruct ShooterGame.CachedItemInfo
 // 0x000C (0x000C - 0x0000)
@@ -13370,7 +12734,6 @@ struct alignas(0x04) FCachedItemInfo final
 public:
 	uint8                                         Pad_0[0xC];                                        // 0x0000(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCachedItemInfo;
 
 // ScriptStruct ShooterGame.ContainerInfo
 // 0x0120 (0x0120 - 0x0000)
@@ -13379,7 +12742,6 @@ struct alignas(0x08) FContainerInfo final
 public:
 	uint8                                         Pad_0[0x120];                                      // 0x0000(0x0120)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FContainerInfo;
 
 // ScriptStruct ShooterGame.ContainerSortingInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -13388,7 +12750,6 @@ struct alignas(0x08) FContainerSortingInfo final
 public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FContainerSortingInfo;
 
 // ScriptStruct ShooterGame.SortingTask
 // 0x0028 (0x0028 - 0x0000)
@@ -13404,7 +12765,6 @@ public:
 	int32                                         PairId;                                            // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSortingTask;
 
 // ScriptStruct ShooterGame.ContainerTasks
 // 0x0018 (0x0018 - 0x0000)
@@ -13414,7 +12774,6 @@ public:
 	class AActor*                                 Container;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FSortingTask>                   Tasks;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FContainerTasks;
 
 // ScriptStruct ShooterGame.PointAndTimestamp
 // 0x0020 (0x0020 - 0x0000)
@@ -13424,7 +12783,6 @@ public:
 	struct FVector                                Location;                                          // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Timestamp;                                         // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPointAndTimestamp;
 
 // ScriptStruct ShooterGame.CircleDetectionState
 // 0x0050 (0x0050 - 0x0000)
@@ -13442,7 +12800,6 @@ public:
 	bool                                          bHasUnconsumedCircle;                              // 0x0048(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCircleDetectionState;
 
 // ScriptStruct ShooterGame.VolumetricDispatchDetailLevel
 // 0x0040 (0x0040 - 0x0000)
@@ -13467,7 +12824,6 @@ public:
 	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Bubbles_MaxDistance;                               // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVolumetricDispatchDetailLevel;
 
 // ScriptStruct ShooterGame.VolumetricDispatch
 // 0x0098 (0x0098 - 0x0000)
@@ -13488,7 +12844,6 @@ public:
 	int32                                         MaxAllowedFrameDelayBuffer;                        // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         FramesDelayed;                                     // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVolumetricDispatch;
 
 // ScriptStruct ShooterGame.ComponentVolumetricDispatch
 // 0x0008 (0x0008 - 0x0000)
@@ -13497,7 +12852,6 @@ struct FComponentVolumetricDispatch final
 public:
 	TWeakObjectPtr<class UPrimalWindSourceComponent> InteractionComponent;                           // 0x0000(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FComponentVolumetricDispatch;
 
 // ScriptStruct ShooterGame.FoliageInteractionSettings
 // 0x0028 (0x0028 - 0x0000)
@@ -13510,7 +12864,6 @@ public:
 	bool                                          bDontAddIfOverLimits;                              // 0x0020(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FFoliageInteractionSettings;
 
 // ScriptStruct ShooterGame.FluidInteractionSettings
 // 0x0038 (0x0038 - 0x0000)
@@ -13527,7 +12880,6 @@ public:
 	float                                         SplashRadius;                                      // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FFluidInteractionSettings;
 
 // ScriptStruct ShooterGame.VRBattleWaveUnit
 // 0x0068 (0x0068 - 0x0000)
@@ -13541,7 +12893,6 @@ public:
 	struct FVector                                SpawnOffset;                                       // 0x0040(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<EPrimalCharacterStatusValue>           PrioritizeStats;                                   // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVRBattleWaveUnit;
 
 // ScriptStruct ShooterGame.BakedOceanIslandInstance
 // 0x0130 (0x0130 - 0x0000)
@@ -13557,7 +12908,6 @@ public:
 	struct FVector2D                              AtlasMinUV;                                        // 0x0110(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              AtlasMaxUV;                                        // 0x0120(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBakedOceanIslandInstance;
 
 // ScriptStruct ShooterGame.UIntArrayWrapper
 // 0x0010 (0x0010 - 0x0000)
@@ -13566,7 +12916,6 @@ struct alignas(0x08) FUIntArrayWrapper final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FUIntArrayWrapper;
 
 // ScriptStruct ShooterGame.LinearArrayWrapper
 // 0x0010 (0x0010 - 0x0000)
@@ -13575,7 +12924,6 @@ struct alignas(0x08) FLinearArrayWrapper final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLinearArrayWrapper;
 
 // ScriptStruct ShooterGame.BuoArrayWrapper
 // 0x0010 (0x0010 - 0x0000)
@@ -13584,7 +12932,6 @@ struct alignas(0x08) FBuoArrayWrapper final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBuoArrayWrapper;
 
 // ScriptStruct ShooterGame.OceanCascadeParameters
 // 0x0028 (0x0028 - 0x0000)
@@ -13601,7 +12948,6 @@ public:
 	float                                         BakedPanningDirection;                             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UBuoBakedAsset*                         HeightsDataAsset;                                  // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOceanCascadeParameters;
 
 // ScriptStruct ShooterGame.PrimalWorldModifierList
 // 0x0040 (0x0040 - 0x0000)
@@ -13618,7 +12964,6 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class APrimalWorldModifier>       WorldModifierClass;                                // 0x0038(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPrimalWorldModifierList;
 
 // ScriptStruct ShooterGame.VO_DataInstigatorEntry
 // 0x0020 (0x0028 - 0x0008)
@@ -13628,7 +12973,6 @@ public:
 	class FText                                   VoiceName;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FLinearColor                           SubtitlesColor;                                    // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVO_DataInstigatorEntry;
 
 // ScriptStruct ShooterGame.VO_TimeData
 // 0x0010 (0x0010 - 0x0000)
@@ -13637,6 +12981,5 @@ struct FVO_TimeData final
 public:
 	struct FDataTableRowHandle                    RowData;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVO_TimeData;
 
 SDK_NAMESPACE_END

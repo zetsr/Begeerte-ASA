@@ -38,7 +38,6 @@ public:
 	float                                         FocusDistance;                                     // 0x0038(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCineSplinePointData;
 
 // ScriptStruct CineCameraRigs.CineSplineCurveDefaults
 // 0x0030 (0x0030 - 0x0000)
@@ -51,7 +50,6 @@ public:
 	float                                         DefaultFocusDistance;                              // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuat                                  DefaultPointRotation;                              // 0x0010(0x0020)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCineSplineCurveDefaults;
 
 // ScriptStruct CineCameraRigs.CineSplineInstanceData
 // 0x0008 (0x01A0 - 0x0198)
@@ -60,6 +58,5 @@ struct FCineSplineInstanceData final : public FSplineInstanceData
 public:
 	class UCineSplineMetadata*                    CineSplineMetadata;                                // 0x0198(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FCineSplineInstanceData;
 
 SDK_NAMESPACE_END

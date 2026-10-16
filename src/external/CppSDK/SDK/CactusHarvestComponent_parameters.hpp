@@ -37,7 +37,6 @@ public:
 	float                                         CallFunc_AddStatusValueModifier_Speed_ImplicitCast; // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddStatusValueModifier_Amount_ImplicitCast; // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CactusHarvestComponent_C_BPCustomHarvestResource;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

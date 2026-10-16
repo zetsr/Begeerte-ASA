@@ -42,28 +42,24 @@ enum class EMassVisibility : uint8
 struct FMassHighLODTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassHighLODTag;
 
 // ScriptStruct MassLOD.MassMediumLODTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassMediumLODTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassMediumLODTag;
 
 // ScriptStruct MassLOD.MassLowLODTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassLowLODTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassLowLODTag;
 
 // ScriptStruct MassLOD.MassOffLODTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassOffLODTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassOffLODTag;
 
 // ScriptStruct MassLOD.MassViewerInfoFragment
 // 0x0008 (0x0008 - 0x0000)
@@ -73,7 +69,6 @@ public:
 	float                                         ClosestViewerDistanceSq;                           // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ClosestDistanceToFrustum;                          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassViewerInfoFragment;
 
 // ScriptStruct MassLOD.MassVariableTickChunkFragment
 // 0x000C (0x000C - 0x0000)
@@ -86,42 +81,36 @@ public:
 	float                                         TimeUntilNextTick;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         LastChunkSerialModificationNumber;                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FMassVariableTickChunkFragment;
 
 // ScriptStruct MassLOD.MassCollectLODViewerInfoTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassCollectLODViewerInfoTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassCollectLODViewerInfoTag;
 
 // ScriptStruct MassLOD.MassCollectDistanceLODViewerInfoTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassCollectDistanceLODViewerInfoTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassCollectDistanceLODViewerInfoTag;
 
 // ScriptStruct MassLOD.MassVisibilityCanBeSeenTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassVisibilityCanBeSeenTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassVisibilityCanBeSeenTag;
 
 // ScriptStruct MassLOD.MassVisibilityCulledByFrustumTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassVisibilityCulledByFrustumTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassVisibilityCulledByFrustumTag;
 
 // ScriptStruct MassLOD.MassVisibilityCulledByDistanceTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassVisibilityCulledByDistanceTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassVisibilityCulledByDistanceTag;
 
 // ScriptStruct MassLOD.MassVisualizationChunkFragment
 // 0x0008 (0x0008 - 0x0000)
@@ -133,14 +122,12 @@ public:
 	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DeltaTime;                                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-DUMPER7_ASSERTS_FMassVisualizationChunkFragment;
 
 // ScriptStruct MassLOD.MassViewerHandle
 // 0x0000 (0x0008 - 0x0008)
 struct FMassViewerHandle final : public FIndexedHandleBase
 {
 };
-DUMPER7_ASSERTS_FMassViewerHandle;
 
 // ScriptStruct MassLOD.ViewerInfo
 // 0x0068 (0x0068 - 0x0000)
@@ -150,7 +137,6 @@ public:
 	class AActor*                                 ActorViewer;                                       // 0x0000(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	uint8                                         Pad_8[0x60];                                       // 0x0008(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FViewerInfo;
 
 // ScriptStruct MassLOD.MassSimulationLODFragment
 // 0x0008 (0x0008 - 0x0000)
@@ -159,7 +145,6 @@ struct alignas(0x04) FMassSimulationLODFragment final : public FMassFragment
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassSimulationLODFragment;
 
 // ScriptStruct MassLOD.MassSimulationVariableTickFragment
 // 0x0010 (0x0010 - 0x0000)
@@ -168,14 +153,12 @@ struct alignas(0x08) FMassSimulationVariableTickFragment final : public FMassFra
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassSimulationVariableTickFragment;
 
 // ScriptStruct MassLOD.MassSimulationVariableTickChunkFragment
 // 0x0000 (0x000C - 0x000C)
 struct FMassSimulationVariableTickChunkFragment final : public FMassVariableTickChunkFragment
 {
 };
-DUMPER7_ASSERTS_FMassSimulationVariableTickChunkFragment;
 
 // ScriptStruct MassLOD.MassSimulationLODParameters
 // 0x0028 (0x0028 - 0x0000)
@@ -188,7 +171,6 @@ public:
 	bool                                          bSetLODTags;                                       // 0x0024(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassSimulationLODParameters;
 
 // ScriptStruct MassLOD.MassSimulationVariableTickParameters
 // 0x0014 (0x0014 - 0x0000)
@@ -199,7 +181,6 @@ public:
 	bool                                          bSpreadFirstSimulationUpdate;                      // 0x0010(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassSimulationVariableTickParameters;
 
 // ScriptStruct MassLOD.MassSimulationLODSharedFragment
 // 0x2020 (0x2020 - 0x0000)
@@ -208,7 +189,6 @@ struct alignas(0x08) FMassSimulationLODSharedFragment final : public FMassShared
 public:
 	uint8                                         Pad_0[0x2020];                                     // 0x0000(0x2020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassSimulationLODSharedFragment;
 
 // ScriptStruct MassLOD.MassSimulationVariableTickSharedFragment
 // 0x0030 (0x0030 - 0x0000)
@@ -217,6 +197,5 @@ struct alignas(0x08) FMassSimulationVariableTickSharedFragment final : public FM
 public:
 	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassSimulationVariableTickSharedFragment;
 
 SDK_NAMESPACE_END

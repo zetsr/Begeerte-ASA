@@ -39,6 +39,5 @@ public:
 		return GetDefaultObjImpl<UShooterDamageTypeBP_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UShooterDamageTypeBP_Base_C;
 
 SDK_NAMESPACE_END

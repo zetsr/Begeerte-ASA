@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UDataListEntryWidgetGeneric_DyeResources_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryWidgetGeneric_DyeResources_C;
 
 SDK_NAMESPACE_END

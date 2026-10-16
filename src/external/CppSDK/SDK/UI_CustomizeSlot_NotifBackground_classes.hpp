@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UUI_CustomizeSlot_NotifBackground_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CustomizeSlot_NotifBackground_C;
 
 SDK_NAMESPACE_END

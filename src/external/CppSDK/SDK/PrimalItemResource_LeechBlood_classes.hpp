@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_LeechBlood_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_LeechBlood_C;
 
 SDK_NAMESPACE_END

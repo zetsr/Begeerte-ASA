@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponSpear_Explosive_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_WeaponSpear_Explosive_C;
 
 SDK_NAMESPACE_END

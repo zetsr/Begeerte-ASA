@@ -50,6 +50,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_BrowseMods_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_BrowseMods_C;
 
 SDK_NAMESPACE_END

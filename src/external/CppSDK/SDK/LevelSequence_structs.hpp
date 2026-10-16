@@ -26,7 +26,6 @@ public:
 	struct FSoftObjectPath                        ExternalObjectPath;                                // 0x0010(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ObjectPath;                                        // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLevelSequenceBindingReference;
 
 // ScriptStruct LevelSequence.LevelSequenceBindingReferenceArray
 // 0x0010 (0x0010 - 0x0000)
@@ -35,7 +34,6 @@ struct FLevelSequenceBindingReferenceArray final
 public:
 	TArray<struct FLevelSequenceBindingReference> References;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLevelSequenceBindingReferenceArray;
 
 // ScriptStruct LevelSequence.LevelSequenceCameraSettings
 // 0x0002 (0x0002 - 0x0000)
@@ -45,7 +43,6 @@ public:
 	bool                                          bOverrideAspectRatioAxisConstraint;                // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAspectRatioAxisConstraint                    AspectRatioAxisConstraint;                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLevelSequenceCameraSettings;
 
 // ScriptStruct LevelSequence.LegacyLazyObjectPtrFragment
 // 0x0010 (0x0010 - 0x0000)
@@ -54,7 +51,6 @@ struct FLegacyLazyObjectPtrFragment final
 public:
 	struct FGuid                                  LazyObjectId;                                      // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLegacyLazyObjectPtrFragment;
 
 // ScriptStruct LevelSequence.LevelSequenceLegacyObjectReference
 // 0x0020 (0x0020 - 0x0000)
@@ -63,7 +59,6 @@ struct alignas(0x08) FLevelSequenceLegacyObjectReference final
 public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLevelSequenceLegacyObjectReference;
 
 // ScriptStruct LevelSequence.LevelSequenceObjectReferenceMap
 // 0x0050 (0x0050 - 0x0000)
@@ -72,7 +67,6 @@ struct alignas(0x08) FLevelSequenceObjectReferenceMap final
 public:
 	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLevelSequenceObjectReferenceMap;
 
 // ScriptStruct LevelSequence.BoundActorProxy
 // 0x0001 (0x0001 - 0x0000)
@@ -81,7 +75,6 @@ struct FBoundActorProxy final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBoundActorProxy;
 
 // ScriptStruct LevelSequence.LevelSequenceAnimSequenceLinkItem
 // 0x0078 (0x0078 - 0x0000)
@@ -109,14 +102,12 @@ public:
 	struct FFrameRate                             CustomDisplayRate;                                 // 0x006C(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLevelSequenceAnimSequenceLinkItem;
 
 // ScriptStruct LevelSequence.UpgradedLevelSequenceBindingReferences
 // 0x0000 (0x0010 - 0x0010)
 struct FUpgradedLevelSequenceBindingReferences final : public FMovieSceneBindingReferences
 {
 };
-DUMPER7_ASSERTS_FUpgradedLevelSequenceBindingReferences;
 
 // ScriptStruct LevelSequence.LevelSequenceBindingReferences
 // 0x00F0 (0x00F0 - 0x0000)
@@ -127,7 +118,6 @@ public:
 	TSet<struct FGuid>                            AnimSequenceInstances;                             // 0x0050(0x0050)(NativeAccessSpecifierPublic)
 	TSet<struct FGuid>                            PostProcessInstances;                              // 0x00A0(0x0050)(NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLevelSequenceBindingReferences;
 
 // ScriptStruct LevelSequence.LevelSequenceObject
 // 0x0030 (0x0030 - 0x0000)
@@ -138,7 +128,6 @@ public:
 	class FString                                 ComponentName;                                     // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TWeakObjectPtr<class UObject>                 CachedComponent;                                   // 0x0028(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FLevelSequenceObject;
 
 // ScriptStruct LevelSequence.LevelSequencePlayerSnapshot
 // 0x00A8 (0x00A8 - 0x0000)
@@ -157,6 +146,5 @@ public:
 	struct FMovieSceneSequenceID                  ShotID;                                            // 0x00A0(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLevelSequencePlayerSnapshot;
 
 SDK_NAMESPACE_END

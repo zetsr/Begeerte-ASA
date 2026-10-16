@@ -38,7 +38,6 @@ public:
 		return GetDefaultObjImpl<USlateWidgetStyleAsset>();
 	}
 };
-DUMPER7_ASSERTS_USlateWidgetStyleAsset;
 
 // Class SlateCore.FontBulkData
 // 0x0050 (0x0078 - 0x0028)
@@ -61,7 +60,6 @@ public:
 		return GetDefaultObjImpl<UFontBulkData>();
 	}
 };
-DUMPER7_ASSERTS_UFontBulkData;
 
 // Class SlateCore.FontFaceInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -90,7 +88,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IFontFaceInterface;
 
 // Class SlateCore.FontProviderInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -119,7 +116,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IFontProviderInterface;
 
 // Class SlateCore.SlateTypes
 // 0x0000 (0x0028 - 0x0028)
@@ -139,7 +135,6 @@ public:
 		return GetDefaultObjImpl<USlateTypes>();
 	}
 };
-DUMPER7_ASSERTS_USlateTypes;
 
 // Class SlateCore.SlateWidgetStyleContainerBase
 // 0x0008 (0x0030 - 0x0028)
@@ -162,7 +157,6 @@ public:
 		return GetDefaultObjImpl<USlateWidgetStyleContainerBase>();
 	}
 };
-DUMPER7_ASSERTS_USlateWidgetStyleContainerBase;
 
 // Class SlateCore.SlateWidgetStyleContainerInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -191,7 +185,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ISlateWidgetStyleContainerInterface;
 
 // Class SlateCore.SlateThemeManager
 // 0x07B0 (0x07D8 - 0x0028)
@@ -215,6 +208,5 @@ public:
 		return GetDefaultObjImpl<USlateThemeManager>();
 	}
 };
-DUMPER7_ASSERTS_USlateThemeManager;
 
 SDK_NAMESPACE_END

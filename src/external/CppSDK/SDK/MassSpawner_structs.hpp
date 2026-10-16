@@ -38,7 +38,6 @@ public:
 	class UObject*                                ConfigOwner;                                       // 0x0018(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 	struct FGuid                                  ConfigGuid;                                        // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FMassEntityConfig;
 
 // ScriptStruct MassSpawner.MassEntitySpawnDataGeneratorResult
 // 0x0030 (0x0030 - 0x0000)
@@ -51,7 +50,6 @@ public:
 	int32                                         EntityConfigIndex;                                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumEntities;                                       // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassEntitySpawnDataGeneratorResult;
 
 // ScriptStruct MassSpawner.MassEntityTemplateID
 // 0x0020 (0x0020 - 0x0000)
@@ -63,7 +61,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	uint64                                        TotalHash;                                         // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-DUMPER7_ASSERTS_FMassEntityTemplateID;
 
 // ScriptStruct MassSpawner.MassEntityTemplateData
 // 0x0148 (0x0148 - 0x0000)
@@ -72,7 +69,6 @@ struct alignas(0x08) FMassEntityTemplateData final
 public:
 	uint8                                         Pad_0[0x148];                                      // 0x0000(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassEntityTemplateData;
 
 // ScriptStruct MassSpawner.MassMissingTraitMessage
 // 0x0001 (0x0001 - 0x0000)
@@ -81,7 +77,6 @@ struct FMassMissingTraitMessage final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassMissingTraitMessage;
 
 // ScriptStruct MassSpawner.MassDuplicateElementsMessage
 // 0x0001 (0x0001 - 0x0000)
@@ -90,7 +85,6 @@ struct FMassDuplicateElementsMessage final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassDuplicateElementsMessage;
 
 // ScriptStruct MassSpawner.MassTransformsSpawnData
 // 0x0018 (0x0018 - 0x0000)
@@ -99,7 +93,6 @@ struct alignas(0x08) FMassTransformsSpawnData final
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassTransformsSpawnData;
 
 // ScriptStruct MassSpawner.MassSpawnedEntityType
 // 0x0038 (0x0038 - 0x0000)
@@ -111,7 +104,6 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMassEntityConfigAsset*                 EntityConfigPtr;                                   // 0x0030(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMassSpawnedEntityType;
 
 // ScriptStruct MassSpawner.MassSpawnDataGenerator
 // 0x0018 (0x0018 - 0x0000)
@@ -123,7 +115,6 @@ public:
 	float                                         Proportion;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassSpawnDataGenerator;
 
 // ScriptStruct MassSpawner.ReplicationTemplateIDFragment
 // 0x0020 (0x0020 - 0x0000)
@@ -132,6 +123,5 @@ struct FReplicationTemplateIDFragment final : public FMassFragment
 public:
 	struct FMassEntityTemplateID                  ID;                                                // 0x0000(0x0020)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FReplicationTemplateIDFragment;
 
 SDK_NAMESPACE_END

@@ -95,7 +95,6 @@ struct FMassGenericDebugEvent final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassGenericDebugEvent;
 
 // ScriptStruct MassEntity.MassFragmentRequirements
 // 0x0268 (0x0268 - 0x0000)
@@ -104,7 +103,6 @@ struct alignas(0x08) FMassFragmentRequirements
 public:
 	uint8                                         Pad_0[0x268];                                      // 0x0000(0x0268)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassFragmentRequirements;
 
 // ScriptStruct MassEntity.MassEntityQuery
 // 0x00B8 (0x0320 - 0x0268)
@@ -113,7 +111,6 @@ struct alignas(0x10) FMassEntityQuery final : public FMassFragmentRequirements
 public:
 	uint8                                         Pad_268[0xB8];                                     // 0x0268(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassEntityQuery;
 
 // ScriptStruct MassEntity.MassFragment
 // 0x0000 (0x0000 - 0x0000)
@@ -122,7 +119,6 @@ struct SDK_ALIGN(0x01) FMassFragment
 {
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_FMassFragment;
 
 // ScriptStruct MassEntity.MassTag
 // 0x0001 (0x0001 - 0x0000)
@@ -131,7 +127,6 @@ struct FMassTag
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassTag;
 
 // ScriptStruct MassEntity.MassChunkFragment
 // 0x0000 (0x0000 - 0x0000)
@@ -140,7 +135,6 @@ struct SDK_ALIGN(0x01) FMassChunkFragment
 {
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_FMassChunkFragment;
 
 // ScriptStruct MassEntity.MassSharedFragment
 // 0x0000 (0x0000 - 0x0000)
@@ -149,7 +143,6 @@ struct SDK_ALIGN(0x01) FMassSharedFragment
 {
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_FMassSharedFragment;
 
 // ScriptStruct MassEntity.MassConstSharedFragment
 // 0x0000 (0x0000 - 0x0000)
@@ -158,7 +151,6 @@ struct SDK_ALIGN(0x01) FMassConstSharedFragment
 {
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_FMassConstSharedFragment;
 
 // ScriptStruct MassEntity.MassEntityHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -168,7 +160,6 @@ public:
 	int32                                         Index;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SerialNumber;                                      // 0x0004(0x0004)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassEntityHandle;
 
 // ScriptStruct MassEntity.MassEntityView
 // 0x0020 (0x0020 - 0x0000)
@@ -177,7 +168,6 @@ struct alignas(0x08) FMassEntityView final
 public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassEntityView;
 
 // ScriptStruct MassEntity.MassRuntimePipeline
 // 0x0018 (0x0018 - 0x0000)
@@ -187,7 +177,6 @@ public:
 	TArray<class UMassProcessor*>                 Processors;                                        // 0x0000(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassRuntimePipeline;
 
 // ScriptStruct MassEntity.MassObserversMap
 // 0x0050 (0x0050 - 0x0000)
@@ -196,7 +185,6 @@ struct FMassObserversMap final
 public:
 	TMap<class UScriptStruct*, struct FMassRuntimePipeline> Container;                               // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FMassObserversMap;
 
 // ScriptStruct MassEntity.MassObserverManager
 // 0x01C8 (0x01C8 - 0x0000)
@@ -208,7 +196,6 @@ public:
 	struct FMassObserversMap                      TagObservers[0x2];                                 // 0x0120(0x0050)(Protected, NativeAccessSpecifierProtected)
 	uint8                                         Pad_1C0[0x8];                                      // 0x01C0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassObserverManager;
 
 // ScriptStruct MassEntity.MassProcessorClassCollection
 // 0x0010 (0x0010 - 0x0000)
@@ -217,7 +204,6 @@ struct FMassProcessorClassCollection final
 public:
 	TArray<TSubclassOf<class UMassProcessor>>     ClassCollection;                                   // 0x0000(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassProcessorClassCollection;
 
 // ScriptStruct MassEntity.MassEntityObserverClassesMap
 // 0x0050 (0x0050 - 0x0000)
@@ -226,7 +212,6 @@ struct FMassEntityObserverClassesMap final
 public:
 	TMap<class UScriptStruct*, struct FMassProcessorClassCollection> Container;                      // 0x0000(0x0050)(NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FMassEntityObserverClassesMap;
 
 // ScriptStruct MassEntity.MassProcessingPhaseConfig
 // 0x0020 (0x0020 - 0x0000)
@@ -237,7 +222,6 @@ public:
 	TSubclassOf<class UMassCompositeProcessor>    PhaseGroupClass;                                   // 0x0008(0x0008)(Edit, ZeroConstructor, Config, NoClear, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UMassProcessor*>                 ProcessorCDOs;                                     // 0x0010(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMassProcessingPhaseConfig;
 
 // ScriptStruct MassEntity.ProcessorAuxDataBase
 // 0x0001 (0x0001 - 0x0000)
@@ -246,7 +230,6 @@ struct FProcessorAuxDataBase final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FProcessorAuxDataBase;
 
 // ScriptStruct MassEntity.MassProcessingContext
 // 0x0040 (0x0040 - 0x0000)
@@ -260,7 +243,6 @@ public:
 	bool                                          bFlushCommandBuffer;                               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x17];                                      // 0x0029(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassProcessingContext;
 
 // ScriptStruct MassEntity.MassProcessorExecutionOrder
 // 0x0028 (0x0028 - 0x0000)
@@ -271,7 +253,6 @@ public:
 	TArray<class FName>                           ExecuteBefore;                                     // 0x0008(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FName>                           ExecuteAfter;                                      // 0x0018(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassProcessorExecutionOrder;
 
 // ScriptStruct MassEntity.MassSubsystemRequirements
 // 0x0048 (0x0048 - 0x0000)
@@ -280,6 +261,5 @@ struct alignas(0x08) FMassSubsystemRequirements final
 public:
 	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassSubsystemRequirements;
 
 SDK_NAMESPACE_END

@@ -38,6 +38,5 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_1;                         // 0x0250(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                           // 0x0280(0x0030)()
 };
-DUMPER7_ASSERTS_SimpleHumanTPoseAnimBP__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

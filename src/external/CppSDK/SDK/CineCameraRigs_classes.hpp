@@ -63,7 +63,6 @@ public:
 		return GetDefaultObjImpl<ACineCameraAttachMount>();
 	}
 };
-DUMPER7_ASSERTS_ACineCameraAttachMount;
 
 // Class CineCameraRigs.CineCameraRigRail
 // 0x0060 (0x0510 - 0x04B0)
@@ -126,7 +125,6 @@ public:
 		return GetDefaultObjImpl<ACineCameraRigRail>();
 	}
 };
-DUMPER7_ASSERTS_ACineCameraRigRail;
 
 // Class CineCameraRigs.CineCameraRigRailHelpers
 // 0x0000 (0x0028 - 0x0028)
@@ -149,7 +147,6 @@ public:
 		return GetDefaultObjImpl<UCineCameraRigRailHelpers>();
 	}
 };
-DUMPER7_ASSERTS_UCineCameraRigRailHelpers;
 
 // Class CineCameraRigs.CineCameraRigRailSettings
 // 0x0078 (0x00A0 - 0x0028)
@@ -174,7 +171,6 @@ public:
 		return GetDefaultObjImpl<UCineCameraRigRailSettings>();
 	}
 };
-DUMPER7_ASSERTS_UCineCameraRigRailSettings;
 
 // Class CineCameraRigs.CineSplineComponent
 // 0x0060 (0x0730 - 0x06D0)
@@ -216,7 +212,6 @@ public:
 		return GetDefaultObjImpl<UCineSplineComponent>();
 	}
 };
-DUMPER7_ASSERTS_UCineSplineComponent;
 
 // Class CineCameraRigs.CineSplineMetadata
 // 0x0078 (0x00A0 - 0x0028)
@@ -243,6 +238,5 @@ public:
 		return GetDefaultObjImpl<UCineSplineMetadata>();
 	}
 };
-DUMPER7_ASSERTS_UCineSplineMetadata;
 
 SDK_NAMESPACE_END

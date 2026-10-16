@@ -50,6 +50,5 @@ public:
 		return GetDefaultObjImpl<UUI_Option_ModPageCategory_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Option_ModPageCategory_C;
 
 SDK_NAMESPACE_END

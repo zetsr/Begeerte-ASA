@@ -24,7 +24,6 @@ struct ResonanceAudioBlueprintFunctionLibrary_GetGlobalReverbPreset final
 public:
 	class UResonanceAudioReverbPluginPreset*      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioBlueprintFunctionLibrary_GetGlobalReverbPreset;
 
 // Function ResonanceAudio.ResonanceAudioBlueprintFunctionLibrary.SetGlobalReverbPreset
 // 0x0008 (0x0008 - 0x0000)
@@ -33,7 +32,6 @@ struct ResonanceAudioBlueprintFunctionLibrary_SetGlobalReverbPreset final
 public:
 	class UResonanceAudioReverbPluginPreset*      InPreset;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioBlueprintFunctionLibrary_SetGlobalReverbPreset;
 
 // Function ResonanceAudio.ResonanceAudioReverbPluginPreset.SetEnableRoomEffects
 // 0x0001 (0x0001 - 0x0000)
@@ -42,7 +40,6 @@ struct ResonanceAudioReverbPluginPreset_SetEnableRoomEffects final
 public:
 	bool                                          bInEnableRoomEffects;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioReverbPluginPreset_SetEnableRoomEffects;
 
 // Function ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReflectionScalar
 // 0x0004 (0x0004 - 0x0000)
@@ -51,7 +48,6 @@ struct ResonanceAudioReverbPluginPreset_SetReflectionScalar final
 public:
 	float                                         InReflectionScalar;                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioReverbPluginPreset_SetReflectionScalar;
 
 // Function ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReverbBrightness
 // 0x0004 (0x0004 - 0x0000)
@@ -60,7 +56,6 @@ struct ResonanceAudioReverbPluginPreset_SetReverbBrightness final
 public:
 	float                                         InReverbBrightness;                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioReverbPluginPreset_SetReverbBrightness;
 
 // Function ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReverbGain
 // 0x0004 (0x0004 - 0x0000)
@@ -69,7 +64,6 @@ struct ResonanceAudioReverbPluginPreset_SetReverbGain final
 public:
 	float                                         InReverbGain;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioReverbPluginPreset_SetReverbGain;
 
 // Function ResonanceAudio.ResonanceAudioReverbPluginPreset.SetReverbTimeModifier
 // 0x0004 (0x0004 - 0x0000)
@@ -78,7 +72,6 @@ struct ResonanceAudioReverbPluginPreset_SetReverbTimeModifier final
 public:
 	float                                         InReverbTimeModifier;                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioReverbPluginPreset_SetReverbTimeModifier;
 
 // Function ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomDimensions
 // 0x0018 (0x0018 - 0x0000)
@@ -87,7 +80,6 @@ struct ResonanceAudioReverbPluginPreset_SetRoomDimensions final
 public:
 	struct FVector                                InDimensions;                                      // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioReverbPluginPreset_SetRoomDimensions;
 
 // Function ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomMaterials
 // 0x0010 (0x0010 - 0x0000)
@@ -96,7 +88,6 @@ struct ResonanceAudioReverbPluginPreset_SetRoomMaterials final
 public:
 	TArray<ERaMaterialName>                       InMaterials;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioReverbPluginPreset_SetRoomMaterials;
 
 // Function ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomPosition
 // 0x0018 (0x0018 - 0x0000)
@@ -105,7 +96,6 @@ struct ResonanceAudioReverbPluginPreset_SetRoomPosition final
 public:
 	struct FVector                                InPosition;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioReverbPluginPreset_SetRoomPosition;
 
 // Function ResonanceAudio.ResonanceAudioReverbPluginPreset.SetRoomRotation
 // 0x0020 (0x0020 - 0x0000)
@@ -114,7 +104,6 @@ struct ResonanceAudioReverbPluginPreset_SetRoomRotation final
 public:
 	struct FQuat                                  InRotation;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioReverbPluginPreset_SetRoomRotation;
 
 // Function ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceDirectivity
 // 0x0008 (0x0008 - 0x0000)
@@ -124,7 +113,6 @@ public:
 	float                                         InPattern;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InSharpness;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity;
 
 // Function ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceSpread
 // 0x0004 (0x0004 - 0x0000)
@@ -133,7 +121,6 @@ struct ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread final
 public:
 	float                                         InSpread;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

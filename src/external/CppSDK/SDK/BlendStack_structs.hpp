@@ -32,14 +32,12 @@ enum class EBlendStack_BlendspaceUpdateMode : uint8
 struct FBlendStackAnimNodeReference final : public FAnimNodeReference
 {
 };
-DUMPER7_ASSERTS_FBlendStackAnimNodeReference;
 
 // ScriptStruct BlendStack.BlendStackInputAnimNodeReference
 // 0x0000 (0x0010 - 0x0010)
 struct FBlendStackInputAnimNodeReference final : public FAnimNodeReference
 {
 };
-DUMPER7_ASSERTS_FBlendStackInputAnimNodeReference;
 
 // ScriptStruct BlendStack.BlendStackAnimPlayer
 // 0x0390 (0x0390 - 0x0000)
@@ -52,7 +50,6 @@ public:
 	struct FAnimNode_Mirror_Standalone            MirrorNode;                                        // 0x0148(0x0060)(Transient, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1A8[0x1E8];                                    // 0x01A8(0x01E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBlendStackAnimPlayer;
 
 // ScriptStruct BlendStack.AnimNode_BlendStack_Standalone
 // 0x0088 (0x00C0 - 0x0038)
@@ -76,7 +73,6 @@ public:
 	float                                         PlayerDepthBlendInTimeMultiplier;                  // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_BlendStack_Standalone;
 
 // ScriptStruct BlendStack.AnimNode_BlendStack
 // 0x0070 (0x0130 - 0x00C0)
@@ -103,7 +99,6 @@ public:
 	bool                                          bResetOnBecomingRelevant;                          // 0x0115(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_116[0x1A];                                     // 0x0116(0x001A)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_BlendStack;
 
 // ScriptStruct BlendStack.AnimNode_BlendStackInput
 // 0x0018 (0x0028 - 0x0010)
@@ -117,6 +112,5 @@ public:
 	float                                         PlayRate;                                          // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_BlendStackInput;
 
 SDK_NAMESPACE_END

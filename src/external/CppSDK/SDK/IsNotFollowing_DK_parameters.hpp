@@ -32,7 +32,6 @@ public:
 	class AActor*                                 CallFunc_GetTamedFollowTarget_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_IsNotFollowing_DK_C_ExecuteUbergraph_IsNotFollowing_DK;
 
 // Function IsNotFollowing_DK.IsNotFollowing_DK_C.ReceiveConditionCheck
 // 0x0008 (0x0008 - 0x0000)
@@ -41,7 +40,6 @@ struct IsNotFollowing_DK_C_ReceiveConditionCheck final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_IsNotFollowing_DK_C_ReceiveConditionCheck;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

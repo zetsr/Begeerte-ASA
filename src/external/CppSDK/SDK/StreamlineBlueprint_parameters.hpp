@@ -28,7 +28,6 @@ public:
 	bool                                          VSyncOffRequired;                                  // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          HardwareSchedulingRequired;                        // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibrary_BreakStreamlineFeatureRequirements;
 
 // Function StreamlineBlueprint.StreamlineLibrary.GetStreamlineFeatureInformation
 // 0x0038 (0x0038 - 0x0000)
@@ -39,7 +38,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStreamlineFeatureRequirements         ReturnValue;                                       // 0x0004(0x0034)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibrary_GetStreamlineFeatureInformation;
 
 // Function StreamlineBlueprint.StreamlineLibrary.IsStreamlineFeatureSupported
 // 0x0002 (0x0002 - 0x0000)
@@ -49,7 +47,6 @@ public:
 	EStreamlineFeature                            Feature;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibrary_IsStreamlineFeatureSupported;
 
 // Function StreamlineBlueprint.StreamlineLibrary.QueryStreamlineFeatureSupport
 // 0x0002 (0x0002 - 0x0000)
@@ -59,7 +56,6 @@ public:
 	EStreamlineFeature                            Feature;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EStreamlineFeatureSupport                     ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StreamlineLibrary_QueryStreamlineFeatureSupport;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

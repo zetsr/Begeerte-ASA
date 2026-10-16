@@ -44,7 +44,6 @@ public:
 		return GetDefaultObjImpl<USlateFXSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_USlateFXSubsystem;
 
 // Class SlateRHIRenderer.SlateRHIPostBufferProcessor
 // 0x0000 (0x0028 - 0x0028)
@@ -64,7 +63,6 @@ public:
 		return GetDefaultObjImpl<USlateRHIPostBufferProcessor>();
 	}
 };
-DUMPER7_ASSERTS_USlateRHIPostBufferProcessor;
 
 // Class SlateRHIRenderer.SlatePostBufferBlur
 // 0x0018 (0x0040 - 0x0028)
@@ -88,7 +86,6 @@ public:
 		return GetDefaultObjImpl<USlatePostBufferBlur>();
 	}
 };
-DUMPER7_ASSERTS_USlatePostBufferBlur;
 
 // Class SlateRHIRenderer.SlateRHIRendererSettings
 // 0x0050 (0x0088 - 0x0038)
@@ -116,6 +113,5 @@ public:
 		return GetDefaultObjImpl<USlateRHIRendererSettings>();
 	}
 };
-DUMPER7_ASSERTS_USlateRHIRendererSettings;
 
 SDK_NAMESPACE_END

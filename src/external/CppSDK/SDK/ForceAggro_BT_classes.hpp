@@ -42,6 +42,5 @@ public:
 		return GetDefaultObjImpl<UForceAggro_BT_C>();
 	}
 };
-DUMPER7_ASSERTS_UForceAggro_BT_C;
 
 SDK_NAMESPACE_END

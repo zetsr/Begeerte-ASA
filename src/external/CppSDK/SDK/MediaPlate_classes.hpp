@@ -40,7 +40,6 @@ public:
 		return GetDefaultObjImpl<AMediaPlate>();
 	}
 };
-DUMPER7_ASSERTS_AMediaPlate;
 
 // Class MediaPlate.MediaPlateAssetUserData
 // 0x0010 (0x0038 - 0x0028)
@@ -63,7 +62,6 @@ public:
 		return GetDefaultObjImpl<UMediaPlateAssetUserData>();
 	}
 };
-DUMPER7_ASSERTS_UMediaPlateAssetUserData;
 
 // Class MediaPlate.MediaPlateComponent
 // 0x0158 (0x0228 - 0x00D0)
@@ -143,6 +141,5 @@ public:
 		return GetDefaultObjImpl<UMediaPlateComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMediaPlateComponent;
 
 SDK_NAMESPACE_END

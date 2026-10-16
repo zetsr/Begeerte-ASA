@@ -46,7 +46,7 @@ public:
 public:
 	void UpdateButton();
 	void SetActive(bool newActive);
-	void PreConstruct(bool IsDesignTime);
+	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void ExecuteUbergraph_ASAUIWidget_Button_Style4(int32 EntryPoint);
 	void Destruct();
 	void Construct();
@@ -67,6 +67,5 @@ public:
 		return GetDefaultObjImpl<UASAUIWidget_Button_Style4_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUIWidget_Button_Style4_C;
 
 SDK_NAMESPACE_END

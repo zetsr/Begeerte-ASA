@@ -56,7 +56,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ForceAggro_BT_C_ExecuteUbergraph_ForceAggro_BT;
 
 // Function ForceAggro_BT.ForceAggro_BT_C.ReceiveConditionCheck
 // 0x0008 (0x0008 - 0x0000)
@@ -65,7 +64,6 @@ struct ForceAggro_BT_C_ReceiveConditionCheck final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ForceAggro_BT_C_ReceiveConditionCheck;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

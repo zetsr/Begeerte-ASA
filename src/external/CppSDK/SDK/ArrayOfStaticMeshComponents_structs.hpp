@@ -20,6 +20,5 @@ struct FArrayOfStaticMeshComponents final
 public:
 	TArray<class UStaticMeshComponent*>           ArrayOfStaticMeshComponents_5_D0B4876B4882302A69D6C392AD0B5564; // 0x0000(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_FArrayOfStaticMeshComponents;
 
 SDK_NAMESPACE_END

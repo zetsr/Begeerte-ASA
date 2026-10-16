@@ -20,6 +20,5 @@ struct FImgMediaSourceCustomizationSequenceProxy final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FImgMediaSourceCustomizationSequenceProxy;
 
 SDK_NAMESPACE_END

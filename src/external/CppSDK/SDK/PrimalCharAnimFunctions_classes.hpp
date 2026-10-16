@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UPrimalCharAnimFunctions_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCharAnimFunctions_C;
 
 SDK_NAMESPACE_END

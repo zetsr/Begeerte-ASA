@@ -31,7 +31,6 @@ public:
 	bool                                          CallFunc_IsCurrentAttackStopsMovement_ReturnValue; // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_AttackMove_DR_C_ExecuteUbergraph_AttackMove_DR;
 
 // Function AttackMove_DR.AttackMove_DR_C.ReceiveConditionCheck
 // 0x0008 (0x0008 - 0x0000)
@@ -40,7 +39,6 @@ struct AttackMove_DR_C_ReceiveConditionCheck final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_AttackMove_DR_C_ReceiveConditionCheck;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

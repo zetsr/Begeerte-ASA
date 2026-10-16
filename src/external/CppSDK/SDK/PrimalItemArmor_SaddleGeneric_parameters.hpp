@@ -24,7 +24,6 @@ public:
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_SaddleGeneric_C_BlueprintEquipped;
 
 // Function PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C.BPOverrideEquippedDurabilityPercentage
 // 0x0028 (0x0028 - 0x0000)
@@ -41,7 +40,6 @@ public:
 	float                                         K2Node_FunctionResult_OutDurabilityPercentageValue_ImplicitCast; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_SaddleGeneric_C_BPOverrideEquippedDurabilityPercentage;
 
 // Function PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C.BPPostConstructAttachment
 // 0x0010 (0x0010 - 0x0000)
@@ -52,7 +50,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UActorComponent*                        AttachedComponent;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_SaddleGeneric_C_BPPostConstructAttachment;
 
 // Function PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C.ExecuteUbergraph_PrimalItemArmor_SaddleGeneric
 // 0x0048 (0x0048 - 0x0000)
@@ -77,7 +74,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_SaddleGeneric_C_ExecuteUbergraph_PrimalItemArmor_SaddleGeneric;
 
 // Function PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C.ResetSaddleDurabilityToSavedValue
 // 0x0008 (0x0008 - 0x0000)
@@ -88,7 +84,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_VariableSet_ItemDurability_ImplicitCast;    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_SaddleGeneric_C_ResetSaddleDurabilityToSavedValue;
 
 // Function PrimalItemArmor_SaddleGeneric.PrimalItemArmor_SaddleGeneric_C.SaveSaddleDurability
 // 0x0008 (0x0008 - 0x0000)
@@ -97,7 +92,6 @@ struct PrimalItemArmor_SaddleGeneric_C_SaveSaddleDurability final
 public:
 	double                                        K2Node_VariableSet_SavedSaddleDurability_ImplicitCast; // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemArmor_SaddleGeneric_C_SaveSaddleDurability;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -45,7 +45,7 @@ public:
 	bool                                          IsFilled4;                                         // 0x0404(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsFilled5;                                         // 0x0405(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_406[0x2];                                      // 0x0406(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FString& Digits)> OnDigitsFilled;                      // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const class FString& Digits_0)> OnDigitsFilled;                    // 0x0408(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void()>              OnDigitsNotFilled;                                 // 0x0418(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class FText                                   TextDigit1;                                        // 0x0428(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FText                                   TextDigit2;                                        // 0x0438(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -86,6 +86,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_CodeAUTH_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_CodeAUTH_C;
 
 SDK_NAMESPACE_END

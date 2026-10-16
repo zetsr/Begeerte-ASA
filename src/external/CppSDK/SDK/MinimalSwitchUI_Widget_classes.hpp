@@ -50,6 +50,5 @@ public:
 		return GetDefaultObjImpl<UMinimalSwitchUI_Widget_C>();
 	}
 };
-DUMPER7_ASSERTS_UMinimalSwitchUI_Widget_C;
 
 SDK_NAMESPACE_END

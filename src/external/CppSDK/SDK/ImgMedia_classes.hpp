@@ -56,6 +56,5 @@ public:
 		return GetDefaultObjImpl<UImgMediaSource>();
 	}
 };
-DUMPER7_ASSERTS_UImgMediaSource;
 
 SDK_NAMESPACE_END

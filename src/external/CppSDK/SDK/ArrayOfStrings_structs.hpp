@@ -20,6 +20,5 @@ struct FArrayOfStrings final
 public:
 	TArray<class FString>                         StringArray_3_042E4BCC4FCFD13EE6278BB57BF57A53;    // 0x0000(0x0010)(Edit, BlueprintVisible)
 };
-DUMPER7_ASSERTS_FArrayOfStrings;
 
 SDK_NAMESPACE_END

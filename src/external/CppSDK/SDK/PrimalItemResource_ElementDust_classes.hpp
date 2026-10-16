@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_ElementDust_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_ElementDust_C;
 
 SDK_NAMESPACE_END

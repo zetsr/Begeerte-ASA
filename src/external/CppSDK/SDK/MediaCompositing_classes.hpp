@@ -42,7 +42,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneMediaPlayerPropertySection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneMediaPlayerPropertySection;
 
 // Class MediaCompositing.MovieSceneMediaPlayerPropertyTrack
 // 0x0008 (0x0130 - 0x0128)
@@ -65,7 +64,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneMediaPlayerPropertyTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneMediaPlayerPropertyTrack;
 
 // Class MediaCompositing.MovieSceneMediaSection
 // 0x0168 (0x0260 - 0x00F8)
@@ -104,7 +102,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneMediaSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneMediaSection;
 
 // Class MediaCompositing.MovieSceneMediaTrack
 // 0x0018 (0x0110 - 0x00F8)
@@ -128,6 +125,5 @@ public:
 		return GetDefaultObjImpl<UMovieSceneMediaTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneMediaTrack;
 
 SDK_NAMESPACE_END

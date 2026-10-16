@@ -55,7 +55,6 @@ public:
 		return GetDefaultObjImpl<UMeshTopologySelectionMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UMeshTopologySelectionMechanic;
 
 // Class ModelingComponents.BoundarySelectionMechanic
 // 0x0000 (0x0B40 - 0x0B40)
@@ -75,7 +74,6 @@ public:
 		return GetDefaultObjImpl<UBoundarySelectionMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UBoundarySelectionMechanic;
 
 // Class ModelingComponents.DynamicMeshCommitter
 // 0x0000 (0x0000 - 0x0000)
@@ -104,7 +102,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDynamicMeshCommitter;
 
 // Class ModelingComponents.DynamicMeshProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -133,7 +130,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDynamicMeshProvider;
 
 // Class ModelingComponents.PersistentDynamicMeshSource
 // 0x0000 (0x0000 - 0x0000)
@@ -162,7 +158,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IPersistentDynamicMeshSource;
 
 // Class ModelingComponents.GeometrySelectionVisualizationProperties
 // 0x0060 (0x0108 - 0x00A8)
@@ -207,7 +202,6 @@ public:
 		return GetDefaultObjImpl<UGeometrySelectionVisualizationProperties>();
 	}
 };
-DUMPER7_ASSERTS_UGeometrySelectionVisualizationProperties;
 
 // Class ModelingComponents.InteractiveToolActivity
 // 0x0000 (0x0030 - 0x0030)
@@ -227,7 +221,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveToolActivity>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveToolActivity;
 
 // Class ModelingComponents.ToolActivityHost
 // 0x0000 (0x0000 - 0x0000)
@@ -256,7 +249,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IToolActivityHost;
 
 // Class ModelingComponents.MeshTopologySelectionMechanicProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -294,7 +286,6 @@ public:
 		return GetDefaultObjImpl<UMeshTopologySelectionMechanicProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshTopologySelectionMechanicProperties;
 
 // Class ModelingComponents.GeometrySelectionEditCommandArguments
 // 0x0028 (0x0058 - 0x0030)
@@ -317,7 +308,6 @@ public:
 		return GetDefaultObjImpl<UGeometrySelectionEditCommandArguments>();
 	}
 };
-DUMPER7_ASSERTS_UGeometrySelectionEditCommandArguments;
 
 // Class ModelingComponents.GeometrySelectionEditCommandResult
 // 0x0078 (0x00A0 - 0x0028)
@@ -340,7 +330,6 @@ public:
 		return GetDefaultObjImpl<UGeometrySelectionEditCommandResult>();
 	}
 };
-DUMPER7_ASSERTS_UGeometrySelectionEditCommandResult;
 
 // Class ModelingComponents.GeometrySelectionEditCommand
 // 0x0000 (0x0028 - 0x0028)
@@ -360,7 +349,6 @@ public:
 		return GetDefaultObjImpl<UGeometrySelectionEditCommand>();
 	}
 };
-DUMPER7_ASSERTS_UGeometrySelectionEditCommand;
 
 // Class ModelingComponents.ToolHostCustomizationAPI
 // 0x0000 (0x0000 - 0x0000)
@@ -389,7 +377,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IToolHostCustomizationAPI;
 
 // Class ModelingComponents.VoxelProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -417,7 +404,6 @@ public:
 		return GetDefaultObjImpl<UVoxelProperties>();
 	}
 };
-DUMPER7_ASSERTS_UVoxelProperties;
 
 // Class ModelingComponents.MultiSelectionMeshEditingToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -437,7 +423,6 @@ public:
 		return GetDefaultObjImpl<UMultiSelectionMeshEditingToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMultiSelectionMeshEditingToolBuilder;
 
 // Class ModelingComponents.BaseCreateFromSelectedToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -457,7 +442,6 @@ public:
 		return GetDefaultObjImpl<UBaseCreateFromSelectedToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UBaseCreateFromSelectedToolBuilder;
 
 // Class ModelingComponents.OnAcceptHandleSourcesPropertiesBase
 // 0x0000 (0x00A8 - 0x00A8)
@@ -477,7 +461,6 @@ public:
 		return GetDefaultObjImpl<UOnAcceptHandleSourcesPropertiesBase>();
 	}
 };
-DUMPER7_ASSERTS_UOnAcceptHandleSourcesPropertiesBase;
 
 // Class ModelingComponents.OnAcceptHandleSourcesProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -501,7 +484,6 @@ public:
 		return GetDefaultObjImpl<UOnAcceptHandleSourcesProperties>();
 	}
 };
-DUMPER7_ASSERTS_UOnAcceptHandleSourcesProperties;
 
 // Class ModelingComponents.BaseCreateFromSelectedHandleSourceProperties
 // 0x0028 (0x00D8 - 0x00B0)
@@ -527,7 +509,6 @@ public:
 		return GetDefaultObjImpl<UBaseCreateFromSelectedHandleSourceProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBaseCreateFromSelectedHandleSourceProperties;
 
 // Class ModelingComponents.BaseCreateFromSelectedCollisionProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -551,7 +532,6 @@ public:
 		return GetDefaultObjImpl<UBaseCreateFromSelectedCollisionProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBaseCreateFromSelectedCollisionProperties;
 
 // Class ModelingComponents.TransformInputsToolProperties
 // 0x0008 (0x00B0 - 0x00A8)
@@ -575,7 +555,6 @@ public:
 		return GetDefaultObjImpl<UTransformInputsToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_UTransformInputsToolProperties;
 
 // Class ModelingComponents.MultiSelectionMeshEditingTool
 // 0x0008 (0x00B8 - 0x00B0)
@@ -598,7 +577,6 @@ public:
 		return GetDefaultObjImpl<UMultiSelectionMeshEditingTool>();
 	}
 };
-DUMPER7_ASSERTS_UMultiSelectionMeshEditingTool;
 
 // Class ModelingComponents.BaseCreateFromSelectedTool
 // 0x0050 (0x0108 - 0x00B8)
@@ -628,7 +606,6 @@ public:
 		return GetDefaultObjImpl<UBaseCreateFromSelectedTool>();
 	}
 };
-DUMPER7_ASSERTS_UBaseCreateFromSelectedTool;
 
 // Class ModelingComponents.SingleTargetWithSelectionToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -648,7 +625,6 @@ public:
 		return GetDefaultObjImpl<USingleTargetWithSelectionToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_USingleTargetWithSelectionToolBuilder;
 
 // Class ModelingComponents.BaseMeshProcessingToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -668,7 +644,6 @@ public:
 		return GetDefaultObjImpl<UBaseMeshProcessingToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UBaseMeshProcessingToolBuilder;
 
 // Class ModelingComponents.SingleTargetWithSelectionTool
 // 0x0078 (0x0120 - 0x00A8)
@@ -694,7 +669,6 @@ public:
 		return GetDefaultObjImpl<USingleTargetWithSelectionTool>();
 	}
 };
-DUMPER7_ASSERTS_USingleTargetWithSelectionTool;
 
 // Class ModelingComponents.BaseMeshProcessingTool
 // 0x0350 (0x0470 - 0x0120)
@@ -719,7 +693,6 @@ public:
 		return GetDefaultObjImpl<UBaseMeshProcessingTool>();
 	}
 };
-DUMPER7_ASSERTS_UBaseMeshProcessingTool;
 
 // Class ModelingComponents.BaseVoxelTool
 // 0x0018 (0x0120 - 0x0108)
@@ -743,7 +716,6 @@ public:
 		return GetDefaultObjImpl<UBaseVoxelTool>();
 	}
 };
-DUMPER7_ASSERTS_UBaseVoxelTool;
 
 // Class ModelingComponents.MeshSurfacePointMeshEditingToolBuilder
 // 0x0000 (0x0030 - 0x0030)
@@ -763,7 +735,6 @@ public:
 		return GetDefaultObjImpl<UMeshSurfacePointMeshEditingToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSurfacePointMeshEditingToolBuilder;
 
 // Class ModelingComponents.MultiTargetWithSelectionToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -783,7 +754,6 @@ public:
 		return GetDefaultObjImpl<UMultiTargetWithSelectionToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMultiTargetWithSelectionToolBuilder;
 
 // Class ModelingComponents.MultiTargetWithSelectionTool
 // 0x0038 (0x00E8 - 0x00B0)
@@ -809,7 +779,6 @@ public:
 		return GetDefaultObjImpl<UMultiTargetWithSelectionTool>();
 	}
 };
-DUMPER7_ASSERTS_UMultiTargetWithSelectionTool;
 
 // Class ModelingComponents.SingleSelectionMeshEditingToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -829,7 +798,6 @@ public:
 		return GetDefaultObjImpl<USingleSelectionMeshEditingToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_USingleSelectionMeshEditingToolBuilder;
 
 // Class ModelingComponents.SingleSelectionMeshEditingTool
 // 0x0008 (0x00B0 - 0x00A8)
@@ -852,7 +820,6 @@ public:
 		return GetDefaultObjImpl<USingleSelectionMeshEditingTool>();
 	}
 };
-DUMPER7_ASSERTS_USingleSelectionMeshEditingTool;
 
 // Class ModelingComponents.DynamicMeshReplacementChangeTarget
 // 0x0030 (0x0058 - 0x0028)
@@ -875,7 +842,6 @@ public:
 		return GetDefaultObjImpl<UDynamicMeshReplacementChangeTarget>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicMeshReplacementChangeTarget;
 
 // Class ModelingComponents.OctreeDynamicMeshComponent
 // 0x0120 (0x07E0 - 0x06C0)
@@ -903,7 +869,6 @@ public:
 		return GetDefaultObjImpl<UOctreeDynamicMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UOctreeDynamicMeshComponent;
 
 // Class ModelingComponents.LineSetComponent
 // 0x0080 (0x06E0 - 0x0660)
@@ -934,7 +899,6 @@ public:
 		return GetDefaultObjImpl<ULineSetComponent>();
 	}
 };
-DUMPER7_ASSERTS_ULineSetComponent;
 
 // Class ModelingComponents.MeshElementsVisualizerProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -974,7 +938,6 @@ public:
 		return GetDefaultObjImpl<UMeshElementsVisualizerProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMeshElementsVisualizerProperties;
 
 // Class ModelingComponents.PreviewGeometry
 // 0x00F8 (0x0120 - 0x0028)
@@ -1024,7 +987,6 @@ public:
 		return GetDefaultObjImpl<UPreviewGeometry>();
 	}
 };
-DUMPER7_ASSERTS_UPreviewGeometry;
 
 // Class ModelingComponents.MeshElementsVisualizer
 // 0x0028 (0x0148 - 0x0120)
@@ -1049,7 +1011,6 @@ public:
 		return GetDefaultObjImpl<UMeshElementsVisualizer>();
 	}
 };
-DUMPER7_ASSERTS_UMeshElementsVisualizer;
 
 // Class ModelingComponents.MeshWireframeComponent
 // 0x00A0 (0x0700 - 0x0660)
@@ -1102,7 +1063,6 @@ public:
 		return GetDefaultObjImpl<UMeshWireframeComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMeshWireframeComponent;
 
 // Class ModelingComponents.PointSetComponent
 // 0x0080 (0x06E0 - 0x0660)
@@ -1128,7 +1088,6 @@ public:
 		return GetDefaultObjImpl<UPointSetComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPointSetComponent;
 
 // Class ModelingComponents.PreviewMesh
 // 0x0118 (0x0140 - 0x0028)
@@ -1155,7 +1114,6 @@ public:
 		return GetDefaultObjImpl<UPreviewMesh>();
 	}
 };
-DUMPER7_ASSERTS_UPreviewMesh;
 
 // Class ModelingComponents.PolyEditPreviewMesh
 // 0x0340 (0x0480 - 0x0140)
@@ -1178,7 +1136,6 @@ public:
 		return GetDefaultObjImpl<UPolyEditPreviewMesh>();
 	}
 };
-DUMPER7_ASSERTS_UPolyEditPreviewMesh;
 
 // Class ModelingComponents.PreviewGeometryActor
 // 0x0000 (0x0498 - 0x0498)
@@ -1198,7 +1155,6 @@ public:
 		return GetDefaultObjImpl<APreviewGeometryActor>();
 	}
 };
-DUMPER7_ASSERTS_APreviewGeometryActor;
 
 // Class ModelingComponents.TriangleSetComponent
 // 0x0100 (0x0760 - 0x0660)
@@ -1223,7 +1179,6 @@ public:
 		return GetDefaultObjImpl<UTriangleSetComponent>();
 	}
 };
-DUMPER7_ASSERTS_UTriangleSetComponent;
 
 // Class ModelingComponents.UVLayoutPreviewProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -1253,7 +1208,6 @@ public:
 		return GetDefaultObjImpl<UUVLayoutPreviewProperties>();
 	}
 };
-DUMPER7_ASSERTS_UUVLayoutPreviewProperties;
 
 // Class ModelingComponents.UVLayoutPreview
 // 0x0148 (0x0170 - 0x0028)
@@ -1283,7 +1237,6 @@ public:
 		return GetDefaultObjImpl<UUVLayoutPreview>();
 	}
 };
-DUMPER7_ASSERTS_UUVLayoutPreview;
 
 // Class ModelingComponents.CollectSurfacePathMechanic
 // 0x0590 (0x05C0 - 0x0030)
@@ -1306,7 +1259,6 @@ public:
 		return GetDefaultObjImpl<UCollectSurfacePathMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UCollectSurfacePathMechanic;
 
 // Class ModelingComponents.CollisionPrimitivesMechanic
 // 0x0540 (0x0570 - 0x0030)
@@ -1346,7 +1298,6 @@ public:
 		return GetDefaultObjImpl<UCollisionPrimitivesMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UCollisionPrimitivesMechanic;
 
 // Class ModelingComponents.ConstructionPlaneMechanic
 // 0x00C0 (0x00F0 - 0x0030)
@@ -1374,7 +1325,6 @@ public:
 		return GetDefaultObjImpl<UConstructionPlaneMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UConstructionPlaneMechanic;
 
 // Class ModelingComponents.CurveControlPointsMechanic
 // 0x0650 (0x0680 - 0x0030)
@@ -1409,7 +1359,6 @@ public:
 		return GetDefaultObjImpl<UCurveControlPointsMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UCurveControlPointsMechanic;
 
 // Class ModelingComponents.DragAlignmentMechanic
 // 0x0260 (0x0290 - 0x0030)
@@ -1432,7 +1381,6 @@ public:
 		return GetDefaultObjImpl<UDragAlignmentMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UDragAlignmentMechanic;
 
 // Class ModelingComponents.DragAlignmentInteraction
 // 0x02C8 (0x02F0 - 0x0028)
@@ -1455,7 +1403,6 @@ public:
 		return GetDefaultObjImpl<UDragAlignmentInteraction>();
 	}
 };
-DUMPER7_ASSERTS_UDragAlignmentInteraction;
 
 // Class ModelingComponents.LatticeControlPointsMechanic
 // 0x04E0 (0x0510 - 0x0030)
@@ -1487,7 +1434,6 @@ public:
 		return GetDefaultObjImpl<ULatticeControlPointsMechanic>();
 	}
 };
-DUMPER7_ASSERTS_ULatticeControlPointsMechanic;
 
 // Class ModelingComponents.PlaneDistanceFromHitMechanic
 // 0x0500 (0x0530 - 0x0030)
@@ -1510,7 +1456,6 @@ public:
 		return GetDefaultObjImpl<UPlaneDistanceFromHitMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UPlaneDistanceFromHitMechanic;
 
 // Class ModelingComponents.PolyLassoMarqueeMechanic
 // 0x01A0 (0x01D0 - 0x0030)
@@ -1543,7 +1488,6 @@ public:
 		return GetDefaultObjImpl<UPolyLassoMarqueeMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UPolyLassoMarqueeMechanic;
 
 // Class ModelingComponents.RectangleMarqueeMechanic
 // 0x01F0 (0x0220 - 0x0030)
@@ -1573,7 +1517,6 @@ public:
 		return GetDefaultObjImpl<URectangleMarqueeMechanic>();
 	}
 };
-DUMPER7_ASSERTS_URectangleMarqueeMechanic;
 
 // Class ModelingComponents.RectangleMarqueeInteraction
 // 0x01E8 (0x0210 - 0x0028)
@@ -1596,7 +1539,6 @@ public:
 		return GetDefaultObjImpl<URectangleMarqueeInteraction>();
 	}
 };
-DUMPER7_ASSERTS_URectangleMarqueeInteraction;
 
 // Class ModelingComponents.SpaceCurveDeformationMechanicPropertySet
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1622,7 +1564,6 @@ public:
 		return GetDefaultObjImpl<USpaceCurveDeformationMechanicPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_USpaceCurveDeformationMechanicPropertySet;
 
 // Class ModelingComponents.SpaceCurveDeformationMechanic
 // 0x02A0 (0x02D0 - 0x0030)
@@ -1657,7 +1598,6 @@ public:
 		return GetDefaultObjImpl<USpaceCurveDeformationMechanic>();
 	}
 };
-DUMPER7_ASSERTS_USpaceCurveDeformationMechanic;
 
 // Class ModelingComponents.SpatialCurveDistanceMechanic
 // 0x03E0 (0x0410 - 0x0030)
@@ -1680,7 +1620,6 @@ public:
 		return GetDefaultObjImpl<USpatialCurveDistanceMechanic>();
 	}
 };
-DUMPER7_ASSERTS_USpatialCurveDistanceMechanic;
 
 // Class ModelingComponents.MeshOpPreviewWithBackgroundCompute
 // 0x0098 (0x00C0 - 0x0028)
@@ -1710,7 +1649,6 @@ public:
 		return GetDefaultObjImpl<UMeshOpPreviewWithBackgroundCompute>();
 	}
 };
-DUMPER7_ASSERTS_UMeshOpPreviewWithBackgroundCompute;
 
 // Class ModelingComponents.ModelingComponentsSettings
 // 0x0008 (0x0040 - 0x0038)
@@ -1738,7 +1676,6 @@ public:
 		return GetDefaultObjImpl<UModelingComponentsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UModelingComponentsSettings;
 
 // Class ModelingComponents.ModelingComponentsEditorSettings
 // 0x0018 (0x0050 - 0x0038)
@@ -1767,7 +1704,6 @@ public:
 		return GetDefaultObjImpl<UModelingComponentsEditorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UModelingComponentsEditorSettings;
 
 // Class ModelingComponents.ModelingObjectsCreationAPI
 // 0x0000 (0x0028 - 0x0028)
@@ -1793,7 +1729,6 @@ public:
 		return GetDefaultObjImpl<UModelingObjectsCreationAPI>();
 	}
 };
-DUMPER7_ASSERTS_UModelingObjectsCreationAPI;
 
 // Class ModelingComponents.PreviewMeshActor
 // 0x0000 (0x0498 - 0x0498)
@@ -1813,7 +1748,6 @@ public:
 		return GetDefaultObjImpl<APreviewMeshActor>();
 	}
 };
-DUMPER7_ASSERTS_APreviewMeshActor;
 
 // Class ModelingComponents.CreateMeshObjectTypeProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -1846,7 +1780,6 @@ public:
 		return GetDefaultObjImpl<UCreateMeshObjectTypeProperties>();
 	}
 };
-DUMPER7_ASSERTS_UCreateMeshObjectTypeProperties;
 
 // Class ModelingComponents.OnAcceptHandleSourcesPropertiesSingle
 // 0x0008 (0x00B0 - 0x00A8)
@@ -1870,7 +1803,6 @@ public:
 		return GetDefaultObjImpl<UOnAcceptHandleSourcesPropertiesSingle>();
 	}
 };
-DUMPER7_ASSERTS_UOnAcceptHandleSourcesPropertiesSingle;
 
 // Class ModelingComponents.PolygroupLayersProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -1897,7 +1829,6 @@ public:
 		return GetDefaultObjImpl<UPolygroupLayersProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolygroupLayersProperties;
 
 // Class ModelingComponents.WeightMapSetProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -1926,7 +1857,6 @@ public:
 		return GetDefaultObjImpl<UWeightMapSetProperties>();
 	}
 };
-DUMPER7_ASSERTS_UWeightMapSetProperties;
 
 // Class ModelingComponents.GeometrySelectionManager
 // 0x0498 (0x04C0 - 0x0028)
@@ -1960,7 +1890,6 @@ public:
 		return GetDefaultObjImpl<UGeometrySelectionManager>();
 	}
 };
-DUMPER7_ASSERTS_UGeometrySelectionManager;
 
 // Class ModelingComponents.PolygonSelectionMechanicProperties
 // 0x0000 (0x00C0 - 0x00C0)
@@ -1980,7 +1909,6 @@ public:
 		return GetDefaultObjImpl<UPolygonSelectionMechanicProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPolygonSelectionMechanicProperties;
 
 // Class ModelingComponents.PolygonSelectionMechanic
 // 0x0000 (0x0B40 - 0x0B40)
@@ -2000,7 +1928,6 @@ public:
 		return GetDefaultObjImpl<UPolygonSelectionMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UPolygonSelectionMechanic;
 
 // Class ModelingComponents.ModelingSceneSnappingManager
 // 0x0128 (0x0150 - 0x0028)
@@ -2024,7 +1951,6 @@ public:
 		return GetDefaultObjImpl<UModelingSceneSnappingManager>();
 	}
 };
-DUMPER7_ASSERTS_UModelingSceneSnappingManager;
 
 // Class ModelingComponents.MultiTransformer
 // 0x0188 (0x01B0 - 0x0028)
@@ -2053,6 +1979,5 @@ public:
 		return GetDefaultObjImpl<UMultiTransformer>();
 	}
 };
-DUMPER7_ASSERTS_UMultiTransformer;
 
 SDK_NAMESPACE_END

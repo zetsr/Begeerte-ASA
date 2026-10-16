@@ -41,7 +41,6 @@ public:
 		return GetDefaultObjImpl<UResonanceAudioSoundfieldSettings>();
 	}
 };
-DUMPER7_ASSERTS_UResonanceAudioSoundfieldSettings;
 
 // Class ResonanceAudio.ResonanceAudioBlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -65,7 +64,6 @@ public:
 		return GetDefaultObjImpl<UResonanceAudioBlueprintFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UResonanceAudioBlueprintFunctionLibrary;
 
 // Class ResonanceAudio.ResonanceAudioDirectivityVisualizer
 // 0x0080 (0x0510 - 0x0490)
@@ -90,7 +88,6 @@ public:
 		return GetDefaultObjImpl<AResonanceAudioDirectivityVisualizer>();
 	}
 };
-DUMPER7_ASSERTS_AResonanceAudioDirectivityVisualizer;
 
 // Class ResonanceAudio.ResonanceAudioReverbPluginPreset
 // 0x0108 (0x0170 - 0x0068)
@@ -125,7 +122,6 @@ public:
 		return GetDefaultObjImpl<UResonanceAudioReverbPluginPreset>();
 	}
 };
-DUMPER7_ASSERTS_UResonanceAudioReverbPluginPreset;
 
 // Class ResonanceAudio.ResonanceAudioSettings
 // 0x0068 (0x0090 - 0x0028)
@@ -152,7 +148,6 @@ public:
 		return GetDefaultObjImpl<UResonanceAudioSettings>();
 	}
 };
-DUMPER7_ASSERTS_UResonanceAudioSettings;
 
 // Class ResonanceAudio.ResonanceAudioSpatializationSourceSettings
 // 0x0028 (0x0050 - 0x0028)
@@ -191,6 +186,5 @@ public:
 		return GetDefaultObjImpl<UResonanceAudioSpatializationSourceSettings>();
 	}
 };
-DUMPER7_ASSERTS_UResonanceAudioSpatializationSourceSettings;
 
 SDK_NAMESPACE_END

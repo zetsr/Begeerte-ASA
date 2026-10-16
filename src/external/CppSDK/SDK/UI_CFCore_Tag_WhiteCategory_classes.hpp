@@ -46,6 +46,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Tag_WhiteCategory_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Tag_WhiteCategory_C;
 
 SDK_NAMESPACE_END

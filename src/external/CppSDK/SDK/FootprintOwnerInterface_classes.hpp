@@ -45,6 +45,5 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IFootprintOwnerInterface_C;
 
 SDK_NAMESPACE_END

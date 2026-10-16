@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UAnimationWarpingLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UAnimationWarpingLibrary;
 
 SDK_NAMESPACE_END

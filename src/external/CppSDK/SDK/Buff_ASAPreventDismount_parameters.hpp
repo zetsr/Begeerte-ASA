@@ -28,7 +28,6 @@ public:
 	bool                                          bFromUse;                                          // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x000A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_ASAPreventDismount_C_BPBypassPreventDinoDismount;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

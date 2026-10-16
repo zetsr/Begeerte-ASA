@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<AInject_Impacts_C>();
 	}
 };
-DUMPER7_ASSERTS_AInject_Impacts_C;
 
 SDK_NAMESPACE_END

@@ -23,6 +23,5 @@ public:
 	double                                        FootImpact_Size_Mult_6_7B9BB9844DA6FCCB2734298B8D14F388; // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Body_Impact_Size_Mult_9_197D28CA425237844607078D92E6711A; // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FDinoContentData;
 
 SDK_NAMESPACE_END

@@ -21,7 +21,6 @@ struct W_BackupList_C_ExecuteUbergraph_W_BackupList final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_W_BackupList_C_ExecuteUbergraph_W_BackupList;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

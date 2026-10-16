@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STRUCT_CFCore_UITheme_structs.hpp"
 #include "Engine_structs.hpp"
+#include "STRUCT_CFCore_UITheme_structs.hpp"
 #include "ShooterGame_classes.hpp"
 
 
@@ -47,6 +47,5 @@ public:
 		return GetDefaultObjImpl<UCFCoreWidget_C>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreWidget_C;
 
 SDK_NAMESPACE_END

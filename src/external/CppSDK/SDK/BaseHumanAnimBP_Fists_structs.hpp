@@ -20,6 +20,5 @@ SDK_NAMESPACE_START
 struct BaseHumanAnimBP_Fists::FAnimBlueprintGeneratedConstantData : public BaseHumanAnimBP::FAnimBlueprintGeneratedConstantData
 {
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_Fists__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

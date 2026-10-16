@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_FoleyCollection_structs.hpp"
 #include "Engine_structs.hpp"
+#include "Enum_FoleyCollection_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -28,7 +28,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundBase*                             K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_AnimNotify_PlayPlayerFoley_C_SelectSound;
 
 // Function AnimNotify_PlayPlayerFoley.AnimNotify_PlayPlayerFoley_C.GetNotifyName
 // 0x0030 (0x0030 - 0x0000)
@@ -39,7 +38,6 @@ public:
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_AnimNotify_PlayPlayerFoley_C_GetNotifyName;
 
 // Function AnimNotify_PlayPlayerFoley.AnimNotify_PlayPlayerFoley_C.Received_Notify
 // 0x00D0 (0x00D0 - 0x0000)
@@ -76,7 +74,6 @@ public:
 	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast; // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_AnimNotify_PlayPlayerFoley_C_Received_Notify;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

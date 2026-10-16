@@ -31,7 +31,6 @@ public:
 	bool                                          CallFunc_DoesImplementInterface_ReturnValue;       // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEggItemAllowed_IsAllowed;               // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemConsumable_Egg_C_BPAllowRemoteAddToInventory;
 
 // Function PrimalItemConsumable_Egg.PrimalItemConsumable_Egg_C.BPGetCustomInventoryWidgetText
 // 0x0060 (0x0060 - 0x0000)
@@ -55,7 +54,6 @@ public:
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemConsumable_Egg_C_BPGetCustomInventoryWidgetText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

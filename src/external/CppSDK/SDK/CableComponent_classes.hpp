@@ -38,7 +38,6 @@ public:
 		return GetDefaultObjImpl<ACableActor>();
 	}
 };
-DUMPER7_ASSERTS_ACableActor;
 
 // Class CableComponent.CableComponent
 // 0x00B0 (0x0710 - 0x0660)
@@ -92,6 +91,5 @@ public:
 		return GetDefaultObjImpl<UCableComponent>();
 	}
 };
-DUMPER7_ASSERTS_UCableComponent;
 
 SDK_NAMESPACE_END

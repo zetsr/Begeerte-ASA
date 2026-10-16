@@ -43,7 +43,6 @@ public:
 		return GetDefaultObjImpl<UAudioCapture>();
 	}
 };
-DUMPER7_ASSERTS_UAudioCapture;
 
 // Class AudioCapture.AudioCaptureFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -66,7 +65,6 @@ public:
 		return GetDefaultObjImpl<UAudioCaptureFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UAudioCaptureFunctionLibrary;
 
 // Class AudioCapture.AudioCaptureBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -90,7 +88,6 @@ public:
 		return GetDefaultObjImpl<UAudioCaptureBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UAudioCaptureBlueprintLibrary;
 
 // Class AudioCapture.AudioCaptureComponent
 // 0x00C0 (0x09A0 - 0x08E0)
@@ -114,6 +111,5 @@ public:
 		return GetDefaultObjImpl<UAudioCaptureComponent>();
 	}
 };
-DUMPER7_ASSERTS_UAudioCaptureComponent;
 
 SDK_NAMESPACE_END

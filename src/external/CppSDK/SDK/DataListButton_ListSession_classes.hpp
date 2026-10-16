@@ -54,6 +54,5 @@ public:
 		return GetDefaultObjImpl<UDataListButton_ListSession_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListButton_ListSession_C;
 
 SDK_NAMESPACE_END

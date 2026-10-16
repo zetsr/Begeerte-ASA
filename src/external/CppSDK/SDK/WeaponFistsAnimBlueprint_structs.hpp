@@ -20,6 +20,5 @@ SDK_NAMESPACE_START
 struct WeaponFistsAnimBlueprint::FAnimBlueprintGeneratedConstantData final : public FPVWeaponAnimBP_Base_Carrying::FAnimBlueprintGeneratedConstantData
 {
 };
-DUMPER7_ASSERTS_WeaponFistsAnimBlueprint__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

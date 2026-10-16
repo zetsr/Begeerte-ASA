@@ -36,6 +36,5 @@ public:
 	int32                                         ExclusiveEnd;                                      // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FFrameRate                             InternalRate;                                      // 0x000C(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSequencerScriptingRange;
 
 SDK_NAMESPACE_END

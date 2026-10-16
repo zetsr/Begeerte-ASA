@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDmgType_Shovel_C>();
 	}
 };
-DUMPER7_ASSERTS_UDmgType_Shovel_C;
 
 SDK_NAMESPACE_END

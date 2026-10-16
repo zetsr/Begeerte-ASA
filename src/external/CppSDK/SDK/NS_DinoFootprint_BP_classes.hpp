@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UNS_DinoFootprint_BP_C>();
 	}
 };
-DUMPER7_ASSERTS_UNS_DinoFootprint_BP_C;
 
 SDK_NAMESPACE_END

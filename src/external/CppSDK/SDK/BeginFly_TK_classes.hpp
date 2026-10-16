@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<UBeginFly_TK_C>();
 	}
 };
-DUMPER7_ASSERTS_UBeginFly_TK_C;
 
 SDK_NAMESPACE_END

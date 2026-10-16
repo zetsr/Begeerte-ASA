@@ -45,6 +45,5 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IBPI_CFCore_CustomComboBox_C;
 
 SDK_NAMESPACE_END

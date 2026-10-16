@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemDyeGeneric_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemDyeGeneric_C;
 
 SDK_NAMESPACE_END

@@ -67,7 +67,6 @@ public:
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast;      // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalCharAnimFunctions_C_UpdateGroundConformingVariables;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -68,8 +68,20 @@ public:
 	{
 		InSDKUtils::CallGameFunction(InSDKUtils::GetVirtualFunction<void(*)(const UObject*, class UFunction*, void*)>(this, Offsets::ProcessEventIdx), this, Function, Parms);
 	}
+
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("Object")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Object")
+	}
+	static class UObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UObject>();
+	}
 };
-DUMPER7_ASSERTS_UObject;
 
 // Class CoreUObject.OptionalPropertyTestObject
 // 0x0030 (0x0058 - 0x0028)
@@ -95,7 +107,6 @@ public:
 		return GetDefaultObjImpl<UOptionalPropertyTestObject>();
 	}
 };
-DUMPER7_ASSERTS_UOptionalPropertyTestObject;
 
 // Class CoreUObject.Field
 // 0x0008 (0x0030 - 0x0028)
@@ -118,7 +129,6 @@ public:
 		return GetDefaultObjImpl<UField>();
 	}
 };
-DUMPER7_ASSERTS_UField;
 
 // Class CoreUObject.Property
 // 0x0040 (0x0070 - 0x0030)
@@ -141,7 +151,6 @@ public:
 		return GetDefaultObjImpl<UProperty>();
 	}
 };
-DUMPER7_ASSERTS_UProperty;
 
 // Class CoreUObject.StrProperty
 // 0x0000 (0x0070 - 0x0070)
@@ -161,7 +170,6 @@ public:
 		return GetDefaultObjImpl<UStrProperty>();
 	}
 };
-DUMPER7_ASSERTS_UStrProperty;
 
 // Class CoreUObject.TestInstanceDataObjectClass
 // 0x0038 (0x0060 - 0x0028)
@@ -186,7 +194,6 @@ public:
 		return GetDefaultObjImpl<UTestInstanceDataObjectClass>();
 	}
 };
-DUMPER7_ASSERTS_UTestInstanceDataObjectClass;
 
 // Class CoreUObject.Struct
 // 0x0080 (0x00B0 - 0x0030)
@@ -219,7 +226,6 @@ public:
 		return GetDefaultObjImpl<UStruct>();
 	}
 };
-DUMPER7_ASSERTS_UStruct;
 
 // Class CoreUObject.ScriptStruct
 // 0x0010 (0x00C0 - 0x00B0)
@@ -242,7 +248,6 @@ public:
 		return GetDefaultObjImpl<UScriptStruct>();
 	}
 };
-DUMPER7_ASSERTS_UScriptStruct;
 
 // Class CoreUObject.UserDefinedStruct
 // 0x0048 (0x0108 - 0x00C0)
@@ -268,7 +273,6 @@ public:
 		return GetDefaultObjImpl<UUserDefinedStruct>();
 	}
 };
-DUMPER7_ASSERTS_UUserDefinedStruct;
 
 // Class CoreUObject.UserDefinedStructEditorDataBase
 // 0x0000 (0x0028 - 0x0028)
@@ -288,7 +292,6 @@ public:
 		return GetDefaultObjImpl<UUserDefinedStructEditorDataBase>();
 	}
 };
-DUMPER7_ASSERTS_UUserDefinedStructEditorDataBase;
 
 // Class CoreUObject.Enum
 // 0x0038 (0x0068 - 0x0030)
@@ -313,7 +316,6 @@ public:
 		return GetDefaultObjImpl<UEnum>();
 	}
 };
-DUMPER7_ASSERTS_UEnum;
 
 // Class CoreUObject.VerseEnum
 // 0x0008 (0x0070 - 0x0068)
@@ -337,7 +339,6 @@ public:
 		return GetDefaultObjImpl<UVerseEnum>();
 	}
 };
-DUMPER7_ASSERTS_UVerseEnum;
 
 // Class CoreUObject.VerseStruct
 // 0x0040 (0x0100 - 0x00C0)
@@ -368,7 +369,6 @@ public:
 		return GetDefaultObjImpl<UVerseStruct>();
 	}
 };
-DUMPER7_ASSERTS_UVerseStruct;
 
 // Class CoreUObject.Interface
 // 0x0000 (0x0000 - 0x0000)
@@ -397,7 +397,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IInterface;
 
 // Class CoreUObject.EditorPathObjectInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -426,7 +425,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IEditorPathObjectInterface;
 
 // Class CoreUObject.GCObjectReferencer
 // 0x0010 (0x0038 - 0x0028)
@@ -449,7 +447,6 @@ public:
 		return GetDefaultObjImpl<UGCObjectReferencer>();
 	}
 };
-DUMPER7_ASSERTS_UGCObjectReferencer;
 
 // Class CoreUObject.TextBuffer
 // 0x0028 (0x0050 - 0x0028)
@@ -472,7 +469,6 @@ public:
 		return GetDefaultObjImpl<UTextBuffer>();
 	}
 };
-DUMPER7_ASSERTS_UTextBuffer;
 
 // Class CoreUObject.PropertyBagMissingObject
 // 0x0000 (0x0028 - 0x0028)
@@ -492,7 +488,6 @@ public:
 		return GetDefaultObjImpl<UPropertyBagMissingObject>();
 	}
 };
-DUMPER7_ASSERTS_UPropertyBagMissingObject;
 
 // Class CoreUObject.PropertyBag
 // 0x0018 (0x00D8 - 0x00C0)
@@ -516,7 +511,6 @@ public:
 		return GetDefaultObjImpl<UPropertyBag>();
 	}
 };
-DUMPER7_ASSERTS_UPropertyBag;
 
 // Class CoreUObject.Package
 // 0x0028 (0x0050 - 0x0028)
@@ -539,7 +533,6 @@ public:
 		return GetDefaultObjImpl<UPackage>();
 	}
 };
-DUMPER7_ASSERTS_UPackage;
 
 // Class CoreUObject.Class
 // 0x0168 (0x0218 - 0x00B0)
@@ -553,6 +546,8 @@ public:
 	uint8                                         Pad_120[0xF8];                                     // 0x0120(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	class UFunction* GetFunction(const FName& ClassName, const FName& FuncName) const;
+	class UFunction* GetFunction(const FName& FuncName) const;
 	class UFunction* GetFunction(const char* ClassName, const char* FuncName) const;
 
 public:
@@ -569,7 +564,6 @@ public:
 		return GetDefaultObjImpl<UClass>();
 	}
 };
-DUMPER7_ASSERTS_UClass;
 
 // Class CoreUObject.Function
 // 0x0030 (0x00E0 - 0x00B0)
@@ -578,7 +572,7 @@ class UFunction : public UStruct
 public:
 	using FNativeFuncPtr = void (*)(void* Context, void* TheStack, void* Result);
 
-	uint32                                        FunctionFlags;                                     // 0x00B0(0x0004)(NOT AUTO-GENERATED PROPERTY)
+	EFunctionFlags                                FunctionFlags;                                     // 0x00B0(0x0004)(NOT AUTO-GENERATED PROPERTY)
 	uint8                                         Pad_B4[0x24];                                      // 0x00B4(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
 	FNativeFuncPtr                                ExecFunction;                                      // 0x00D8(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
@@ -596,7 +590,6 @@ public:
 		return GetDefaultObjImpl<UFunction>();
 	}
 };
-DUMPER7_ASSERTS_UFunction;
 
 // Class CoreUObject.DelegateFunction
 // 0x0000 (0x00E0 - 0x00E0)
@@ -616,7 +609,6 @@ public:
 		return GetDefaultObjImpl<UDelegateFunction>();
 	}
 };
-DUMPER7_ASSERTS_UDelegateFunction;
 
 // Class CoreUObject.SparseDelegateFunction
 // 0x0010 (0x00F0 - 0x00E0)
@@ -639,7 +631,6 @@ public:
 		return GetDefaultObjImpl<USparseDelegateFunction>();
 	}
 };
-DUMPER7_ASSERTS_USparseDelegateFunction;
 
 // Class CoreUObject.EnumCookedMetaData
 // 0x0050 (0x0078 - 0x0028)
@@ -662,7 +653,6 @@ public:
 		return GetDefaultObjImpl<UEnumCookedMetaData>();
 	}
 };
-DUMPER7_ASSERTS_UEnumCookedMetaData;
 
 // Class CoreUObject.StructCookedMetaData
 // 0x00A0 (0x00C8 - 0x0028)
@@ -685,7 +675,6 @@ public:
 		return GetDefaultObjImpl<UStructCookedMetaData>();
 	}
 };
-DUMPER7_ASSERTS_UStructCookedMetaData;
 
 // Class CoreUObject.ClassCookedMetaData
 // 0x00F0 (0x0118 - 0x0028)
@@ -709,7 +698,6 @@ public:
 		return GetDefaultObjImpl<UClassCookedMetaData>();
 	}
 };
-DUMPER7_ASSERTS_UClassCookedMetaData;
 
 // Class CoreUObject.PackageMap
 // 0x00B8 (0x00E0 - 0x0028)
@@ -732,7 +720,6 @@ public:
 		return GetDefaultObjImpl<UPackageMap>();
 	}
 };
-DUMPER7_ASSERTS_UPackageMap;
 
 // Class CoreUObject.ObjectReachabilityStressData
 // 0x0010 (0x0038 - 0x0028)
@@ -755,7 +742,6 @@ public:
 		return GetDefaultObjImpl<UObjectReachabilityStressData>();
 	}
 };
-DUMPER7_ASSERTS_UObjectReachabilityStressData;
 
 // Class CoreUObject.LinkerPlaceholderClass
 // 0x01C0 (0x03D8 - 0x0218)
@@ -778,7 +764,6 @@ public:
 		return GetDefaultObjImpl<ULinkerPlaceholderClass>();
 	}
 };
-DUMPER7_ASSERTS_ULinkerPlaceholderClass;
 
 // Class CoreUObject.LinkerPlaceholderExportObject
 // 0x00D0 (0x00F8 - 0x0028)
@@ -801,7 +786,6 @@ public:
 		return GetDefaultObjImpl<ULinkerPlaceholderExportObject>();
 	}
 };
-DUMPER7_ASSERTS_ULinkerPlaceholderExportObject;
 
 // Class CoreUObject.LinkerPlaceholderFunction
 // 0x01C0 (0x02A0 - 0x00E0)
@@ -824,7 +808,6 @@ public:
 		return GetDefaultObjImpl<ULinkerPlaceholderFunction>();
 	}
 };
-DUMPER7_ASSERTS_ULinkerPlaceholderFunction;
 
 // Class CoreUObject.MetaData
 // 0x00A0 (0x00C8 - 0x0028)
@@ -847,7 +830,6 @@ public:
 		return GetDefaultObjImpl<UMetaData>();
 	}
 };
-DUMPER7_ASSERTS_UMetaData;
 
 // Class CoreUObject.ObjectRedirector
 // 0x0008 (0x0030 - 0x0028)
@@ -870,7 +852,6 @@ public:
 		return GetDefaultObjImpl<UObjectRedirector>();
 	}
 };
-DUMPER7_ASSERTS_UObjectRedirector;
 
 // Class CoreUObject.EnumProperty
 // 0x0010 (0x0080 - 0x0070)
@@ -893,7 +874,6 @@ public:
 		return GetDefaultObjImpl<UEnumProperty>();
 	}
 };
-DUMPER7_ASSERTS_UEnumProperty;
 
 // Class CoreUObject.ArrayProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -916,7 +896,6 @@ public:
 		return GetDefaultObjImpl<UArrayProperty>();
 	}
 };
-DUMPER7_ASSERTS_UArrayProperty;
 
 // Class CoreUObject.ObjectPropertyBase
 // 0x0008 (0x0078 - 0x0070)
@@ -939,7 +918,6 @@ public:
 		return GetDefaultObjImpl<UObjectPropertyBase>();
 	}
 };
-DUMPER7_ASSERTS_UObjectPropertyBase;
 
 // Class CoreUObject.BoolProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -962,7 +940,6 @@ public:
 		return GetDefaultObjImpl<UBoolProperty>();
 	}
 };
-DUMPER7_ASSERTS_UBoolProperty;
 
 // Class CoreUObject.NumericProperty
 // 0x0000 (0x0070 - 0x0070)
@@ -982,7 +959,6 @@ public:
 		return GetDefaultObjImpl<UNumericProperty>();
 	}
 };
-DUMPER7_ASSERTS_UNumericProperty;
 
 // Class CoreUObject.ByteProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1005,7 +981,6 @@ public:
 		return GetDefaultObjImpl<UByteProperty>();
 	}
 };
-DUMPER7_ASSERTS_UByteProperty;
 
 // Class CoreUObject.ObjectProperty
 // 0x0000 (0x0078 - 0x0078)
@@ -1025,7 +1000,6 @@ public:
 		return GetDefaultObjImpl<UObjectProperty>();
 	}
 };
-DUMPER7_ASSERTS_UObjectProperty;
 
 // Class CoreUObject.ClassProperty
 // 0x0008 (0x0080 - 0x0078)
@@ -1048,7 +1022,6 @@ public:
 		return GetDefaultObjImpl<UClassProperty>();
 	}
 };
-DUMPER7_ASSERTS_UClassProperty;
 
 // Class CoreUObject.DelegateProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1071,7 +1044,6 @@ public:
 		return GetDefaultObjImpl<UDelegateProperty>();
 	}
 };
-DUMPER7_ASSERTS_UDelegateProperty;
 
 // Class CoreUObject.DoubleProperty
 // 0x0000 (0x0070 - 0x0070)
@@ -1091,7 +1063,6 @@ public:
 		return GetDefaultObjImpl<UDoubleProperty>();
 	}
 };
-DUMPER7_ASSERTS_UDoubleProperty;
 
 // Class CoreUObject.FloatProperty
 // 0x0000 (0x0070 - 0x0070)
@@ -1111,7 +1082,6 @@ public:
 		return GetDefaultObjImpl<UFloatProperty>();
 	}
 };
-DUMPER7_ASSERTS_UFloatProperty;
 
 // Class CoreUObject.IntProperty
 // 0x0000 (0x0070 - 0x0070)
@@ -1131,7 +1101,6 @@ public:
 		return GetDefaultObjImpl<UIntProperty>();
 	}
 };
-DUMPER7_ASSERTS_UIntProperty;
 
 // Class CoreUObject.Int8Property
 // 0x0000 (0x0070 - 0x0070)
@@ -1151,7 +1120,6 @@ public:
 		return GetDefaultObjImpl<UInt8Property>();
 	}
 };
-DUMPER7_ASSERTS_UInt8Property;
 
 // Class CoreUObject.Int16Property
 // 0x0000 (0x0070 - 0x0070)
@@ -1171,7 +1139,6 @@ public:
 		return GetDefaultObjImpl<UInt16Property>();
 	}
 };
-DUMPER7_ASSERTS_UInt16Property;
 
 // Class CoreUObject.Int64Property
 // 0x0000 (0x0070 - 0x0070)
@@ -1191,7 +1158,6 @@ public:
 		return GetDefaultObjImpl<UInt64Property>();
 	}
 };
-DUMPER7_ASSERTS_UInt64Property;
 
 // Class CoreUObject.InterfaceProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1214,7 +1180,6 @@ public:
 		return GetDefaultObjImpl<UInterfaceProperty>();
 	}
 };
-DUMPER7_ASSERTS_UInterfaceProperty;
 
 // Class CoreUObject.LazyObjectProperty
 // 0x0000 (0x0078 - 0x0078)
@@ -1234,7 +1199,6 @@ public:
 		return GetDefaultObjImpl<ULazyObjectProperty>();
 	}
 };
-DUMPER7_ASSERTS_ULazyObjectProperty;
 
 // Class CoreUObject.MapProperty
 // 0x0028 (0x0098 - 0x0070)
@@ -1257,7 +1221,6 @@ public:
 		return GetDefaultObjImpl<UMapProperty>();
 	}
 };
-DUMPER7_ASSERTS_UMapProperty;
 
 // Class CoreUObject.MulticastDelegateProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1280,7 +1243,6 @@ public:
 		return GetDefaultObjImpl<UMulticastDelegateProperty>();
 	}
 };
-DUMPER7_ASSERTS_UMulticastDelegateProperty;
 
 // Class CoreUObject.MulticastInlineDelegateProperty
 // 0x0000 (0x0078 - 0x0078)
@@ -1300,7 +1262,6 @@ public:
 		return GetDefaultObjImpl<UMulticastInlineDelegateProperty>();
 	}
 };
-DUMPER7_ASSERTS_UMulticastInlineDelegateProperty;
 
 // Class CoreUObject.MulticastSparseDelegateProperty
 // 0x0000 (0x0078 - 0x0078)
@@ -1320,7 +1281,6 @@ public:
 		return GetDefaultObjImpl<UMulticastSparseDelegateProperty>();
 	}
 };
-DUMPER7_ASSERTS_UMulticastSparseDelegateProperty;
 
 // Class CoreUObject.NameProperty
 // 0x0000 (0x0070 - 0x0070)
@@ -1340,7 +1300,6 @@ public:
 		return GetDefaultObjImpl<UNameProperty>();
 	}
 };
-DUMPER7_ASSERTS_UNameProperty;
 
 // Class CoreUObject.SetProperty
 // 0x0020 (0x0090 - 0x0070)
@@ -1363,7 +1322,6 @@ public:
 		return GetDefaultObjImpl<USetProperty>();
 	}
 };
-DUMPER7_ASSERTS_USetProperty;
 
 // Class CoreUObject.SoftObjectProperty
 // 0x0000 (0x0078 - 0x0078)
@@ -1383,7 +1341,6 @@ public:
 		return GetDefaultObjImpl<USoftObjectProperty>();
 	}
 };
-DUMPER7_ASSERTS_USoftObjectProperty;
 
 // Class CoreUObject.SoftClassProperty
 // 0x0008 (0x0080 - 0x0078)
@@ -1406,7 +1363,6 @@ public:
 		return GetDefaultObjImpl<USoftClassProperty>();
 	}
 };
-DUMPER7_ASSERTS_USoftClassProperty;
 
 // Class CoreUObject.StructProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1429,7 +1385,6 @@ public:
 		return GetDefaultObjImpl<UStructProperty>();
 	}
 };
-DUMPER7_ASSERTS_UStructProperty;
 
 // Class CoreUObject.UInt16Property
 // 0x0000 (0x0070 - 0x0070)
@@ -1449,7 +1404,6 @@ public:
 		return GetDefaultObjImpl<UUInt16Property>();
 	}
 };
-DUMPER7_ASSERTS_UUInt16Property;
 
 // Class CoreUObject.UInt32Property
 // 0x0000 (0x0070 - 0x0070)
@@ -1469,7 +1423,6 @@ public:
 		return GetDefaultObjImpl<UUInt32Property>();
 	}
 };
-DUMPER7_ASSERTS_UUInt32Property;
 
 // Class CoreUObject.UInt64Property
 // 0x0000 (0x0070 - 0x0070)
@@ -1489,7 +1442,6 @@ public:
 		return GetDefaultObjImpl<UUInt64Property>();
 	}
 };
-DUMPER7_ASSERTS_UUInt64Property;
 
 // Class CoreUObject.WeakObjectProperty
 // 0x0000 (0x0078 - 0x0078)
@@ -1509,7 +1461,6 @@ public:
 		return GetDefaultObjImpl<UWeakObjectProperty>();
 	}
 };
-DUMPER7_ASSERTS_UWeakObjectProperty;
 
 // Class CoreUObject.TextProperty
 // 0x0000 (0x0070 - 0x0070)
@@ -1529,7 +1480,6 @@ public:
 		return GetDefaultObjImpl<UTextProperty>();
 	}
 };
-DUMPER7_ASSERTS_UTextProperty;
 
 // Class CoreUObject.PropertyWrapper
 // 0x0008 (0x0030 - 0x0028)
@@ -1552,7 +1502,6 @@ public:
 		return GetDefaultObjImpl<UPropertyWrapper>();
 	}
 };
-DUMPER7_ASSERTS_UPropertyWrapper;
 
 // Class CoreUObject.MulticastDelegatePropertyWrapper
 // 0x0000 (0x0030 - 0x0030)
@@ -1572,7 +1521,6 @@ public:
 		return GetDefaultObjImpl<UMulticastDelegatePropertyWrapper>();
 	}
 };
-DUMPER7_ASSERTS_UMulticastDelegatePropertyWrapper;
 
 // Class CoreUObject.MulticastInlineDelegatePropertyWrapper
 // 0x0000 (0x0030 - 0x0030)
@@ -1592,7 +1540,6 @@ public:
 		return GetDefaultObjImpl<UMulticastInlineDelegatePropertyWrapper>();
 	}
 };
-DUMPER7_ASSERTS_UMulticastInlineDelegatePropertyWrapper;
 
 // Class CoreUObject.VerseClass
 // 0x0108 (0x0320 - 0x0218)
@@ -1628,6 +1575,5 @@ public:
 		return GetDefaultObjImpl<UVerseClass>();
 	}
 };
-DUMPER7_ASSERTS_UVerseClass;
 
 SDK_NAMESPACE_END

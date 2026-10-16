@@ -27,7 +27,6 @@ public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	ETextCommit                                   CommitMethod;                                      // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -36,7 +35,6 @@ struct UI_CFCore_RedeemCode_C_BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_Compon
 public:
 	class FText                                   Text;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_BndEvt__UI_RedeemCode_TEXTBOX_Search_K2Node_ComponentBoundEvent_2_OnEditableTextBoxChangedEvent__DelegateSignature;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.ExecuteUbergraph_UI_CFCore_RedeemCode
 // 0x0BA0 (0x0BA0 - 0x0000)
@@ -116,7 +114,6 @@ public:
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0B58(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0B90(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_ExecuteUbergraph_UI_CFCore_RedeemCode;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -126,7 +123,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_GetRootCFWidget;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.How could we possibly ever fail
 // 0x0038 (0x0038 - 0x0000)
@@ -135,7 +131,6 @@ struct UI_CFCore_RedeemCode_C_How_could_we_possibly_ever_fail final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_How_could_we_possibly_ever_fail;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.OnClaimError
 // 0x0038 (0x0038 - 0x0000)
@@ -144,7 +139,6 @@ struct UI_CFCore_RedeemCode_C_OnClaimError final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_OnClaimError;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.OnClaimSuccess
 // 0x0048 (0x0048 - 0x0000)
@@ -153,7 +147,6 @@ struct UI_CFCore_RedeemCode_C_OnClaimSuccess final
 public:
 	struct FEntitlementCampaign                   EntitlementCampaign;                               // 0x0000(0x0048)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_OnClaimSuccess;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.OnFail_9E877F6E43DCDB1EDBC124BEE4248F9A
 // 0x0008 (0x0008 - 0x0000)
@@ -162,7 +155,6 @@ struct UI_CFCore_RedeemCode_C_OnFail_9E877F6E43DCDB1EDBC124BEE4248F9A final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_OnFail_9E877F6E43DCDB1EDBC124BEE4248F9A;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.OnSuccess_9E877F6E43DCDB1EDBC124BEE4248F9A
 // 0x0008 (0x0008 - 0x0000)
@@ -171,7 +163,6 @@ struct UI_CFCore_RedeemCode_C_OnSuccess_9E877F6E43DCDB1EDBC124BEE4248F9A final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_OnSuccess_9E877F6E43DCDB1EDBC124BEE4248F9A;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.SetAlreadyClaimedState
 // 0x0058 (0x0058 - 0x0000)
@@ -197,7 +188,6 @@ public:
 	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_SetAlreadyClaimedState;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.SuccessIGuess
 // 0x0208 (0x0208 - 0x0000)
@@ -206,7 +196,6 @@ struct UI_CFCore_RedeemCode_C_SuccessIGuess final
 public:
 	struct FCFCoreMod                             mod;                                               // 0x0000(0x0208)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_SuccessIGuess;
 
 // Function UI_CFCore_RedeemCode.UI_CFCore_RedeemCode_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -216,7 +205,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_RedeemCode_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

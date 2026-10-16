@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<ADrill_HarvestImpactEmitter_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_ADrill_HarvestImpactEmitter_Base_C;
 
 SDK_NAMESPACE_END

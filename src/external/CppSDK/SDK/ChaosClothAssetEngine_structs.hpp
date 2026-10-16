@@ -38,7 +38,6 @@ struct alignas(0x08) FChaosClothAssetLodTransitionDataCache final
 public:
 	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FChaosClothAssetLodTransitionDataCache;
 
 // ScriptStruct ChaosClothAssetEngine.ChaosClothSimulationLodModel
 // 0x01F0 (0x01F0 - 0x0000)
@@ -58,7 +57,6 @@ public:
 	struct FClothTetherData                       TetherData;                                        // 0x00F0(0x0010)(NativeAccessSpecifierPublic)
 	uint8                                         Pad_100[0xF0];                                     // 0x0100(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FChaosClothSimulationLodModel;
 
 // ScriptStruct ChaosClothAssetEngine.ChaosClothSimulationModel
 // 0x0038 (0x0038 - 0x0000)
@@ -71,6 +69,5 @@ public:
 	int32                                         ReferenceBoneIndex;                                // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FChaosClothSimulationModel;
 
 SDK_NAMESPACE_END

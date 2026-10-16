@@ -28,7 +28,6 @@ public:
 	class UUI_CFCore_Discovery_ViewAllSlot_C*     CallFunc_Create_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UHorizontalBoxSlot*                     CallFunc_AddChildToHorizontalBox_ReturnValue;      // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_AddViewAllModSlot;
 
 // Function UI_CFCore_DiscoveryShelve.UI_CFCore_DiscoveryShelve_C.Create
 // 0x00E8 (0x00E8 - 0x0000)
@@ -37,7 +36,6 @@ struct UI_CFCore_DiscoveryShelve_C_Create final
 public:
 	struct FShelf                                 Shelf_0;                                           // 0x0000(0x00E8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_Create;
 
 // Function UI_CFCore_DiscoveryShelve.UI_CFCore_DiscoveryShelve_C.ErrorNotFoundMods
 // 0x0038 (0x0038 - 0x0000)
@@ -46,7 +44,6 @@ struct UI_CFCore_DiscoveryShelve_C_ErrorNotFoundMods final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_ErrorNotFoundMods;
 
 // Function UI_CFCore_DiscoveryShelve.UI_CFCore_DiscoveryShelve_C.ExecuteUbergraph_UI_CFCore_DiscoveryShelve
 // 0x1260 (0x1260 - 0x0000)
@@ -167,7 +164,6 @@ public:
 	float                                         CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast; // 0x1258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast_1; // 0x125C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_ExecuteUbergraph_UI_CFCore_DiscoveryShelve;
 
 // Function UI_CFCore_DiscoveryShelve.UI_CFCore_DiscoveryShelve_C.FoundMods
 // 0x0010 (0x0010 - 0x0000)
@@ -176,7 +172,6 @@ struct UI_CFCore_DiscoveryShelve_C_FoundMods final
 public:
 	TArray<struct FCFCoreMod>                     mods;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_FoundMods;
 
 // Function UI_CFCore_DiscoveryShelve.UI_CFCore_DiscoveryShelve_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -186,7 +181,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_GetRootCFWidget;
 
 // Function UI_CFCore_DiscoveryShelve.UI_CFCore_DiscoveryShelve_C.LeftIn
 // 0x0001 (0x0001 - 0x0000)
@@ -195,7 +189,6 @@ struct UI_CFCore_DiscoveryShelve_C_LeftIn final
 public:
 	bool                                          Index_0;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_LeftIn;
 
 // Function UI_CFCore_DiscoveryShelve.UI_CFCore_DiscoveryShelve_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -204,7 +197,6 @@ struct UI_CFCore_DiscoveryShelve_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_PreConstruct;
 
 // Function UI_CFCore_DiscoveryShelve.UI_CFCore_DiscoveryShelve_C.RightIn
 // 0x0001 (0x0001 - 0x0000)
@@ -213,7 +205,6 @@ struct UI_CFCore_DiscoveryShelve_C_RightIn final
 public:
 	bool                                          Index_0;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_RightIn;
 
 // Function UI_CFCore_DiscoveryShelve.UI_CFCore_DiscoveryShelve_C.SortInstalledAndPremiumLast
 // 0x06A8 (0x06A8 - 0x0000)
@@ -238,7 +229,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x06A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x06A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_SortInstalledAndPremiumLast;
 
 // Function UI_CFCore_DiscoveryShelve.UI_CFCore_DiscoveryShelve_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -248,7 +238,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_DiscoveryShelve_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

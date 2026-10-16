@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_CookedMeat_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumable_CookedMeat_C;
 
 SDK_NAMESPACE_END

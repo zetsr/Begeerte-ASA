@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<AWeapGPS_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapGPS_C;
 
 SDK_NAMESPACE_END

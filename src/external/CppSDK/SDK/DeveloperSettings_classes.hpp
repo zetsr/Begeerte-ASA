@@ -37,7 +37,6 @@ public:
 		return GetDefaultObjImpl<UDeveloperSettings>();
 	}
 };
-DUMPER7_ASSERTS_UDeveloperSettings;
 
 // Class DeveloperSettings.DeveloperSettingsBackedByCVars
 // 0x0000 (0x0038 - 0x0038)
@@ -57,7 +56,6 @@ public:
 		return GetDefaultObjImpl<UDeveloperSettingsBackedByCVars>();
 	}
 };
-DUMPER7_ASSERTS_UDeveloperSettingsBackedByCVars;
 
 // Class DeveloperSettings.PlatformSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -80,7 +78,6 @@ public:
 		return GetDefaultObjImpl<UPlatformSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPlatformSettings;
 
 // Class DeveloperSettings.PlatformSettingsManager
 // 0x0058 (0x0080 - 0x0028)
@@ -104,6 +101,5 @@ public:
 		return GetDefaultObjImpl<UPlatformSettingsManager>();
 	}
 };
-DUMPER7_ASSERTS_UPlatformSettingsManager;
 
 SDK_NAMESPACE_END

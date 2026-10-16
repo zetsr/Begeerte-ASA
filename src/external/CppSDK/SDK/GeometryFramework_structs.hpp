@@ -110,6 +110,5 @@ public:
 	bool                                          bIsRevertChange;                                   // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3[0x1D];                                       // 0x0003(0x001D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FDynamicMeshChangeInfo;
 
 SDK_NAMESPACE_END

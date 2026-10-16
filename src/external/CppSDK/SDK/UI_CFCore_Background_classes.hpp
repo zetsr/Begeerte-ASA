@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "CFCoreWidget_classes.hpp"
+#include "UMG_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -50,6 +50,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Background_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Background_C;
 
 SDK_NAMESPACE_END

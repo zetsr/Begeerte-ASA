@@ -46,6 +46,5 @@ public:
 		return GetDefaultObjImpl<ABuff_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_ABuff_Base_C;
 
 SDK_NAMESPACE_END

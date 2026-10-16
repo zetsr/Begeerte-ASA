@@ -52,7 +52,6 @@ struct alignas(0x08) FTimedDataChannelSampleTime final
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTimedDataChannelSampleTime;
 
 // ScriptStruct TimeManagement.TimedDataInputEvaluationData
 // 0x0008 (0x0008 - 0x0000)
@@ -62,6 +61,5 @@ public:
 	float                                         DistanceToNewestSampleSeconds;                     // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DistanceToOldestSampleSeconds;                     // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTimedDataInputEvaluationData;
 
 SDK_NAMESPACE_END

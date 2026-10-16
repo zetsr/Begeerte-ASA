@@ -23,7 +23,6 @@ struct HoverDroneMovementComponent_AddRotationalVelocity final
 public:
 	struct FRotator                               RotationalVel;                                     // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDroneMovementComponent_AddRotationalVelocity;
 
 // Function HoverDrone.HoverDroneMovementComponent.AddVelocity
 // 0x0018 (0x0018 - 0x0000)
@@ -32,7 +31,6 @@ struct HoverDroneMovementComponent_AddVelocity final
 public:
 	struct FVector                                VelocityImpulse;                                   // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDroneMovementComponent_AddVelocity;
 
 // Function HoverDrone.HoverDroneMovementComponent.ForceFacing
 // 0x0018 (0x0018 - 0x0000)
@@ -41,7 +39,6 @@ struct HoverDroneMovementComponent_ForceFacing final
 public:
 	struct FVector                                Location;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDroneMovementComponent_ForceFacing;
 
 // Function HoverDrone.HoverDroneMovementComponent.SetCurrentFOV
 // 0x0004 (0x0004 - 0x0000)
@@ -50,7 +47,6 @@ struct HoverDroneMovementComponent_SetCurrentFOV final
 public:
 	float                                         NewFOV;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDroneMovementComponent_SetCurrentFOV;
 
 // Function HoverDrone.HoverDronePawn.GetTiltedDroneRotation
 // 0x0020 (0x0020 - 0x0000)
@@ -61,7 +57,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDronePawn_GetTiltedDroneRotation;
 
 // Function HoverDrone.HoverDronePawn.LookUpAccel
 // 0x0004 (0x0004 - 0x0000)
@@ -70,7 +65,6 @@ struct HoverDronePawn_LookUpAccel final
 public:
 	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDronePawn_LookUpAccel;
 
 // Function HoverDrone.HoverDronePawn.MoveUp
 // 0x0004 (0x0004 - 0x0000)
@@ -79,7 +73,6 @@ struct HoverDronePawn_MoveUp final
 public:
 	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDronePawn_MoveUp;
 
 // Function HoverDrone.HoverDronePawn.SetAllowSpeedChange
 // 0x0001 (0x0001 - 0x0000)
@@ -88,7 +81,6 @@ struct HoverDronePawn_SetAllowSpeedChange final
 public:
 	bool                                          bOnOff;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDronePawn_SetAllowSpeedChange;
 
 // Function HoverDrone.HoverDronePawn.SetDroneSpeedIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -97,7 +89,6 @@ struct HoverDronePawn_SetDroneSpeedIndex final
 public:
 	int32                                         SpeedIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDronePawn_SetDroneSpeedIndex;
 
 // Function HoverDrone.HoverDronePawn.TurnAccel
 // 0x0004 (0x0004 - 0x0000)
@@ -106,7 +97,6 @@ struct HoverDronePawn_TurnAccel final
 public:
 	float                                         Val;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDronePawn_TurnAccel;
 
 // Function HoverDrone.HoverDronePawn.GetAltitude
 // 0x0004 (0x0004 - 0x0000)
@@ -115,7 +105,6 @@ struct HoverDronePawn_GetAltitude final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDronePawn_GetAltitude;
 
 // Function HoverDrone.HoverDronePawn.GetDroneSpeedIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -124,7 +113,6 @@ struct HoverDronePawn_GetDroneSpeedIndex final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDronePawn_GetDroneSpeedIndex;
 
 // Function HoverDrone.HoverDronePawn.IsMaintainingConstantAltitude
 // 0x0001 (0x0001 - 0x0000)
@@ -133,7 +121,6 @@ struct HoverDronePawn_IsMaintainingConstantAltitude final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_HoverDronePawn_IsMaintainingConstantAltitude;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -26,7 +26,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Prompt_Uninstall_C_BPGamepadReleased;
 
 // Function UI_CFCore_Prompt_Uninstall.UI_CFCore_Prompt_Uninstall_C.BPHighlightWidgetOnStart
 // 0x0001 (0x0001 - 0x0000)
@@ -35,7 +34,6 @@ struct UI_CFCore_Prompt_Uninstall_C_BPHighlightWidgetOnStart final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Prompt_Uninstall_C_BPHighlightWidgetOnStart;
 
 // Function UI_CFCore_Prompt_Uninstall.UI_CFCore_Prompt_Uninstall_C.ExecuteUbergraph_UI_CFCore_Prompt_Uninstall
 // 0x0070 (0x0070 - 0x0000)
@@ -55,7 +53,6 @@ public:
 	class UTexture2D*                             CallFunc_GetIconForKeyName_ReturnValue;            // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             CallFunc_GetIconForKeyName_ReturnValue_1;          // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Prompt_Uninstall_C_ExecuteUbergraph_UI_CFCore_Prompt_Uninstall;
 
 // Function UI_CFCore_Prompt_Uninstall.UI_CFCore_Prompt_Uninstall_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -65,7 +62,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Prompt_Uninstall_C_GetRootCFWidget;
 
 // Function UI_CFCore_Prompt_Uninstall.UI_CFCore_Prompt_Uninstall_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -75,7 +71,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Prompt_Uninstall_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

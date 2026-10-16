@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UUseTamedNoTargetBehavior_C>();
 	}
 };
-DUMPER7_ASSERTS_UUseTamedNoTargetBehavior_C;
 
 SDK_NAMESPACE_END

@@ -25,7 +25,6 @@ public:
 	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FCFCoreThemeRowData                    CallFunc_GetCurrentTheme_CurrentTheme;             // 0x0010(0x0100)()
 };
-DUMPER7_ASSERTS_UI_CustomizeSlot_BUTTON_Install_C_GetColor;
 
 // Function UI_CustomizeSlot_BUTTON_Install.UI_CustomizeSlot_BUTTON_Install_C.SetColor
 // 0x0014 (0x0014 - 0x0000)
@@ -35,7 +34,6 @@ public:
 	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomizeSlot_BUTTON_Install_C_SetColor;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

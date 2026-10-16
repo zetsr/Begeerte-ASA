@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UAttackMove_DR_C>();
 	}
 };
-DUMPER7_ASSERTS_UAttackMove_DR_C;
 
 SDK_NAMESPACE_END

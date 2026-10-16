@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDinoColorSetGenericFemale_C>();
 	}
 };
-DUMPER7_ASSERTS_UDinoColorSetGenericFemale_C;
 
 SDK_NAMESPACE_END

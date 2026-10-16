@@ -23,7 +23,6 @@ public:
 	class FString                                 UploadDir;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UploadExtension;                                   // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WildcardHelpers_CreateJIRABug;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

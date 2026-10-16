@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_ArrowNet_Hunt_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemAmmo_ArrowNet_Hunt_C;
 
 SDK_NAMESPACE_END

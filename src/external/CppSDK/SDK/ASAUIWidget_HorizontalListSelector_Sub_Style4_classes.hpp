@@ -60,15 +60,15 @@ public:
 	struct FSlateFontInfo                         ButtonLabels_Font;                                 // 0x04F0(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TArray<class UASAUIWidget_Button_Style4_C*>   buttons;                                           // 0x0550(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<double>                                CalculatedWidths;                                  // 0x0560(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void(int32 Index)>   OnSelectionIndexChanged;                           // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(int32 Index_0)> OnSelectionIndexChanged;                           // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void UpdateWidget();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
 	void SwitchButton(bool Next, class UWidget** Widget);
 	void SetEnabledStateOfButtonIndex(int32 Index_0, bool Enabled_);
 	void SetButtonsInactive();
-	void PreConstruct(bool IsDesignTime);
+	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void GetPreviousAvailableButtonIndex(int32 StartingIndex, int32* FirstButton);
 	void GetNextAvailableButtonIndex(int32 StartingIndex, int32* FirstButton);
 	void GetLastAvailableButtonIndex(int32* FirstButton);
@@ -103,6 +103,5 @@ public:
 		return GetDefaultObjImpl<UASAUIWidget_HorizontalListSelector_Sub_Style4_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUIWidget_HorizontalListSelector_Sub_Style4_C;
 
 SDK_NAMESPACE_END

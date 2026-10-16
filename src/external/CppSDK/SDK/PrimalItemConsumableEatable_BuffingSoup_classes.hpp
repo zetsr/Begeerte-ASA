@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumableEatable_BuffingSoup_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumableEatable_BuffingSoup_C;
 
 SDK_NAMESPACE_END

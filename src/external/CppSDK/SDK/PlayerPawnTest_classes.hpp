@@ -153,6 +153,5 @@ public:
 		return GetDefaultObjImpl<APlayerPawnTest_C>();
 	}
 };
-DUMPER7_ASSERTS_APlayerPawnTest_C;
 
 SDK_NAMESPACE_END

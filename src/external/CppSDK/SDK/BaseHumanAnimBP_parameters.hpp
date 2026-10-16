@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "E_CardinalDirection4_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ShooterGame_structs.hpp"
 
 
@@ -31,7 +31,6 @@ public:
 	double                                        K2Node_VariableSet_Layering_R_Hand_ImplicitCast;   // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_VariableSet_Layering_R_Arm_ImplicitCast;    // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateLayeringValues;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.ActionLowerBodyBasePose
 // 0x0020 (0x0020 - 0x0000)
@@ -41,7 +40,6 @@ public:
 	struct FPoseLink                              WeaponPose;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              ActionLowerBodyBasePose_0;                         // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_ActionLowerBodyBasePose;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.AnimGraph
 // 0x0010 (0x0010 - 0x0000)
@@ -50,7 +48,6 @@ struct BaseHumanAnimBP_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_AnimGraph;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.EvaluateAlternateIK
 // 0x0780 (0x0780 - 0x0000)
@@ -174,7 +171,6 @@ public:
 	double                                        K2Node_VariableSet_AlternateIK_LAlpha_ImplicitCast; // 0x0770(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_VariableSet_AlternateIK_RAlpha_ImplicitCast; // 0x0778(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_EvaluateAlternateIK;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateShipValues
 // 0x0038 (0x0038 - 0x0000)
@@ -191,7 +187,6 @@ public:
 	double                                        CallFunc_MapRangeClamped_Value_ImplicitCast_1;     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateShipValues;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateTetherValues
 // 0x0020 (0x0020 - 0x0000)
@@ -203,7 +198,6 @@ public:
 	class UAnimSequence*                          GrappleIdle_0;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsActive;                                          // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateTetherValues;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateShipSteering
 // 0x0004 (0x0004 - 0x0000)
@@ -215,7 +209,6 @@ public:
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateShipSteering;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.SetUpCrouchStopAnim_SequencePlayer
 // 0x0058 (0x0058 - 0x0000)
@@ -232,7 +225,6 @@ public:
 	class UAnimSequence*                          K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSequencePlayerReference               CallFunc_SetSequence_ReturnValue;                  // 0x0048(0x0010)(NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_SetUpCrouchStopAnim_SequencePlayer;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.SetUpStopAnim_SequencePlayer
 // 0x0058 (0x0058 - 0x0000)
@@ -249,7 +241,6 @@ public:
 	class UAnimSequence*                          K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSequencePlayerReference               CallFunc_SetSequence_ReturnValue;                  // 0x0048(0x0010)(NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_SetUpStopAnim_SequencePlayer;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.Landed
 // 0x0010 (0x0010 - 0x0000)
@@ -263,7 +254,6 @@ public:
 	float                                         CallFunc_Montage_Play_ReturnValue_1;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_Landed;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.OnFallingBecomeRelevant
 // 0x0058 (0x0058 - 0x0000)
@@ -280,7 +270,6 @@ public:
 	class UAnimSequence*                          K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSequencePlayerReference               CallFunc_SetSequence_ReturnValue;                  // 0x0048(0x0010)(NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_OnFallingBecomeRelevant;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.OnJumpingBecomeRelevant
 // 0x0058 (0x0058 - 0x0000)
@@ -297,7 +286,6 @@ public:
 	class UAnimSequence*                          K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSequencePlayerReference               CallFunc_SetSequence_ReturnValue;                  // 0x0048(0x0010)(NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_OnJumpingBecomeRelevant;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateJumpAnim
 // 0x000C (0x000C - 0x0000)
@@ -311,7 +299,6 @@ public:
 	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Montage_Play_ReturnValue_1;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateJumpAnim;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.LocomotionStateName_Crouch
 // 0x0040 (0x0040 - 0x0000)
@@ -325,7 +312,6 @@ public:
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_GetState_ReturnValue;                     // 0x0034(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_LocomotionStateName_Crouch;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.LocomotionStateName
 // 0x0040 (0x0040 - 0x0000)
@@ -339,7 +325,6 @@ public:
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_GetState_ReturnValue;                     // 0x0034(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_LocomotionStateName;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.InterpolateYawThreadSafe
 // 0x0038 (0x0038 - 0x0000)
@@ -355,7 +340,6 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_InterpolateYawThreadSafe;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateSwimmingStateThreadSafe
 // 0x0018 (0x0018 - 0x0000)
@@ -370,7 +354,6 @@ public:
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateSwimmingStateThreadSafe;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BotUpdateThreadSafe
 // 0x0228 (0x0228 - 0x0000)
@@ -444,7 +427,6 @@ public:
 	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_VariableSet_Direction_ImplicitCast;         // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BotUpdateThreadSafe;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.InterpLayeringValuesThreadSafe
 // 0x0298 (0x0298 - 0x0000)
@@ -570,7 +552,6 @@ public:
 	float                                         K2Node_VariableSet_InterpOverrideSpine_ImplicitCast; // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_InterpOverrideLayeringSpineAdd_ImplicitCast; // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_InterpLayeringValuesThreadSafe;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.GroundIKThreadSafe
 // 0x0110 (0x0110 - 0x0000)
@@ -644,7 +625,6 @@ public:
 	double                                        CallFunc_Multiply_DoubleFloat_A_ImplicitCast_1;    // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast;      // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_GroundIKThreadSafe;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateMovementAnimRateThreadSafe
 // 0x0088 (0x0088 - 0x0000)
@@ -674,7 +654,6 @@ public:
 	double                                        K2Node_Select_Option_0_ImplicitCast;               // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleFloat_A_ImplicitCast;      // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateMovementAnimRateThreadSafe;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateGroundConforming
 // 0x0028 (0x0028 - 0x0000)
@@ -697,7 +676,6 @@ public:
 	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast;   // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateGroundConforming;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.Update Bot Animation
 // 0x0088 (0x0088 - 0x0000)
@@ -722,7 +700,6 @@ public:
 	double                                        K2Node_VariableSet_AlternateStandingBlendIn_ImplicitCast; // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_VariableSet_AlternateStandingBlendOut_ImplicitCast; // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_Update_Bot_Animation;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BotOnMovementModeChanged
 // 0x0010 (0x0010 - 0x0000)
@@ -736,7 +713,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BotOnMovementModeChanged;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BotAssignDelegates
 // 0x0060 (0x0060 - 0x0000)
@@ -752,7 +728,6 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x003C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class ACharacter* Character, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)> K2Node_CreateDelegate_OutputDelegate_4; // 0x004C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BotAssignDelegates;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BotOnWeaponChanged
 // 0x0008 (0x0008 - 0x0000)
@@ -763,7 +738,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsUsingShield_ReturnValue;                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BotOnWeaponChanged;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateMovementAnimRate
 // 0x0098 (0x0098 - 0x0000)
@@ -799,7 +773,6 @@ public:
 	double                                        K2Node_Select_Option_0_ImplicitCast;               // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleFloat_A_ImplicitCast;      // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateMovementAnimRate;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BotInitialize
 // 0x0003 (0x0003 - 0x0000)
@@ -810,7 +783,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BotInitialize;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BotOnRidingChanged
 // 0x0028 (0x0028 - 0x0000)
@@ -824,7 +796,6 @@ public:
 	class UAnimSequence*                          CallFunc_GetDinoRidingAnimation_ReturnValue;       // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BotOnRidingChanged;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BotOnSeatingChanged
 // 0x0010 (0x0010 - 0x0000)
@@ -840,7 +811,6 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BotOnSeatingChanged;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateGliderSuitValues
 // 0x0028 (0x0028 - 0x0000)
@@ -853,7 +823,6 @@ public:
 	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Lerp_A_ImplicitCast;                      // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateGliderSuitValues;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BotUpdateWeaponIKNonThreadSafe
 // 0x00C0 (0x00C0 - 0x0000)
@@ -882,7 +851,6 @@ public:
 	bool                                          CallFunc_ObjectIsChildOfSoftRef_ReturnValue_5;     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BotUpdateWeaponIKNonThreadSafe;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BotUpdateCharacterCreatorValues
 // 0x02C8 (0x02C8 - 0x0000)
@@ -938,7 +906,6 @@ public:
 	uint8                                         Pad_2BC[0x4];                                      // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_VariableSet_Bone_Modifier_HipWidth_ImplicitCast; // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BotUpdateCharacterCreatorValues;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.SetUpCrouchStopAnim
 // 0x0068 (0x0068 - 0x0000)
@@ -957,7 +924,6 @@ public:
 	class UAnimSequence*                          K2Node_Select_Default;                             // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSequenceEvaluatorReference            CallFunc_SetSequence_ReturnValue;                  // 0x0058(0x0010)(NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_SetUpCrouchStopAnim;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateCurveValues
 // 0x0010 (0x0010 - 0x0000)
@@ -968,7 +934,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleFloat_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateCurveValues;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateLayeringValues_Emote
 // 0x0028 (0x0028 - 0x0000)
@@ -981,7 +946,6 @@ public:
 	double                                        K2Node_VariableSet_Layering_R_Hand_ImplicitCast;   // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_VariableSet_Layering_R_Arm_ImplicitCast;    // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateLayeringValues_Emote;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.Riding Emote AO Reduction
 // 0x0080 (0x0080 - 0x0000)
@@ -1008,7 +972,6 @@ public:
 	double                                        CallFunc_Subtract_DoubleFloat_ReturnValue;         // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast;      // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_Riding_Emote_AO_Reduction;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.Set Leg IKAlpha
 // 0x0010 (0x0010 - 0x0000)
@@ -1019,7 +982,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Subtract_DoubleFloat_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_Set_Leg_IKAlpha;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.GetEmoteAnimCurves
 // 0x0010 (0x0010 - 0x0000)
@@ -1028,7 +990,6 @@ struct BaseHumanAnimBP_C_GetEmoteAnimCurves final
 public:
 	TArray<class FName>                           CallFunc_GetActiveCurveNames_OutNames;             // 0x0000(0x0010)(ReferenceParm)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_GetEmoteAnimCurves;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.SetWeaponIKAlpha
 // 0x0068 (0x0068 - 0x0000)
@@ -1061,7 +1022,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_SetWeaponIKAlpha;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.SetProneMontageVars
 // 0x0010 (0x0010 - 0x0000)
@@ -1073,7 +1033,6 @@ public:
 	bool                                          CallFunc_IsPlayingAnimationMontagesOnSlotName_ReturnValue; // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_SetProneMontageVars;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.SetCrouchStateTransitionVars
 // 0x0018 (0x0018 - 0x0000)
@@ -1087,7 +1046,6 @@ public:
 	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_SetCrouchStateTransitionVars;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateRaiseArmsAlpha
 // 0x00D0 (0x00D0 - 0x0000)
@@ -1125,7 +1083,6 @@ public:
 	float                                         CallFunc_Add_DoubleFloat_B_ImplicitCast_4;         // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleFloat_A_ImplicitCast;      // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateRaiseArmsAlpha;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.OnUpdatedCCValues
 // 0x00E8 (0x00E8 - 0x0000)
@@ -1165,7 +1122,6 @@ public:
 	double                                        CallFunc_Subtract_DoubleFloat_A_ImplicitCast_3;    // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_Bone_Modifier_Shoulders_ImplicitCast; // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_OnUpdatedCCValues;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateConditionsForBoneModifiers
 // 0x0040 (0x0040 - 0x0000)
@@ -1191,7 +1147,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateConditionsForBoneModifiers;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.On Become Relevant Move East
 // 0x0058 (0x0058 - 0x0000)
@@ -1208,7 +1163,6 @@ public:
 	class UAnimSequence*                          K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSequencePlayerReference               CallFunc_SetSequenceWithInertialBlending_ReturnValue; // 0x0048(0x0010)(NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_On_Become_Relevant_Move_East;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.On Become Relevant Walk East
 // 0x0058 (0x0058 - 0x0000)
@@ -1225,7 +1179,6 @@ public:
 	class UAnimSequence*                          K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSequencePlayerReference               CallFunc_SetSequenceWithInertialBlending_ReturnValue; // 0x0048(0x0010)(NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_On_Become_Relevant_Walk_East;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.On BecomeRelevant Move West
 // 0x0058 (0x0058 - 0x0000)
@@ -1242,7 +1195,6 @@ public:
 	class UAnimSequence*                          K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSequencePlayerReference               CallFunc_SetSequenceWithInertialBlending_ReturnValue; // 0x0048(0x0010)(NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_On_BecomeRelevant_Move_West;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.On BecomeRelevant Walk West
 // 0x0058 (0x0058 - 0x0000)
@@ -1259,7 +1211,6 @@ public:
 	class UAnimSequence*                          K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSequencePlayerReference               CallFunc_SetSequenceWithInertialBlending_ReturnValue; // 0x0048(0x0010)(NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_On_BecomeRelevant_Walk_West;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.Update Character Creator Values
 // 0x0300 (0x0300 - 0x0000)
@@ -1328,7 +1279,6 @@ public:
 	float                                         K2Node_VariableSet_CharacterCreator_Fat01Chest_ImplicitCast; // 0x02F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_DoubleFloat_B_ImplicitCast;      // 0x02FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_Update_Character_Creator_Values;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.InterpLayeringValues
 // 0x0298 (0x0298 - 0x0000)
@@ -1454,7 +1404,6 @@ public:
 	float                                         K2Node_VariableSet_InterpOverrideSpine_ImplicitCast; // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_InterpOverrideLayeringSpineAdd_ImplicitCast; // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_InterpLayeringValues;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.Get IKWorld Interp Speed
 // 0x0050 (0x0050 - 0x0000)
@@ -1474,7 +1423,6 @@ public:
 	double                                        CallFunc_SelectFloat_ReturnValue_1;                // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_DoubleFloat_B_ImplicitCast;      // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_Get_IKWorld_Interp_Speed;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.GroundIK
 // 0x0158 (0x0158 - 0x0000)
@@ -1564,7 +1512,6 @@ public:
 	double                                        CallFunc_MapRangeClamped_Value_ImplicitCast_1;     // 0x0148(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_GroundIK;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdatePoseLayering
 // 0x0358 (0x0358 - 0x0000)
@@ -1784,7 +1731,6 @@ public:
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_17;   // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_18;   // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdatePoseLayering;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.GetLeanAmount
 // 0x01B0 (0x01B0 - 0x0000)
@@ -1828,7 +1774,6 @@ public:
 	double                                        CallFunc_FInterpTo_DeltaTime_ImplicitCast;         // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FInterpTo_DeltaTime_ImplicitCast_1;       // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_GetLeanAmount;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateMoveAnim_Layering
 // 0x0078 (0x0078 - 0x0000)
@@ -1851,7 +1796,6 @@ public:
 	struct FSequenceEvaluatorReference            CallFunc_SetSequence_ReturnValue;                  // 0x0058(0x0010)(NoDestructor)
 	struct FSequenceEvaluatorReference            CallFunc_SetExplicitTime_ReturnValue;              // 0x0068(0x0010)(NoDestructor)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateMoveAnim_Layering;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateWeaponIKNonThreadSafe
 // 0x0028 (0x0028 - 0x0000)
@@ -1880,7 +1824,6 @@ public:
 	bool                                          CallFunc_ObjectIsChildOfSoftRef_ReturnValue_9;     // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_6;                  // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateWeaponIKNonThreadSafe;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateWeaponIK
 // 0x0058 (0x0058 - 0x0000)
@@ -1903,7 +1846,6 @@ public:
 	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_RightHandIKAlpha_ImplicitCast;  // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateWeaponIK;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.ShouldDistanceMatchStop
 // 0x0001 (0x0001 - 0x0000)
@@ -1912,7 +1854,6 @@ struct BaseHumanAnimBP_C_ShouldDistanceMatchStop final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_ShouldDistanceMatchStop;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateStopAnim
 // 0x0088 (0x0088 - 0x0000)
@@ -1936,7 +1877,6 @@ public:
 	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_DistanceMatchToTarget_DistanceToTarget_ImplicitCast; // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateStopAnim;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.SetUpStopAnim
 // 0x0088 (0x0088 - 0x0000)
@@ -1957,7 +1897,6 @@ public:
 	struct FSequenceEvaluatorReference            CallFunc_SetSequence_ReturnValue;                  // 0x0070(0x0010)(NoDestructor)
 	float                                         CallFunc_DistanceMatchToTarget_DistanceToTarget_ImplicitCast; // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_SetUpStopAnim;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateAccelerationData
 // 0x00D8 (0x00D8 - 0x0000)
@@ -1981,7 +1920,6 @@ public:
 	float                                         CallFunc_GetLeanAmount_DeltaTime_ImplicitCast;     // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Vector2DInterpTo_Constant_DeltaTime_ImplicitCast; // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateAccelerationData;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateMoveAnim
 // 0x0098 (0x0098 - 0x0000)
@@ -2009,7 +1947,6 @@ public:
 	struct FSequencePlayerReference               CallFunc_SetPlayRate_ReturnValue;                  // 0x0080(0x0010)(NoDestructor)
 	float                                         CallFunc_SetPlayRate_PlayRate_ImplicitCast;        // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateMoveAnim;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateVelocityData
 // 0x0330 (0x0330 - 0x0000)
@@ -2139,7 +2076,6 @@ public:
 	double                                        CallFunc_Add_DoubleFloat_A_ImplicitCast;           // 0x0320(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SelectCardinalDirectionFromAngle_Angle_ImplicitCast; // 0x0328(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateVelocityData;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BlueprintThreadSafeUpdateAnimation
 // 0x0050 (0x0050 - 0x0000)
@@ -2158,7 +2094,6 @@ public:
 	double                                        CallFunc_FInterpTo_Constant_DeltaTime_ImplicitCast; // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FInterpTo_Constant_Target_ImplicitCast;   // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BlueprintThreadSafeUpdateAnimation;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.SelectCardinalDirectionFromAngle
 // 0x0078 (0x0078 - 0x0000)
@@ -2188,7 +2123,6 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_SelectCardinalDirectionFromAngle;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.GliderSuit_CalcBlendspaceAxes
 // 0x0170 (0x0170 - 0x0000)
@@ -2235,7 +2169,6 @@ public:
 	double                                        CallFunc_Abs_A_ImplicitCast_1;                     // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_GliderSuit_CalcBlendspaceAxes;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.UpdateGliderSuitVars
 // 0x0008 (0x0008 - 0x0000)
@@ -2244,7 +2177,6 @@ struct BaseHumanAnimBP_C_UpdateGliderSuitVars final
 public:
 	class APrimalCharacter*                       Character;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_UpdateGliderSuitVars;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.GliderSuit_CalcAimOffsets
 // 0x00A0 (0x00A0 - 0x0000)
@@ -2267,7 +2199,6 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_GliderSuit_CalcAimOffsets;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.MapVelocityToBlendSpace
 // 0x0070 (0x0070 - 0x0000)
@@ -2289,7 +2220,6 @@ public:
 	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_MapVelocityToBlendSpace;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.GetCharSequenceNew
 // 0x0030 (0x0030 - 0x0000)
@@ -2304,7 +2234,6 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAnimSequence*                          CallFunc_GetOverridenAnimSequence_ReturnValue;     // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_GetCharSequenceNew;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.GetCharMontageNew
 // 0x0030 (0x0030 - 0x0000)
@@ -2319,7 +2248,6 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAnimMontage*                           CallFunc_GetOverridenMontage_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_GetCharMontageNew;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BlueprintPlayAnimationEvent
 // 0x0028 (0x0028 - 0x0000)
@@ -2337,7 +2265,6 @@ public:
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Montage_Play_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BlueprintPlayAnimationEvent;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -2346,7 +2273,6 @@ struct BaseHumanAnimBP_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_BlueprintUpdateAnimation;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.OnCharacterStepped
 // 0x0030 (0x0030 - 0x0000)
@@ -2356,7 +2282,6 @@ public:
 	struct FVector                                PrevLocation;                                      // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                NewLocation;                                       // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_OnCharacterStepped;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.ExecuteUbergraph_BaseHumanAnimBP
 // 0x11F0 (0x11F0 - 0x0000)
@@ -3125,7 +3050,6 @@ public:
 	uint8                                         Pad_11DC[0x4];                                     // 0x11DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_VariableSet_Disable_RiderPhysics_ImplicitCast; // 0x11E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_ExecuteUbergraph_BaseHumanAnimBP;
 
 // Function BaseHumanAnimBP.BaseHumanAnimBP_C.GetPredictedStopDistance
 // 0x0038 (0x0038 - 0x0000)
@@ -3138,7 +3062,6 @@ public:
 	double                                        CallFunc_Add_DoubleFloat_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_DoubleFloat_B_ImplicitCast;           // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BaseHumanAnimBP_C_GetPredictedStopDistance;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

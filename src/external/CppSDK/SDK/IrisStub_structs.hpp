@@ -20,7 +20,6 @@ struct SDK_ALIGN(0x01) FNetSerializerConfig
 {
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_FNetSerializerConfig;
 
 // ScriptStruct IrisStub.PolymorphicStructNetSerializerConfig
 // 0x0001 (0x0001 - 0x0000)
@@ -29,7 +28,6 @@ struct FPolymorphicStructNetSerializerConfig : public FNetSerializerConfig
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPolymorphicStructNetSerializerConfig;
 
 // ScriptStruct IrisStub.PolymorphicArrayStructNetSerializerConfig
 // 0x0001 (0x0001 - 0x0000)
@@ -38,6 +36,5 @@ struct FPolymorphicArrayStructNetSerializerConfig : public FNetSerializerConfig
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPolymorphicArrayStructNetSerializerConfig;
 
 SDK_NAMESPACE_END

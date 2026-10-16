@@ -27,7 +27,6 @@ public:
 	class UFXSystemAsset*                         Emitter_To_Be_Active;                              // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Location_Offset;                                   // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemConsumableSeed_C_Interface_PrimalItemConsumableSeed_Get_Crop_Plot_Emitter_VFX_To_Be_Active;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -51,7 +51,6 @@ public:
 		return GetDefaultObjImpl<UMetasoundFrontendLiteralBlueprintAccess>();
 	}
 };
-DUMPER7_ASSERTS_UMetasoundFrontendLiteralBlueprintAccess;
 
 // Class MetasoundEngine.MetasoundGeneratorHandle
 // 0x0088 (0x00B0 - 0x0028)
@@ -84,7 +83,6 @@ public:
 		return GetDefaultObjImpl<UMetasoundGeneratorHandle>();
 	}
 };
-DUMPER7_ASSERTS_UMetasoundGeneratorHandle;
 
 // Class MetasoundEngine.MetaSoundCacheSubsystem
 // 0x0048 (0x0078 - 0x0030)
@@ -112,7 +110,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundCacheSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundCacheSubsystem;
 
 // Class MetasoundEngine.MetasoundOutputBlueprintAccess
 // 0x0000 (0x0028 - 0x0028)
@@ -144,7 +141,6 @@ public:
 		return GetDefaultObjImpl<UMetasoundOutputBlueprintAccess>();
 	}
 };
-DUMPER7_ASSERTS_UMetasoundOutputBlueprintAccess;
 
 // Class MetasoundEngine.MetaSoundOutputSubsystem
 // 0x0010 (0x0040 - 0x0030)
@@ -170,7 +166,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundOutputSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundOutputSubsystem;
 
 // Class MetasoundEngine.MetaSoundQualityHelper
 // 0x0000 (0x0028 - 0x0028)
@@ -193,7 +188,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundQualityHelper>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundQualityHelper;
 
 // Class MetasoundEngine.MetaSoundSettings
 // 0x0090 (0x00C8 - 0x0038)
@@ -229,7 +223,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundSettings;
 
 // Class MetasoundEngine.MetasoundEditorGraphBase
 // 0x0000 (0x0060 - 0x0060)
@@ -249,7 +242,6 @@ public:
 		return GetDefaultObjImpl<UMetasoundEditorGraphBase>();
 	}
 };
-DUMPER7_ASSERTS_UMetasoundEditorGraphBase;
 
 // Class MetasoundEngine.MetaSoundPatch
 // 0x02E0 (0x0308 - 0x0028)
@@ -278,7 +270,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundPatch>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundPatch;
 
 // Class MetasoundEngine.MetaSoundAssetSubsystem
 // 0x0000 (0x0030 - 0x0030)
@@ -302,7 +293,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundAssetSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundAssetSubsystem;
 
 // Class MetasoundEngine.MetaSoundBuilderBase
 // 0x0068 (0x0090 - 0x0028)
@@ -392,7 +382,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundBuilderBase>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundBuilderBase;
 
 // Class MetasoundEngine.MetaSoundPatchBuilder
 // 0x0000 (0x0090 - 0x0090)
@@ -412,7 +401,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundPatchBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundPatchBuilder;
 
 // Class MetasoundEngine.MetaSoundSourceBuilder
 // 0x0028 (0x00B8 - 0x0090)
@@ -444,7 +432,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundSourceBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundSourceBuilder;
 
 // Class MetasoundEngine.MetaSoundBuilderSubsystem
 // 0x0050 (0x0080 - 0x0030)
@@ -497,7 +484,6 @@ public:
 		return GetDefaultObjImpl<UMetaSoundBuilderSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundBuilderSubsystem;
 
 // Class MetasoundEngine.MetaSoundSource
 // 0x03D0 (0x0820 - 0x0450)
@@ -528,6 +514,5 @@ public:
 		return GetDefaultObjImpl<UMetaSoundSource>();
 	}
 };
-DUMPER7_ASSERTS_UMetaSoundSource;
 
 SDK_NAMESPACE_END

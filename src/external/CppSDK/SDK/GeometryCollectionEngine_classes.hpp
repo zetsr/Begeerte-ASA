@@ -44,7 +44,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCollectionBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCollectionBlueprintLibrary;
 
 // Class GeometryCollectionEngine.GeometryCollectionExternalRenderInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -73,7 +72,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGeometryCollectionExternalRenderInterface;
 
 // Class GeometryCollectionEngine.GeometryCollectionCustomDataInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -102,7 +100,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGeometryCollectionCustomDataInterface;
 
 // Class GeometryCollectionEngine.GeometryCollectionISMPoolSubSystem
 // 0x0050 (0x0080 - 0x0030)
@@ -128,7 +125,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCollectionISMPoolSubSystem>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCollectionISMPoolSubSystem;
 
 // Class GeometryCollectionEngine.PrimalDestructibleActor
 // 0x0010 (0x04A0 - 0x0490)
@@ -160,7 +156,6 @@ public:
 		return GetDefaultObjImpl<APrimalDestructibleActor>();
 	}
 };
-DUMPER7_ASSERTS_APrimalDestructibleActor;
 
 // Class GeometryCollectionEngine.ChaosDestructionListener
 // 0x02A0 (0x0520 - 0x0280)
@@ -219,7 +214,6 @@ public:
 		return GetDefaultObjImpl<UChaosDestructionListener>();
 	}
 };
-DUMPER7_ASSERTS_UChaosDestructionListener;
 
 // Class GeometryCollectionEngine.GeometryCollectionActor
 // 0x0010 (0x04A0 - 0x0490)
@@ -246,7 +240,6 @@ public:
 		return GetDefaultObjImpl<AGeometryCollectionActor>();
 	}
 };
-DUMPER7_ASSERTS_AGeometryCollectionActor;
 
 // Class GeometryCollectionEngine.GeometryCollectionCache
 // 0x0028 (0x0050 - 0x0028)
@@ -271,7 +264,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCollectionCache>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCollectionCache;
 
 // Class GeometryCollectionEngine.GeometryCollectionComponent
 // 0x04D0 (0x0B30 - 0x0660)
@@ -454,7 +446,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCollectionComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCollectionComponent;
 
 // Class GeometryCollectionEngine.GeometryCollectionDebugDrawActor
 // 0x00C0 (0x0550 - 0x0490)
@@ -540,7 +531,6 @@ public:
 		return GetDefaultObjImpl<AGeometryCollectionDebugDrawActor>();
 	}
 };
-DUMPER7_ASSERTS_AGeometryCollectionDebugDrawActor;
 
 // Class GeometryCollectionEngine.GeometryCollectionDebugDrawComponent
 // 0x0018 (0x00E8 - 0x00D0)
@@ -565,7 +555,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCollectionDebugDrawComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCollectionDebugDrawComponent;
 
 // Class GeometryCollectionEngine.GeometryCollectionISMPoolActor
 // 0x0010 (0x04A0 - 0x0490)
@@ -589,7 +578,6 @@ public:
 		return GetDefaultObjImpl<AGeometryCollectionISMPoolActor>();
 	}
 };
-DUMPER7_ASSERTS_AGeometryCollectionISMPoolActor;
 
 // Class GeometryCollectionEngine.GeometryCollectionISMPoolComponent
 // 0x0130 (0x03B0 - 0x0280)
@@ -612,7 +600,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCollectionISMPoolComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCollectionISMPoolComponent;
 
 // Class GeometryCollectionEngine.GeometryCollectionISMPoolRenderer
 // 0x00B8 (0x00E0 - 0x0028)
@@ -638,7 +625,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCollectionISMPoolRenderer>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCollectionISMPoolRenderer;
 
 // Class GeometryCollectionEngine.GeometryCollection
 // 0x0208 (0x0230 - 0x0028)
@@ -726,7 +712,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCollection>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCollection;
 
 // Class GeometryCollectionEngine.GeometryCollectionRenderLevelSetActor
 // 0x00F0 (0x0580 - 0x0490)
@@ -755,7 +740,6 @@ public:
 		return GetDefaultObjImpl<AGeometryCollectionRenderLevelSetActor>();
 	}
 };
-DUMPER7_ASSERTS_AGeometryCollectionRenderLevelSetActor;
 
 // Class GeometryCollectionEngine.GeometryCollectionRootProxyRenderer
 // 0x0020 (0x0048 - 0x0028)
@@ -780,7 +764,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCollectionRootProxyRenderer>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCollectionRootProxyRenderer;
 
 // Class GeometryCollectionEngine.GeometryCollectionISMPoolDebugDrawComponent
 // 0x0020 (0x0690 - 0x0670)
@@ -808,6 +791,5 @@ public:
 		return GetDefaultObjImpl<UGeometryCollectionISMPoolDebugDrawComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCollectionISMPoolDebugDrawComponent;
 
 SDK_NAMESPACE_END

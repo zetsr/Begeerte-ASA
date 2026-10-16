@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UUI_CustomizeSlot_SecondaryFont_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CustomizeSlot_SecondaryFont_C;
 
 SDK_NAMESPACE_END

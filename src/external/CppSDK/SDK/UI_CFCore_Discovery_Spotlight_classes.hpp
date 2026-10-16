@@ -80,6 +80,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Discovery_Spotlight_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Discovery_Spotlight_C;
 
 SDK_NAMESPACE_END

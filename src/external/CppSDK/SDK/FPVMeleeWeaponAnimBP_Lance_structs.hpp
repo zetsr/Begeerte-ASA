@@ -77,7 +77,6 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer;                 // 0x0618(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TwoWayBlend;                    // 0x0648(0x0030)()
 };
-DUMPER7_ASSERTS_FPVMeleeWeaponAnimBP_Lance__FAnimBlueprintGeneratedConstantData;
 
 // ScriptStruct FPVMeleeWeaponAnimBP_Lance.FPVMeleeWeaponAnimBP_Lance_C.AnimBlueprintGeneratedMutableData
 // 0x0004 (0x0005 - 0x0001)
@@ -89,6 +88,5 @@ public:
 	bool                                          __BoolProperty_1;                                  // 0x0003(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          __BoolProperty_2;                                  // 0x0004(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FPVMeleeWeaponAnimBP_Lance__FAnimBlueprintGeneratedMutableData;
 
 SDK_NAMESPACE_END

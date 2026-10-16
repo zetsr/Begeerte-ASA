@@ -59,7 +59,6 @@ public:
 	class UCreditsUI_C*                           CallFunc_Create_ReturnValue;                       // 0x0CF8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Play_ReturnValue;                         // 0x0D00(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MainMenuUI_C_ExecuteUbergraph_MainMenuUI;
 
 // Function MainMenuUI.MainMenuUI_C.OverrideBGImage
 // 0x0068 (0x0068 - 0x0000)
@@ -89,7 +88,6 @@ public:
 	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MainMenuUI_C_OverrideBGImage;
 
 // Function MainMenuUI.MainMenuUI_C.UpdateLeftTextPosition
 // 0x0040 (0x0040 - 0x0000)
@@ -105,7 +103,6 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MainMenuUI_C_UpdateLeftTextPosition;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

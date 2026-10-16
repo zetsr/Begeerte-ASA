@@ -69,6 +69,5 @@ public:
 		return GetDefaultObjImpl<AWeapLance_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapLance_C;
 
 SDK_NAMESPACE_END

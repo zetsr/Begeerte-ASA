@@ -39,7 +39,6 @@ public:
 		return GetDefaultObjImpl<UMassEntityTraitBase>();
 	}
 };
-DUMPER7_ASSERTS_UMassEntityTraitBase;
 
 // Class MassSpawner.MassAssortedFragmentsTrait
 // 0x0020 (0x0048 - 0x0028)
@@ -63,7 +62,6 @@ public:
 		return GetDefaultObjImpl<UMassAssortedFragmentsTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassAssortedFragmentsTrait;
 
 // Class MassSpawner.MassEntityConfigAsset
 // 0x0030 (0x0060 - 0x0030)
@@ -86,7 +84,6 @@ public:
 		return GetDefaultObjImpl<UMassEntityConfigAsset>();
 	}
 };
-DUMPER7_ASSERTS_UMassEntityConfigAsset;
 
 // Class MassSpawner.MassEntitySpawnDataGeneratorBase
 // 0x0008 (0x0030 - 0x0028)
@@ -111,7 +108,6 @@ public:
 		return GetDefaultObjImpl<UMassEntitySpawnDataGeneratorBase>();
 	}
 };
-DUMPER7_ASSERTS_UMassEntitySpawnDataGeneratorBase;
 
 // Class MassSpawner.MassEntityEQSSpawnPointsGenerator
 // 0x0048 (0x0078 - 0x0030)
@@ -134,7 +130,6 @@ public:
 		return GetDefaultObjImpl<UMassEntityEQSSpawnPointsGenerator>();
 	}
 };
-DUMPER7_ASSERTS_UMassEntityEQSSpawnPointsGenerator;
 
 // Class MassSpawner.MassEntityZoneGraphSpawnPointsGenerator
 // 0x0018 (0x0048 - 0x0030)
@@ -160,7 +155,6 @@ public:
 		return GetDefaultObjImpl<UMassEntityZoneGraphSpawnPointsGenerator>();
 	}
 };
-DUMPER7_ASSERTS_UMassEntityZoneGraphSpawnPointsGenerator;
 
 // Class MassSpawner.MassSpawner
 // 0x00A8 (0x0538 - 0x0490)
@@ -204,7 +198,6 @@ public:
 		return GetDefaultObjImpl<AMassSpawner>();
 	}
 };
-DUMPER7_ASSERTS_AMassSpawner;
 
 // Class MassSpawner.MassSpawnerSubsystem
 // 0x0088 (0x00C0 - 0x0038)
@@ -228,7 +221,6 @@ public:
 		return GetDefaultObjImpl<UMassSpawnerSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassSpawnerSubsystem;
 
 // Class MassSpawner.MassSpawnLocationProcessor
 // 0x0330 (0x03E0 - 0x00B0)
@@ -251,7 +243,6 @@ public:
 		return GetDefaultObjImpl<UMassSpawnLocationProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassSpawnLocationProcessor;
 
 // Class MassSpawner.MassTranslator
 // 0x0020 (0x00D0 - 0x00B0)
@@ -274,6 +265,5 @@ public:
 		return GetDefaultObjImpl<UMassTranslator>();
 	}
 };
-DUMPER7_ASSERTS_UMassTranslator;
 
 SDK_NAMESPACE_END

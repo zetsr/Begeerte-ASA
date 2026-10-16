@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<UFL_VFX_Spawn_Ground_Effect_C>();
 	}
 };
-DUMPER7_ASSERTS_UFL_VFX_Spawn_Ground_Effect_C;
 
 SDK_NAMESPACE_END

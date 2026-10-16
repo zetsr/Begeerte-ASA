@@ -94,6 +94,5 @@ public:
 		return GetDefaultObjImpl<UHuman_Rider_CtrlRig_C>();
 	}
 };
-DUMPER7_ASSERTS_UHuman_Rider_CtrlRig_C;
 
 SDK_NAMESPACE_END

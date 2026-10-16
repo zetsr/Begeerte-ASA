@@ -31,7 +31,6 @@ public:
 	double                                        CallFunc_VSize_ReturnValue;                        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BeginLand_TK_C_ExecuteUbergraph_BeginLand_TK;
 
 // Function BeginLand_TK.BeginLand_TK_C.ReceiveExecute
 // 0x0008 (0x0008 - 0x0000)
@@ -40,7 +39,6 @@ struct BeginLand_TK_C_ReceiveExecute final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BeginLand_TK_C_ReceiveExecute;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

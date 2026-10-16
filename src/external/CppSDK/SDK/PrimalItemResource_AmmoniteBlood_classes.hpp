@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_AmmoniteBlood_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_AmmoniteBlood_C;
 
 SDK_NAMESPACE_END

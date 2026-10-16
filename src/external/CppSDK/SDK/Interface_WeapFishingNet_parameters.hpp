@@ -21,7 +21,6 @@ struct Interface_WeapFishingNet_C_get_has_fully_cooked final
 public:
 	bool                                          has_fully_cooked;                                  // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_WeapFishingNet_C_get_has_fully_cooked;
 
 // Function Interface_WeapFishingNet.Interface_WeapFishingNet_C.Get is currently tossing net
 // 0x0001 (0x0001 - 0x0000)
@@ -30,7 +29,6 @@ struct Interface_WeapFishingNet_C_Get_is_currently_tossing_net final
 public:
 	bool                                          ret_is_currently_tossing_net;                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_WeapFishingNet_C_Get_is_currently_tossing_net;
 
 // Function Interface_WeapFishingNet.Interface_WeapFishingNet_C.get returned to idle
 // 0x0008 (0x0008 - 0x0000)
@@ -39,7 +37,6 @@ struct Interface_WeapFishingNet_C_get_returned_to_idle final
 public:
 	double                                        returned_to_idle;                                  // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_WeapFishingNet_C_get_returned_to_idle;
 
 // Function Interface_WeapFishingNet.Interface_WeapFishingNet_C.Interface_WeapFishingNet Get bIsCookingGrenade
 // 0x0001 (0x0001 - 0x0000)
@@ -48,7 +45,6 @@ struct Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_bIsCookingGrenade
 public:
 	bool                                          ret_bIsCookingGrenade;                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_bIsCookingGrenade;
 
 // Function Interface_WeapFishingNet.Interface_WeapFishingNet_C.Interface_WeapFishingNet Get Casting Buff
 // 0x0008 (0x0008 - 0x0000)
@@ -57,7 +53,6 @@ struct Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_Casting_Buff fina
 public:
 	class UClass*                                 Casting_Buff_class;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_Casting_Buff;
 
 // Function Interface_WeapFishingNet.Interface_WeapFishingNet_C.Interface_WeapFishingNet Get Caught Animals
 // 0x0010 (0x0010 - 0x0000)
@@ -66,7 +61,6 @@ struct Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_Caught_Animals fi
 public:
 	TArray<class AActor*>                         ret_Caught_Animals;                                // 0x0000(0x0010)(Parm, OutParm)
 };
-DUMPER7_ASSERTS_Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_Caught_Animals;
 
 // Function Interface_WeapFishingNet.Interface_WeapFishingNet_C.Interface_WeapFishingNet Get Net Projectile
 // 0x0008 (0x0008 - 0x0000)
@@ -75,7 +69,6 @@ struct Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_Net_Projectile fi
 public:
 	class AShooterProjectile*                     Net_Projectile_ref;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Interface_WeapFishingNet_C_Interface_WeapFishingNet_Get_Net_Projectile;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

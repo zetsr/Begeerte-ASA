@@ -46,7 +46,6 @@ public:
 		return GetDefaultObjImpl<UTemplateSequence>();
 	}
 };
-DUMPER7_ASSERTS_UTemplateSequence;
 
 // Class TemplateSequence.CameraAnimationSequence
 // 0x0000 (0x00F0 - 0x00F0)
@@ -66,7 +65,6 @@ public:
 		return GetDefaultObjImpl<UCameraAnimationSequence>();
 	}
 };
-DUMPER7_ASSERTS_UCameraAnimationSequence;
 
 // Class TemplateSequence.CameraAnimationSequenceCameraStandIn
 // 0x0958 (0x0980 - 0x0028)
@@ -103,7 +101,6 @@ public:
 		return GetDefaultObjImpl<UCameraAnimationSequenceCameraStandIn>();
 	}
 };
-DUMPER7_ASSERTS_UCameraAnimationSequenceCameraStandIn;
 
 // Class TemplateSequence.CameraAnimationSequencePlayer
 // 0x0300 (0x0328 - 0x0028)
@@ -130,7 +127,6 @@ public:
 		return GetDefaultObjImpl<UCameraAnimationSequencePlayer>();
 	}
 };
-DUMPER7_ASSERTS_UCameraAnimationSequencePlayer;
 
 // Class TemplateSequence.CameraAnimationSpawnableSystem
 // 0x0000 (0x0040 - 0x0040)
@@ -150,7 +146,6 @@ public:
 		return GetDefaultObjImpl<UCameraAnimationSpawnableSystem>();
 	}
 };
-DUMPER7_ASSERTS_UCameraAnimationSpawnableSystem;
 
 // Class TemplateSequence.CameraAnimationBoundObjectInstantiator
 // 0x0000 (0x0040 - 0x0040)
@@ -170,7 +165,6 @@ public:
 		return GetDefaultObjImpl<UCameraAnimationBoundObjectInstantiator>();
 	}
 };
-DUMPER7_ASSERTS_UCameraAnimationBoundObjectInstantiator;
 
 // Class TemplateSequence.CameraAnimationEntitySystemLinker
 // 0x0000 (0x0750 - 0x0750)
@@ -190,7 +184,6 @@ public:
 		return GetDefaultObjImpl<UCameraAnimationEntitySystemLinker>();
 	}
 };
-DUMPER7_ASSERTS_UCameraAnimationEntitySystemLinker;
 
 // Class TemplateSequence.CameraAnimationSequenceSubsystem
 // 0x0018 (0x0048 - 0x0030)
@@ -214,7 +207,6 @@ public:
 		return GetDefaultObjImpl<UCameraAnimationSequenceSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UCameraAnimationSequenceSubsystem;
 
 // Class TemplateSequence.TemplateSequenceSection
 // 0x0010 (0x07F0 - 0x07E0)
@@ -237,7 +229,6 @@ public:
 		return GetDefaultObjImpl<UTemplateSequenceSection>();
 	}
 };
-DUMPER7_ASSERTS_UTemplateSequenceSection;
 
 // Class TemplateSequence.SequenceCameraShakePattern
 // 0x0050 (0x0078 - 0x0028)
@@ -270,7 +261,6 @@ public:
 		return GetDefaultObjImpl<USequenceCameraShakePattern>();
 	}
 };
-DUMPER7_ASSERTS_USequenceCameraShakePattern;
 
 // Class TemplateSequence.TemplateSequenceSystem
 // 0x0070 (0x00B0 - 0x0040)
@@ -293,7 +283,6 @@ public:
 		return GetDefaultObjImpl<UTemplateSequenceSystem>();
 	}
 };
-DUMPER7_ASSERTS_UTemplateSequenceSystem;
 
 // Class TemplateSequence.TemplateSequencePropertyScalingInstantiatorSystem
 // 0x0058 (0x0098 - 0x0040)
@@ -316,7 +305,6 @@ public:
 		return GetDefaultObjImpl<UTemplateSequencePropertyScalingInstantiatorSystem>();
 	}
 };
-DUMPER7_ASSERTS_UTemplateSequencePropertyScalingInstantiatorSystem;
 
 // Class TemplateSequence.TemplateSequencePropertyScalingEvaluatorSystem
 // 0x0050 (0x0090 - 0x0040)
@@ -339,7 +327,6 @@ public:
 		return GetDefaultObjImpl<UTemplateSequencePropertyScalingEvaluatorSystem>();
 	}
 };
-DUMPER7_ASSERTS_UTemplateSequencePropertyScalingEvaluatorSystem;
 
 // Class TemplateSequence.TemplateSequenceActor
 // 0x0068 (0x04F8 - 0x0490)
@@ -375,7 +362,6 @@ public:
 		return GetDefaultObjImpl<ATemplateSequenceActor>();
 	}
 };
-DUMPER7_ASSERTS_ATemplateSequenceActor;
 
 // Class TemplateSequence.TemplateSequencePlayer
 // 0x0008 (0x0498 - 0x0490)
@@ -401,7 +387,6 @@ public:
 		return GetDefaultObjImpl<UTemplateSequencePlayer>();
 	}
 };
-DUMPER7_ASSERTS_UTemplateSequencePlayer;
 
 // Class TemplateSequence.SequenceCameraShakeTestUtil
 // 0x0000 (0x0028 - 0x0028)
@@ -426,7 +411,6 @@ public:
 		return GetDefaultObjImpl<USequenceCameraShakeTestUtil>();
 	}
 };
-DUMPER7_ASSERTS_USequenceCameraShakeTestUtil;
 
 // Class TemplateSequence.TemplateSequenceTrack
 // 0x0000 (0x0108 - 0x0108)
@@ -446,6 +430,5 @@ public:
 		return GetDefaultObjImpl<UTemplateSequenceTrack>();
 	}
 };
-DUMPER7_ASSERTS_UTemplateSequenceTrack;
 
 SDK_NAMESPACE_END

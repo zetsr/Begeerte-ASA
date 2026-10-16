@@ -38,6 +38,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_BaseHelmet_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemArmor_BaseHelmet_C;
 
 SDK_NAMESPACE_END

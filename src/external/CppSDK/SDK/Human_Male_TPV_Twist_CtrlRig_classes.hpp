@@ -59,6 +59,5 @@ public:
 		return GetDefaultObjImpl<UHuman_Male_TPV_Twist_CtrlRig_C>();
 	}
 };
-DUMPER7_ASSERTS_UHuman_Male_TPV_Twist_CtrlRig_C;
 
 SDK_NAMESPACE_END

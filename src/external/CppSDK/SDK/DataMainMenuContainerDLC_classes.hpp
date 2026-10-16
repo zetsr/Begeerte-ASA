@@ -42,6 +42,5 @@ public:
 		return GetDefaultObjImpl<UDataMainMenuContainerDLC_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataMainMenuContainerDLC_C;
 
 SDK_NAMESPACE_END

@@ -59,6 +59,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Button_Dropdown_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Button_Dropdown_C;
 
 SDK_NAMESPACE_END

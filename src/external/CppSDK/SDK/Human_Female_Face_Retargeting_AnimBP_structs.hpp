@@ -31,6 +31,5 @@ public:
 	struct FAnimNodeExposedValueHandler           AnimGraphNode_LinkedInputPose;                     // 0x0100(0x0008)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig;                     // 0x0108(0x0030)()
 };
-DUMPER7_ASSERTS_Human_Female_Face_Retargeting_AnimBP__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

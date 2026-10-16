@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "cfcore_ui_structs.hpp"
 #include "ENUM_CFCore_InputDevices_structs.hpp"
 #include "ENUM_CFCore_SideTabs_structs.hpp"
+#include "cfcore_ui_structs.hpp"
 #include "CFCoreUIWidget_MainModShop_classes.hpp"
 
 
@@ -177,6 +177,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_StoreMenu_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_StoreMenu_C;
 
 SDK_NAMESPACE_END

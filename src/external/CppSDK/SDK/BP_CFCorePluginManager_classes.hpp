@@ -143,6 +143,5 @@ public:
 		return GetDefaultObjImpl<ABP_CFCorePluginManager_C>();
 	}
 };
-DUMPER7_ASSERTS_ABP_CFCorePluginManager_C;
 
 SDK_NAMESPACE_END

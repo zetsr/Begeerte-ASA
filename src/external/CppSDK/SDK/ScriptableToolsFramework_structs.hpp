@@ -135,7 +135,6 @@ public:
 	bool                                          bCtrlDown;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAltDown;                                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FScriptableToolModifierStates;
 
 // ScriptStruct ScriptableToolsFramework.ScriptableToolGizmoOptions
 // 0x0018 (0x0018 - 0x0000)
@@ -154,7 +153,6 @@ public:
 	bool                                          bAllowNegativeScaling;                             // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FScriptableToolGizmoOptions;
 
 // ScriptStruct ScriptableToolsFramework.ScriptableToolGroupSet
 // 0x0050 (0x0050 - 0x0000)
@@ -163,6 +161,5 @@ struct FScriptableToolGroupSet final
 public:
 	TSet<TSubclassOf<class UScriptableToolGroupTag>> Groups;                                         // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FScriptableToolGroupSet;
 
 SDK_NAMESPACE_END

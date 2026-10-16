@@ -44,7 +44,6 @@ public:
 		return GetDefaultObjImpl<UDataRegistrySettings>();
 	}
 };
-DUMPER7_ASSERTS_UDataRegistrySettings;
 
 // Class DataRegistry.DataRegistry
 // 0x0098 (0x00C0 - 0x0028)
@@ -74,7 +73,6 @@ public:
 		return GetDefaultObjImpl<UDataRegistry>();
 	}
 };
-DUMPER7_ASSERTS_UDataRegistry;
 
 // Class DataRegistry.DataRegistrySource
 // 0x0010 (0x0038 - 0x0028)
@@ -98,7 +96,6 @@ public:
 		return GetDefaultObjImpl<UDataRegistrySource>();
 	}
 };
-DUMPER7_ASSERTS_UDataRegistrySource;
 
 // Class DataRegistry.MetaDataRegistrySource
 // 0x00D0 (0x0108 - 0x0038)
@@ -125,7 +122,6 @@ public:
 		return GetDefaultObjImpl<UMetaDataRegistrySource>();
 	}
 };
-DUMPER7_ASSERTS_UMetaDataRegistrySource;
 
 // Class DataRegistry.DataRegistrySource_CurveTable
 // 0x0068 (0x00A0 - 0x0038)
@@ -152,7 +148,6 @@ public:
 		return GetDefaultObjImpl<UDataRegistrySource_CurveTable>();
 	}
 };
-DUMPER7_ASSERTS_UDataRegistrySource_CurveTable;
 
 // Class DataRegistry.MetaDataRegistrySource_CurveTable
 // 0x0010 (0x0118 - 0x0108)
@@ -176,7 +171,6 @@ public:
 		return GetDefaultObjImpl<UMetaDataRegistrySource_CurveTable>();
 	}
 };
-DUMPER7_ASSERTS_UMetaDataRegistrySource_CurveTable;
 
 // Class DataRegistry.DataRegistrySource_DataTable
 // 0x0068 (0x00A0 - 0x0038)
@@ -203,7 +197,6 @@ public:
 		return GetDefaultObjImpl<UDataRegistrySource_DataTable>();
 	}
 };
-DUMPER7_ASSERTS_UDataRegistrySource_DataTable;
 
 // Class DataRegistry.MetaDataRegistrySource_DataTable
 // 0x0010 (0x0118 - 0x0108)
@@ -227,7 +220,6 @@ public:
 		return GetDefaultObjImpl<UMetaDataRegistrySource_DataTable>();
 	}
 };
-DUMPER7_ASSERTS_UMetaDataRegistrySource_DataTable;
 
 // Class DataRegistry.DataRegistrySubsystem
 // 0x00B0 (0x00E0 - 0x0030)
@@ -267,6 +259,5 @@ public:
 		return GetDefaultObjImpl<UDataRegistrySubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UDataRegistrySubsystem;
 
 SDK_NAMESPACE_END

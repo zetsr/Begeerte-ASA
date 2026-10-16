@@ -45,6 +45,5 @@ public:
 		return GetDefaultObjImpl<UGetRandomFleePoint_TK_C>();
 	}
 };
-DUMPER7_ASSERTS_UGetRandomFleePoint_TK_C;
 
 SDK_NAMESPACE_END

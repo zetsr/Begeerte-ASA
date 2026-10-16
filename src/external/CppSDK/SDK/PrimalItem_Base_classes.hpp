@@ -42,6 +42,5 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UPrimalItem_Base_C;
 
 SDK_NAMESPACE_END

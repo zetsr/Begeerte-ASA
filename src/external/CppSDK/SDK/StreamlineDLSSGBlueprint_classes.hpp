@@ -45,6 +45,5 @@ public:
 		return GetDefaultObjImpl<UStreamlineLibraryDLSSG>();
 	}
 };
-DUMPER7_ASSERTS_UStreamlineLibraryDLSSG;
 
 SDK_NAMESPACE_END

@@ -36,7 +36,6 @@ public:
 		return GetDefaultObjImpl<UPhysicalMaterialPropertyBase>();
 	}
 };
-DUMPER7_ASSERTS_UPhysicalMaterialPropertyBase;
 
 // Class PhysicsCore.BodySetupCore
 // 0x0010 (0x0038 - 0x0028)
@@ -69,7 +68,6 @@ public:
 		return GetDefaultObjImpl<UBodySetupCore>();
 	}
 };
-DUMPER7_ASSERTS_UBodySetupCore;
 
 // Class PhysicsCore.ChaosPhysicalMaterial
 // 0x0020 (0x0048 - 0x0028)
@@ -99,7 +97,6 @@ public:
 		return GetDefaultObjImpl<UChaosPhysicalMaterial>();
 	}
 };
-DUMPER7_ASSERTS_UChaosPhysicalMaterial;
 
 // Class PhysicsCore.PhysicalMaterial
 // 0x0080 (0x00A8 - 0x0028)
@@ -153,7 +150,6 @@ public:
 		return GetDefaultObjImpl<UPhysicalMaterial>();
 	}
 };
-DUMPER7_ASSERTS_UPhysicalMaterial;
 
 // Class PhysicsCore.PhysicsSettingsCore
 // 0x00B0 (0x00E8 - 0x0038)
@@ -203,6 +199,5 @@ public:
 		return GetDefaultObjImpl<UPhysicsSettingsCore>();
 	}
 };
-DUMPER7_ASSERTS_UPhysicsSettingsCore;
 
 SDK_NAMESPACE_END

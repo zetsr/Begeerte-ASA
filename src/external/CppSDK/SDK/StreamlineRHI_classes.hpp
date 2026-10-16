@@ -39,7 +39,6 @@ public:
 		return GetDefaultObjImpl<UStreamlineOverrideSettings>();
 	}
 };
-DUMPER7_ASSERTS_UStreamlineOverrideSettings;
 
 // Class StreamlineRHI.StreamlineSettings
 // 0x0010 (0x0038 - 0x0028)
@@ -69,6 +68,5 @@ public:
 		return GetDefaultObjImpl<UStreamlineSettings>();
 	}
 };
-DUMPER7_ASSERTS_UStreamlineSettings;
 
 SDK_NAMESPACE_END

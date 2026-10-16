@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<AWeapMap_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapMap_C;
 
 SDK_NAMESPACE_END

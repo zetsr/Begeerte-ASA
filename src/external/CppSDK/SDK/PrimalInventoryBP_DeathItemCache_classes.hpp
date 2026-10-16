@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalInventoryBP_DeathItemCache_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalInventoryBP_DeathItemCache_C;
 
 SDK_NAMESPACE_END

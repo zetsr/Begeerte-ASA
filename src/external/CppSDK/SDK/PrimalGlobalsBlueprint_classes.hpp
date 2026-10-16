@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalGlobalsBlueprint_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalGlobalsBlueprint_C;
 
 SDK_NAMESPACE_END

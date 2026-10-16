@@ -60,6 +60,5 @@ public:
 		return GetDefaultObjImpl<UToolTipWidgetPrimalDino_C>();
 	}
 };
-DUMPER7_ASSERTS_UToolTipWidgetPrimalDino_C;
 
 SDK_NAMESPACE_END

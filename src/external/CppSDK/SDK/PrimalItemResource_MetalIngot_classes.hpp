@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_MetalIngot_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_MetalIngot_C;
 
 SDK_NAMESPACE_END

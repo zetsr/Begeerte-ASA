@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<ADestroyedMeshBase_C>();
 	}
 };
-DUMPER7_ASSERTS_ADestroyedMeshBase_C;
 
 SDK_NAMESPACE_END

@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_NewsCarousel_Nav_Left_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_NewsCarousel_Nav_Left_C;
 
 SDK_NAMESPACE_END

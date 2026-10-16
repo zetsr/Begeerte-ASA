@@ -27,7 +27,6 @@ public:
 	struct FPerPlatformBool                       Enabled;                                           // 0x0014(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimationSetup;
 
 // ScriptStruct AnimationSharing.AnimationStateEntry
 // 0x0030 (0x0030 - 0x0000)
@@ -50,7 +49,6 @@ public:
 	bool                                          bRequiresCurves;                                   // 0x002C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimationStateEntry;
 
 // ScriptStruct AnimationSharing.PerSkeletonAnimationSharingSetup
 // 0x0040 (0x0040 - 0x0000)
@@ -65,7 +63,6 @@ public:
 	TArray<struct FAnimationStateEntry>           AnimationStates;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	class FName                                   AnimationSkeletonTag;                              // 0x0038(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPerSkeletonAnimationSharingSetup;
 
 // ScriptStruct AnimationSharing.AnimationSharingScalability
 // 0x0010 (0x0010 - 0x0000)
@@ -78,7 +75,6 @@ public:
 	struct FPerPlatformInt                        MaximumNumberConcurrentBlends;                     // 0x0008(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPerPlatformFloat                      TickSignificanceValue;                             // 0x000C(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAnimationSharingScalability;
 
 // ScriptStruct AnimationSharing.TickAnimationSharingFunction
 // 0x0008 (0x0038 - 0x0030)
@@ -87,6 +83,5 @@ struct FTickAnimationSharingFunction final : public FTickFunction
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTickAnimationSharingFunction;
 
 SDK_NAMESPACE_END

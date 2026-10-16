@@ -47,6 +47,5 @@ public:
 		return GetDefaultObjImpl<UDyeRegionButton_C>();
 	}
 };
-DUMPER7_ASSERTS_UDyeRegionButton_C;
 
 SDK_NAMESPACE_END

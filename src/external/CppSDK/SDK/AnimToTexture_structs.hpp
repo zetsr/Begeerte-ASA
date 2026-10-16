@@ -55,7 +55,6 @@ public:
 	int32                                         EndFrame;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimToTextureAnimSequenceInfo;
 
 // ScriptStruct AnimToTexture.AnimToTextureAnimInfo
 // 0x0008 (0x0008 - 0x0000)
@@ -65,7 +64,6 @@ public:
 	int32                                         StartFrame;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         EndFrame;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAnimToTextureAnimInfo;
 
 // ScriptStruct AnimToTexture.AnimToTextureFrameData
 // 0x0008 (0x0008 - 0x0000)
@@ -75,7 +73,6 @@ public:
 	float                                         Frame;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PrevFrame;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAnimToTextureFrameData;
 
 // ScriptStruct AnimToTexture.AnimToTextureAutoPlayData
 // 0x0010 (0x0010 - 0x0000)
@@ -87,6 +84,5 @@ public:
 	float                                         StartFrame;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndFrame;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAnimToTextureAutoPlayData;
 
 SDK_NAMESPACE_END

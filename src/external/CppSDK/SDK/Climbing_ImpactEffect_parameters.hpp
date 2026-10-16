@@ -25,7 +25,6 @@ public:
 	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0000(0x0008)(NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Climbing_ImpactEffect_C_DeactivateImpactEffect;
 
 // Function Climbing_ImpactEffect.Climbing_ImpactEffect_C.ExecuteUbergraph_Climbing_ImpactEffect
 // 0x0058 (0x0058 - 0x0000)
@@ -46,7 +45,6 @@ public:
 	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetVolumeMultiplier_NewVolumeMultiplier_ImplicitCast; // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Climbing_ImpactEffect_C_ExecuteUbergraph_Climbing_ImpactEffect;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

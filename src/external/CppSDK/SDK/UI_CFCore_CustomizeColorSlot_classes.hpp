@@ -53,6 +53,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_CustomizeColorSlot_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_CustomizeColorSlot_C;
 
 SDK_NAMESPACE_END

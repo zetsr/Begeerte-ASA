@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UWBP_UI_DiscordNotifications_C>();
 	}
 };
-DUMPER7_ASSERTS_UWBP_UI_DiscordNotifications_C;
 
 SDK_NAMESPACE_END

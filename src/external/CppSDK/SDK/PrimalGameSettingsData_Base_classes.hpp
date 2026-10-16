@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalGameSettingsData_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalGameSettingsData_Base_C;
 
 SDK_NAMESPACE_END

@@ -42,6 +42,5 @@ public:
 		return GetDefaultObjImpl<URotateToTarget_SRV_C>();
 	}
 };
-DUMPER7_ASSERTS_URotateToTarget_SRV_C;
 
 SDK_NAMESPACE_END

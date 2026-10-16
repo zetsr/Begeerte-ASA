@@ -68,6 +68,5 @@ public:
 		return GetDefaultObjImpl<UBP_VFX_Spawn_Footprint_AnimNotify_C>();
 	}
 };
-DUMPER7_ASSERTS_UBP_VFX_Spawn_Footprint_AnimNotify_C;
 
 SDK_NAMESPACE_END

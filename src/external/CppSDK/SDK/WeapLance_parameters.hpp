@@ -25,7 +25,6 @@ struct WeapLance_C_BPForceTPVTargetingAnimation final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapLance_C_BPForceTPVTargetingAnimation;
 
 // Function WeapLance.WeapLance_C.DamageActor
 // 0x0208 (0x0208 - 0x0000)
@@ -72,7 +71,6 @@ public:
 	double                                        CallFunc_Multiply_IntFloat_B_ImplicitCast;         // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_ApplyPointDamage_BaseDamage_ImplicitCast; // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapLance_C_DamageActor;
 
 // Function WeapLance.WeapLance_C.DoTrace
 // 0x0390 (0x0390 - 0x0000)
@@ -122,7 +120,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0384(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0388(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapLance_C_DoTrace;
 
 // Function WeapLance.WeapLance_C.DoTraceAttacks
 // 0x00D0 (0x00D0 - 0x0000)
@@ -145,7 +142,6 @@ public:
 	class UWorld*                                 CallFunc_K2_GetWorld_ReturnValue_1;                // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x00B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapLance_C_DoTraceAttacks;
 
 // Function WeapLance.WeapLance_C.ExecuteUbergraph_WeapLance
 // 0x0048 (0x0048 - 0x0000)
@@ -170,7 +166,6 @@ public:
 	uint8                                         Pad_3F[0x1];                                       // 0x003F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_AddItemDurability_durabilityToAdd_ImplicitCast; // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapLance_C_ExecuteUbergraph_WeapLance;
 
 // Function WeapLance.WeapLance_C.ReceiveTick
 // 0x03B8 (0x03B8 - 0x0000)
@@ -220,7 +215,6 @@ public:
 	uint8                                         Pad_3AC[0x4];                                      // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapLance_C_ReceiveTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -56,7 +56,6 @@ public:
 	int32                                         Text;                                              // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Video;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMediaPlayerTrackOptions;
 
 // ScriptStruct MediaUtils.MediaPlayerOptions
 // 0x0080 (0x0080 - 0x0000)
@@ -72,6 +71,5 @@ public:
 	EMediaPlayerOptionBooleanOverride             Loop;                                              // 0x002A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2B[0x55];                                      // 0x002B(0x0055)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMediaPlayerOptions;
 
 SDK_NAMESPACE_END

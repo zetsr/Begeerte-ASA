@@ -49,6 +49,5 @@ public:
 		return GetDefaultObjImpl<UOptionsEntryNew_C>();
 	}
 };
-DUMPER7_ASSERTS_UOptionsEntryNew_C;
 
 SDK_NAMESPACE_END

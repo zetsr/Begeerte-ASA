@@ -143,6 +143,5 @@ public:
 		return GetDefaultObjImpl<UHuman_Male_TPV_PPAnimBP_C>();
 	}
 };
-DUMPER7_ASSERTS_UHuman_Male_TPV_PPAnimBP_C;
 
 SDK_NAMESPACE_END

@@ -39,7 +39,6 @@ public:
 		return GetDefaultObjImpl<UMassSubsystemBase>();
 	}
 };
-DUMPER7_ASSERTS_UMassSubsystemBase;
 
 // Class MassEntity.MassTickableSubsystemBase
 // 0x0008 (0x0048 - 0x0040)
@@ -62,7 +61,6 @@ public:
 		return GetDefaultObjImpl<UMassTickableSubsystemBase>();
 	}
 };
-DUMPER7_ASSERTS_UMassTickableSubsystemBase;
 
 // Class MassEntity.MassModuleSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -82,7 +80,6 @@ public:
 		return GetDefaultObjImpl<UMassModuleSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMassModuleSettings;
 
 // Class MassEntity.MassEntitySettings
 // 0x0108 (0x0130 - 0x0028)
@@ -110,7 +107,6 @@ public:
 		return GetDefaultObjImpl<UMassEntitySettings>();
 	}
 };
-DUMPER7_ASSERTS_UMassEntitySettings;
 
 // Class MassEntity.MassEntitySubsystem
 // 0x0010 (0x0048 - 0x0038)
@@ -133,7 +129,6 @@ public:
 		return GetDefaultObjImpl<UMassEntitySubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassEntitySubsystem;
 
 // Class MassEntity.MassProcessor
 // 0x0088 (0x00B0 - 0x0028)
@@ -162,7 +157,6 @@ public:
 		return GetDefaultObjImpl<UMassProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassProcessor;
 
 // Class MassEntity.MassObserverProcessor
 // 0x0018 (0x00C8 - 0x00B0)
@@ -188,7 +182,6 @@ public:
 		return GetDefaultObjImpl<UMassObserverProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassObserverProcessor;
 
 // Class MassEntity.MassObserverRegistry
 // 0x0140 (0x0168 - 0x0028)
@@ -212,7 +205,6 @@ public:
 		return GetDefaultObjImpl<UMassObserverRegistry>();
 	}
 };
-DUMPER7_ASSERTS_UMassObserverRegistry;
 
 // Class MassEntity.MassCompositeProcessor
 // 0x0040 (0x00F0 - 0x00B0)
@@ -237,7 +229,6 @@ public:
 		return GetDefaultObjImpl<UMassCompositeProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassCompositeProcessor;
 
 // Class MassEntity.MassSettings
 // 0x0050 (0x0088 - 0x0038)
@@ -260,6 +251,5 @@ public:
 		return GetDefaultObjImpl<UMassSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMassSettings;
 
 SDK_NAMESPACE_END

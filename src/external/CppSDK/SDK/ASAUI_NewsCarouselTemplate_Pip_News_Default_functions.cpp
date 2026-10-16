@@ -39,9 +39,9 @@ void UASAUI_NewsCarouselTemplate_Pip_News_Default_C::ExecuteUbergraph_ASAUI_News
 // Function ASAUI_NewsCarouselTemplate_Pip_News_Default.ASAUI_NewsCarouselTemplate_Pip_News_Default_C.EntryFocusStart
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    bInstigatedByAutoRollover                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInstigatedByAutoRollover_EntryFocusStart              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUI_NewsCarouselTemplate_Pip_News_Default_C::EntryFocusStart(bool bInstigatedByAutoRollover)
+void UASAUI_NewsCarouselTemplate_Pip_News_Default_C::EntryFocusStart(bool bInstigatedByAutoRollover_EntryFocusStart)
 {
 	static class UFunction* Func = nullptr;
 
@@ -50,7 +50,7 @@ void UASAUI_NewsCarouselTemplate_Pip_News_Default_C::EntryFocusStart(bool bInsti
 
 	Params::ASAUI_NewsCarouselTemplate_Pip_News_Default_C_EntryFocusStart Parms{};
 
-	Parms.bInstigatedByAutoRollover = bInstigatedByAutoRollover;
+	Parms.bInstigatedByAutoRollover_EntryFocusStart = bInstigatedByAutoRollover_EntryFocusStart;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -59,9 +59,9 @@ void UASAUI_NewsCarouselTemplate_Pip_News_Default_C::EntryFocusStart(bool bInsti
 // Function ASAUI_NewsCarouselTemplate_Pip_News_Default.ASAUI_NewsCarouselTemplate_Pip_News_Default_C.EntryFocusEnd
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    bInstigatedByAutoRollover                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInstigatedByAutoRollover_EntryFocusEnd                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUI_NewsCarouselTemplate_Pip_News_Default_C::EntryFocusEnd(bool bInstigatedByAutoRollover)
+void UASAUI_NewsCarouselTemplate_Pip_News_Default_C::EntryFocusEnd(bool bInstigatedByAutoRollover_EntryFocusEnd)
 {
 	static class UFunction* Func = nullptr;
 
@@ -70,7 +70,7 @@ void UASAUI_NewsCarouselTemplate_Pip_News_Default_C::EntryFocusEnd(bool bInstiga
 
 	Params::ASAUI_NewsCarouselTemplate_Pip_News_Default_C_EntryFocusEnd Parms{};
 
-	Parms.bInstigatedByAutoRollover = bInstigatedByAutoRollover;
+	Parms.bInstigatedByAutoRollover_EntryFocusEnd = bInstigatedByAutoRollover_EntryFocusEnd;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

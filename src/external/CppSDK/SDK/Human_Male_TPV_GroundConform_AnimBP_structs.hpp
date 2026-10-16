@@ -38,6 +38,5 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace;          // 0x0250(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace;          // 0x0280(0x0030)()
 };
-DUMPER7_ASSERTS_Human_Male_TPV_GroundConform_AnimBP__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

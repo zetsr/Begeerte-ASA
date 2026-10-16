@@ -24,7 +24,6 @@ struct OctreeDynamicMeshComponent_SetDynamicMesh final
 public:
 	class UDynamicMesh*                           NewMesh;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_OctreeDynamicMeshComponent_SetDynamicMesh;
 
 // Function ModelingComponents.LineSetComponent.AddLines
 // 0x0030 (0x0030 - 0x0000)
@@ -38,7 +37,6 @@ public:
 	float                                         InDepthBias;                                       // 0x0028(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_LineSetComponent_AddLines;
 
 // Function ModelingComponents.LineSetComponent.SetLineMaterial
 // 0x0008 (0x0008 - 0x0000)
@@ -47,7 +45,6 @@ struct LineSetComponent_SetLineMaterial final
 public:
 	class UMaterialInterface*                     InLineMaterial;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_LineSetComponent_SetLineMaterial;
 
 // Function ModelingComponents.PreviewGeometry.AddLineSet
 // 0x0018 (0x0018 - 0x0000)
@@ -57,7 +54,6 @@ public:
 	class FString                                 LineSetIdentifier;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULineSetComponent*                      ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_AddLineSet;
 
 // Function ModelingComponents.PreviewGeometry.AddPointSet
 // 0x0018 (0x0018 - 0x0000)
@@ -67,7 +63,6 @@ public:
 	class FString                                 PointSetIdentifier;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPointSetComponent*                     ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_AddPointSet;
 
 // Function ModelingComponents.PreviewGeometry.AddTriangleSet
 // 0x0018 (0x0018 - 0x0000)
@@ -77,7 +72,6 @@ public:
 	class FString                                 TriangleSetIdentifier;                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTriangleSetComponent*                  ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_AddTriangleSet;
 
 // Function ModelingComponents.PreviewGeometry.CreateInWorld
 // 0x0070 (0x0070 - 0x0000)
@@ -88,7 +82,6 @@ public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             WithTransform;                                     // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_CreateInWorld;
 
 // Function ModelingComponents.PreviewGeometry.FindLineSet
 // 0x0018 (0x0018 - 0x0000)
@@ -98,7 +91,6 @@ public:
 	class FString                                 LineSetIdentifier;                                 // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULineSetComponent*                      ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_FindLineSet;
 
 // Function ModelingComponents.PreviewGeometry.FindPointSet
 // 0x0018 (0x0018 - 0x0000)
@@ -108,7 +100,6 @@ public:
 	class FString                                 PointSetIdentifier;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPointSetComponent*                     ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_FindPointSet;
 
 // Function ModelingComponents.PreviewGeometry.FindTriangleSet
 // 0x0018 (0x0018 - 0x0000)
@@ -118,7 +109,6 @@ public:
 	class FString                                 TriangleSetIdentifier;                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTriangleSetComponent*                  ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_FindTriangleSet;
 
 // Function ModelingComponents.PreviewGeometry.RemoveAllLineSets
 // 0x0001 (0x0001 - 0x0000)
@@ -127,7 +117,6 @@ struct PreviewGeometry_RemoveAllLineSets final
 public:
 	bool                                          bDestroy;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_RemoveAllLineSets;
 
 // Function ModelingComponents.PreviewGeometry.RemoveAllPointSets
 // 0x0001 (0x0001 - 0x0000)
@@ -136,7 +125,6 @@ struct PreviewGeometry_RemoveAllPointSets final
 public:
 	bool                                          bDestroy;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_RemoveAllPointSets;
 
 // Function ModelingComponents.PreviewGeometry.RemoveAllTriangleSets
 // 0x0001 (0x0001 - 0x0000)
@@ -145,7 +133,6 @@ struct PreviewGeometry_RemoveAllTriangleSets final
 public:
 	bool                                          bDestroy;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_RemoveAllTriangleSets;
 
 // Function ModelingComponents.PreviewGeometry.RemoveLineSet
 // 0x0018 (0x0018 - 0x0000)
@@ -157,7 +144,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PreviewGeometry_RemoveLineSet;
 
 // Function ModelingComponents.PreviewGeometry.RemovePointSet
 // 0x0018 (0x0018 - 0x0000)
@@ -169,7 +155,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PreviewGeometry_RemovePointSet;
 
 // Function ModelingComponents.PreviewGeometry.RemoveTriangleSet
 // 0x0018 (0x0018 - 0x0000)
@@ -181,7 +166,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PreviewGeometry_RemoveTriangleSet;
 
 // Function ModelingComponents.PreviewGeometry.SetAllLineSetsMaterial
 // 0x0008 (0x0008 - 0x0000)
@@ -190,7 +174,6 @@ struct PreviewGeometry_SetAllLineSetsMaterial final
 public:
 	class UMaterialInterface*                     Material;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_SetAllLineSetsMaterial;
 
 // Function ModelingComponents.PreviewGeometry.SetAllPointSetsMaterial
 // 0x0008 (0x0008 - 0x0000)
@@ -199,7 +182,6 @@ struct PreviewGeometry_SetAllPointSetsMaterial final
 public:
 	class UMaterialInterface*                     Material;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_SetAllPointSetsMaterial;
 
 // Function ModelingComponents.PreviewGeometry.SetLineSetMaterial
 // 0x0020 (0x0020 - 0x0000)
@@ -211,7 +193,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PreviewGeometry_SetLineSetMaterial;
 
 // Function ModelingComponents.PreviewGeometry.SetLineSetVisibility
 // 0x0018 (0x0018 - 0x0000)
@@ -223,7 +204,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PreviewGeometry_SetLineSetVisibility;
 
 // Function ModelingComponents.PreviewGeometry.SetPointSetMaterial
 // 0x0020 (0x0020 - 0x0000)
@@ -235,7 +215,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PreviewGeometry_SetPointSetMaterial;
 
 // Function ModelingComponents.PreviewGeometry.SetPointSetVisibility
 // 0x0018 (0x0018 - 0x0000)
@@ -247,7 +226,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_PreviewGeometry_SetPointSetVisibility;
 
 // Function ModelingComponents.PreviewGeometry.GetActor
 // 0x0008 (0x0008 - 0x0000)
@@ -256,7 +234,6 @@ struct PreviewGeometry_GetActor final
 public:
 	class APreviewGeometryActor*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PreviewGeometry_GetActor;
 
 // Function ModelingComponents.ModelingObjectsCreationAPI.CreateMaterialObject
 // 0x0038 (0x0038 - 0x0000)
@@ -266,7 +243,6 @@ public:
 	struct FCreateMaterialObjectParams            CreateMaterialParams;                              // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FCreateMaterialObjectResult            ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateMaterialObject;
 
 // Function ModelingComponents.ModelingObjectsCreationAPI.CreateMeshObject
 // 0x0690 (0x0690 - 0x0000)
@@ -276,7 +252,6 @@ public:
 	struct FCreateMeshObjectParams                CreateMeshParams;                                  // 0x0000(0x0670)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	struct FCreateMeshObjectResult                ReturnValue;                                       // 0x0670(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateMeshObject;
 
 // Function ModelingComponents.ModelingObjectsCreationAPI.CreateNewActor
 // 0x00A0 (0x00A0 - 0x0000)
@@ -286,7 +261,6 @@ public:
 	struct FCreateActorParams                     CreateActorParams;                                 // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FCreateActorResult                     ReturnValue;                                       // 0x0090(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateNewActor;
 
 // Function ModelingComponents.ModelingObjectsCreationAPI.CreateTextureObject
 // 0x0050 (0x0050 - 0x0000)
@@ -296,7 +270,6 @@ public:
 	struct FCreateTextureObjectParams             CreateTexParams;                                   // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FCreateTextureObjectResult             ReturnValue;                                       // 0x0040(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ModelingObjectsCreationAPI_CreateTextureObject;
 
 // Function ModelingComponents.CreateMeshObjectTypeProperties.GetOutputTypeNamesFunc
 // 0x0010 (0x0010 - 0x0000)
@@ -305,7 +278,6 @@ struct CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CreateMeshObjectTypeProperties_GetOutputTypeNamesFunc;
 
 // Function ModelingComponents.CreateMeshObjectTypeProperties.GetCurrentCreateMeshType
 // 0x0001 (0x0001 - 0x0000)
@@ -314,7 +286,6 @@ struct CreateMeshObjectTypeProperties_GetCurrentCreateMeshType final
 public:
 	ECreateObjectTypeHint                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CreateMeshObjectTypeProperties_GetCurrentCreateMeshType;
 
 // Function ModelingComponents.CreateMeshObjectTypeProperties.ShouldShowPropertySet
 // 0x0001 (0x0001 - 0x0000)
@@ -323,7 +294,6 @@ struct CreateMeshObjectTypeProperties_ShouldShowPropertySet final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CreateMeshObjectTypeProperties_ShouldShowPropertySet;
 
 // Function ModelingComponents.PolygroupLayersProperties.GetGroupLayersFunc
 // 0x0010 (0x0010 - 0x0000)
@@ -332,7 +302,6 @@ struct PolygroupLayersProperties_GetGroupLayersFunc final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PolygroupLayersProperties_GetGroupLayersFunc;
 
 // Function ModelingComponents.WeightMapSetProperties.GetWeightMapsFunc
 // 0x0010 (0x0010 - 0x0000)
@@ -341,7 +310,6 @@ struct WeightMapSetProperties_GetWeightMapsFunc final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WeightMapSetProperties_GetWeightMapsFunc;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

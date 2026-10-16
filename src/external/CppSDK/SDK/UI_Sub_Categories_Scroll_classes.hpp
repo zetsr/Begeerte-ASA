@@ -66,6 +66,5 @@ public:
 		return GetDefaultObjImpl<UUI_Sub_Categories_Scroll_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Sub_Categories_Scroll_C;
 
 SDK_NAMESPACE_END

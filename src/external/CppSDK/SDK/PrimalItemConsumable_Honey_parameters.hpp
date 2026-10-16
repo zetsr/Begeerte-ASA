@@ -25,7 +25,6 @@ public:
 	class APrimalBuff*                            CallFunc_StaticAddBuff_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemConsumable_Honey_C_BPNotifyDropped;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

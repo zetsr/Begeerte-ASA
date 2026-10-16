@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UAnimationDataSourceRegistry>();
 	}
 };
-DUMPER7_ASSERTS_UAnimationDataSourceRegistry;
 
 SDK_NAMESPACE_END

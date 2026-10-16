@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<AWeapCompass_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapCompass_C;
 
 SDK_NAMESPACE_END

@@ -116,7 +116,6 @@ public:
 	struct FIntVector                             GpuDispatchNumThreads;                             // 0x0098(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSimulationStageMetaData;
 
 // ScriptStruct NiagaraShader.NiagaraCompileEvent
 // 0x0060 (0x0060 - 0x0000)
@@ -133,7 +132,6 @@ public:
 	EFNiagaraCompileEventSource                   Source;                                            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNiagaraCompileEvent;
 
 // ScriptStruct NiagaraShader.NiagaraDataInterfaceGeneratedFunction
 // 0x0050 (0x0050 - 0x0000)
@@ -144,7 +142,6 @@ public:
 	TArray<struct FNiagaraVariableCommonReference> VariadicInputs;                                   // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FNiagaraVariableCommonReference> VariadicOutputs;                                  // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNiagaraDataInterfaceGeneratedFunction;
 
 // ScriptStruct NiagaraShader.NiagaraDataInterfaceGPUParamInfo
 // 0x0038 (0x0038 - 0x0000)
@@ -157,7 +154,6 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FNiagaraDataInterfaceGeneratedFunction> GeneratedFunctions;                        // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNiagaraDataInterfaceGPUParamInfo;
 
 // ScriptStruct NiagaraShader.NiagaraShaderScriptExternalConstant
 // 0x0018 (0x0018 - 0x0000)
@@ -167,7 +163,6 @@ public:
 	class FName                                   Type;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Name;                                              // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNiagaraShaderScriptExternalConstant;
 
 // ScriptStruct NiagaraShader.NiagaraShaderScriptParametersMetadata
 // 0x0058 (0x0058 - 0x0000)
@@ -181,6 +176,5 @@ public:
 	TArray<struct FNiagaraShaderScriptExternalConstant> ExternalConstants;                           // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0x20];                                      // 0x0038(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNiagaraShaderScriptParametersMetadata;
 
 SDK_NAMESPACE_END

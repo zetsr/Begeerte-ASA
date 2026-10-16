@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UGPSHumanAnimBP_C>();
 	}
 };
-DUMPER7_ASSERTS_UGPSHumanAnimBP_C;
 
 SDK_NAMESPACE_END

@@ -12,8 +12,8 @@
 
 #include "cfcore_structs.hpp"
 #include "STRUCT_CustomComboBoxOption_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "STRUCT_SubOptions_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -28,7 +28,6 @@ public:
 	struct FSTRUCT_CustomComboBoxOption           K2Node_MakeStruct_STRUCT_CustomComboBoxOption;     // 0x0010(0x0038)(HasGetValueTypeHash)
 	struct FSTRUCT_CustomComboBoxOption           K2Node_MakeStruct_STRUCT_CustomComboBoxOption_1;   // 0x0048(0x0038)(HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CategoriesSelect_C_CreateAllCategoriesCategory;
 
 // Function UI_CategoriesSelect.UI_CategoriesSelect_C.ExecuteUbergraph_UI_CategoriesSelect
 // 0x0120 (0x0120 - 0x0000)
@@ -54,7 +53,6 @@ public:
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(const struct FCFCoreError& Error)> K2Node_CreateDelegate_OutputDelegate_1;        // 0x010C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CategoriesSelect_C_ExecuteUbergraph_UI_CategoriesSelect;
 
 // Function UI_CategoriesSelect.UI_CategoriesSelect_C.FilterOutCategories
 // 0x01A0 (0x01A0 - 0x0000)
@@ -86,7 +84,6 @@ public:
 	uint8                                         Pad_19A[0x2];                                      // 0x019A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CategoriesSelect_C_FilterOutCategories;
 
 // Function UI_CategoriesSelect.UI_CategoriesSelect_C.OnCategoriesInfoFound
 // 0x0010 (0x0010 - 0x0000)
@@ -95,7 +92,6 @@ struct UI_CategoriesSelect_C_OnCategoriesInfoFound final
 public:
 	TArray<struct FCategory>                      Categories;                                        // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CategoriesSelect_C_OnCategoriesInfoFound;
 
 // Function UI_CategoriesSelect.UI_CategoriesSelect_C.OnCategoriesInfoFound_Error
 // 0x0038 (0x0038 - 0x0000)
@@ -104,7 +100,6 @@ struct UI_CategoriesSelect_C_OnCategoriesInfoFound_Error final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CategoriesSelect_C_OnCategoriesInfoFound_Error;
 
 // Function UI_CategoriesSelect.UI_CategoriesSelect_C.OnOptionSelectedInterface
 // 0x0018 (0x0018 - 0x0000)
@@ -114,7 +109,6 @@ public:
 	class FString                                 Option;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int64                                         ID;                                                // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CategoriesSelect_C_OnOptionSelectedInterface;
 
 // Function UI_CategoriesSelect.UI_CategoriesSelect_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -123,7 +117,6 @@ struct UI_CategoriesSelect_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CategoriesSelect_C_PreConstruct;
 
 // Function UI_CategoriesSelect.UI_CategoriesSelect_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -133,7 +126,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CategoriesSelect_C_Tick;
 
 // Function UI_CategoriesSelect.UI_CategoriesSelect_C.UpdateOptions
 // 0x0008 (0x0008 - 0x0000)
@@ -142,7 +134,6 @@ struct UI_CategoriesSelect_C_UpdateOptions final
 public:
 	int64                                         Current_Class_Category_ID;                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CategoriesSelect_C_UpdateOptions;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

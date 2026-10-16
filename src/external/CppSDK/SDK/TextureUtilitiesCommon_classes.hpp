@@ -43,7 +43,6 @@ public:
 		return GetDefaultObjImpl<UTextureImportSettings>();
 	}
 };
-DUMPER7_ASSERTS_UTextureImportSettings;
 
 // Class TextureUtilitiesCommon.TextureImportUserSettings
 // 0x0008 (0x0040 - 0x0038)
@@ -67,6 +66,5 @@ public:
 		return GetDefaultObjImpl<UTextureImportUserSettings>();
 	}
 };
-DUMPER7_ASSERTS_UTextureImportUserSettings;
 
 SDK_NAMESPACE_END

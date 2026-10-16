@@ -100,7 +100,6 @@ public:
 	bool                                          bOnGameSessionIDChanged;                           // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOnUserActivityStringChanged;                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAutomaticBreadcrumbs;
 
 // ScriptStruct Sentry.AutomaticBreadcrumbsForLogs
 // 0x0005 (0x0005 - 0x0000)
@@ -113,7 +112,6 @@ public:
 	bool                                          bOnInfoLog;                                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOnDebugLog;                                       // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAutomaticBreadcrumbsForLogs;
 
 // ScriptStruct Sentry.StructuredLoggingLevels
 // 0x0005 (0x0005 - 0x0000)
@@ -126,7 +124,6 @@ public:
 	bool                                          bOnInfoLog;                                        // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOnDebugLog;                                       // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStructuredLoggingLevels;
 
 // ScriptStruct Sentry.TagsPromotion
 // 0x0006 (0x0006 - 0x0000)
@@ -140,7 +137,6 @@ public:
 	bool                                          bPromoteIsStandalone;                              // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPromoteIsUnattended;                              // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTagsPromotion;
 
 // ScriptStruct Sentry.EnableBuildConfigurations
 // 0x0005 (0x0005 - 0x0000)
@@ -153,7 +149,6 @@ public:
 	bool                                          bEnableTest;                                       // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableShipping;                                   // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEnableBuildConfigurations;
 
 // ScriptStruct Sentry.EnableBuildTargets
 // 0x0005 (0x0005 - 0x0000)
@@ -166,7 +161,6 @@ public:
 	bool                                          bEnableServer;                                     // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableProgram;                                    // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FEnableBuildTargets;
 
 // ScriptStruct Sentry.SentryVariant
 // 0x0020 (0x0020 - 0x0000)
@@ -175,7 +169,6 @@ struct alignas(0x08) FSentryVariant final
 public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSentryVariant;
 
 // ScriptStruct Sentry.SentryTransactionOptions
 // 0x0058 (0x0058 - 0x0000)
@@ -186,6 +179,5 @@ public:
 	bool                                          BindToScope;                                       // 0x0050(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSentryTransactionOptions;
 
 SDK_NAMESPACE_END

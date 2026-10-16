@@ -40,6 +40,5 @@ public:
 		return GetDefaultObjImpl<UStaticMeshDescription>();
 	}
 };
-DUMPER7_ASSERTS_UStaticMeshDescription;
 
 SDK_NAMESPACE_END

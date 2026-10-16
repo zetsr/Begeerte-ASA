@@ -63,7 +63,6 @@ public:
 	double                                        CallFunc_VSize_ReturnValue_1;                      // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_1;          // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_GetRandomFleePoint_TK_C_ExecuteUbergraph_GetRandomFleePoint_TK;
 
 // Function GetRandomFleePoint_TK.GetRandomFleePoint_TK_C.ReceiveExecute
 // 0x0008 (0x0008 - 0x0000)
@@ -72,7 +71,6 @@ struct GetRandomFleePoint_TK_C_ReceiveExecute final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_GetRandomFleePoint_TK_C_ReceiveExecute;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

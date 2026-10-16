@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Stone_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Stone_C;
 
 SDK_NAMESPACE_END

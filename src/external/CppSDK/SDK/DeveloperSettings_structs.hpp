@@ -20,7 +20,6 @@ struct FPerPlatformSettings final
 public:
 	TArray<class UPlatformSettings*>              Settings;                                          // 0x0000(0x0010)(Edit, ExportObject, EditFixedSize, ZeroConstructor, Transient, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FPerPlatformSettings;
 
 // ScriptStruct DeveloperSettings.PlatformSettingsInstances
 // 0x0058 (0x0058 - 0x0000)
@@ -30,6 +29,5 @@ public:
 	class UPlatformSettings*                      PlatformInstance;                                  // 0x0000(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	TMap<class FName, class UPlatformSettings*>   OtherPlatforms;                                    // 0x0008(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FPlatformSettingsInstances;
 
 SDK_NAMESPACE_END

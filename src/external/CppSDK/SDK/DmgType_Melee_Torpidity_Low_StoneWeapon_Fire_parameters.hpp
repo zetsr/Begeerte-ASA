@@ -41,7 +41,6 @@ public:
 	class UClass*                                 CallFunc_ClassAssetResolve_ReturnValue;            // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DmgType_Melee_Torpidity_Low_StoneWeapon_Fire_C_OverrideBuffToGiveVictimCharacter;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

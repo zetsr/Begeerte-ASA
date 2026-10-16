@@ -64,7 +64,6 @@ public:
 	float                                         K2Node_MakeArray__2__ImplicitCast;                 // 0x02E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_MakeArray__1__ImplicitCast;                 // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_ApplyingSkinOntoItem;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.BPGetCustomInventoryWidgetText
 // 0x0028 (0x0028 - 0x0000)
@@ -76,7 +75,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_SelectString_ReturnValue;                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_BPGetCustomInventoryWidgetText;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.BPGetCustomInventoryWidgetTextColor
 // 0x0028 (0x0028 - 0x0000)
@@ -93,7 +91,6 @@ public:
 	struct FColor                                 CallFunc_Conv_LinearColorToColor_ReturnValue;      // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FColor                                 K2Node_Select_Default;                             // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_BPGetCustomInventoryWidgetTextColor;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.BPPreventNewColorization
 // 0x0002 (0x0002 - 0x0000)
@@ -103,7 +100,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsTorchOnBelt_bIsOnBelt;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_BPPreventNewColorization;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.BPPreventUseOntoItem
 // 0x0020 (0x0020 - 0x0000)
@@ -121,7 +117,6 @@ public:
 	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_BPPreventUseOntoItem;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.BPPreventWeaponEquip
 // 0x0038 (0x0038 - 0x0000)
@@ -141,7 +136,6 @@ public:
 	class AShooterWeapon*                         CallFunc_GetWeapon_ReturnValue;                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_BPPreventWeaponEquip;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.BPUsedOntoItem
 // 0x0010 (0x0010 - 0x0000)
@@ -151,7 +145,6 @@ public:
 	class UPrimalItem*                            DestinationItem;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         AdditionalData;                                    // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_BPUsedOntoItem;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.ExecuteUbergraph_PrimalItem_WeaponTorch
 // 0x00A0 (0x00A0 - 0x0000)
@@ -197,7 +190,6 @@ public:
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_3;        // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x009E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_ExecuteUbergraph_PrimalItem_WeaponTorch;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.GetFlameColorIndex
 // 0x0014 (0x0014 - 0x0000)
@@ -211,7 +203,6 @@ public:
 	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_GetFlameColorIndex;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.PutTorchOnBelt
 // 0x0070 (0x0070 - 0x0000)
@@ -239,7 +230,6 @@ public:
 	class ABuff_BeltTorch_C*                      K2Node_DynamicCast_AsBuff_Belt_Torch;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_PutTorchOnBelt;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.RemovedSkinFromItem
 // 0x0100 (0x0100 - 0x0000)
@@ -267,7 +257,6 @@ public:
 	double                                        CallFunc_FFloor_A_ImplicitCast_1;                  // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FFloor_A_ImplicitCast_2;                  // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_RemovedSkinFromItem;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.RemoveTorchFromBelt
 // 0x0020 (0x0020 - 0x0000)
@@ -279,7 +268,6 @@ public:
 	class ABuff_BeltTorch_C*                      K2Node_DynamicCast_AsBuff_Belt_Torch;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_RemoveTorchFromBelt;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.SelectedCustomContextMenuItem
 // 0x0010 (0x0010 - 0x0000)
@@ -289,7 +277,6 @@ public:
 	class FName                                   ContextItem;                                       // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AShooterPlayerController*               ForPC;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_SelectedCustomContextMenuItem;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.SkinEquippedBlueprintTick
 // 0x0198 (0x0198 - 0x0000)
@@ -344,7 +331,6 @@ public:
 	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_ItemDurability_ImplicitCast;    // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_SkinEquippedBlueprintTick;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.UpdateBeltTorchMeshColors
 // 0x0040 (0x0040 - 0x0000)
@@ -363,7 +349,6 @@ public:
 	class ABuff_BeltTorch_C*                      K2Node_DynamicCast_AsBuff_Belt_Torch;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_UpdateBeltTorchMeshColors;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.BPShouldHideTopLevelCustomContextMenuOption
 // 0x0038 (0x0038 - 0x0000)
@@ -382,7 +367,6 @@ public:
 	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_BPShouldHideTopLevelCustomContextMenuOption;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.CanTorchBeOnBelt
 // 0x0038 (0x0038 - 0x0000)
@@ -399,7 +383,6 @@ public:
 	class AWeap_Torch_Base_C*                     K2Node_DynamicCast_AsWeap_Torch_Base;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_CanTorchBeOnBelt;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.GetBeltTorchBuffInstanceForCharacter
 // 0x0058 (0x0058 - 0x0000)
@@ -421,7 +404,6 @@ public:
 	class APrimalBuff*                            CallFunc_GetBuff_ReturnValue;                      // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_GetBeltTorchBuffInstanceForCharacter;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.IsCustomContextMenuItemEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -438,7 +420,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x000F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_IsCustomContextMenuItemEnabled;
 
 // Function PrimalItem_WeaponTorch.PrimalItem_WeaponTorch_C.IsTorchOnBelt
 // 0x0048 (0x0048 - 0x0000)
@@ -467,7 +448,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x003F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponTorch_C_IsTorchOnBelt;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

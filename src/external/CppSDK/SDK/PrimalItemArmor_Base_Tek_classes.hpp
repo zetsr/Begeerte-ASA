@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "PrimalItemArmorGeneric_classes.hpp"
 #include "Engine_structs.hpp"
 #include "MapSpecificTekArmorBuffs_structs.hpp"
-#include "PrimalItemArmorGeneric_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -67,6 +67,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_Base_Tek_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemArmor_Base_Tek_C;
 
 SDK_NAMESPACE_END

@@ -48,6 +48,5 @@ public:
 		return GetDefaultObjImpl<UIsWithinAttackRangeAndGetBestAttack_SRV_C>();
 	}
 };
-DUMPER7_ASSERTS_UIsWithinAttackRangeAndGetBestAttack_SRV_C;
 
 SDK_NAMESPACE_END

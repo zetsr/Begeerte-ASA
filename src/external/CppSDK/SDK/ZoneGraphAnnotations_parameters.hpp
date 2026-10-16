@@ -27,7 +27,6 @@ public:
 	float                                         Radius;                                            // 0x0028(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Duration;                                          // 0x002C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ZoneGraphDisturbanceAnnotationBPLibrary_TriggerDanger;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

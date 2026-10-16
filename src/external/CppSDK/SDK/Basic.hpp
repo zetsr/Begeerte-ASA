@@ -22,10 +22,12 @@
 * Omit the '-D IMPORT_CPP_SDK_INTO_IDA=1' if you want to keep the SDK namespace in IDA
 */
 #ifndef IMPORT_CPP_SDK_INTO_IDA
-	#define SDK_NAMESPACE_START namespace SDK {
+	#define SDK_NAMESPACE_NAME SDK
+	#define SDK_NAMESPACE_START namespace SDK_NAMESPACE_NAME {
 	#define SDK_NAMESPACE_END }
 	#define SDK_ALIGN(x) alignas(x)
 #else
+	#define SDK_NAMESPACE_NAME
 	#define SDK_NAMESPACE_START
 	#define SDK_NAMESPACE_END
 	#define SDK_ALIGN(x)
@@ -38,14 +40,16 @@
 #include <string>
 #include <functional>
 #include <type_traits>
+#include <format>
 
 #include "../PropertyFixup.hpp"
 #include "../UnrealContainers.hpp"
-#include "../Assertions.inl"
 
 SDK_NAMESPACE_START
 
+#ifndef IMPORT_CPP_SDK_INTO_IDA
 using namespace UC;
+#endif // IMPORT_CPP_SDK_INTO_IDA
 
 #include "../NameCollisions.inl"
 
@@ -56,12 +60,12 @@ using namespace UC;
 */
 namespace Offsets
 {
-	constexpr int32 GObjects          = 0x0D064270;
-	constexpr int32 AppendString      = 0x01846A90;
-	constexpr int32 GetNameEntry      = 0x018477C0;
-	constexpr int32 GNames            = 0x0D447540;
-	constexpr int32 GWorld            = 0x0D3FDFE8;
-	constexpr int32 ProcessEvent      = 0x01A93200;
+	constexpr int32 GObjects          = 0x0D069250;
+	constexpr int32 AppendString      = 0x01846D70;
+	constexpr int32 GetNameEntry      = 0x01847AA0;
+	constexpr int32 GNames            = 0x0D44C540;
+	constexpr int32 GWorld            = 0x0D402FE8;
+	constexpr int32 ProcessEvent      = 0x01A935C0;
 	constexpr int32 ProcessEventIdx   = 0x00000050;
 }
 
@@ -90,7 +94,7 @@ namespace InSDKUtils
 class UClass;
 class UObject;
 class UFunction;
-
+class UScriptStruct;
 class FName;
 
 namespace BasicFilesImplUtils
@@ -222,7 +226,6 @@ public:
 	class UObject*                                Object;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FUObjectItem;
 
 // Predefined struct TUObjectArray
 // 0x0020 (0x0020 - 0x0000)
@@ -268,7 +271,6 @@ public:
 		return ChunkPtr[InChunkIdx].Object;
 	}
 };
-DUMPER7_ASSERTS_TUObjectArray;
 
 class TUObjectArrayWrapper
 {
@@ -419,7 +421,6 @@ public:
 		return ComparisonIndex != Other.ComparisonIndex || Number != Other.Number;
 	}
 };
-DUMPER7_ASSERTS_FName;
 
 template<typename ClassType>
 class TSubclassOf
@@ -444,7 +445,7 @@ public:
 		return ClassPtr;
 	}
 
-	template<typename Target, typename = std::enable_if<std::is_base_of_v<Target, ClassType>, bool>::type>
+	template<typename Target, typename = typename std::enable_if<std::is_base_of_v<Target, ClassType>, bool>::type>
 	inline operator TSubclassOf<Target>() const
 	{
 		return ClassPtr;
@@ -491,7 +492,6 @@ public:
 	FStructBaseChain**                            StructBaseChainArray;                              // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	int32                                         NumStructBasesInChainMinusOne;                     // 0x0008(0x0004)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FStructBaseChain;
 
 namespace FTextImpl
 {
@@ -503,7 +503,6 @@ public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 TextSource;                                        // 0x0018(0x0010)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FTextData;
 }
 
 // Predefined struct FText
@@ -524,7 +523,6 @@ public:
 		return TextData->TextSource.ToString();
 	}
 };
-DUMPER7_ASSERTS_FText;
 
 // Predefined struct FWeakObjectPtr
 // 0x0008 (0x0008 - 0x0000)
@@ -535,6 +533,7 @@ public:
 	int32                                         ObjectSerialNumber;                                // 0x0004(0x0004)(NOT AUTO-GENERATED PROPERTY)
 
 public:
+	bool IsValid() const;
 	class UObject* Get() const;
 	class UObject* operator->() const;
 	bool operator==(const FWeakObjectPtr& Other) const;
@@ -542,7 +541,6 @@ public:
 	bool operator==(const class UObject* Other) const;
 	bool operator!=(const class UObject* Other) const;
 };
-DUMPER7_ASSERTS_FWeakObjectPtr;
 
 template<typename UEType>
 class TWeakObjectPtr : public FWeakObjectPtr
@@ -569,7 +567,6 @@ public:
 	uint32                                        C;                                                 // 0x0008(0x0004)(NOT AUTO-GENERATED PROPERTY)
 	uint32                                        D;                                                 // 0x000C(0x0004)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FUniqueObjectGuid;
 
 // Predefined struct TPersistentObjectPtr
 // 0x0000 (0x0000 - 0x0000)
@@ -616,7 +613,6 @@ public:
 	class FName                                   PackageName;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                   AssetName;                                         // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FTopLevelAssetPath;
 
 // ScriptStruct CoreUObject.SoftObjectPath
 // 0x0020 (0x0020 - 0x0000)
@@ -626,7 +622,6 @@ public:
 	struct FTopLevelAssetPath                     AssetPath;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 SubPathString;                                     // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSoftObjectPath;
 
 }
 
@@ -682,7 +677,6 @@ public:
 	}
 	
 };
-DUMPER7_ASSERTS_FScriptInterface;
 
 // Predefined struct TScriptInterface
 // 0x0000 (0x0010 - 0x0010)
@@ -700,7 +694,6 @@ public:
 	TWeakObjectPtr<class UStruct>                 ResolvedOwner;                                     // 0x0008(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	TArray<FName>                                 Path;                                              // 0x0010(0x0010)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FFieldPath;
 
 // Predefined struct TFieldPath
 // 0x0000 (0x0020 - 0x0020)
@@ -782,7 +775,6 @@ public:
 	FWeakObjectPtr                                Object;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	FName                                         FunctionName;                                      // 0x0008(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FScriptDelegate;
 
 // Predefined struct TDelegate
 // 0x0010 (0x0010 - 0x0000)
@@ -790,7 +782,6 @@ template<typename FunctionSignature>
 class TDelegate
 {
 public:
-	static_assert(false, "TDelegate should be used with a function signature. Something might be wrong in the SDK-Generator.");
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
@@ -809,7 +800,6 @@ template<typename FunctionSignature>
 class TMulticastInlineDelegate
 {
 public:
-	static_assert(false, "TMulticastInlineDelegate should be used with a function signature. Something might be wrong in the SDK-Generator.");
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
@@ -822,29 +812,106 @@ public:
 	TArray<FScriptDelegate>                       InvocationList;                                    // 0x0000(0x0010)(NOT AUTO-GENERATED PROPERTY)
 };
 
+template<typename EnumType, typename UnderlyingType>
+class TFixedSizeEnum
+{
+private:
+	static_assert(std::is_enum_v<EnumType>, "EnumType must be an enum!");
+	static_assert(std::is_integral_v<UnderlyingType>, "UnderlyingType must be an integral type!");
+
+public:
+	UnderlyingType EnumValue = 0;
+
+public:
+	constexpr TFixedSizeEnum() = default;
+	constexpr TFixedSizeEnum(const EnumType InEnumValue)
+		: EnumValue(static_cast<UnderlyingType>(InEnumValue))
+	{
+	}
+
+public:
+	constexpr TFixedSizeEnum(TFixedSizeEnum&&) = default;
+	constexpr TFixedSizeEnum(const TFixedSizeEnum&) = default;
+
+	constexpr TFixedSizeEnum& operator=(TFixedSizeEnum&&) = default;
+	constexpr TFixedSizeEnum& operator=(const TFixedSizeEnum&) = default;
+
+public:
+	constexpr inline bool operator==(const TFixedSizeEnum Other) const
+	{
+		return EnumValue == Other.EnumValue;
+	}
+	constexpr inline bool operator==(const EnumType Other) const
+	{
+		return EnumValue == static_cast<UnderlyingType>(Other);
+	}
+
+	constexpr std::strong_ordering operator<=>(TFixedSizeEnum Other) const
+	{
+		return EnumValue <=> Other.EnumValue;
+	}
+	constexpr std::strong_ordering operator<=>(EnumType Other) const
+	{
+		return EnumValue <=> static_cast<UnderlyingType>(Other);
+	}
+};
+
+template<typename EnumType>
+using T1ByteSignedEnum = TFixedSizeEnum<EnumType, int8>;
+
+template<typename EnumType>
+using T2ByteSignedEnum = TFixedSizeEnum<EnumType, int16>;
+
+template<typename EnumType>
+using T4ByteSignedEnum = TFixedSizeEnum<EnumType, int32>;
+
+template<typename EnumType>
+using T8ByteSignedEnum = TFixedSizeEnum<EnumType, int64>;
+
+template<typename EnumType>
+using T1ByteEnum = TFixedSizeEnum<EnumType, uint8>;
+
+template<typename EnumType>
+using T2ByteEnum = TFixedSizeEnum<EnumType, uint16>;
+
+template<typename EnumType>
+using T4ByteEnum = TFixedSizeEnum<EnumType, uint32>;
+
+template<typename EnumType>
+using T8ByteEnum = TFixedSizeEnum<EnumType, uint64>;
+
+
 #define UE_ENUM_OPERATORS(EEnumClassType)																													\
-																																							\
+																																										\
 inline constexpr EEnumClassType operator|(EEnumClassType Left, EEnumClassType Right)															 			\
-{																																							\
+{																																										\
 	using EnumUnderlayingType = std::underlying_type<EEnumClassType>::type;																					\
 																																							\
 	return static_cast<EEnumClassType>(static_cast<EnumUnderlayingType>(Left) | static_cast<EnumUnderlayingType>(Right));									\
-}																																							\
-																																							\
+}																																										\
+																																										\
 inline EEnumClassType& operator|=(EEnumClassType& Left, EEnumClassType Right)																				\
-{																																							\
+{																																										\
     using EnumUnderlayingType = std::underlying_type<EEnumClassType>::type;																					\
 																																							\
     reinterpret_cast<EnumUnderlayingType&>(Left) |= static_cast<EnumUnderlayingType>(Right);																\
 	return Left;																																			\
-}																																							\
+}																																										\
+																																										\
+inline EEnumClassType& operator|=(EEnumClassType& Left, std::underlying_type<EEnumClassType>::type Right)													\
+{																																										\
+	using EnumUnderlayingType = std::underlying_type<EEnumClassType>::type;																					\
 																																							\
+	reinterpret_cast<EnumUnderlayingType&>(Left) |= Right;																									\
+	return Left;																																			\
+}																																										\
+																																										\
 inline bool operator&(EEnumClassType Left, EEnumClassType Right)																							\
-{																																							\
+{																																										\
 	using EnumUnderlayingType = std::underlying_type<EEnumClassType>::type;																					\
 																																							\
 	return ((static_cast<EnumUnderlayingType>(Left) & static_cast<EnumUnderlayingType>(Right)) == static_cast<EnumUnderlayingType>(Right));					\
-}
+}																																										
 
 enum class EObjectFlags : uint32
 {
@@ -1109,7 +1176,6 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FFieldClass*                            SuperClass;                                        // 0x0020(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FFieldClass;
 
 // Predefined struct FFieldVariant
 // 0x0008 (0x0008 - 0x0000)
@@ -1122,7 +1188,6 @@ public:
 
 	ContainerType                                 Container;                                         // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FFieldVariant;
 
 // Predefined struct FField
 // 0x0030 (0x0030 - 0x0000)
@@ -1136,7 +1201,6 @@ public:
 	FName                                         Name;                                              // 0x0020(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	int32                                         ObjFlags;                                          // 0x0028(0x0004)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FField;
 
 // Predefined struct FProperty
 // 0x0040 (0x0070 - 0x0030)
@@ -1150,7 +1214,6 @@ public:
 	int32                                         Offset;                                            // 0x0044(0x0004)(NOT AUTO-GENERATED PROPERTY)
 	uint8                                         Pad_48[0x28];                                      // 0x0048(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FProperty;
 
 // Predefined struct FByteProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1159,7 +1222,6 @@ class FByteProperty final : public FProperty
 public:
 	class UEnum*                                  Enum;                                              // 0x0070(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FByteProperty;
 
 // Predefined struct FBoolProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1171,7 +1233,6 @@ public:
 	uint8                                         ByteMask;                                          // 0x0072(0x0001)(NOT AUTO-GENERATED PROPERTY)
 	uint8                                         FieldMask;                                         // 0x0073(0x0001)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FBoolProperty;
 
 // Predefined struct FObjectPropertyBase
 // 0x0008 (0x0078 - 0x0070)
@@ -1180,7 +1241,6 @@ class FObjectPropertyBase : public FProperty
 public:
 	class UClass*                                 PropertyClass;                                     // 0x0070(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FObjectPropertyBase;
 
 // Predefined struct FClassProperty
 // 0x0008 (0x0080 - 0x0078)
@@ -1189,7 +1249,6 @@ class FClassProperty final : public FObjectPropertyBase
 public:
 	class UClass*                                 MetaClass;                                         // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FClassProperty;
 
 // Predefined struct FStructProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1198,7 +1257,6 @@ class FStructProperty final : public FProperty
 public:
 	class UStruct*                                Struct;                                            // 0x0070(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FStructProperty;
 
 // Predefined struct FArrayProperty
 // 0x0010 (0x0080 - 0x0070)
@@ -1208,7 +1266,6 @@ public:
 	uint8                                         Pad_70[0x8];                                       // 0x0070(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FProperty*                              InnerProperty;                                     // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FArrayProperty;
 
 // Predefined struct FDelegateProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1217,7 +1274,6 @@ class FDelegateProperty final : public FProperty
 public:
 	class UFunction*                              SignatureFunction;                                 // 0x0070(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FDelegateProperty;
 
 // Predefined struct FMapProperty
 // 0x0010 (0x0080 - 0x0070)
@@ -1227,7 +1283,6 @@ public:
 	class FProperty*                              KeyProperty;                                       // 0x0070(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class FProperty*                              ValueProperty;                                     // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FMapProperty;
 
 // Predefined struct FSetProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1236,7 +1291,6 @@ class FSetProperty final : public FProperty
 public:
 	class FProperty*                              ElementProperty;                                   // 0x0070(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FSetProperty;
 
 // Predefined struct FEnumProperty
 // 0x0010 (0x0080 - 0x0070)
@@ -1246,7 +1300,6 @@ public:
 	class FProperty*                              UnderlayingProperty;                               // 0x0070(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class UEnum*                                  Enum;                                              // 0x0078(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FEnumProperty;
 
 // Predefined struct FFieldPathProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1255,7 +1308,6 @@ class FFieldPathProperty final : public FProperty
 public:
 	class FFieldClass*                            FieldClass;                                        // 0x0070(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FFieldPathProperty;
 
 // Predefined struct FOptionalProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -1264,7 +1316,6 @@ class FOptionalProperty final : public FProperty
 public:
 	class FProperty*                              ValueProperty;                                     // 0x0070(0x0008)(NOT AUTO-GENERATED PROPERTY)
 };
-DUMPER7_ASSERTS_FOptionalProperty;
 
 namespace CyclicDependencyFixupImpl
 {
@@ -1311,3 +1362,59 @@ template<typename UnderlayingClassType, int32 Size, int32 Align = 0x8>
 using TActorBasedCycleFixup = CyclicDependencyFixupImpl::TCyclicClassFixup<UnderlayingClassType, Size, Align, class AActor>;
 
 SDK_NAMESPACE_END
+
+
+template <typename T>
+	requires std::derived_from<T, SDK_NAMESPACE_NAME ::UObject>
+struct std::formatter<T*> : std::formatter<std::string>
+{
+	auto format(T* Object, std::format_context& Context) const
+	{
+		const std::string ClassName = Object && Object->Class ? Object->Class->GetName() : T::StaticClass()->GetName();
+		if (Object)
+		{
+			return std::formatter<std::string>::format(std::format("{}(0x{:X}, {})", ClassName, reinterpret_cast<uintptr_t>(Object), Object->GetName()), Context);
+		}
+		else
+		{
+			return std::formatter<std::string>::format(std::format("{}(nullptr)", ClassName), Context);
+		}
+	}
+};
+
+template <typename T>
+	requires std::derived_from<T, SDK_NAMESPACE_NAME ::UObject>
+struct std::formatter<SDK_NAMESPACE_NAME ::TSubclassOf<T>> : std::formatter<std::string>
+{
+	auto format(SDK_NAMESPACE_NAME ::TSubclassOf<T> Class, std::format_context& Context) const
+	{
+		return std::formatter<std::string>::format(Class.Get() ? Class.Get()->GetName() : std::format("{}(nullptr)", T::StaticClass()->GetName()), Context);
+	}
+};
+
+template <>
+struct std::formatter<SDK_NAMESPACE_NAME ::FName> : std::formatter<std::string>
+{
+	auto format(SDK_NAMESPACE_NAME ::FName Name, std::format_context& Context) const
+	{
+		return std::formatter<std::string>::format(Name.ToString(), Context);
+	}
+};
+
+template <>
+struct std::formatter<SDK_NAMESPACE_NAME ::FString> : std::formatter<std::string>
+{
+	auto format(SDK_NAMESPACE_NAME ::FString String, std::format_context& Context) const
+	{
+		return std::formatter<std::string>::format(String.ToString(), Context);
+	}
+};
+
+template <>
+struct std::formatter<SDK_NAMESPACE_NAME ::FText> : std::formatter<std::string>
+{
+	auto format(SDK_NAMESPACE_NAME ::FText Text, std::format_context& Context) const
+	{
+		return std::formatter<std::string>::format(Text.ToString(), Context);
+	}
+};

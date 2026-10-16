@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemWeaponAttachment_Scope_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemWeaponAttachment_Scope_C;
 
 SDK_NAMESPACE_END

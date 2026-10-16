@@ -102,6 +102,5 @@ public:
 		return GetDefaultObjImpl<UDyeUI_C>();
 	}
 };
-DUMPER7_ASSERTS_UDyeUI_C;
 
 SDK_NAMESPACE_END

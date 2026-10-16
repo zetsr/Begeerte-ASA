@@ -27,7 +27,6 @@ public:
 	bool                                          bLoop;                                             // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMovieSceneMediaPlayerPropertySectionTemplate;
 
 // ScriptStruct MediaCompositing.MovieSceneMediaSectionParams
 // 0x0168 (0x0168 - 0x0000)
@@ -49,7 +48,6 @@ public:
 	struct FMovieSceneFloatChannel                ProxyTextureBlend;                                 // 0x0050(0x0110)(NativeAccessSpecifierPublic)
 	struct FMediaSourceCacheSettings              CacheSettings;                                     // 0x0160(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMovieSceneMediaSectionParams;
 
 // ScriptStruct MediaCompositing.MovieSceneMediaSectionTemplate
 // 0x0170 (0x0190 - 0x0020)
@@ -59,6 +57,5 @@ public:
 	struct FMovieSceneMediaSectionParams          Params;                                            // 0x0020(0x0168)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	class UMovieSceneMediaSection*                MediaSection;                                      // 0x0188(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMovieSceneMediaSectionTemplate;
 
 SDK_NAMESPACE_END

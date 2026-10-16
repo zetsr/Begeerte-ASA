@@ -74,7 +74,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IActivatableController;
 
 // Class ShooterGame.ActivatableInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -112,7 +111,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IActivatableInterface;
 
 // Class ShooterGame.PrimalRecastNavMesh
 // 0x0000 (0x0968 - 0x0968)
@@ -132,7 +130,6 @@ public:
 		return GetDefaultObjImpl<APrimalRecastNavMesh>();
 	}
 };
-DUMPER7_ASSERTS_APrimalRecastNavMesh;
 
 // Class ShooterGame.CustomCanvasWidget
 // 0x00E0 (0x0770 - 0x0690)
@@ -160,7 +157,6 @@ public:
 		return GetDefaultObjImpl<UCustomCanvasWidget>();
 	}
 };
-DUMPER7_ASSERTS_UCustomCanvasWidget;
 
 // Class ShooterGame.PrimalItem
 // 0x0B58 (0x0B80 - 0x0028)
@@ -948,7 +944,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UPrimalItem;
 
 // Class ShooterGame.PrimalItem_HotbarSkill
 // 0x0010 (0x0B90 - 0x0B80)
@@ -973,7 +968,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_HotbarSkill>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_HotbarSkill;
 
 // Class ShooterGame.DataListEntryButton
 // 0x0150 (0x08C0 - 0x0770)
@@ -1058,7 +1052,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UDataListEntryButton;
 
 // Class ShooterGame.AdminPlayerInfoEntryButton
 // 0x0050 (0x0910 - 0x08C0)
@@ -1089,7 +1082,6 @@ public:
 		return GetDefaultObjImpl<UAdminPlayerInfoEntryButton>();
 	}
 };
-DUMPER7_ASSERTS_UAdminPlayerInfoEntryButton;
 
 // Class ShooterGame.AhoCorasickMatch
 // 0x0000 (0x0028 - 0x0028)
@@ -1113,7 +1105,6 @@ public:
 		return GetDefaultObjImpl<UAhoCorasickMatch>();
 	}
 };
-DUMPER7_ASSERTS_UAhoCorasickMatch;
 
 // Class ShooterGame.PrimalDinoAIController
 // 0x04A8 (0x0A70 - 0x05C8)
@@ -1427,7 +1418,6 @@ public:
 		return GetDefaultObjImpl<APrimalDinoAIController>();
 	}
 };
-DUMPER7_ASSERTS_APrimalDinoAIController;
 
 // Class ShooterGame.PrimalShipAIController
 // 0x0088 (0x0AF8 - 0x0A70)
@@ -1483,7 +1473,6 @@ public:
 		return GetDefaultObjImpl<APrimalShipAIController>();
 	}
 };
-DUMPER7_ASSERTS_APrimalShipAIController;
 
 // Class ShooterGame.AIAttackCoordinator
 // 0x0020 (0x04B0 - 0x0490)
@@ -1520,7 +1509,6 @@ public:
 		return GetDefaultObjImpl<AAIAttackCoordinator>();
 	}
 };
-DUMPER7_ASSERTS_AAIAttackCoordinator;
 
 // Class ShooterGame.PrimalInventoryComponent
 // 0x0788 (0x0858 - 0x00D0)
@@ -1973,7 +1961,6 @@ public:
 		return GetDefaultObjImpl<UPrimalInventoryComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalInventoryComponent;
 
 // Class ShooterGame.PrimalInventoryComponent_StorageInterface
 // 0x02B0 (0x0B08 - 0x0858)
@@ -2067,7 +2054,6 @@ public:
 		return GetDefaultObjImpl<UPrimalInventoryComponent_StorageInterface>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalInventoryComponent_StorageInterface;
 
 // Class ShooterGame.AllClustersInventory
 // 0x00C0 (0x00E8 - 0x0028)
@@ -2097,7 +2083,6 @@ public:
 		return GetDefaultObjImpl<UAllClustersInventory>();
 	}
 };
-DUMPER7_ASSERTS_UAllClustersInventory;
 
 // Class ShooterGame.AllPaintingsEntryButton
 // 0x0030 (0x08F0 - 0x08C0)
@@ -2123,7 +2108,6 @@ public:
 		return GetDefaultObjImpl<UAllPaintingsEntryButton>();
 	}
 };
-DUMPER7_ASSERTS_UAllPaintingsEntryButton;
 
 // Class ShooterGame.Leaderboard
 // 0x0030 (0x0058 - 0x0028)
@@ -2164,7 +2148,6 @@ public:
 		return GetDefaultObjImpl<ULeaderboard>();
 	}
 };
-DUMPER7_ASSERTS_ULeaderboard;
 
 // Class ShooterGame.AllPlayersEntryButton
 // 0x0040 (0x0900 - 0x08C0)
@@ -2192,7 +2175,6 @@ public:
 		return GetDefaultObjImpl<UAllPlayersEntryButton>();
 	}
 };
-DUMPER7_ASSERTS_UAllPlayersEntryButton;
 
 // Class ShooterGame.PrimalGlobals
 // 0x0450 (0x0478 - 0x0028)
@@ -2273,7 +2255,6 @@ public:
 		return GetDefaultObjImpl<UPrimalGlobals>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalGlobals;
 
 // Class ShooterGame.AnimInstance_DinoBlueprintBase
 // 0x00C0 (0x0490 - 0x03D0)
@@ -2344,7 +2325,6 @@ public:
 		return GetDefaultObjImpl<UAnimInstance_DinoBlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UAnimInstance_DinoBlueprintBase;
 
 // Class ShooterGame.PrimalLocalProfile
 // 0x0378 (0x03A0 - 0x0028)
@@ -2423,7 +2403,6 @@ public:
 		return GetDefaultObjImpl<UPrimalLocalProfile>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalLocalProfile;
 
 // Class ShooterGame.AnimInstance_DinoRootBoneName
 // 0x00E0 (0x04B0 - 0x03D0)
@@ -2506,7 +2485,6 @@ public:
 		return GetDefaultObjImpl<UAnimInstance_DinoRootBoneName>();
 	}
 };
-DUMPER7_ASSERTS_UAnimInstance_DinoRootBoneName;
 
 // Class ShooterGame.AnimInstance_DinoRootTransform
 // 0x0150 (0x0520 - 0x03D0)
@@ -2582,7 +2560,6 @@ public:
 		return GetDefaultObjImpl<UAnimInstance_DinoRootTransform>();
 	}
 };
-DUMPER7_ASSERTS_UAnimInstance_DinoRootTransform;
 
 // Class ShooterGame.PrimalEmitterSpawnable
 // 0x00D0 (0x05B8 - 0x04E8)
@@ -2657,7 +2634,6 @@ public:
 		return GetDefaultObjImpl<APrimalEmitterSpawnable>();
 	}
 };
-DUMPER7_ASSERTS_APrimalEmitterSpawnable;
 
 // Class ShooterGame.PrimalBuff
 // 0x0590 (0x0B48 - 0x05B8)
@@ -3418,7 +3394,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff;
 
 // Class ShooterGame.LooseCameraSpringBuff
 // 0x0038 (0x0B80 - 0x0B48)
@@ -3445,7 +3420,6 @@ public:
 		return GetDefaultObjImpl<ALooseCameraSpringBuff>();
 	}
 };
-DUMPER7_ASSERTS_ALooseCameraSpringBuff;
 
 // Class ShooterGame.AnimNotifyState_Custom
 // 0x0010 (0x0048 - 0x0038)
@@ -3472,7 +3446,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_Custom>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotifyState_Custom;
 
 // Class ShooterGame.PrimalGroupComponent
 // 0x00F8 (0x01C8 - 0x00D0)
@@ -3562,7 +3535,6 @@ public:
 		return GetDefaultObjImpl<UPrimalGroupComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalGroupComponent;
 
 // Class ShooterGame.AnimNotifyState_SpawnProp
 // 0x0008 (0x0040 - 0x0038)
@@ -3585,7 +3557,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_SpawnProp>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotifyState_SpawnProp;
 
 // Class ShooterGame.PrimalItem_CruiseMissile
 // 0x0000 (0x0B80 - 0x0B80)
@@ -3605,7 +3576,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_CruiseMissile>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_CruiseMissile;
 
 // Class ShooterGame.VictoryCoreHighest
 // 0x0000 (0x0028 - 0x0028)
@@ -3625,7 +3595,6 @@ public:
 		return GetDefaultObjImpl<UVictoryCoreHighest>();
 	}
 };
-DUMPER7_ASSERTS_UVictoryCoreHighest;
 
 // Class ShooterGame.AnimNotify_CustomEvent
 // 0x0018 (0x0058 - 0x0040)
@@ -3657,7 +3626,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_CustomEvent>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotify_CustomEvent;
 
 // Class ShooterGame.AnimNotify_PlayCameraShake
 // 0x0038 (0x0078 - 0x0040)
@@ -3690,7 +3658,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayCameraShake>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotify_PlayCameraShake;
 
 // Class ShooterGame.MarketRequestItemInfo
 // 0x00A0 (0x00C8 - 0x0028)
@@ -3722,7 +3689,6 @@ public:
 		return GetDefaultObjImpl<UMarketRequestItemInfo>();
 	}
 };
-DUMPER7_ASSERTS_UMarketRequestItemInfo;
 
 // Class ShooterGame.BuoBakedAsset
 // 0x0030 (0x0060 - 0x0030)
@@ -3749,7 +3715,6 @@ public:
 		return GetDefaultObjImpl<UBuoBakedAsset>();
 	}
 };
-DUMPER7_ASSERTS_UBuoBakedAsset;
 
 // Class ShooterGame.AnimNotify_PlayParticleEffectCustom
 // 0x0010 (0x0120 - 0x0110)
@@ -3774,7 +3739,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayParticleEffectCustom>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotify_PlayParticleEffectCustom;
 
 // Class ShooterGame.PrimalInventoryComponent_Market
 // 0x0008 (0x0860 - 0x0858)
@@ -3797,7 +3761,6 @@ public:
 		return GetDefaultObjImpl<UPrimalInventoryComponent_Market>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalInventoryComponent_Market;
 
 // Class ShooterGame.AnimNotify_StopSound
 // 0x0010 (0x0050 - 0x0040)
@@ -3822,7 +3785,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_StopSound>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotify_StopSound;
 
 // Class ShooterGame.AnimNotif_MotionWarping_Primal
 // 0x0010 (0x0050 - 0x0040)
@@ -3849,7 +3811,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotif_MotionWarping_Primal>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotif_MotionWarping_Primal;
 
 // Class ShooterGame.AntiDupeTransactionLog
 // 0x00A8 (0x00D0 - 0x0028)
@@ -3873,7 +3834,6 @@ public:
 		return GetDefaultObjImpl<UAntiDupeTransactionLog>();
 	}
 };
-DUMPER7_ASSERTS_UAntiDupeTransactionLog;
 
 // Class ShooterGame.MaterialExpressionIsPixelUnderwater
 // 0x0040 (0x00F0 - 0x00B0)
@@ -3899,7 +3859,6 @@ public:
 		return GetDefaultObjImpl<UMaterialExpressionIsPixelUnderwater>();
 	}
 };
-DUMPER7_ASSERTS_UMaterialExpressionIsPixelUnderwater;
 
 // Class ShooterGame.ArkCloudInventoryData
 // 0x0058 (0x0080 - 0x0028)
@@ -3922,7 +3881,6 @@ public:
 		return GetDefaultObjImpl<UArkCloudInventoryData>();
 	}
 };
-DUMPER7_ASSERTS_UArkCloudInventoryData;
 
 // Class ShooterGame.StaticMeshComponentWithSoftRef
 // 0x0030 (0x0740 - 0x0710)
@@ -3947,7 +3905,6 @@ public:
 		return GetDefaultObjImpl<UStaticMeshComponentWithSoftRef>();
 	}
 };
-DUMPER7_ASSERTS_UStaticMeshComponentWithSoftRef;
 
 // Class ShooterGame.AtlasWaterOverlapComponent
 // 0x0040 (0x02C0 - 0x0280)
@@ -3972,7 +3929,6 @@ public:
 		return GetDefaultObjImpl<UAtlasWaterOverlapComponent>();
 	}
 };
-DUMPER7_ASSERTS_UAtlasWaterOverlapComponent;
 
 // Class ShooterGame.PrimalLevelInstance
 // 0x0050 (0x0588 - 0x0538)
@@ -4001,7 +3957,6 @@ public:
 		return GetDefaultObjImpl<APrimalLevelInstance>();
 	}
 };
-DUMPER7_ASSERTS_APrimalLevelInstance;
 
 // Class ShooterGame.BackblazeB2CloudStorage
 // 0x0050 (0x0078 - 0x0028)
@@ -4024,7 +3979,6 @@ public:
 		return GetDefaultObjImpl<UBackblazeB2CloudStorage>();
 	}
 };
-DUMPER7_ASSERTS_UBackblazeB2CloudStorage;
 
 // Class ShooterGame.BaseBoxTrigger
 // 0x0018 (0x04A8 - 0x0490)
@@ -4059,7 +4013,6 @@ public:
 		return GetDefaultObjImpl<ABaseBoxTrigger>();
 	}
 };
-DUMPER7_ASSERTS_ABaseBoxTrigger;
 
 // Class ShooterGame.BaseHumanAnimInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -4091,7 +4044,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IBaseHumanAnimInterface;
 
 // Class ShooterGame.PrimalBotAIController
 // 0x0068 (0x0AD8 - 0x0A70)
@@ -4160,7 +4112,6 @@ public:
 		return GetDefaultObjImpl<APrimalBotAIController>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBotAIController;
 
 // Class ShooterGame.BasePlayerController
 // 0x0068 (0x0B28 - 0x0AC0)
@@ -4198,7 +4149,6 @@ public:
 		return GetDefaultObjImpl<ABasePlayerController>();
 	}
 };
-DUMPER7_ASSERTS_ABasePlayerController;
 
 // Class ShooterGame.PrimalCharacterStatusComponent
 // 0x10A8 (0x1178 - 0x00D0)
@@ -4520,7 +4470,6 @@ public:
 		return GetDefaultObjImpl<UPrimalCharacterStatusComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCharacterStatusComponent;
 
 // Class ShooterGame.PrimalPlayerStatusComponent
 // 0x0000 (0x1178 - 0x1178)
@@ -4540,7 +4489,6 @@ public:
 		return GetDefaultObjImpl<UPrimalPlayerStatusComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalPlayerStatusComponent;
 
 // Class ShooterGame.PrimalUserWidget
 // 0x0010 (0x0378 - 0x0368)
@@ -4580,7 +4528,6 @@ public:
 		return GetDefaultObjImpl<UPrimalUserWidget>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalUserWidget;
 
 // Class ShooterGame.PrimalUI
 // 0x0480 (0x07F8 - 0x0378)
@@ -4735,7 +4682,6 @@ public:
 		return GetDefaultObjImpl<UPrimalUI>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalUI;
 
 // Class ShooterGame.BaseSelectableButtonWidget
 // 0x0000 (0x07F8 - 0x07F8)
@@ -4760,7 +4706,6 @@ public:
 		return GetDefaultObjImpl<UBaseSelectableButtonWidget>();
 	}
 };
-DUMPER7_ASSERTS_UBaseSelectableButtonWidget;
 
 // Class ShooterGame.PrimalBuffAbilityCharges
 // 0x00F0 (0x0C38 - 0x0B48)
@@ -4825,7 +4770,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuffAbilityCharges>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuffAbilityCharges;
 
 // Class ShooterGame.ShooterGameState
 // 0x0A78 (0x0FF0 - 0x0578)
@@ -5269,7 +5213,6 @@ public:
 		return GetDefaultObjImpl<AShooterGameState>();
 	}
 };
-DUMPER7_ASSERTS_AShooterGameState;
 
 // Class ShooterGame.PrimalHitNotifyObserver
 // 0x0328 (0x03F0 - 0x00C8)
@@ -5292,7 +5235,6 @@ public:
 		return GetDefaultObjImpl<UPrimalHitNotifyObserver>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalHitNotifyObserver;
 
 // Class ShooterGame.BattleGameState
 // 0x0000 (0x0FF0 - 0x0FF0)
@@ -5312,7 +5254,6 @@ public:
 		return GetDefaultObjImpl<ABattleGameState>();
 	}
 };
-DUMPER7_ASSERTS_ABattleGameState;
 
 // Class ShooterGame.BeamWeaponComponent
 // 0x00E0 (0x0700 - 0x0620)
@@ -5376,7 +5317,6 @@ public:
 		return GetDefaultObjImpl<UBeamWeaponComponent>();
 	}
 };
-DUMPER7_ASSERTS_UBeamWeaponComponent;
 
 // Class ShooterGame.BeamWeaponController
 // 0x0030 (0x0100 - 0x00D0)
@@ -5410,7 +5350,6 @@ public:
 		return GetDefaultObjImpl<UBeamWeaponController>();
 	}
 };
-DUMPER7_ASSERTS_UBeamWeaponController;
 
 // Class ShooterGame.PrimalBuff_Companion
 // 0x0938 (0x1480 - 0x0B48)
@@ -5598,7 +5537,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff_Companion>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff_Companion;
 
 // Class ShooterGame.BinocularsWidgetUI
 // 0x0028 (0x0820 - 0x07F8)
@@ -5635,7 +5573,6 @@ public:
 		return GetDefaultObjImpl<UBinocularsWidgetUI>();
 	}
 };
-DUMPER7_ASSERTS_UBinocularsWidgetUI;
 
 // Class ShooterGame.ShooterProjectile
 // 0x0328 (0x07B8 - 0x0490)
@@ -5843,7 +5780,6 @@ public:
 		return GetDefaultObjImpl<AShooterProjectile>();
 	}
 };
-DUMPER7_ASSERTS_AShooterProjectile;
 
 // Class ShooterGame.PrimalProjectileArrow
 // 0x0030 (0x07E8 - 0x07B8)
@@ -5877,7 +5813,6 @@ public:
 		return GetDefaultObjImpl<APrimalProjectileArrow>();
 	}
 };
-DUMPER7_ASSERTS_APrimalProjectileArrow;
 
 // Class ShooterGame.PrimalProjectileNetGun
 // 0x00F0 (0x08D8 - 0x07E8)
@@ -5914,7 +5849,6 @@ public:
 		return GetDefaultObjImpl<APrimalProjectileNetGun>();
 	}
 };
-DUMPER7_ASSERTS_APrimalProjectileNetGun;
 
 // Class ShooterGame.BiomeZoneSettings
 // 0x0090 (0x0520 - 0x0490)
@@ -5963,7 +5897,6 @@ public:
 		return GetDefaultObjImpl<ABiomeZoneSettings>();
 	}
 };
-DUMPER7_ASSERTS_ABiomeZoneSettings;
 
 // Class ShooterGame.BiomeZoneVolume
 // 0x01A8 (0x0688 - 0x04E0)
@@ -6055,7 +5988,6 @@ public:
 		return GetDefaultObjImpl<ABiomeZoneVolume>();
 	}
 };
-DUMPER7_ASSERTS_ABiomeZoneVolume;
 
 // Class ShooterGame.PrimalSubMenuUI
 // 0x0010 (0x0808 - 0x07F8)
@@ -6078,7 +6010,6 @@ public:
 		return GetDefaultObjImpl<UPrimalSubMenuUI>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalSubMenuUI;
 
 // Class ShooterGame.UI_TamingList
 // 0x0108 (0x0910 - 0x0808)
@@ -6106,7 +6037,6 @@ public:
 		return GetDefaultObjImpl<UUI_TamingList>();
 	}
 };
-DUMPER7_ASSERTS_UUI_TamingList;
 
 // Class ShooterGame.BiomeZoneVolumeEffectUtility
 // 0x0000 (0x0028 - 0x0028)
@@ -6131,7 +6061,6 @@ public:
 		return GetDefaultObjImpl<UBiomeZoneVolumeEffectUtility>();
 	}
 };
-DUMPER7_ASSERTS_UBiomeZoneVolumeEffectUtility;
 
 // Class ShooterGame.PrimalBuff_MissionData
 // 0x0140 (0x0C88 - 0x0B48)
@@ -6237,7 +6166,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff_MissionData>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff_MissionData;
 
 // Class ShooterGame.BPCustomBlueprintDataInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -6269,7 +6197,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IBPCustomBlueprintDataInterface;
 
 // Class ShooterGame.SaveGameActor
 // 0x0000 (0x0490 - 0x0490)
@@ -6289,7 +6216,6 @@ public:
 		return GetDefaultObjImpl<ASaveGameActor>();
 	}
 };
-DUMPER7_ASSERTS_ASaveGameActor;
 
 // Class ShooterGame.BPSecureNetworkingInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -6336,7 +6262,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IBPSecureNetworkingInterface;
 
 // Class ShooterGame.PrimalShipAnimInstance
 // 0x0020 (0x03F0 - 0x03D0)
@@ -6361,7 +6286,6 @@ public:
 		return GetDefaultObjImpl<UPrimalShipAnimInstance>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalShipAnimInstance;
 
 // Class ShooterGame.ShipAnimInstance
 // 0x0040 (0x0430 - 0x03F0)
@@ -6395,7 +6319,6 @@ public:
 		return GetDefaultObjImpl<UShipAnimInstance>();
 	}
 };
-DUMPER7_ASSERTS_UShipAnimInstance;
 
 // Class ShooterGame.PrimalMoveMassProcessor
 // 0x0320 (0x03D0 - 0x00B0)
@@ -6418,7 +6341,6 @@ public:
 		return GetDefaultObjImpl<UPrimalMoveMassProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalMoveMassProcessor;
 
 // Class ShooterGame.BrigantineAnimInstance
 // 0x0000 (0x0430 - 0x0430)
@@ -6441,7 +6363,6 @@ public:
 		return GetDefaultObjImpl<UBrigantineAnimInstance>();
 	}
 };
-DUMPER7_ASSERTS_UBrigantineAnimInstance;
 
 // Class ShooterGame.PrimalShipCannonControlComponent
 // 0x03E8 (0x04B8 - 0x00D0)
@@ -6599,7 +6520,6 @@ public:
 		return GetDefaultObjImpl<UPrimalShipCannonControlComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalShipCannonControlComponent;
 
 // Class ShooterGame.BTDecorator_IsBaby_BT
 // 0x0000 (0x0068 - 0x0068)
@@ -6619,7 +6539,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_IsBaby_BT>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_IsBaby_BT;
 
 // Class ShooterGame.BTDecorator_IsFlying_DK
 // 0x0000 (0x0068 - 0x0068)
@@ -6639,7 +6558,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_IsFlying_DK>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_IsFlying_DK;
 
 // Class ShooterGame.BTDecorator_IsFollowing_DK
 // 0x0028 (0x0090 - 0x0068)
@@ -6662,7 +6580,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_IsFollowing_DK>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_IsFollowing_DK;
 
 // Class ShooterGame.PrimalNavigationSystem
 // 0x0000 (0x1660 - 0x1660)
@@ -6685,7 +6602,6 @@ public:
 		return GetDefaultObjImpl<UPrimalNavigationSystem>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalNavigationSystem;
 
 // Class ShooterGame.BTDecorator_NotWithinDistance
 // 0x00A8 (0x0110 - 0x0068)
@@ -6713,7 +6629,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_NotWithinDistance>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_NotWithinDistance;
 
 // Class ShooterGame.PrimalProjectileBoomerang
 // 0x00D8 (0x08C0 - 0x07E8)
@@ -6741,7 +6656,6 @@ public:
 		return GetDefaultObjImpl<APrimalProjectileBoomerang>();
 	}
 };
-DUMPER7_ASSERTS_APrimalProjectileBoomerang;
 
 // Class ShooterGame.BTService_FindTarget
 // 0x0008 (0x00A0 - 0x0098)
@@ -6765,7 +6679,6 @@ public:
 		return GetDefaultObjImpl<UBTService_FindTarget>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_FindTarget;
 
 // Class ShooterGame.BTService_FindTargetShip
 // 0x0000 (0x0098 - 0x0098)
@@ -6785,7 +6698,6 @@ public:
 		return GetDefaultObjImpl<UBTService_FindTargetShip>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_FindTargetShip;
 
 // Class ShooterGame.BTService_FireBroadsides
 // 0x0000 (0x0070 - 0x0070)
@@ -6805,7 +6717,6 @@ public:
 		return GetDefaultObjImpl<UBTService_FireBroadsides>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_FireBroadsides;
 
 // Class ShooterGame.PrimalPathFollowingComponent
 // 0x0088 (0x03A8 - 0x0320)
@@ -6846,7 +6757,6 @@ public:
 		return GetDefaultObjImpl<UPrimalPathFollowingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalPathFollowingComponent;
 
 // Class ShooterGame.BTService_ModifyAvoidance
 // 0x0008 (0x0078 - 0x0070)
@@ -6870,7 +6780,6 @@ public:
 		return GetDefaultObjImpl<UBTService_ModifyAvoidance>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_ModifyAvoidance;
 
 // Class ShooterGame.PrimalHarvestingComponent
 // 0x0168 (0x0238 - 0x00D0)
@@ -6963,7 +6872,6 @@ public:
 		return GetDefaultObjImpl<UPrimalHarvestingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalHarvestingComponent;
 
 // Class ShooterGame.WaterSimulationManager
 // 0x00E0 (0x0570 - 0x0490)
@@ -7005,7 +6913,6 @@ public:
 		return GetDefaultObjImpl<AWaterSimulationManager>();
 	}
 };
-DUMPER7_ASSERTS_AWaterSimulationManager;
 
 // Class ShooterGame.BTService_UpdateAggro
 // 0x0000 (0x0070 - 0x0070)
@@ -7025,7 +6932,6 @@ public:
 		return GetDefaultObjImpl<UBTService_UpdateAggro>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_UpdateAggro;
 
 // Class ShooterGame.BTService_UpdateFightCircle
 // 0x0078 (0x00E8 - 0x0070)
@@ -7050,7 +6956,6 @@ public:
 		return GetDefaultObjImpl<UBTService_UpdateFightCircle>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_UpdateFightCircle;
 
 // Class ShooterGame.BTService_UpdatePursuitPoint
 // 0x0000 (0x0098 - 0x0098)
@@ -7070,7 +6975,6 @@ public:
 		return GetDefaultObjImpl<UBTService_UpdatePursuitPoint>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_UpdatePursuitPoint;
 
 // Class ShooterGame.PrimalPlayerData
 // 0x0788 (0x07B0 - 0x0028)
@@ -7127,7 +7031,6 @@ public:
 		return GetDefaultObjImpl<UPrimalPlayerData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalPlayerData;
 
 // Class ShooterGame.BTTask_AttackTarget
 // 0x0000 (0x0070 - 0x0070)
@@ -7147,7 +7050,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_AttackTarget>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_AttackTarget;
 
 // Class ShooterGame.PrimalRichTextBlock
 // 0x0360 (0x0560 - 0x0200)
@@ -7189,7 +7091,6 @@ public:
 		return GetDefaultObjImpl<UPrimalRichTextBlock>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalRichTextBlock;
 
 // Class ShooterGame.BTTask_DracoMaintainAttackRange
 // 0x0010 (0x0080 - 0x0070)
@@ -7216,7 +7117,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_DracoMaintainAttackRange>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_DracoMaintainAttackRange;
 
 // Class ShooterGame.BTTask_GetRandomWanderDestination
 // 0x0038 (0x00D0 - 0x0098)
@@ -7244,7 +7144,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_GetRandomWanderDestination>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_GetRandomWanderDestination;
 
 // Class ShooterGame.HUDOVerlayWidget
 // 0x0090 (0x0800 - 0x0770)
@@ -7270,7 +7169,6 @@ public:
 		return GetDefaultObjImpl<UHUDOVerlayWidget>();
 	}
 };
-DUMPER7_ASSERTS_UHUDOVerlayWidget;
 
 // Class ShooterGame.BTTask_HarvestFoliage
 // 0x03F8 (0x0468 - 0x0070)
@@ -7311,7 +7209,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_HarvestFoliage>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_HarvestFoliage;
 
 // Class ShooterGame.HazardTrigger
 // 0x0030 (0x04D8 - 0x04A8)
@@ -7351,7 +7248,6 @@ public:
 		return GetDefaultObjImpl<AHazardTrigger>();
 	}
 };
-DUMPER7_ASSERTS_AHazardTrigger;
 
 // Class ShooterGame.HazardTrigger_Slide
 // 0x0110 (0x05E8 - 0x04D8)
@@ -7414,7 +7310,6 @@ public:
 		return GetDefaultObjImpl<AHazardTrigger_Slide>();
 	}
 };
-DUMPER7_ASSERTS_AHazardTrigger_Slide;
 
 // Class ShooterGame.BTTask_MassMovement
 // 0x0008 (0x0078 - 0x0070)
@@ -7438,7 +7333,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_MassMovement>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_MassMovement;
 
 // Class ShooterGame.VisualSettingsUI
 // 0x0068 (0x0860 - 0x07F8)
@@ -7471,7 +7365,6 @@ public:
 		return GetDefaultObjImpl<UVisualSettingsUI>();
 	}
 };
-DUMPER7_ASSERTS_UVisualSettingsUI;
 
 // Class ShooterGame.BTTask_PickWanderDestination
 // 0x0000 (0x0098 - 0x0098)
@@ -7491,7 +7384,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_PickWanderDestination>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_PickWanderDestination;
 
 // Class ShooterGame.BTTask_PlayFightCircleAnimation
 // 0x0050 (0x00C0 - 0x0070)
@@ -7517,7 +7409,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_PlayFightCircleAnimation>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_PlayFightCircleAnimation;
 
 // Class ShooterGame.HUDPointsOfInterestContainer
 // 0x0048 (0x0840 - 0x07F8)
@@ -7547,7 +7438,6 @@ public:
 		return GetDefaultObjImpl<UHUDPointsOfInterestContainer>();
 	}
 };
-DUMPER7_ASSERTS_UHUDPointsOfInterestContainer;
 
 // Class ShooterGame.BTTask_PrimalMoveTo
 // 0x0000 (0x0188 - 0x0188)
@@ -7567,7 +7457,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_PrimalMoveTo>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_PrimalMoveTo;
 
 // Class ShooterGame.MinimapSubMenuUI
 // 0x0000 (0x0808 - 0x0808)
@@ -7587,7 +7476,6 @@ public:
 		return GetDefaultObjImpl<UMinimapSubMenuUI>();
 	}
 };
-DUMPER7_ASSERTS_UMinimapSubMenuUI;
 
 // Class ShooterGame.BTTask_RotateToFaceBBEntryWithGrab
 // 0x0000 (0x00D8 - 0x00D8)
@@ -7607,7 +7495,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_RotateToFaceBBEntryWithGrab>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_RotateToFaceBBEntryWithGrab;
 
 // Class ShooterGame.BTTask_ShipMoveTo
 // 0x0038 (0x00D0 - 0x0098)
@@ -7635,7 +7522,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_ShipMoveTo>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_ShipMoveTo;
 
 // Class ShooterGame.BucketPerfDA
 // 0x0050 (0x0080 - 0x0030)
@@ -7658,7 +7544,6 @@ public:
 		return GetDefaultObjImpl<UBucketPerfDA>();
 	}
 };
-DUMPER7_ASSERTS_UBucketPerfDA;
 
 // Class ShooterGame.InventoryDinoAncestryPanel
 // 0x0080 (0x0878 - 0x07F8)
@@ -7682,7 +7567,6 @@ public:
 		return GetDefaultObjImpl<UInventoryDinoAncestryPanel>();
 	}
 };
-DUMPER7_ASSERTS_UInventoryDinoAncestryPanel;
 
 // Class ShooterGame.BucketPerfSubsystem
 // 0x00A8 (0x00D8 - 0x0030)
@@ -7709,7 +7593,6 @@ public:
 		return GetDefaultObjImpl<UBucketPerfSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UBucketPerfSubsystem;
 
 // Class ShooterGame.HUDElementBarWidget
 // 0x0188 (0x0500 - 0x0378)
@@ -7749,7 +7632,6 @@ public:
 		return GetDefaultObjImpl<UHUDElementBarWidget>();
 	}
 };
-DUMPER7_ASSERTS_UHUDElementBarWidget;
 
 // Class ShooterGame.BuildingUI
 // 0x0000 (0x07F8 - 0x07F8)
@@ -7773,7 +7655,6 @@ public:
 		return GetDefaultObjImpl<UBuildingUI>();
 	}
 };
-DUMPER7_ASSERTS_UBuildingUI;
 
 // Class ShooterGame.CachedDB
 // 0x0008 (0x0038 - 0x0030)
@@ -7801,7 +7682,6 @@ public:
 		return GetDefaultObjImpl<UCachedDB>();
 	}
 };
-DUMPER7_ASSERTS_UCachedDB;
 
 // Class ShooterGame.ShooterWeaponDB
 // 0x0050 (0x0088 - 0x0038)
@@ -7824,7 +7704,6 @@ public:
 		return GetDefaultObjImpl<UShooterWeaponDB>();
 	}
 };
-DUMPER7_ASSERTS_UShooterWeaponDB;
 
 // Class ShooterGame.InventoryStatsPanel
 // 0x00E8 (0x08E0 - 0x07F8)
@@ -7863,7 +7742,6 @@ public:
 		return GetDefaultObjImpl<UInventoryStatsPanel>();
 	}
 };
-DUMPER7_ASSERTS_UInventoryStatsPanel;
 
 // Class ShooterGame.PrimalDinoDB
 // 0x0050 (0x0088 - 0x0038)
@@ -7886,7 +7764,6 @@ public:
 		return GetDefaultObjImpl<UPrimalDinoDB>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalDinoDB;
 
 // Class ShooterGame.GeneTrait
 // 0x0000 (0x0028 - 0x0028)
@@ -7909,7 +7786,6 @@ public:
 		return GetDefaultObjImpl<UGeneTrait>();
 	}
 };
-DUMPER7_ASSERTS_UGeneTrait;
 
 // Class ShooterGame.PrimalStructureDB
 // 0x0050 (0x0088 - 0x0038)
@@ -7932,7 +7808,6 @@ public:
 		return GetDefaultObjImpl<UPrimalStructureDB>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalStructureDB;
 
 // Class ShooterGame.PrimalInventoryDB
 // 0x0050 (0x0088 - 0x0038)
@@ -7955,7 +7830,6 @@ public:
 		return GetDefaultObjImpl<UPrimalInventoryDB>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalInventoryDB;
 
 // Class ShooterGame.PrimalMissionDB
 // 0x0050 (0x0088 - 0x0038)
@@ -7978,7 +7852,6 @@ public:
 		return GetDefaultObjImpl<UPrimalMissionDB>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalMissionDB;
 
 // Class ShooterGame.ObjectSerializer
 // 0x0000 (0x0028 - 0x0028)
@@ -7998,7 +7871,6 @@ public:
 		return GetDefaultObjImpl<UObjectSerializer>();
 	}
 };
-DUMPER7_ASSERTS_UObjectSerializer;
 
 // Class ShooterGame.GenerateCacheDBForModsCommandlet
 // 0x0000 (0x0080 - 0x0080)
@@ -8018,7 +7890,6 @@ public:
 		return GetDefaultObjImpl<UGenerateCacheDBForModsCommandlet>();
 	}
 };
-DUMPER7_ASSERTS_UGenerateCacheDBForModsCommandlet;
 
 // Class ShooterGame.InputKeyDisplayWidget
 // 0x0650 (0x0850 - 0x0200)
@@ -8046,7 +7917,6 @@ public:
 		return GetDefaultObjImpl<UInputKeyDisplayWidget>();
 	}
 };
-DUMPER7_ASSERTS_UInputKeyDisplayWidget;
 
 // Class ShooterGame.CameraModifier_Climbing
 // 0x0008 (0x0050 - 0x0048)
@@ -8069,7 +7939,6 @@ public:
 		return GetDefaultObjImpl<UCameraModifier_Climbing>();
 	}
 };
-DUMPER7_ASSERTS_UCameraModifier_Climbing;
 
 // Class ShooterGame.CDOLiveUpdateData
 // 0x0028 (0x0050 - 0x0028)
@@ -8093,7 +7962,6 @@ public:
 		return GetDefaultObjImpl<UCDOLiveUpdateData>();
 	}
 };
-DUMPER7_ASSERTS_UCDOLiveUpdateData;
 
 // Class ShooterGame.CFCoreStoreBackgroundLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -8122,7 +7990,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreStoreBackgroundLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreStoreBackgroundLibrary;
 
 // Class ShooterGame.ParticleModuleWaveWorksBase
 // 0x0000 (0x0030 - 0x0030)
@@ -8142,7 +8009,6 @@ public:
 		return GetDefaultObjImpl<UParticleModuleWaveWorksBase>();
 	}
 };
-DUMPER7_ASSERTS_UParticleModuleWaveWorksBase;
 
 // Class ShooterGame.ParticleModuleWindForce
 // 0x0008 (0x0038 - 0x0030)
@@ -8166,7 +8032,6 @@ public:
 		return GetDefaultObjImpl<UParticleModuleWindForce>();
 	}
 };
-DUMPER7_ASSERTS_UParticleModuleWindForce;
 
 // Class ShooterGame.WaterVolumeWithFlow
 // 0x00B0 (0x05B0 - 0x0500)
@@ -8221,7 +8086,6 @@ public:
 		return GetDefaultObjImpl<AWaterVolumeWithFlow>();
 	}
 };
-DUMPER7_ASSERTS_AWaterVolumeWithFlow;
 
 // Class ShooterGame.UI_Spawn
 // 0x0B28 (0x1320 - 0x07F8)
@@ -8475,7 +8339,6 @@ public:
 		return GetDefaultObjImpl<UUI_Spawn>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Spawn;
 
 // Class ShooterGame.HordeCrateManager
 // 0x0058 (0x04E8 - 0x0490)
@@ -8513,7 +8376,6 @@ public:
 		return GetDefaultObjImpl<AHordeCrateManager>();
 	}
 };
-DUMPER7_ASSERTS_AHordeCrateManager;
 
 // Class ShooterGame.CharacterChangerUI
 // 0x0008 (0x1328 - 0x1320)
@@ -8539,7 +8401,6 @@ public:
 		return GetDefaultObjImpl<UCharacterChangerUI>();
 	}
 };
-DUMPER7_ASSERTS_UCharacterChangerUI;
 
 // Class ShooterGame.CharacterViewPanelWidget
 // 0x0060 (0x03D8 - 0x0378)
@@ -8566,7 +8427,6 @@ public:
 		return GetDefaultObjImpl<UCharacterViewPanelWidget>();
 	}
 };
-DUMPER7_ASSERTS_UCharacterViewPanelWidget;
 
 // Class ShooterGame.CharMoveCompOwnerInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -8599,7 +8459,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ICharMoveCompOwnerInterface;
 
 // Class ShooterGame.PaintingStreamingComponent
 // 0x0070 (0x0140 - 0x00D0)
@@ -8639,7 +8498,6 @@ public:
 		return GetDefaultObjImpl<UPaintingStreamingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPaintingStreamingComponent;
 
 // Class ShooterGame.CheatFunctionInfoEntryButton
 // 0x0030 (0x08F0 - 0x08C0)
@@ -8669,7 +8527,6 @@ public:
 		return GetDefaultObjImpl<UCheatFunctionInfoEntryButton>();
 	}
 };
-DUMPER7_ASSERTS_UCheatFunctionInfoEntryButton;
 
 // Class ShooterGame.JsonObject
 // 0x0010 (0x0038 - 0x0028)
@@ -8741,7 +8598,6 @@ public:
 		return GetDefaultObjImpl<UJsonObject>();
 	}
 };
-DUMPER7_ASSERTS_UJsonObject;
 
 // Class ShooterGame.CircularDependenciesCommandlet
 // 0x0000 (0x0080 - 0x0080)
@@ -8761,7 +8617,6 @@ public:
 		return GetDefaultObjImpl<UCircularDependenciesCommandlet>();
 	}
 };
-DUMPER7_ASSERTS_UCircularDependenciesCommandlet;
 
 // Class ShooterGame.ClassTest
 // 0x0000 (0x0490 - 0x0490)
@@ -8781,7 +8636,6 @@ public:
 		return GetDefaultObjImpl<AClassTest>();
 	}
 };
-DUMPER7_ASSERTS_AClassTest;
 
 // Class ShooterGame.ColorizationFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -8817,7 +8671,6 @@ public:
 		return GetDefaultObjImpl<UColorizationFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UColorizationFunctionLibrary;
 
 // Class ShooterGame.PDA_MainMenuIntro
 // 0x0058 (0x0088 - 0x0030)
@@ -8845,7 +8698,6 @@ public:
 		return GetDefaultObjImpl<UPDA_MainMenuIntro>();
 	}
 };
-DUMPER7_ASSERTS_UPDA_MainMenuIntro;
 
 // Class ShooterGame.ColorizationPresetLink
 // 0x0018 (0x0040 - 0x0028)
@@ -8869,7 +8721,6 @@ public:
 		return GetDefaultObjImpl<UColorizationPresetLink>();
 	}
 };
-DUMPER7_ASSERTS_UColorizationPresetLink;
 
 // Class ShooterGame.HUDPingWidget
 // 0x00E0 (0x08D8 - 0x07F8)
@@ -8920,7 +8771,6 @@ public:
 		return GetDefaultObjImpl<UHUDPingWidget>();
 	}
 };
-DUMPER7_ASSERTS_UHUDPingWidget;
 
 // Class ShooterGame.ColorizationPresetsPack
 // 0x0030 (0x0060 - 0x0030)
@@ -8952,7 +8802,6 @@ public:
 		return GetDefaultObjImpl<UColorizationPresetsPack>();
 	}
 };
-DUMPER7_ASSERTS_UColorizationPresetsPack;
 
 // Class ShooterGame.UI_Tinkering
 // 0x0138 (0x0930 - 0x07F8)
@@ -9010,7 +8859,6 @@ public:
 		return GetDefaultObjImpl<UUI_Tinkering>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Tinkering;
 
 // Class ShooterGame.PointOfInterestActor
 // 0x0540 (0x09D0 - 0x0490)
@@ -9056,7 +8904,6 @@ public:
 		return GetDefaultObjImpl<APointOfInterestActor>();
 	}
 };
-DUMPER7_ASSERTS_APointOfInterestActor;
 
 // Class ShooterGame.CompanionEventTrigger
 // 0x0060 (0x0A30 - 0x09D0)
@@ -9085,7 +8932,6 @@ public:
 		return GetDefaultObjImpl<ACompanionEventTrigger>();
 	}
 };
-DUMPER7_ASSERTS_ACompanionEventTrigger;
 
 // Class ShooterGame.MaterialExpressionWaveWorksDisplacement
 // 0x0028 (0x00D8 - 0x00B0)
@@ -9108,7 +8954,6 @@ public:
 		return GetDefaultObjImpl<UMaterialExpressionWaveWorksDisplacement>();
 	}
 };
-DUMPER7_ASSERTS_UMaterialExpressionWaveWorksDisplacement;
 
 // Class ShooterGame.ConsoleCommandButtonWidget
 // 0x0018 (0x0810 - 0x07F8)
@@ -9131,7 +8976,6 @@ public:
 		return GetDefaultObjImpl<UConsoleCommandButtonWidget>();
 	}
 };
-DUMPER7_ASSERTS_UConsoleCommandButtonWidget;
 
 // Class ShooterGame.ToolTipWidget
 // 0x0088 (0x0400 - 0x0378)
@@ -9165,7 +9009,6 @@ public:
 		return GetDefaultObjImpl<UToolTipWidget>();
 	}
 };
-DUMPER7_ASSERTS_UToolTipWidget;
 
 // Class ShooterGame.PrimalItemToolTipWidget
 // 0x0278 (0x0678 - 0x0400)
@@ -9214,7 +9057,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemToolTipWidget>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemToolTipWidget;
 
 // Class ShooterGame.MarketRequestOrderListEntry
 // 0x00A8 (0x00D0 - 0x0028)
@@ -9250,7 +9092,6 @@ public:
 		return GetDefaultObjImpl<UMarketRequestOrderListEntry>();
 	}
 };
-DUMPER7_ASSERTS_UMarketRequestOrderListEntry;
 
 // Class ShooterGame.ContextMenu
 // 0x0058 (0x03D0 - 0x0378)
@@ -9282,7 +9123,6 @@ public:
 		return GetDefaultObjImpl<UContextMenu>();
 	}
 };
-DUMPER7_ASSERTS_UContextMenu;
 
 // Class ShooterGame.ContextMenuItem
 // 0x00F0 (0x0468 - 0x0378)
@@ -9331,7 +9171,6 @@ public:
 		return GetDefaultObjImpl<UContextMenuItem>();
 	}
 };
-DUMPER7_ASSERTS_UContextMenuItem;
 
 // Class ShooterGame.ContextMenuItem_CosmeticEntry
 // 0x0020 (0x0488 - 0x0468)
@@ -9358,7 +9197,6 @@ public:
 		return GetDefaultObjImpl<UContextMenuItem_CosmeticEntry>();
 	}
 };
-DUMPER7_ASSERTS_UContextMenuItem_CosmeticEntry;
 
 // Class ShooterGame.ShooterMatineeActor
 // 0x0010 (0x0550 - 0x0540)
@@ -9384,7 +9222,6 @@ public:
 		return GetDefaultObjImpl<AShooterMatineeActor>();
 	}
 };
-DUMPER7_ASSERTS_AShooterMatineeActor;
 
 // Class ShooterGame.ContextMenuItem_Sort
 // 0x0018 (0x0480 - 0x0468)
@@ -9408,7 +9245,6 @@ public:
 		return GetDefaultObjImpl<UContextMenuItem_Sort>();
 	}
 };
-DUMPER7_ASSERTS_UContextMenuItem_Sort;
 
 // Class ShooterGame.PrimalItem_DragonHorn
 // 0x0000 (0x0B80 - 0x0B80)
@@ -9432,7 +9268,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_DragonHorn>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_DragonHorn;
 
 // Class ShooterGame.ContextMenuItem_Spinner
 // 0x0038 (0x04A0 - 0x0468)
@@ -9472,7 +9307,6 @@ public:
 		return GetDefaultObjImpl<UContextMenuItem_Spinner>();
 	}
 };
-DUMPER7_ASSERTS_UContextMenuItem_Spinner;
 
 // Class ShooterGame.ContextMenu_DinoGroupEntry
 // 0x0020 (0x03F0 - 0x03D0)
@@ -9504,7 +9338,6 @@ public:
 		return GetDefaultObjImpl<UContextMenu_DinoGroupEntry>();
 	}
 };
-DUMPER7_ASSERTS_UContextMenu_DinoGroupEntry;
 
 // Class ShooterGame.ContextMenu_InventorySort
 // 0x0008 (0x03D8 - 0x03D0)
@@ -9535,7 +9368,6 @@ public:
 		return GetDefaultObjImpl<UContextMenu_InventorySort>();
 	}
 };
-DUMPER7_ASSERTS_UContextMenu_InventorySort;
 
 // Class ShooterGame.MinimapInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -9568,7 +9400,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMinimapInterface;
 
 // Class ShooterGame.ContextMenu_PrimalItem
 // 0x0060 (0x0430 - 0x03D0)
@@ -9665,7 +9496,6 @@ public:
 		return GetDefaultObjImpl<UContextMenu_PrimalItem>();
 	}
 };
-DUMPER7_ASSERTS_UContextMenu_PrimalItem;
 
 // Class ShooterGame.PrimalItem_Radio
 // 0x0010 (0x0B90 - 0x0B80)
@@ -9691,7 +9521,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_Radio>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_Radio;
 
 // Class ShooterGame.MaterialExpressionWaveWorks
 // 0x0000 (0x00B0 - 0x00B0)
@@ -9711,7 +9540,6 @@ public:
 		return GetDefaultObjImpl<UMaterialExpressionWaveWorks>();
 	}
 };
-DUMPER7_ASSERTS_UMaterialExpressionWaveWorks;
 
 // Class ShooterGame.ContextMenu_PrimalItem_StorageInterface
 // 0x0008 (0x0438 - 0x0430)
@@ -9744,7 +9572,6 @@ public:
 		return GetDefaultObjImpl<UContextMenu_PrimalItem_StorageInterface>();
 	}
 };
-DUMPER7_ASSERTS_UContextMenu_PrimalItem_StorageInterface;
 
 // Class ShooterGame.CorruptedAvatarAttackCoordinator
 // 0x0008 (0x04B8 - 0x04B0)
@@ -9767,7 +9594,6 @@ public:
 		return GetDefaultObjImpl<ACorruptedAvatarAttackCoordinator>();
 	}
 };
-DUMPER7_ASSERTS_ACorruptedAvatarAttackCoordinator;
 
 // Class ShooterGame.CosmeticSelectorPanelUI
 // 0x0088 (0x0880 - 0x07F8)
@@ -9797,7 +9623,6 @@ public:
 		return GetDefaultObjImpl<UCosmeticSelectorPanelUI>();
 	}
 };
-DUMPER7_ASSERTS_UCosmeticSelectorPanelUI;
 
 // Class ShooterGame.PrimalTargetableActor
 // 0x0108 (0x0598 - 0x0490)
@@ -9878,7 +9703,6 @@ public:
 		return GetDefaultObjImpl<APrimalTargetableActor>();
 	}
 };
-DUMPER7_ASSERTS_APrimalTargetableActor;
 
 // Class ShooterGame.CursorSettings
 // 0x00B0 (0x00E8 - 0x0038)
@@ -9912,7 +9736,6 @@ public:
 		return GetDefaultObjImpl<UCursorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UCursorSettings;
 
 // Class ShooterGame.PrimalLevelSequenceVolumeBase
 // 0x0010 (0x0548 - 0x0538)
@@ -9938,7 +9761,6 @@ public:
 		return GetDefaultObjImpl<APrimalLevelSequenceVolumeBase>();
 	}
 };
-DUMPER7_ASSERTS_APrimalLevelSequenceVolumeBase;
 
 // Class ShooterGame.PrimalLevelSequenceVolumeBox
 // 0x0008 (0x0550 - 0x0548)
@@ -9961,7 +9783,6 @@ public:
 		return GetDefaultObjImpl<APrimalLevelSequenceVolumeBox>();
 	}
 };
-DUMPER7_ASSERTS_APrimalLevelSequenceVolumeBox;
 
 // Class ShooterGame.CustomActorList
 // 0x0018 (0x04A8 - 0x0490)
@@ -9988,7 +9809,6 @@ public:
 		return GetDefaultObjImpl<ACustomActorList>();
 	}
 };
-DUMPER7_ASSERTS_ACustomActorList;
 
 // Class ShooterGame.CustomButtonWidget
 // 0x0060 (0x06F0 - 0x0690)
@@ -10022,10 +9842,9 @@ public:
 		return GetDefaultObjImpl<UCustomButtonWidget>();
 	}
 };
-DUMPER7_ASSERTS_UCustomButtonWidget;
 
 // Class ShooterGame.ShooterGameMode
-// 0x3F70 (0x4500 - 0x0590)
+// 0x4020 (0x45B0 - 0x0590)
 class alignas(0x10) AShooterGameMode : public APrimalGameMode
 {
 public:
@@ -10050,532 +9869,532 @@ public:
 	bool                                          bTempDisableLoginLockCheck;                        // 0x0B69(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B6A[0x6];                                      // 0x0B6A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 MyServerId;                                        // 0x0B70(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B80[0x118];                                    // 0x0B80(0x0118)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FTribeData>                     TribesData;                                        // 0x0C98(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class APrimalDinoCharacter*>           ActivelyTamingDinos;                               // 0x0CA8(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bAutoCreateNewPlayerData;                          // 0x0CB8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CB9[0x7];                                      // 0x0CB9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DifficultyValue;                                   // 0x0CC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DifficultyValueMin;                                // 0x0CC4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DifficultyValueMax;                                // 0x0CC8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ProximityChatInnerRadius;                          // 0x0CCC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ProximityChatOuterRadius;                          // 0x0CD0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ProximityRadiusUnconsiousScale;                    // 0x0CD4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UCheatManager>              CheatClass;                                        // 0x0CD8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsOfficialServer;                                 // 0x0CE0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsCurrentlySavingWorld;                           // 0x0CE1(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CE2[0x1];                                      // 0x0CE2(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsConsoleUnOfficialPCServer;                      // 0x0CE3(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bServerAllowArkDownload;                           // 0x0CE4(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CE5[0x7];                                      // 0x0CE5(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bAlwaysNotifyPlayerLeft;                           // 0x0CEC(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlwaysNotifyPlayerJoined;                         // 0x0CED(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bServerHardcore;                                   // 0x0CEE(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CEF[0x42];                                     // 0x0CEF(0x0042)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bEnableCryoSicknessPVE;                            // 0x0D31(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D32[0x2];                                      // 0x0D32(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CryopodNerfDamageMult;                             // 0x0D34(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CryopodNerfDuration;                               // 0x0D38(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableMeshBitingProtection;                       // 0x0D3C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D3D[0x3];                                      // 0x0D3D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CryopodNerfIncomingDamageMultPercent;              // 0x0D40(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D44[0x48];                                     // 0x0D44(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ResourcesRespawnPeriodMultiplier;                  // 0x0D8C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         KickIdlePlayersPeriod;                             // 0x0D90(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MateBoostEffectMultiplier;                         // 0x0D94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AutoSavePeriodMinutes;                             // 0x0D98(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         XPMultiplier;                                      // 0x0D9C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ActiveEvent;                                       // 0x0DA0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TribeNameChangeCooldown;                           // 0x0DA8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlatformSaddleBuildAreaBoundsMultiplier;           // 0x0DAC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlwaysAllowStructurePickup;                       // 0x0DB0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DB1[0x3];                                      // 0x0DB1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StructurePickupTimeAfterPlacement;                 // 0x0DB4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StructurePickupHoldDuration;                       // 0x0DB8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowHideDamageSourceFromLogs;                    // 0x0DBC(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DBD[0x3];                                      // 0x0DBD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCheatTeleportLocation>         CheatTeleportLocations;                            // 0x0DC0(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	float                                         KillXPMultiplier;                                  // 0x0DD0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HarvestXPMultiplier;                               // 0x0DD4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CraftXPMultiplier;                                 // 0x0DD8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GenericXPMultiplier;                               // 0x0DDC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpecialXPMultiplier;                               // 0x0DE0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AlphaKillXPMultiplier;                             // 0x0DE4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CaveKillXPMultiplier;                              // 0x0DE8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WildKillXPMultiplier;                              // 0x0DEC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BossKillXPMultiplier;                              // 0x0DF0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TamedKillXPMultiplier;                             // 0x0DF4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         UnclaimedKillXPMultiplier;                         // 0x0DF8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExplorerNoteXPMultiplier;                          // 0x0DFC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E00[0xD8];                                     // 0x0E00(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UPrimalPlayerData*>              PlayerDatas;                                       // 0x0ED8(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EE8[0xE];                                      // 0x0EE8(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bForceRespawnDinos;                                // 0x0EF6(0x0001)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EF7[0x29];                                     // 0x0EF7(0x0029)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class APrimalCharacter* TheCharacter, class APlayerController* ByPlayerController)> OnCharacterPossessedByPlayer; // 0x0F20(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class APrimalCharacter* TheCharacter, class APlayerController* ByPlayerController)> OnCharacterUnpossessedByPlayer; // 0x0F30(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AShooterCharacter* TheShooterCharacter)> OnShooterCharacterSpawned; // 0x0F40(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AShooterCharacter* TheShooterCharacter)> OnShooterCharacterDied; // 0x0F50(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AMissionTrigger* Trigger, class FName TriggerKey, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)> OnMissionTriggerBeginOverlap; // 0x0F60(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AMissionTrigger* Trigger, class FName TriggerKey, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)> OnMissionTriggerEndOverlap; // 0x0F70(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class APrimalDinoCharacter* Dino, class AShooterPlayerController* ByPC, class UPrimalItem* CryoItemNoDino, bool bStartOfCryoProcess, bool bSuccess, const class FString& FailReason)> OnTryCryoDino; // 0x0F80(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AShooterPlayerController* ByPC, class UPrimalItem* CryoItemWithDino, const struct FVector& Location)> OnPostCryoDino; // 0x0F90(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AShooterPlayerController* ByPC, const struct FVector& Location, bool bBeforeDinoSpawn, class UPrimalItem* CryoItemWithDino, bool bSuccess, const class FString& FailReason)> OnTryUnCryoDino; // 0x0FA0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AShooterPlayerController* ByPC, class APrimalDinoCharacter* Dino, class UPrimalItem* CryoItemNoDino, const struct FCustomItemData& CryoDinoData)> OnPostUnCryoDino; // 0x0FB0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	float                                         TamedDinoDamageMultiplier;                         // 0x0FC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DinoDamageMultiplier;                              // 0x0FC4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayerDamageMultiplier;                            // 0x0FC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StructureDamageMultiplier;                         // 0x0FCC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayerResistanceMultiplier;                        // 0x0FD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DinoResistanceMultiplier;                          // 0x0FD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TamedDinoResistanceMultiplier;                     // 0x0FD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StructureResistanceMultiplier;                     // 0x0FDC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bJoinInProgressGamesAsSpectator;                   // 0x0FE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FE1[0x3];                                      // 0x0FE1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TamingSpeedMultiplier;                             // 0x0FE4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HarvestAmountMultiplier;                           // 0x0FE8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HarvestHealthMultiplier;                           // 0x0FEC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayerCharacterWaterDrainMultiplier;               // 0x0FF0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayerCharacterFoodDrainMultiplier;                // 0x0FF4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DinoCharacterFoodDrainMultiplier;                  // 0x0FF8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RaidDinoCharacterFoodDrainMultiplier;              // 0x0FFC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayerCharacterStaminaDrainMultiplier;             // 0x1000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DinoCharacterStaminaDrainMultiplier;               // 0x1004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayerCharacterHealthRecoveryMultiplier;           // 0x1008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DinoCharacterHealthRecoveryMultiplier;             // 0x100C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CarnivoreNaturalTargetingRangeMultiplier;          // 0x1010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CarnivorePlayerAggroMultiplier;                    // 0x1014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HerbivoreNaturalTargetingRangeMultiplier;          // 0x1018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HerbivorePlayerAggroMultiplier;                    // 0x101C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AIForceTargetPlayers;                              // 0x1020(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AIForceOverlapCheck;                               // 0x1021(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1022[0x6];                                     // 0x1022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bDisableSaveLoad;                                  // 0x1028(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableXP;                                        // 0x1029(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableDynamicMusic;                              // 0x102A(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_102B[0x5];                                     // 0x102B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FLevelExperienceRamp>           LevelExperienceRampOverrides;                      // 0x1030(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<int32>                                 OverridePlayerLevelEngramPoints;                   // 0x1040(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<int32>                                 ExcludeItemIndices;                                // 0x1050(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FEngramEntryOverride>           OverrideEngramEntries;                             // 0x1060(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FEngramEntryOverride>           OverrideNamedEngramEntries;                        // 0x1070(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FEngramEntryAutoUnlock>         EngramEntryAutoUnlocks;                            // 0x1080(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<class FString>                         PreventDinoTameClassNames;                         // 0x1090(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<class FString>                         PreventDisableDefaultDinoTameClassNames;           // 0x10A0(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FClassMultiplier>               DinoClassStaminaMultipliers;                       // 0x10B0(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FClassMultiplier>               TamedDinoClassStaminaMultipliers;                  // 0x10C0(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FClassMultiplier>               DinoClassSpeedMultipliers;                         // 0x10D0(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FClassMultiplier>               TamedDinoClassSpeedMultipliers;                    // 0x10E0(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FDinoSpawnWeightMultiplier>     DinoSpawnWeightMultipliers;                        // 0x10F0(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FClassMultiplier>               DinoClassResistanceMultipliers;                    // 0x1100(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FClassMultiplier>               TamedDinoClassResistanceMultipliers;               // 0x1110(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FClassMultiplier>               DinoClassDamageMultipliers;                        // 0x1120(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FClassMultiplier>               TamedDinoClassDamageMultipliers;                   // 0x1130(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FClassMultiplier>               HarvestResourceItemAmountClassMultipliers;         // 0x1140(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FClassNameReplacement>          NPCReplacements;                                   // 0x1150(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	float                                         PvPZoneStructureDamageMultiplier;                  // 0x1160(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnlyAllowSpecifiedEngrams;                        // 0x1164(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1165[0x3];                                     // 0x1165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         OverrideMaxExperiencePointsPlayer;                 // 0x1168(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OverrideMaxExperiencePointsDino;                   // 0x116C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GlobalSpoilingTimeMultiplier;                      // 0x1170(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GlobalItemDecompositionTimeMultiplier;             // 0x1174(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GlobalCorpseDecompositionTimeMultiplier;           // 0x1178(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxFallSpeedMultiplier;                            // 0x117C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoPvETimer;                                     // 0x1180(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoPvEUseSystemTime;                             // 0x1181(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1182[0xA];                                     // 0x1182(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AutoPvEStartTimeSeconds;                           // 0x118C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AutoPvEStopTimeSeconds;                            // 0x1190(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1194[0x4];                                     // 0x1194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AHibernationManager*                    HibernationManager;                                // 0x1198(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11A0[0x10];                                    // 0x11A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TributeItemExpirationSeconds;                      // 0x11B0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TributeDinoExpirationSeconds;                      // 0x11B4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TributeCharacterExpirationSeconds;                 // 0x11B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11BC[0x8];                                     // 0x11BC(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxTributeItems;                                   // 0x11C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxTributeDinos;                                   // 0x11C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxTributeCharacters;                              // 0x11CC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncreasePvPRespawnInterval;                       // 0x11D0(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11D1[0x3];                                     // 0x11D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         IncreasePvPRespawnIntervalCheckPeriod;             // 0x11D4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IncreasePvPRespawnIntervalMultiplier;              // 0x11D8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IncreasePvPRespawnIntervalBaseAmount;              // 0x11DC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ResourceNoReplenishRadiusStructures;               // 0x11E0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ResourceNoReplenishRadiusPlayers;                  // 0x11E4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CropGrowthSpeedMultiplier;                         // 0x11E8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LayEggIntervalMultiplier;                          // 0x11EC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PoopIntervalMultiplier;                            // 0x11F0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CropDecaySpeedMultiplier;                          // 0x11F4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowChatFromDeadNonAdmins;                       // 0x11F8(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowDisablingSpectator;                          // 0x11F9(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPvEDisableFriendlyFire;                           // 0x11FA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFlyerPlatformAllowUnalignedDinoBasing;            // 0x11FB(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowUnclaimDinos;                                // 0x11FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11FD[0x3];                                     // 0x11FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxPerTribePlatformSaddleStructureLimit;           // 0x1200(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxPlatformSaddleStructureLimit;                   // 0x1204(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxDinoBaseLevel;                                  // 0x1208(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_120C[0x14];                                    // 0x120C(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxNumberOfPlayersInTribe;                         // 0x1220(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TribeSlotReuseCooldown;                            // 0x1224(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MatingIntervalMultiplier;                          // 0x1228(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EggHatchSpeedMultiplier;                           // 0x122C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BabyMatureSpeedMultiplier;                         // 0x1230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BabyFoodConsumptionSpeedMultiplier;                // 0x1234(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1238[0x4];                                     // 0x1238(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PerLevelStatsMultiplier_Player[0xC];               // 0x123C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PerLevelStatsMultiplier_DinoTamed[0xC];            // 0x126C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PerLevelStatsMultiplier_DinoTamed_Add[0xC];        // 0x129C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PerLevelStatsMultiplier_DinoTamed_Affinity[0xC];   // 0x12CC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PerLevelStatsMultiplier_DinoWild[0xC];             // 0x12FC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MutagenLevelBoost[0xC];                            // 0x132C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MutagenLevelBoost_Bred[0xC];                       // 0x135C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ItemStatClamps[0x8];                               // 0x138C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxGateFrameOnSaddles;                             // 0x13AC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxHexagonsPerCharacter;                           // 0x13B0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxHexagonsToAward;                                // 0x13B4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCustomGameModeAllowSpectatorJoinAfterMatchStart;  // 0x13B8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13B9[0x1107];                                  // 0x13B9(0x1107)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bGameplayLogEnabled;                               // 0x24C0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bServerGameLogEnabled;                             // 0x24C1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24C2[0x6];                                     // 0x24C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UPrimalItem>                BonusSupplyCrateItemClass;                         // 0x24C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BonusSupplyCrateItemGiveInterval;                  // 0x24D0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StructureDamageRepairCooldown;                     // 0x24D4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CustomRecipeEffectivenessMultiplier;               // 0x24D8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CustomRecipeSkillMultiplier;                       // 0x24DC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BonusSupplyCrateItemString;                        // 0x24E0(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          MaxDifficulty;                                     // 0x24F0(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPvEAllowTribeWar;                                 // 0x24F1(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPvEAllowTribeWarCancel;                           // 0x24F2(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowCustomRecipes;                               // 0x24F3(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPassiveDefensesDamageRiderlessDinos;              // 0x24F4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24F5[0xB];                                     // 0x24F5(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bEnableDeathTeamSpectator;                         // 0x2500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTribeStoreCharacterConfiguration;                 // 0x2501(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2502[0xF6];                                    // 0x2502(0x00F6)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxTribeLogs;                                      // 0x25F8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25FC[0x1C];                                    // 0x25FC(0x001C)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxPlayersOverride;                                // 0x2618(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableFriendlyFire;                              // 0x261C(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowInactiveTribes;                              // 0x261D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceMapPlayerLocation;                           // 0x261E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_261F[0x1];                                     // 0x261F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DinoHarvestingDamageMultiplier;                    // 0x2620(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayerHarvestingDamageMultiplier;                  // 0x2624(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DinoTurretDamageMultiplier;                        // 0x2628(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableLootCrates;                                // 0x262C(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_262D[0x3];                                     // 0x262D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ExtinctionEventTimeInterval;                       // 0x2630(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2634[0x4];                                     // 0x2634(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        NextExtinctionEventUTC;                            // 0x2638(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_263C[0x1C];                                    // 0x263C(0x001C)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bUseCharacterTracker;                              // 0x2658(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableGeneTraits;                                // 0x2659(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowFloatingDamageText;                           // 0x265A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_265B[0x1];                                     // 0x265B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SavedGameModeVersion;                              // 0x265C(0x0004)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2660[0x4];                                     // 0x2660(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bAllowTekSuitPowersInGenesis;                      // 0x2664(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2665[0x43];                                    // 0x2665(0x0043)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FItemCraftingCostOverride>      OverrideItemCraftingCosts;                         // 0x26A8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TArray<struct FConfigItemCraftingCostOverride> ConfigOverrideItemCraftingCosts;                  // 0x26B8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FConfigMaxItemQuantityOverride> ConfigOverrideItemMaxQuantity;                     // 0x26C8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26D8[0x50];                                    // 0x26D8(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FConfigSupplyCrateItemsOverride> ConfigOverrideSupplyCrateItems;                   // 0x2728(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FConfigNPCSpawnEntriesContainer> ConfigOverrideNPCSpawnEntriesContainer;           // 0x2738(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FConfigNPCSpawnEntriesContainer> ConfigAddNPCSpawnEntriesContainer;                // 0x2748(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FConfigNPCSpawnEntriesContainer> ConfigSubtractNPCSpawnEntriesContainer;           // 0x2758(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	float                                         BabyImprintingStatScaleMultiplier;                 // 0x2768(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BabyCuddleIntervalMultiplier;                      // 0x276C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BabyImprintAmountMultiplier;                       // 0x2770(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BabyCuddleGracePeriodMultiplier;                   // 0x2774(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BabyCuddleLoseImprintQualitySpeedMultiplier;       // 0x2778(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HairGrowthSpeedMultiplier;                         // 0x277C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DinoHairGrowthSpeedMultiplier;                     // 0x2780(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPreventDiseases;                                  // 0x2784(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNonPermanentDiseases;                             // 0x2785(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2786[0x2];                                     // 0x2786(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAllClustersInventory*                  AllClustersInventory;                              // 0x2788(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SaveForceRespawnDinosVersion;                      // 0x2790(0x0004)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2794[0x4];                                     // 0x2794(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	uint64                                        ServerID;                                          // 0x2798(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_27A0[0x58];                                    // 0x27A0(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 SupportedSpawnRegions;                             // 0x27F8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	bool                                          bServerUseDinoList;                                // 0x2808(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2809[0x3];                                     // 0x2809(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxAllowedRespawnInterval;                         // 0x280C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseDinoLevelUpAnimations;                         // 0x2810(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableDinoTaming;                                // 0x2811(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableDefaultDinoTaming;                         // 0x2812(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableDinoRiding;                                // 0x2813(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2814[0x4];                                     // 0x2814(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SaveGameCustomVersion;                             // 0x2818(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_281C[0x894];                                   // 0x281C(0x0894)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bFailedWaterDinoSpawnLogEnabled;                   // 0x30B0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30B1[0x88F];                                   // 0x30B1(0x088F)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PlayerBaseStatMultipliers[0xC];                    // 0x3940(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NPCActiveCountTamed;                               // 0x3970(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NPCActiveCount;                                    // 0x3974(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NPCCount;                                          // 0x3978(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumStructureActors;                                // 0x397C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RTSModeNumSelectableDinosScale;                    // 0x3980(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RTSMaxRangeFromPlayerCharacterScale;               // 0x3984(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RTSProximityToEnemyStructureScale;                 // 0x3988(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MatingSpeedMultiplier;                             // 0x398C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FastDecayInterval;                                 // 0x3990(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSingleplayerSettings;                          // 0x3994(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableGenesisMissions;                           // 0x3995(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableStructurePlacementCollision;               // 0x3996(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceUseInventoryAppends;                         // 0x3997(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableWirelessCrafting;                          // 0x3998(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableWirelessCraftingForDinos;                  // 0x3999(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableWirelessCraftingForPlayers;                // 0x399A(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableWirelessCraftingForStructures;             // 0x399B(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WirelessCraftingRangeOverride;                     // 0x399C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SupplyCrateLootQualityMultiplier;                  // 0x39A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FishingLootQualityMultiplier;                      // 0x39A4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ItemStackSizeMultiplier;                           // 0x39A8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CraftingSkillBonusMultiplier;                      // 0x39AC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowPlatformSaddleMultiFloors;                   // 0x39B0(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowUnlimitedRespecs;                            // 0x39B1(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39B2[0x2];                                     // 0x39B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FuelConsumptionIntervalMultiplier;                 // 0x39B4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DestroyTamesOverLevelClamp;                        // 0x39B8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxAlliancesPerTribe;                              // 0x39BC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxTribesPerAlliance;                              // 0x39C0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableDinoDecayClaiming;                         // 0x39C4(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableNonTribePinAccess;                         // 0x39C5(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseTameLimitForStructuresOnly;                    // 0x39C6(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNeedsPowerToActivateAquaticCompartments;          // 0x39C7(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLimitTurretsInRange;                              // 0x39C8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39C9[0x3];                                     // 0x39C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LimitTurretsRange;                                 // 0x39CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LimitTurretsNum;                                   // 0x39D0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHardLimitTurretsInRange;                          // 0x39D4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39D5[0x3];                                     // 0x39D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         LimitBunkersPerTribeNum;                           // 0x39D8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLimitBunkersPerTribe;                             // 0x39DC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowBunkersInPreventionZones;                    // 0x39DD(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowRidingDinosInsideBunkers;                    // 0x39DE(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowBunkerModulesAboveGround;                    // 0x39DF(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowDinoAIInsideBunkers;                         // 0x39E0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowBunkerModulesInPreventionZones;              // 0x39E1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39E2[0x2];                                     // 0x39E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinDistanceBetweenBunkers;                         // 0x39E4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EnemyAccessBunkerHPThreshold;                      // 0x39E8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BunkerUnderHPThresholdDmgMultiplier;               // 0x39EC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CryoHospitalHoursToRegenHP;                        // 0x39F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CryoHospitalHoursToRegenFood;                      // 0x39F4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CryoHospitalHoursToDrainTorpor;                    // 0x39F8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CryoHospitalMatingCooldownReduction;               // 0x39FC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloodforgeReinforceExtraDurability;                // 0x3A00(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloodforgeReinforceResourceCostMultiplier;         // 0x3A04(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloodforgeReinforceSpeedMultiplier;                // 0x3A08(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowVariantDinoPacks;                            // 0x3A0C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A0D[0x3];                                     // 0x3A0D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         LimitGeneratorsNum;                                // 0x3A10(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LimitGeneratorsRange;                              // 0x3A14(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TribeTowerBonusMultiplier;                         // 0x3A18(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CropPlotStackLimit;                                // 0x3A1C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LimitLinkedStoragesNum;                            // 0x3A20(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisablePhotoMode;                                 // 0x3A24(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableTekLegsBoost;                              // 0x3A25(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A26[0x2];                                     // 0x3A26(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxCosmoWeaponAmmo;                                // 0x3A28(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CosmoWeaponAmmoReloadAmount;                       // 0x3A2C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ArmadoggoDeathCooldown;                            // 0x3A30(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         YoungIceFoxDeathCooldown;                          // 0x3A34(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CompanionsDeathCooldown;                           // 0x3A38(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseOnLoadClampItemQualityRating;                  // 0x3A3C(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPreventTemplateOnSaddle;                          // 0x3A3D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableCryopodEnemyCheck;                         // 0x3A3E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowCryoFridgeOnSaddle;                          // 0x3A3F(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CryopodFridgeCooldownTime;                         // 0x3A40(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableCryopodFridgeRequirement;                  // 0x3A44(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableBurrowDecayTimers;                         // 0x3A45(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A46[0x2];                                     // 0x3A46(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OnLoadItemQualityRatingClamp;                      // 0x3A48(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PhotoModeRangeLimit;                               // 0x3A4C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoUnlockAllEngrams;                             // 0x3A50(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A51[0x7];                                     // 0x3A51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ServerLastForceRespawnWildDinosTime;               // 0x3A58(0x0008)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UseStructurePreventionVolumeTagString;             // 0x3A60(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ValgueroMemorialEntries;                           // 0x3A70(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BaseTemperatureMultiplier;                         // 0x3A80(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceAllowAllStructures;                          // 0x3A84(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceAllowAscensionItemDownloads;                 // 0x3A85(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowCreativeMode;                                 // 0x3A86(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A87[0x1];                                     // 0x3A87(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LimitNonPlayerDroppedItemsRange;                   // 0x3A88(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LimitNonPlayerDroppedItemsCount;                   // 0x3A8C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GlobalPoweredBatteryDurabilityDecreasePerSecond;   // 0x3A90(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SingleplayerSettingsCorpseLifespanMultiplier;      // 0x3A94(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         UseCorpseLifeSpanMultiplier;                       // 0x3A98(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimePeriodToHideDisconnectedPlayers;               // 0x3A9C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseBPPreSpawnedDino;                              // 0x3AA0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3AA1[0x3];                                     // 0x3AA1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PreventOfflinePvPConnectionInvincibleInterval;     // 0x3AA4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TamedDinoCharacterFoodDrainMultiplier;             // 0x3AA8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WildDinoCharacterFoodDrainMultiplier;              // 0x3AAC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WildDinoTorporDrainMultiplier;                     // 0x3AB0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PassiveTameIntervalMultiplier;                     // 0x3AB4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TamedDinoTorporDrainMultiplier;                    // 0x3AB8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableWeatherFog;                                // 0x3ABC(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B80[0x1C0];                                    // 0x0B80(0x01C0)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTribeData>                     TribesData;                                        // 0x0D40(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class APrimalDinoCharacter*>           ActivelyTamingDinos;                               // 0x0D50(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bAutoCreateNewPlayerData;                          // 0x0D60(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D61[0x7];                                      // 0x0D61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DifficultyValue;                                   // 0x0D68(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DifficultyValueMin;                                // 0x0D6C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DifficultyValueMax;                                // 0x0D70(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ProximityChatInnerRadius;                          // 0x0D74(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ProximityChatOuterRadius;                          // 0x0D78(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ProximityRadiusUnconsiousScale;                    // 0x0D7C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCheatManager>              CheatClass;                                        // 0x0D80(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsOfficialServer;                                 // 0x0D88(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsCurrentlySavingWorld;                           // 0x0D89(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D8A[0x1];                                      // 0x0D8A(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsConsoleUnOfficialPCServer;                      // 0x0D8B(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bServerAllowArkDownload;                           // 0x0D8C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D8D[0x7];                                      // 0x0D8D(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bAlwaysNotifyPlayerLeft;                           // 0x0D94(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlwaysNotifyPlayerJoined;                         // 0x0D95(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bServerHardcore;                                   // 0x0D96(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D97[0x42];                                     // 0x0D97(0x0042)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableCryoSicknessPVE;                            // 0x0DD9(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_DDA[0x2];                                      // 0x0DDA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CryopodNerfDamageMult;                             // 0x0DDC(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CryopodNerfDuration;                               // 0x0DE0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableMeshBitingProtection;                       // 0x0DE4(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_DE5[0x3];                                      // 0x0DE5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CryopodNerfIncomingDamageMultPercent;              // 0x0DE8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_DEC[0x48];                                     // 0x0DEC(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ResourcesRespawnPeriodMultiplier;                  // 0x0E34(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         KickIdlePlayersPeriod;                             // 0x0E38(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MateBoostEffectMultiplier;                         // 0x0E3C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AutoSavePeriodMinutes;                             // 0x0E40(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         XPMultiplier;                                      // 0x0E44(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ActiveEvent;                                       // 0x0E48(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TribeNameChangeCooldown;                           // 0x0E50(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlatformSaddleBuildAreaBoundsMultiplier;           // 0x0E54(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlwaysAllowStructurePickup;                       // 0x0E58(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E59[0x3];                                      // 0x0E59(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StructurePickupTimeAfterPlacement;                 // 0x0E5C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StructurePickupHoldDuration;                       // 0x0E60(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowHideDamageSourceFromLogs;                    // 0x0E64(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E65[0x3];                                      // 0x0E65(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FCheatTeleportLocation>         CheatTeleportLocations;                            // 0x0E68(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	float                                         KillXPMultiplier;                                  // 0x0E78(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HarvestXPMultiplier;                               // 0x0E7C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CraftXPMultiplier;                                 // 0x0E80(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GenericXPMultiplier;                               // 0x0E84(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpecialXPMultiplier;                               // 0x0E88(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AlphaKillXPMultiplier;                             // 0x0E8C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CaveKillXPMultiplier;                              // 0x0E90(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WildKillXPMultiplier;                              // 0x0E94(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BossKillXPMultiplier;                              // 0x0E98(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TamedKillXPMultiplier;                             // 0x0E9C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         UnclaimedKillXPMultiplier;                         // 0x0EA0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExplorerNoteXPMultiplier;                          // 0x0EA4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EA8[0xD8];                                     // 0x0EA8(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UPrimalPlayerData*>              PlayerDatas;                                       // 0x0F80(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F90[0xE];                                      // 0x0F90(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bForceRespawnDinos;                                // 0x0F9E(0x0001)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9F[0x29];                                     // 0x0F9F(0x0029)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class APrimalCharacter* TheCharacter, class APlayerController* ByPlayerController)> OnCharacterPossessedByPlayer; // 0x0FC8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class APrimalCharacter* TheCharacter, class APlayerController* ByPlayerController)> OnCharacterUnpossessedByPlayer; // 0x0FD8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AShooterCharacter* TheShooterCharacter)> OnShooterCharacterSpawned; // 0x0FE8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AShooterCharacter* TheShooterCharacter)> OnShooterCharacterDied; // 0x0FF8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AMissionTrigger* Trigger, class FName TriggerKey, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)> OnMissionTriggerBeginOverlap; // 0x1008(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AMissionTrigger* Trigger, class FName TriggerKey, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)> OnMissionTriggerEndOverlap; // 0x1018(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class APrimalDinoCharacter* Dino, class AShooterPlayerController* ByPC, class UPrimalItem* CryoItemNoDino, bool bStartOfCryoProcess, bool bSuccess, const class FString& FailReason)> OnTryCryoDino; // 0x1028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AShooterPlayerController* ByPC, class UPrimalItem* CryoItemWithDino, const struct FVector& Location)> OnPostCryoDino; // 0x1038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AShooterPlayerController* ByPC, const struct FVector& Location, bool bBeforeDinoSpawn, class UPrimalItem* CryoItemWithDino, bool bSuccess, const class FString& FailReason)> OnTryUnCryoDino; // 0x1048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AShooterPlayerController* ByPC, class APrimalDinoCharacter* Dino, class UPrimalItem* CryoItemNoDino, const struct FCustomItemData& CryoDinoData)> OnPostUnCryoDino; // 0x1058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	float                                         TamedDinoDamageMultiplier;                         // 0x1068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DinoDamageMultiplier;                              // 0x106C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayerDamageMultiplier;                            // 0x1070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StructureDamageMultiplier;                         // 0x1074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayerResistanceMultiplier;                        // 0x1078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DinoResistanceMultiplier;                          // 0x107C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TamedDinoResistanceMultiplier;                     // 0x1080(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StructureResistanceMultiplier;                     // 0x1084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bJoinInProgressGamesAsSpectator;                   // 0x1088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1089[0x3];                                     // 0x1089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TamingSpeedMultiplier;                             // 0x108C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HarvestAmountMultiplier;                           // 0x1090(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HarvestHealthMultiplier;                           // 0x1094(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayerCharacterWaterDrainMultiplier;               // 0x1098(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayerCharacterFoodDrainMultiplier;                // 0x109C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DinoCharacterFoodDrainMultiplier;                  // 0x10A0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RaidDinoCharacterFoodDrainMultiplier;              // 0x10A4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayerCharacterStaminaDrainMultiplier;             // 0x10A8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DinoCharacterStaminaDrainMultiplier;               // 0x10AC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayerCharacterHealthRecoveryMultiplier;           // 0x10B0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DinoCharacterHealthRecoveryMultiplier;             // 0x10B4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CarnivoreNaturalTargetingRangeMultiplier;          // 0x10B8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CarnivorePlayerAggroMultiplier;                    // 0x10BC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HerbivoreNaturalTargetingRangeMultiplier;          // 0x10C0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HerbivorePlayerAggroMultiplier;                    // 0x10C4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AIForceTargetPlayers;                              // 0x10C8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AIForceOverlapCheck;                               // 0x10C9(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10CA[0x6];                                     // 0x10CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bDisableSaveLoad;                                  // 0x10D0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableXP;                                        // 0x10D1(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableDynamicMusic;                              // 0x10D2(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10D3[0x5];                                     // 0x10D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FLevelExperienceRamp>           LevelExperienceRampOverrides;                      // 0x10D8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<int32>                                 OverridePlayerLevelEngramPoints;                   // 0x10E8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<int32>                                 ExcludeItemIndices;                                // 0x10F8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FEngramEntryOverride>           OverrideEngramEntries;                             // 0x1108(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FEngramEntryOverride>           OverrideNamedEngramEntries;                        // 0x1118(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FEngramEntryAutoUnlock>         EngramEntryAutoUnlocks;                            // 0x1128(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<class FString>                         PreventDinoTameClassNames;                         // 0x1138(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<class FString>                         PreventDisableDefaultDinoTameClassNames;           // 0x1148(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FClassMultiplier>               DinoClassStaminaMultipliers;                       // 0x1158(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FClassMultiplier>               TamedDinoClassStaminaMultipliers;                  // 0x1168(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FClassMultiplier>               DinoClassSpeedMultipliers;                         // 0x1178(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FClassMultiplier>               TamedDinoClassSpeedMultipliers;                    // 0x1188(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FDinoSpawnWeightMultiplier>     DinoSpawnWeightMultipliers;                        // 0x1198(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FClassMultiplier>               DinoClassResistanceMultipliers;                    // 0x11A8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FClassMultiplier>               TamedDinoClassResistanceMultipliers;               // 0x11B8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FClassMultiplier>               DinoClassDamageMultipliers;                        // 0x11C8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FClassMultiplier>               TamedDinoClassDamageMultipliers;                   // 0x11D8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FClassMultiplier>               HarvestResourceItemAmountClassMultipliers;         // 0x11E8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FClassNameReplacement>          NPCReplacements;                                   // 0x11F8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	float                                         PvPZoneStructureDamageMultiplier;                  // 0x1208(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnlyAllowSpecifiedEngrams;                        // 0x120C(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_120D[0x3];                                     // 0x120D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         OverrideMaxExperiencePointsPlayer;                 // 0x1210(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OverrideMaxExperiencePointsDino;                   // 0x1214(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GlobalSpoilingTimeMultiplier;                      // 0x1218(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GlobalItemDecompositionTimeMultiplier;             // 0x121C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GlobalCorpseDecompositionTimeMultiplier;           // 0x1220(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxFallSpeedMultiplier;                            // 0x1224(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoPvETimer;                                     // 0x1228(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoPvEUseSystemTime;                             // 0x1229(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_122A[0xA];                                     // 0x122A(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AutoPvEStartTimeSeconds;                           // 0x1234(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AutoPvEStopTimeSeconds;                            // 0x1238(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_123C[0x4];                                     // 0x123C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AHibernationManager*                    HibernationManager;                                // 0x1240(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1248[0x10];                                    // 0x1248(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TributeItemExpirationSeconds;                      // 0x1258(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TributeDinoExpirationSeconds;                      // 0x125C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TributeCharacterExpirationSeconds;                 // 0x1260(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1264[0x8];                                     // 0x1264(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxTributeItems;                                   // 0x126C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxTributeDinos;                                   // 0x1270(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxTributeCharacters;                              // 0x1274(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIncreasePvPRespawnInterval;                       // 0x1278(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1279[0x3];                                     // 0x1279(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         IncreasePvPRespawnIntervalCheckPeriod;             // 0x127C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IncreasePvPRespawnIntervalMultiplier;              // 0x1280(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IncreasePvPRespawnIntervalBaseAmount;              // 0x1284(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ResourceNoReplenishRadiusStructures;               // 0x1288(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ResourceNoReplenishRadiusPlayers;                  // 0x128C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CropGrowthSpeedMultiplier;                         // 0x1290(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LayEggIntervalMultiplier;                          // 0x1294(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PoopIntervalMultiplier;                            // 0x1298(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CropDecaySpeedMultiplier;                          // 0x129C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowChatFromDeadNonAdmins;                       // 0x12A0(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowDisablingSpectator;                          // 0x12A1(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPvEDisableFriendlyFire;                           // 0x12A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlyerPlatformAllowUnalignedDinoBasing;            // 0x12A3(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowUnclaimDinos;                                // 0x12A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12A5[0x3];                                     // 0x12A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxPerTribePlatformSaddleStructureLimit;           // 0x12A8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxPlatformSaddleStructureLimit;                   // 0x12AC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxDinoBaseLevel;                                  // 0x12B0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12B4[0x14];                                    // 0x12B4(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxNumberOfPlayersInTribe;                         // 0x12C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TribeSlotReuseCooldown;                            // 0x12CC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MatingIntervalMultiplier;                          // 0x12D0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EggHatchSpeedMultiplier;                           // 0x12D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BabyMatureSpeedMultiplier;                         // 0x12D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BabyFoodConsumptionSpeedMultiplier;                // 0x12DC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12E0[0x4];                                     // 0x12E0(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PerLevelStatsMultiplier_Player[0xC];               // 0x12E4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PerLevelStatsMultiplier_DinoTamed[0xC];            // 0x1314(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PerLevelStatsMultiplier_DinoTamed_Add[0xC];        // 0x1344(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PerLevelStatsMultiplier_DinoTamed_Affinity[0xC];   // 0x1374(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PerLevelStatsMultiplier_DinoWild[0xC];             // 0x13A4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MutagenLevelBoost[0xC];                            // 0x13D4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MutagenLevelBoost_Bred[0xC];                       // 0x1404(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ItemStatClamps[0x8];                               // 0x1434(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxGateFrameOnSaddles;                             // 0x1454(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxHexagonsPerCharacter;                           // 0x1458(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxHexagonsToAward;                                // 0x145C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCustomGameModeAllowSpectatorJoinAfterMatchStart;  // 0x1460(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1461[0x110F];                                  // 0x1461(0x110F)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bGameplayLogEnabled;                               // 0x2570(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bServerGameLogEnabled;                             // 0x2571(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2572[0x6];                                     // 0x2572(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UPrimalItem>                BonusSupplyCrateItemClass;                         // 0x2578(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BonusSupplyCrateItemGiveInterval;                  // 0x2580(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StructureDamageRepairCooldown;                     // 0x2584(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CustomRecipeEffectivenessMultiplier;               // 0x2588(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CustomRecipeSkillMultiplier;                       // 0x258C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BonusSupplyCrateItemString;                        // 0x2590(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          MaxDifficulty;                                     // 0x25A0(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPvEAllowTribeWar;                                 // 0x25A1(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPvEAllowTribeWarCancel;                           // 0x25A2(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowCustomRecipes;                               // 0x25A3(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPassiveDefensesDamageRiderlessDinos;              // 0x25A4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25A5[0xB];                                     // 0x25A5(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableDeathTeamSpectator;                         // 0x25B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTribeStoreCharacterConfiguration;                 // 0x25B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25B2[0xF6];                                    // 0x25B2(0x00F6)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxTribeLogs;                                      // 0x26A8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_26AC[0x1C];                                    // 0x26AC(0x001C)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxPlayersOverride;                                // 0x26C8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableFriendlyFire;                              // 0x26CC(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowInactiveTribes;                              // 0x26CD(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceMapPlayerLocation;                           // 0x26CE(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_26CF[0x1];                                     // 0x26CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DinoHarvestingDamageMultiplier;                    // 0x26D0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayerHarvestingDamageMultiplier;                  // 0x26D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DinoTurretDamageMultiplier;                        // 0x26D8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableLootCrates;                                // 0x26DC(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_26DD[0x3];                                     // 0x26DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ExtinctionEventTimeInterval;                       // 0x26E0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_26E4[0x4];                                     // 0x26E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        NextExtinctionEventUTC;                            // 0x26E8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_26EC[0x1C];                                    // 0x26EC(0x001C)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUseCharacterTracker;                              // 0x2708(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableGeneTraits;                                // 0x2709(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowFloatingDamageText;                           // 0x270A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_270B[0x1];                                     // 0x270B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SavedGameModeVersion;                              // 0x270C(0x0004)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2710[0x4];                                     // 0x2710(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bAllowTekSuitPowersInGenesis;                      // 0x2714(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2715[0x43];                                    // 0x2715(0x0043)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FItemCraftingCostOverride>      OverrideItemCraftingCosts;                         // 0x2758(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<struct FConfigItemCraftingCostOverride> ConfigOverrideItemCraftingCosts;                  // 0x2768(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FConfigMaxItemQuantityOverride> ConfigOverrideItemMaxQuantity;                     // 0x2778(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2788[0x50];                                    // 0x2788(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FConfigSupplyCrateItemsOverride> ConfigOverrideSupplyCrateItems;                   // 0x27D8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FConfigNPCSpawnEntriesContainer> ConfigOverrideNPCSpawnEntriesContainer;           // 0x27E8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FConfigNPCSpawnEntriesContainer> ConfigAddNPCSpawnEntriesContainer;                // 0x27F8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FConfigNPCSpawnEntriesContainer> ConfigSubtractNPCSpawnEntriesContainer;           // 0x2808(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	float                                         BabyImprintingStatScaleMultiplier;                 // 0x2818(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BabyCuddleIntervalMultiplier;                      // 0x281C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BabyImprintAmountMultiplier;                       // 0x2820(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BabyCuddleGracePeriodMultiplier;                   // 0x2824(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BabyCuddleLoseImprintQualitySpeedMultiplier;       // 0x2828(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HairGrowthSpeedMultiplier;                         // 0x282C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DinoHairGrowthSpeedMultiplier;                     // 0x2830(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPreventDiseases;                                  // 0x2834(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNonPermanentDiseases;                             // 0x2835(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2836[0x2];                                     // 0x2836(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAllClustersInventory*                  AllClustersInventory;                              // 0x2838(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SaveForceRespawnDinosVersion;                      // 0x2840(0x0004)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2844[0x4];                                     // 0x2844(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint64                                        ServerID;                                          // 0x2848(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2850[0x58];                                    // 0x2850(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 SupportedSpawnRegions;                             // 0x28A8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	bool                                          bServerUseDinoList;                                // 0x28B8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28B9[0x3];                                     // 0x28B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxAllowedRespawnInterval;                         // 0x28BC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseDinoLevelUpAnimations;                         // 0x28C0(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableDinoTaming;                                // 0x28C1(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableDefaultDinoTaming;                         // 0x28C2(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableDinoRiding;                                // 0x28C3(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28C4[0x4];                                     // 0x28C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SaveGameCustomVersion;                             // 0x28C8(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28CC[0x894];                                   // 0x28CC(0x0894)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bFailedWaterDinoSpawnLogEnabled;                   // 0x3160(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3161[0x88F];                                   // 0x3161(0x088F)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PlayerBaseStatMultipliers[0xC];                    // 0x39F0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NPCActiveCountTamed;                               // 0x3A20(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NPCActiveCount;                                    // 0x3A24(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NPCCount;                                          // 0x3A28(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumStructureActors;                                // 0x3A2C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RTSModeNumSelectableDinosScale;                    // 0x3A30(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RTSMaxRangeFromPlayerCharacterScale;               // 0x3A34(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RTSProximityToEnemyStructureScale;                 // 0x3A38(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MatingSpeedMultiplier;                             // 0x3A3C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FastDecayInterval;                                 // 0x3A40(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSingleplayerSettings;                          // 0x3A44(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableGenesisMissions;                           // 0x3A45(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableStructurePlacementCollision;               // 0x3A46(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceUseInventoryAppends;                         // 0x3A47(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableWirelessCrafting;                          // 0x3A48(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableWirelessCraftingForDinos;                  // 0x3A49(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableWirelessCraftingForPlayers;                // 0x3A4A(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableWirelessCraftingForStructures;             // 0x3A4B(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WirelessCraftingRangeOverride;                     // 0x3A4C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SupplyCrateLootQualityMultiplier;                  // 0x3A50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FishingLootQualityMultiplier;                      // 0x3A54(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ItemStackSizeMultiplier;                           // 0x3A58(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CraftingSkillBonusMultiplier;                      // 0x3A5C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowPlatformSaddleMultiFloors;                   // 0x3A60(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowUnlimitedRespecs;                            // 0x3A61(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A62[0x2];                                     // 0x3A62(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FuelConsumptionIntervalMultiplier;                 // 0x3A64(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DestroyTamesOverLevelClamp;                        // 0x3A68(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxAlliancesPerTribe;                              // 0x3A6C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxTribesPerAlliance;                              // 0x3A70(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableDinoDecayClaiming;                         // 0x3A74(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableNonTribePinAccess;                         // 0x3A75(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseTameLimitForStructuresOnly;                    // 0x3A76(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNeedsPowerToActivateAquaticCompartments;          // 0x3A77(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLimitTurretsInRange;                              // 0x3A78(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A79[0x3];                                     // 0x3A79(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LimitTurretsRange;                                 // 0x3A7C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LimitTurretsNum;                                   // 0x3A80(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHardLimitTurretsInRange;                          // 0x3A84(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A85[0x3];                                     // 0x3A85(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         LimitBunkersPerTribeNum;                           // 0x3A88(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLimitBunkersPerTribe;                             // 0x3A8C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowBunkersInPreventionZones;                    // 0x3A8D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowRidingDinosInsideBunkers;                    // 0x3A8E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowBunkerModulesAboveGround;                    // 0x3A8F(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowDinoAIInsideBunkers;                         // 0x3A90(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowBunkerModulesInPreventionZones;              // 0x3A91(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A92[0x2];                                     // 0x3A92(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinDistanceBetweenBunkers;                         // 0x3A94(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EnemyAccessBunkerHPThreshold;                      // 0x3A98(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BunkerUnderHPThresholdDmgMultiplier;               // 0x3A9C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CryoHospitalHoursToRegenHP;                        // 0x3AA0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CryoHospitalHoursToRegenFood;                      // 0x3AA4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CryoHospitalHoursToDrainTorpor;                    // 0x3AA8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CryoHospitalMatingCooldownReduction;               // 0x3AAC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloodforgeReinforceExtraDurability;                // 0x3AB0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloodforgeReinforceResourceCostMultiplier;         // 0x3AB4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloodforgeReinforceSpeedMultiplier;                // 0x3AB8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowVariantDinoPacks;                            // 0x3ABC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3ABD[0x3];                                     // 0x3ABD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MeshCheckingRayDistance;                           // 0x3AC0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MeshCheckingSubdivisons;                           // 0x3AC4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MeshCheckingPercentageToFail;                      // 0x3AC8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreStructuresPreventionVolumes;                // 0x3ACC(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGenesisUseStructuresPreventionVolumes;            // 0x3ACD(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3ACE[0x1];                                     // 0x3ACE(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bForceExploitedTameDeletion;                       // 0x3ACF(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3AD0[0x8];                                     // 0x3AD0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 LiveTuningFileName;                                // 0x3AD8(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3AE8[0x31];                                    // 0x3AE8(0x0031)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bLogChatMessages;                                  // 0x3B19(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3B1A[0x2];                                     // 0x3B1A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ChatLogFlushIntervalSeconds;                       // 0x3B1C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ChatLogFileSplitIntervalSeconds;                   // 0x3B20(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ChatLogMaxAgeInDays;                               // 0x3B24(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3B28[0x60];                                    // 0x3B28(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLeaderboardsContainer                 LeaderboardContainer;                              // 0x3B88(0x0010)(Transient, SaveGame, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3B98[0x58];                                    // 0x3B98(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bHasCovertedToStore;                               // 0x3BF0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowStoredDatas;                                 // 0x3BF1(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3BF2[0x1];                                     // 0x3BF2(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bDisableListenServerTethering;                     // 0x3BF3(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3BF4[0x17C];                                   // 0x3BF4(0x017C)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBuffAddition>                  AdditionalDefaultBuffs;                            // 0x3D70(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	bool                                          bParseServerToJson;                                // 0x3D80(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D81[0x7F];                                    // 0x3D81(0x007F)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class APrimalDinoCharacter* TheDino)> OnPreSpawnedDino;            // 0x3E00(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AController* Killer, class AController* KilledPlayer, class APawn* KilledPawn, const class UDamageType* DamageType)> OnKilled; // 0x3E10(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class APlayerController* NewPlayer)> OnPostLogin;                  // 0x3E20(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class APlayerController* NewPlayer)> OnStartNewPlayer;             // 0x3E30(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AShooterPlayerState* PlayerOwner, const class FString& TribeName, const struct FTribeGovernment& TribeGovernment)> OnAddNewTribe; // 0x3E40(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(int32 TribeID)> OnRemoveTribe;                                     // 0x3E50(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(int32 TribeID, int32 PlayerDataID)> OnRemovePlayerFromTribe;       // 0x3E60(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& MessageText, int32 ReceiverTeamId, int32 ReceiverPlayerID)> OnServerChatMessage; // 0x3E70(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& PlayerSteamIDconst, const class FString& MessageText, int32 ReceiverTeamId, int32 ReceiverPlayerID, const class FString& PlayerName)> OnServerDirectMessage; // 0x3E80(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& MessageText, int32 ReceiverTeamId, int32 ReceiverPlayerID)> OnServerNotification; // 0x3E90(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AActor* Victim, float DamageAmount, const struct FDamageEvent& DamageEvent, class AController* EventInstigator, class AActor* DamageCauser)> OnNotifyDamage; // 0x3EA0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnSerializeForSaveFile;                            // 0x3EB0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3EC0[0x20];                                    // 0x3EC0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         BaseHexagonRewardMultiplier;                       // 0x3EE0(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HexagonRewardMultiplier;                           // 0x3EE4(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HexagonCostMultiplier;                             // 0x3EE8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableHexagonStore;                              // 0x3EEC(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHexStoreAllowOnlyEngramTradeOption;               // 0x3EED(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3EEE[0x2];                                     // 0x3EEE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FClassNameReplacement>          DynamicNPCReplacements;                            // 0x3EF0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FClassNameReplacement>          CollectiveNPCReplacements;                         // 0x3F00(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         PreventTransferForClassNames;                      // 0x3F10(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	bool                                          bAllowSpeedLeveling;                               // 0x3F20(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowFlyerSpeedLeveling;                          // 0x3F21(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableWorldBuffScaling;                           // 0x3F22(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableWorldBuffs;                                // 0x3F23(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnablePlayerMoveThroughSleeping;                  // 0x3F24(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnablePlayerMoveThroughAlly;                      // 0x3F25(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPreventOverworldBosses;                           // 0x3F26(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPreventItemTraitEffects;                          // 0x3F27(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPreventTekChemBenchBabies;                        // 0x3F28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoCreateTribes;                                 // 0x3F29(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRiderDinoCollision;                               // 0x3F2A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFreezeTribes;                                     // 0x3F2B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WorldBuffScalingEfficacy;                          // 0x3F2C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableBuffSavePlayerDataOnSaveWorld;             // 0x3F30(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseOverrideTimeToRecoverValuesOnPlayerStatusComp; // 0x3F31(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3F32[0x2];                                     // 0x3F32(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OverrideTimeToRecoverAfterDepletionStatusValue[0xC]; // 0x3F34(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OverrideTimeToRecoverAfterDecreaseStatusValue[0xC]; // 0x3F64(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseOverrideTimeToRecoverValuesOnDinoStatusComp;   // 0x3F94(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3F95[0x3];                                     // 0x3F95(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OverrideDinoTimeToRecoverAfterDepletionStatusValue[0xC]; // 0x3F98(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OverrideDinoTimeToRecoverAfterDecreaseStatusValue[0xC]; // 0x3FC8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseDisabledStatusStates;                          // 0x3FF8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3FF9[0x7];                                     // 0x3FF9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimalInventoryComponent*              ClubArkTributeInventory;                           // 0x4000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         DisabledStatusStates[0xE];                         // 0x4008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4016[0x2];                                     // 0x4016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCrateTemporaryQualityModifierSet> TemporaryCrateModifiers;                        // 0x4018(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FResourceTemporaryAmountModifierSet> TemporaryResourceModifiers;                   // 0x4028(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         AdjustableMutagenSpawnDelayMultiplier;             // 0x4038(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableDefaultMapItemSets;                        // 0x403C(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          DisableRailgunPVP;                                 // 0x403D(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_403E[0xA];                                     // 0x403E(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           DynamicDisabledWorldBuffs;                         // 0x4048(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4058[0x10];                                    // 0x4058(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RedisTimeoutInMinutes;                             // 0x4068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RestartedDueToRedisTimeout;                        // 0x406C(0x0001)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_406D[0x3];                                     // 0x406D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ImprintLimit;                                      // 0x4070(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxStructuresToAllowForPickupOverride;             // 0x4074(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableCustomFoldersInTributeInventories;         // 0x4078(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableRailgunPVP;                                // 0x4079(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_407A[0x2];                                     // 0x407A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinimumTimebetweeninventoryRetrieval;              // 0x407C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WildFollowerSpawnChanceMultiplier;                 // 0x4080(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WildFollowerSpawnCountMultiplier;                  // 0x4084(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ServerGeneTraitSpawnRateMultiplier;                // 0x4088(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableDinoItemBlacklist;                         // 0x408C(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPreventHibernationManager;                        // 0x408D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSaveFormerTribeOwnerLog;                          // 0x408E(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_408F[0x1];                                     // 0x408F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DinoArmorDurabilityScale;                          // 0x4090(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowTeslaCoilCaveBuildingPVP;                    // 0x4094(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceGachaUnhappyInCaves;                         // 0x4095(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4096[0x2];                                     // 0x4096(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, float>                      ConfigSettingsModifiedTraitEffectiveness;          // 0x4098(0x0050)(Edit, BlueprintVisible, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	int32                                         MaxActiveOutposts;                                 // 0x40E8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxActiveOutpostsSP;                               // 0x40EC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxActiveResourceCaches;                           // 0x40F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxActiveResourceCachesSP;                         // 0x40F4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxActiveCityOutposts;                             // 0x40F8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxActiveCityOutpostsSP;                           // 0x40FC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOutpostsNoInitialDinosSP;                         // 0x4100(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4101[0x3];                                     // 0x4101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         OutpostAllowMaxStructuresNearby;                   // 0x4104(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CityOutpostAllowMaxStructuresNearby;               // 0x4108(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutpostSigilRewardMultiplier;                      // 0x410C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxActiveGenesisLandOutposts;                      // 0x4110(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4114[0xB4];                                    // 0x4114(0x00B4)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAntiDupeTransactionLog*                AntiDupeTransactionLog;                            // 0x41C8(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41D0[0x9C];                                    // 0x41D0(0x009C)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bFilterCharacterNames;                             // 0x426C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFilterTribeNames;                                 // 0x426D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFilterChat;                                       // 0x426E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_426F[0x1];                                     // 0x426F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CurrentChatFilterVersion;                          // 0x4270(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RequestedChatFilterVersion;                        // 0x4274(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceLoadingPlayerData;                           // 0x4278(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4279[0x7];                                     // 0x4279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BadWordListURL;                                    // 0x4280(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BadWordWhiteListURL;                               // 0x4290(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAhoCorasickMatcher                    BadWordMatcher;                                    // 0x42A0(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FAhoCorasickMatcher                    BadWordWhitelistMatcher;                           // 0x42B8(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	bool                                          bEnableServerDestroyTamesAboveSoftTameLimit;       // 0x42D0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCheckSoftTameLimitOnTick;                         // 0x42D1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_42D2[0x2];                                     // 0x42D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxTamedDinos_SoftTameLimit;                       // 0x42D4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxTamedDinos_SoftTameLimit_CountdownForDeletionDuration; // 0x42D8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_42DC[0x7C];                                    // 0x42DC(0x007C)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         OverrideSecondsUntilBuriedTreasureAutoReveals;     // 0x4358(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_435C[0x54];                                    // 0x435C(0x0054)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bDestroyCharacterOnLogoutInLobby : 1;              // 0x43B0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bPreventJoiningDuringMatch : 1;                    // 0x43B0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_43B1[0x1F];                                    // 0x43B1(0x001F)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class AShooterPlayerController* ForPlayerController, int32 ExplorerNoteIndex, class FName ExplorerNoteName)> OnExplorerNoteUnlocked; // 0x43D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UPrimalColorSet*                        DynamicColorSetInstance;                           // 0x43E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UPrimalColorSet>            DynamicColorSet;                                   // 0x43E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DynamicColorSetChance;                             // 0x43F0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDontEnforceMilestoneTaskOrder;                    // 0x43F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_43F5[0x3];                                     // 0x43F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ModValidationFailureWarnings;                      // 0x43F8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoAutomatedModValidationModeration;               // 0x43FC(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_43FD[0x103];                                   // 0x43FD(0x0103)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         LimitGeneratorsNum;                                // 0x3AC0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LimitGeneratorsRange;                              // 0x3AC4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TribeTowerBonusMultiplier;                         // 0x3AC8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CropPlotStackLimit;                                // 0x3ACC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LimitLinkedStoragesNum;                            // 0x3AD0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisablePhotoMode;                                 // 0x3AD4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableTekLegsBoost;                              // 0x3AD5(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3AD6[0x2];                                     // 0x3AD6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxCosmoWeaponAmmo;                                // 0x3AD8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CosmoWeaponAmmoReloadAmount;                       // 0x3ADC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ArmadoggoDeathCooldown;                            // 0x3AE0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         YoungIceFoxDeathCooldown;                          // 0x3AE4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CompanionsDeathCooldown;                           // 0x3AE8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseOnLoadClampItemQualityRating;                  // 0x3AEC(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPreventTemplateOnSaddle;                          // 0x3AED(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableCryopodEnemyCheck;                         // 0x3AEE(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowCryoFridgeOnSaddle;                          // 0x3AEF(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CryopodFridgeCooldownTime;                         // 0x3AF0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableCryopodFridgeRequirement;                  // 0x3AF4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableBurrowDecayTimers;                         // 0x3AF5(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3AF6[0x2];                                     // 0x3AF6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OnLoadItemQualityRatingClamp;                      // 0x3AF8(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PhotoModeRangeLimit;                               // 0x3AFC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoUnlockAllEngrams;                             // 0x3B00(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B01[0x7];                                     // 0x3B01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ServerLastForceRespawnWildDinosTime;               // 0x3B08(0x0008)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UseStructurePreventionVolumeTagString;             // 0x3B10(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ValgueroMemorialEntries;                           // 0x3B20(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BaseTemperatureMultiplier;                         // 0x3B30(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceAllowAllStructures;                          // 0x3B34(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceAllowAscensionItemDownloads;                 // 0x3B35(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowCreativeMode;                                 // 0x3B36(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B37[0x1];                                     // 0x3B37(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LimitNonPlayerDroppedItemsRange;                   // 0x3B38(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LimitNonPlayerDroppedItemsCount;                   // 0x3B3C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GlobalPoweredBatteryDurabilityDecreasePerSecond;   // 0x3B40(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SingleplayerSettingsCorpseLifespanMultiplier;      // 0x3B44(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         UseCorpseLifeSpanMultiplier;                       // 0x3B48(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimePeriodToHideDisconnectedPlayers;               // 0x3B4C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseBPPreSpawnedDino;                              // 0x3B50(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B51[0x3];                                     // 0x3B51(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PreventOfflinePvPConnectionInvincibleInterval;     // 0x3B54(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TamedDinoCharacterFoodDrainMultiplier;             // 0x3B58(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WildDinoCharacterFoodDrainMultiplier;              // 0x3B5C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WildDinoTorporDrainMultiplier;                     // 0x3B60(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PassiveTameIntervalMultiplier;                     // 0x3B64(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TamedDinoTorporDrainMultiplier;                    // 0x3B68(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableWeatherFog;                                // 0x3B6C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B6D[0x3];                                     // 0x3B6D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MeshCheckingRayDistance;                           // 0x3B70(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MeshCheckingSubdivisons;                           // 0x3B74(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MeshCheckingPercentageToFail;                      // 0x3B78(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreStructuresPreventionVolumes;                // 0x3B7C(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGenesisUseStructuresPreventionVolumes;            // 0x3B7D(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B7E[0x1];                                     // 0x3B7E(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bForceExploitedTameDeletion;                       // 0x3B7F(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B80[0x8];                                     // 0x3B80(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 LiveTuningFileName;                                // 0x3B88(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B98[0x31];                                    // 0x3B98(0x0031)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bLogChatMessages;                                  // 0x3BC9(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3BCA[0x2];                                     // 0x3BCA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ChatLogFlushIntervalSeconds;                       // 0x3BCC(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChatLogFileSplitIntervalSeconds;                   // 0x3BD0(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChatLogMaxAgeInDays;                               // 0x3BD4(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3BD8[0x60];                                    // 0x3BD8(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLeaderboardsContainer                 LeaderboardContainer;                              // 0x3C38(0x0010)(Transient, SaveGame, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C48[0x58];                                    // 0x3C48(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bHasCovertedToStore;                               // 0x3CA0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowStoredDatas;                                 // 0x3CA1(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3CA2[0x1];                                     // 0x3CA2(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bDisableListenServerTethering;                     // 0x3CA3(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3CA4[0x17C];                                   // 0x3CA4(0x017C)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBuffAddition>                  AdditionalDefaultBuffs;                            // 0x3E20(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          bParseServerToJson;                                // 0x3E30(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3E31[0x7F];                                    // 0x3E31(0x007F)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class APrimalDinoCharacter* TheDino)> OnPreSpawnedDino;            // 0x3EB0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AController* Killer, class AController* KilledPlayer, class APawn* KilledPawn, const class UDamageType* DamageType)> OnKilled; // 0x3EC0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class APlayerController* NewPlayer)> OnPostLogin;                  // 0x3ED0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class APlayerController* NewPlayer)> OnStartNewPlayer;             // 0x3EE0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AShooterPlayerState* PlayerOwner, const class FString& TribeName, const struct FTribeGovernment& TribeGovernment)> OnAddNewTribe; // 0x3EF0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 TribeID)> OnRemoveTribe;                                     // 0x3F00(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 TribeID, int32 PlayerDataID)> OnRemovePlayerFromTribe;       // 0x3F10(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& MessageText, int32 ReceiverTeamId, int32 ReceiverPlayerID)> OnServerChatMessage; // 0x3F20(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& PlayerSteamIDconst, const class FString& MessageText, int32 ReceiverTeamId, int32 ReceiverPlayerID, const class FString& PlayerName)> OnServerDirectMessage; // 0x3F30(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& MessageText, int32 ReceiverTeamId, int32 ReceiverPlayerID)> OnServerNotification; // 0x3F40(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AActor* Victim, float DamageAmount, const struct FDamageEvent& DamageEvent, class AController* EventInstigator, class AActor* DamageCauser)> OnNotifyDamage; // 0x3F50(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnSerializeForSaveFile;                            // 0x3F60(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F70[0x20];                                    // 0x3F70(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BaseHexagonRewardMultiplier;                       // 0x3F90(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HexagonRewardMultiplier;                           // 0x3F94(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HexagonCostMultiplier;                             // 0x3F98(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableHexagonStore;                              // 0x3F9C(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHexStoreAllowOnlyEngramTradeOption;               // 0x3F9D(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F9E[0x2];                                     // 0x3F9E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FClassNameReplacement>          DynamicNPCReplacements;                            // 0x3FA0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FClassNameReplacement>          CollectiveNPCReplacements;                         // 0x3FB0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         PreventTransferForClassNames;                      // 0x3FC0(0x0010)(Edit, ZeroConstructor, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          bAllowSpeedLeveling;                               // 0x3FD0(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowFlyerSpeedLeveling;                          // 0x3FD1(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableWorldBuffScaling;                           // 0x3FD2(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableWorldBuffs;                                // 0x3FD3(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnablePlayerMoveThroughSleeping;                  // 0x3FD4(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnablePlayerMoveThroughAlly;                      // 0x3FD5(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPreventOverworldBosses;                           // 0x3FD6(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPreventItemTraitEffects;                          // 0x3FD7(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPreventTekChemBenchBabies;                        // 0x3FD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoCreateTribes;                                 // 0x3FD9(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRiderDinoCollision;                               // 0x3FDA(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFreezeTribes;                                     // 0x3FDB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WorldBuffScalingEfficacy;                          // 0x3FDC(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableBuffSavePlayerDataOnSaveWorld;             // 0x3FE0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseOverrideTimeToRecoverValuesOnPlayerStatusComp; // 0x3FE1(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3FE2[0x2];                                     // 0x3FE2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OverrideTimeToRecoverAfterDepletionStatusValue[0xC]; // 0x3FE4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OverrideTimeToRecoverAfterDecreaseStatusValue[0xC]; // 0x4014(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseOverrideTimeToRecoverValuesOnDinoStatusComp;   // 0x4044(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4045[0x3];                                     // 0x4045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OverrideDinoTimeToRecoverAfterDepletionStatusValue[0xC]; // 0x4048(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OverrideDinoTimeToRecoverAfterDecreaseStatusValue[0xC]; // 0x4078(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseDisabledStatusStates;                          // 0x40A8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40A9[0x7];                                     // 0x40A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimalInventoryComponent*              ClubArkTributeInventory;                           // 0x40B0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         DisabledStatusStates[0xE];                         // 0x40B8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40C6[0x2];                                     // 0x40C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FCrateTemporaryQualityModifierSet> TemporaryCrateModifiers;                        // 0x40C8(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FResourceTemporaryAmountModifierSet> TemporaryResourceModifiers;                   // 0x40D8(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         AdjustableMutagenSpawnDelayMultiplier;             // 0x40E8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableDefaultMapItemSets;                        // 0x40EC(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DisableRailgunPVP;                                 // 0x40ED(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40EE[0xA];                                     // 0x40EE(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           DynamicDisabledWorldBuffs;                         // 0x40F8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4108[0x10];                                    // 0x4108(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RedisTimeoutInMinutes;                             // 0x4118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RestartedDueToRedisTimeout;                        // 0x411C(0x0001)(ZeroConstructor, Transient, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_411D[0x3];                                     // 0x411D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ImprintLimit;                                      // 0x4120(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxStructuresToAllowForPickupOverride;             // 0x4124(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableCustomFoldersInTributeInventories;         // 0x4128(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableRailgunPVP;                                // 0x4129(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_412A[0x2];                                     // 0x412A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinimumTimebetweeninventoryRetrieval;              // 0x412C(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WildFollowerSpawnChanceMultiplier;                 // 0x4130(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WildFollowerSpawnCountMultiplier;                  // 0x4134(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ServerGeneTraitSpawnRateMultiplier;                // 0x4138(0x0004)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableDinoItemBlacklist;                         // 0x413C(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPreventHibernationManager;                        // 0x413D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSaveFormerTribeOwnerLog;                          // 0x413E(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_413F[0x1];                                     // 0x413F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DinoArmorDurabilityScale;                          // 0x4140(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowTeslaCoilCaveBuildingPVP;                    // 0x4144(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceGachaUnhappyInCaves;                         // 0x4145(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4146[0x2];                                     // 0x4146(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, float>                      ConfigSettingsModifiedTraitEffectiveness;          // 0x4148(0x0050)(Edit, BlueprintVisible, Config, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	int32                                         MaxActiveOutposts;                                 // 0x4198(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxActiveOutpostsSP;                               // 0x419C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxActiveResourceCaches;                           // 0x41A0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxActiveResourceCachesSP;                         // 0x41A4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxActiveCityOutposts;                             // 0x41A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxActiveCityOutpostsSP;                           // 0x41AC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutpostsNoInitialDinosSP;                         // 0x41B0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41B1[0x3];                                     // 0x41B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         OutpostAllowMaxStructuresNearby;                   // 0x41B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CityOutpostAllowMaxStructuresNearby;               // 0x41B8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutpostSigilRewardMultiplier;                      // 0x41BC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxActiveGenesisLandOutposts;                      // 0x41C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41C4[0xB4];                                    // 0x41C4(0x00B4)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAntiDupeTransactionLog*                AntiDupeTransactionLog;                            // 0x4278(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4280[0x9C];                                    // 0x4280(0x009C)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bFilterCharacterNames;                             // 0x431C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFilterTribeNames;                                 // 0x431D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFilterChat;                                       // 0x431E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_431F[0x1];                                     // 0x431F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CurrentChatFilterVersion;                          // 0x4320(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RequestedChatFilterVersion;                        // 0x4324(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceLoadingPlayerData;                           // 0x4328(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4329[0x7];                                     // 0x4329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BadWordListURL;                                    // 0x4330(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BadWordWhiteListURL;                               // 0x4340(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAhoCorasickMatcher                    BadWordMatcher;                                    // 0x4350(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FAhoCorasickMatcher                    BadWordWhitelistMatcher;                           // 0x4368(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	bool                                          bEnableServerDestroyTamesAboveSoftTameLimit;       // 0x4380(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCheckSoftTameLimitOnTick;                         // 0x4381(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4382[0x2];                                     // 0x4382(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxTamedDinos_SoftTameLimit;                       // 0x4384(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxTamedDinos_SoftTameLimit_CountdownForDeletionDuration; // 0x4388(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_438C[0x7C];                                    // 0x438C(0x007C)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         OverrideSecondsUntilBuriedTreasureAutoReveals;     // 0x4408(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_440C[0x54];                                    // 0x440C(0x0054)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bDestroyCharacterOnLogoutInLobby : 1;              // 0x4460(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bPreventJoiningDuringMatch : 1;                    // 0x4460(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_4461[0x1F];                                    // 0x4461(0x001F)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class AShooterPlayerController* ForPlayerController, int32 ExplorerNoteIndex, class FName ExplorerNoteName)> OnExplorerNoteUnlocked; // 0x4480(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UPrimalColorSet*                        DynamicColorSetInstance;                           // 0x4490(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UPrimalColorSet>            DynamicColorSet;                                   // 0x4498(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DynamicColorSetChance;                             // 0x44A0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDontEnforceMilestoneTaskOrder;                    // 0x44A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44A5[0x3];                                     // 0x44A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ModValidationFailureWarnings;                      // 0x44A8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoAutomatedModValidationModeration;               // 0x44AC(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44AD[0x103];                                   // 0x44AD(0x0103)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool AllowDamage(class UWorld* ForWorld, int32 TargetingTeam1, int32 TargetingTeam2, bool bIgnoreDamageIfAllied);
@@ -10724,7 +10543,6 @@ public:
 		return GetDefaultObjImpl<AShooterGameMode>();
 	}
 };
-DUMPER7_ASSERTS_AShooterGameMode;
 
 // Class ShooterGame.MountedDLCManager
 // 0x0038 (0x0060 - 0x0028)
@@ -10749,7 +10567,6 @@ public:
 		return GetDefaultObjImpl<UMountedDLCManager>();
 	}
 };
-DUMPER7_ASSERTS_UMountedDLCManager;
 
 // Class ShooterGame.GenericMountedDLCManager
 // 0x0000 (0x0060 - 0x0060)
@@ -10769,7 +10586,6 @@ public:
 		return GetDefaultObjImpl<UGenericMountedDLCManager>();
 	}
 };
-DUMPER7_ASSERTS_UGenericMountedDLCManager;
 
 // Class ShooterGame.GDKMountedDLCManager
 // 0x0000 (0x0060 - 0x0060)
@@ -10789,10 +10605,9 @@ public:
 		return GetDefaultObjImpl<UGDKMountedDLCManager>();
 	}
 };
-DUMPER7_ASSERTS_UGDKMountedDLCManager;
 
 // Class ShooterGame.CustomGameMode
-// 0x0000 (0x4500 - 0x4500)
+// 0x0000 (0x45B0 - 0x45B0)
 class ACustomGameMode final : public AShooterGameMode
 {
 public:
@@ -10847,7 +10662,6 @@ public:
 		return GetDefaultObjImpl<ACustomGameMode>();
 	}
 };
-DUMPER7_ASSERTS_ACustomGameMode;
 
 // Class ShooterGame.MatineeCapture
 // 0x0030 (0x04C0 - 0x0490)
@@ -10877,7 +10691,6 @@ public:
 		return GetDefaultObjImpl<AMatineeCapture>();
 	}
 };
-DUMPER7_ASSERTS_AMatineeCapture;
 
 // Class ShooterGame.CustomGameState
 // 0x0148 (0x1138 - 0x0FF0)
@@ -10981,7 +10794,6 @@ public:
 		return GetDefaultObjImpl<ACustomGameState>();
 	}
 };
-DUMPER7_ASSERTS_ACustomGameState;
 
 // Class ShooterGame.DamageVolumeBase
 // 0x0030 (0x0510 - 0x04E0)
@@ -11012,7 +10824,6 @@ public:
 		return GetDefaultObjImpl<ADamageVolumeBase>();
 	}
 };
-DUMPER7_ASSERTS_ADamageVolumeBase;
 
 // Class ShooterGame.DamageVolumeSwamp
 // 0x0008 (0x0518 - 0x0510)
@@ -11035,7 +10846,6 @@ public:
 		return GetDefaultObjImpl<ADamageVolumeSwamp>();
 	}
 };
-DUMPER7_ASSERTS_ADamageVolumeSwamp;
 
 // Class ShooterGame.GlobalBoneModifiers
 // 0x0020 (0x0048 - 0x0028)
@@ -11059,7 +10869,6 @@ public:
 		return GetDefaultObjImpl<UGlobalBoneModifiers>();
 	}
 };
-DUMPER7_ASSERTS_UGlobalBoneModifiers;
 
 // Class ShooterGame.DataListEntryButton_CustomOverlay
 // 0x00D0 (0x0990 - 0x08C0)
@@ -11087,7 +10896,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryButton_CustomOverlay>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryButton_CustomOverlay;
 
 // Class ShooterGame.MarketTradeLogEntryObject
 // 0x0078 (0x00A0 - 0x0028)
@@ -11114,7 +10922,6 @@ public:
 		return GetDefaultObjImpl<UMarketTradeLogEntryObject>();
 	}
 };
-DUMPER7_ASSERTS_UMarketTradeLogEntryObject;
 
 // Class ShooterGame.DataListEntryButton_DyeResources
 // 0x0010 (0x0808 - 0x07F8)
@@ -11137,7 +10944,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryButton_DyeResources>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryButton_DyeResources;
 
 // Class ShooterGame.DataListEntryButton_HostSession
 // 0x0148 (0x0940 - 0x07F8)
@@ -11185,7 +10991,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryButton_HostSession>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryButton_HostSession;
 
 // Class ShooterGame.DataListEntryButton_ListSession
 // 0x0320 (0x0B18 - 0x07F8)
@@ -11241,7 +11046,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryButton_ListSession>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryButton_ListSession;
 
 // Class ShooterGame.HexagonVFXActor
 // 0x0000 (0x0490 - 0x0490)
@@ -11266,7 +11070,6 @@ public:
 		return GetDefaultObjImpl<AHexagonVFXActor>();
 	}
 };
-DUMPER7_ASSERTS_AHexagonVFXActor;
 
 // Class ShooterGame.DataListEntryButton_MainMenu
 // 0x0070 (0x0868 - 0x07F8)
@@ -11302,7 +11105,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryButton_MainMenu>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryButton_MainMenu;
 
 // Class ShooterGame.PrimalStructure
 // 0x0778 (0x0D10 - 0x0598)
@@ -11750,7 +11552,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructure>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructure;
 
 // Class ShooterGame.PrimalStructureItemContainer
 // 0x06A8 (0x13B8 - 0x0D10)
@@ -12064,7 +11865,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureItemContainer>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureItemContainer;
 
 // Class ShooterGame.DataListEntryButton_PrimalItem
 // 0x0850 (0x1110 - 0x08C0)
@@ -12179,7 +11979,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UDataListEntryButton_PrimalItem;
 
 // Class ShooterGame.DataListEntryButton_MarketItemDisplay
 // 0x00A0 (0x11B0 - 0x1110)
@@ -12212,7 +12011,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryButton_MarketItemDisplay>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryButton_MarketItemDisplay;
 
 // Class ShooterGame.DataListEntryButton_MarketItemIcon
 // 0x0000 (0x1110 - 0x1110)
@@ -12238,7 +12036,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryButton_MarketItemIcon>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryButton_MarketItemIcon;
 
 // Class ShooterGame.HUDActiveMissionWidget
 // 0x0410 (0x0C08 - 0x07F8)
@@ -12349,7 +12146,6 @@ public:
 		return GetDefaultObjImpl<UHUDActiveMissionWidget>();
 	}
 };
-DUMPER7_ASSERTS_UHUDActiveMissionWidget;
 
 // Class ShooterGame.DataListEntryButton_PrimalFolder
 // 0x00B0 (0x0970 - 0x08C0)
@@ -12394,7 +12190,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryButton_PrimalFolder>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryButton_PrimalFolder;
 
 // Class ShooterGame.MaterialExpressionWaveWorksShorelineData
 // 0x0030 (0x00E0 - 0x00B0)
@@ -12419,7 +12214,6 @@ public:
 		return GetDefaultObjImpl<UMaterialExpressionWaveWorksShorelineData>();
 	}
 };
-DUMPER7_ASSERTS_UMaterialExpressionWaveWorksShorelineData;
 
 // Class ShooterGame.DataListEntryButton_PrimalItem_StorageInterface
 // 0x0080 (0x1190 - 0x1110)
@@ -12451,7 +12245,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryButton_PrimalItem_StorageInterface>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryButton_PrimalItem_StorageInterface;
 
 // Class ShooterGame.DataListEntryButton_SkillEntry
 // 0x0000 (0x08C0 - 0x08C0)
@@ -12471,7 +12264,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryButton_SkillEntry>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryButton_SkillEntry;
 
 // Class ShooterGame.DataListEntryEngramList
 // 0x00B8 (0x08B0 - 0x07F8)
@@ -12505,7 +12297,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryEngramList>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryEngramList;
 
 // Class ShooterGame.MissionTrigger
 // 0x0548 (0x09F0 - 0x04A8)
@@ -12544,7 +12335,6 @@ public:
 		return GetDefaultObjImpl<AMissionTrigger>();
 	}
 };
-DUMPER7_ASSERTS_AMissionTrigger;
 
 // Class ShooterGame.DataListEntryInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -12577,7 +12367,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataListEntryInterface;
 
 // Class ShooterGame.NewMissionModuleBase
 // 0x0098 (0x00C0 - 0x0028)
@@ -12650,7 +12439,6 @@ public:
 		return GetDefaultObjImpl<UNewMissionModuleBase>();
 	}
 };
-DUMPER7_ASSERTS_UNewMissionModuleBase;
 
 // Class ShooterGame.DataListEntryWidget
 // 0x00C8 (0x0440 - 0x0378)
@@ -12712,7 +12500,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryWidget;
 
 // Class ShooterGame.DataListEntryWidget_Market
 // 0x0038 (0x0478 - 0x0440)
@@ -12744,7 +12531,6 @@ public:
 		return GetDefaultObjImpl<UDataListEntryWidget_Market>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryWidget_Market;
 
 // Class ShooterGame.DataListInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -12773,7 +12559,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataListInterface;
 
 // Class ShooterGame.ModDataAsset
 // 0x04F8 (0x0528 - 0x0030)
@@ -12866,7 +12651,6 @@ public:
 		return GetDefaultObjImpl<UModDataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UModDataAsset;
 
 // Class ShooterGame.DataListPanel
 // 0x0210 (0x0E30 - 0x0C20)
@@ -12949,7 +12733,6 @@ public:
 		return GetDefaultObjImpl<UDataListPanel>();
 	}
 };
-DUMPER7_ASSERTS_UDataListPanel;
 
 // Class ShooterGame.PrimalCharacter
 // 0x0FE0 (0x1880 - 0x08A0)
@@ -13979,7 +13762,6 @@ public:
 		return GetDefaultObjImpl<APrimalCharacter>();
 	}
 };
-DUMPER7_ASSERTS_APrimalCharacter;
 
 // Class ShooterGame.PrimalDinoCharacter
 // 0x1270 (0x2AF0 - 0x1880)
@@ -15319,7 +15101,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_APrimalDinoCharacter;
 
 // Class ShooterGame.PrimalShip
 // 0x0CA0 (0x3790 - 0x2AF0)
@@ -15934,7 +15715,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_APrimalShip;
 
 // Class ShooterGame.DataListProviderInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -15963,7 +15743,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataListProviderInterface;
 
 // Class ShooterGame.DataListValueGeneric
 // 0x0080 (0x03F8 - 0x0378)
@@ -16019,7 +15798,6 @@ public:
 		return GetDefaultObjImpl<UDataListValueGeneric>();
 	}
 };
-DUMPER7_ASSERTS_UDataListValueGeneric;
 
 // Class ShooterGame.DayCycleAmbientSound
 // 0x0038 (0x04C8 - 0x0490)
@@ -16052,7 +15830,6 @@ public:
 		return GetDefaultObjImpl<ADayCycleAmbientSound>();
 	}
 };
-DUMPER7_ASSERTS_ADayCycleAmbientSound;
 
 // Class ShooterGame.MusicPlayerComponent
 // 0x01B8 (0x0288 - 0x00D0)
@@ -16152,7 +15929,6 @@ public:
 		return GetDefaultObjImpl<UMusicPlayerComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMusicPlayerComponent;
 
 // Class ShooterGame.DayCycleManager
 // 0x0238 (0x06C8 - 0x0490)
@@ -16272,7 +16048,6 @@ public:
 		return GetDefaultObjImpl<ADayCycleManager>();
 	}
 };
-DUMPER7_ASSERTS_ADayCycleManager;
 
 // Class ShooterGame.SplineActor
 // 0x0008 (0x0498 - 0x0490)
@@ -16295,7 +16070,6 @@ public:
 		return GetDefaultObjImpl<ASplineActor>();
 	}
 };
-DUMPER7_ASSERTS_ASplineActor;
 
 // Class ShooterGame.MissionSpline
 // 0x0060 (0x04F8 - 0x0498)
@@ -16335,7 +16109,6 @@ public:
 		return GetDefaultObjImpl<AMissionSpline>();
 	}
 };
-DUMPER7_ASSERTS_AMissionSpline;
 
 // Class ShooterGame.DeferredMovementContext
 // 0x00B8 (0x00E0 - 0x0028)
@@ -16360,7 +16133,6 @@ public:
 		return GetDefaultObjImpl<UDeferredMovementContext>();
 	}
 };
-DUMPER7_ASSERTS_UDeferredMovementContext;
 
 // Class ShooterGame.UI_Welcome
 // 0x0060 (0x0858 - 0x07F8)
@@ -16388,7 +16160,6 @@ public:
 		return GetDefaultObjImpl<UUI_Welcome>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Welcome;
 
 // Class ShooterGame.DestructibleActor
 // 0x0008 (0x0498 - 0x0490)
@@ -16416,7 +16187,6 @@ public:
 		return GetDefaultObjImpl<ADestructibleActor>();
 	}
 };
-DUMPER7_ASSERTS_ADestructibleActor;
 
 // Class ShooterGame.DestroyedMeshActor
 // 0x0018 (0x04B0 - 0x0498)
@@ -16445,7 +16215,6 @@ public:
 		return GetDefaultObjImpl<ADestroyedMeshActor>();
 	}
 };
-DUMPER7_ASSERTS_ADestroyedMeshActor;
 
 // Class ShooterGame.NPCZoneManager
 // 0x0248 (0x06D8 - 0x0490)
@@ -16603,7 +16372,6 @@ public:
 		return GetDefaultObjImpl<ANPCZoneManager>();
 	}
 };
-DUMPER7_ASSERTS_ANPCZoneManager;
 
 // Class ShooterGame.DinoAncestryEntryWidget
 // 0x0020 (0x0818 - 0x07F8)
@@ -16626,7 +16394,6 @@ public:
 		return GetDefaultObjImpl<UDinoAncestryEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDinoAncestryEntryWidget;
 
 // Class ShooterGame.MissionListEntryWidget
 // 0x0020 (0x0818 - 0x07F8)
@@ -16650,7 +16417,6 @@ public:
 		return GetDefaultObjImpl<UMissionListEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMissionListEntryWidget;
 
 // Class ShooterGame.DinoFoliage_PresetGenerator
 // 0x0008 (0x0498 - 0x0490)
@@ -16685,7 +16451,6 @@ public:
 		return GetDefaultObjImpl<ADinoFoliage_PresetGenerator>();
 	}
 };
-DUMPER7_ASSERTS_ADinoFoliage_PresetGenerator;
 
 // Class ShooterGame.DinoListButtonWidget
 // 0x0190 (0x0988 - 0x07F8)
@@ -16722,7 +16487,6 @@ public:
 		return GetDefaultObjImpl<UDinoListButtonWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDinoListButtonWidget;
 
 // Class ShooterGame.PrimalBuff_WindTunnel
 // 0x0018 (0x0B60 - 0x0B48)
@@ -16747,7 +16511,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff_WindTunnel>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff_WindTunnel;
 
 // Class ShooterGame.TooltipSmartLayoutWidget
 // 0x0000 (0x0400 - 0x0400)
@@ -16767,7 +16530,6 @@ public:
 		return GetDefaultObjImpl<UTooltipSmartLayoutWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTooltipSmartLayoutWidget;
 
 // Class ShooterGame.MultiUseActionWidget
 // 0x0040 (0x03B8 - 0x0378)
@@ -16794,7 +16556,6 @@ public:
 		return GetDefaultObjImpl<UMultiUseActionWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMultiUseActionWidget;
 
 // Class ShooterGame.DinoListItemTooltip
 // 0x01C0 (0x05C0 - 0x0400)
@@ -16825,7 +16586,6 @@ public:
 		return GetDefaultObjImpl<UDinoListItemTooltip>();
 	}
 };
-DUMPER7_ASSERTS_UDinoListItemTooltip;
 
 // Class ShooterGame.PrimalStructureExplosive
 // 0x00E0 (0x0DF0 - 0x0D10)
@@ -16879,7 +16639,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureExplosive>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureExplosive;
 
 // Class ShooterGame.PrimalStructureTripwire
 // 0x00B0 (0x0EA0 - 0x0DF0)
@@ -16938,7 +16697,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureTripwire>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureTripwire;
 
 // Class ShooterGame.DinoSetupDataAsset
 // 0x0110 (0x0140 - 0x0030)
@@ -16961,7 +16719,6 @@ public:
 		return GetDefaultObjImpl<UDinoSetupDataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UDinoSetupDataAsset;
 
 // Class ShooterGame.Object_WithWorldContext
 // 0x0008 (0x0030 - 0x0028)
@@ -16989,7 +16746,6 @@ public:
 		return GetDefaultObjImpl<UObject_WithWorldContext>();
 	}
 };
-DUMPER7_ASSERTS_UObject_WithWorldContext;
 
 // Class ShooterGame.PrimalCameraConfig_WeaponOverride
 // 0x0050 (0x0078 - 0x0028)
@@ -17012,7 +16768,6 @@ public:
 		return GetDefaultObjImpl<UPrimalCameraConfig_WeaponOverride>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCameraConfig_WeaponOverride;
 
 // Class ShooterGame.DinoTrackFilterOption
 // 0x0020 (0x0050 - 0x0030)
@@ -17042,7 +16797,6 @@ public:
 		return GetDefaultObjImpl<UDinoTrackFilterOption>();
 	}
 };
-DUMPER7_ASSERTS_UDinoTrackFilterOption;
 
 // Class ShooterGame.MissionRequirementEntryWidget
 // 0x0020 (0x0398 - 0x0378)
@@ -17072,7 +16826,6 @@ public:
 		return GetDefaultObjImpl<UMissionRequirementEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMissionRequirementEntryWidget;
 
 // Class ShooterGame.DirectionalAmbientLight
 // 0x0000 (0x04A0 - 0x04A0)
@@ -17092,7 +16845,6 @@ public:
 		return GetDefaultObjImpl<ADirectionalAmbientLight>();
 	}
 };
-DUMPER7_ASSERTS_ADirectionalAmbientLight;
 
 // Class ShooterGame.DirectionalInjectedLight
 // 0x0000 (0x04A0 - 0x04A0)
@@ -17112,7 +16864,6 @@ public:
 		return GetDefaultObjImpl<ADirectionalInjectedLight>();
 	}
 };
-DUMPER7_ASSERTS_ADirectionalInjectedLight;
 
 // Class ShooterGame.PrimalStructureTemplate
 // 0x0398 (0x10A8 - 0x0D10)
@@ -17267,7 +17018,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureTemplate>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureTemplate;
 
 // Class ShooterGame.DiscordConversationActionEntryWidget
 // 0x0040 (0x03A8 - 0x0368)
@@ -17301,7 +17051,6 @@ public:
 		return GetDefaultObjImpl<UDiscordConversationActionEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordConversationActionEntryWidget;
 
 // Class ShooterGame.PrimalCinematicActor
 // 0x0070 (0x1E80 - 0x1E10)
@@ -17338,7 +17087,6 @@ public:
 		return GetDefaultObjImpl<APrimalCinematicActor>();
 	}
 };
-DUMPER7_ASSERTS_APrimalCinematicActor;
 
 // Class ShooterGame.DiscordConversationMessageItem
 // 0x0050 (0x0078 - 0x0028)
@@ -17361,7 +17109,6 @@ public:
 		return GetDefaultObjImpl<UDiscordConversationMessageItem>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordConversationMessageItem;
 
 // Class ShooterGame.NPCZoneVolume
 // 0x0060 (0x0540 - 0x04E0)
@@ -17400,7 +17147,6 @@ public:
 		return GetDefaultObjImpl<ANPCZoneVolume>();
 	}
 };
-DUMPER7_ASSERTS_ANPCZoneVolume;
 
 // Class ShooterGame.DiscordConversationActionItem
 // 0x0088 (0x00B0 - 0x0028)
@@ -17428,7 +17174,6 @@ public:
 		return GetDefaultObjImpl<UDiscordConversationActionItem>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordConversationActionItem;
 
 // Class ShooterGame.PrimalSupplyCrateItemSet
 // 0x0040 (0x0068 - 0x0028)
@@ -17451,7 +17196,6 @@ public:
 		return GetDefaultObjImpl<UPrimalSupplyCrateItemSet>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalSupplyCrateItemSet;
 
 // Class ShooterGame.DiscordConversationMessageEntryWidget
 // 0x0048 (0x03B0 - 0x0368)
@@ -17482,7 +17226,6 @@ public:
 		return GetDefaultObjImpl<UDiscordConversationMessageEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordConversationMessageEntryWidget;
 
 // Class ShooterGame.PrimalStructureTurret
 // 0x0280 (0x1638 - 0x13B8)
@@ -17609,7 +17352,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureTurret>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureTurret;
 
 // Class ShooterGame.DiscordFriendActionPanelWidget
 // 0x01E8 (0x0560 - 0x0378)
@@ -17658,7 +17400,6 @@ public:
 		return GetDefaultObjImpl<UDiscordFriendActionPanelWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordFriendActionPanelWidget;
 
 // Class ShooterGame.PrimalDataChannelFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -17681,7 +17422,6 @@ public:
 		return GetDefaultObjImpl<UPrimalDataChannelFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalDataChannelFunctionLibrary;
 
 // Class ShooterGame.VRBattleGroupDataAsset
 // 0x0018 (0x0048 - 0x0030)
@@ -17706,7 +17446,6 @@ public:
 		return GetDefaultObjImpl<UVRBattleGroupDataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UVRBattleGroupDataAsset;
 
 // Class ShooterGame.DiscordFriendsTreeNode
 // 0x0018 (0x0040 - 0x0028)
@@ -17730,7 +17469,6 @@ public:
 		return GetDefaultObjImpl<UDiscordFriendsTreeNode>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordFriendsTreeNode;
 
 // Class ShooterGame.MissionType
 // 0x0768 (0x0BF8 - 0x0490)
@@ -18259,7 +17997,6 @@ public:
 		return GetDefaultObjImpl<AMissionType>();
 	}
 };
-DUMPER7_ASSERTS_AMissionType;
 
 // Class ShooterGame.MissionType_ModularMissionBase
 // 0x00A0 (0x0C98 - 0x0BF8)
@@ -18320,7 +18057,6 @@ public:
 		return GetDefaultObjImpl<AMissionType_ModularMissionBase>();
 	}
 };
-DUMPER7_ASSERTS_AMissionType_ModularMissionBase;
 
 // Class ShooterGame.DiscordFriendsSectionNode
 // 0x0008 (0x0048 - 0x0040)
@@ -18345,7 +18081,6 @@ public:
 		return GetDefaultObjImpl<UDiscordFriendsSectionNode>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordFriendsSectionNode;
 
 // Class ShooterGame.PrimalStructureDoor
 // 0x00D0 (0x0DE0 - 0x0D10)
@@ -18433,7 +18168,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureDoor>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureDoor;
 
 // Class ShooterGame.PrimalStructureSkeletalDoor
 // 0x0020 (0x0E00 - 0x0DE0)
@@ -18465,7 +18199,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureSkeletalDoor>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureSkeletalDoor;
 
 // Class ShooterGame.DiscordFriendsFriendNode
 // 0x00F0 (0x0130 - 0x0040)
@@ -18488,7 +18221,6 @@ public:
 		return GetDefaultObjImpl<UDiscordFriendsFriendNode>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordFriendsFriendNode;
 
 // Class ShooterGame.DiscordFriendsMenuController
 // 0x0418 (0x0440 - 0x0028)
@@ -18542,7 +18274,6 @@ public:
 		return GetDefaultObjImpl<UDiscordFriendsMenuController>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordFriendsMenuController;
 
 // Class ShooterGame.PrimalRaft
 // 0x00A0 (0x2B90 - 0x2AF0)
@@ -18608,7 +18339,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_APrimalRaft;
 
 // Class ShooterGame.PhysicsPrimalRaft
 // 0x0090 (0x2C20 - 0x2B90)
@@ -18662,7 +18392,6 @@ public:
 		return GetDefaultObjImpl<APhysicsPrimalRaft>();
 	}
 };
-DUMPER7_ASSERTS_APhysicsPrimalRaft;
 
 // Class ShooterGame.VirtualCursor
 // 0x0000 (0x0028 - 0x0028)
@@ -18688,7 +18417,6 @@ public:
 		return GetDefaultObjImpl<UVirtualCursor>();
 	}
 };
-DUMPER7_ASSERTS_UVirtualCursor;
 
 // Class ShooterGame.DiscordFriendsVisualDataAsset
 // 0x0200 (0x0230 - 0x0030)
@@ -18715,7 +18443,6 @@ public:
 		return GetDefaultObjImpl<UDiscordFriendsVisualDataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordFriendsVisualDataAsset;
 
 // Class ShooterGame.OnlineSessionEntryButton
 // 0x01D0 (0x0A90 - 0x08C0)
@@ -18764,7 +18491,6 @@ public:
 		return GetDefaultObjImpl<UOnlineSessionEntryButton>();
 	}
 };
-DUMPER7_ASSERTS_UOnlineSessionEntryButton;
 
 // Class ShooterGame.DiscordFriendTreeEntryWidget
 // 0x0368 (0x06D0 - 0x0368)
@@ -18810,7 +18536,6 @@ public:
 		return GetDefaultObjImpl<UDiscordFriendTreeEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordFriendTreeEntryWidget;
 
 // Class ShooterGame.DiscordFriendTreeSectionEntryWidget
 // 0x0228 (0x0590 - 0x0368)
@@ -18849,7 +18574,6 @@ public:
 		return GetDefaultObjImpl<UDiscordFriendTreeSectionEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordFriendTreeSectionEntryWidget;
 
 // Class ShooterGame.DiscordNotificationEntryWidget
 // 0x0010 (0x0388 - 0x0378)
@@ -18873,7 +18597,6 @@ public:
 		return GetDefaultObjImpl<UDiscordNotificationEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDiscordNotificationEntryWidget;
 
 // Class ShooterGame.PointOfInterestCompanionInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -18905,7 +18628,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IPointOfInterestCompanionInterface;
 
 // Class ShooterGame.PrimalCharacterMovement
 // 0x05E0 (0x1640 - 0x1060)
@@ -19033,7 +18755,6 @@ public:
 		return GetDefaultObjImpl<UPrimalCharacterMovement>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCharacterMovement;
 
 // Class ShooterGame.InventoryPanelWidget
 // 0x0388 (0x0B80 - 0x07F8)
@@ -19124,7 +18845,6 @@ public:
 		return GetDefaultObjImpl<UInventoryPanelWidget>();
 	}
 };
-DUMPER7_ASSERTS_UInventoryPanelWidget;
 
 // Class ShooterGame.ShooterCharacterMovement
 // 0x0060 (0x16A0 - 0x1640)
@@ -19165,7 +18885,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UShooterCharacterMovement;
 
 // Class ShooterGame.DracoFlightMovementComponent
 // 0x0750 (0x1DF0 - 0x16A0)
@@ -19378,7 +19097,6 @@ public:
 		return GetDefaultObjImpl<UDracoFlightMovementComponent>();
 	}
 };
-DUMPER7_ASSERTS_UDracoFlightMovementComponent;
 
 // Class ShooterGame.DracoTargetComponent
 // 0x0058 (0x0128 - 0x00D0)
@@ -19438,7 +19156,6 @@ public:
 		return GetDefaultObjImpl<UDracoTargetComponent>();
 	}
 };
-DUMPER7_ASSERTS_UDracoTargetComponent;
 
 // Class ShooterGame.PointOfInterestManagerList
 // 0x0058 (0x0500 - 0x04A8)
@@ -19470,7 +19187,6 @@ public:
 		return GetDefaultObjImpl<APointOfInterestManagerList>();
 	}
 };
-DUMPER7_ASSERTS_APointOfInterestManagerList;
 
 // Class ShooterGame.DraggableObjectInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -19499,7 +19215,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDraggableObjectInterface;
 
 // Class ShooterGame.DraggedDecoratorWidget
 // 0x0020 (0x0790 - 0x0770)
@@ -19524,7 +19239,6 @@ public:
 		return GetDefaultObjImpl<UDraggedDecoratorWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDraggedDecoratorWidget;
 
 // Class ShooterGame.DragonHornDinoComponent
 // 0x0068 (0x0138 - 0x00D0)
@@ -19575,7 +19289,6 @@ public:
 		return GetDefaultObjImpl<UDragonHornDinoComponent>();
 	}
 };
-DUMPER7_ASSERTS_UDragonHornDinoComponent;
 
 // Class ShooterGame.DroppedItem
 // 0x0468 (0x08F8 - 0x0490)
@@ -19683,7 +19396,6 @@ public:
 		return GetDefaultObjImpl<ADroppedItem>();
 	}
 };
-DUMPER7_ASSERTS_ADroppedItem;
 
 // Class ShooterGame.PrimalAIState
 // 0x0030 (0x0058 - 0x0028)
@@ -19746,7 +19458,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIState>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIState;
 
 // Class ShooterGame.DroppedItemEgg
 // 0x0040 (0x0938 - 0x08F8)
@@ -19783,7 +19494,6 @@ public:
 		return GetDefaultObjImpl<ADroppedItemEgg>();
 	}
 };
-DUMPER7_ASSERTS_ADroppedItemEgg;
 
 // Class ShooterGame.OceanVolume
 // 0x0268 (0x0768 - 0x0500)
@@ -19806,7 +19516,6 @@ public:
 		return GetDefaultObjImpl<AOceanVolume>();
 	}
 };
-DUMPER7_ASSERTS_AOceanVolume;
 
 // Class ShooterGame.DroppedItemLowQuality
 // 0x0000 (0x08F8 - 0x08F8)
@@ -19826,7 +19535,6 @@ public:
 		return GetDefaultObjImpl<ADroppedItemLowQuality>();
 	}
 };
-DUMPER7_ASSERTS_ADroppedItemLowQuality;
 
 // Class ShooterGame.DroppedItemMission
 // 0x0010 (0x0908 - 0x08F8)
@@ -19855,7 +19563,6 @@ public:
 		return GetDefaultObjImpl<ADroppedItemMission>();
 	}
 };
-DUMPER7_ASSERTS_ADroppedItemMission;
 
 // Class ShooterGame.DroppedItemTorch
 // 0x0020 (0x0918 - 0x08F8)
@@ -19888,7 +19595,6 @@ public:
 		return GetDefaultObjImpl<ADroppedItemTorch>();
 	}
 };
-DUMPER7_ASSERTS_ADroppedItemTorch;
 
 // Class ShooterGame.MissionDispatcherPoint
 // 0x0010 (0x04A0 - 0x0490)
@@ -19911,7 +19617,6 @@ public:
 		return GetDefaultObjImpl<AMissionDispatcherPoint>();
 	}
 };
-DUMPER7_ASSERTS_AMissionDispatcherPoint;
 
 // Class ShooterGame.DyeItemSelector
 // 0x0030 (0x03A8 - 0x0378)
@@ -19945,7 +19650,6 @@ public:
 		return GetDefaultObjImpl<UDyeItemSelector>();
 	}
 };
-DUMPER7_ASSERTS_UDyeItemSelector;
 
 // Class ShooterGame.PointOfInterestCosmeticActor_Base
 // 0x0000 (0x0490 - 0x0490)
@@ -19965,7 +19669,6 @@ public:
 		return GetDefaultObjImpl<APointOfInterestCosmeticActor_Base>();
 	}
 };
-DUMPER7_ASSERTS_APointOfInterestCosmeticActor_Base;
 
 // Class ShooterGame.PointOfInterestCosmeticActor
 // 0x01F0 (0x0680 - 0x0490)
@@ -19990,7 +19693,6 @@ public:
 		return GetDefaultObjImpl<APointOfInterestCosmeticActor>();
 	}
 };
-DUMPER7_ASSERTS_APointOfInterestCosmeticActor;
 
 // Class ShooterGame.DyeRegionButtonWidget
 // 0x0048 (0x0840 - 0x07F8)
@@ -20017,7 +19719,6 @@ public:
 		return GetDefaultObjImpl<UDyeRegionButtonWidget>();
 	}
 };
-DUMPER7_ASSERTS_UDyeRegionButtonWidget;
 
 // Class ShooterGame.FadingDestructibleActor
 // 0x0070 (0x0520 - 0x04B0)
@@ -20062,7 +19763,6 @@ public:
 		return GetDefaultObjImpl<AFadingDestructibleActor>();
 	}
 };
-DUMPER7_ASSERTS_AFadingDestructibleActor;
 
 // Class ShooterGame.FallDamageType
 // 0x0000 (0x0068 - 0x0068)
@@ -20082,7 +19782,6 @@ public:
 		return GetDefaultObjImpl<UFallDamageType>();
 	}
 };
-DUMPER7_ASSERTS_UFallDamageType;
 
 // Class ShooterGame.MissionModuleBase
 // 0x0000 (0x0028 - 0x0028)
@@ -20105,7 +19804,6 @@ public:
 		return GetDefaultObjImpl<UMissionModuleBase>();
 	}
 };
-DUMPER7_ASSERTS_UMissionModuleBase;
 
 // Class ShooterGame.FightCircleDataAsset
 // 0x0038 (0x0068 - 0x0030)
@@ -20139,7 +19837,6 @@ public:
 		return GetDefaultObjImpl<UFightCircleDataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UFightCircleDataAsset;
 
 // Class ShooterGame.PanelBuffTypeUI
 // 0x0080 (0x03F8 - 0x0378)
@@ -20162,7 +19859,6 @@ public:
 		return GetDefaultObjImpl<UPanelBuffTypeUI>();
 	}
 };
-DUMPER7_ASSERTS_UPanelBuffTypeUI;
 
 // Class ShooterGame.FightCircleSubsystem
 // 0x0080 (0x00C0 - 0x0040)
@@ -20199,7 +19895,6 @@ public:
 		return GetDefaultObjImpl<UFightCircleSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UFightCircleSubsystem;
 
 // Class ShooterGame.FixSourceTreeCommandlet
 // 0x0000 (0x0080 - 0x0080)
@@ -20219,7 +19914,6 @@ public:
 		return GetDefaultObjImpl<UFixSourceTreeCommandlet>();
 	}
 };
-DUMPER7_ASSERTS_UFixSourceTreeCommandlet;
 
 // Class ShooterGame.FixupSplineActor
 // 0x0000 (0x0490 - 0x0490)
@@ -20239,7 +19933,6 @@ public:
 		return GetDefaultObjImpl<AFixupSplineActor>();
 	}
 };
-DUMPER7_ASSERTS_AFixupSplineActor;
 
 // Class ShooterGame.MissionObjectiveEntryWidget
 // 0x0028 (0x03A0 - 0x0378)
@@ -20263,7 +19956,6 @@ public:
 		return GetDefaultObjImpl<UMissionObjectiveEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMissionObjectiveEntryWidget;
 
 // Class ShooterGame.FlockingBehavior
 // 0x0000 (0x0028 - 0x0028)
@@ -20324,7 +20016,6 @@ public:
 		return GetDefaultObjImpl<UFlockingBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UFlockingBehavior;
 
 // Class ShooterGame.PrimalAIStateDinoRangedState
 // 0x0060 (0x00B8 - 0x0058)
@@ -20376,7 +20067,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIStateDinoRangedState>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIStateDinoRangedState;
 
 // Class ShooterGame.PrimalAIStateBotRangedState
 // 0x0020 (0x00D8 - 0x00B8)
@@ -20411,7 +20101,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIStateBotRangedState>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIStateBotRangedState;
 
 // Class ShooterGame.FogOfWar
 // 0x00A0 (0x00C8 - 0x0028)
@@ -20453,7 +20142,6 @@ public:
 		return GetDefaultObjImpl<UFogOfWar>();
 	}
 };
-DUMPER7_ASSERTS_UFogOfWar;
 
 // Class ShooterGame.PrimalCorpseMotionComponent
 // 0x0010 (0x00E0 - 0x00D0)
@@ -20481,7 +20169,6 @@ public:
 		return GetDefaultObjImpl<UPrimalCorpseMotionComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCorpseMotionComponent;
 
 // Class ShooterGame.FoliageConeAttractionComponent
 // 0x0180 (0x0260 - 0x00E0)
@@ -20514,7 +20201,6 @@ public:
 		return GetDefaultObjImpl<UFoliageConeAttractionComponent>();
 	}
 };
-DUMPER7_ASSERTS_UFoliageConeAttractionComponent;
 
 // Class ShooterGame.PrimalPointNote
 // 0x0000 (0x0490 - 0x0490)
@@ -20534,7 +20220,6 @@ public:
 		return GetDefaultObjImpl<APrimalPointNote>();
 	}
 };
-DUMPER7_ASSERTS_APrimalPointNote;
 
 // Class ShooterGame.MissionServerSidePoint
 // 0x0050 (0x04E0 - 0x0490)
@@ -20567,7 +20252,6 @@ public:
 		return GetDefaultObjImpl<AMissionServerSidePoint>();
 	}
 };
-DUMPER7_ASSERTS_AMissionServerSidePoint;
 
 // Class ShooterGame.GameAnalyticsSubsystem
 // 0x04F0 (0x0530 - 0x0040)
@@ -20596,7 +20280,6 @@ public:
 		return GetDefaultObjImpl<UGameAnalyticsSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UGameAnalyticsSubsystem;
 
 // Class ShooterGame.PlayerActivatableComponent
 // 0x0020 (0x00F0 - 0x00D0)
@@ -20623,7 +20306,6 @@ public:
 		return GetDefaultObjImpl<UPlayerActivatableComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPlayerActivatableComponent;
 
 // Class ShooterGame.GamepadButtonLegendWidget
 // 0x0030 (0x03A8 - 0x0378)
@@ -20649,7 +20331,6 @@ public:
 		return GetDefaultObjImpl<UGamepadButtonLegendWidget>();
 	}
 };
-DUMPER7_ASSERTS_UGamepadButtonLegendWidget;
 
 // Class ShooterGame.GenericDataListEntry
 // 0x0068 (0x0090 - 0x0028)
@@ -20681,7 +20362,6 @@ public:
 		return GetDefaultObjImpl<UGenericDataListEntry>();
 	}
 };
-DUMPER7_ASSERTS_UGenericDataListEntry;
 
 // Class ShooterGame.GeneTraitDefinitions
 // 0x0160 (0x0188 - 0x0028)
@@ -20735,7 +20415,6 @@ public:
 		return GetDefaultObjImpl<UGeneTraitDefinitions>();
 	}
 };
-DUMPER7_ASSERTS_UGeneTraitDefinitions;
 
 // Class ShooterGame.HexagonTradableOption
 // 0x0078 (0x00A0 - 0x0028)
@@ -20793,7 +20472,6 @@ public:
 		return GetDefaultObjImpl<UHexagonTradableOption>();
 	}
 };
-DUMPER7_ASSERTS_UHexagonTradableOption;
 
 // Class ShooterGame.HibernationManager
 // 0x0350 (0x07E0 - 0x0490)
@@ -20816,7 +20494,6 @@ public:
 		return GetDefaultObjImpl<AHibernationManager>();
 	}
 };
-DUMPER7_ASSERTS_AHibernationManager;
 
 // Class ShooterGame.HostSessionEntryButton
 // 0x0050 (0x0910 - 0x08C0)
@@ -20848,7 +20525,6 @@ public:
 		return GetDefaultObjImpl<UHostSessionEntryButton>();
 	}
 };
-DUMPER7_ASSERTS_UHostSessionEntryButton;
 
 // Class ShooterGame.HUDCustomStatusWidget
 // 0x00D8 (0x08D0 - 0x07F8)
@@ -20919,7 +20595,6 @@ public:
 		return GetDefaultObjImpl<UHUDCustomStatusWidget>();
 	}
 };
-DUMPER7_ASSERTS_UHUDCustomStatusWidget;
 
 // Class ShooterGame.HUDInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -20948,7 +20623,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IHUDInterface;
 
 // Class ShooterGame.HUDPingsContainer
 // 0x0028 (0x0820 - 0x07F8)
@@ -20974,7 +20648,6 @@ public:
 		return GetDefaultObjImpl<UHUDPingsContainer>();
 	}
 };
-DUMPER7_ASSERTS_UHUDPingsContainer;
 
 // Class ShooterGame.HUDPointOfInterestWidget
 // 0x0328 (0x0B20 - 0x07F8)
@@ -21041,7 +20714,6 @@ public:
 		return GetDefaultObjImpl<UHUDPointOfInterestWidget>();
 	}
 };
-DUMPER7_ASSERTS_UHUDPointOfInterestWidget;
 
 // Class ShooterGame.HUDStatusBarsWidget
 // 0x0168 (0x04E0 - 0x0378)
@@ -21082,7 +20754,6 @@ public:
 		return GetDefaultObjImpl<UHUDStatusBarsWidget>();
 	}
 };
-DUMPER7_ASSERTS_UHUDStatusBarsWidget;
 
 // Class ShooterGame.InventoryArkCreaturesPanel
 // 0x0328 (0x0B20 - 0x07F8)
@@ -21119,7 +20790,6 @@ public:
 		return GetDefaultObjImpl<UInventoryArkCreaturesPanel>();
 	}
 };
-DUMPER7_ASSERTS_UInventoryArkCreaturesPanel;
 
 // Class ShooterGame.InventoryPanelContainerWidget
 // 0x0000 (0x03A0 - 0x03A0)
@@ -21139,7 +20809,6 @@ public:
 		return GetDefaultObjImpl<UInventoryPanelContainerWidget>();
 	}
 };
-DUMPER7_ASSERTS_UInventoryPanelContainerWidget;
 
 // Class ShooterGame.InventoryQuickSlotsPanel
 // 0x0010 (0x0808 - 0x07F8)
@@ -21162,7 +20831,6 @@ public:
 		return GetDefaultObjImpl<UInventoryQuickSlotsPanel>();
 	}
 };
-DUMPER7_ASSERTS_UInventoryQuickSlotsPanel;
 
 // Class ShooterGame.ItemFilterWidget
 // 0x0038 (0x03B0 - 0x0378)
@@ -21189,7 +20857,6 @@ public:
 		return GetDefaultObjImpl<UItemFilterWidget>();
 	}
 };
-DUMPER7_ASSERTS_UItemFilterWidget;
 
 // Class ShooterGame.KeyInputWidget
 // 0x0040 (0x0570 - 0x0530)
@@ -21212,7 +20879,6 @@ public:
 		return GetDefaultObjImpl<UKeyInputWidget>();
 	}
 };
-DUMPER7_ASSERTS_UKeyInputWidget;
 
 // Class ShooterGame.LeaderboardRowWidget
 // 0x00C8 (0x08C0 - 0x07F8)
@@ -21254,7 +20920,6 @@ public:
 		return GetDefaultObjImpl<ULeaderboardRowWidget>();
 	}
 };
-DUMPER7_ASSERTS_ULeaderboardRowWidget;
 
 // Class ShooterGame.MarketRequestExclusionData
 // 0x0050 (0x0080 - 0x0030)
@@ -21277,7 +20942,6 @@ public:
 		return GetDefaultObjImpl<UMarketRequestExclusionData>();
 	}
 };
-DUMPER7_ASSERTS_UMarketRequestExclusionData;
 
 // Class ShooterGame.MarketSellOrdersPanelWidget
 // 0x0100 (0x08F8 - 0x07F8)
@@ -21336,7 +21000,6 @@ public:
 		return GetDefaultObjImpl<UMarketSellOrdersPanelWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMarketSellOrdersPanelWidget;
 
 // Class ShooterGame.MarketTooltipPanelWidget
 // 0x0380 (0x0B78 - 0x07F8)
@@ -21422,7 +21085,6 @@ public:
 		return GetDefaultObjImpl<UMarketTooltipPanelWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMarketTooltipPanelWidget;
 
 // Class ShooterGame.MarketTradeLogPanelWidget
 // 0x00A0 (0x0898 - 0x07F8)
@@ -21462,7 +21124,6 @@ public:
 		return GetDefaultObjImpl<UMarketTradeLogPanelWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMarketTradeLogPanelWidget;
 
 // Class ShooterGame.MaterialExpressionPlatformSwitchOld
 // 0x0488 (0x0538 - 0x00B0)
@@ -21486,7 +21147,6 @@ public:
 		return GetDefaultObjImpl<UMaterialExpressionPlatformSwitchOld>();
 	}
 };
-DUMPER7_ASSERTS_UMaterialExpressionPlatformSwitchOld;
 
 // Class ShooterGame.MaterialExpressionWaveWorksHeight
 // 0x0028 (0x00D8 - 0x00B0)
@@ -21509,7 +21169,6 @@ public:
 		return GetDefaultObjImpl<UMaterialExpressionWaveWorksHeight>();
 	}
 };
-DUMPER7_ASSERTS_UMaterialExpressionWaveWorksHeight;
 
 // Class ShooterGame.MaterialExpressionWaveWorksMaxDisplacement
 // 0x0000 (0x00B0 - 0x00B0)
@@ -21529,7 +21188,6 @@ public:
 		return GetDefaultObjImpl<UMaterialExpressionWaveWorksMaxDisplacement>();
 	}
 };
-DUMPER7_ASSERTS_UMaterialExpressionWaveWorksMaxDisplacement;
 
 // Class ShooterGame.MaterialExpressionWaveWorksWind
 // 0x0000 (0x00B0 - 0x00B0)
@@ -21549,7 +21207,6 @@ public:
 		return GetDefaultObjImpl<UMaterialExpressionWaveWorksWind>();
 	}
 };
-DUMPER7_ASSERTS_UMaterialExpressionWaveWorksWind;
 
 // Class ShooterGame.MatineeActorManager
 // 0x0018 (0x04A8 - 0x0490)
@@ -21575,7 +21232,6 @@ public:
 		return GetDefaultObjImpl<AMatineeActorManager>();
 	}
 };
-DUMPER7_ASSERTS_AMatineeActorManager;
 
 // Class ShooterGame.MinimapData
 // 0x0028 (0x0050 - 0x0028)
@@ -21603,7 +21259,6 @@ public:
 		return GetDefaultObjImpl<UMinimapData>();
 	}
 };
-DUMPER7_ASSERTS_UMinimapData;
 
 // Class ShooterGame.MissionBiomeCompletionWidget
 // 0x00B8 (0x08B0 - 0x07F8)
@@ -21634,7 +21289,6 @@ public:
 		return GetDefaultObjImpl<UMissionBiomeCompletionWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMissionBiomeCompletionWidget;
 
 // Class ShooterGame.MissionDispatcher
 // 0x0118 (0x14D0 - 0x13B8)
@@ -21704,7 +21358,6 @@ public:
 		return GetDefaultObjImpl<AMissionDispatcher>();
 	}
 };
-DUMPER7_ASSERTS_AMissionDispatcher;
 
 // Class ShooterGame.MissionDispatcherToolTipWidget
 // 0x0058 (0x0458 - 0x0400)
@@ -21730,7 +21383,6 @@ public:
 		return GetDefaultObjImpl<UMissionDispatcherToolTipWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMissionDispatcherToolTipWidget;
 
 // Class ShooterGame.MissionMetaTagInfo
 // 0x0088 (0x00B0 - 0x0028)
@@ -21754,7 +21406,6 @@ public:
 		return GetDefaultObjImpl<UMissionMetaTagInfo>();
 	}
 };
-DUMPER7_ASSERTS_UMissionMetaTagInfo;
 
 // Class ShooterGame.MissionModuleInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -21786,7 +21437,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMissionModuleInterface;
 
 // Class ShooterGame.MissionModule_PlayMissionMovie
 // 0x0040 (0x0100 - 0x00C0)
@@ -21820,7 +21470,6 @@ public:
 		return GetDefaultObjImpl<UMissionModule_PlayMissionMovie>();
 	}
 };
-DUMPER7_ASSERTS_UMissionModule_PlayMissionMovie;
 
 // Class ShooterGame.MissionPrerequisite
 // 0x0000 (0x0028 - 0x0028)
@@ -21843,7 +21492,6 @@ public:
 		return GetDefaultObjImpl<UMissionPrerequisite>();
 	}
 };
-DUMPER7_ASSERTS_UMissionPrerequisite;
 
 // Class ShooterGame.MissionTimerWidget
 // 0x0010 (0x0388 - 0x0378)
@@ -21866,7 +21514,6 @@ public:
 		return GetDefaultObjImpl<UMissionTimerWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMissionTimerWidget;
 
 // Class ShooterGame.ModBackgroundDownloader
 // 0x0150 (0x0178 - 0x0028)
@@ -21889,7 +21536,6 @@ public:
 		return GetDefaultObjImpl<UModBackgroundDownloader>();
 	}
 };
-DUMPER7_ASSERTS_UModBackgroundDownloader;
 
 // Class ShooterGame.MultiMapPerfTestSubsystem
 // 0x00A0 (0x00D0 - 0x0030)
@@ -21915,7 +21561,6 @@ public:
 		return GetDefaultObjImpl<UMultiMapPerfTestSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMultiMapPerfTestSubsystem;
 
 // Class ShooterGame.MultiUseTooltip
 // 0x0038 (0x0438 - 0x0400)
@@ -21938,7 +21583,6 @@ public:
 		return GetDefaultObjImpl<UMultiUseTooltip>();
 	}
 };
-DUMPER7_ASSERTS_UMultiUseTooltip;
 
 // Class ShooterGame.NewOptionsButtonWidget
 // 0x0000 (0x07F8 - 0x07F8)
@@ -21958,7 +21602,6 @@ public:
 		return GetDefaultObjImpl<UNewOptionsButtonWidget>();
 	}
 };
-DUMPER7_ASSERTS_UNewOptionsButtonWidget;
 
 // Class ShooterGame.NinjaLiveBaseComponent
 // 0x0000 (0x00D0 - 0x00D0)
@@ -21983,7 +21626,6 @@ public:
 		return GetDefaultObjImpl<UNinjaLiveBaseComponent>();
 	}
 };
-DUMPER7_ASSERTS_UNinjaLiveBaseComponent;
 
 // Class ShooterGame.NPCSpawnEntriesContainer
 // 0x0028 (0x0050 - 0x0028)
@@ -22009,7 +21651,6 @@ public:
 		return GetDefaultObjImpl<UNPCSpawnEntriesContainer>();
 	}
 };
-DUMPER7_ASSERTS_UNPCSpawnEntriesContainer;
 
 // Class ShooterGame.NPCZoneSpawnVolume
 // 0x0000 (0x04E0 - 0x04E0)
@@ -22029,7 +21670,6 @@ public:
 		return GetDefaultObjImpl<ANPCZoneSpawnVolume>();
 	}
 };
-DUMPER7_ASSERTS_ANPCZoneSpawnVolume;
 
 // Class ShooterGame.NumericEditableTextBox
 // 0x0060 (0x0F90 - 0x0F30)
@@ -22075,7 +21715,6 @@ public:
 		return GetDefaultObjImpl<UNumericEditableTextBox>();
 	}
 };
-DUMPER7_ASSERTS_UNumericEditableTextBox;
 
 // Class ShooterGame.OceanDinoManager
 // 0x0230 (0x06C0 - 0x0490)
@@ -22128,7 +21767,6 @@ public:
 		return GetDefaultObjImpl<AOceanDinoManager>();
 	}
 };
-DUMPER7_ASSERTS_AOceanDinoManager;
 
 // Class ShooterGame.ParticleModuleWaveHatDetector
 // 0x0010 (0x0040 - 0x0030)
@@ -22154,7 +21792,6 @@ public:
 		return GetDefaultObjImpl<UParticleModuleWaveHatDetector>();
 	}
 };
-DUMPER7_ASSERTS_UParticleModuleWaveHatDetector;
 
 // Class ShooterGame.PaintingCache
 // 0x01E8 (0x0210 - 0x0028)
@@ -22182,7 +21819,6 @@ public:
 		return GetDefaultObjImpl<UPaintingCache>();
 	}
 };
-DUMPER7_ASSERTS_UPaintingCache;
 
 // Class ShooterGame.PaintingTexture
 // 0x0048 (0x0070 - 0x0028)
@@ -22208,7 +21844,6 @@ public:
 		return GetDefaultObjImpl<UPaintingTexture>();
 	}
 };
-DUMPER7_ASSERTS_UPaintingTexture;
 
 // Class ShooterGame.PCMountedDLCManager
 // 0x0050 (0x00B0 - 0x0060)
@@ -22231,7 +21866,6 @@ public:
 		return GetDefaultObjImpl<UPCMountedDLCManager>();
 	}
 };
-DUMPER7_ASSERTS_UPCMountedDLCManager;
 
 // Class ShooterGame.PirateFleetCoordinator
 // 0x00C8 (0x0558 - 0x0490)
@@ -22279,7 +21913,6 @@ public:
 		return GetDefaultObjImpl<APirateFleetCoordinator>();
 	}
 };
-DUMPER7_ASSERTS_APirateFleetCoordinator;
 
 // Class ShooterGame.PlayerHUDUI
 // 0x0198 (0x0990 - 0x07F8)
@@ -22323,7 +21956,6 @@ public:
 		return GetDefaultObjImpl<UPlayerHUDUI>();
 	}
 };
-DUMPER7_ASSERTS_UPlayerHUDUI;
 
 // Class ShooterGame.PointOfInterestInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -22360,7 +21992,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IPointOfInterestInterface;
 
 // Class ShooterGame.PreviewImage
 // 0x00F8 (0x0120 - 0x0028)
@@ -22406,7 +22037,6 @@ public:
 		return GetDefaultObjImpl<UPreviewImage>();
 	}
 };
-DUMPER7_ASSERTS_UPreviewImage;
 
 // Class ShooterGame.PrimalAirShip
 // 0x0190 (0x3920 - 0x3790)
@@ -22519,7 +22149,6 @@ public:
 		return GetDefaultObjImpl<APrimalAirShip>();
 	}
 };
-DUMPER7_ASSERTS_APrimalAirShip;
 
 // Class ShooterGame.WorldBuffEntryWidget
 // 0x00C0 (0x0438 - 0x0378)
@@ -22551,7 +22180,6 @@ public:
 		return GetDefaultObjImpl<UWorldBuffEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UWorldBuffEntryWidget;
 
 // Class ShooterGame.PrimalAIStateBPBase
 // 0x0048 (0x00A0 - 0x0058)
@@ -22610,7 +22238,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIStateBPBase>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIStateBPBase;
 
 // Class ShooterGame.PrimalWheeledVehicleCharacter
 // 0x0480 (0x2F70 - 0x2AF0)
@@ -22777,7 +22404,6 @@ public:
 		return GetDefaultObjImpl<APrimalWheeledVehicleCharacter>();
 	}
 };
-DUMPER7_ASSERTS_APrimalWheeledVehicleCharacter;
 
 // Class ShooterGame.PrimalAIStateDinoMeleeState
 // 0x0088 (0x00E0 - 0x0058)
@@ -22828,7 +22454,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIStateDinoMeleeState>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIStateDinoMeleeState;
 
 // Class ShooterGame.PrimalAIStateDinoFlyerGrab
 // 0x0008 (0x00E8 - 0x00E0)
@@ -22851,7 +22476,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIStateDinoFlyerGrab>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIStateDinoFlyerGrab;
 
 // Class ShooterGame.PrimalShipSailComponent
 // 0x0500 (0x05D0 - 0x00D0)
@@ -23053,7 +22677,6 @@ public:
 		return GetDefaultObjImpl<UPrimalShipSailComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalShipSailComponent;
 
 // Class ShooterGame.PrimalAIStateDinoGrabAndReleaseState
 // 0x0008 (0x00E8 - 0x00E0)
@@ -23076,7 +22699,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIStateDinoGrabAndReleaseState>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIStateDinoGrabAndReleaseState;
 
 // Class ShooterGame.PrimalAIStateDinoSpiderMinions
 // 0x0098 (0x00F0 - 0x0058)
@@ -23119,7 +22741,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIStateDinoSpiderMinions>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIStateDinoSpiderMinions;
 
 // Class ShooterGame.PrimalWordFilter
 // 0x0428 (0x0468 - 0x0040)
@@ -23152,7 +22773,6 @@ public:
 		return GetDefaultObjImpl<UPrimalWordFilter>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalWordFilter;
 
 // Class ShooterGame.PrimalAIStateDinoSpiderRangedAcidState
 // 0x0018 (0x0070 - 0x0058)
@@ -23180,7 +22800,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIStateDinoSpiderRangedAcidState>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIStateDinoSpiderRangedAcidState;
 
 // Class ShooterGame.PrimalAIStateDinoSpiderRangedWebState
 // 0x0030 (0x00E8 - 0x00B8)
@@ -23212,7 +22831,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIStateDinoSpiderRangedWebState>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIStateDinoSpiderRangedWebState;
 
 // Class ShooterGame.ShooterWeapon
 // 0x0CA0 (0x1130 - 0x0490)
@@ -23901,7 +23519,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon;
 
 // Class ShooterGame.ShooterWeapon_Projectile
 // 0x00D8 (0x1208 - 0x1130)
@@ -23985,7 +23602,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_Projectile>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_Projectile;
 
 // Class ShooterGame.PrimalWeaponGrapplingHook
 // 0x0030 (0x1238 - 0x1208)
@@ -24016,7 +23632,6 @@ public:
 		return GetDefaultObjImpl<APrimalWeaponGrapplingHook>();
 	}
 };
-DUMPER7_ASSERTS_APrimalWeaponGrapplingHook;
 
 // Class ShooterGame.PrimalAIStateDinoSpineyLizardTailRangeState
 // 0x0008 (0x00C0 - 0x00B8)
@@ -24039,7 +23654,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAIStateDinoSpineyLizardTailRangeState>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAIStateDinoSpineyLizardTailRangeState;
 
 // Class ShooterGame.PrimalAnimInstance
 // 0x00F0 (0x04C0 - 0x03D0)
@@ -24093,7 +23707,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UPrimalAnimInstance;
 
 // Class ShooterGame.PrimalStructureItemContainer_SupplyCrate
 // 0x0228 (0x15E0 - 0x13B8)
@@ -24197,7 +23810,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureItemContainer_SupplyCrate>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureItemContainer_SupplyCrate;
 
 // Class ShooterGame.PrimalAnimSharingStateProcessor
 // 0x0000 (0x0050 - 0x0050)
@@ -24217,7 +23829,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAnimSharingStateProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAnimSharingStateProcessor;
 
 // Class ShooterGame.PrimalAssets
 // 0x0188 (0x01C0 - 0x0038)
@@ -24247,7 +23858,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAssets>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAssets;
 
 // Class ShooterGame.PrimalStructureElevatorPlatform
 // 0x00D0 (0x0DE0 - 0x0D10)
@@ -24322,7 +23932,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureElevatorPlatform>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureElevatorPlatform;
 
 // Class ShooterGame.PrimalAutocastFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -24375,7 +23984,6 @@ public:
 		return GetDefaultObjImpl<UPrimalAutocastFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalAutocastFunctions;
 
 // Class ShooterGame.TexReduceCommandlet
 // 0x0000 (0x0080 - 0x0080)
@@ -24395,7 +24003,6 @@ public:
 		return GetDefaultObjImpl<UTexReduceCommandlet>();
 	}
 };
-DUMPER7_ASSERTS_UTexReduceCommandlet;
 
 // Class ShooterGame.PrimalStaticData
 // 0x0000 (0x0028 - 0x0028)
@@ -24418,7 +24025,6 @@ public:
 		return GetDefaultObjImpl<UPrimalStaticData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalStaticData;
 
 // Class ShooterGame.PrimalStaticData_MissionCompanionData
 // 0x04E8 (0x0510 - 0x0028)
@@ -24442,7 +24048,6 @@ public:
 		return GetDefaultObjImpl<UPrimalStaticData_MissionCompanionData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalStaticData_MissionCompanionData;
 
 // Class ShooterGame.MeshReduceCommandlet
 // 0x0000 (0x0080 - 0x0080)
@@ -24462,7 +24067,6 @@ public:
 		return GetDefaultObjImpl<UMeshReduceCommandlet>();
 	}
 };
-DUMPER7_ASSERTS_UMeshReduceCommandlet;
 
 // Class ShooterGame.PrimalBlueprintFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -24501,7 +24105,6 @@ public:
 		return GetDefaultObjImpl<UPrimalBlueprintFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalBlueprintFunctions;
 
 // Class ShooterGame.PrimalShipDeck
 // 0x0000 (0x0D10 - 0x0D10)
@@ -24521,7 +24124,6 @@ public:
 		return GetDefaultObjImpl<APrimalShipDeck>();
 	}
 };
-DUMPER7_ASSERTS_APrimalShipDeck;
 
 // Class ShooterGame.VRMainBoss_Character
 // 0x0000 (0x2AF0 - 0x2AF0)
@@ -24544,7 +24146,6 @@ public:
 		return GetDefaultObjImpl<AVRMainBoss_Character>();
 	}
 };
-DUMPER7_ASSERTS_AVRMainBoss_Character;
 
 // Class ShooterGame.PrimalStructureSeating
 // 0x0158 (0x1510 - 0x13B8)
@@ -24665,7 +24266,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureSeating>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureSeating;
 
 // Class ShooterGame.PrimalStructureBed
 // 0x0088 (0x1598 - 0x1510)
@@ -24705,7 +24305,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureBed>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureBed;
 
 // Class ShooterGame.PrimalBotCharacter
 // 0x0430 (0x2F20 - 0x2AF0)
@@ -24936,7 +24535,6 @@ public:
 		return GetDefaultObjImpl<APrimalBotCharacter>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBotCharacter;
 
 // Class ShooterGame.PrimalBotRidingComponent
 // 0x0018 (0x00E8 - 0x00D0)
@@ -24961,7 +24559,6 @@ public:
 		return GetDefaultObjImpl<UPrimalBotRidingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalBotRidingComponent;
 
 // Class ShooterGame.PrimalStructureKeypad
 // 0x0010 (0x13C8 - 0x13B8)
@@ -24988,7 +24585,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureKeypad>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureKeypad;
 
 // Class ShooterGame.PrimalBotSeatingComponent
 // 0x0038 (0x0108 - 0x00D0)
@@ -25013,7 +24609,6 @@ public:
 		return GetDefaultObjImpl<UPrimalBotSeatingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalBotSeatingComponent;
 
 // Class ShooterGame.PrimalBuffPersistentData
 // 0x0020 (0x0048 - 0x0028)
@@ -25044,7 +24639,6 @@ public:
 		return GetDefaultObjImpl<UPrimalBuffPersistentData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalBuffPersistentData;
 
 // Class ShooterGame.PrimalBuffPersistentData_DragonHorn
 // 0x0128 (0x0170 - 0x0048)
@@ -25085,7 +24679,6 @@ public:
 		return GetDefaultObjImpl<UPrimalBuffPersistentData_DragonHorn>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalBuffPersistentData_DragonHorn;
 
 // Class ShooterGame.PrimalStructureBearTrap
 // 0x00B8 (0x0DC8 - 0x0D10)
@@ -25153,7 +24746,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureBearTrap>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureBearTrap;
 
 // Class ShooterGame.PrimalBuffPersistentData_MissionData
 // 0x0020 (0x0068 - 0x0048)
@@ -25179,7 +24771,6 @@ public:
 		return GetDefaultObjImpl<UPrimalBuffPersistentData_MissionData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalBuffPersistentData_MissionData;
 
 // Class ShooterGame.PrimalStructureItemContainer_HordeCrate
 // 0x0028 (0x1608 - 0x15E0)
@@ -25207,7 +24798,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureItemContainer_HordeCrate>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureItemContainer_HordeCrate;
 
 // Class ShooterGame.PrimalBuff_DragonHorn
 // 0x02A8 (0x0DF0 - 0x0B48)
@@ -25353,7 +24943,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff_DragonHorn>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff_DragonHorn;
 
 // Class ShooterGame.PrimalBuff_Grappled
 // 0x02A8 (0x0DF0 - 0x0B48)
@@ -25628,7 +25217,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff_Grappled>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff_Grappled;
 
 // Class ShooterGame.PrimalStructureSeaMine
 // 0x00A8 (0x0DB8 - 0x0D10)
@@ -25680,7 +25268,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureSeaMine>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureSeaMine;
 
 // Class ShooterGame.UI_XBoxFooter
 // 0x0048 (0x0840 - 0x07F8)
@@ -25703,7 +25290,6 @@ public:
 		return GetDefaultObjImpl<UUI_XBoxFooter>();
 	}
 };
-DUMPER7_ASSERTS_UUI_XBoxFooter;
 
 // Class ShooterGame.PrimalBuff_HotbarReplacer
 // 0x0080 (0x0BC8 - 0x0B48)
@@ -25743,7 +25329,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff_HotbarReplacer>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff_HotbarReplacer;
 
 // Class ShooterGame.PrimalStructureMarket
 // 0x0230 (0x15E8 - 0x13B8)
@@ -25867,7 +25452,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureMarket>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureMarket;
 
 // Class ShooterGame.PrimalBuff_OverrideWalkBrakes
 // 0x0010 (0x0B58 - 0x0B48)
@@ -25891,7 +25475,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff_OverrideWalkBrakes>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff_OverrideWalkBrakes;
 
 // Class ShooterGame.PrimalBuff_Skill
 // 0x0020 (0x0B68 - 0x0B48)
@@ -25930,7 +25513,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff_Skill>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff_Skill;
 
 // Class ShooterGame.PrimalStructureItemContainer_CropPlot
 // 0x01C0 (0x1578 - 0x13B8)
@@ -26059,7 +25641,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureItemContainer_CropPlot>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureItemContainer_CropPlot;
 
 // Class ShooterGame.PrimalBuff_StorageInterface
 // 0x0150 (0x0C98 - 0x0B48)
@@ -26123,7 +25704,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff_StorageInterface>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff_StorageInterface;
 
 // Class ShooterGame.PrimalBuff_WindBoost
 // 0x0020 (0x0B68 - 0x0B48)
@@ -26149,7 +25729,6 @@ public:
 		return GetDefaultObjImpl<APrimalBuff_WindBoost>();
 	}
 };
-DUMPER7_ASSERTS_APrimalBuff_WindBoost;
 
 // Class ShooterGame.PrimalCableActor
 // 0x0008 (0x0498 - 0x0490)
@@ -26172,7 +25751,6 @@ public:
 		return GetDefaultObjImpl<APrimalCableActor>();
 	}
 };
-DUMPER7_ASSERTS_APrimalCableActor;
 
 // Class ShooterGame.PrimalStructureTribeFlag
 // 0x0008 (0x0D18 - 0x0D10)
@@ -26196,7 +25774,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureTribeFlag>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureTribeFlag;
 
 // Class ShooterGame.PrimalCableComponent
 // 0x0080 (0x0760 - 0x06E0)
@@ -26241,7 +25818,6 @@ public:
 		return GetDefaultObjImpl<UPrimalCableComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCableComponent;
 
 // Class ShooterGame.PrimalCameraConfig
 // 0x00E8 (0x0110 - 0x0028)
@@ -26274,7 +25850,6 @@ public:
 		return GetDefaultObjImpl<UPrimalCameraConfig>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCameraConfig;
 
 // Class ShooterGame.PrimalCameraProbeActor
 // 0x0010 (0x0CF0 - 0x0CE0)
@@ -26298,7 +25873,6 @@ public:
 		return GetDefaultObjImpl<APrimalCameraProbeActor>();
 	}
 };
-DUMPER7_ASSERTS_APrimalCameraProbeActor;
 
 // Class ShooterGame.PrimalCharacterSetting
 // 0x00F8 (0x0120 - 0x0028)
@@ -26321,7 +25895,6 @@ public:
 		return GetDefaultObjImpl<UPrimalCharacterSetting>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCharacterSetting;
 
 // Class ShooterGame.PrimalClimbingSettings
 // 0x0FA0 (0x0FC8 - 0x0028)
@@ -26415,7 +25988,6 @@ public:
 		return GetDefaultObjImpl<UPrimalClimbingSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalClimbingSettings;
 
 // Class ShooterGame.PrimalStructureWaterPipe
 // 0x0020 (0x0D30 - 0x0D10)
@@ -26460,7 +26032,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureWaterPipe>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureWaterPipe;
 
 // Class ShooterGame.PrimalColorSet
 // 0x0240 (0x0268 - 0x0028)
@@ -26483,7 +26054,6 @@ public:
 		return GetDefaultObjImpl<UPrimalColorSet>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalColorSet;
 
 // Class ShooterGame.PrimalCryopodTooltipWidget
 // 0x0300 (0x0700 - 0x0400)
@@ -26524,7 +26094,6 @@ public:
 		return GetDefaultObjImpl<UPrimalCryopodTooltipWidget>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCryopodTooltipWidget;
 
 // Class ShooterGame.PrimalDestroyedMeshActor
 // 0x0000 (0x0520 - 0x0520)
@@ -26544,7 +26113,6 @@ public:
 		return GetDefaultObjImpl<APrimalDestroyedMeshActor>();
 	}
 };
-DUMPER7_ASSERTS_APrimalDestroyedMeshActor;
 
 // Class ShooterGame.PrimalStructureSign
 // 0x0060 (0x0D70 - 0x0D10)
@@ -26590,7 +26158,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureSign>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureSign;
 
 // Class ShooterGame.UI_TribeManager
 // 0x04C8 (0x0CD0 - 0x0808)
@@ -26641,7 +26208,6 @@ public:
 		return GetDefaultObjImpl<UUI_TribeManager>();
 	}
 };
-DUMPER7_ASSERTS_UUI_TribeManager;
 
 // Class ShooterGame.PrimalDinoAnimInstance
 // 0x00F0 (0x05B0 - 0x04C0)
@@ -26678,7 +26244,6 @@ public:
 		return GetDefaultObjImpl<UPrimalDinoAnimInstance>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalDinoAnimInstance;
 
 // Class ShooterGame.PrimalDinoEntry
 // 0x0058 (0x0080 - 0x0028)
@@ -26710,7 +26275,6 @@ public:
 		return GetDefaultObjImpl<UPrimalDinoEntry>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalDinoEntry;
 
 // Class ShooterGame.PrimalStructureUnderwaterBase
 // 0x0160 (0x1518 - 0x13B8)
@@ -26774,7 +26338,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureUnderwaterBase>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureUnderwaterBase;
 
 // Class ShooterGame.PrimalDinoMeshComponent
 // 0x0020 (0x13E0 - 0x13C0)
@@ -26798,7 +26361,6 @@ public:
 		return GetDefaultObjImpl<UPrimalDinoMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalDinoMeshComponent;
 
 // Class ShooterGame.PrimalDinoSettings
 // 0x0068 (0x0090 - 0x0028)
@@ -26830,7 +26392,6 @@ public:
 		return GetDefaultObjImpl<UPrimalDinoSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalDinoSettings;
 
 // Class ShooterGame.PrimalWeaponBow
 // 0x0088 (0x1290 - 0x1208)
@@ -26901,7 +26462,6 @@ public:
 		return GetDefaultObjImpl<APrimalWeaponBow>();
 	}
 };
-DUMPER7_ASSERTS_APrimalWeaponBow;
 
 // Class ShooterGame.PrimalWeaponBoomerang
 // 0x0008 (0x1298 - 0x1290)
@@ -26929,7 +26489,6 @@ public:
 		return GetDefaultObjImpl<APrimalWeaponBoomerang>();
 	}
 };
-DUMPER7_ASSERTS_APrimalWeaponBoomerang;
 
 // Class ShooterGame.PrimalDinoStatusComponent
 // 0x0000 (0x1178 - 0x1178)
@@ -26949,7 +26508,6 @@ public:
 		return GetDefaultObjImpl<UPrimalDinoStatusComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalDinoStatusComponent;
 
 // Class ShooterGame.PrimalDinoToolTipWidget
 // 0x0238 (0x0638 - 0x0400)
@@ -26999,7 +26557,6 @@ public:
 		return GetDefaultObjImpl<UPrimalDinoToolTipWidget>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalDinoToolTipWidget;
 
 // Class ShooterGame.PrimalSupplyCrateItemSets
 // 0x0010 (0x0038 - 0x0028)
@@ -27022,7 +26579,6 @@ public:
 		return GetDefaultObjImpl<UPrimalSupplyCrateItemSets>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalSupplyCrateItemSets;
 
 // Class ShooterGame.PrimalEggToolTipWidget
 // 0x0278 (0x0678 - 0x0400)
@@ -27060,7 +26616,6 @@ public:
 		return GetDefaultObjImpl<UPrimalEggToolTipWidget>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalEggToolTipWidget;
 
 // Class ShooterGame.PrimalEggToolTipWidget_Crop
 // 0x0258 (0x0658 - 0x0400)
@@ -27098,7 +26653,6 @@ public:
 		return GetDefaultObjImpl<UPrimalEggToolTipWidget_Crop>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalEggToolTipWidget_Crop;
 
 // Class ShooterGame.PrimalStructureTurretBallista
 // 0x0220 (0x1730 - 0x1510)
@@ -27240,7 +26794,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureTurretBallista>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureTurretBallista;
 
 // Class ShooterGame.PrimalEngramEntry
 // 0x0088 (0x00B0 - 0x0028)
@@ -27279,7 +26832,6 @@ public:
 		return GetDefaultObjImpl<UPrimalEngramEntry>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalEngramEntry;
 
 // Class ShooterGame.PrimalFallingTreeActor
 // 0x0130 (0x05C0 - 0x0490)
@@ -27331,7 +26883,6 @@ public:
 		return GetDefaultObjImpl<APrimalFallingTreeActor>();
 	}
 };
-DUMPER7_ASSERTS_APrimalFallingTreeActor;
 
 // Class ShooterGame.PrimalFieldSystemActor
 // 0x0000 (0x0498 - 0x0498)
@@ -27355,7 +26906,6 @@ public:
 		return GetDefaultObjImpl<APrimalFieldSystemActor>();
 	}
 };
-DUMPER7_ASSERTS_APrimalFieldSystemActor;
 
 // Class ShooterGame.PrimalFoliageSolver
 // 0x0040 (0x04D0 - 0x0490)
@@ -27398,7 +26948,6 @@ public:
 		return GetDefaultObjImpl<APrimalFoliageSolver>();
 	}
 };
-DUMPER7_ASSERTS_APrimalFoliageSolver;
 
 // Class ShooterGame.PrimalWindSourceComponent
 // 0x01E0 (0x02B0 - 0x00D0)
@@ -27516,7 +27065,6 @@ public:
 		return GetDefaultObjImpl<UPrimalWindSourceComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalWindSourceComponent;
 
 // Class ShooterGame.PrimalFurBPFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -27541,7 +27089,6 @@ public:
 		return GetDefaultObjImpl<UPrimalFurBPFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalFurBPFunctionLibrary;
 
 // Class ShooterGame.W_SkillTreeRune
 // 0x0128 (0x04A0 - 0x0378)
@@ -27572,7 +27119,6 @@ public:
 		return GetDefaultObjImpl<UW_SkillTreeRune>();
 	}
 };
-DUMPER7_ASSERTS_UW_SkillTreeRune;
 
 // Class ShooterGame.DLC
 // 0x0060 (0x0088 - 0x0028)
@@ -27608,7 +27154,6 @@ public:
 		return GetDefaultObjImpl<UDLC>();
 	}
 };
-DUMPER7_ASSERTS_UDLC;
 
 // Class ShooterGame.ShooterWeapon_Melee
 // 0x0008 (0x1138 - 0x1130)
@@ -27632,7 +27177,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_Melee>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_Melee;
 
 // Class ShooterGame.PrimalWeaponElectronicBinoculars
 // 0x00C0 (0x11F8 - 0x1138)
@@ -27691,7 +27235,6 @@ public:
 		return GetDefaultObjImpl<APrimalWeaponElectronicBinoculars>();
 	}
 };
-DUMPER7_ASSERTS_APrimalWeaponElectronicBinoculars;
 
 // Class ShooterGame.DLCs
 // 0x0010 (0x0038 - 0x0028)
@@ -27714,7 +27257,6 @@ public:
 		return GetDefaultObjImpl<UDLCs>();
 	}
 };
-DUMPER7_ASSERTS_UDLCs;
 
 // Class ShooterGame.PrimalGameData
 // 0x3A68 (0x3A90 - 0x0028)
@@ -28239,7 +27781,6 @@ public:
 		return GetDefaultObjImpl<UPrimalGameData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalGameData;
 
 // Class ShooterGame.PrimalUI_Toast
 // 0x0010 (0x0808 - 0x07F8)
@@ -28275,7 +27816,6 @@ public:
 		return GetDefaultObjImpl<UPrimalUI_Toast>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalUI_Toast;
 
 // Class ShooterGame.PrimalGameSettingsData
 // 0x0368 (0x0398 - 0x0030)
@@ -28510,7 +28050,6 @@ public:
 		return GetDefaultObjImpl<UPrimalGameSettingsData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalGameSettingsData;
 
 // Class ShooterGame.PrimalExportAssetRegistryCommandlet
 // 0x0000 (0x0080 - 0x0080)
@@ -28530,7 +28069,6 @@ public:
 		return GetDefaultObjImpl<UPrimalExportAssetRegistryCommandlet>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalExportAssetRegistryCommandlet;
 
 // Class ShooterGame.PrimalGlobalUIData
 // 0x0110 (0x0138 - 0x0028)
@@ -28585,7 +28123,6 @@ public:
 		return GetDefaultObjImpl<UPrimalGlobalUIData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalGlobalUIData;
 
 // Class ShooterGame.PrimalWorldSettingsEventOverrides
 // 0x0030 (0x0058 - 0x0028)
@@ -28610,7 +28147,6 @@ public:
 		return GetDefaultObjImpl<UPrimalWorldSettingsEventOverrides>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalWorldSettingsEventOverrides;
 
 // Class ShooterGame.W_MilestoneNotification
 // 0x0000 (0x0378 - 0x0378)
@@ -28630,7 +28166,6 @@ public:
 		return GetDefaultObjImpl<UW_MilestoneNotification>();
 	}
 };
-DUMPER7_ASSERTS_UW_MilestoneNotification;
 
 // Class ShooterGame.PrimalGPUMessageHelpers
 // 0x0000 (0x0028 - 0x0028)
@@ -28653,7 +28188,6 @@ public:
 		return GetDefaultObjImpl<UPrimalGPUMessageHelpers>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalGPUMessageHelpers;
 
 // Class ShooterGame.PrimalGroupInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -28687,7 +28221,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IPrimalGroupInterface;
 
 // Class ShooterGame.WaterPlaneDataAsset
 // 0x0010 (0x0040 - 0x0030)
@@ -28710,7 +28243,6 @@ public:
 		return GetDefaultObjImpl<UWaterPlaneDataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UWaterPlaneDataAsset;
 
 // Class ShooterGame.PrimalInventoryComponent_Static
 // 0x0000 (0x0858 - 0x0858)
@@ -28730,7 +28262,6 @@ public:
 		return GetDefaultObjImpl<UPrimalInventoryComponent_Static>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalInventoryComponent_Static;
 
 // Class ShooterGame.SkeletalMeshComponentWithSoftRef
 // 0x0060 (0x1420 - 0x13C0)
@@ -28758,7 +28289,6 @@ public:
 		return GetDefaultObjImpl<USkeletalMeshComponentWithSoftRef>();
 	}
 };
-DUMPER7_ASSERTS_USkeletalMeshComponentWithSoftRef;
 
 // Class ShooterGame.ProgressionTreeGraph_Milestones
 // 0x0018 (0x00A0 - 0x0088)
@@ -28787,7 +28317,6 @@ public:
 		return GetDefaultObjImpl<UProgressionTreeGraph_Milestones>();
 	}
 };
-DUMPER7_ASSERTS_UProgressionTreeGraph_Milestones;
 
 // Class ShooterGame.ParticleSystemComponentWithSoftRef
 // 0x0020 (0x0990 - 0x0970)
@@ -28810,7 +28339,6 @@ public:
 		return GetDefaultObjImpl<UParticleSystemComponentWithSoftRef>();
 	}
 };
-DUMPER7_ASSERTS_UParticleSystemComponentWithSoftRef;
 
 // Class ShooterGame.PrimalWorldBuffData
 // 0x0028 (0x0050 - 0x0028)
@@ -28845,7 +28373,6 @@ public:
 		return GetDefaultObjImpl<UPrimalWorldBuffData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalWorldBuffData;
 
 // Class ShooterGame.PrimalItemInventoryToolTipWidget
 // 0x02B0 (0x06B0 - 0x0400)
@@ -28906,7 +28433,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemInventoryToolTipWidget>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemInventoryToolTipWidget;
 
 // Class ShooterGame.PrimalItemTrait
 // 0x00B8 (0x00E0 - 0x0028)
@@ -28954,7 +28480,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItemTrait>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemTrait;
 
 // Class ShooterGame.PrimalItem_DeathEssence
 // 0x0000 (0x0B80 - 0x0B80)
@@ -28974,7 +28499,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_DeathEssence>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_DeathEssence;
 
 // Class ShooterGame.PrimalItem_Dye
 // 0x0020 (0x0BA0 - 0x0B80)
@@ -28999,7 +28523,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_Dye>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_Dye;
 
 // Class ShooterGame.WindBooster
 // 0x0130 (0x05C0 - 0x0490)
@@ -29047,7 +28570,6 @@ public:
 		return GetDefaultObjImpl<AWindBooster>();
 	}
 };
-DUMPER7_ASSERTS_AWindBooster;
 
 // Class ShooterGame.WindBoosterTunnel
 // 0x0020 (0x05E0 - 0x05C0)
@@ -29083,7 +28605,6 @@ public:
 		return GetDefaultObjImpl<AWindBoosterTunnel>();
 	}
 };
-DUMPER7_ASSERTS_AWindBoosterTunnel;
 
 // Class ShooterGame.PrimalItem_ItemTrait
 // 0x0020 (0x0BA0 - 0x0B80)
@@ -29109,7 +28630,6 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_ItemTrait>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_ItemTrait;
 
 // Class ShooterGame.LandscapeUtils
 // 0x0000 (0x0028 - 0x0028)
@@ -29129,7 +28649,6 @@ public:
 		return GetDefaultObjImpl<ULandscapeUtils>();
 	}
 };
-DUMPER7_ASSERTS_ULandscapeUtils;
 
 // Class ShooterGame.PrimalLevelSequenceVolumeSphere
 // 0x0008 (0x0550 - 0x0548)
@@ -29152,7 +28671,6 @@ public:
 		return GetDefaultObjImpl<APrimalLevelSequenceVolumeSphere>();
 	}
 };
-DUMPER7_ASSERTS_APrimalLevelSequenceVolumeSphere;
 
 // Class ShooterGame.PrimalMassSubsystem
 // 0x0020 (0x0050 - 0x0030)
@@ -29181,7 +28699,6 @@ public:
 		return GetDefaultObjImpl<UPrimalMassSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalMassSubsystem;
 
 // Class ShooterGame.PrimalStructurePlacer
 // 0x0238 (0x06C8 - 0x0490)
@@ -29270,7 +28787,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructurePlacer>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructurePlacer;
 
 // Class ShooterGame.PrimalTransformUpdateMassProcessor
 // 0x0330 (0x03E0 - 0x00B0)
@@ -29293,7 +28809,6 @@ public:
 		return GetDefaultObjImpl<UPrimalTransformUpdateMassProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalTransformUpdateMassProcessor;
 
 // Class ShooterGame.PrimalNavigationInvokerComponent
 // 0x0068 (0x0148 - 0x00E0)
@@ -29320,7 +28835,6 @@ public:
 		return GetDefaultObjImpl<UPrimalNavigationInvokerComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalNavigationInvokerComponent;
 
 // Class ShooterGame.PrimalStructureSeating_DriverSeat
 // 0x02A0 (0x17B0 - 0x1510)
@@ -29547,7 +29061,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureSeating_DriverSeat>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureSeating_DriverSeat;
 
 // Class ShooterGame.PrimalNavigationSystemConfig
 // 0x0008 (0x0068 - 0x0060)
@@ -29574,7 +29087,6 @@ public:
 		return GetDefaultObjImpl<UPrimalNavigationSystemConfig>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalNavigationSystemConfig;
 
 // Class ShooterGame.PrimalNavModifierComponent
 // 0x0020 (0x01F0 - 0x01D0)
@@ -29603,7 +29115,6 @@ public:
 		return GetDefaultObjImpl<UPrimalNavModifierComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalNavModifierComponent;
 
 // Class ShooterGame.PrimalStructureModTemplateData
 // 0x0020 (0x0050 - 0x0030)
@@ -29630,7 +29141,6 @@ public:
 		return GetDefaultObjImpl<UPrimalStructureModTemplateData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalStructureModTemplateData;
 
 // Class ShooterGame.PrimalNoClimbingVolume
 // 0x0000 (0x04E0 - 0x04E0)
@@ -29650,7 +29160,6 @@ public:
 		return GetDefaultObjImpl<APrimalNoClimbingVolume>();
 	}
 };
-DUMPER7_ASSERTS_APrimalNoClimbingVolume;
 
 // Class ShooterGame.PrimalPatrolPoint
 // 0x0028 (0x04B8 - 0x0490)
@@ -29693,7 +29202,6 @@ public:
 		return GetDefaultObjImpl<APrimalPatrolPoint>();
 	}
 };
-DUMPER7_ASSERTS_APrimalPatrolPoint;
 
 // Class ShooterGame.PrimalPersistentWorldData
 // 0x0010 (0x04A0 - 0x0490)
@@ -29716,7 +29224,6 @@ public:
 		return GetDefaultObjImpl<APrimalPersistentWorldData>();
 	}
 };
-DUMPER7_ASSERTS_APrimalPersistentWorldData;
 
 // Class ShooterGame.PrimalPlayerFollowingShip
 // 0x0020 (0x37B0 - 0x3790)
@@ -29748,7 +29255,6 @@ public:
 		return GetDefaultObjImpl<APrimalPlayerFollowingShip>();
 	}
 };
-DUMPER7_ASSERTS_APrimalPlayerFollowingShip;
 
 // Class ShooterGame.PrimalPreviewSceneSetup
 // 0x0000 (0x0490 - 0x0490)
@@ -29773,7 +29279,6 @@ public:
 		return GetDefaultObjImpl<APrimalPreviewSceneSetup>();
 	}
 };
-DUMPER7_ASSERTS_APrimalPreviewSceneSetup;
 
 // Class ShooterGame.PrimalProjectileDilo
 // 0x0000 (0x07B8 - 0x07B8)
@@ -29793,7 +29298,6 @@ public:
 		return GetDefaultObjImpl<APrimalProjectileDilo>();
 	}
 };
-DUMPER7_ASSERTS_APrimalProjectileDilo;
 
 // Class ShooterGame.PrimalProjectileFlare
 // 0x0028 (0x07E0 - 0x07B8)
@@ -29823,7 +29327,6 @@ public:
 		return GetDefaultObjImpl<APrimalProjectileFlare>();
 	}
 };
-DUMPER7_ASSERTS_APrimalProjectileFlare;
 
 // Class ShooterGame.PrimalProjectileGrapplingHook
 // 0x0058 (0x0810 - 0x07B8)
@@ -29863,7 +29366,6 @@ public:
 		return GetDefaultObjImpl<APrimalProjectileGrapplingHook>();
 	}
 };
-DUMPER7_ASSERTS_APrimalProjectileGrapplingHook;
 
 // Class ShooterGame.PrimalProjectileSpiderAcid
 // 0x0000 (0x07B8 - 0x07B8)
@@ -29883,7 +29385,6 @@ public:
 		return GetDefaultObjImpl<APrimalProjectileSpiderAcid>();
 	}
 };
-DUMPER7_ASSERTS_APrimalProjectileSpiderAcid;
 
 // Class ShooterGame.PrimalReverseVacuumCompartment
 // 0x0240 (0x15F8 - 0x13B8)
@@ -29972,7 +29473,6 @@ public:
 		return GetDefaultObjImpl<APrimalReverseVacuumCompartment>();
 	}
 };
-DUMPER7_ASSERTS_APrimalReverseVacuumCompartment;
 
 // Class ShooterGame.PrimalScrollBox
 // 0x0000 (0x0C20 - 0x0C20)
@@ -29995,7 +29495,6 @@ public:
 		return GetDefaultObjImpl<UPrimalScrollBox>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalScrollBox;
 
 // Class ShooterGame.PrimalShipCannonComponent
 // 0x0220 (0x0930 - 0x0710)
@@ -30081,7 +29580,6 @@ public:
 		return GetDefaultObjImpl<UPrimalShipCannonComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalShipCannonComponent;
 
 // Class ShooterGame.PrimalShipCannonProjectile
 // 0x0070 (0x0828 - 0x07B8)
@@ -30112,7 +29610,6 @@ public:
 		return GetDefaultObjImpl<APrimalShipCannonProjectile>();
 	}
 };
-DUMPER7_ASSERTS_APrimalShipCannonProjectile;
 
 // Class ShooterGame.PrimalShipInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -30145,7 +29642,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IPrimalShipInterface;
 
 // Class ShooterGame.PrimalShipLootCrate
 // 0x0010 (0x15F0 - 0x15E0)
@@ -30174,7 +29670,6 @@ public:
 		return GetDefaultObjImpl<APrimalShipLootCrate>();
 	}
 };
-DUMPER7_ASSERTS_APrimalShipLootCrate;
 
 // Class ShooterGame.PrimalStaticData_MissionCompanionReactionData
 // 0x0210 (0x0238 - 0x0028)
@@ -30199,7 +29694,6 @@ public:
 		return GetDefaultObjImpl<UPrimalStaticData_MissionCompanionReactionData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalStaticData_MissionCompanionReactionData;
 
 // Class ShooterGame.PrimalStructureElevatorTrack
 // 0x0018 (0x13D0 - 0x13B8)
@@ -30236,7 +29730,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureElevatorTrack>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureElevatorTrack;
 
 // Class ShooterGame.PrimalStructureGhost
 // 0x0068 (0x0D78 - 0x0D10)
@@ -30269,7 +29762,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureGhost>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureGhost;
 
 // Class ShooterGame.PrimalStructureItemContainer_CropPlot_VisualItems
 // 0x0030 (0x15A8 - 0x1578)
@@ -30302,7 +29794,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureItemContainer_CropPlot_VisualItems>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureItemContainer_CropPlot_VisualItems;
 
 // Class ShooterGame.VehicleRearModBuffInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -30340,7 +29831,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IVehicleRearModBuffInterface;
 
 // Class ShooterGame.PrimalStructureItemContainer_VisualItems
 // 0x0030 (0x13E8 - 0x13B8)
@@ -30377,7 +29867,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureItemContainer_VisualItems>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureItemContainer_VisualItems;
 
 // Class ShooterGame.PrimalStructureLadder
 // 0x0098 (0x0DA8 - 0x0D10)
@@ -30434,7 +29923,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureLadder>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureLadder;
 
 // Class ShooterGame.PrimalStructureMine
 // 0x00B0 (0x0DC0 - 0x0D10)
@@ -30491,7 +29979,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureMine>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureMine;
 
 // Class ShooterGame.PrimalStructureMovingContainer
 // 0x0040 (0x13F8 - 0x13B8)
@@ -30520,7 +30007,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureMovingContainer>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureMovingContainer;
 
 // Class ShooterGame.PrimalStructurePortableLadder
 // 0x00B0 (0x0E58 - 0x0DA8)
@@ -30569,7 +30055,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructurePortableLadder>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructurePortableLadder;
 
 // Class ShooterGame.PrimalStructureSeatingMusic
 // 0x0058 (0x1568 - 0x1510)
@@ -30600,7 +30085,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureSeatingMusic>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureSeatingMusic;
 
 // Class ShooterGame.PrimalStructureSettings
 // 0x0030 (0x0058 - 0x0028)
@@ -30627,7 +30111,6 @@ public:
 		return GetDefaultObjImpl<UPrimalStructureSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalStructureSettings;
 
 // Class ShooterGame.PrimalStructureToolTipWidget
 // 0x0098 (0x0498 - 0x0400)
@@ -30651,7 +30134,6 @@ public:
 		return GetDefaultObjImpl<UPrimalStructureToolTipWidget>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalStructureToolTipWidget;
 
 // Class ShooterGame.UI_TribeWarEntry
 // 0x0058 (0x0850 - 0x07F8)
@@ -30678,7 +30160,6 @@ public:
 		return GetDefaultObjImpl<UUI_TribeWarEntry>();
 	}
 };
-DUMPER7_ASSERTS_UUI_TribeWarEntry;
 
 // Class ShooterGame.PrimalStructureTurretAOE
 // 0x0118 (0x1750 - 0x1638)
@@ -30716,7 +30197,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureTurretAOE>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureTurretAOE;
 
 // Class ShooterGame.PrimalStructureTurretPlant
 // 0x0080 (0x16B8 - 0x1638)
@@ -30749,7 +30229,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureTurretPlant>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureTurretPlant;
 
 // Class ShooterGame.PrimalStructureWatchtower
 // 0x0080 (0x1438 - 0x13B8)
@@ -30775,7 +30254,6 @@ public:
 		return GetDefaultObjImpl<APrimalStructureWatchtower>();
 	}
 };
-DUMPER7_ASSERTS_APrimalStructureWatchtower;
 
 // Class ShooterGame.PrimalTribeData
 // 0x01C8 (0x01F0 - 0x0028)
@@ -30798,7 +30276,6 @@ public:
 		return GetDefaultObjImpl<UPrimalTribeData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalTribeData;
 
 // Class ShooterGame.PrimalWeaponGPS
 // 0x02F0 (0x1428 - 0x1138)
@@ -30916,7 +30393,6 @@ public:
 		return GetDefaultObjImpl<APrimalWeaponGPS>();
 	}
 };
-DUMPER7_ASSERTS_APrimalWeaponGPS;
 
 // Class ShooterGame.PrimalWeaponGrenade
 // 0x0088 (0x1290 - 0x1208)
@@ -30970,7 +30446,6 @@ public:
 		return GetDefaultObjImpl<APrimalWeaponGrenade>();
 	}
 };
-DUMPER7_ASSERTS_APrimalWeaponGrenade;
 
 // Class ShooterGame.PrimalWheeledVehicleDustType
 // 0x0090 (0x00C0 - 0x0030)
@@ -31016,7 +30491,6 @@ public:
 		return GetDefaultObjImpl<UPrimalWheeledVehicleDustType>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalWheeledVehicleDustType;
 
 // Class ShooterGame.PrimalWirelessExchangeData
 // 0x0040 (0x0070 - 0x0030)
@@ -31056,7 +30530,6 @@ public:
 		return GetDefaultObjImpl<UPrimalWirelessExchangeData>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalWirelessExchangeData;
 
 // Class ShooterGame.PrimalWorldBuffCustomImplement
 // 0x0008 (0x0030 - 0x0028)
@@ -31091,7 +30564,6 @@ public:
 		return GetDefaultObjImpl<UPrimalWorldBuffCustomImplement>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalWorldBuffCustomImplement;
 
 // Class ShooterGame.PrimalWorldModifier
 // 0x0078 (0x0508 - 0x0490)
@@ -31138,7 +30610,6 @@ public:
 		return GetDefaultObjImpl<APrimalWorldModifier>();
 	}
 };
-DUMPER7_ASSERTS_APrimalWorldModifier;
 
 // Class ShooterGame.PrimalWorldSettings
 // 0x0CB0 (0x2828 - 0x1B78)
@@ -31395,7 +30866,6 @@ public:
 		return GetDefaultObjImpl<APrimalWorldSettings>();
 	}
 };
-DUMPER7_ASSERTS_APrimalWorldSettings;
 
 // Class ShooterGame.ProgressBarWidget
 // 0x0160 (0x08D0 - 0x0770)
@@ -31459,7 +30929,6 @@ public:
 		return GetDefaultObjImpl<UProgressBarWidget>();
 	}
 };
-DUMPER7_ASSERTS_UProgressBarWidget;
 
 // Class ShooterGame.ProgressionTreeGraph_Dragontopia
 // 0x0000 (0x00A0 - 0x00A0)
@@ -31479,7 +30948,6 @@ public:
 		return GetDefaultObjImpl<UProgressionTreeGraph_Dragontopia>();
 	}
 };
-DUMPER7_ASSERTS_UProgressionTreeGraph_Dragontopia;
 
 // Class ShooterGame.ProgressionTreeGraph_Skills
 // 0x0008 (0x0090 - 0x0088)
@@ -31502,7 +30970,6 @@ public:
 		return GetDefaultObjImpl<UProgressionTreeGraph_Skills>();
 	}
 };
-DUMPER7_ASSERTS_UProgressionTreeGraph_Skills;
 
 // Class ShooterGame.PS5MountedDLCManager
 // 0x0000 (0x0060 - 0x0060)
@@ -31522,7 +30989,6 @@ public:
 		return GetDefaultObjImpl<UPS5MountedDLCManager>();
 	}
 };
-DUMPER7_ASSERTS_UPS5MountedDLCManager;
 
 // Class ShooterGame.RadialSelectorHUD
 // 0x00F8 (0x0120 - 0x0028)
@@ -31577,7 +31043,6 @@ public:
 		return GetDefaultObjImpl<URadialSelectorHUD>();
 	}
 };
-DUMPER7_ASSERTS_URadialSelectorHUD;
 
 // Class ShooterGame.RadialSelectorHUD_Custom
 // 0x0070 (0x0190 - 0x0120)
@@ -31602,7 +31067,6 @@ public:
 		return GetDefaultObjImpl<URadialSelectorHUD_Custom>();
 	}
 };
-DUMPER7_ASSERTS_URadialSelectorHUD_Custom;
 
 // Class ShooterGame.RadialSelectorHUD_Inventory
 // 0x0098 (0x01B8 - 0x0120)
@@ -31636,7 +31100,6 @@ public:
 		return GetDefaultObjImpl<URadialSelectorHUD_Inventory>();
 	}
 };
-DUMPER7_ASSERTS_URadialSelectorHUD_Inventory;
 
 // Class ShooterGame.RadialSelectorHUD_MultiUse
 // 0x0048 (0x0168 - 0x0120)
@@ -31661,7 +31124,6 @@ public:
 		return GetDefaultObjImpl<URadialSelectorHUD_MultiUse>();
 	}
 };
-DUMPER7_ASSERTS_URadialSelectorHUD_MultiUse;
 
 // Class ShooterGame.RadialSelectorHUD_PlayerAction
 // 0x00A0 (0x01C0 - 0x0120)
@@ -31693,7 +31155,6 @@ public:
 		return GetDefaultObjImpl<URadialSelectorHUD_PlayerAction>();
 	}
 };
-DUMPER7_ASSERTS_URadialSelectorHUD_PlayerAction;
 
 // Class ShooterGame.RCONServer
 // 0x0040 (0x0068 - 0x0028)
@@ -31718,7 +31179,6 @@ public:
 		return GetDefaultObjImpl<URCONServer>();
 	}
 };
-DUMPER7_ASSERTS_URCONServer;
 
 // Class ShooterGame.ReportServerReplicatedFunctionsCommandlet
 // 0x0000 (0x0080 - 0x0080)
@@ -31738,7 +31198,6 @@ public:
 		return GetDefaultObjImpl<UReportServerReplicatedFunctionsCommandlet>();
 	}
 };
-DUMPER7_ASSERTS_UReportServerReplicatedFunctionsCommandlet;
 
 // Class ShooterGame.SaddleBoneModifierRanges
 // 0x04F0 (0x0518 - 0x0028)
@@ -31762,7 +31221,6 @@ public:
 		return GetDefaultObjImpl<USaddleBoneModifierRanges>();
 	}
 };
-DUMPER7_ASSERTS_USaddleBoneModifierRanges;
 
 // Class ShooterGame.VesselDynamicsComponent
 // 0x0690 (0x0CB0 - 0x0620)
@@ -31901,7 +31359,6 @@ public:
 		return GetDefaultObjImpl<UVesselDynamicsComponent>();
 	}
 };
-DUMPER7_ASSERTS_UVesselDynamicsComponent;
 
 // Class ShooterGame.SaveGameActorTickable
 // 0x0000 (0x0490 - 0x0490)
@@ -31921,7 +31378,6 @@ public:
 		return GetDefaultObjImpl<ASaveGameActorTickable>();
 	}
 };
-DUMPER7_ASSERTS_ASaveGameActorTickable;
 
 // Class ShooterGame.ServerInfoInfoEntryButton
 // 0x0040 (0x0900 - 0x08C0)
@@ -31953,7 +31409,6 @@ public:
 		return GetDefaultObjImpl<UServerInfoInfoEntryButton>();
 	}
 };
-DUMPER7_ASSERTS_UServerInfoInfoEntryButton;
 
 // Class ShooterGame.ShipyardDockInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -31989,7 +31444,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IShipyardDockInterface;
 
 // Class ShooterGame.ShooterActorChannel
 // 0x0000 (0x02A0 - 0x02A0)
@@ -32009,7 +31463,6 @@ public:
 		return GetDefaultObjImpl<UShooterActorChannel>();
 	}
 };
-DUMPER7_ASSERTS_UShooterActorChannel;
 
 // Class ShooterGame.ShooterCharacter
 // 0x0F00 (0x2780 - 0x1880)
@@ -32497,7 +31950,6 @@ public:
 		return GetDefaultObjImpl<AShooterCharacter>();
 	}
 };
-DUMPER7_ASSERTS_AShooterCharacter;
 
 // Class ShooterGame.ExplorerNoteLocations
 // 0x0010 (0x0040 - 0x0030)
@@ -32520,7 +31972,6 @@ public:
 		return GetDefaultObjImpl<UExplorerNoteLocations>();
 	}
 };
-DUMPER7_ASSERTS_UExplorerNoteLocations;
 
 // Class ShooterGame.PrimalCheatManagerExtension
 // 0x0000 (0x0028 - 0x0028)
@@ -32551,7 +32002,6 @@ public:
 		return GetDefaultObjImpl<UPrimalCheatManagerExtension>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCheatManagerExtension;
 
 // Class ShooterGame.ShooterPlayerController
 // 0x2DD8 (0x3900 - 0x0B28)
@@ -33675,7 +33125,6 @@ public:
 		return GetDefaultObjImpl<AShooterPlayerController>();
 	}
 };
-DUMPER7_ASSERTS_AShooterPlayerController;
 
 // Class ShooterGame.ShooterCheatManager
 // 0x0058 (0x00E0 - 0x0088)
@@ -34207,7 +33656,6 @@ public:
 		return GetDefaultObjImpl<UShooterCheatManager>();
 	}
 };
-DUMPER7_ASSERTS_UShooterCheatManager;
 
 // Class ShooterGame.ShooterDamageType
 // 0x0100 (0x0168 - 0x0068)
@@ -34304,7 +33752,6 @@ public:
 		return GetDefaultObjImpl<UShooterDamageType>();
 	}
 };
-DUMPER7_ASSERTS_UShooterDamageType;
 
 // Class ShooterGame.ShooterDamageType_Passive
 // 0x0000 (0x0068 - 0x0068)
@@ -34324,7 +33771,6 @@ public:
 		return GetDefaultObjImpl<UShooterDamageType_Passive>();
 	}
 };
-DUMPER7_ASSERTS_UShooterDamageType_Passive;
 
 // Class ShooterGame.ShooterDiscordUISubsystem
 // 0x0268 (0x0298 - 0x0030)
@@ -34379,7 +33825,6 @@ public:
 		return GetDefaultObjImpl<UShooterDiscordUISubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UShooterDiscordUISubsystem;
 
 // Class ShooterGame.ShooterEngine
 // 0x0350 (0x1618 - 0x12C8)
@@ -34415,7 +33860,6 @@ public:
 		return GetDefaultObjImpl<UShooterEngine>();
 	}
 };
-DUMPER7_ASSERTS_UShooterEngine;
 
 // Class ShooterGame.MusicDataAsset
 // 0x0050 (0x0080 - 0x0030)
@@ -34438,7 +33882,6 @@ public:
 		return GetDefaultObjImpl<UMusicDataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UMusicDataAsset;
 
 // Class ShooterGame.MusicPlayer
 // 0x00E0 (0x0108 - 0x0028)
@@ -34465,7 +33908,6 @@ public:
 		return GetDefaultObjImpl<UMusicPlayer>();
 	}
 };
-DUMPER7_ASSERTS_UMusicPlayer;
 
 // Class ShooterGame.ShooterGameInstance
 // 0x0A00 (0x0BC8 - 0x01C8)
@@ -34543,7 +33985,6 @@ public:
 		return GetDefaultObjImpl<UShooterGameInstance>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGameInstance;
 
 // Class ShooterGame.ShooterGameSession
 // 0x04F8 (0x09B8 - 0x04C0)
@@ -34569,7 +34010,6 @@ public:
 		return GetDefaultObjImpl<AShooterGameSession>();
 	}
 };
-DUMPER7_ASSERTS_AShooterGameSession;
 
 // Class ShooterGame.ShooterGameUserSettings
 // 0x07C0 (0x0908 - 0x0148)
@@ -34944,7 +34384,6 @@ public:
 		return GetDefaultObjImpl<UShooterGameUserSettings>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGameUserSettings;
 
 // Class ShooterGame.ShooterGameViewportClient
 // 0x0190 (0x0550 - 0x03C0)
@@ -34991,7 +34430,6 @@ public:
 		return GetDefaultObjImpl<UShooterGameViewportClient>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGameViewportClient;
 
 // Class ShooterGame.ShooterGameLoadingScreenManager
 // 0x0028 (0x0058 - 0x0030)
@@ -35014,7 +34452,6 @@ public:
 		return GetDefaultObjImpl<UShooterGameLoadingScreenManager>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGameLoadingScreenManager;
 
 // Class ShooterGame.UI_Tutorial
 // 0x0030 (0x0828 - 0x07F8)
@@ -35040,7 +34477,6 @@ public:
 		return GetDefaultObjImpl<UUI_Tutorial>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Tutorial;
 
 // Class ShooterGame.ShooterGame_Menu
 // 0x00A8 (0x0618 - 0x0570)
@@ -35076,7 +34512,6 @@ public:
 		return GetDefaultObjImpl<AShooterGame_Menu>();
 	}
 };
-DUMPER7_ASSERTS_AShooterGame_Menu;
 
 // Class ShooterGame.ShooterHaptics
 // 0x0010 (0x0040 - 0x0030)
@@ -35099,7 +34534,6 @@ public:
 		return GetDefaultObjImpl<UShooterHaptics>();
 	}
 };
-DUMPER7_ASSERTS_UShooterHaptics;
 
 // Class ShooterGame.ShooterHUD
 // 0x09B0 (0x0F38 - 0x0588)
@@ -35358,7 +34792,6 @@ public:
 		return GetDefaultObjImpl<AShooterHUD>();
 	}
 };
-DUMPER7_ASSERTS_AShooterHUD;
 
 // Class ShooterGame.ShooterImpactEffect
 // 0x0418 (0x08A8 - 0x0490)
@@ -35409,7 +34842,6 @@ public:
 		return GetDefaultObjImpl<AShooterImpactEffect>();
 	}
 };
-DUMPER7_ASSERTS_AShooterImpactEffect;
 
 // Class ShooterGame.ShooterLaserBeamComponent
 // 0x0010 (0x0980 - 0x0970)
@@ -35435,7 +34867,6 @@ public:
 		return GetDefaultObjImpl<UShooterLaserBeamComponent>();
 	}
 };
-DUMPER7_ASSERTS_UShooterLaserBeamComponent;
 
 // Class ShooterGame.ShooterLocalPlayer
 // 0x1390 (0x1860 - 0x04D0)
@@ -35461,7 +34892,6 @@ public:
 		return GetDefaultObjImpl<UShooterLocalPlayer>();
 	}
 };
-DUMPER7_ASSERTS_UShooterLocalPlayer;
 
 // Class ShooterGame.ShooterOnlineSessionClient
 // 0x0000 (0x01E0 - 0x01E0)
@@ -35481,7 +34911,6 @@ public:
 		return GetDefaultObjImpl<UShooterOnlineSessionClient>();
 	}
 };
-DUMPER7_ASSERTS_UShooterOnlineSessionClient;
 
 // Class ShooterGame.ShooterPendingNetGame
 // 0x0038 (0x00F8 - 0x00C0)
@@ -35504,7 +34933,6 @@ public:
 		return GetDefaultObjImpl<UShooterPendingNetGame>();
 	}
 };
-DUMPER7_ASSERTS_UShooterPendingNetGame;
 
 // Class ShooterGame.ShooterPersistentUser
 // 0x0040 (0x0068 - 0x0028)
@@ -35537,7 +34965,6 @@ public:
 		return GetDefaultObjImpl<UShooterPersistentUser>();
 	}
 };
-DUMPER7_ASSERTS_UShooterPersistentUser;
 
 // Class ShooterGame.ShooterPlayerCameraManager
 // 0x27D0 (0x54A0 - 0x2CD0)
@@ -35624,7 +35051,6 @@ public:
 		return GetDefaultObjImpl<AShooterPlayerCameraManager>();
 	}
 };
-DUMPER7_ASSERTS_AShooterPlayerCameraManager;
 
 // Class ShooterGame.ShooterPlayerController_Menu
 // 0x0048 (0x0B70 - 0x0B28)
@@ -35662,7 +35088,6 @@ public:
 		return GetDefaultObjImpl<AShooterPlayerController_Menu>();
 	}
 };
-DUMPER7_ASSERTS_AShooterPlayerController_Menu;
 
 // Class ShooterGame.ShooterPlayerState
 // 0x0EC8 (0x1410 - 0x0548)
@@ -35818,7 +35243,6 @@ public:
 		return GetDefaultObjImpl<AShooterPlayerState>();
 	}
 };
-DUMPER7_ASSERTS_AShooterPlayerState;
 
 // Class ShooterGame.ShooterProjectileMovement
 // 0x0048 (0x0278 - 0x0230)
@@ -35851,7 +35275,6 @@ public:
 		return GetDefaultObjImpl<UShooterProjectileMovement>();
 	}
 };
-DUMPER7_ASSERTS_UShooterProjectileMovement;
 
 // Class ShooterGame.ShooterProjectile_Beam
 // 0x00A8 (0x0860 - 0x07B8)
@@ -35915,7 +35338,6 @@ public:
 		return GetDefaultObjImpl<AShooterProjectile_Beam>();
 	}
 };
-DUMPER7_ASSERTS_AShooterProjectile_Beam;
 
 // Class ShooterGame.ShooterProjectile_Swarm
 // 0x0218 (0x09D0 - 0x07B8)
@@ -35990,7 +35412,6 @@ public:
 		return GetDefaultObjImpl<AShooterProjectile_Swarm>();
 	}
 };
-DUMPER7_ASSERTS_AShooterProjectile_Swarm;
 
 // Class ShooterGame.ShooterGraphNode_AlwaysRelevantBase
 // 0x0000 (0x07A0 - 0x07A0)
@@ -36010,7 +35431,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_AlwaysRelevantBase>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_AlwaysRelevantBase;
 
 // Class ShooterGame.ShooterGraphNode_GlobalAlwaysRelevant
 // 0x0000 (0x07A0 - 0x07A0)
@@ -36030,7 +35450,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_GlobalAlwaysRelevant>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_GlobalAlwaysRelevant;
 
 // Class ShooterGame.ShooterGraphNode_ConnectionSpecificAlwaysRelevant
 // 0x0000 (0x07A0 - 0x07A0)
@@ -36050,7 +35469,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_ConnectionSpecificAlwaysRelevant>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_ConnectionSpecificAlwaysRelevant;
 
 // Class ShooterGame.ShooterGraphNode_TeamSpecificAlwaysRelevant
 // 0x0000 (0x07A0 - 0x07A0)
@@ -36070,7 +35488,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_TeamSpecificAlwaysRelevant>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_TeamSpecificAlwaysRelevant;
 
 // Class ShooterGame.ShooterGraphNode_TeamAlwaysRelevant
 // 0x00F0 (0x0140 - 0x0050)
@@ -36094,7 +35511,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_TeamAlwaysRelevant>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_TeamAlwaysRelevant;
 
 // Class ShooterGame.ShooterGraphNode_Default
 // 0x0050 (0x07F0 - 0x07A0)
@@ -36117,7 +35533,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_Default>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_Default;
 
 // Class ShooterGame.ShooterGraphNode_StaggeredByDistance
 // 0x0050 (0x07F0 - 0x07A0)
@@ -36140,7 +35555,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_StaggeredByDistance>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_StaggeredByDistance;
 
 // Class ShooterGame.ShooterGraphNode_BaseSpatialGrid
 // 0x0000 (0x0330 - 0x0330)
@@ -36160,7 +35574,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_BaseSpatialGrid>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_BaseSpatialGrid;
 
 // Class ShooterGame.ShooterGraphNode_DynamicGridCell
 // 0x0000 (0x07F0 - 0x07F0)
@@ -36180,7 +35593,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_DynamicGridCell>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_DynamicGridCell;
 
 // Class ShooterGame.ShooterGraphNode_DynamicSpatialGrid
 // 0x0000 (0x0330 - 0x0330)
@@ -36200,7 +35612,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_DynamicSpatialGrid>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_DynamicSpatialGrid;
 
 // Class ShooterGame.ShooterGraphNode_DormantGridCell
 // 0x0050 (0x0840 - 0x07F0)
@@ -36223,7 +35634,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_DormantGridCell>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_DormantGridCell;
 
 // Class ShooterGame.ShooterGraphNode_DormantSpatialGrid
 // 0x0050 (0x0380 - 0x0330)
@@ -36246,7 +35656,6 @@ public:
 		return GetDefaultObjImpl<UShooterGraphNode_DormantSpatialGrid>();
 	}
 };
-DUMPER7_ASSERTS_UShooterGraphNode_DormantSpatialGrid;
 
 // Class ShooterGame.ShooterReplicationConnectionGraph
 // 0x0018 (0x0390 - 0x0378)
@@ -36270,7 +35679,6 @@ public:
 		return GetDefaultObjImpl<UShooterReplicationConnectionGraph>();
 	}
 };
-DUMPER7_ASSERTS_UShooterReplicationConnectionGraph;
 
 // Class ShooterGame.ShooterReplicationGraph
 // 0x0050 (0x0700 - 0x06B0)
@@ -36304,7 +35712,6 @@ public:
 		return GetDefaultObjImpl<UShooterReplicationGraph>();
 	}
 };
-DUMPER7_ASSERTS_UShooterReplicationGraph;
 
 // Class ShooterGame.ShooterSpectatorPawn
 // 0x0078 (0x05E8 - 0x0570)
@@ -36344,7 +35751,6 @@ public:
 		return GetDefaultObjImpl<AShooterSpectatorPawn>();
 	}
 };
-DUMPER7_ASSERTS_AShooterSpectatorPawn;
 
 // Class ShooterGame.ShooterWeapon_FlameThrower
 // 0x00D8 (0x1208 - 0x1130)
@@ -36419,7 +35825,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_FlameThrower>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_FlameThrower;
 
 // Class ShooterGame.ShooterWeapon_Activated
 // 0x00E8 (0x12F0 - 0x1208)
@@ -36479,7 +35884,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_Activated>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_Activated;
 
 // Class ShooterGame.ShooterWeapon_ChainSaw
 // 0x0038 (0x1168 - 0x1130)
@@ -36512,7 +35916,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_ChainSaw>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_ChainSaw;
 
 // Class ShooterGame.ShooterWeapon_ChargeStack
 // 0x0028 (0x1230 - 0x1208)
@@ -36549,7 +35952,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_ChargeStack>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_ChargeStack;
 
 // Class ShooterGame.ShooterWeapon_Climb
 // 0x0748 (0x1880 - 0x1138)
@@ -36656,7 +36058,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_Climb>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_Climb;
 
 // Class ShooterGame.ShooterWeapon_Instant
 // 0x0060 (0x1190 - 0x1130)
@@ -36722,7 +36123,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_Instant>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_Instant;
 
 // Class ShooterGame.ShooterWeapon_InstantCharging
 // 0x0010 (0x11A0 - 0x1190)
@@ -36750,7 +36150,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_InstantCharging>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_InstantCharging;
 
 // Class ShooterGame.ShooterWeapon_InstantPenetrating
 // 0x0068 (0x11F8 - 0x1190)
@@ -36784,7 +36183,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_InstantPenetrating>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_InstantPenetrating;
 
 // Class ShooterGame.ShooterWeapon_MeleeLock
 // 0x00D8 (0x1210 - 0x1138)
@@ -36843,7 +36241,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_MeleeLock>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_MeleeLock;
 
 // Class ShooterGame.ShooterWeapon_Placer
 // 0x0080 (0x11B0 - 0x1130)
@@ -36900,7 +36297,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_Placer>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_Placer;
 
 // Class ShooterGame.WorldModifiersContainer
 // 0x0010 (0x0038 - 0x0028)
@@ -36923,7 +36319,6 @@ public:
 		return GetDefaultObjImpl<UWorldModifiersContainer>();
 	}
 };
-DUMPER7_ASSERTS_UWorldModifiersContainer;
 
 // Class ShooterGame.ShooterWeapon_Whip
 // 0x0060 (0x1198 - 0x1138)
@@ -36955,7 +36350,6 @@ public:
 		return GetDefaultObjImpl<AShooterWeapon_Whip>();
 	}
 };
-DUMPER7_ASSERTS_AShooterWeapon_Whip;
 
 // Class ShooterGame.SilentDamageType
 // 0x0000 (0x0068 - 0x0068)
@@ -36975,7 +36369,6 @@ public:
 		return GetDefaultObjImpl<USilentDamageType>();
 	}
 };
-DUMPER7_ASSERTS_USilentDamageType;
 
 // Class ShooterGame.SpawnProp
 // 0x0068 (0x0090 - 0x0028)
@@ -37007,7 +36400,6 @@ public:
 		return GetDefaultObjImpl<USpawnProp>();
 	}
 };
-DUMPER7_ASSERTS_USpawnProp;
 
 // Class ShooterGame.SkeletalSpawnProp
 // 0x0048 (0x00D8 - 0x0090)
@@ -37033,7 +36425,6 @@ public:
 		return GetDefaultObjImpl<USkeletalSpawnProp>();
 	}
 };
-DUMPER7_ASSERTS_USkeletalSpawnProp;
 
 // Class ShooterGame.SkillTreeProviderInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -37107,7 +36498,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ISkillTreeProviderInterface;
 
 // Class ShooterGame.HideActorList
 // 0x0000 (0x0490 - 0x0490)
@@ -37133,7 +36523,6 @@ public:
 		return GetDefaultObjImpl<AHideActorList>();
 	}
 };
-DUMPER7_ASSERTS_AHideActorList;
 
 // Class ShooterGame.SkyBoxLoader
 // 0x0078 (0x0508 - 0x0490)
@@ -37169,7 +36558,6 @@ public:
 		return GetDefaultObjImpl<ASkyBoxLoader>();
 	}
 };
-DUMPER7_ASSERTS_ASkyBoxLoader;
 
 // Class ShooterGame.SOTFNotification
 // 0x02E0 (0x0770 - 0x0490)
@@ -37268,7 +36656,6 @@ public:
 		return GetDefaultObjImpl<ASOTFNotification>();
 	}
 };
-DUMPER7_ASSERTS_ASOTFNotification;
 
 // Class ShooterGame.SOTFNotificationDisplay
 // 0x0058 (0x04E8 - 0x0490)
@@ -37296,7 +36683,6 @@ public:
 		return GetDefaultObjImpl<ASOTFNotificationDisplay>();
 	}
 };
-DUMPER7_ASSERTS_ASOTFNotificationDisplay;
 
 // Class ShooterGame.SoundNodeLocalPlayer
 // 0x0000 (0x0048 - 0x0048)
@@ -37316,7 +36702,6 @@ public:
 		return GetDefaultObjImpl<USoundNodeLocalPlayer>();
 	}
 };
-DUMPER7_ASSERTS_USoundNodeLocalPlayer;
 
 // Class ShooterGame.SoundNodeDelayedRandom
 // 0x0008 (0x0080 - 0x0078)
@@ -37339,7 +36724,6 @@ public:
 		return GetDefaultObjImpl<USoundNodeDelayedRandom>();
 	}
 };
-DUMPER7_ASSERTS_USoundNodeDelayedRandom;
 
 // Class ShooterGame.SoundNodeVehicleEngine
 // 0x0020 (0x0068 - 0x0048)
@@ -37365,7 +36749,6 @@ public:
 		return GetDefaultObjImpl<USoundNodeVehicleEngine>();
 	}
 };
-DUMPER7_ASSERTS_USoundNodeVehicleEngine;
 
 // Class ShooterGame.UI_TextEntry
 // 0x0098 (0x0890 - 0x07F8)
@@ -37406,7 +36789,6 @@ public:
 		return GetDefaultObjImpl<UUI_TextEntry>();
 	}
 };
-DUMPER7_ASSERTS_UUI_TextEntry;
 
 // Class ShooterGame.SparseDataOverrideManager
 // 0x0008 (0x0030 - 0x0028)
@@ -37492,7 +36874,6 @@ public:
 		return GetDefaultObjImpl<USparseDataOverrideManager>();
 	}
 };
-DUMPER7_ASSERTS_USparseDataOverrideManager;
 
 // Class ShooterGame.SpatialMathLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -37515,7 +36896,6 @@ public:
 		return GetDefaultObjImpl<USpatialMathLibrary>();
 	}
 };
-DUMPER7_ASSERTS_USpatialMathLibrary;
 
 // Class ShooterGame.SpawnMapWidget
 // 0x0080 (0x07F0 - 0x0770)
@@ -37551,7 +36931,6 @@ public:
 		return GetDefaultObjImpl<USpawnMapWidget>();
 	}
 };
-DUMPER7_ASSERTS_USpawnMapWidget;
 
 // Class ShooterGame.SpawnPropList
 // 0x0010 (0x0040 - 0x0030)
@@ -37574,7 +36953,6 @@ public:
 		return GetDefaultObjImpl<USpawnPropList>();
 	}
 };
-DUMPER7_ASSERTS_USpawnPropList;
 
 // Class ShooterGame.SpherePostProcessVolume
 // 0x0010 (0x1E20 - 0x1E10)
@@ -37599,7 +36977,6 @@ public:
 		return GetDefaultObjImpl<ASpherePostProcessVolume>();
 	}
 };
-DUMPER7_ASSERTS_ASpherePostProcessVolume;
 
 // Class ShooterGame.FoliageInclusionVolume
 // 0x0000 (0x04E0 - 0x04E0)
@@ -37619,7 +36996,6 @@ public:
 		return GetDefaultObjImpl<AFoliageInclusionVolume>();
 	}
 };
-DUMPER7_ASSERTS_AFoliageInclusionVolume;
 
 // Class ShooterGame.HierarchicalInstancedStaticMeshActor
 // 0x0008 (0x0498 - 0x0490)
@@ -37642,7 +37018,6 @@ public:
 		return GetDefaultObjImpl<AHierarchicalInstancedStaticMeshActor>();
 	}
 };
-DUMPER7_ASSERTS_AHierarchicalInstancedStaticMeshActor;
 
 // Class ShooterGame.StandingMountedTurret
 // 0x0460 (0x1970 - 0x1510)
@@ -37900,7 +37275,6 @@ public:
 		return GetDefaultObjImpl<AStandingMountedTurret>();
 	}
 };
-DUMPER7_ASSERTS_AStandingMountedTurret;
 
 // Class ShooterGame.StaticSpawnProp
 // 0x0018 (0x00A8 - 0x0090)
@@ -37924,7 +37298,6 @@ public:
 		return GetDefaultObjImpl<UStaticSpawnProp>();
 	}
 };
-DUMPER7_ASSERTS_UStaticSpawnProp;
 
 // Class ShooterGame.StatsPanelWidget
 // 0x0448 (0x0C40 - 0x07F8)
@@ -37966,7 +37339,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UStatsPanelWidget;
 
 // Class ShooterGame.StatsPanelWidget_Character
 // 0x03E0 (0x1020 - 0x0C40)
@@ -38034,7 +37406,6 @@ public:
 		return GetDefaultObjImpl<UStatsPanelWidget_Character>();
 	}
 };
-DUMPER7_ASSERTS_UStatsPanelWidget_Character;
 
 // Class ShooterGame.StatsPanelWidget_Obelisk
 // 0x0080 (0x0CC0 - 0x0C40)
@@ -38065,7 +37436,6 @@ public:
 		return GetDefaultObjImpl<UStatsPanelWidget_Obelisk>();
 	}
 };
-DUMPER7_ASSERTS_UStatsPanelWidget_Obelisk;
 
 // Class ShooterGame.StatsPanelWidget_Structure
 // 0x00A0 (0x0CE0 - 0x0C40)
@@ -38096,7 +37466,6 @@ public:
 		return GetDefaultObjImpl<UStatsPanelWidget_Structure>();
 	}
 };
-DUMPER7_ASSERTS_UStatsPanelWidget_Structure;
 
 // Class ShooterGame.StatWidget
 // 0x00A0 (0x0418 - 0x0378)
@@ -38135,7 +37504,6 @@ public:
 		return GetDefaultObjImpl<UStatWidget>();
 	}
 };
-DUMPER7_ASSERTS_UStatWidget;
 
 // Class ShooterGame.StoreItemWidget
 // 0x00F0 (0x0860 - 0x0770)
@@ -38166,7 +37534,6 @@ public:
 		return GetDefaultObjImpl<UStoreItemWidget>();
 	}
 };
-DUMPER7_ASSERTS_UStoreItemWidget;
 
 // Class ShooterGame.StructurePaintingComponent
 // 0x01C8 (0x0298 - 0x00D0)
@@ -38235,7 +37602,6 @@ public:
 		return GetDefaultObjImpl<UStructurePaintingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UStructurePaintingComponent;
 
 // Class ShooterGame.StructurePreventionZoneVolume
 // 0x0048 (0x0528 - 0x04E0)
@@ -38286,7 +37652,6 @@ public:
 		return GetDefaultObjImpl<AStructurePreventionZoneVolume>();
 	}
 };
-DUMPER7_ASSERTS_AStructurePreventionZoneVolume;
 
 // Class ShooterGame.StructureStatWidget
 // 0x0058 (0x0850 - 0x07F8)
@@ -38318,7 +37683,6 @@ public:
 		return GetDefaultObjImpl<UStructureStatWidget>();
 	}
 };
-DUMPER7_ASSERTS_UStructureStatWidget;
 
 // Class ShooterGame.SupplyCrateSpawningSettings
 // 0x0048 (0x04D8 - 0x0490)
@@ -38356,7 +37720,6 @@ public:
 		return GetDefaultObjImpl<ASupplyCrateSpawningSettings>();
 	}
 };
-DUMPER7_ASSERTS_ASupplyCrateSpawningSettings;
 
 // Class ShooterGame.SupplyCrateSpawningVolume
 // 0x00A8 (0x0588 - 0x04E0)
@@ -38420,7 +37783,6 @@ public:
 		return GetDefaultObjImpl<ASupplyCrateSpawningVolume>();
 	}
 };
-DUMPER7_ASSERTS_ASupplyCrateSpawningVolume;
 
 // Class ShooterGame.SwitchMountedDLCManager
 // 0x0000 (0x0060 - 0x0060)
@@ -38440,7 +37802,6 @@ public:
 		return GetDefaultObjImpl<USwitchMountedDLCManager>();
 	}
 };
-DUMPER7_ASSERTS_USwitchMountedDLCManager;
 
 // Class ShooterGame.TamingListEntryWidget
 // 0x0168 (0x0960 - 0x07F8)
@@ -38476,7 +37837,6 @@ public:
 		return GetDefaultObjImpl<UTamingListEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTamingListEntryWidget;
 
 // Class ShooterGame.TargetableInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -38508,7 +37868,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ITargetableInterface;
 
 // Class ShooterGame.TargetArea
 // 0x0010 (0x04A0 - 0x0490)
@@ -38533,7 +37892,6 @@ public:
 		return GetDefaultObjImpl<ATargetArea>();
 	}
 };
-DUMPER7_ASSERTS_ATargetArea;
 
 // Class ShooterGame.TargetingInfoToolTipWidget
 // 0x0050 (0x0450 - 0x0400)
@@ -38556,7 +37914,6 @@ public:
 		return GetDefaultObjImpl<UTargetingInfoToolTipWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingInfoToolTipWidget;
 
 // Class ShooterGame.TestItemWidget
 // 0x0010 (0x0388 - 0x0378)
@@ -38579,7 +37936,6 @@ public:
 		return GetDefaultObjImpl<UTestItemWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTestItemWidget;
 
 // Class ShooterGame.TestVessel
 // 0x0080 (0x0520 - 0x04A0)
@@ -38618,7 +37974,6 @@ public:
 		return GetDefaultObjImpl<ATestVessel>();
 	}
 };
-DUMPER7_ASSERTS_ATestVessel;
 
 // Class ShooterGame.TickingHelperComponent
 // 0x0040 (0x0110 - 0x00D0)
@@ -38652,7 +38007,6 @@ public:
 		return GetDefaultObjImpl<UTickingHelperComponent>();
 	}
 };
-DUMPER7_ASSERTS_UTickingHelperComponent;
 
 // Class ShooterGame.TogglePainVolume
 // 0x0138 (0x0618 - 0x04E0)
@@ -38715,7 +38069,6 @@ public:
 		return GetDefaultObjImpl<ATogglePainVolume>();
 	}
 };
-DUMPER7_ASSERTS_ATogglePainVolume;
 
 // Class ShooterGame.ToolTipWidgetPrimalStructureModuleItemsToDisplay
 // 0x0018 (0x0390 - 0x0378)
@@ -38739,7 +38092,6 @@ public:
 		return GetDefaultObjImpl<UToolTipWidgetPrimalStructureModuleItemsToDisplay>();
 	}
 };
-DUMPER7_ASSERTS_UToolTipWidgetPrimalStructureModuleItemsToDisplay;
 
 // Class ShooterGame.ToolTipWidgetPrimalStructureModuleItemsToDisplayListItem
 // 0x0010 (0x0388 - 0x0378)
@@ -38762,7 +38114,6 @@ public:
 		return GetDefaultObjImpl<UToolTipWidgetPrimalStructureModuleItemsToDisplayListItem>();
 	}
 };
-DUMPER7_ASSERTS_UToolTipWidgetPrimalStructureModuleItemsToDisplayListItem;
 
 // Class ShooterGame.TrackedDinoListEntryWidget
 // 0x08D8 (0x10D0 - 0x07F8)
@@ -38811,7 +38162,6 @@ public:
 		return GetDefaultObjImpl<UTrackedDinoListEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTrackedDinoListEntryWidget;
 
 // Class ShooterGame.TrackingItemUI
 // 0x00B0 (0x08A8 - 0x07F8)
@@ -38841,7 +38191,6 @@ public:
 		return GetDefaultObjImpl<UTrackingItemUI>();
 	}
 };
-DUMPER7_ASSERTS_UTrackingItemUI;
 
 // Class ShooterGame.TradeItemButtonWidget
 // 0x00F8 (0x08F0 - 0x07F8)
@@ -38878,7 +38227,6 @@ public:
 		return GetDefaultObjImpl<UTradeItemButtonWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTradeItemButtonWidget;
 
 // Class ShooterGame.TribeManagerListButton
 // 0x0018 (0x0810 - 0x07F8)
@@ -38902,7 +38250,6 @@ public:
 		return GetDefaultObjImpl<UTribeManagerListButton>();
 	}
 };
-DUMPER7_ASSERTS_UTribeManagerListButton;
 
 // Class ShooterGame.TribeMemberButtonWidget
 // 0x0040 (0x0838 - 0x07F8)
@@ -38937,7 +38284,6 @@ public:
 		return GetDefaultObjImpl<UTribeMemberButtonWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTribeMemberButtonWidget;
 
 // Class ShooterGame.TribeWarButtonWidget
 // 0x0030 (0x0828 - 0x07F8)
@@ -38961,7 +38307,6 @@ public:
 		return GetDefaultObjImpl<UTribeWarButtonWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTribeWarButtonWidget;
 
 // Class ShooterGame.TriggerEffectLibrary
 // 0x0010 (0x0040 - 0x0030)
@@ -38984,7 +38329,6 @@ public:
 		return GetDefaultObjImpl<UTriggerEffectLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UTriggerEffectLibrary;
 
 // Class ShooterGame.UIMainModShop
 // 0x0010 (0x0808 - 0x07F8)
@@ -39017,7 +38361,6 @@ public:
 		return GetDefaultObjImpl<UUIMainModShop>();
 	}
 };
-DUMPER7_ASSERTS_UUIMainModShop;
 
 // Class ShooterGame.UI_AdminMangment
 // 0x0498 (0x0C90 - 0x07F8)
@@ -39127,7 +38470,6 @@ public:
 		return GetDefaultObjImpl<UUI_AdminMangment>();
 	}
 };
-DUMPER7_ASSERTS_UUI_AdminMangment;
 
 // Class ShooterGame.UI_AllPlayersList
 // 0x0090 (0x0888 - 0x07F8)
@@ -39157,7 +38499,6 @@ public:
 		return GetDefaultObjImpl<UUI_AllPlayersList>();
 	}
 };
-DUMPER7_ASSERTS_UUI_AllPlayersList;
 
 // Class ShooterGame.UI_BackupSaveList
 // 0x0078 (0x0870 - 0x07F8)
@@ -39187,7 +38528,6 @@ public:
 		return GetDefaultObjImpl<UUI_BackupSaveList>();
 	}
 };
-DUMPER7_ASSERTS_UUI_BackupSaveList;
 
 // Class ShooterGame.UI_ChatBox
 // 0x00E0 (0x08D8 - 0x07F8)
@@ -39226,7 +38566,6 @@ public:
 		return GetDefaultObjImpl<UUI_ChatBox>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ChatBox;
 
 // Class ShooterGame.UI_ChatMessage
 // 0x0078 (0x0870 - 0x07F8)
@@ -39250,7 +38589,6 @@ public:
 		return GetDefaultObjImpl<UUI_ChatMessage>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ChatMessage;
 
 // Class ShooterGame.UI_ListSessions
 // 0x0C08 (0x1400 - 0x07F8)
@@ -39341,7 +38679,6 @@ public:
 		return GetDefaultObjImpl<UUI_ListSessions>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ListSessions;
 
 // Class ShooterGame.UI_ClusterServersListSessions
 // 0x0020 (0x1420 - 0x1400)
@@ -39367,7 +38704,6 @@ public:
 		return GetDefaultObjImpl<UUI_ClusterServersListSessions>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ClusterServersListSessions;
 
 // Class ShooterGame.UI_Compass
 // 0x00B8 (0x0430 - 0x0378)
@@ -39410,7 +38746,6 @@ public:
 		return GetDefaultObjImpl<UUI_Compass>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Compass;
 
 // Class ShooterGame.UI_ConsoleCommand
 // 0x0060 (0x0858 - 0x07F8)
@@ -39438,7 +38773,6 @@ public:
 		return GetDefaultObjImpl<UUI_ConsoleCommand>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ConsoleCommand;
 
 // Class ShooterGame.UI_ConsoleDedicated
 // 0x0298 (0x0A90 - 0x07F8)
@@ -39497,7 +38831,6 @@ public:
 		return GetDefaultObjImpl<UUI_ConsoleDedicated>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ConsoleDedicated;
 
 // Class ShooterGame.UI_Cooking
 // 0x0170 (0x0968 - 0x07F8)
@@ -39538,7 +38871,6 @@ public:
 		return GetDefaultObjImpl<UUI_Cooking>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Cooking;
 
 // Class ShooterGame.UI_Cosmetics
 // 0x0000 (0x07F8 - 0x07F8)
@@ -39558,7 +38890,6 @@ public:
 		return GetDefaultObjImpl<UUI_Cosmetics>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Cosmetics;
 
 // Class ShooterGame.UI_CustomOverlay
 // 0x0048 (0x0840 - 0x07F8)
@@ -39598,7 +38929,6 @@ public:
 		return GetDefaultObjImpl<UUI_CustomOverlay>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CustomOverlay;
 
 // Class ShooterGame.UI_CustomTrackedDinoList
 // 0x0248 (0x0A50 - 0x0808)
@@ -39645,7 +38975,6 @@ public:
 		return GetDefaultObjImpl<UUI_CustomTrackedDinoList>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CustomTrackedDinoList;
 
 // Class ShooterGame.UI_DebugSpawnMenuEntry
 // 0x0010 (0x0378 - 0x0368)
@@ -39668,7 +38997,6 @@ public:
 		return GetDefaultObjImpl<UUI_DebugSpawnMenuEntry>();
 	}
 };
-DUMPER7_ASSERTS_UUI_DebugSpawnMenuEntry;
 
 // Class ShooterGame.UI_DebugSpawnMenu
 // 0x0320 (0x0B18 - 0x07F8)
@@ -39745,7 +39073,6 @@ public:
 		return GetDefaultObjImpl<UUI_DebugSpawnMenu>();
 	}
 };
-DUMPER7_ASSERTS_UUI_DebugSpawnMenu;
 
 // Class ShooterGame.UI_DepthOfFieldMenu
 // 0x0198 (0x0990 - 0x07F8)
@@ -39795,7 +39122,6 @@ public:
 		return GetDefaultObjImpl<UUI_DepthOfFieldMenu>();
 	}
 };
-DUMPER7_ASSERTS_UUI_DepthOfFieldMenu;
 
 // Class ShooterGame.UI_DinoOrderGroups
 // 0x00E8 (0x08F0 - 0x0808)
@@ -39830,7 +39156,6 @@ public:
 		return GetDefaultObjImpl<UUI_DinoOrderGroups>();
 	}
 };
-DUMPER7_ASSERTS_UUI_DinoOrderGroups;
 
 // Class ShooterGame.UI_DiscordConversation
 // 0x01B0 (0x09A8 - 0x07F8)
@@ -39881,7 +39206,6 @@ public:
 		return GetDefaultObjImpl<UUI_DiscordConversation>();
 	}
 };
-DUMPER7_ASSERTS_UUI_DiscordConversation;
 
 // Class ShooterGame.UI_DiscordNotifications
 // 0x0100 (0x08F8 - 0x07F8)
@@ -39914,7 +39238,6 @@ public:
 		return GetDefaultObjImpl<UUI_DiscordNotifications>();
 	}
 };
-DUMPER7_ASSERTS_UUI_DiscordNotifications;
 
 // Class ShooterGame.UI_DiscordUnifiedFriendsList
 // 0x0370 (0x0B68 - 0x07F8)
@@ -39985,7 +39308,6 @@ public:
 		return GetDefaultObjImpl<UUI_DiscordUnifiedFriendsList>();
 	}
 };
-DUMPER7_ASSERTS_UUI_DiscordUnifiedFriendsList;
 
 // Class ShooterGame.BuoBakerLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -40010,7 +39332,6 @@ public:
 		return GetDefaultObjImpl<UBuoBakerLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UBuoBakerLibrary;
 
 // Class ShooterGame.UI_DyeItem
 // 0x0300 (0x0AF8 - 0x07F8)
@@ -40074,7 +39395,6 @@ public:
 		return GetDefaultObjImpl<UUI_DyeItem>();
 	}
 };
-DUMPER7_ASSERTS_UUI_DyeItem;
 
 // Class ShooterGame.UI_EngramsMenu
 // 0x0190 (0x0998 - 0x0808)
@@ -40116,7 +39436,6 @@ public:
 		return GetDefaultObjImpl<UUI_EngramsMenu>();
 	}
 };
-DUMPER7_ASSERTS_UUI_EngramsMenu;
 
 // Class ShooterGame.UI_GarageInteraction
 // 0x0578 (0x0D70 - 0x07F8)
@@ -40178,7 +39497,6 @@ public:
 		return GetDefaultObjImpl<UUI_GarageInteraction>();
 	}
 };
-DUMPER7_ASSERTS_UUI_GarageInteraction;
 
 // Class ShooterGame.UI_GenericConfirmationDialog
 // 0x0080 (0x0878 - 0x07F8)
@@ -40217,7 +39535,6 @@ public:
 		return GetDefaultObjImpl<UUI_GenericConfirmationDialog>();
 	}
 };
-DUMPER7_ASSERTS_UUI_GenericConfirmationDialog;
 
 // Class ShooterGame.UI_Hairstyle
 // 0x0278 (0x0A70 - 0x07F8)
@@ -40280,7 +39597,6 @@ public:
 		return GetDefaultObjImpl<UUI_Hairstyle>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Hairstyle;
 
 // Class ShooterGame.UI_HelpPage
 // 0x00F0 (0x08E8 - 0x07F8)
@@ -40303,7 +39619,6 @@ public:
 		return GetDefaultObjImpl<UUI_HelpPage>();
 	}
 };
-DUMPER7_ASSERTS_UUI_HelpPage;
 
 // Class ShooterGame.UI_HexagonConversion
 // 0x0998 (0x1190 - 0x07F8)
@@ -40414,7 +39729,6 @@ public:
 		return GetDefaultObjImpl<UUI_HexagonConversion>();
 	}
 };
-DUMPER7_ASSERTS_UUI_HexagonConversion;
 
 // Class ShooterGame.UI_HostSession
 // 0x1290 (0x1A88 - 0x07F8)
@@ -40945,7 +40259,6 @@ public:
 		return GetDefaultObjImpl<UUI_HostSession>();
 	}
 };
-DUMPER7_ASSERTS_UUI_HostSession;
 
 // Class ShooterGame.UI_Hub
 // 0x0280 (0x0A78 - 0x07F8)
@@ -41005,7 +40318,6 @@ public:
 		return GetDefaultObjImpl<UUI_Hub>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Hub;
 
 // Class ShooterGame.UI_HudOverlay
 // 0x0028 (0x0820 - 0x07F8)
@@ -41033,7 +40345,6 @@ public:
 		return GetDefaultObjImpl<UUI_HudOverlay>();
 	}
 };
-DUMPER7_ASSERTS_UUI_HudOverlay;
 
 // Class ShooterGame.UI_Inventory
 // 0x0408 (0x0C10 - 0x0808)
@@ -41088,7 +40399,6 @@ public:
 		return GetDefaultObjImpl<UUI_Inventory>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Inventory;
 
 // Class ShooterGame.UI_LeaderboardWidget
 // 0x0050 (0x0848 - 0x07F8)
@@ -41124,7 +40434,6 @@ public:
 		return GetDefaultObjImpl<UUI_LeaderboardWidget>();
 	}
 };
-DUMPER7_ASSERTS_UUI_LeaderboardWidget;
 
 // Class ShooterGame.UI_ListCharacterData
 // 0x0370 (0x0B68 - 0x07F8)
@@ -41171,7 +40480,6 @@ public:
 		return GetDefaultObjImpl<UUI_ListCharacterData>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ListCharacterData;
 
 // Class ShooterGame.UI_ListTamedDinos
 // 0x01D0 (0x09C8 - 0x07F8)
@@ -41206,7 +40514,6 @@ public:
 		return GetDefaultObjImpl<UUI_ListTamedDinos>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ListTamedDinos;
 
 // Class ShooterGame.UI_MainMenu
 // 0x0370 (0x0B68 - 0x07F8)
@@ -41297,7 +40604,6 @@ public:
 		return GetDefaultObjImpl<UUI_MainMenu>();
 	}
 };
-DUMPER7_ASSERTS_UUI_MainMenu;
 
 // Class ShooterGame.UI_MapMarkersEntry
 // 0x01A8 (0x09A0 - 0x07F8)
@@ -41354,7 +40660,6 @@ public:
 		return GetDefaultObjImpl<UUI_MapMarkersEntry>();
 	}
 };
-DUMPER7_ASSERTS_UUI_MapMarkersEntry;
 
 // Class ShooterGame.UI_Market
 // 0x0140 (0x0938 - 0x07F8)
@@ -41435,7 +40740,6 @@ public:
 		return GetDefaultObjImpl<UUI_Market>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Market;
 
 // Class ShooterGame.UI_MenuCarousel
 // 0x0410 (0x0788 - 0x0378)
@@ -41520,7 +40824,6 @@ public:
 		return GetDefaultObjImpl<UUI_MenuCarousel>();
 	}
 };
-DUMPER7_ASSERTS_UUI_MenuCarousel;
 
 // Class ShooterGame.UI_MenuCarouselButtonWidget
 // 0x0010 (0x0808 - 0x07F8)
@@ -41544,7 +40847,6 @@ public:
 		return GetDefaultObjImpl<UUI_MenuCarouselButtonWidget>();
 	}
 };
-DUMPER7_ASSERTS_UUI_MenuCarouselButtonWidget;
 
 // Class ShooterGame.UI_MenuCarouselEntryWidget
 // 0x0038 (0x03B0 - 0x0378)
@@ -41588,7 +40890,6 @@ public:
 		return GetDefaultObjImpl<UUI_MenuCarouselEntryWidget>();
 	}
 };
-DUMPER7_ASSERTS_UUI_MenuCarouselEntryWidget;
 
 // Class ShooterGame.UI_MenuCarouselPipWidget
 // 0x0008 (0x0810 - 0x0808)
@@ -41621,7 +40922,6 @@ public:
 		return GetDefaultObjImpl<UUI_MenuCarouselPipWidget>();
 	}
 };
-DUMPER7_ASSERTS_UUI_MenuCarouselPipWidget;
 
 // Class ShooterGame.UI_MilestonesNotificationFeed
 // 0x0000 (0x07F8 - 0x07F8)
@@ -41645,7 +40945,6 @@ public:
 		return GetDefaultObjImpl<UUI_MilestonesNotificationFeed>();
 	}
 };
-DUMPER7_ASSERTS_UUI_MilestonesNotificationFeed;
 
 // Class ShooterGame.UI_MissionList
 // 0x0590 (0x0D98 - 0x0808)
@@ -41736,7 +41035,6 @@ public:
 		return GetDefaultObjImpl<UUI_MissionList>();
 	}
 };
-DUMPER7_ASSERTS_UUI_MissionList;
 
 // Class ShooterGame.UI_MultiUse
 // 0x0048 (0x0840 - 0x07F8)
@@ -41765,7 +41063,6 @@ public:
 		return GetDefaultObjImpl<UUI_MultiUse>();
 	}
 };
-DUMPER7_ASSERTS_UUI_MultiUse;
 
 // Class ShooterGame.UI_Notification
 // 0x0060 (0x0858 - 0x07F8)
@@ -41793,7 +41090,6 @@ public:
 		return GetDefaultObjImpl<UUI_Notification>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Notification;
 
 // Class ShooterGame.UI_OptionsMenu
 // 0x0070 (0x0878 - 0x0808)
@@ -41826,7 +41122,6 @@ public:
 		return GetDefaultObjImpl<UUI_OptionsMenu>();
 	}
 };
-DUMPER7_ASSERTS_UUI_OptionsMenu;
 
 // Class ShooterGame.UI_OptionsMenu_UWP
 // 0x0440 (0x0C48 - 0x0808)
@@ -41882,7 +41177,6 @@ public:
 		return GetDefaultObjImpl<UUI_OptionsMenu_UWP>();
 	}
 };
-DUMPER7_ASSERTS_UUI_OptionsMenu_UWP;
 
 // Class ShooterGame.UI_PaintingsList
 // 0x01B0 (0x09A8 - 0x07F8)
@@ -41926,7 +41220,6 @@ public:
 		return GetDefaultObjImpl<UUI_PaintingsList>();
 	}
 };
-DUMPER7_ASSERTS_UUI_PaintingsList;
 
 // Class ShooterGame.UI_PartySystem
 // 0x0000 (0x07F8 - 0x07F8)
@@ -41946,7 +41239,6 @@ public:
 		return GetDefaultObjImpl<UUI_PartySystem>();
 	}
 };
-DUMPER7_ASSERTS_UUI_PartySystem;
 
 // Class ShooterGame.UI_PauseMenu
 // 0x02B8 (0x0AB0 - 0x07F8)
@@ -41996,7 +41288,6 @@ public:
 		return GetDefaultObjImpl<UUI_PauseMenu>();
 	}
 };
-DUMPER7_ASSERTS_UUI_PauseMenu;
 
 // Class ShooterGame.UI_PCOptionsMenu
 // 0x0910 (0x1118 - 0x0808)
@@ -42108,7 +41399,6 @@ public:
 		return GetDefaultObjImpl<UUI_PCOptionsMenu>();
 	}
 };
-DUMPER7_ASSERTS_UUI_PCOptionsMenu;
 
 // Class ShooterGame.UI_PinEntry
 // 0x00C0 (0x08B8 - 0x07F8)
@@ -42139,7 +41429,6 @@ public:
 		return GetDefaultObjImpl<UUI_PinEntry>();
 	}
 };
-DUMPER7_ASSERTS_UUI_PinEntry;
 
 // Class ShooterGame.UI_PreviewWidget
 // 0x0320 (0x0A90 - 0x0770)
@@ -42248,7 +41537,6 @@ public:
 		return GetDefaultObjImpl<UUI_PreviewWidget>();
 	}
 };
-DUMPER7_ASSERTS_UUI_PreviewWidget;
 
 // Class ShooterGame.UI_PrimalTest
 // 0x0020 (0x0818 - 0x07F8)
@@ -42273,7 +41561,6 @@ public:
 		return GetDefaultObjImpl<UUI_PrimalTest>();
 	}
 };
-DUMPER7_ASSERTS_UUI_PrimalTest;
 
 // Class ShooterGame.UI_ProceduralSettings
 // 0x0D90 (0x1588 - 0x07F8)
@@ -42386,7 +41673,6 @@ public:
 		return GetDefaultObjImpl<UUI_ProceduralSettings>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ProceduralSettings;
 
 // Class ShooterGame.UI_SavePainting
 // 0x0060 (0x0858 - 0x07F8)
@@ -42419,7 +41705,6 @@ public:
 		return GetDefaultObjImpl<UUI_SavePainting>();
 	}
 };
-DUMPER7_ASSERTS_UUI_SavePainting;
 
 // Class ShooterGame.UI_SavingOverlay
 // 0x0008 (0x0800 - 0x07F8)
@@ -42442,7 +41727,6 @@ public:
 		return GetDefaultObjImpl<UUI_SavingOverlay>();
 	}
 };
-DUMPER7_ASSERTS_UUI_SavingOverlay;
 
 // Class ShooterGame.UI_ServerBroadcastMessage
 // 0x00D8 (0x08D0 - 0x07F8)
@@ -42468,7 +41752,6 @@ public:
 		return GetDefaultObjImpl<UUI_ServerBroadcastMessage>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ServerBroadcastMessage;
 
 // Class ShooterGame.UI_SessionSortArrow
 // 0x0038 (0x0830 - 0x07F8)
@@ -42496,7 +41779,6 @@ public:
 		return GetDefaultObjImpl<UUI_SessionSortArrow>();
 	}
 };
-DUMPER7_ASSERTS_UUI_SessionSortArrow;
 
 // Class ShooterGame.UI_SkillTree
 // 0x00D0 (0x08D8 - 0x0808)
@@ -42550,7 +41832,6 @@ public:
 		return GetDefaultObjImpl<UUI_SkillTree>();
 	}
 };
-DUMPER7_ASSERTS_UUI_SkillTree;
 
 // Class ShooterGame.UI_SpawnPoint
 // 0x0068 (0x0860 - 0x07F8)
@@ -42582,7 +41863,6 @@ public:
 		return GetDefaultObjImpl<UUI_SpawnPoint>();
 	}
 };
-DUMPER7_ASSERTS_UUI_SpawnPoint;
 
 // Class ShooterGame.UI_SteamInventoryStatusPopup
 // 0x0090 (0x0888 - 0x07F8)
@@ -42614,7 +41894,6 @@ public:
 		return GetDefaultObjImpl<UUI_SteamInventoryStatusPopup>();
 	}
 };
-DUMPER7_ASSERTS_UUI_SteamInventoryStatusPopup;
 
 // Class ShooterGame.UI_Subtitles
 // 0x0090 (0x0888 - 0x07F8)
@@ -42661,7 +41940,6 @@ public:
 		return GetDefaultObjImpl<UUI_Subtitles>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Subtitles;
 
 // Class ShooterGame.UI_SurvivorProfile
 // 0x05A8 (0x0DB0 - 0x0808)
@@ -42723,7 +42001,6 @@ public:
 		return GetDefaultObjImpl<UUI_SurvivorProfile>();
 	}
 };
-DUMPER7_ASSERTS_UUI_SurvivorProfile;
 
 // Class ShooterGame.VictoryCore
 // 0x0000 (0x0028 - 0x0028)
@@ -43461,7 +42738,6 @@ public:
 		return GetDefaultObjImpl<UVictoryCore>();
 	}
 };
-DUMPER7_ASSERTS_UVictoryCore;
 
 // Class ShooterGame.VirtualCursorManager
 // 0x0010 (0x0040 - 0x0030)
@@ -43492,7 +42768,6 @@ public:
 		return GetDefaultObjImpl<UVirtualCursorManager>();
 	}
 };
-DUMPER7_ASSERTS_UVirtualCursorManager;
 
 // Class ShooterGame.VolumetricDispatcher
 // 0x0180 (0x0610 - 0x0490)
@@ -43558,7 +42833,6 @@ public:
 		return GetDefaultObjImpl<AVolumetricDispatcher>();
 	}
 };
-DUMPER7_ASSERTS_AVolumetricDispatcher;
 
 // Class ShooterGame.WardrobeItemSelector
 // 0x0058 (0x03D0 - 0x0378)
@@ -43596,7 +42870,6 @@ public:
 		return GetDefaultObjImpl<UWardrobeItemSelector>();
 	}
 };
-DUMPER7_ASSERTS_UWardrobeItemSelector;
 
 // Class ShooterGame.BuoIslandHeightAtlasAsset
 // 0x0020 (0x0050 - 0x0030)
@@ -43623,7 +42896,6 @@ public:
 		return GetDefaultObjImpl<UBuoIslandHeightAtlasAsset>();
 	}
 };
-DUMPER7_ASSERTS_UBuoIslandHeightAtlasAsset;
 
 // Class ShooterGame.WaterVolumeWithFlowVisualizerComponent
 // 0x0000 (0x00D0 - 0x00D0)
@@ -43643,7 +42915,6 @@ public:
 		return GetDefaultObjImpl<UWaterVolumeWithFlowVisualizerComponent>();
 	}
 };
-DUMPER7_ASSERTS_UWaterVolumeWithFlowVisualizerComponent;
 
 // Class ShooterGame.WindBoosterCircle
 // 0x0000 (0x05C0 - 0x05C0)
@@ -43663,7 +42934,6 @@ public:
 		return GetDefaultObjImpl<AWindBoosterCircle>();
 	}
 };
-DUMPER7_ASSERTS_AWindBoosterCircle;
 
 // Class ShooterGame.WorldVO_DataAsset
 // 0x0008 (0x0038 - 0x0030)
@@ -43686,6 +42956,5 @@ public:
 		return GetDefaultObjImpl<UWorldVO_DataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UWorldVO_DataAsset;
 
 SDK_NAMESPACE_END

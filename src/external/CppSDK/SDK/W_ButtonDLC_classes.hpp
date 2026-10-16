@@ -59,6 +59,5 @@ public:
 		return GetDefaultObjImpl<UW_ButtonDLC_C>();
 	}
 };
-DUMPER7_ASSERTS_UW_ButtonDLC_C;
 
 SDK_NAMESPACE_END

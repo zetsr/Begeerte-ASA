@@ -41,7 +41,6 @@ public:
 		return GetDefaultObjImpl<UGroomCacheImportOptions>();
 	}
 };
-DUMPER7_ASSERTS_UGroomCacheImportOptions;
 
 // Class HairStrandsCore.GroomCacheImportData
 // 0x0068 (0x0090 - 0x0028)
@@ -64,7 +63,6 @@ public:
 		return GetDefaultObjImpl<UGroomCacheImportData>();
 	}
 };
-DUMPER7_ASSERTS_UGroomCacheImportData;
 
 // Class HairStrandsCore.GroomActor
 // 0x0008 (0x0498 - 0x0490)
@@ -87,7 +85,6 @@ public:
 		return GetDefaultObjImpl<AGroomActor>();
 	}
 };
-DUMPER7_ASSERTS_AGroomActor;
 
 // Class HairStrandsCore.GroomAsset
 // 0x0100 (0x0128 - 0x0028)
@@ -161,7 +158,6 @@ public:
 		return GetDefaultObjImpl<UGroomAsset>();
 	}
 };
-DUMPER7_ASSERTS_UGroomAsset;
 
 // Class HairStrandsCore.HairCardGenerationSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -181,7 +177,6 @@ public:
 		return GetDefaultObjImpl<UHairCardGenerationSettings>();
 	}
 };
-DUMPER7_ASSERTS_UHairCardGenerationSettings;
 
 // Class HairStrandsCore.GroomAssetImportData
 // 0x0010 (0x0038 - 0x0028)
@@ -205,7 +200,6 @@ public:
 		return GetDefaultObjImpl<UGroomAssetImportData>();
 	}
 };
-DUMPER7_ASSERTS_UGroomAssetImportData;
 
 // Class HairStrandsCore.GroomBindingAsset
 // 0x0098 (0x00C0 - 0x0028)
@@ -260,7 +254,6 @@ public:
 		return GetDefaultObjImpl<UGroomBindingAsset>();
 	}
 };
-DUMPER7_ASSERTS_UGroomBindingAsset;
 
 // Class HairStrandsCore.GroomBindingAssetList
 // 0x0010 (0x0038 - 0x0028)
@@ -283,7 +276,6 @@ public:
 		return GetDefaultObjImpl<UGroomBindingAssetList>();
 	}
 };
-DUMPER7_ASSERTS_UGroomBindingAssetList;
 
 // Class HairStrandsCore.GroomBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -310,7 +302,6 @@ public:
 		return GetDefaultObjImpl<UGroomBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UGroomBlueprintLibrary;
 
 // Class HairStrandsCore.GroomCache
 // 0x0060 (0x0088 - 0x0028)
@@ -336,7 +327,6 @@ public:
 		return GetDefaultObjImpl<UGroomCache>();
 	}
 };
-DUMPER7_ASSERTS_UGroomCache;
 
 // Class HairStrandsCore.GroomComponent
 // 0x0220 (0x0880 - 0x0660)
@@ -400,7 +390,6 @@ public:
 		return GetDefaultObjImpl<UGroomComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGroomComponent;
 
 // Class HairStrandsCore.GroomCreateBindingOptions
 // 0x0038 (0x0060 - 0x0028)
@@ -431,7 +420,6 @@ public:
 		return GetDefaultObjImpl<UGroomCreateBindingOptions>();
 	}
 };
-DUMPER7_ASSERTS_UGroomCreateBindingOptions;
 
 // Class HairStrandsCore.GroomCreateFollicleMaskOptions
 // 0x0018 (0x0040 - 0x0028)
@@ -456,7 +444,6 @@ public:
 		return GetDefaultObjImpl<UGroomCreateFollicleMaskOptions>();
 	}
 };
-DUMPER7_ASSERTS_UGroomCreateFollicleMaskOptions;
 
 // Class HairStrandsCore.GroomCreateStrandsTexturesOptions
 // 0x0050 (0x0078 - 0x0028)
@@ -495,7 +482,6 @@ public:
 		return GetDefaultObjImpl<UGroomCreateStrandsTexturesOptions>();
 	}
 };
-DUMPER7_ASSERTS_UGroomCreateStrandsTexturesOptions;
 
 // Class HairStrandsCore.GroomImportOptions
 // 0x0040 (0x0068 - 0x0028)
@@ -519,7 +505,6 @@ public:
 		return GetDefaultObjImpl<UGroomImportOptions>();
 	}
 };
-DUMPER7_ASSERTS_UGroomImportOptions;
 
 // Class HairStrandsCore.GroomHairGroupsPreview
 // 0x0010 (0x0038 - 0x0028)
@@ -542,7 +527,6 @@ public:
 		return GetDefaultObjImpl<UGroomHairGroupsPreview>();
 	}
 };
-DUMPER7_ASSERTS_UGroomHairGroupsPreview;
 
 // Class HairStrandsCore.GroomPluginSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -566,7 +550,6 @@ public:
 		return GetDefaultObjImpl<UGroomPluginSettings>();
 	}
 };
-DUMPER7_ASSERTS_UGroomPluginSettings;
 
 // Class HairStrandsCore.MovieSceneGroomCacheSection
 // 0x0020 (0x0118 - 0x00F8)
@@ -589,7 +572,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneGroomCacheSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneGroomCacheSection;
 
 // Class HairStrandsCore.MovieSceneGroomCacheTrack
 // 0x0018 (0x0110 - 0x00F8)
@@ -613,7 +595,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneGroomCacheTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneGroomCacheTrack;
 
 // Class HairStrandsCore.NiagaraDataInterfaceHairStrands
 // 0x0020 (0x0058 - 0x0038)
@@ -639,7 +620,6 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfaceHairStrands>();
 	}
 };
-DUMPER7_ASSERTS_UNiagaraDataInterfaceHairStrands;
 
 // Class HairStrandsCore.NiagaraDataInterfaceVelocityGrid
 // 0x0010 (0x0048 - 0x0038)
@@ -663,7 +643,6 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfaceVelocityGrid>();
 	}
 };
-DUMPER7_ASSERTS_UNiagaraDataInterfaceVelocityGrid;
 
 // Class HairStrandsCore.NiagaraDataInterfacePressureGrid
 // 0x0000 (0x0048 - 0x0048)
@@ -683,6 +662,5 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfacePressureGrid>();
 	}
 };
-DUMPER7_ASSERTS_UNiagaraDataInterfacePressureGrid;
 
 SDK_NAMESPACE_END

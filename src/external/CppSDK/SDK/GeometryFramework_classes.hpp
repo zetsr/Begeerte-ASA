@@ -47,7 +47,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMeshCommandChangeTarget;
 
 // Class GeometryFramework.MeshReplacementCommandChangeTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -76,7 +75,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMeshReplacementCommandChangeTarget;
 
 // Class GeometryFramework.MeshVertexCommandChangeTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -105,7 +103,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMeshVertexCommandChangeTarget;
 
 // Class GeometryFramework.BaseDynamicMeshComponent
 // 0x0060 (0x06C0 - 0x0660)
@@ -179,7 +176,6 @@ public:
 		return GetDefaultObjImpl<UBaseDynamicMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UBaseDynamicMeshComponent;
 
 // Class GeometryFramework.DynamicMeshComponent
 // 0x0330 (0x09F0 - 0x06C0)
@@ -235,7 +231,6 @@ public:
 		return GetDefaultObjImpl<UDynamicMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicMeshComponent;
 
 // Class GeometryFramework.DynamicMeshActor
 // 0x0018 (0x04A8 - 0x0490)
@@ -270,7 +265,6 @@ public:
 		return GetDefaultObjImpl<ADynamicMeshActor>();
 	}
 };
-DUMPER7_ASSERTS_ADynamicMeshActor;
 
 // Class GeometryFramework.DynamicMeshGenerator
 // 0x0000 (0x0028 - 0x0028)
@@ -290,7 +284,6 @@ public:
 		return GetDefaultObjImpl<UDynamicMeshGenerator>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicMeshGenerator;
 
 // Class GeometryFramework.DynamicMesh
 // 0x0088 (0x00B0 - 0x0028)
@@ -325,7 +318,6 @@ public:
 		return GetDefaultObjImpl<UDynamicMesh>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicMesh;
 
 // Class GeometryFramework.DynamicMeshPool
 // 0x0020 (0x0048 - 0x0028)
@@ -355,6 +347,5 @@ public:
 		return GetDefaultObjImpl<UDynamicMeshPool>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicMeshPool;
 
 SDK_NAMESPACE_END

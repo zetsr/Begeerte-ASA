@@ -156,7 +156,6 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone_1;                   // 0x10B8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyBone;                     // 0x10E8(0x0030)()
 };
-DUMPER7_ASSERTS_FPVWeaponAnimBP_Base_Carrying__FAnimBlueprintGeneratedConstantData;
 
 // ScriptStruct FPVWeaponAnimBP_Base_Carrying.FPVWeaponAnimBP_Base_Carrying_C.AnimBlueprintGeneratedMutableData
 // 0x0033 (0x0034 - 0x0001)
@@ -186,6 +185,5 @@ public:
 	float                                         __FloatProperty_13;                                // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          __BoolProperty_14;                                 // 0x0030(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FPVWeaponAnimBP_Base_Carrying__FAnimBlueprintGeneratedMutableData;
 
 SDK_NAMESPACE_END

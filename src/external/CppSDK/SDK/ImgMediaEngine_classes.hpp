@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UImgMediaPlaybackComponent>();
 	}
 };
-DUMPER7_ASSERTS_UImgMediaPlaybackComponent;
 
 SDK_NAMESPACE_END

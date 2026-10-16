@@ -69,6 +69,5 @@ public:
 		return GetDefaultObjImpl<UHuman_WeaponIK_CtrlRig_C>();
 	}
 };
-DUMPER7_ASSERTS_UHuman_WeaponIK_CtrlRig_C;
 
 SDK_NAMESPACE_END

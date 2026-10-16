@@ -70,6 +70,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Discovery_ShowcaseSlot_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Discovery_ShowcaseSlot_C;
 
 SDK_NAMESPACE_END

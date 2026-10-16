@@ -24,7 +24,6 @@ struct SubmixEffectDynamicsProcessorPreset_SetAudioBus final
 public:
 	class UAudioBus*                              AudioBus;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SubmixEffectDynamicsProcessorPreset_SetAudioBus;
 
 // Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetExternalSubmix
 // 0x0008 (0x0008 - 0x0000)
@@ -33,7 +32,6 @@ struct SubmixEffectDynamicsProcessorPreset_SetExternalSubmix final
 public:
 	class USoundSubmix*                           Submix;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SubmixEffectDynamicsProcessorPreset_SetExternalSubmix;
 
 // Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
 // 0x0060 (0x0060 - 0x0000)
@@ -42,7 +40,6 @@ struct SubmixEffectDynamicsProcessorPreset_SetSettings final
 public:
 	struct FSubmixEffectDynamicsProcessorSettings Settings_0;                                        // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SubmixEffectDynamicsProcessorPreset_SetSettings;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.AddMasterSubmixEffect
 // 0x0010 (0x0010 - 0x0000)
@@ -52,7 +49,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundEffectSubmixPreset*               SubmixEffectPreset;                                // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_AddMasterSubmixEffect;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.AddSourceEffectToPresetChain
 // 0x0020 (0x0020 - 0x0000)
@@ -63,7 +59,6 @@ public:
 	class USoundEffectSourcePresetChain*          PresetChain;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSourceEffectChainEntry                Entry;                                             // 0x0010(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_AddSourceEffectToPresetChain;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.AddSubmixEffect
 // 0x0020 (0x0020 - 0x0000)
@@ -76,7 +71,6 @@ public:
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_AddSubmixEffect;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.ClearMasterSubmixEffects
 // 0x0008 (0x0008 - 0x0000)
@@ -85,7 +79,6 @@ struct AudioMixerBlueprintLibrary_ClearMasterSubmixEffects final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_ClearMasterSubmixEffects;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.ClearSubmixEffectChainOverride
 // 0x0018 (0x0018 - 0x0000)
@@ -97,7 +90,6 @@ public:
 	float                                         FadeTimeSec;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_ClearSubmixEffectChainOverride;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.ClearSubmixEffects
 // 0x0010 (0x0010 - 0x0000)
@@ -107,7 +99,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundSubmix*                           SoundSubmix;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_ClearSubmixEffects;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.Conv_AudioOutputDeviceInfoToString
 // 0x0058 (0x0058 - 0x0000)
@@ -117,7 +108,6 @@ public:
 	struct FAudioOutputDeviceInfo                 Info;                                              // 0x0000(0x0048)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0048(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_Conv_AudioOutputDeviceInfoToString;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.GetAvailableAudioOutputDevices
 // 0x0018 (0x0018 - 0x0000)
@@ -127,7 +117,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const TArray<struct FAudioOutputDeviceInfo>& AvailableDevices)> OnObtainDevicesEvent; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_GetAvailableAudioOutputDevices;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.GetCurrentAudioOutputDeviceName
 // 0x0018 (0x0018 - 0x0000)
@@ -137,7 +126,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const class FString& CurrentDevice)> OnObtainCurrentDeviceEvent;                  // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_GetCurrentAudioOutputDeviceName;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.GetMagnitudeForFrequencies
 // 0x0030 (0x0030 - 0x0000)
@@ -149,7 +137,6 @@ public:
 	TArray<float>                                 Magnitudes;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class USoundSubmix*                           SubmixToAnalyze;                                   // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_GetMagnitudeForFrequencies;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.GetNumberOfEntriesInSourceEffectChain
 // 0x0018 (0x0018 - 0x0000)
@@ -161,7 +148,6 @@ public:
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_GetNumberOfEntriesInSourceEffectChain;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.GetPhaseForFrequencies
 // 0x0030 (0x0030 - 0x0000)
@@ -173,7 +159,6 @@ public:
 	TArray<float>                                 Phases;                                            // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class USoundSubmix*                           SubmixToAnalyze;                                   // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_GetPhaseForFrequencies;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.IsAudioBusActive
 // 0x0018 (0x0018 - 0x0000)
@@ -185,7 +170,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_IsAudioBusActive;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.MakeFullSpectrumSpectralAnalysisBandSettings
 // 0x0028 (0x0028 - 0x0000)
@@ -200,7 +184,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> ReturnValue;                             // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_MakeFullSpectrumSpectralAnalysisBandSettings;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.MakeMusicalSpectralAnalysisBandSettings
 // 0x0028 (0x0028 - 0x0000)
@@ -216,7 +199,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> ReturnValue;                             // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_MakeMusicalSpectralAnalysisBandSettings;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.MakePresetSpectralAnalysisBandSettings
 // 0x0020 (0x0020 - 0x0000)
@@ -230,7 +212,6 @@ public:
 	int32                                         InReleaseTimeMsec;                                 // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FSoundSubmixSpectralAnalysisBandSettings> ReturnValue;                             // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_MakePresetSpectralAnalysisBandSettings;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.PauseRecordingOutput
 // 0x0010 (0x0010 - 0x0000)
@@ -240,7 +221,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundSubmix*                           SubmixToPause;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_PauseRecordingOutput;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.PrimeSoundCueForPlayback
 // 0x0008 (0x0008 - 0x0000)
@@ -249,7 +229,6 @@ struct AudioMixerBlueprintLibrary_PrimeSoundCueForPlayback final
 public:
 	class USoundCue*                              SoundCue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_PrimeSoundCueForPlayback;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.PrimeSoundForPlayback
 // 0x0018 (0x0018 - 0x0000)
@@ -259,7 +238,6 @@ public:
 	class USoundWave*                             SoundWave;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const class USoundWave* LoadedSoundWave, const bool WasCancelled)> OnLoadCompletion; // 0x0008(0x0010)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_PrimeSoundForPlayback;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.RegisterAudioBusToSubmix
 // 0x0018 (0x0018 - 0x0000)
@@ -270,7 +248,6 @@ public:
 	class USoundSubmix*                           SoundSubmix;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAudioBus*                              AudioBus;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_RegisterAudioBusToSubmix;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveMasterSubmixEffect
 // 0x0010 (0x0010 - 0x0000)
@@ -280,7 +257,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundEffectSubmixPreset*               SubmixEffectPreset;                                // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_RemoveMasterSubmixEffect;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSourceEffectFromPresetChain
 // 0x0018 (0x0018 - 0x0000)
@@ -292,7 +268,6 @@ public:
 	int32                                         EntryIndex;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_RemoveSourceEffectFromPresetChain;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSubmixEffect
 // 0x0018 (0x0018 - 0x0000)
@@ -303,7 +278,6 @@ public:
 	class USoundSubmix*                           SoundSubmix;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundEffectSubmixPreset*               SubmixEffectPreset;                                // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_RemoveSubmixEffect;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSubmixEffectAtIndex
 // 0x0018 (0x0018 - 0x0000)
@@ -315,7 +289,6 @@ public:
 	int32                                         SubmixChainIndex;                                  // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_RemoveSubmixEffectAtIndex;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSubmixEffectPreset
 // 0x0018 (0x0018 - 0x0000)
@@ -326,7 +299,6 @@ public:
 	class USoundSubmix*                           SoundSubmix;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundEffectSubmixPreset*               SubmixEffectPreset;                                // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_RemoveSubmixEffectPreset;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSubmixEffectPresetAtIndex
 // 0x0018 (0x0018 - 0x0000)
@@ -338,7 +310,6 @@ public:
 	int32                                         SubmixChainIndex;                                  // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_RemoveSubmixEffectPresetAtIndex;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.ReplaceSoundEffectSubmix
 // 0x0020 (0x0020 - 0x0000)
@@ -351,7 +322,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundEffectSubmixPreset*               SubmixEffectPreset;                                // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_ReplaceSoundEffectSubmix;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.ReplaceSubmixEffect
 // 0x0020 (0x0020 - 0x0000)
@@ -364,7 +334,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundEffectSubmixPreset*               SubmixEffectPreset;                                // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_ReplaceSubmixEffect;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.ResumeRecordingOutput
 // 0x0010 (0x0010 - 0x0000)
@@ -374,7 +343,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundSubmix*                           SubmixToPause;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_ResumeRecordingOutput;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.SetBypassSourceEffectChainEntry
 // 0x0018 (0x0018 - 0x0000)
@@ -387,7 +355,6 @@ public:
 	bool                                          bBypassed;                                         // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_SetBypassSourceEffectChainEntry;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.SetSubmixEffectChainOverride
 // 0x0028 (0x0028 - 0x0000)
@@ -400,7 +367,6 @@ public:
 	float                                         FadeTimeSec;                                       // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_SetSubmixEffectChainOverride;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StartAnalyzingOutput
 // 0x0020 (0x0020 - 0x0000)
@@ -417,7 +383,6 @@ public:
 	EAudioSpectrumType                            SpectrumType;                                      // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StartAnalyzingOutput;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StartAudioBus
 // 0x0010 (0x0010 - 0x0000)
@@ -427,7 +392,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAudioBus*                              AudioBus;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StartAudioBus;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StartRecordingOutput
 // 0x0018 (0x0018 - 0x0000)
@@ -439,7 +403,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USoundSubmix*                           SubmixToRecord;                                    // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StartRecordingOutput;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StopAnalyzingOutput
 // 0x0010 (0x0010 - 0x0000)
@@ -449,7 +412,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundSubmix*                           SubmixToStopAnalyzing;                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StopAnalyzingOutput;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StopAudioBus
 // 0x0010 (0x0010 - 0x0000)
@@ -459,7 +421,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAudioBus*                              AudioBus;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StopAudioBus;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput
 // 0x0048 (0x0048 - 0x0000)
@@ -475,7 +436,6 @@ public:
 	class USoundWave*                             ExistingSoundWaveToOverwrite;                      // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundWave*                             ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_StopRecordingOutput;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.SwapAudioOutputDevice
 // 0x0028 (0x0028 - 0x0000)
@@ -486,7 +446,6 @@ public:
 	class FString                                 NewDeviceId;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const struct FSwapAudioOutputResult& SwapResult)> OnCompletedDeviceSwap;          // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_SwapAudioOutputDevice;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.TrimAudioCache
 // 0x0008 (0x0008 - 0x0000)
@@ -496,7 +455,6 @@ public:
 	float                                         InMegabytesToFree;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_TrimAudioCache;
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.UnregisterAudioBusFromSubmix
 // 0x0018 (0x0018 - 0x0000)
@@ -507,7 +465,6 @@ public:
 	class USoundSubmix*                           SoundSubmix;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAudioBus*                              AudioBus;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioMixerBlueprintLibrary_UnregisterAudioBusFromSubmix;
 
 // Function AudioMixer.SynthComponent.GetModulators
 // 0x0058 (0x0058 - 0x0000)
@@ -518,7 +475,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<class USoundModulatorBase*>              ReturnValue;                                       // 0x0008(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SynthComponent_GetModulators;
 
 // Function AudioMixer.SynthComponent.SetAudioBusSendPostEffect
 // 0x0010 (0x0010 - 0x0000)
@@ -529,7 +485,6 @@ public:
 	float                                         AudioBusSendLevel;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SynthComponent_SetAudioBusSendPostEffect;
 
 // Function AudioMixer.SynthComponent.SetAudioBusSendPreEffect
 // 0x0010 (0x0010 - 0x0000)
@@ -540,7 +495,6 @@ public:
 	float                                         AudioBusSendLevel;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SynthComponent_SetAudioBusSendPreEffect;
 
 // Function AudioMixer.SynthComponent.SetLowPassFilterEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -549,7 +503,6 @@ struct SynthComponent_SetLowPassFilterEnabled final
 public:
 	bool                                          InLowPassFilterEnabled;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SynthComponent_SetLowPassFilterEnabled;
 
 // Function AudioMixer.SynthComponent.SetLowPassFilterFrequency
 // 0x0004 (0x0004 - 0x0000)
@@ -558,7 +511,6 @@ struct SynthComponent_SetLowPassFilterFrequency final
 public:
 	float                                         InLowPassFilterFrequency;                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SynthComponent_SetLowPassFilterFrequency;
 
 // Function AudioMixer.SynthComponent.SetModulationRouting
 // 0x0058 (0x0058 - 0x0000)
@@ -570,7 +522,6 @@ public:
 	EModulationRouting                            RoutingMethod;                                     // 0x0051(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SynthComponent_SetModulationRouting;
 
 // Function AudioMixer.SynthComponent.SetOutputToBusOnly
 // 0x0001 (0x0001 - 0x0000)
@@ -579,7 +530,6 @@ struct SynthComponent_SetOutputToBusOnly final
 public:
 	bool                                          bInOutputToBusOnly;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SynthComponent_SetOutputToBusOnly;
 
 // Function AudioMixer.SynthComponent.SetSourceBusSendPostEffect
 // 0x0010 (0x0010 - 0x0000)
@@ -590,7 +540,6 @@ public:
 	float                                         SourceBusSendLevel;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SynthComponent_SetSourceBusSendPostEffect;
 
 // Function AudioMixer.SynthComponent.SetSourceBusSendPreEffect
 // 0x0010 (0x0010 - 0x0000)
@@ -601,7 +550,6 @@ public:
 	float                                         SourceBusSendLevel;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SynthComponent_SetSourceBusSendPreEffect;
 
 // Function AudioMixer.SynthComponent.SetSubmixSend
 // 0x0010 (0x0010 - 0x0000)
@@ -612,7 +560,6 @@ public:
 	float                                         SendLevel;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SynthComponent_SetSubmixSend;
 
 // Function AudioMixer.SynthComponent.SetVolumeMultiplier
 // 0x0004 (0x0004 - 0x0000)
@@ -621,7 +568,6 @@ struct SynthComponent_SetVolumeMultiplier final
 public:
 	float                                         VolumeMultiplier;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SynthComponent_SetVolumeMultiplier;
 
 // Function AudioMixer.SynthComponent.AdjustVolume
 // 0x000C (0x000C - 0x0000)
@@ -633,7 +579,6 @@ public:
 	EAudioFaderCurve                              FadeCurve;                                         // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SynthComponent_AdjustVolume;
 
 // Function AudioMixer.SynthComponent.FadeIn
 // 0x0010 (0x0010 - 0x0000)
@@ -646,7 +591,6 @@ public:
 	EAudioFaderCurve                              FadeCurve;                                         // 0x000C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SynthComponent_FadeIn;
 
 // Function AudioMixer.SynthComponent.FadeOut
 // 0x000C (0x000C - 0x0000)
@@ -658,7 +602,6 @@ public:
 	EAudioFaderCurve                              FadeCurve;                                         // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SynthComponent_FadeOut;
 
 // Function AudioMixer.SynthComponent.IsPlaying
 // 0x0001 (0x0001 - 0x0000)
@@ -667,7 +610,6 @@ struct SynthComponent_IsPlaying final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SynthComponent_IsPlaying;
 
 // Function AudioMixer.SubmixEffectSubmixEQPreset.SetSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -676,7 +618,6 @@ struct SubmixEffectSubmixEQPreset_SetSettings final
 public:
 	struct FSubmixEffectSubmixEQSettings          InSettings;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SubmixEffectSubmixEQPreset_SetSettings;
 
 // Function AudioMixer.SubmixEffectReverbPreset.SetSettings
 // 0x0040 (0x0040 - 0x0000)
@@ -685,7 +626,6 @@ struct SubmixEffectReverbPreset_SetSettings final
 public:
 	struct FSubmixEffectReverbSettings            InSettings;                                        // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SubmixEffectReverbPreset_SetSettings;
 
 // Function AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect
 // 0x0010 (0x0010 - 0x0000)
@@ -696,7 +636,6 @@ public:
 	float                                         WetLevel;                                          // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DryLevel;                                          // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SubmixEffectReverbPreset_SetSettingsWithReverbEffect;
 
 // Function AudioMixer.QuartzClockHandle.GetBeatProgressPercent
 // 0x0010 (0x0010 - 0x0000)
@@ -709,7 +648,6 @@ public:
 	float                                         MsOffset;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_GetBeatProgressPercent;
 
 // Function AudioMixer.QuartzClockHandle.GetCurrentTimestamp
 // 0x0018 (0x0018 - 0x0000)
@@ -719,7 +657,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuartzTransportTimeStamp              ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_GetCurrentTimestamp;
 
 // Function AudioMixer.QuartzClockHandle.GetDurationOfQuantizationTypeInSeconds
 // 0x0018 (0x0018 - 0x0000)
@@ -733,7 +670,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_GetDurationOfQuantizationTypeInSeconds;
 
 // Function AudioMixer.QuartzClockHandle.GetEstimatedRunTime
 // 0x0010 (0x0010 - 0x0000)
@@ -744,7 +680,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_GetEstimatedRunTime;
 
 // Function AudioMixer.QuartzClockHandle.IsClockRunning
 // 0x0010 (0x0010 - 0x0000)
@@ -755,7 +690,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_IsClockRunning;
 
 // Function AudioMixer.QuartzClockHandle.NotifyOnQuantizationBoundary
 // 0x0040 (0x0040 - 0x0000)
@@ -764,11 +698,10 @@ struct QuartzClockHandle_NotifyOnQuantizationBoundary final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuartzQuantizationBoundary            InQuantizationBoundary;                            // 0x0008(0x0020)(Parm, NativeAccessSpecifierPublic)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> InDelegate;           // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)> InDelegate;         // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InMsOffset;                                        // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_NotifyOnQuantizationBoundary;
 
 // Function AudioMixer.QuartzClockHandle.PauseClock
 // 0x0010 (0x0010 - 0x0000)
@@ -778,7 +711,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_PauseClock;
 
 // Function AudioMixer.QuartzClockHandle.ResetTransport
 // 0x0018 (0x0018 - 0x0000)
@@ -786,9 +718,8 @@ struct QuartzClockHandle_ResetTransport final
 {
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> InDelegate;           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)> InDelegate;         // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_ResetTransport;
 
 // Function AudioMixer.QuartzClockHandle.ResetTransportQuantized
 // 0x0040 (0x0040 - 0x0000)
@@ -797,10 +728,9 @@ struct QuartzClockHandle_ResetTransportQuantized final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuartzQuantizationBoundary            InQuantizationBoundary;                            // 0x0008(0x0020)(Parm, NativeAccessSpecifierPublic)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> InDelegate;           // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)> InDelegate;         // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_ResetTransportQuantized;
 
 // Function AudioMixer.QuartzClockHandle.ResumeClock
 // 0x0010 (0x0010 - 0x0000)
@@ -810,7 +740,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_ResumeClock;
 
 // Function AudioMixer.QuartzClockHandle.SetBeatsPerMinute
 // 0x0048 (0x0048 - 0x0000)
@@ -819,12 +748,11 @@ struct QuartzClockHandle_SetBeatsPerMinute final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuartzQuantizationBoundary            QuantizationBoundary;                              // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> Delegate;             // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)> Delegate;           // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BeatsPerMinute;                                    // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_SetBeatsPerMinute;
 
 // Function AudioMixer.QuartzClockHandle.SetMillisecondsPerTick
 // 0x0048 (0x0048 - 0x0000)
@@ -833,12 +761,11 @@ struct QuartzClockHandle_SetMillisecondsPerTick final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuartzQuantizationBoundary            QuantizationBoundary;                              // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> Delegate;             // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)> Delegate;           // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MillisecondsPerTick;                               // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_SetMillisecondsPerTick;
 
 // Function AudioMixer.QuartzClockHandle.SetSecondsPerTick
 // 0x0048 (0x0048 - 0x0000)
@@ -847,12 +774,11 @@ struct QuartzClockHandle_SetSecondsPerTick final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuartzQuantizationBoundary            QuantizationBoundary;                              // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> Delegate;             // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)> Delegate;           // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SecondsPerTick;                                    // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_SetSecondsPerTick;
 
 // Function AudioMixer.QuartzClockHandle.SetThirtySecondNotesPerMinute
 // 0x0048 (0x0048 - 0x0000)
@@ -861,12 +787,11 @@ struct QuartzClockHandle_SetThirtySecondNotesPerMinute final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuartzQuantizationBoundary            QuantizationBoundary;                              // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> Delegate;             // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)> Delegate;           // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ThirtySecondsNotesPerMinute;                       // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_SetThirtySecondNotesPerMinute;
 
 // Function AudioMixer.QuartzClockHandle.SetTicksPerSecond
 // 0x0048 (0x0048 - 0x0000)
@@ -875,12 +800,11 @@ struct QuartzClockHandle_SetTicksPerSecond final
 public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuartzQuantizationBoundary            QuantizationBoundary;                              // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> Delegate;             // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)> Delegate;           // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TicksPerSecond;                                    // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_SetTicksPerSecond;
 
 // Function AudioMixer.QuartzClockHandle.StartClock
 // 0x0010 (0x0010 - 0x0000)
@@ -890,7 +814,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_StartClock;
 
 // Function AudioMixer.QuartzClockHandle.StartOtherClock
 // 0x0040 (0x0040 - 0x0000)
@@ -900,9 +823,8 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   OtherClockName;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuartzQuantizationBoundary            InQuantizationBoundary;                            // 0x0010(0x0020)(Parm, NativeAccessSpecifierPublic)
-	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)> InDelegate;           // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name_0)> InDelegate;         // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_StartOtherClock;
 
 // Function AudioMixer.QuartzClockHandle.StopClock
 // 0x0018 (0x0018 - 0x0000)
@@ -914,7 +836,6 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_StopClock;
 
 // Function AudioMixer.QuartzClockHandle.SubscribeToAllQuantizationEvents
 // 0x0020 (0x0020 - 0x0000)
@@ -925,7 +846,6 @@ public:
 	TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)> OnQuantizationEvent; // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_SubscribeToAllQuantizationEvents;
 
 // Function AudioMixer.QuartzClockHandle.SubscribeToQuantizationEvent
 // 0x0028 (0x0028 - 0x0000)
@@ -939,7 +859,6 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_SubscribeToQuantizationEvent;
 
 // Function AudioMixer.QuartzClockHandle.UnsubscribeFromAllTimeDivisions
 // 0x0010 (0x0010 - 0x0000)
@@ -949,7 +868,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_UnsubscribeFromAllTimeDivisions;
 
 // Function AudioMixer.QuartzClockHandle.UnsubscribeFromTimeDivision
 // 0x0018 (0x0018 - 0x0000)
@@ -961,7 +879,6 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UQuartzClockHandle*                     ClockHandle;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzClockHandle_UnsubscribeFromTimeDivision;
 
 // Function AudioMixer.QuartzClockHandle.GetBeatsPerMinute
 // 0x0010 (0x0010 - 0x0000)
@@ -972,7 +889,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_GetBeatsPerMinute;
 
 // Function AudioMixer.QuartzClockHandle.GetMillisecondsPerTick
 // 0x0010 (0x0010 - 0x0000)
@@ -983,7 +899,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_GetMillisecondsPerTick;
 
 // Function AudioMixer.QuartzClockHandle.GetSecondsPerTick
 // 0x0010 (0x0010 - 0x0000)
@@ -994,7 +909,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_GetSecondsPerTick;
 
 // Function AudioMixer.QuartzClockHandle.GetThirtySecondNotesPerMinute
 // 0x0010 (0x0010 - 0x0000)
@@ -1005,7 +919,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_GetThirtySecondNotesPerMinute;
 
 // Function AudioMixer.QuartzClockHandle.GetTicksPerSecond
 // 0x0010 (0x0010 - 0x0000)
@@ -1016,7 +929,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzClockHandle_GetTicksPerSecond;
 
 // Function AudioMixer.QuartzSubsystem.CreateNewClock
 // 0x0040 (0x0040 - 0x0000)
@@ -1031,7 +943,6 @@ public:
 	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UQuartzClockHandle*                     ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzSubsystem_CreateNewClock;
 
 // Function AudioMixer.QuartzSubsystem.DeleteClockByHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -1041,7 +952,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     InClockHandle;                                     // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzSubsystem_DeleteClockByHandle;
 
 // Function AudioMixer.QuartzSubsystem.DeleteClockByName
 // 0x0010 (0x0010 - 0x0000)
@@ -1051,7 +961,6 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ClockName;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzSubsystem_DeleteClockByName;
 
 // Function AudioMixer.QuartzSubsystem.DoesClockExist
 // 0x0018 (0x0018 - 0x0000)
@@ -1063,7 +972,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzSubsystem_DoesClockExist;
 
 // Function AudioMixer.QuartzSubsystem.GetAudioRenderThreadToGameThreadAverageLatency
 // 0x0004 (0x0004 - 0x0000)
@@ -1072,7 +980,6 @@ struct QuartzSubsystem_GetAudioRenderThreadToGameThreadAverageLatency final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetAudioRenderThreadToGameThreadAverageLatency;
 
 // Function AudioMixer.QuartzSubsystem.GetAudioRenderThreadToGameThreadMaxLatency
 // 0x0004 (0x0004 - 0x0000)
@@ -1081,7 +988,6 @@ struct QuartzSubsystem_GetAudioRenderThreadToGameThreadMaxLatency final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetAudioRenderThreadToGameThreadMaxLatency;
 
 // Function AudioMixer.QuartzSubsystem.GetAudioRenderThreadToGameThreadMinLatency
 // 0x0004 (0x0004 - 0x0000)
@@ -1090,7 +996,6 @@ struct QuartzSubsystem_GetAudioRenderThreadToGameThreadMinLatency final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetAudioRenderThreadToGameThreadMinLatency;
 
 // Function AudioMixer.QuartzSubsystem.GetCurrentClockTimestamp
 // 0x0020 (0x0020 - 0x0000)
@@ -1101,7 +1006,6 @@ public:
 	class FName                                   InClockName;                                       // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FQuartzTransportTimeStamp              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetCurrentClockTimestamp;
 
 // Function AudioMixer.QuartzSubsystem.GetDurationOfQuantizationTypeInSeconds
 // 0x0020 (0x0020 - 0x0000)
@@ -1116,7 +1020,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetDurationOfQuantizationTypeInSeconds;
 
 // Function AudioMixer.QuartzSubsystem.GetEstimatedClockRunTime
 // 0x0018 (0x0018 - 0x0000)
@@ -1128,7 +1031,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetEstimatedClockRunTime;
 
 // Function AudioMixer.QuartzSubsystem.GetGameThreadToAudioRenderThreadAverageLatency
 // 0x0010 (0x0010 - 0x0000)
@@ -1139,7 +1041,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetGameThreadToAudioRenderThreadAverageLatency;
 
 // Function AudioMixer.QuartzSubsystem.GetGameThreadToAudioRenderThreadMaxLatency
 // 0x0010 (0x0010 - 0x0000)
@@ -1150,7 +1051,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetGameThreadToAudioRenderThreadMaxLatency;
 
 // Function AudioMixer.QuartzSubsystem.GetGameThreadToAudioRenderThreadMinLatency
 // 0x0010 (0x0010 - 0x0000)
@@ -1161,7 +1061,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetGameThreadToAudioRenderThreadMinLatency;
 
 // Function AudioMixer.QuartzSubsystem.GetHandleForClock
 // 0x0018 (0x0018 - 0x0000)
@@ -1172,7 +1071,6 @@ public:
 	class FName                                   ClockName;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UQuartzClockHandle*                     ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetHandleForClock;
 
 // Function AudioMixer.QuartzSubsystem.GetRoundTripAverageLatency
 // 0x0010 (0x0010 - 0x0000)
@@ -1183,7 +1081,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetRoundTripAverageLatency;
 
 // Function AudioMixer.QuartzSubsystem.GetRoundTripMaxLatency
 // 0x0010 (0x0010 - 0x0000)
@@ -1194,7 +1091,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetRoundTripMaxLatency;
 
 // Function AudioMixer.QuartzSubsystem.GetRoundTripMinLatency
 // 0x0010 (0x0010 - 0x0000)
@@ -1205,7 +1101,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzSubsystem_GetRoundTripMinLatency;
 
 // Function AudioMixer.QuartzSubsystem.IsClockRunning
 // 0x0018 (0x0018 - 0x0000)
@@ -1217,7 +1112,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_QuartzSubsystem_IsClockRunning;
 
 // Function AudioMixer.QuartzSubsystem.IsQuartzEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -1226,7 +1120,6 @@ struct QuartzSubsystem_IsQuartzEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzSubsystem_IsQuartzEnabled;
 
 // Function AudioMixer.QuartzSubsystem.SetQuartzSubsystemTickableWhenPaused
 // 0x0001 (0x0001 - 0x0000)
@@ -1235,7 +1128,6 @@ struct QuartzSubsystem_SetQuartzSubsystemTickableWhenPaused final
 public:
 	bool                                          bInTickableWhenPaused;                             // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_QuartzSubsystem_SetQuartzSubsystemTickableWhenPaused;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

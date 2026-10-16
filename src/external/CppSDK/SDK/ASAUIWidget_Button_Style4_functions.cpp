@@ -53,9 +53,9 @@ void UASAUIWidget_Button_Style4_C::SetActive(bool newActive)
 // Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUIWidget_Button_Style4_C::PreConstruct(bool IsDesignTime)
+void UASAUIWidget_Button_Style4_C::PreConstruct(bool IsDesignTime_PreConstruct)
 {
 	static class UFunction* Func = nullptr;
 
@@ -64,7 +64,7 @@ void UASAUIWidget_Button_Style4_C::PreConstruct(bool IsDesignTime)
 
 	Params::ASAUIWidget_Button_Style4_C_PreConstruct Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

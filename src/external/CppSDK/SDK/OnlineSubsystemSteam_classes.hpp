@@ -34,7 +34,6 @@ public:
 		return GetDefaultObjImpl<USteamAuthComponentModuleInterface>();
 	}
 };
-DUMPER7_ASSERTS_USteamAuthComponentModuleInterface;
 
 // Class OnlineSubsystemSteam.SteamNetConnection
 // 0x0008 (0x1FF0 - 0x1FE8)
@@ -58,7 +57,6 @@ public:
 		return GetDefaultObjImpl<USteamNetConnection>();
 	}
 };
-DUMPER7_ASSERTS_USteamNetConnection;
 
 // Class OnlineSubsystemSteam.SteamNetDriver
 // 0x0008 (0x0968 - 0x0960)
@@ -81,6 +79,5 @@ public:
 		return GetDefaultObjImpl<USteamNetDriver>();
 	}
 };
-DUMPER7_ASSERTS_USteamNetDriver;
 
 SDK_NAMESPACE_END

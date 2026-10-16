@@ -55,7 +55,6 @@ public:
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_BPForceDefeatedBoss;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.BPPostLoadFromFile
 // 0x0018 (0x0018 - 0x0000)
@@ -67,7 +66,6 @@ public:
 	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_BPPostLoadFromFile;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.DefeatedBoss
 // 0x01D0 (0x01D0 - 0x0000)
@@ -102,7 +100,6 @@ public:
 	double                                        CallFunc_FMax_ReturnValue;                         // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<float>                                 K2Node_MakeStruct_CustomDataFloats_ImplicitCast;   // 0x01C0(0x0010)(ReferenceParm)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_DefeatedBoss;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.EndActivityOnBoss
 // 0x0018 (0x0018 - 0x0000)
@@ -114,7 +111,6 @@ public:
 	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_EndActivityOnBoss;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.GetPlayerHexagonCount
 // 0x0004 (0x0004 - 0x0000)
@@ -123,7 +119,6 @@ struct PrimalPlayerDataBP_Base_C_GetPlayerHexagonCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_GetPlayerHexagonCount;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.GrantGeneralizedAchievementTag
 // 0x0038 (0x0038 - 0x0000)
@@ -142,7 +137,6 @@ public:
 	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_GrantGeneralizedAchievementTag;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.HasGeneralizedAchievementTag
 // 0x0014 (0x0014 - 0x0000)
@@ -156,7 +150,6 @@ public:
 	int32                                         CallFunc_Array_Find_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_HasGeneralizedAchievementTag;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.Interface_PlayerData Progress Abb Sigil Count
 // 0x0020 (0x0020 - 0x0000)
@@ -171,7 +164,6 @@ public:
 	int32                                         Next_Unlock_Count;                                 // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_Shared_Adding_Sigil_Count_Function_Count_After; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_Interface_PlayerData_Progress_Abb_Sigil_Count;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.Interface_PlayerData Progress Crimson Sigil Count
 // 0x0020 (0x0020 - 0x0000)
@@ -186,7 +178,6 @@ public:
 	int32                                         Next_Unlock_Count;                                 // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_Shared_Adding_Sigil_Count_Function_Count_After; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_Interface_PlayerData_Progress_Crimson_Sigil_Count;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.SetChibiLevels
 // 0x0030 (0x0030 - 0x0000)
@@ -202,7 +193,6 @@ public:
 	class APlayerPawnTest_C*                      K2Node_DynamicCast_AsPlayer_Pawn_Test;             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_SetChibiLevels;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.SetPlayerHexagonCount
 // 0x0008 (0x0008 - 0x0000)
@@ -212,7 +202,6 @@ public:
 	int32                                         NewHexagonCount;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_SetPlayerHexagonCount;
 
 // Function PrimalPlayerDataBP_Base.PrimalPlayerDataBP_Base_C.Shared Adding Sigil Count Function
 // 0x0108 (0x0108 - 0x0000)
@@ -299,7 +288,6 @@ public:
 	bool                                          CallFunc_BPServerside_IsPerMapExplorerNoteUnlockedHelper_HasPlayerUnlockedNote_1; // 0x0103(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalPlayerDataBP_Base_C_Shared_Adding_Sigil_Count_Function;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

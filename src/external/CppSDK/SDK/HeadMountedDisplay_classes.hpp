@@ -38,7 +38,6 @@ public:
 		return GetDefaultObjImpl<UHandKeypointConversion>();
 	}
 };
-DUMPER7_ASSERTS_UHandKeypointConversion;
 
 // Class HeadMountedDisplay.MotionControllerComponent
 // 0x0140 (0x0760 - 0x0620)
@@ -80,6 +79,5 @@ public:
 		return GetDefaultObjImpl<UMotionControllerComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMotionControllerComponent;
 
 SDK_NAMESPACE_END

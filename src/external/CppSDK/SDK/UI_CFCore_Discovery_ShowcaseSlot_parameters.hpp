@@ -24,7 +24,6 @@ struct UI_CFCore_Discovery_ShowcaseSlot_C_ConstructModShowcase final
 public:
 	struct FCarouselItem                          InfoCarouseItem;                                   // 0x0000(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_ShowcaseSlot_C_ConstructModShowcase;
 
 // Function UI_CFCore_Discovery_ShowcaseSlot.UI_CFCore_Discovery_ShowcaseSlot_C.ExecuteUbergraph_UI_CFCore_Discovery_ShowcaseSlot
 // 0x02C0 (0x02C0 - 0x0000)
@@ -89,7 +88,6 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_ShowcaseSlot_C_ExecuteUbergraph_UI_CFCore_Discovery_ShowcaseSlot;
 
 // Function UI_CFCore_Discovery_ShowcaseSlot.UI_CFCore_Discovery_ShowcaseSlot_C.OnFail_6B8AC8D045F539E0C4B381BD368F2796
 // 0x0008 (0x0008 - 0x0000)
@@ -98,7 +96,6 @@ struct UI_CFCore_Discovery_ShowcaseSlot_C_OnFail_6B8AC8D045F539E0C4B381BD368F279
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_ShowcaseSlot_C_OnFail_6B8AC8D045F539E0C4B381BD368F2796;
 
 // Function UI_CFCore_Discovery_ShowcaseSlot.UI_CFCore_Discovery_ShowcaseSlot_C.OnFail_B8687F5A48265CFC0EB678AEAD6BCBCC
 // 0x0008 (0x0008 - 0x0000)
@@ -107,7 +104,6 @@ struct UI_CFCore_Discovery_ShowcaseSlot_C_OnFail_B8687F5A48265CFC0EB678AEAD6BCBC
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_ShowcaseSlot_C_OnFail_B8687F5A48265CFC0EB678AEAD6BCBCC;
 
 // Function UI_CFCore_Discovery_ShowcaseSlot.UI_CFCore_Discovery_ShowcaseSlot_C.OnSuccess_6B8AC8D045F539E0C4B381BD368F2796
 // 0x0008 (0x0008 - 0x0000)
@@ -116,7 +112,6 @@ struct UI_CFCore_Discovery_ShowcaseSlot_C_OnSuccess_6B8AC8D045F539E0C4B381BD368F
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_ShowcaseSlot_C_OnSuccess_6B8AC8D045F539E0C4B381BD368F2796;
 
 // Function UI_CFCore_Discovery_ShowcaseSlot.UI_CFCore_Discovery_ShowcaseSlot_C.OnSuccess_B8687F5A48265CFC0EB678AEAD6BCBCC
 // 0x0008 (0x0008 - 0x0000)
@@ -125,7 +120,6 @@ struct UI_CFCore_Discovery_ShowcaseSlot_C_OnSuccess_B8687F5A48265CFC0EB678AEAD6B
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_ShowcaseSlot_C_OnSuccess_B8687F5A48265CFC0EB678AEAD6BCBCC;
 
 // Function UI_CFCore_Discovery_ShowcaseSlot.UI_CFCore_Discovery_ShowcaseSlot_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -134,7 +128,6 @@ struct UI_CFCore_Discovery_ShowcaseSlot_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_ShowcaseSlot_C_PreConstruct;
 
 // Function UI_CFCore_Discovery_ShowcaseSlot.UI_CFCore_Discovery_ShowcaseSlot_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -144,7 +137,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_ShowcaseSlot_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

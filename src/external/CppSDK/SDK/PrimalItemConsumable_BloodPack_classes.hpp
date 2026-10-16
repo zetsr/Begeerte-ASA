@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_BloodPack_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumable_BloodPack_C;
 
 SDK_NAMESPACE_END

@@ -24,7 +24,6 @@ public:
 	float                                         MaxLocalError;                                     // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MapNameOverride;                                   // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AutomationUtilsBlueprintLibrary_TakeGameplayAutomationScreenshot;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

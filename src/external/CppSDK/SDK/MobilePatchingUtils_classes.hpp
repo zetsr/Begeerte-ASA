@@ -42,7 +42,6 @@ public:
 		return GetDefaultObjImpl<UMobileInstalledContent>();
 	}
 };
-DUMPER7_ASSERTS_UMobileInstalledContent;
 
 // Class MobilePatchingUtils.MobilePendingContent
 // 0x0040 (0x0088 - 0x0048)
@@ -74,7 +73,6 @@ public:
 		return GetDefaultObjImpl<UMobilePendingContent>();
 	}
 };
-DUMPER7_ASSERTS_UMobilePendingContent;
 
 // Class MobilePatchingUtils.MobilePatchingLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -101,6 +99,5 @@ public:
 		return GetDefaultObjImpl<UMobilePatchingLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UMobilePatchingLibrary;
 
 SDK_NAMESPACE_END

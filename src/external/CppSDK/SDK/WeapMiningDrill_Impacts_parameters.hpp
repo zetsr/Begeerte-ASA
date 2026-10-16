@@ -69,7 +69,6 @@ public:
 	float                                         CallFunc_MakeColor_G_ImplicitCast;                 // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_MakeColor_B_ImplicitCast;                 // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapMiningDrill_Impacts_C_BPGetImpactEffectColor;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -21,7 +21,6 @@ struct MobileInstalledContent_GetDiskFreeSpace final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobileInstalledContent_GetDiskFreeSpace;
 
 // Function MobilePatchingUtils.MobileInstalledContent.GetInstalledContentSize
 // 0x0004 (0x0004 - 0x0000)
@@ -30,7 +29,6 @@ struct MobileInstalledContent_GetInstalledContentSize final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobileInstalledContent_GetInstalledContentSize;
 
 // Function MobilePatchingUtils.MobileInstalledContent.Mount
 // 0x0020 (0x0020 - 0x0000)
@@ -43,7 +41,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_MobileInstalledContent_Mount;
 
 // Function MobilePatchingUtils.MobilePendingContent.GetDownloadSize
 // 0x0004 (0x0004 - 0x0000)
@@ -52,7 +49,6 @@ struct MobilePendingContent_GetDownloadSize final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePendingContent_GetDownloadSize;
 
 // Function MobilePatchingUtils.MobilePendingContent.GetDownloadSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -61,7 +57,6 @@ struct MobilePendingContent_GetDownloadSpeed final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePendingContent_GetDownloadSpeed;
 
 // Function MobilePatchingUtils.MobilePendingContent.GetDownloadStatusText
 // 0x0010 (0x0010 - 0x0000)
@@ -70,7 +65,6 @@ struct MobilePendingContent_GetDownloadStatusText final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePendingContent_GetDownloadStatusText;
 
 // Function MobilePatchingUtils.MobilePendingContent.GetInstallProgress
 // 0x0004 (0x0004 - 0x0000)
@@ -79,7 +73,6 @@ struct MobilePendingContent_GetInstallProgress final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePendingContent_GetInstallProgress;
 
 // Function MobilePatchingUtils.MobilePendingContent.GetRequiredDiskSpace
 // 0x0004 (0x0004 - 0x0000)
@@ -88,7 +81,6 @@ struct MobilePendingContent_GetRequiredDiskSpace final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePendingContent_GetRequiredDiskSpace;
 
 // Function MobilePatchingUtils.MobilePendingContent.GetTotalDownloadedSize
 // 0x0004 (0x0004 - 0x0000)
@@ -97,7 +89,6 @@ struct MobilePendingContent_GetTotalDownloadedSize final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePendingContent_GetTotalDownloadedSize;
 
 // Function MobilePatchingUtils.MobilePendingContent.StartInstall
 // 0x0020 (0x0020 - 0x0000)
@@ -107,7 +98,6 @@ public:
 	TDelegate<void()>                             OnSucceeded;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class FText ErrorText, int32 ErrorCode)> OnFailed;                                // 0x0010(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePendingContent_StartInstall;
 
 // Function MobilePatchingUtils.MobilePatchingLibrary.GetActiveDeviceProfileName
 // 0x0010 (0x0010 - 0x0000)
@@ -116,7 +106,6 @@ struct MobilePatchingLibrary_GetActiveDeviceProfileName final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePatchingLibrary_GetActiveDeviceProfileName;
 
 // Function MobilePatchingUtils.MobilePatchingLibrary.GetInstalledContent
 // 0x0018 (0x0018 - 0x0000)
@@ -126,7 +115,6 @@ public:
 	class FString                                 InstallDirectory;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMobileInstalledContent*                ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePatchingLibrary_GetInstalledContent;
 
 // Function MobilePatchingUtils.MobilePatchingLibrary.GetSupportedPlatformNames
 // 0x0010 (0x0010 - 0x0000)
@@ -135,7 +123,6 @@ struct MobilePatchingLibrary_GetSupportedPlatformNames final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePatchingLibrary_GetSupportedPlatformNames;
 
 // Function MobilePatchingUtils.MobilePatchingLibrary.HasActiveWiFiConnection
 // 0x0001 (0x0001 - 0x0000)
@@ -144,7 +131,6 @@ struct MobilePatchingLibrary_HasActiveWiFiConnection final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePatchingLibrary_HasActiveWiFiConnection;
 
 // Function MobilePatchingUtils.MobilePatchingLibrary.RequestContent
 // 0x0050 (0x0050 - 0x0000)
@@ -157,7 +143,6 @@ public:
 	TDelegate<void(class UMobilePendingContent* MobilePendingContent)> OnSucceeded;                  // 0x0030(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class FText ErrorText, int32 ErrorCode)> OnFailed;                                // 0x0040(0x0010)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MobilePatchingLibrary_RequestContent;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

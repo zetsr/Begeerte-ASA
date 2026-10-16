@@ -49,7 +49,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCache>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCache;
 
 // Class GeometryCache.GeometryCacheActor
 // 0x0008 (0x0498 - 0x0490)
@@ -75,7 +74,6 @@ public:
 		return GetDefaultObjImpl<AGeometryCacheActor>();
 	}
 };
-DUMPER7_ASSERTS_AGeometryCacheActor;
 
 // Class GeometryCache.GeometryCacheCodecBase
 // 0x0010 (0x0038 - 0x0028)
@@ -98,7 +96,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheCodecBase>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheCodecBase;
 
 // Class GeometryCache.GeometryCacheCodecRaw
 // 0x0008 (0x0040 - 0x0038)
@@ -122,7 +119,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheCodecRaw>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheCodecRaw;
 
 // Class GeometryCache.GeometryCacheCodecV1
 // 0x0008 (0x0040 - 0x0038)
@@ -145,7 +141,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheCodecV1>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheCodecV1;
 
 // Class GeometryCache.GeometryCacheComponent
 // 0x0080 (0x06E0 - 0x0660)
@@ -217,7 +212,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheComponent;
 
 // Class GeometryCache.GeometryCacheTrack
 // 0x0030 (0x0058 - 0x0028)
@@ -241,7 +235,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheTrack>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheTrack;
 
 // Class GeometryCache.GeometryCacheTrack_FlipbookAnimation
 // 0x0028 (0x0080 - 0x0058)
@@ -268,7 +261,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheTrack_FlipbookAnimation>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheTrack_FlipbookAnimation;
 
 // Class GeometryCache.GeometryCacheTrackStreamable
 // 0x0078 (0x00D0 - 0x0058)
@@ -294,7 +286,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheTrackStreamable>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheTrackStreamable;
 
 // Class GeometryCache.GeometryCacheTrack_TransformAnimation
 // 0x00C8 (0x0120 - 0x0058)
@@ -320,7 +311,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheTrack_TransformAnimation>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheTrack_TransformAnimation;
 
 // Class GeometryCache.GeometryCacheTrack_TransformGroupAnimation
 // 0x00C8 (0x0120 - 0x0058)
@@ -346,7 +336,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheTrack_TransformGroupAnimation>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheTrack_TransformGroupAnimation;
 
 // Class GeometryCache.NiagaraGeometryCacheRendererProperties
 // 0x0228 (0x02E0 - 0x00B8)
@@ -385,6 +374,5 @@ public:
 		return GetDefaultObjImpl<UNiagaraGeometryCacheRendererProperties>();
 	}
 };
-DUMPER7_ASSERTS_UNiagaraGeometryCacheRendererProperties;
 
 SDK_NAMESPACE_END

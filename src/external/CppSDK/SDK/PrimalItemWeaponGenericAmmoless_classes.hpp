@@ -35,6 +35,5 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UPrimalItemWeaponGenericAmmoless_C;
 
 SDK_NAMESPACE_END

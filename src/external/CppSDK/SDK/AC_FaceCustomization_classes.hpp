@@ -124,6 +124,5 @@ public:
 		return GetDefaultObjImpl<UAC_FaceCustomization_C>();
 	}
 };
-DUMPER7_ASSERTS_UAC_FaceCustomization_C;
 
 SDK_NAMESPACE_END

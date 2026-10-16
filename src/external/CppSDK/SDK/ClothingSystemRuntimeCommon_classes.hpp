@@ -36,7 +36,6 @@ public:
 		return GetDefaultObjImpl<UClothConfigCommon>();
 	}
 };
-DUMPER7_ASSERTS_UClothConfigCommon;
 
 // Class ClothingSystemRuntimeCommon.ClothSharedConfigCommon
 // 0x0000 (0x0028 - 0x0028)
@@ -56,7 +55,6 @@ public:
 		return GetDefaultObjImpl<UClothSharedConfigCommon>();
 	}
 };
-DUMPER7_ASSERTS_UClothSharedConfigCommon;
 
 // Class ClothingSystemRuntimeCommon.ClothingAssetCustomData
 // 0x0000 (0x0028 - 0x0028)
@@ -76,7 +74,6 @@ public:
 		return GetDefaultObjImpl<UClothingAssetCustomData>();
 	}
 };
-DUMPER7_ASSERTS_UClothingAssetCustomData;
 
 // Class ClothingSystemRuntimeCommon.ClothingAssetCommon
 // 0x00A0 (0x00E8 - 0x0048)
@@ -106,7 +103,6 @@ public:
 		return GetDefaultObjImpl<UClothingAssetCommon>();
 	}
 };
-DUMPER7_ASSERTS_UClothingAssetCommon;
 
 // Class ClothingSystemRuntimeCommon.ClothLODDataCommon_Legacy
 // 0x0190 (0x01B8 - 0x0028)
@@ -132,6 +128,5 @@ public:
 		return GetDefaultObjImpl<UClothLODDataCommon_Legacy>();
 	}
 };
-DUMPER7_ASSERTS_UClothLODDataCommon_Legacy;
 
 SDK_NAMESPACE_END

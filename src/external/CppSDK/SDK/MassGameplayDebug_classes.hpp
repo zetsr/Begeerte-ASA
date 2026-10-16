@@ -38,7 +38,6 @@ public:
 		return GetDefaultObjImpl<UAssignDebugVisProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UAssignDebugVisProcessor;
 
 // Class MassGameplayDebug.DebugVisLocationProcessor
 // 0x0320 (0x03D0 - 0x00B0)
@@ -61,7 +60,6 @@ public:
 		return GetDefaultObjImpl<UDebugVisLocationProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UDebugVisLocationProcessor;
 
 // Class MassGameplayDebug.MassProcessor_UpdateDebugVis
 // 0x0320 (0x03D0 - 0x00B0)
@@ -84,7 +82,6 @@ public:
 		return GetDefaultObjImpl<UMassProcessor_UpdateDebugVis>();
 	}
 };
-DUMPER7_ASSERTS_UMassProcessor_UpdateDebugVis;
 
 // Class MassGameplayDebug.MassDebuggerSubsystem
 // 0x0098 (0x00D0 - 0x0038)
@@ -110,7 +107,6 @@ public:
 		return GetDefaultObjImpl<UMassDebuggerSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassDebuggerSubsystem;
 
 // Class MassGameplayDebug.MassDebugVisualizationComponent
 // 0x0000 (0x00D0 - 0x00D0)
@@ -130,7 +126,6 @@ public:
 		return GetDefaultObjImpl<UMassDebugVisualizationComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMassDebugVisualizationComponent;
 
 // Class MassGameplayDebug.MassDebugVisualizationTrait
 // 0x0000 (0x0028 - 0x0028)
@@ -150,7 +145,6 @@ public:
 		return GetDefaultObjImpl<UMassDebugVisualizationTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassDebugVisualizationTrait;
 
 // Class MassGameplayDebug.MassDebugVisualizer
 // 0x0000 (0x0490 - 0x0490)
@@ -170,6 +164,5 @@ public:
 		return GetDefaultObjImpl<AMassDebugVisualizer>();
 	}
 };
-DUMPER7_ASSERTS_AMassDebugVisualizer;
 
 SDK_NAMESPACE_END

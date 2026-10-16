@@ -60,7 +60,6 @@ struct FSoundGeneratorOutput
 public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSoundGeneratorOutput;
 
 // ScriptStruct AudioExtensions.SoundWaveCloudStreamingPlatformProjectSettings
 // 0x0001 (0x0001 - 0x0000)
@@ -69,7 +68,6 @@ struct FSoundWaveCloudStreamingPlatformProjectSettings final
 public:
 	ESoundWaveCloudStreamingPlatformProjectEnableType EnablementSetting;                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSoundWaveCloudStreamingPlatformProjectSettings;
 
 // ScriptStruct AudioExtensions.SoundWaveCloudStreamingPlatformSettings
 // 0x0001 (0x0001 - 0x0000)
@@ -78,7 +76,6 @@ struct FSoundWaveCloudStreamingPlatformSettings final
 public:
 	ESoundWaveCloudStreamingPlatformEnableType    EnablementSetting;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSoundWaveCloudStreamingPlatformSettings;
 
 // ScriptStruct AudioExtensions.AudioParameter
 // 0x00A0 (0x00A0 - 0x0000)
@@ -103,6 +100,5 @@ public:
 	class FName                                   TypeName;                                          // 0x0084(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8C[0x14];                                      // 0x008C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAudioParameter;
 
 SDK_NAMESPACE_END

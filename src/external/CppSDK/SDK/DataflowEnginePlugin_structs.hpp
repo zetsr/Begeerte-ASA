@@ -21,6 +21,5 @@ public:
 	class FString                                 Attribute;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Group;                                             // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCollectionAttributeKey;
 
 SDK_NAMESPACE_END

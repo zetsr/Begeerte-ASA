@@ -40,7 +40,6 @@ public:
 		return GetDefaultObjImpl<UDefaultModularVehicleInputModifier>();
 	}
 };
-DUMPER7_ASSERTS_UDefaultModularVehicleInputModifier;
 
 // Class ChaosVehiclesCore.VehicleInputProducerBase
 // 0x0000 (0x0028 - 0x0028)
@@ -60,6 +59,5 @@ public:
 		return GetDefaultObjImpl<UVehicleInputProducerBase>();
 	}
 };
-DUMPER7_ASSERTS_UVehicleInputProducerBase;
 
 SDK_NAMESPACE_END

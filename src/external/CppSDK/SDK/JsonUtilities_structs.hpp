@@ -21,6 +21,5 @@ public:
 	class FString                                 JsonString;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FJsonObjectWrapper;
 
 SDK_NAMESPACE_END

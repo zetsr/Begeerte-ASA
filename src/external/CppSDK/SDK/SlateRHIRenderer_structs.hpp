@@ -25,6 +25,5 @@ public:
 	class UTextureRenderTarget2D*                 CachedSlatePostRT;                                 // 0x0020(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSlatePostSettings;
 
 SDK_NAMESPACE_END
