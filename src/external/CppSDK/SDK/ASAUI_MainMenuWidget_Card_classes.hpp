@@ -66,11 +66,11 @@ public:
 public:
 	void StopAnims();
 	void Refresh();
-	void PreConstruct(bool IsDesignTime);
+	void PreConstruct(bool IsDesignTime_PreConstruct);
 	void OnMouseLeaveFunc();
-	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
+	void OnMouseLeave(const struct FPointerEvent& MouseEvent_OnMouseLeave);
 	void OnMouseEnterFunc();
-	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void OnMouseEnter(const struct FGeometry& MyGeometry_OnMouseEnter, const struct FPointerEvent& MouseEvent_OnMouseEnter);
 	void ExecuteUbergraph_ASAUI_MainMenuWidget_Card(int32 EntryPoint);
 	void Construct();
 	void BndEvt__ASAUI_MainMenuWidget_Card_Button_99_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
@@ -90,6 +90,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_MainMenuWidget_Card_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_MainMenuWidget_Card_C;
 
 SDK_NAMESPACE_END

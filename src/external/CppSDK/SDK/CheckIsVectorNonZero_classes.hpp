@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<UCheckIsVectorNonZero_C>();
 	}
 };
-DUMPER7_ASSERTS_UCheckIsVectorNonZero_C;
 
 SDK_NAMESPACE_END

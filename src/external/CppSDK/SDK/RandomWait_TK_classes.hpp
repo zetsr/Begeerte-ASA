@@ -45,6 +45,5 @@ public:
 		return GetDefaultObjImpl<URandomWait_TK_C>();
 	}
 };
-DUMPER7_ASSERTS_URandomWait_TK_C;
 
 SDK_NAMESPACE_END

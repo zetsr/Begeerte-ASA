@@ -48,6 +48,5 @@ public:
 		return GetDefaultObjImpl<UDataListEntryWidgetAllPaintings_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryWidgetAllPaintings_C;
 
 SDK_NAMESPACE_END

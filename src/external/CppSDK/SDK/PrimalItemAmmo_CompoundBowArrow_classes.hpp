@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_CompoundBowArrow_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemAmmo_CompoundBowArrow_C;
 
 SDK_NAMESPACE_END

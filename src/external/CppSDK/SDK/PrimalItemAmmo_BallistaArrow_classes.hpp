@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_BallistaArrow_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemAmmo_BallistaArrow_C;
 
 SDK_NAMESPACE_END

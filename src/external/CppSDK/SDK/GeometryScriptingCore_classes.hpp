@@ -38,7 +38,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptDebug>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptDebug;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -83,7 +82,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_CollisionFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_CollisionFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_ContainmentFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -108,7 +106,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_ContainmentFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_ContainmentFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_ListUtilityFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -177,7 +174,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_ListUtilityFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_ListUtilityFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_StaticMeshFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -214,7 +210,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_StaticMeshFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_StaticMeshFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshBakeFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -253,7 +248,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshBakeFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshBakeFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshBasicEditFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -294,7 +288,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshBasicEditFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshBasicEditFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -336,7 +329,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshBoneWeightFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshBoneWeightFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshBooleanFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -363,7 +355,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshBooleanFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshBooleanFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshComparisonFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -388,7 +379,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshComparisonFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshComparisonFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshDecompositionFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -416,7 +406,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshDecompositionFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshDecompositionFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshDeformFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -446,7 +435,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshDeformFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshDeformFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshGeodesicFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -471,7 +459,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshGeodesicFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshGeodesicFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshMaterialFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -510,7 +497,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshMaterialFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshMaterialFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshModelingFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -544,7 +530,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshModelingFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshModelingFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -583,7 +568,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshNormalsFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshNormalsFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshPolygroupFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -619,7 +603,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshPolygroupFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshPolygroupFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshPoolFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -643,7 +626,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshPoolFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshPoolFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -701,7 +683,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshPrimitiveFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshPrimitiveFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -772,7 +753,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshQueryFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshQueryFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_RemeshingFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -795,7 +775,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_RemeshingFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_RemeshingFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshRepairFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -827,7 +806,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshRepairFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshRepairFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshSamplingFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -854,7 +832,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSamplingFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSamplingFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -900,7 +877,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSelectionFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSelectionFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionQueryFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -924,7 +900,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSelectionQueryFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSelectionQueryFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -951,7 +926,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSimplifyFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSimplifyFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshSpatial
 // 0x0000 (0x0028 - 0x0028)
@@ -981,7 +955,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSpatial>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSpatial;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshSubdivideFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1006,7 +979,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSubdivideFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshSubdivideFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshTransformFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1037,7 +1009,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshTransformFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshTransformFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1085,7 +1056,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshUVFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshUVFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshVertexColorFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1114,7 +1084,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshVertexColorFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshVertexColorFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshVoxelFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1138,7 +1107,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshVoxelFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_MeshVoxelFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_PointSetSamplingFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1169,7 +1137,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_PointSetSamplingFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_PointSetSamplingFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1204,7 +1171,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_SimplePolygonFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_SimplePolygonFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1250,7 +1216,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_PolygonListFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_PolygonListFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1293,7 +1258,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_PolyPathFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_PolyPathFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_SceneUtilityFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1320,7 +1284,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_SceneUtilityFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_SceneUtilityFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_TransformFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1347,7 +1310,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_TransformFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_TransformFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_RayFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1382,7 +1344,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_RayFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_RayFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1419,7 +1380,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_BoxFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_BoxFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1443,7 +1403,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_TextureMapFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_TextureMapFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1487,7 +1446,6 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_VectorMathFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_VectorMathFunctions;
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_VolumeTextureBakeFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -1510,6 +1468,5 @@ public:
 		return GetDefaultObjImpl<UGeometryScriptLibrary_VolumeTextureBakeFunctions>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryScriptLibrary_VolumeTextureBakeFunctions;
 
 SDK_NAMESPACE_END

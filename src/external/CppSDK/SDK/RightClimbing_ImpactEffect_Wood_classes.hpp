@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<ARightClimbing_ImpactEffect_Wood_C>();
 	}
 };
-DUMPER7_ASSERTS_ARightClimbing_ImpactEffect_Wood_C;
 
 SDK_NAMESPACE_END

@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UWaitForWandering_DK_C>();
 	}
 };
-DUMPER7_ASSERTS_UWaitForWandering_DK_C;
 
 SDK_NAMESPACE_END

@@ -30,7 +30,6 @@ public:
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_BPGamepadReleased;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.Debug Discovery Generation
 // 0x0030 (0x0030 - 0x0000)
@@ -39,7 +38,6 @@ struct UI_CFCore_Discovery_C_Debug_Discovery_Generation final
 public:
 	struct FModsHighlightsV3                      ModsHighlightsV3;                                  // 0x0000(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_Debug_Discovery_Generation;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.ExecuteUbergraph_UI_CFCore_Discovery
 // 0x06C0 (0x06C0 - 0x0000)
@@ -208,7 +206,6 @@ public:
 	class UShooterGameViewportClient*             CallFunc_GetViewportClient_ReturnValue;            // 0x06B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimalUI*                              CallFunc_GetUISceneFromClass_ReturnValue;          // 0x06B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_ExecuteUbergraph_UI_CFCore_Discovery;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -218,7 +215,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_GetRootCFWidget;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.GoToCarouselItemDestination
 // 0x0010 (0x0010 - 0x0000)
@@ -227,7 +223,6 @@ struct UI_CFCore_Discovery_C_GoToCarouselItemDestination final
 public:
 	struct FCarouselItemDestination               CarouselItemDestination;                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_GoToCarouselItemDestination;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.IMG_ShowcasePreview_Event
 // 0x0008 (0x0008 - 0x0000)
@@ -236,7 +231,6 @@ struct UI_CFCore_Discovery_C_IMG_ShowcasePreview_Event final
 public:
 	class UImage*                                 IMG_ShowcasePreview_0;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_IMG_ShowcasePreview_Event;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.OnErrorGetModHighlights
 // 0x0038 (0x0038 - 0x0000)
@@ -245,7 +239,6 @@ struct UI_CFCore_Discovery_C_OnErrorGetModHighlights final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_OnErrorGetModHighlights;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.OnModHighlightFound
 // 0x0030 (0x0030 - 0x0000)
@@ -254,7 +247,6 @@ struct UI_CFCore_Discovery_C_OnModHighlightFound final
 public:
 	struct FModsHighlightsV3                      mods;                                              // 0x0000(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_OnModHighlightFound;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.OpenSpotlight
 // 0x0010 (0x0010 - 0x0000)
@@ -266,7 +258,6 @@ public:
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_OpenSpotlight;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.OpenSpotlightShowcasePage
 // 0x0128 (0x0128 - 0x0000)
@@ -316,7 +307,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue_1;      // 0x0122(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_OpenSpotlightShowcasePage;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -325,7 +315,6 @@ struct UI_CFCore_Discovery_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_PreConstruct;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.SequenceEvent__ENTRYPOINTUI_CFCore_Discovery
 // 0x0008 (0x0008 - 0x0000)
@@ -334,7 +323,6 @@ struct UI_CFCore_Discovery_C_SequenceEvent__ENTRYPOINTUI_CFCore_Discovery final
 public:
 	class UImage*                                 IMG_ShowcasePreview_0;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_SequenceEvent__ENTRYPOINTUI_CFCore_Discovery;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.SetToNewCurrentShowcaseSlot
 // 0x0008 (0x0008 - 0x0000)
@@ -343,7 +331,6 @@ struct UI_CFCore_Discovery_C_SetToNewCurrentShowcaseSlot final
 public:
 	class UUI_CFCore_Discovery_ShowcaseSlot_C*    NewSlot;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_SetToNewCurrentShowcaseSlot;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.SortByIndexShelveArray
 // 0x0210 (0x0210 - 0x0000)
@@ -374,7 +361,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_SortByIndexShelveArray;
 
 // Function UI_CFCore_Discovery.UI_CFCore_Discovery_C.UpdateCarouselFromMod
 // 0x0760 (0x0760 - 0x0000)
@@ -426,7 +412,6 @@ public:
 	uint8                                         Pad_751[0x7];                                      // 0x0751(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPanelSlot*                             CallFunc_AddChild_ReturnValue_2;                   // 0x0758(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_C_UpdateCarouselFromMod;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

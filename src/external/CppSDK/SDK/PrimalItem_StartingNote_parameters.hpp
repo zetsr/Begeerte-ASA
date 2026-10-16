@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "ArrayOfStrings_structs.hpp"
 #include "ShooterGame_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ArrayOfStrings_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -41,7 +41,6 @@ public:
 	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast; // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_StartingNote_C_BPCanUse;
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPDrawItemIcon
 // 0x0128 (0x0128 - 0x0000)
@@ -85,7 +84,6 @@ public:
 	uint8                                         Pad_11B[0x5];                                      // 0x011B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             K2Node_Select_Default;                             // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_StartingNote_C_BPDrawItemIcon;
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPGetItemDescription
 // 0x04B8 (0x04B8 - 0x0000)
@@ -191,7 +189,6 @@ public:
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast;      // 0x04B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_DoubleFloat_B_ImplicitCast;           // 0x04B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_StartingNote_C_BPGetItemDescription;
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPGetItemIcon
 // 0x0028 (0x0028 - 0x0000)
@@ -206,7 +203,6 @@ public:
 	class UTexture2D*                             CallFunc_GetItemIconJIT_ReturnValue;               // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             K2Node_Select_Default;                             // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_StartingNote_C_BPGetItemIcon;
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPGetItemName
 // 0x0050 (0x0050 - 0x0000)
@@ -222,7 +218,6 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 K2Node_Select_Default;                             // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_StartingNote_C_BPGetItemName;
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.BPPreInitializeItem
 // 0x0730 (0x0730 - 0x0000)
@@ -381,7 +376,6 @@ public:
 	double                                        CallFunc_FFloor_A_ImplicitCast_4;                  // 0x0718(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<float>                                 K2Node_MakeStruct_CustomDataFloats_ImplicitCast;   // 0x0720(0x0010)(ReferenceParm)
 };
-DUMPER7_ASSERTS_PrimalItem_StartingNote_C_BPPreInitializeItem;
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.ExecuteUbergraph_PrimalItem_StartingNote
 // 0x0028 (0x0028 - 0x0000)
@@ -399,7 +393,6 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_StartingNote_C_ExecuteUbergraph_PrimalItem_StartingNote;
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.Get Survival Quotient String
 // 0x0148 (0x0148 - 0x0000)
@@ -452,7 +445,6 @@ public:
 	int32                                         CallFunc_Len_ReturnValue_1;                        // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_StartingNote_C_Get_Survival_Quotient_String;
 
 // Function PrimalItem_StartingNote.PrimalItem_StartingNote_C.IsLocalImplant
 // 0x00F0 (0x00F0 - 0x0000)
@@ -474,7 +466,6 @@ public:
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_StartingNote_C_IsLocalImplant;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

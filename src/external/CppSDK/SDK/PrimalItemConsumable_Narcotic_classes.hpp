@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Narcotic_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumable_Narcotic_C;
 
 SDK_NAMESPACE_END

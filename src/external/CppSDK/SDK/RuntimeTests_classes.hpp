@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<AEngineTestTickActor>();
 	}
 };
-DUMPER7_ASSERTS_AEngineTestTickActor;
 
 SDK_NAMESPACE_END

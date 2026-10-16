@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalCameraConfig_BP_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalCameraConfig_BP_Base_C;
 
 SDK_NAMESPACE_END

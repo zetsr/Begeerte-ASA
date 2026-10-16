@@ -40,6 +40,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Honey_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumable_Honey_C;
 
 SDK_NAMESPACE_END

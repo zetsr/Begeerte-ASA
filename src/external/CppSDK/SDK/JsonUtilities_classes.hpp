@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UJsonUtilitiesDummyObject>();
 	}
 };
-DUMPER7_ASSERTS_UJsonUtilitiesDummyObject;
 
 SDK_NAMESPACE_END

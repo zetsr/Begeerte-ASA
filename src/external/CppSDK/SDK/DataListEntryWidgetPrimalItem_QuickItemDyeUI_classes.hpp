@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UDataListEntryWidgetPrimalItem_QuickItemDyeUI_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryWidgetPrimalItem_QuickItemDyeUI_C;
 
 SDK_NAMESPACE_END

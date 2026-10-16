@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Egg_Small_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumable_Egg_Small_C;
 
 SDK_NAMESPACE_END

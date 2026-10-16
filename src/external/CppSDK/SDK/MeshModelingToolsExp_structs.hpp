@@ -1125,7 +1125,6 @@ public:
 	int32                                         SourceTextureUVLayer;                              // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBakeMultiMeshDetailProperties;
 
 // ScriptStruct MeshModelingToolsExp.PerlinLayerProperties
 // 0x0008 (0x0008 - 0x0000)
@@ -1135,7 +1134,6 @@ public:
 	float                                         Frequency;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Intensity;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPerlinLayerProperties;
 
 // ScriptStruct MeshModelingToolsExp.EditPivotTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -1145,7 +1143,6 @@ public:
 	class UTransformProxy*                        TransformProxy;                                    // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class UCombinedTransformGizmo*                TransformGizmo;                                    // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FEditPivotTarget;
 
 // ScriptStruct MeshModelingToolsExp.PhysicsSphereData
 // 0x00A0 (0x00A0 - 0x0000)
@@ -1157,7 +1154,6 @@ public:
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FKShapeElem                            Element;                                           // 0x0070(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPhysicsSphereData;
 
 // ScriptStruct MeshModelingToolsExp.PhysicsBoxData
 // 0x00B0 (0x00B0 - 0x0000)
@@ -1169,7 +1165,6 @@ public:
 	struct FTransform                             Transform;                                         // 0x0020(0x0060)(Edit, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FKShapeElem                            Element;                                           // 0x0080(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPhysicsBoxData;
 
 // ScriptStruct MeshModelingToolsExp.PhysicsCapsuleData
 // 0x00A0 (0x00A0 - 0x0000)
@@ -1182,7 +1177,6 @@ public:
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Edit, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FKShapeElem                            Element;                                           // 0x0070(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPhysicsCapsuleData;
 
 // ScriptStruct MeshModelingToolsExp.PhysicsConvexData
 // 0x0038 (0x0038 - 0x0000)
@@ -1193,7 +1187,6 @@ public:
 	int32                                         NumFaces;                                          // 0x0004(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FKShapeElem                            Element;                                           // 0x0008(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPhysicsConvexData;
 
 // ScriptStruct MeshModelingToolsExp.PhysicsLevelSetData
 // 0x0030 (0x0030 - 0x0000)
@@ -1202,7 +1195,6 @@ struct FPhysicsLevelSetData final
 public:
 	struct FKShapeElem                            Element;                                           // 0x0000(0x0030)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPhysicsLevelSetData;
 
 // ScriptStruct MeshModelingToolsExp.BrushToolRadius
 // 0x0014 (0x0014 - 0x0000)
@@ -1215,7 +1207,6 @@ public:
 	float                                         WorldRadius;                                       // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x8];                                        // 0x000C(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBrushToolRadius;
 
 // ScriptStruct MeshModelingToolsExp.TransformMeshesTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -1225,6 +1216,5 @@ public:
 	class UTransformProxy*                        TransformProxy;                                    // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class UCombinedTransformGizmo*                TransformGizmo;                                    // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FTransformMeshesTarget;
 
 SDK_NAMESPACE_END

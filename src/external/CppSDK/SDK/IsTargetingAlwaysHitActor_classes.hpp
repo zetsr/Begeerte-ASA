@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<UIsTargetingAlwaysHitActor_C>();
 	}
 };
-DUMPER7_ASSERTS_UIsTargetingAlwaysHitActor_C;
 
 SDK_NAMESPACE_END

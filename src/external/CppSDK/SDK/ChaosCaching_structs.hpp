@@ -54,7 +54,6 @@ struct alignas(0x08) FCacheEventBase
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCacheEventBase;
 
 // ScriptStruct ChaosCaching.EnableStateEvent
 // 0x0008 (0x0010 - 0x0008)
@@ -65,7 +64,6 @@ public:
 	bool                                          bEnable;                                           // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FEnableStateEvent;
 
 // ScriptStruct ChaosCaching.BreakingEvent
 // 0x0088 (0x0090 - 0x0008)
@@ -82,7 +80,6 @@ public:
 	struct FVector                                BoundingBoxMin;                                    // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                BoundingBoxMax;                                    // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBreakingEvent;
 
 // ScriptStruct ChaosCaching.CollisionEvent
 // 0x00E8 (0x00F0 - 0x0008)
@@ -103,7 +100,6 @@ public:
 	float                                         PenetrationDepth;                                  // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCollisionEvent;
 
 // ScriptStruct ChaosCaching.TrailingEvent
 // 0x0080 (0x0088 - 0x0008)
@@ -118,7 +114,6 @@ public:
 	struct FVector                                BoundingBoxMin;                                    // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                BoundingBoxMax;                                    // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTrailingEvent;
 
 // ScriptStruct ChaosCaching.CacheEventTrack
 // 0x0038 (0x0038 - 0x0000)
@@ -130,7 +125,6 @@ public:
 	TArray<float>                                 Timestamps;                                        // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0x18];                                      // 0x0020(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FCacheEventTrack;
 
 // ScriptStruct ChaosCaching.ObservedComponent
 // 0x0180 (0x0180 - 0x0000)
@@ -146,7 +140,6 @@ public:
 	struct FDirectoryPath                         USDCacheDirectory;                                 // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_90[0xF0];                                      // 0x0090(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FObservedComponent;
 
 // ScriptStruct ChaosCaching.ParticleTransformTrack
 // 0x0048 (0x0048 - 0x0000)
@@ -159,7 +152,6 @@ public:
 	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 KeyTimestamps;                                     // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FParticleTransformTrack;
 
 // ScriptStruct ChaosCaching.PerParticleCacheData
 // 0x0098 (0x0098 - 0x0000)
@@ -169,7 +161,6 @@ public:
 	struct FParticleTransformTrack                TransformData;                                     // 0x0000(0x0048)(NativeAccessSpecifierPublic)
 	TMap<class FName, struct FRichCurve>          CurveData;                                         // 0x0048(0x0050)(NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPerParticleCacheData;
 
 // ScriptStruct ChaosCaching.CacheSpawnableTemplate
 // 0x00D0 (0x00D0 - 0x0000)
@@ -181,7 +172,6 @@ public:
 	struct FTransform                             InitialTransform;                                  // 0x0010(0x0060)(Edit, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTransform                             ComponentTransform;                                // 0x0070(0x0060)(Edit, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCacheSpawnableTemplate;
 
 // ScriptStruct ChaosCaching.RichCurves
 // 0x0010 (0x0010 - 0x0000)
@@ -190,7 +180,6 @@ struct FRichCurves final
 public:
 	TArray<struct FRichCurve>                     RichCurves;                                        // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRichCurves;
 
 // ScriptStruct ChaosCaching.CompressedRichCurves
 // 0x0010 (0x0010 - 0x0000)
@@ -199,7 +188,6 @@ struct FCompressedRichCurves final
 public:
 	TArray<struct FCompressedRichCurve>           CompressedRichCurves;                              // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCompressedRichCurves;
 
 // ScriptStruct ChaosCaching.MovieSceneChaosCacheParams
 // 0x0008 (0x0028 - 0x0020)
@@ -208,7 +196,6 @@ struct FMovieSceneChaosCacheParams final : public FMovieSceneBaseCacheParams
 public:
 	class UChaosCacheCollection*                  CacheCollection;                                   // 0x0020(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMovieSceneChaosCacheParams;
 
 // ScriptStruct ChaosCaching.MovieSceneChaosCacheSectionTemplateParameters
 // 0x0028 (0x0030 - 0x0008)
@@ -217,7 +204,6 @@ struct FMovieSceneChaosCacheSectionTemplateParameters final : public FMovieScene
 public:
 	struct FMovieSceneChaosCacheParams            ChaosCacheParams;                                  // 0x0008(0x0028)(NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMovieSceneChaosCacheSectionTemplateParameters;
 
 // ScriptStruct ChaosCaching.MovieSceneChaosCacheSectionTemplate
 // 0x0030 (0x0050 - 0x0020)
@@ -226,6 +212,5 @@ struct FMovieSceneChaosCacheSectionTemplate final : public FMovieSceneEvalTempla
 public:
 	struct FMovieSceneChaosCacheSectionTemplateParameters Params;                                    // 0x0020(0x0030)(NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMovieSceneChaosCacheSectionTemplate;
 
 SDK_NAMESPACE_END

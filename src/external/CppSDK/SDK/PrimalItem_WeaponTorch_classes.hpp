@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "PrimalItemWeaponGenericAmmoless_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "PrimalItemWeaponGenericAmmoless_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -67,6 +67,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponTorch_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_WeaponTorch_C;
 
 SDK_NAMESPACE_END

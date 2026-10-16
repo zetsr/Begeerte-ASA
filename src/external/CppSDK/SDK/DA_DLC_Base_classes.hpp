@@ -45,6 +45,5 @@ public:
 		return GetDefaultObjImpl<UDA_DLC_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UDA_DLC_Base_C;
 
 SDK_NAMESPACE_END

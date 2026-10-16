@@ -66,6 +66,5 @@ public:
 		return GetDefaultObjImpl<UColorPicker_ASA_Widget_C>();
 	}
 };
-DUMPER7_ASSERTS_UColorPicker_ASA_Widget_C;
 
 SDK_NAMESPACE_END

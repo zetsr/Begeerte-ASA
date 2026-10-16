@@ -37,7 +37,6 @@ public:
 		return GetDefaultObjImpl<UPCGDynamicMeshBaseSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGDynamicMeshBaseSettings;
 
 // Class PCGGeometryScriptInterop.PCGAppendMeshesFromPointsSettings
 // 0x0068 (0x0120 - 0x00B8)
@@ -69,7 +68,6 @@ public:
 		return GetDefaultObjImpl<UPCGAppendMeshesFromPointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGAppendMeshesFromPointsSettings;
 
 // Class PCGGeometryScriptInterop.PCGBooleanOperationSettings
 // 0x0018 (0x00D0 - 0x00B8)
@@ -97,7 +95,6 @@ public:
 		return GetDefaultObjImpl<UPCGBooleanOperationSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGBooleanOperationSettings;
 
 // Class PCGGeometryScriptInterop.PCGCreateEmptyDynamicMeshSettings
 // 0x0000 (0x00B8 - 0x00B8)
@@ -117,7 +114,6 @@ public:
 		return GetDefaultObjImpl<UPCGCreateEmptyDynamicMeshSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGCreateEmptyDynamicMeshSettings;
 
 // Class PCGGeometryScriptInterop.PCGDynamicMeshData
 // 0x0290 (0x0310 - 0x0080)
@@ -146,7 +142,6 @@ public:
 		return GetDefaultObjImpl<UPCGDynamicMeshData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGDynamicMeshData;
 
 // Class PCGGeometryScriptInterop.PCGDynamicMeshManagedComponent
 // 0x0010 (0x0070 - 0x0060)
@@ -170,7 +165,6 @@ public:
 		return GetDefaultObjImpl<UPCGDynamicMeshManagedComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPCGDynamicMeshManagedComponent;
 
 // Class PCGGeometryScriptInterop.PCGDynamicMeshTransformSettings
 // 0x0068 (0x0120 - 0x00B8)
@@ -194,7 +188,6 @@ public:
 		return GetDefaultObjImpl<UPCGDynamicMeshTransformSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGDynamicMeshTransformSettings;
 
 // Class PCGGeometryScriptInterop.PCGGeometryBlueprintElement
 // 0x0000 (0x0068 - 0x0068)
@@ -219,7 +212,6 @@ public:
 		return GetDefaultObjImpl<UPCGGeometryBlueprintElement>();
 	}
 };
-DUMPER7_ASSERTS_UPCGGeometryBlueprintElement;
 
 // Class PCGGeometryScriptInterop.PCGGetDynamicMeshDataSettings
 // 0x0010 (0x0170 - 0x0160)
@@ -243,7 +235,6 @@ public:
 		return GetDefaultObjImpl<UPCGGetDynamicMeshDataSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGGetDynamicMeshDataSettings;
 
 // Class PCGGeometryScriptInterop.PCGMergeDynamicMeshesSettings
 // 0x0000 (0x00B8 - 0x00B8)
@@ -263,7 +254,6 @@ public:
 		return GetDefaultObjImpl<UPCGMergeDynamicMeshesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGMergeDynamicMeshesSettings;
 
 // Class PCGGeometryScriptInterop.PCGMeshSamplerSettings
 // 0x00D8 (0x0190 - 0x00B8)
@@ -316,7 +306,6 @@ public:
 		return GetDefaultObjImpl<UPCGMeshSamplerSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGMeshSamplerSettings;
 
 // Class PCGGeometryScriptInterop.PCGPrimitiveCrossSectionSettings
 // 0x0070 (0x0128 - 0x00B8)
@@ -350,7 +339,6 @@ public:
 		return GetDefaultObjImpl<UPCGPrimitiveCrossSectionSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGPrimitiveCrossSectionSettings;
 
 // Class PCGGeometryScriptInterop.PCGSaveDynamicMeshToAssetSettings
 // 0x00C0 (0x0178 - 0x00B8)
@@ -377,7 +365,6 @@ public:
 		return GetDefaultObjImpl<UPCGSaveDynamicMeshToAssetSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGSaveDynamicMeshToAssetSettings;
 
 // Class PCGGeometryScriptInterop.PCGSpawnDynamicMeshSettings
 // 0x0038 (0x00F0 - 0x00B8)
@@ -401,7 +388,6 @@ public:
 		return GetDefaultObjImpl<UPCGSpawnDynamicMeshSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGSpawnDynamicMeshSettings;
 
 // Class PCGGeometryScriptInterop.PCGStaticMeshToDynamicMeshSettings
 // 0x0050 (0x0108 - 0x00B8)
@@ -432,6 +418,5 @@ public:
 		return GetDefaultObjImpl<UPCGStaticMeshToDynamicMeshSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGStaticMeshToDynamicMeshSettings;
 
 SDK_NAMESPACE_END

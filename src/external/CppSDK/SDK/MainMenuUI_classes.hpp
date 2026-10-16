@@ -79,6 +79,5 @@ public:
 		return GetDefaultObjImpl<UMainMenuUI_C>();
 	}
 };
-DUMPER7_ASSERTS_UMainMenuUI_C;
 
 SDK_NAMESPACE_END

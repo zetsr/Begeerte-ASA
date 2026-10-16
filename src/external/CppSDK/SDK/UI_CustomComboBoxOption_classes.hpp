@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "STRUCT_CustomComboBoxOption_structs.hpp"
 #include "Engine_structs.hpp"
-#include "STRUCT_SubOptions_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "STRUCT_CustomComboBoxOption_structs.hpp"
+#include "STRUCT_SubOptions_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "CFCoreWidget_classes.hpp"
 
 
@@ -112,6 +112,5 @@ public:
 		return GetDefaultObjImpl<UUI_CustomComboBoxOption_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CustomComboBoxOption_C;
 
 SDK_NAMESPACE_END

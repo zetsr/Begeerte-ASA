@@ -29,7 +29,6 @@ public:
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_TermsAndConditions_C_BPGamepadReleased;
 
 // Function UI_CFCore_TermsAndConditions.UI_CFCore_TermsAndConditions_C.BPHighlightWidgetOnStart
 // 0x0001 (0x0001 - 0x0000)
@@ -38,7 +37,6 @@ struct UI_CFCore_TermsAndConditions_C_BPHighlightWidgetOnStart final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_TermsAndConditions_C_BPHighlightWidgetOnStart;
 
 // Function UI_CFCore_TermsAndConditions.UI_CFCore_TermsAndConditions_C.ExecuteUbergraph_UI_CFCore_TermsAndConditions
 // 0x01D8 (0x01D8 - 0x0000)
@@ -69,7 +67,6 @@ public:
 	class UUI_ListSessions*                       K2Node_DynamicCast_AsUI_List_Sessions;             // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_TermsAndConditions_C_ExecuteUbergraph_UI_CFCore_TermsAndConditions;
 
 // Function UI_CFCore_TermsAndConditions.UI_CFCore_TermsAndConditions_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -79,7 +76,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_TermsAndConditions_C_GetRootCFWidget;
 
 // Function UI_CFCore_TermsAndConditions.UI_CFCore_TermsAndConditions_C.OnFailTerms
 // 0x0038 (0x0038 - 0x0000)
@@ -88,7 +84,6 @@ struct UI_CFCore_TermsAndConditions_C_OnFailTerms final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_TermsAndConditions_C_OnFailTerms;
 
 // Function UI_CFCore_TermsAndConditions.UI_CFCore_TermsAndConditions_C.OnSuccessTerms
 // 0x00D0 (0x00D0 - 0x0000)
@@ -97,7 +92,6 @@ struct UI_CFCore_TermsAndConditions_C_OnSuccessTerms final
 public:
 	struct FTerms                                 Terms_0;                                           // 0x0000(0x00D0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_TermsAndConditions_C_OnSuccessTerms;
 
 // Function UI_CFCore_TermsAndConditions.UI_CFCore_TermsAndConditions_C.PlayFadeAnimation
 // 0x0018 (0x0018 - 0x0000)
@@ -109,7 +103,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_TermsAndConditions_C_PlayFadeAnimation;
 
 // Function UI_CFCore_TermsAndConditions.UI_CFCore_TermsAndConditions_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -119,7 +112,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_TermsAndConditions_C_Tick;
 
 // Function UI_CFCore_TermsAndConditions.UI_CFCore_TermsAndConditions_C.UpdateTextByPlatform
 // 0x0020 (0x0020 - 0x0000)
@@ -131,7 +123,6 @@ public:
 	class FString                                 CallFunc_GetPlatformName_ReturnValue;              // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_TermsAndConditions_C_UpdateTextByPlatform;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

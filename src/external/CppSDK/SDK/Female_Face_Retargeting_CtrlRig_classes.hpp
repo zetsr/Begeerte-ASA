@@ -39,6 +39,5 @@ public:
 		return GetDefaultObjImpl<UFemale_Face_Retargeting_CtrlRig_C>();
 	}
 };
-DUMPER7_ASSERTS_UFemale_Face_Retargeting_CtrlRig_C;
 
 SDK_NAMESPACE_END

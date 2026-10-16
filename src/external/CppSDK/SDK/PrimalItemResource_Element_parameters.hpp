@@ -51,7 +51,6 @@ public:
 	bool                                          CallFunc_FindShapeshifter_RetMounted;              // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemResource_Element_C_BPCanUse;
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPPreUseItem
 // 0x0140 (0x0140 - 0x0000)
@@ -76,7 +75,6 @@ public:
 	struct FBPNetExecParams                       K2Node_MakeStruct_BPNetExecParams_1;               // 0x00C0(0x0078)()
 	bool                                          CallFunc_BPServerHandleNetExecCommand_ReturnValue_1; // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemResource_Element_C_BPPreUseItem;
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPServerHandleItemNetExecCommand
 // 0x0108 (0x0108 - 0x0000)
@@ -100,7 +98,6 @@ public:
 	double                                        CallFunc_VSize_ReturnValue;                        // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemResource_Element_C_BPServerHandleItemNetExecCommand;
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPSupportUseOntoItem
 // 0x0048 (0x0048 - 0x0000)
@@ -129,7 +126,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemResource_Element_C_BPSupportUseOntoItem;
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.BPUsedOntoItem
 // 0x0038 (0x0038 - 0x0000)
@@ -146,7 +142,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesImplementInterface_ReturnValue;       // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemResource_Element_C_BPUsedOntoItem;
 
 // Function PrimalItemResource_Element.PrimalItemResource_Element_C.FindShapeshifter
 // 0x0410 (0x0410 - 0x0000)
@@ -239,7 +234,6 @@ public:
 	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast;   // 0x0408(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemResource_Element_C_FindShapeshifter;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

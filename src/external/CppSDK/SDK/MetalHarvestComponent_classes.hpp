@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UMetalHarvestComponent_C>();
 	}
 };
-DUMPER7_ASSERTS_UMetalHarvestComponent_C;
 
 SDK_NAMESPACE_END

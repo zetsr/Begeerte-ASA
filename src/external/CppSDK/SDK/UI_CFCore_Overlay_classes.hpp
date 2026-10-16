@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ENUM_CFCore_OverlayProfiles_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "CFCoreWidget_classes.hpp"
 #include "UMG_structs.hpp"
+#include "CFCoreWidget_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -62,6 +62,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Overlay_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Overlay_C;
 
 SDK_NAMESPACE_END

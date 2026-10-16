@@ -51,6 +51,5 @@ public:
 		return GetDefaultObjImpl<UConfirmationDialogGeneric_C>();
 	}
 };
-DUMPER7_ASSERTS_UConfirmationDialogGeneric_C;
 
 SDK_NAMESPACE_END

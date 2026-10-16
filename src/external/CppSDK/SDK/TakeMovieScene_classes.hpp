@@ -45,7 +45,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTakeSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTakeSection;
 
 // Class TakeMovieScene.MovieSceneTakeSettings
 // 0x0070 (0x0098 - 0x0028)
@@ -74,7 +73,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTakeSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTakeSettings;
 
 // Class TakeMovieScene.MovieSceneTakeTrack
 // 0x0010 (0x0108 - 0x00F8)
@@ -97,6 +95,5 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTakeTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTakeTrack;
 
 SDK_NAMESPACE_END

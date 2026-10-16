@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UNotificationUI_C>();
 	}
 };
-DUMPER7_ASSERTS_UNotificationUI_C;
 
 SDK_NAMESPACE_END

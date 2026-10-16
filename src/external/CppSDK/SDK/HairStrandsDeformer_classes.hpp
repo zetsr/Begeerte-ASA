@@ -35,7 +35,6 @@ public:
 		return GetDefaultObjImpl<UOptimusGroomDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGroomDataInterface;
 
 // Class HairStrandsDeformer.OptimusGroomDataProvider
 // 0x0008 (0x0030 - 0x0028)
@@ -58,7 +57,6 @@ public:
 		return GetDefaultObjImpl<UOptimusGroomDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGroomDataProvider;
 
 // Class HairStrandsDeformer.OptimusGroomExecDataInterface
 // 0x0010 (0x0038 - 0x0028)
@@ -83,7 +81,6 @@ public:
 		return GetDefaultObjImpl<UOptimusGroomExecDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGroomExecDataInterface;
 
 // Class HairStrandsDeformer.OptimusGroomExecDataProvider
 // 0x0010 (0x0038 - 0x0028)
@@ -108,7 +105,6 @@ public:
 		return GetDefaultObjImpl<UOptimusGroomExecDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGroomExecDataProvider;
 
 // Class HairStrandsDeformer.OptimusGroomGuideDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -128,7 +124,6 @@ public:
 		return GetDefaultObjImpl<UOptimusGroomGuideDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGroomGuideDataInterface;
 
 // Class HairStrandsDeformer.OptimusGroomGuideDataProvider
 // 0x0008 (0x0030 - 0x0028)
@@ -151,7 +146,6 @@ public:
 		return GetDefaultObjImpl<UOptimusGroomGuideDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGroomGuideDataProvider;
 
 // Class HairStrandsDeformer.OptimusGroomWriteDataInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -171,7 +165,6 @@ public:
 		return GetDefaultObjImpl<UOptimusGroomWriteDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGroomWriteDataInterface;
 
 // Class HairStrandsDeformer.OptimusGroomWriteDataProvider
 // 0x0010 (0x0038 - 0x0028)
@@ -195,7 +188,6 @@ public:
 		return GetDefaultObjImpl<UOptimusGroomWriteDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGroomWriteDataProvider;
 
 // Class HairStrandsDeformer.OptimusGroomComponentSource
 // 0x0000 (0x0028 - 0x0028)
@@ -215,6 +207,5 @@ public:
 		return GetDefaultObjImpl<UOptimusGroomComponentSource>();
 	}
 };
-DUMPER7_ASSERTS_UOptimusGroomComponentSource;
 
 SDK_NAMESPACE_END

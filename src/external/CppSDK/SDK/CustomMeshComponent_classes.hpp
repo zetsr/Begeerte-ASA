@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UCustomMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UCustomMeshComponent;
 
 SDK_NAMESPACE_END

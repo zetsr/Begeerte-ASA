@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UStoneHarvestComponent_RequiresMetal_C>();
 	}
 };
-DUMPER7_ASSERTS_UStoneHarvestComponent_RequiresMetal_C;
 
 SDK_NAMESPACE_END

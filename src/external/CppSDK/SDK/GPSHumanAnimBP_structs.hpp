@@ -20,6 +20,5 @@ SDK_NAMESPACE_START
 struct GPSHumanAnimBP::FAnimBlueprintGeneratedConstantData final : public BaseHumanAnimBP::FAnimBlueprintGeneratedConstantData
 {
 };
-DUMPER7_ASSERTS_GPSHumanAnimBP__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

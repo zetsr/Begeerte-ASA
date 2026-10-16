@@ -46,7 +46,6 @@ public:
 		return GetDefaultObjImpl<UHeightfieldMinMaxTexture>();
 	}
 };
-DUMPER7_ASSERTS_UHeightfieldMinMaxTexture;
 
 // Class VirtualHeightfieldMesh.MaterialExpressionHeightfieldMinMaxTexture
 // 0x0010 (0x00C0 - 0x00B0)
@@ -71,7 +70,6 @@ public:
 		return GetDefaultObjImpl<UMaterialExpressionHeightfieldMinMaxTexture>();
 	}
 };
-DUMPER7_ASSERTS_UMaterialExpressionHeightfieldMinMaxTexture;
 
 // Class VirtualHeightfieldMesh.VirtualHeightfieldMesh
 // 0x0008 (0x0498 - 0x0490)
@@ -94,7 +92,6 @@ public:
 		return GetDefaultObjImpl<AVirtualHeightfieldMesh>();
 	}
 };
-DUMPER7_ASSERTS_AVirtualHeightfieldMesh;
 
 // Class VirtualHeightfieldMesh.VirtualHeightfieldMeshComponent
 // 0x0080 (0x06A0 - 0x0620)
@@ -138,6 +135,5 @@ public:
 		return GetDefaultObjImpl<UVirtualHeightfieldMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UVirtualHeightfieldMeshComponent;
 
 SDK_NAMESPACE_END

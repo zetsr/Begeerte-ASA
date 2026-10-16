@@ -23,7 +23,7 @@ class UDataListButtonVariable_ColorPicker_Widget_ASA_C final : public UDataListB
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_DataListButtonVariable_ColorPicker_Widget_ASA_C; // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMulticastInlineDelegate<void(const struct FLinearColor& Color)> ChangedColor;                   // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FLinearColor& Color_0)> ChangedColor;                 // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          bHideColor;                                        // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(bool Toggle)>   SelectedOption;                                    // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -51,6 +51,5 @@ public:
 		return GetDefaultObjImpl<UDataListButtonVariable_ColorPicker_Widget_ASA_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListButtonVariable_ColorPicker_Widget_ASA_C;
 
 SDK_NAMESPACE_END

@@ -42,7 +42,6 @@ public:
 		return GetDefaultObjImpl<UAnimationSharingStateProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UAnimationSharingStateProcessor;
 
 // Class AnimationSharing.AnimSharingStateInstance
 // 0x0020 (0x03F0 - 0x03D0)
@@ -74,7 +73,6 @@ public:
 		return GetDefaultObjImpl<UAnimSharingStateInstance>();
 	}
 };
-DUMPER7_ASSERTS_UAnimSharingStateInstance;
 
 // Class AnimationSharing.AnimSharingTransitionInstance
 // 0x0010 (0x03E0 - 0x03D0)
@@ -101,7 +99,6 @@ public:
 		return GetDefaultObjImpl<UAnimSharingTransitionInstance>();
 	}
 };
-DUMPER7_ASSERTS_UAnimSharingTransitionInstance;
 
 // Class AnimationSharing.AnimSharingAdditiveInstance
 // 0x0010 (0x03E0 - 0x03D0)
@@ -128,7 +125,6 @@ public:
 		return GetDefaultObjImpl<UAnimSharingAdditiveInstance>();
 	}
 };
-DUMPER7_ASSERTS_UAnimSharingAdditiveInstance;
 
 // Class AnimationSharing.AnimSharingInstance
 // 0x0100 (0x0128 - 0x0028)
@@ -159,7 +155,6 @@ public:
 		return GetDefaultObjImpl<UAnimSharingInstance>();
 	}
 };
-DUMPER7_ASSERTS_UAnimSharingInstance;
 
 // Class AnimationSharing.AnimationSharingManager
 // 0x0078 (0x00A0 - 0x0028)
@@ -194,7 +189,6 @@ public:
 		return GetDefaultObjImpl<UAnimationSharingManager>();
 	}
 };
-DUMPER7_ASSERTS_UAnimationSharingManager;
 
 // Class AnimationSharing.AnimationSharingSetup
 // 0x0020 (0x0048 - 0x0028)
@@ -218,6 +212,5 @@ public:
 		return GetDefaultObjImpl<UAnimationSharingSetup>();
 	}
 };
-DUMPER7_ASSERTS_UAnimationSharingSetup;
 
 SDK_NAMESPACE_END

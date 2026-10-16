@@ -38,7 +38,6 @@ public:
 		return GetDefaultObjImpl<UMassApplyMovementProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassApplyMovementProcessor;
 
 // Class MassMovement.MassMovementSettings
 // 0x0010 (0x0038 - 0x0028)
@@ -61,7 +60,6 @@ public:
 		return GetDefaultObjImpl<UMassMovementSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMassMovementSettings;
 
 // Class MassMovement.MassMovementTrait
 // 0x0028 (0x0050 - 0x0028)
@@ -84,7 +82,6 @@ public:
 		return GetDefaultObjImpl<UMassMovementTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassMovementTrait;
 
 // Class MassMovement.MassSimpleMovementTrait
 // 0x0000 (0x0028 - 0x0028)
@@ -104,7 +101,6 @@ public:
 		return GetDefaultObjImpl<UMassSimpleMovementTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassSimpleMovementTrait;
 
 // Class MassMovement.MassSimpleMovementProcessor
 // 0x0320 (0x03D0 - 0x00B0)
@@ -127,7 +123,6 @@ public:
 		return GetDefaultObjImpl<UMassSimpleMovementProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassSimpleMovementProcessor;
 
 // Class MassMovement.MassVelocityRandomizerTrait
 // 0x0010 (0x0038 - 0x0028)
@@ -153,7 +148,6 @@ public:
 		return GetDefaultObjImpl<UMassVelocityRandomizerTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassVelocityRandomizerTrait;
 
 // Class MassMovement.MassRandomVelocityInitializer
 // 0x0348 (0x0410 - 0x00C8)
@@ -180,6 +174,5 @@ public:
 		return GetDefaultObjImpl<UMassRandomVelocityInitializer>();
 	}
 };
-DUMPER7_ASSERTS_UMassRandomVelocityInitializer;
 
 SDK_NAMESPACE_END

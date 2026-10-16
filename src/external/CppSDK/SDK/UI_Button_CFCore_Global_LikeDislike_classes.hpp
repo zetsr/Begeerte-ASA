@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "UI_Button_CFCore_Global_Master_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "cfcore_structs.hpp"
+#include "UI_Button_CFCore_Global_Master_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -56,6 +56,5 @@ public:
 		return GetDefaultObjImpl<UUI_Button_CFCore_Global_LikeDislike_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Button_CFCore_Global_LikeDislike_C;
 
 SDK_NAMESPACE_END

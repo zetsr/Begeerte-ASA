@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_GasGrenade_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_GasGrenade_C;
 
 SDK_NAMESPACE_END

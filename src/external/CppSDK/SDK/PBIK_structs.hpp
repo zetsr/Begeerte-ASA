@@ -60,7 +60,6 @@ public:
 	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                PreferredAngles;                                   // 0x0038(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPBIKBoneSetting;
 
 // ScriptStruct PBIK.RootPrePullSettings
 // 0x0020 (0x0020 - 0x0000)
@@ -76,7 +75,6 @@ public:
 	float                                         PositionAlphaY;                                    // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PositionAlphaZ;                                    // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRootPrePullSettings;
 
 // ScriptStruct PBIK.PBIKSolverSettings
 // 0x0040 (0x0040 - 0x0000)
@@ -96,7 +94,6 @@ public:
 	bool                                          bStartSolveFromInputPose;                          // 0x003C(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPBIKSolverSettings;
 
 // ScriptStruct PBIK.PBIKSolver
 // 0x0058 (0x0058 - 0x0000)
@@ -105,7 +102,6 @@ struct alignas(0x08) FPBIKSolver final
 public:
 	uint8                                         Pad_0[0x58];                                       // 0x0000(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPBIKSolver;
 
 // ScriptStruct PBIK.PBIKDebug
 // 0x0008 (0x0008 - 0x0000)
@@ -116,7 +112,6 @@ public:
 	bool                                          bDrawDebug;                                        // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPBIKDebug;
 
 // ScriptStruct PBIK.PBIKEffector
 // 0x0090 (0x0090 - 0x0000)
@@ -134,7 +129,6 @@ public:
 	float                                         PinRotation;                                       // 0x0084(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPBIKEffector;
 
 // ScriptStruct PBIK.PBIKWorkData
 // 0x0080 (0x0080 - 0x0000)
@@ -148,7 +142,6 @@ public:
 	TArray<int32>                                 SolverBoneToElementIndex;                          // 0x0018(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	struct FPBIKSolver                            Solver;                                            // 0x0028(0x0058)(Transient, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPBIKWorkData;
 
 // ScriptStruct PBIK.RigUnit_PBIK
 // 0x0110 (0x0300 - 0x01F0)
@@ -164,6 +157,5 @@ public:
 	struct FPBIKDebug                             Debug;                                             // 0x0278(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPBIKWorkData                          WorkData;                                          // 0x0280(0x0080)(Transient, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRigUnit_PBIK;
 
 SDK_NAMESPACE_END

@@ -38,6 +38,5 @@ public:
 		return GetDefaultObjImpl<ULocalizableMessageLibrary>();
 	}
 };
-DUMPER7_ASSERTS_ULocalizableMessageLibrary;
 
 SDK_NAMESPACE_END

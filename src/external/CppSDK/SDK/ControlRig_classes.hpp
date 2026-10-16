@@ -57,7 +57,6 @@ public:
 		return GetDefaultObjImpl<UControlRigShapeLibraryLink>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigShapeLibraryLink;
 
 // Class ControlRig.ControlRig
 // 0x0858 (0x0AD0 - 0x0278)
@@ -121,7 +120,6 @@ public:
 		return GetDefaultObjImpl<UControlRig>();
 	}
 };
-DUMPER7_ASSERTS_UControlRig;
 
 // Class ControlRig.ModularRig
 // 0x01A0 (0x0C70 - 0x0AD0)
@@ -150,7 +148,6 @@ public:
 		return GetDefaultObjImpl<UModularRig>();
 	}
 };
-DUMPER7_ASSERTS_UModularRig;
 
 // Class ControlRig.RigHierarchy
 // 0x0578 (0x05A0 - 0x0028)
@@ -368,7 +365,6 @@ public:
 		return GetDefaultObjImpl<URigHierarchy>();
 	}
 };
-DUMPER7_ASSERTS_URigHierarchy;
 
 // Class ControlRig.RigHierarchyProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -397,7 +393,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IRigHierarchyProvider;
 
 // Class ControlRig.AnimNodeControlRigLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -422,7 +417,6 @@ public:
 		return GetDefaultObjImpl<UAnimNodeControlRigLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNodeControlRigLibrary;
 
 // Class ControlRig.TransformableControlHandle
 // 0x0030 (0x0090 - 0x0060)
@@ -446,7 +440,6 @@ public:
 		return GetDefaultObjImpl<UTransformableControlHandle>();
 	}
 };
-DUMPER7_ASSERTS_UTransformableControlHandle;
 
 // Class ControlRig.ControlRigAnimInstance
 // 0x0000 (0x03D0 - 0x03D0)
@@ -466,7 +459,6 @@ public:
 		return GetDefaultObjImpl<UControlRigAnimInstance>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigAnimInstance;
 
 // Class ControlRig.ControlRigBlueprintGeneratedClass
 // 0x0000 (0x03A0 - 0x03A0)
@@ -486,7 +478,6 @@ public:
 		return GetDefaultObjImpl<UControlRigBlueprintGeneratedClass>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigBlueprintGeneratedClass;
 
 // Class ControlRig.ControlRigComponent
 // 0x0170 (0x0790 - 0x0620)
@@ -581,7 +572,6 @@ public:
 		return GetDefaultObjImpl<UControlRigComponent>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigComponent;
 
 // Class ControlRig.ControlRigControlActor
 // 0x00B0 (0x0540 - 0x0490)
@@ -624,7 +614,6 @@ public:
 		return GetDefaultObjImpl<AControlRigControlActor>();
 	}
 };
-DUMPER7_ASSERTS_AControlRigControlActor;
 
 // Class ControlRig.ControlRigShapeActor
 // 0x00C0 (0x0550 - 0x0490)
@@ -675,7 +664,6 @@ public:
 		return GetDefaultObjImpl<AControlRigShapeActor>();
 	}
 };
-DUMPER7_ASSERTS_AControlRigShapeActor;
 
 // Class ControlRig.ControlRigShapeLibrary
 // 0x0128 (0x0150 - 0x0028)
@@ -704,7 +692,6 @@ public:
 		return GetDefaultObjImpl<UControlRigShapeLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigShapeLibrary;
 
 // Class ControlRig.ControlRigTestData
 // 0x0128 (0x0150 - 0x0028)
@@ -746,7 +733,6 @@ public:
 		return GetDefaultObjImpl<UControlRigTestData>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigTestData;
 
 // Class ControlRig.ControlRigValidator
 // 0x0040 (0x0068 - 0x0028)
@@ -770,7 +756,6 @@ public:
 		return GetDefaultObjImpl<UControlRigValidator>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigValidator;
 
 // Class ControlRig.ControlRigValidationPass
 // 0x0000 (0x0028 - 0x0028)
@@ -790,7 +775,6 @@ public:
 		return GetDefaultObjImpl<UControlRigValidationPass>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigValidationPass;
 
 // Class ControlRig.ModularRigController
 // 0x0028 (0x0050 - 0x0028)
@@ -837,7 +821,6 @@ public:
 		return GetDefaultObjImpl<UModularRigController>();
 	}
 };
-DUMPER7_ASSERTS_UModularRigController;
 
 // Class ControlRig.ModularRigRuleManager
 // 0x0008 (0x0030 - 0x0028)
@@ -860,7 +843,6 @@ public:
 		return GetDefaultObjImpl<UModularRigRuleManager>();
 	}
 };
-DUMPER7_ASSERTS_UModularRigRuleManager;
 
 // Class ControlRig.AdditiveControlRig
 // 0x0010 (0x0AE0 - 0x0AD0)
@@ -883,7 +865,6 @@ public:
 		return GetDefaultObjImpl<UAdditiveControlRig>();
 	}
 };
-DUMPER7_ASSERTS_UAdditiveControlRig;
 
 // Class ControlRig.FKControlRig
 // 0x0040 (0x0B10 - 0x0AD0)
@@ -908,7 +889,6 @@ public:
 		return GetDefaultObjImpl<UFKControlRig>();
 	}
 };
-DUMPER7_ASSERTS_UFKControlRig;
 
 // Class ControlRig.RigHierarchyController
 // 0x0068 (0x0090 - 0x0028)
@@ -972,7 +952,6 @@ public:
 		return GetDefaultObjImpl<URigHierarchyController>();
 	}
 };
-DUMPER7_ASSERTS_URigHierarchyController;
 
 // Class ControlRig.ControlRigLayerInstance
 // 0x0000 (0x03D0 - 0x03D0)
@@ -992,7 +971,6 @@ public:
 		return GetDefaultObjImpl<UControlRigLayerInstance>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigLayerInstance;
 
 // Class ControlRig.MovieSceneControlRigParameterSection
 // 0x02C8 (0x0428 - 0x0160)
@@ -1028,7 +1006,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneControlRigParameterSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneControlRigParameterSection;
 
 // Class ControlRig.MovieSceneControlRigParameterTrack
 // 0x0170 (0x0268 - 0x00F8)
@@ -1061,7 +1038,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneControlRigParameterTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneControlRigParameterTrack;
 
 // Class ControlRig.ControlRigSettings
 // 0x0000 (0x0038 - 0x0038)
@@ -1081,7 +1057,6 @@ public:
 		return GetDefaultObjImpl<UControlRigSettings>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigSettings;
 
 // Class ControlRig.ControlRigEditorSettings
 // 0x0000 (0x0038 - 0x0038)
@@ -1101,7 +1076,6 @@ public:
 		return GetDefaultObjImpl<UControlRigEditorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigEditorSettings;
 
 // Class ControlRig.ControlRigPoseAsset
 // 0x0060 (0x0088 - 0x0028)
@@ -1134,7 +1108,6 @@ public:
 		return GetDefaultObjImpl<UControlRigPoseAsset>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigPoseAsset;
 
 // Class ControlRig.ControlRigPoseMirrorSettings
 // 0x0028 (0x0050 - 0x0028)
@@ -1161,7 +1134,6 @@ public:
 		return GetDefaultObjImpl<UControlRigPoseMirrorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigPoseMirrorSettings;
 
 // Class ControlRig.ControlRigPoseProjectSettings
 // 0x0010 (0x0038 - 0x0028)
@@ -1184,7 +1156,6 @@ public:
 		return GetDefaultObjImpl<UControlRigPoseProjectSettings>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigPoseProjectSettings;
 
 // Class ControlRig.ControlRigWorkflowOptions
 // 0x0018 (0x00B0 - 0x0098)
@@ -1211,7 +1182,6 @@ public:
 		return GetDefaultObjImpl<UControlRigWorkflowOptions>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigWorkflowOptions;
 
 // Class ControlRig.ControlRigTransformWorkflowOptions
 // 0x0008 (0x00B8 - 0x00B0)
@@ -1238,7 +1208,6 @@ public:
 		return GetDefaultObjImpl<UControlRigTransformWorkflowOptions>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigTransformWorkflowOptions;
 
 // Class ControlRig.ControlRigNumericalValidationPass
 // 0x0098 (0x00C0 - 0x0028)
@@ -1272,6 +1241,5 @@ public:
 		return GetDefaultObjImpl<UControlRigNumericalValidationPass>();
 	}
 };
-DUMPER7_ASSERTS_UControlRigNumericalValidationPass;
 
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UInputCoreTypes>();
 	}
 };
-DUMPER7_ASSERTS_UInputCoreTypes;
 
 SDK_NAMESPACE_END

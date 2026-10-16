@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Enum_VoiceCollectionLine_structs.hpp"
 #include "ShooterGame_classes.hpp"
+#include "Enum_VoiceCollectionLine_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -153,6 +153,5 @@ public:
 		return GetDefaultObjImpl<APlayerPawnTest_C>();
 	}
 };
-DUMPER7_ASSERTS_APlayerPawnTest_C;
 
 SDK_NAMESPACE_END

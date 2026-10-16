@@ -74,7 +74,6 @@ public:
 		return GetDefaultObjImpl<UChaosClothComponent>();
 	}
 };
-DUMPER7_ASSERTS_UChaosClothComponent;
 
 // Class ChaosClothAssetEngine.ChaosClothAsset
 // 0x02A0 (0x03E8 - 0x0148)
@@ -120,7 +119,6 @@ public:
 		return GetDefaultObjImpl<UChaosClothAsset>();
 	}
 };
-DUMPER7_ASSERTS_UChaosClothAsset;
 
 // Class ChaosClothAssetEngine.ChaosClothAssetInteractor
 // 0x0010 (0x0038 - 0x0028)
@@ -161,6 +159,5 @@ public:
 		return GetDefaultObjImpl<UChaosClothAssetInteractor>();
 	}
 };
-DUMPER7_ASSERTS_UChaosClothAssetInteractor;
 
 SDK_NAMESPACE_END

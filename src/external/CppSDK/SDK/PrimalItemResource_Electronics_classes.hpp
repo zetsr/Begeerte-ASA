@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Electronics_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Electronics_C;
 
 SDK_NAMESPACE_END

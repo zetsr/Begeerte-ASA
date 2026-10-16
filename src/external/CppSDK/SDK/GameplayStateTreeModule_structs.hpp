@@ -25,35 +25,30 @@ public:
 	class AActor*                                 Input;                                             // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	struct FVector                                Output;                                            // 0x0008(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStateTreeGetActorLocationPropertyFunctionInstanceData;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeGetActorLocationPropertyFunction
 // 0x0000 (0x0020 - 0x0020)
 struct FStateTreeGetActorLocationPropertyFunction final : public FStateTreePropertyFunctionCommonBase
 {
 };
-DUMPER7_ASSERTS_FStateTreeGetActorLocationPropertyFunction;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeAIConditionBase
 // 0x0000 (0x0028 - 0x0028)
 struct FStateTreeAIConditionBase final : public FStateTreeConditionBase
 {
 };
-DUMPER7_ASSERTS_FStateTreeAIConditionBase;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeAITaskBase
 // 0x0000 (0x0028 - 0x0028)
 struct FStateTreeAITaskBase : public FStateTreeTaskBase
 {
 };
-DUMPER7_ASSERTS_FStateTreeAITaskBase;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeAIActionTaskBase
 // 0x0000 (0x0028 - 0x0028)
 struct FStateTreeAIActionTaskBase : public FStateTreeAITaskBase
 {
 };
-DUMPER7_ASSERTS_FStateTreeAIActionTaskBase;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeRunEnvQueryInstanceData
 // 0x0048 (0x0048 - 0x0000)
@@ -68,14 +63,12 @@ public:
 	EEnvQueryRunMode                              RunMode;                                           // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x1F];                                      // 0x0029(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FStateTreeRunEnvQueryInstanceData;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeRunEnvQueryTask
 // 0x0000 (0x0028 - 0x0028)
 struct FStateTreeRunEnvQueryTask final : public FStateTreeTaskCommonBase
 {
 };
-DUMPER7_ASSERTS_FStateTreeRunEnvQueryTask;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeMoveToTaskInstanceData
 // 0x0058 (0x0058 - 0x0000)
@@ -99,13 +92,11 @@ public:
 	class UAITask_MoveTo*                         MoveToTask;                                        // 0x0040(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner;                                   // 0x0048(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStateTreeMoveToTaskInstanceData;
 
 // ScriptStruct GameplayStateTreeModule.StateTreeMoveToTask
 // 0x0000 (0x0028 - 0x0028)
 struct FStateTreeMoveToTask final : public FStateTreeAIActionTaskBase
 {
 };
-DUMPER7_ASSERTS_FStateTreeMoveToTask;
 
 SDK_NAMESPACE_END

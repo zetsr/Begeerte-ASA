@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_ChitinPaste_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_ChitinPaste_C;
 
 SDK_NAMESPACE_END

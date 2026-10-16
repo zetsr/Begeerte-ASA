@@ -29,7 +29,6 @@ public:
 	class APrimalDinoCharacter*                   K2Node_DynamicCast_AsPrimal_Dino_Character;        // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_IsFlyingBool_C_ExecuteUbergraph_IsFlyingBool;
 
 // Function IsFlyingBool.IsFlyingBool_C.ReceiveConditionCheck
 // 0x0008 (0x0008 - 0x0000)
@@ -38,7 +37,6 @@ struct IsFlyingBool_C_ReceiveConditionCheck final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_IsFlyingBool_C_ReceiveConditionCheck;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDmgType_Projectile_C>();
 	}
 };
-DUMPER7_ASSERTS_UDmgType_Projectile_C;
 
 SDK_NAMESPACE_END

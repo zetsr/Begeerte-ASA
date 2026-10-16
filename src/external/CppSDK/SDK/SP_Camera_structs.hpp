@@ -52,7 +52,6 @@ public:
 	bool                                          bPrimaryRay;                                       // 0x0029(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPenetrationAvoidanceRay;
 
 // ScriptStruct SP_Camera.ActiveSPCamera
 // 0x0990 (0x0990 - 0x0000)
@@ -63,7 +62,6 @@ public:
 	class AActor*                                 ViewTarget;                                        // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x980];                                     // 0x0010(0x0980)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FActiveSPCamera;
 
 // ScriptStruct SP_Camera.SPCameraModeInstance
 // 0x0020 (0x0020 - 0x0000)
@@ -75,6 +73,5 @@ public:
 	class USPCameraMode*                          CameraMode;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCineCameraComponent*                   CineCameraComponent;                               // 0x0018(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSPCameraModeInstance;
 
 SDK_NAMESPACE_END

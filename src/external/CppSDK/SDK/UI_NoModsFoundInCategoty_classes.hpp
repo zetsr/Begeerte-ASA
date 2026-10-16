@@ -45,6 +45,5 @@ public:
 		return GetDefaultObjImpl<UUI_NoModsFoundInCategoty_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_NoModsFoundInCategoty_C;
 
 SDK_NAMESPACE_END

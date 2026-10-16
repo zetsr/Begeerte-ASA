@@ -64,6 +64,5 @@ public:
 		return GetDefaultObjImpl<UOverallFaceMorphPicker_C>();
 	}
 };
-DUMPER7_ASSERTS_UOverallFaceMorphPicker_C;
 
 SDK_NAMESPACE_END

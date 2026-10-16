@@ -58,6 +58,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Prompt_Uninstall_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Prompt_Uninstall_C;
 
 SDK_NAMESPACE_END

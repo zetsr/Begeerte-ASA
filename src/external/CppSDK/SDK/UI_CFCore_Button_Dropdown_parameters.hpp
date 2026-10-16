@@ -29,7 +29,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_3;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Button_Dropdown_C_ExecuteUbergraph_UI_CFCore_Button_Dropdown;
 
 // Function UI_CFCore_Button_Dropdown.UI_CFCore_Button_Dropdown_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -39,7 +38,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Button_Dropdown_C_GetRootCFWidget;
 
 // Function UI_CFCore_Button_Dropdown.UI_CFCore_Button_Dropdown_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -48,7 +46,6 @@ struct UI_CFCore_Button_Dropdown_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Button_Dropdown_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

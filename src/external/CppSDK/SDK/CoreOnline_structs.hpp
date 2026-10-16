@@ -34,7 +34,6 @@ public:
 	int32                                         MaxPlayers;                                        // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxPartySize;                                      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FJoinabilitySettings;
 
 // ScriptStruct CoreOnline.UniqueNetIdWrapper
 // 0x0001 (0x0001 - 0x0000)
@@ -43,6 +42,5 @@ struct FUniqueNetIdWrapper
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FUniqueNetIdWrapper;
 
 SDK_NAMESPACE_END

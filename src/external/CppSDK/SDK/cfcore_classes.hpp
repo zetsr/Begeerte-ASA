@@ -51,7 +51,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreBPLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreBPLibrary;
 
 // Class cfcore.CFCoreEditorSettings
 // 0x0160 (0x0188 - 0x0028)
@@ -99,7 +98,6 @@ public:
 		return GetDefaultObjImpl<UCFCoreEditorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreEditorSettings;
 
 // Class cfcore.CFCoreSubsystem
 // 0x0060 (0x0090 - 0x0030)
@@ -213,6 +211,5 @@ public:
 		return GetDefaultObjImpl<UCFCoreSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UCFCoreSubsystem;
 
 SDK_NAMESPACE_END

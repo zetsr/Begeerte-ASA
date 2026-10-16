@@ -96,6 +96,5 @@ public:
 		return GetDefaultObjImpl<URadialSlider>();
 	}
 };
-DUMPER7_ASSERTS_URadialSlider;
 
 SDK_NAMESPACE_END

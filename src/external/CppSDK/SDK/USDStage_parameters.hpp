@@ -30,7 +30,6 @@ public:
 	class FString                                 PrimPath;                                          // 0x0048(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneDynamicBindingResolveResult ReturnValue;                                       // 0x0058(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdDynamicBindingResolverLibrary_ResolveWithStageActor;
 
 // Function USDStage.UsdStageActor.GetLevelSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -39,7 +38,6 @@ struct UsdStageActor_GetLevelSequence final
 public:
 	class ULevelSequence*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_GetLevelSequence;
 
 // Function USDStage.UsdStageActor.SetAssetCache
 // 0x0008 (0x0008 - 0x0000)
@@ -48,7 +46,6 @@ struct UsdStageActor_SetAssetCache final
 public:
 	class UUsdAssetCache2*                        NewCache;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetAssetCache;
 
 // Function USDStage.UsdStageActor.SetBlockedPrefixFilters
 // 0x0010 (0x0010 - 0x0000)
@@ -57,7 +54,6 @@ struct UsdStageActor_SetBlockedPrefixFilters final
 public:
 	TArray<class FString>                         NewFilters;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetBlockedPrefixFilters;
 
 // Function USDStage.UsdStageActor.SetCollapseTopLevelPointInstancers
 // 0x0001 (0x0001 - 0x0000)
@@ -66,7 +62,6 @@ struct UsdStageActor_SetCollapseTopLevelPointInstancers final
 public:
 	bool                                          bCollapse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetCollapseTopLevelPointInstancers;
 
 // Function USDStage.UsdStageActor.SetCollectFromEntireSubtrees
 // 0x0001 (0x0001 - 0x0000)
@@ -75,7 +70,6 @@ struct UsdStageActor_SetCollectFromEntireSubtrees final
 public:
 	bool                                          bNewCollectValue;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetCollectFromEntireSubtrees;
 
 // Function USDStage.UsdStageActor.SetCollectMetadata
 // 0x0001 (0x0001 - 0x0000)
@@ -84,7 +78,6 @@ struct UsdStageActor_SetCollectMetadata final
 public:
 	bool                                          bNewCollectValue;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetCollectMetadata;
 
 // Function USDStage.UsdStageActor.SetCollectOnComponents
 // 0x0001 (0x0001 - 0x0000)
@@ -93,7 +86,6 @@ struct UsdStageActor_SetCollectOnComponents final
 public:
 	bool                                          bNewCollectValue;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetCollectOnComponents;
 
 // Function USDStage.UsdStageActor.SetGeometryCacheImport
 // 0x0001 (0x0001 - 0x0000)
@@ -102,7 +94,6 @@ struct UsdStageActor_SetGeometryCacheImport final
 public:
 	EGeometryCacheImport                          ImportOption;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetGeometryCacheImport;
 
 // Function USDStage.UsdStageActor.SetInitialLoadSet
 // 0x0001 (0x0001 - 0x0000)
@@ -111,7 +102,6 @@ struct UsdStageActor_SetInitialLoadSet final
 public:
 	EUsdInitialLoadSet                            NewLoadSet;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetInitialLoadSet;
 
 // Function USDStage.UsdStageActor.SetInterpolationType
 // 0x0001 (0x0001 - 0x0000)
@@ -120,7 +110,6 @@ struct UsdStageActor_SetInterpolationType final
 public:
 	EUsdInterpolationType                         NewType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetInterpolationType;
 
 // Function USDStage.UsdStageActor.SetInvertFilters
 // 0x0001 (0x0001 - 0x0000)
@@ -129,7 +118,6 @@ struct UsdStageActor_SetInvertFilters final
 public:
 	bool                                          bNewInvertValue;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetInvertFilters;
 
 // Function USDStage.UsdStageActor.SetIsolatedRootLayer
 // 0x0010 (0x0010 - 0x0000)
@@ -138,7 +126,6 @@ struct UsdStageActor_SetIsolatedRootLayer final
 public:
 	class FString                                 IsolatedStageRootLayer;                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetIsolatedRootLayer;
 
 // Function USDStage.UsdStageActor.SetKindsToCollapse
 // 0x0004 (0x0004 - 0x0000)
@@ -147,7 +134,6 @@ struct UsdStageActor_SetKindsToCollapse final
 public:
 	int32                                         NewKindsToCollapse;                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetKindsToCollapse;
 
 // Function USDStage.UsdStageActor.SetMaterialPurpose
 // 0x0008 (0x0008 - 0x0000)
@@ -156,7 +142,6 @@ struct UsdStageActor_SetMaterialPurpose final
 public:
 	class FName                                   NewMaterialPurpose;                                // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetMaterialPurpose;
 
 // Function USDStage.UsdStageActor.SetMergeIdenticalMaterialSlots
 // 0x0001 (0x0001 - 0x0000)
@@ -165,7 +150,6 @@ struct UsdStageActor_SetMergeIdenticalMaterialSlots final
 public:
 	bool                                          bMerge;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetMergeIdenticalMaterialSlots;
 
 // Function USDStage.UsdStageActor.SetNaniteTriangleThreshold
 // 0x0004 (0x0004 - 0x0000)
@@ -174,7 +158,6 @@ struct UsdStageActor_SetNaniteTriangleThreshold final
 public:
 	int32                                         NewNaniteTriangleThreshold;                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetNaniteTriangleThreshold;
 
 // Function USDStage.UsdStageActor.SetPurposesToLoad
 // 0x0004 (0x0004 - 0x0000)
@@ -183,7 +166,6 @@ struct UsdStageActor_SetPurposesToLoad final
 public:
 	int32                                         NewPurposesToLoad;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetPurposesToLoad;
 
 // Function USDStage.UsdStageActor.SetRenderContext
 // 0x0008 (0x0008 - 0x0000)
@@ -192,7 +174,6 @@ struct UsdStageActor_SetRenderContext final
 public:
 	class FName                                   NewRenderContext;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetRenderContext;
 
 // Function USDStage.UsdStageActor.SetReuseIdenticalAssets
 // 0x0001 (0x0001 - 0x0000)
@@ -201,7 +182,6 @@ struct UsdStageActor_SetReuseIdenticalAssets final
 public:
 	bool                                          bReuse;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetReuseIdenticalAssets;
 
 // Function USDStage.UsdStageActor.SetRootLayer
 // 0x0010 (0x0010 - 0x0000)
@@ -210,7 +190,6 @@ struct UsdStageActor_SetRootLayer final
 public:
 	class FString                                 RootFilePath;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetRootLayer;
 
 // Function USDStage.UsdStageActor.SetRootMotionHandling
 // 0x0001 (0x0001 - 0x0000)
@@ -219,7 +198,6 @@ struct UsdStageActor_SetRootMotionHandling final
 public:
 	EUsdRootMotionHandling                        NewHandlingStrategy;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetRootMotionHandling;
 
 // Function USDStage.UsdStageActor.SetShareAssetsForIdenticalPrims
 // 0x0001 (0x0001 - 0x0000)
@@ -228,7 +206,6 @@ struct UsdStageActor_SetShareAssetsForIdenticalPrims final
 public:
 	bool                                          bShare;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetShareAssetsForIdenticalPrims;
 
 // Function USDStage.UsdStageActor.SetStageState
 // 0x0001 (0x0001 - 0x0000)
@@ -237,7 +214,6 @@ struct UsdStageActor_SetStageState final
 public:
 	EUsdStageState                                NewStageState;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetStageState;
 
 // Function USDStage.UsdStageActor.SetSubdivisionLevel
 // 0x0004 (0x0004 - 0x0000)
@@ -246,7 +222,6 @@ struct UsdStageActor_SetSubdivisionLevel final
 public:
 	int32                                         NewLevel;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetSubdivisionLevel;
 
 // Function USDStage.UsdStageActor.SetTime
 // 0x0004 (0x0004 - 0x0000)
@@ -255,7 +230,6 @@ struct UsdStageActor_SetTime final
 public:
 	float                                         InTime;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetTime;
 
 // Function USDStage.UsdStageActor.SetUsdAssetCache
 // 0x0008 (0x0008 - 0x0000)
@@ -264,7 +238,6 @@ struct UsdStageActor_SetUsdAssetCache final
 public:
 	class UUsdAssetCache3*                        NewCache;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetUsdAssetCache;
 
 // Function USDStage.UsdStageActor.SetUsePrimKindsForCollapsing
 // 0x0001 (0x0001 - 0x0000)
@@ -273,7 +246,6 @@ struct UsdStageActor_SetUsePrimKindsForCollapsing final
 public:
 	bool                                          bUse;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_SetUsePrimKindsForCollapsing;
 
 // Function USDStage.UsdStageActor.GetGeneratedAssets
 // 0x0020 (0x0020 - 0x0000)
@@ -283,7 +255,6 @@ public:
 	class FString                                 PrimPath;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UObject*>                        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_GetGeneratedAssets;
 
 // Function USDStage.UsdStageActor.GetGeneratedComponent
 // 0x0018 (0x0018 - 0x0000)
@@ -293,7 +264,6 @@ public:
 	class FString                                 PrimPath;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USceneComponent*                        ReturnValue;                                       // 0x0010(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_GetGeneratedComponent;
 
 // Function USDStage.UsdStageActor.GetIsolatedRootLayer
 // 0x0010 (0x0010 - 0x0000)
@@ -302,7 +272,6 @@ struct UsdStageActor_GetIsolatedRootLayer final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_GetIsolatedRootLayer;
 
 // Function USDStage.UsdStageActor.GetSourcePrimPath
 // 0x0018 (0x0018 - 0x0000)
@@ -312,7 +281,6 @@ public:
 	const class UObject*                          Object;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_GetSourcePrimPath;
 
 // Function USDStage.UsdStageActor.GetTime
 // 0x0004 (0x0004 - 0x0000)
@@ -321,7 +289,6 @@ struct UsdStageActor_GetTime final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UsdStageActor_GetTime;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

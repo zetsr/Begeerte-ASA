@@ -49,7 +49,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneLiveLinkSection;
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkSubSection
 // 0x0028 (0x0050 - 0x0028)
@@ -74,7 +73,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkSubSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneLiveLinkSubSection;
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkSubSectionAnimation
 // 0x0010 (0x0060 - 0x0050)
@@ -97,7 +95,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkSubSectionAnimation>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneLiveLinkSubSectionAnimation;
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkSubSectionBasicRole
 // 0x0010 (0x0060 - 0x0050)
@@ -120,7 +117,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkSubSectionBasicRole>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneLiveLinkSubSectionBasicRole;
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkSubSectionProperties
 // 0x0010 (0x0060 - 0x0050)
@@ -143,7 +139,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkSubSectionProperties>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneLiveLinkSubSectionProperties;
 
 // Class LiveLinkMovieScene.MovieSceneLiveLinkTrack
 // 0x0010 (0x0138 - 0x0128)
@@ -167,6 +162,5 @@ public:
 		return GetDefaultObjImpl<UMovieSceneLiveLinkTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneLiveLinkTrack;
 
 SDK_NAMESPACE_END

@@ -38,6 +38,5 @@ public:
 		return GetDefaultObjImpl<AStructureSeatingBaseBP_C>();
 	}
 };
-DUMPER7_ASSERTS_AStructureSeatingBaseBP_C;
 
 SDK_NAMESPACE_END

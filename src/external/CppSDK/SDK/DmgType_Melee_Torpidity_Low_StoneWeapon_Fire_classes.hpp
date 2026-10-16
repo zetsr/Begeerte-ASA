@@ -39,6 +39,5 @@ public:
 		return GetDefaultObjImpl<UDmgType_Melee_Torpidity_Low_StoneWeapon_Fire_C>();
 	}
 };
-DUMPER7_ASSERTS_UDmgType_Melee_Torpidity_Low_StoneWeapon_Fire_C;
 
 SDK_NAMESPACE_END

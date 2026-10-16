@@ -21,6 +21,5 @@ public:
 	double                                        Size_5_02800F84414BF36B281454B877DDE4F6;           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Size_Mult_7_A9D2703F48EC6AE892B493B811ECB4DD;      // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FStruct_VFX_Body_Drop;
 
 SDK_NAMESPACE_END

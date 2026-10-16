@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<UHM_TPV_Empty_PoseLayer_AnimBP_C>();
 	}
 };
-DUMPER7_ASSERTS_UHM_TPV_Empty_PoseLayer_AnimBP_C;
 
 SDK_NAMESPACE_END

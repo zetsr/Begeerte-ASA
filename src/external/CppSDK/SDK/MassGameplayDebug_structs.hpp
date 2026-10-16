@@ -37,7 +37,6 @@ public:
 	float                                         Scale;                                             // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSimDebugDataRow;
 
 // ScriptStruct MassGameplayDebug.SimDebugVisFragment
 // 0x0008 (0x0008 - 0x0000)
@@ -46,7 +45,6 @@ struct alignas(0x04) FSimDebugVisFragment final : public FMassFragment
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSimDebugVisFragment;
 
 // ScriptStruct MassGameplayDebug.DataFragment_DebugVis
 // 0x0001 (0x0001 - 0x0000)
@@ -55,14 +53,12 @@ struct FDataFragment_DebugVis final : public FMassFragment
 public:
 	EMassEntityDebugShape                         Shape;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FDataFragment_DebugVis;
 
 // ScriptStruct MassGameplayDebug.MassDebuggableTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassDebuggableTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassDebuggableTag;
 
 // ScriptStruct MassGameplayDebug.AgentDebugVisualization
 // 0x0020 (0x0028 - 0x0008)
@@ -76,6 +72,5 @@ public:
 	EMassEntityDebugShape                         WireShape;                                         // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAgentDebugVisualization;
 
 SDK_NAMESPACE_END

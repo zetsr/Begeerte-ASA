@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UDinoSettings_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UDinoSettings_Base_C;
 
 SDK_NAMESPACE_END

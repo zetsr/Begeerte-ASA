@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponRifle_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_WeaponRifle_C;
 
 SDK_NAMESPACE_END

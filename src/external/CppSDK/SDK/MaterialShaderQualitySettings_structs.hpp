@@ -38,6 +38,5 @@ public:
 	bool                                          bDisableMaterialNormalCalculation;                 // 0x0006(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMobileShadowQuality                          MobileShadowQuality;                               // 0x0007(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMaterialQualityOverrides;
 
 SDK_NAMESPACE_END

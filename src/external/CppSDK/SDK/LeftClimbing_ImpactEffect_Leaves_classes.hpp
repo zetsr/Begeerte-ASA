@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<ALeftClimbing_ImpactEffect_Leaves_C>();
 	}
 };
-DUMPER7_ASSERTS_ALeftClimbing_ImpactEffect_Leaves_C;
 
 SDK_NAMESPACE_END

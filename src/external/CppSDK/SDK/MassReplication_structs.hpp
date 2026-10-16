@@ -25,7 +25,6 @@ SDK_NAMESPACE_START
 struct FMassReplicatedAgentHandle final : public FCompactIndexedHandleBase
 {
 };
-DUMPER7_ASSERTS_FMassReplicatedAgentHandle;
 
 // ScriptStruct MassReplication.MassFastArrayItemBase
 // 0x0004 (0x0010 - 0x000C)
@@ -34,7 +33,6 @@ struct FMassFastArrayItemBase final : public FFastArraySerializerItem
 public:
 	struct FMassReplicatedAgentHandle             Handle;                                            // 0x000C(0x0004)(RepSkip, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-DUMPER7_ASSERTS_FMassFastArrayItemBase;
 
 // ScriptStruct MassReplication.MassClientBubbleSerializerBase
 // 0x0030 (0x0138 - 0x0108)
@@ -47,7 +45,6 @@ public:
 	class UMassReplicationSubsystem*              ReplicationSubsystem;                              // 0x0128(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	uint8                                         Pad_130[0x8];                                      // 0x0130(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassClientBubbleSerializerBase;
 
 // ScriptStruct MassReplication.MassNetworkIDFragment
 // 0x0004 (0x0004 - 0x0000)
@@ -56,7 +53,6 @@ struct alignas(0x04) FMassNetworkIDFragment final : public FMassFragment
 public:
 	uint8                                         Pad_0[0x4];                                        // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassNetworkIDFragment;
 
 // ScriptStruct MassReplication.MassReplicatedAgentFragment
 // 0x0018 (0x0018 - 0x0000)
@@ -65,7 +61,6 @@ struct alignas(0x08) FMassReplicatedAgentFragment final : public FMassFragment
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassReplicatedAgentFragment;
 
 // ScriptStruct MassReplication.MassReplicationViewerInfoFragment
 // 0x0018 (0x0018 - 0x0000)
@@ -74,7 +69,6 @@ struct alignas(0x08) FMassReplicationViewerInfoFragment final : public FMassFrag
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassReplicationViewerInfoFragment;
 
 // ScriptStruct MassReplication.MassReplicationLODFragment
 // 0x0002 (0x0002 - 0x0000)
@@ -83,7 +77,6 @@ struct FMassReplicationLODFragment final : public FMassFragment
 public:
 	uint8                                         Pad_0[0x2];                                        // 0x0000(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassReplicationLODFragment;
 
 // ScriptStruct MassReplication.MassReplicationParameters
 // 0x0058 (0x0058 - 0x0000)
@@ -99,7 +92,6 @@ public:
 	TSubclassOf<class AMassClientBubbleInfoBase>  BubbleInfoClass;                                   // 0x0048(0x0008)(Edit, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UMassReplicatorBase>        ReplicatorClass;                                   // 0x0050(0x0008)(Edit, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassReplicationParameters;
 
 // ScriptStruct MassReplication.MassReplicationSharedFragment
 // 0x23A0 (0x23A0 - 0x0000)
@@ -112,7 +104,6 @@ public:
 	class UMassReplicatorBase*                    CachedReplicator;                                  // 0x2390(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	uint8                                         Pad_2398[0x8];                                     // 0x2398(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassReplicationSharedFragment;
 
 // ScriptStruct MassReplication.MassReplicationGridCellLocationFragment
 // 0x000C (0x000C - 0x0000)
@@ -121,14 +112,12 @@ struct alignas(0x04) FMassReplicationGridCellLocationFragment final : public FMa
 public:
 	uint8                                         Pad_0[0xC];                                        // 0x0000(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassReplicationGridCellLocationFragment;
 
 // ScriptStruct MassReplication.MassInReplicationGridTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassInReplicationGridTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassInReplicationGridTag;
 
 // ScriptStruct MassReplication.MassClientBubbleInfoData
 // 0x0018 (0x0018 - 0x0000)
@@ -138,7 +127,6 @@ public:
 	TArray<class AMassClientBubbleInfoBase*>      Bubbles;                                           // 0x0000(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	TSubclassOf<class AMassClientBubbleInfoBase>  BubbleClass;                                       // 0x0010(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassClientBubbleInfoData;
 
 // ScriptStruct MassReplication.ReplicatedAgentPositionYawData
 // 0x0020 (0x0020 - 0x0000)
@@ -149,21 +137,18 @@ public:
 	float                                         Yaw;                                               // 0x0018(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FReplicatedAgentPositionYawData;
 
 // ScriptStruct MassReplication.MassClientHandle
 // 0x0000 (0x0008 - 0x0008)
 struct FMassClientHandle final : public FIndexedHandleBase
 {
 };
-DUMPER7_ASSERTS_FMassClientHandle;
 
 // ScriptStruct MassReplication.MassBubbleInfoClassHandle
 // 0x0000 (0x0004 - 0x0004)
 struct FMassBubbleInfoClassHandle final : public FSimpleIndexedHandleBase
 {
 };
-DUMPER7_ASSERTS_FMassBubbleInfoClassHandle;
 
 // ScriptStruct MassReplication.ReplicatedAgentBase
 // 0x0028 (0x0028 - 0x0000)
@@ -174,6 +159,5 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMassEntityTemplateID                  TemplateID;                                        // 0x0008(0x0020)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FReplicatedAgentBase;
 
 SDK_NAMESPACE_END

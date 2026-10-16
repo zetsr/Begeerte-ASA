@@ -59,7 +59,6 @@ public:
 		return GetDefaultObjImpl<AGameplayDebuggerCategoryReplicator>();
 	}
 };
-DUMPER7_ASSERTS_AGameplayDebuggerCategoryReplicator;
 
 // Class GameplayDebugger.GameplayDebuggerConfig
 // 0x0230 (0x0258 - 0x0028)
@@ -103,7 +102,6 @@ public:
 		return GetDefaultObjImpl<UGameplayDebuggerConfig>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayDebuggerConfig;
 
 // Class GameplayDebugger.GameplayDebuggerUserSettings
 // 0x0010 (0x0048 - 0x0038)
@@ -130,7 +128,6 @@ public:
 		return GetDefaultObjImpl<UGameplayDebuggerUserSettings>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayDebuggerUserSettings;
 
 // Class GameplayDebugger.GameplayDebuggerLocalController
 // 0x0060 (0x0088 - 0x0028)
@@ -157,7 +154,6 @@ public:
 		return GetDefaultObjImpl<UGameplayDebuggerLocalController>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayDebuggerLocalController;
 
 // Class GameplayDebugger.GameplayDebuggerPlayerManager
 // 0x0030 (0x04C0 - 0x0490)
@@ -183,7 +179,6 @@ public:
 		return GetDefaultObjImpl<AGameplayDebuggerPlayerManager>();
 	}
 };
-DUMPER7_ASSERTS_AGameplayDebuggerPlayerManager;
 
 // Class GameplayDebugger.GameplayDebuggerRenderingComponent
 // 0x0060 (0x06D0 - 0x0670)
@@ -206,6 +201,5 @@ public:
 		return GetDefaultObjImpl<UGameplayDebuggerRenderingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayDebuggerRenderingComponent;
 
 SDK_NAMESPACE_END

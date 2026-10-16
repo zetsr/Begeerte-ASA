@@ -43,7 +43,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkComponentSettings>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkComponentSettings;
 
 // Class LiveLinkComponents.LiveLinkControllerBase
 // 0x0040 (0x0068 - 0x0028)
@@ -67,7 +66,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkControllerBase>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkControllerBase;
 
 // Class LiveLinkComponents.LiveLinkLightController
 // 0x0000 (0x0068 - 0x0068)
@@ -87,7 +85,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkLightController>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkLightController;
 
 // Class LiveLinkComponents.LiveLinkTransformController
 // 0x00C8 (0x0130 - 0x0068)
@@ -113,7 +110,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkTransformController>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkTransformController;
 
 // Class LiveLinkComponents.LiveLinkComponentController
 // 0x00A8 (0x0178 - 0x00D0)
@@ -152,6 +148,5 @@ public:
 		return GetDefaultObjImpl<ULiveLinkComponentController>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkComponentController;
 
 SDK_NAMESPACE_END

@@ -23,7 +23,6 @@ struct CustomMeshComponent_AddCustomMeshTriangles final
 public:
 	TArray<struct FCustomMeshTriangle>            Triangles;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_CustomMeshComponent_AddCustomMeshTriangles;
 
 // Function CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles
 // 0x0018 (0x0018 - 0x0000)
@@ -34,7 +33,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_CustomMeshComponent_SetCustomMeshTriangles;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

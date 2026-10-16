@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<AMeleeFist_Impacts_C>();
 	}
 };
-DUMPER7_ASSERTS_AMeleeFist_Impacts_C;
 
 SDK_NAMESPACE_END

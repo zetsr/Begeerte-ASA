@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_CFCore_ButtonStates_structs.hpp"
-#include "STRUCT_FullButtonDesign_structs.hpp"
-#include "ENUM_CFCore_ButtonType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "ENUM_CFCore_ButtonStates_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ENUM_CFCore_ButtonType_structs.hpp"
+#include "STRUCT_FullButtonDesign_structs.hpp"
 #include "CFCoreWidget_classes.hpp"
 
 
@@ -91,6 +91,5 @@ public:
 		return GetDefaultObjImpl<UUI_Button_CFCore_Global_Master_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Button_CFCore_Global_Master_C;
 
 SDK_NAMESPACE_END

@@ -16,35 +16,77 @@
 
 SDK_NAMESPACE_START
 
-// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.UpdateButton
-// (BlueprintCallable, BlueprintEvent)
+// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UASAUIWidget_Button_Style4_C::UpdateButton()
+void UASAUIWidget_Button_Style4_C::BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "UpdateButton");
+		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.SetActive
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    newActive                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UASAUIWidget_Button_Style4_C::SetActive(bool newActive)
+void UASAUIWidget_Button_Style4_C::BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "SetActive");
+		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 
-	Params::ASAUIWidget_Button_Style4_C_SetActive Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.newActive = newActive;
+
+// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UASAUIWidget_Button_Style4_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UASAUIWidget_Button_Style4_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "Destruct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.ExecuteUbergraph_ASAUIWidget_Button_Style4
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UASAUIWidget_Button_Style4_C::ExecuteUbergraph_ASAUIWidget_Button_Style4(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "ExecuteUbergraph_ASAUIWidget_Button_Style4");
+
+	Params::ASAUIWidget_Button_Style4_C_ExecuteUbergraph_ASAUIWidget_Button_Style4 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -70,77 +112,35 @@ void UASAUIWidget_Button_Style4_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.ExecuteUbergraph_ASAUIWidget_Button_Style4
-// (Final, UbergraphFunction, HasDefaults)
+// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.SetActive
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    newActive                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUIWidget_Button_Style4_C::ExecuteUbergraph_ASAUIWidget_Button_Style4(int32 EntryPoint)
+void UASAUIWidget_Button_Style4_C::SetActive(bool newActive)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "ExecuteUbergraph_ASAUIWidget_Button_Style4");
+		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "SetActive");
 
-	Params::ASAUIWidget_Button_Style4_C_ExecuteUbergraph_ASAUIWidget_Button_Style4 Parms{};
+	Params::ASAUIWidget_Button_Style4_C_SetActive Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.newActive = newActive;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.UpdateButton
+// (BlueprintCallable, BlueprintEvent)
 
-void UASAUIWidget_Button_Style4_C::Destruct()
+void UASAUIWidget_Button_Style4_C::UpdateButton()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UASAUIWidget_Button_Style4_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UASAUIWidget_Button_Style4_C::BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UASAUIWidget_Button_Style4_C::BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+		Func = Class->GetFunction("ASAUIWidget_Button_Style4_C", "UpdateButton");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

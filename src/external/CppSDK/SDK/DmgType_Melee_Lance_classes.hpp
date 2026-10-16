@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UDmgType_Melee_Lance_C>();
 	}
 };
-DUMPER7_ASSERTS_UDmgType_Melee_Lance_C;
 
 SDK_NAMESPACE_END

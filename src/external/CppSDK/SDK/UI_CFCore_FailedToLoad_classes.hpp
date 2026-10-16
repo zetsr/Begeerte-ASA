@@ -51,6 +51,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_FailedToLoad_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_FailedToLoad_C;
 
 SDK_NAMESPACE_END

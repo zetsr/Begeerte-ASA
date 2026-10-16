@@ -38,6 +38,5 @@ public:
 		return GetDefaultObjImpl<ULayersBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_ULayersBlueprintLibrary;
 
 SDK_NAMESPACE_END

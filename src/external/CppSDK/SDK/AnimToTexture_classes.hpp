@@ -88,7 +88,6 @@ public:
 		return GetDefaultObjImpl<UAnimToTextureDataAsset>();
 	}
 };
-DUMPER7_ASSERTS_UAnimToTextureDataAsset;
 
 // Class AnimToTexture.AnimToTextureInstancePlaybackLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -118,6 +117,5 @@ public:
 		return GetDefaultObjImpl<UAnimToTextureInstancePlaybackLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UAnimToTextureInstancePlaybackLibrary;
 
 SDK_NAMESPACE_END

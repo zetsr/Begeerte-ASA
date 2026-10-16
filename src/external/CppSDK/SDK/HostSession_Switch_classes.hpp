@@ -433,6 +433,5 @@ public:
 		return GetDefaultObjImpl<UHostSession_Switch_C>();
 	}
 };
-DUMPER7_ASSERTS_UHostSession_Switch_C;
 
 SDK_NAMESPACE_END

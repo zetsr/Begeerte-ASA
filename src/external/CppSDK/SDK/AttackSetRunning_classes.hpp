@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UAttackSetRunning_C>();
 	}
 };
-DUMPER7_ASSERTS_UAttackSetRunning_C;
 
 SDK_NAMESPACE_END

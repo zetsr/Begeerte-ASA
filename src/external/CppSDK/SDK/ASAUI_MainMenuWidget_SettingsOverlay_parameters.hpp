@@ -23,23 +23,21 @@ SDK_PARAM_NAMESPACE_START
 struct ASAUI_MainMenuWidget_SettingsOverlay_C_Tick final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenuWidget_SettingsOverlay_C_Tick;
 
 // Function ASAUI_MainMenuWidget_SettingsOverlay.ASAUI_MainMenuWidget_SettingsOverlay_C.OnKeyDownEvent
 // 0x0200 (0x0200 - 0x0000)
 struct ASAUI_MainMenuWidget_SettingsOverlay_C_OnKeyDownEvent final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor)
-	struct FKeyEvent                              InKeyboardEvent;                                   // 0x0038(0x0040)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FEventReply                            ReturnValue;                                       // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
+	struct FGeometry                              MyGeometry_OnKeyDownEvent;                         // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor)
+	struct FKeyEvent                              InKeyboardEvent_OnKeyDownEvent;                    // 0x0038(0x0040)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FEventReply                            ReturnValue_OnKeyDownEvent;                        // 0x0078(0x00B8)(Parm, OutParm, ReturnParm)
 	struct FKey                                   LocalKey;                                          // 0x0130(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FEventReply                            CallFunc_OnKeyDownEvent_ReturnValue;               // 0x0148(0x00B8)()
 };
-DUMPER7_ASSERTS_ASAUI_MainMenuWidget_SettingsOverlay_C_OnKeyDownEvent;
 
 // Function ASAUI_MainMenuWidget_SettingsOverlay.ASAUI_MainMenuWidget_SettingsOverlay_C.ExecuteUbergraph_ASAUI_MainMenuWidget_SettingsOverlay
 // 0x0044 (0x0044 - 0x0000)
@@ -52,17 +50,15 @@ public:
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0008(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenuWidget_SettingsOverlay_C_ExecuteUbergraph_ASAUI_MainMenuWidget_SettingsOverlay;
 
 // Function ASAUI_MainMenuWidget_SettingsOverlay.ASAUI_MainMenuWidget_SettingsOverlay_C.BPGamepadReleased
 // 0x0020 (0x0020 - 0x0000)
 struct ASAUI_MainMenuWidget_SettingsOverlay_C_BPGamepadReleased final
 {
 public:
-	struct FKey                                   theKey;                                            // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   theKey_BPGamepadReleased;                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          ReturnValue_BPGamepadReleased;                     // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenuWidget_SettingsOverlay_C_BPGamepadReleased;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

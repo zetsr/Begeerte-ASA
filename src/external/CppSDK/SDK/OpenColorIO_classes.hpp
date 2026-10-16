@@ -43,7 +43,6 @@ public:
 		return GetDefaultObjImpl<UOpenColorIOSettings>();
 	}
 };
-DUMPER7_ASSERTS_UOpenColorIOSettings;
 
 // Class OpenColorIO.OpenColorIOBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -66,7 +65,6 @@ public:
 		return GetDefaultObjImpl<UOpenColorIOBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UOpenColorIOBlueprintLibrary;
 
 // Class OpenColorIO.OpenColorIOColorTransform
 // 0x00E0 (0x0108 - 0x0028)
@@ -98,7 +96,6 @@ public:
 		return GetDefaultObjImpl<UOpenColorIOColorTransform>();
 	}
 };
-DUMPER7_ASSERTS_UOpenColorIOColorTransform;
 
 // Class OpenColorIO.OpenColorIOConfiguration
 // 0x00D0 (0x00F8 - 0x0028)
@@ -130,7 +127,6 @@ public:
 		return GetDefaultObjImpl<UOpenColorIOConfiguration>();
 	}
 };
-DUMPER7_ASSERTS_UOpenColorIOConfiguration;
 
 // Class OpenColorIO.OpenColorIODisplayExtensionWrapper
 // 0x0010 (0x0038 - 0x0028)
@@ -164,6 +160,5 @@ public:
 		return GetDefaultObjImpl<UOpenColorIODisplayExtensionWrapper>();
 	}
 };
-DUMPER7_ASSERTS_UOpenColorIODisplayExtensionWrapper;
 
 SDK_NAMESPACE_END

@@ -36,7 +36,6 @@ public:
 		return GetDefaultObjImpl<UComputeDataInterface>();
 	}
 };
-DUMPER7_ASSERTS_UComputeDataInterface;
 
 // Class ComputeFramework.ComputeDataProvider
 // 0x0000 (0x0028 - 0x0028)
@@ -56,7 +55,6 @@ public:
 		return GetDefaultObjImpl<UComputeDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UComputeDataProvider;
 
 // Class ComputeFramework.ComputeKernelSource
 // 0x0070 (0x0098 - 0x0028)
@@ -86,7 +84,6 @@ public:
 		return GetDefaultObjImpl<UComputeKernelSource>();
 	}
 };
-DUMPER7_ASSERTS_UComputeKernelSource;
 
 // Class ComputeFramework.ComputeSource
 // 0x0010 (0x0038 - 0x0028)
@@ -109,7 +106,6 @@ public:
 		return GetDefaultObjImpl<UComputeSource>();
 	}
 };
-DUMPER7_ASSERTS_UComputeSource;
 
 // Class ComputeFramework.ComputeGraph
 // 0x00B8 (0x00E0 - 0x0028)
@@ -137,7 +133,6 @@ public:
 		return GetDefaultObjImpl<UComputeGraph>();
 	}
 };
-DUMPER7_ASSERTS_UComputeGraph;
 
 // Class ComputeFramework.ComputeGraphComponent
 // 0x0020 (0x00F0 - 0x00D0)
@@ -166,7 +161,6 @@ public:
 		return GetDefaultObjImpl<UComputeGraphComponent>();
 	}
 };
-DUMPER7_ASSERTS_UComputeGraphComponent;
 
 // Class ComputeFramework.ComputeKernel
 // 0x0010 (0x0038 - 0x0028)
@@ -191,7 +185,6 @@ public:
 		return GetDefaultObjImpl<UComputeKernel>();
 	}
 };
-DUMPER7_ASSERTS_UComputeKernel;
 
 // Class ComputeFramework.ComputeKernelFromText
 // 0x0010 (0x00A8 - 0x0098)
@@ -214,7 +207,6 @@ public:
 		return GetDefaultObjImpl<UComputeKernelFromText>();
 	}
 };
-DUMPER7_ASSERTS_UComputeKernelFromText;
 
 // Class ComputeFramework.ComputeSourceFromText
 // 0x0010 (0x0048 - 0x0038)
@@ -237,6 +229,5 @@ public:
 		return GetDefaultObjImpl<UComputeSourceFromText>();
 	}
 };
-DUMPER7_ASSERTS_UComputeSourceFromText;
 
 SDK_NAMESPACE_END

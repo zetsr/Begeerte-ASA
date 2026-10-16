@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemWeaponAttachment_Laser_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemWeaponAttachment_Laser_C;
 
 SDK_NAMESPACE_END

@@ -56,6 +56,5 @@ public:
 		return GetDefaultObjImpl<USkeletalMeshComponent_CharacterSkin_C>();
 	}
 };
-DUMPER7_ASSERTS_USkeletalMeshComponent_CharacterSkin_C;
 
 SDK_NAMESPACE_END

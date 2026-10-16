@@ -42,7 +42,6 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        InteractionCooldownEndTime;                        // 0x0048(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassSmartObjectUserFragment;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectTimedBehaviorFragment
 // 0x0004 (0x0004 - 0x0000)
@@ -51,14 +50,12 @@ struct FMassSmartObjectTimedBehaviorFragment final : public FMassFragment
 public:
 	float                                         UseTime;                                           // 0x0000(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassSmartObjectTimedBehaviorFragment;
 
 // ScriptStruct MassSmartObjects.MassInActiveSmartObjectsRangeTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassInActiveSmartObjectsRangeTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassInActiveSmartObjectsRangeTag;
 
 // ScriptStruct MassSmartObjects.SmartObjectRegistrationFragment
 // 0x0010 (0x0010 - 0x0000)
@@ -68,7 +65,6 @@ public:
 	TWeakObjectPtr<class USmartObjectDefinition>  Asset;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSmartObjectHandle                     Handle;                                            // 0x0008(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSmartObjectRegistrationFragment;
 
 // ScriptStruct MassSmartObjects.SmartObjectCandidateSlot
 // 0x0020 (0x0020 - 0x0000)
@@ -79,7 +75,6 @@ public:
 	float                                         Cost;                                              // 0x0018(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSmartObjectCandidateSlot;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectRequestID
 // 0x0008 (0x0008 - 0x0000)
@@ -88,7 +83,6 @@ struct FMassSmartObjectRequestID final
 public:
 	struct FMassEntityHandle                      Entity;                                            // 0x0000(0x0008)(Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FMassSmartObjectRequestID;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectCandidateSlots
 // 0x0088 (0x0088 - 0x0000)
@@ -99,7 +93,6 @@ public:
 	uint8                                         NumSlots;                                          // 0x0080(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassSmartObjectCandidateSlots;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectRequestResultFragment
 // 0x0090 (0x0090 - 0x0000)
@@ -110,7 +103,6 @@ public:
 	bool                                          bProcessed;                                        // 0x0088(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassSmartObjectRequestResultFragment;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectWorldLocationRequestFragment
 // 0x0088 (0x0088 - 0x0000)
@@ -122,7 +114,6 @@ public:
 	struct FGameplayTagContainer                  UserTags;                                          // 0x0020(0x0020)(Transient, NativeAccessSpecifierPublic)
 	struct FGameplayTagQuery                      ActivityRequirements;                              // 0x0040(0x0048)(Transient, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassSmartObjectWorldLocationRequestFragment;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectLaneLocationRequestFragment
 // 0x0080 (0x0080 - 0x0000)
@@ -134,14 +125,12 @@ public:
 	struct FGameplayTagContainer                  UserTags;                                          // 0x0018(0x0020)(Transient, NativeAccessSpecifierPublic)
 	struct FGameplayTagQuery                      ActivityRequirements;                              // 0x0038(0x0048)(Transient, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassSmartObjectLaneLocationRequestFragment;
 
 // ScriptStruct MassSmartObjects.MassSmartObjectCompletedRequestTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassSmartObjectCompletedRequestTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassSmartObjectCompletedRequestTag;
 
 // ScriptStruct MassSmartObjects.SmartObjectMassEntityUserData
 // 0x0008 (0x0008 - 0x0000)
@@ -150,7 +139,6 @@ struct FSmartObjectMassEntityUserData final
 public:
 	struct FMassEntityHandle                      UserEntity;                                        // 0x0000(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSmartObjectMassEntityUserData;
 
 // ScriptStruct MassSmartObjects.SmartObjectLaneLocation
 // 0x0010 (0x0010 - 0x0000)
@@ -161,7 +149,6 @@ public:
 	int32                                         LaneIndex;                                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DistanceAlongLane;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSmartObjectLaneLocation;
 
 // ScriptStruct MassSmartObjects.SmartObjectLaneLocationIndices
 // 0x0010 (0x0010 - 0x0000)
@@ -170,7 +157,6 @@ struct FSmartObjectLaneLocationIndices final
 public:
 	TArray<int32>                                 SmartObjectLaneLocationIndices;                    // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSmartObjectLaneLocationIndices;
 
 // ScriptStruct MassSmartObjects.SmartObjectAnnotationData
 // 0x00D0 (0x00D0 - 0x0000)
@@ -185,6 +171,5 @@ public:
 	TMap<int32, struct FSmartObjectLaneLocationIndices> LaneToLaneLocationIndicesLookup;             // 0x0078(0x0050)(Edit, EditConst, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSmartObjectAnnotationData;
 
 SDK_NAMESPACE_END

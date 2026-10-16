@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "FPVClimbPickWeaponAnimBP_Base_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "FPVClimbPickWeaponAnimBP_Base_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -103,6 +103,5 @@ public:
 		return GetDefaultObjImpl<UFPVClimbPickWeaponAnimBP_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UFPVClimbPickWeaponAnimBP_Base_C;
 
 SDK_NAMESPACE_END

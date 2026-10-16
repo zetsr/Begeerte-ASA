@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STRUCT_SubOptions_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "STRUCT_SubOptions_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
@@ -37,7 +37,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_CheckIfSubCategorySelected;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.ContinueUpdating
 // 0x0010 (0x0010 - 0x0000)
@@ -48,7 +47,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0008(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_ContinueUpdating;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.Event On Sub Option Clicked
 // 0x0018 (0x0018 - 0x0000)
@@ -58,7 +56,6 @@ public:
 	class FString                                 SubCategory;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int64                                         SubCategoryID;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_Event_On_Sub_Option_Clicked;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.Event Update Navigation
 // 0x0001 (0x0001 - 0x0000)
@@ -67,7 +64,6 @@ struct UI_CustomComboBoxOption_C_Event_Update_Navigation final
 public:
 	bool                                          IsLast;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_Event_Update_Navigation;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.ExecuteUbergraph_UI_CustomComboBoxOption
 // 0x0690 (0x0690 - 0x0000)
@@ -174,7 +170,6 @@ public:
 	uint8                                         Pad_684[0x4];                                      // 0x0684(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0688(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_ExecuteUbergraph_UI_CustomComboBoxOption;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -184,7 +179,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_GetRootCFWidget;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.OnAddedToFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -193,7 +187,6 @@ struct UI_CustomComboBoxOption_C_OnAddedToFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_OnAddedToFocusPath;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.OnFail_2F79E7094E3FA19CAF12DEBE91370E8A
 // 0x0008 (0x0008 - 0x0000)
@@ -202,7 +195,6 @@ struct UI_CustomComboBoxOption_C_OnFail_2F79E7094E3FA19CAF12DEBE91370E8A final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_OnFail_2F79E7094E3FA19CAF12DEBE91370E8A;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.OnNavRight
 // 0x0030 (0x0030 - 0x0000)
@@ -218,7 +210,6 @@ public:
 	class UUI_Sub_Category_C*                     K2Node_DynamicCast_AsUI_Sub__Category;             // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_OnNavRight;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.OnOptionSelected
 // 0x0030 (0x0030 - 0x0000)
@@ -230,7 +221,6 @@ public:
 	TScriptInterface<class IBPI_CFCore_CustomComboBox_C> K2Node_DynamicCast_AsBPI_CFCore_Custom_Combo_Box; // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_OnOptionSelected;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.OnRemovedFromFocusPath
 // 0x0008 (0x0008 - 0x0000)
@@ -239,7 +229,6 @@ struct UI_CustomComboBoxOption_C_OnRemovedFromFocusPath final
 public:
 	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_OnRemovedFromFocusPath;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.OnSuccess_2F79E7094E3FA19CAF12DEBE91370E8A
 // 0x0008 (0x0008 - 0x0000)
@@ -248,7 +237,6 @@ struct UI_CustomComboBoxOption_C_OnSuccess_2F79E7094E3FA19CAF12DEBE91370E8A fina
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_OnSuccess_2F79E7094E3FA19CAF12DEBE91370E8A;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.OnUpdate
 // 0x0030 (0x0030 - 0x0000)
@@ -264,7 +252,6 @@ public:
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast; // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_OnUpdate;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -273,7 +260,6 @@ struct UI_CustomComboBoxOption_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_PreConstruct;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.RemoveSpacingIfNotHaveArrow
 // 0x0008 (0x0008 - 0x0000)
@@ -283,7 +269,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_RemoveSpacingIfNotHaveArrow;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -293,7 +278,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_Tick;
 
 // Function UI_CustomComboBoxOption.UI_CustomComboBoxOption_C.UpdateHoveredOption
 // 0x0020 (0x0020 - 0x0000)
@@ -309,7 +293,6 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CustomComboBoxOption_C_UpdateHoveredOption;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

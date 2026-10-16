@@ -40,7 +40,6 @@ public:
 	float                                         CallFunc_GetWanderRandomWaitTime_MinWait_ImplicitCast; // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetWanderRandomWaitTime_MaxWait_ImplicitCast; // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_RandomWaitWander_TK_C_ExecuteUbergraph_RandomWaitWander_TK;
 
 // Function RandomWaitWander_TK.RandomWaitWander_TK_C.ReceiveExecute
 // 0x0008 (0x0008 - 0x0000)
@@ -49,7 +48,6 @@ struct RandomWaitWander_TK_C_ReceiveExecute final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_RandomWaitWander_TK_C_ReceiveExecute;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

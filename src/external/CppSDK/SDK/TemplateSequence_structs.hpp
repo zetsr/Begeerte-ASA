@@ -36,7 +36,6 @@ public:
 	ETemplateSectionPropertyScaleType             PropertyScaleType;                                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMovieSceneFloatChannel                FloatChannel;                                      // 0x0028(0x0110)(NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTemplateSectionPropertyScale;
 
 // ScriptStruct TemplateSequence.TemplateSequenceBindingOverrideData
 // 0x000C (0x000C - 0x0000)
@@ -47,6 +46,5 @@ public:
 	bool                                          bOverridesDefault;                                 // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTemplateSequenceBindingOverrideData;
 
 SDK_NAMESPACE_END

@@ -33,7 +33,6 @@ public:
 	struct FPolygonID                             PolygonID_MinusZ;                                  // 0x0048(0x0004)(Parm, OutParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_StaticMeshDescription_CreateCube;
 
 // Function StaticMeshDescription.StaticMeshDescription.SetPolygonGroupMaterialSlotName
 // 0x000C (0x000C - 0x0000)
@@ -43,7 +42,6 @@ public:
 	struct FPolygonGroupID                        PolygonGroupID;                                    // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   SlotName;                                          // 0x0004(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StaticMeshDescription_SetPolygonGroupMaterialSlotName;
 
 // Function StaticMeshDescription.StaticMeshDescription.SetVertexInstanceUV
 // 0x0020 (0x0020 - 0x0000)
@@ -56,7 +54,6 @@ public:
 	int32                                         UVIndex;                                           // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_StaticMeshDescription_SetVertexInstanceUV;
 
 // Function StaticMeshDescription.StaticMeshDescription.GetVertexInstanceUV
 // 0x0018 (0x0018 - 0x0000)
@@ -67,7 +64,6 @@ public:
 	int32                                         UVIndex;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_StaticMeshDescription_GetVertexInstanceUV;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

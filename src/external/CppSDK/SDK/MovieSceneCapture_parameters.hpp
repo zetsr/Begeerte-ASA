@@ -23,7 +23,6 @@ struct MovieSceneCaptureProtocolBase_GetState final
 public:
 	EMovieSceneCaptureProtocolState               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCaptureProtocolBase_GetState;
 
 // Function MovieSceneCapture.MovieSceneCaptureProtocolBase.IsCapturing
 // 0x0001 (0x0001 - 0x0000)
@@ -32,7 +31,6 @@ struct MovieSceneCaptureProtocolBase_IsCapturing final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCaptureProtocolBase_IsCapturing;
 
 // Function MovieSceneCapture.MovieSceneCapture.GetAudioCaptureProtocol
 // 0x0008 (0x0008 - 0x0000)
@@ -41,7 +39,6 @@ struct MovieSceneCapture_GetAudioCaptureProtocol final
 public:
 	class UMovieSceneCaptureProtocolBase*         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCapture_GetAudioCaptureProtocol;
 
 // Function MovieSceneCapture.MovieSceneCapture.GetImageCaptureProtocol
 // 0x0008 (0x0008 - 0x0000)
@@ -50,7 +47,6 @@ struct MovieSceneCapture_GetImageCaptureProtocol final
 public:
 	class UMovieSceneCaptureProtocolBase*         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCapture_GetImageCaptureProtocol;
 
 // Function MovieSceneCapture.MovieSceneCapture.SetAudioCaptureProtocolType
 // 0x0008 (0x0008 - 0x0000)
@@ -59,7 +55,6 @@ struct MovieSceneCapture_SetAudioCaptureProtocolType final
 public:
 	TSubclassOf<class UMovieSceneCaptureProtocolBase> ProtocolType;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCapture_SetAudioCaptureProtocolType;
 
 // Function MovieSceneCapture.MovieSceneCapture.SetImageCaptureProtocolType
 // 0x0008 (0x0008 - 0x0000)
@@ -68,7 +63,6 @@ struct MovieSceneCapture_SetImageCaptureProtocolType final
 public:
 	TSubclassOf<class UMovieSceneCaptureProtocolBase> ProtocolType;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCapture_SetImageCaptureProtocolType;
 
 // Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindAudioCaptureProtocol
 // 0x0008 (0x0008 - 0x0000)
@@ -77,7 +71,6 @@ struct MovieSceneCaptureEnvironment_FindAudioCaptureProtocol final
 public:
 	class UMovieSceneAudioCaptureProtocolBase*    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCaptureEnvironment_FindAudioCaptureProtocol;
 
 // Function MovieSceneCapture.MovieSceneCaptureEnvironment.FindImageCaptureProtocol
 // 0x0008 (0x0008 - 0x0000)
@@ -86,7 +79,6 @@ struct MovieSceneCaptureEnvironment_FindImageCaptureProtocol final
 public:
 	class UMovieSceneImageCaptureProtocolBase*    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCaptureEnvironment_FindImageCaptureProtocol;
 
 // Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime
 // 0x0004 (0x0004 - 0x0000)
@@ -95,7 +87,6 @@ struct MovieSceneCaptureEnvironment_GetCaptureElapsedTime final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCaptureEnvironment_GetCaptureElapsedTime;
 
 // Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber
 // 0x0004 (0x0004 - 0x0000)
@@ -104,7 +95,6 @@ struct MovieSceneCaptureEnvironment_GetCaptureFrameNumber final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCaptureEnvironment_GetCaptureFrameNumber;
 
 // Function MovieSceneCapture.MovieSceneCaptureEnvironment.IsCaptureInProgress
 // 0x0001 (0x0001 - 0x0000)
@@ -113,7 +103,6 @@ struct MovieSceneCaptureEnvironment_IsCaptureInProgress final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MovieSceneCaptureEnvironment_IsCaptureInProgress;
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnPixelsReceived
 // 0x0070 (0x0070 - 0x0000)
@@ -124,7 +113,6 @@ public:
 	struct FCapturedPixelsID                      ID;                                                // 0x0010(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FFrameMetrics                          FrameMetrics;                                      // 0x0060(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UserDefinedCaptureProtocol_OnPixelsReceived;
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnSetup
 // 0x0001 (0x0001 - 0x0000)
@@ -133,7 +121,6 @@ struct UserDefinedCaptureProtocol_OnSetup final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UserDefinedCaptureProtocol_OnSetup;
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.ResolveBuffer
 // 0x0058 (0x0058 - 0x0000)
@@ -143,7 +130,6 @@ public:
 	class UTexture*                               Buffer;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCapturedPixelsID                      BufferID;                                          // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UserDefinedCaptureProtocol_ResolveBuffer;
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.StartCapturingFinalPixels
 // 0x0050 (0x0050 - 0x0000)
@@ -152,7 +138,6 @@ struct UserDefinedCaptureProtocol_StartCapturingFinalPixels final
 public:
 	struct FCapturedPixelsID                      StreamId;                                          // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UserDefinedCaptureProtocol_StartCapturingFinalPixels;
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.GenerateFilename
 // 0x0020 (0x0020 - 0x0000)
@@ -162,7 +147,6 @@ public:
 	struct FFrameMetrics                          InFrameMetrics;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UserDefinedCaptureProtocol_GenerateFilename;
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.GetCurrentFrameMetrics
 // 0x0010 (0x0010 - 0x0000)
@@ -171,7 +155,6 @@ struct UserDefinedCaptureProtocol_GetCurrentFrameMetrics final
 public:
 	struct FFrameMetrics                          ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UserDefinedCaptureProtocol_GetCurrentFrameMetrics;
 
 // Function MovieSceneCapture.UserDefinedCaptureProtocol.OnCanFinalize
 // 0x0001 (0x0001 - 0x0000)
@@ -180,7 +163,6 @@ struct UserDefinedCaptureProtocol_OnCanFinalize final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UserDefinedCaptureProtocol_OnCanFinalize;
 
 // Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForBuffer
 // 0x0068 (0x0068 - 0x0000)
@@ -191,7 +173,6 @@ public:
 	struct FCapturedPixelsID                      StreamId;                                          // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UserDefinedImageCaptureProtocol_GenerateFilenameForBuffer;
 
 // Function MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForCurrentFrame
 // 0x0010 (0x0010 - 0x0000)
@@ -200,7 +181,6 @@ struct UserDefinedImageCaptureProtocol_GenerateFilenameForCurrentFrame final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UserDefinedImageCaptureProtocol_GenerateFilenameForCurrentFrame;
 
 // Function MovieSceneCapture.UserDefinedImageCaptureProtocol.WriteImageToDisk
 // 0x0078 (0x0078 - 0x0000)
@@ -213,7 +193,6 @@ public:
 	bool                                          bCopyImageData;                                    // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UserDefinedImageCaptureProtocol_WriteImageToDisk;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

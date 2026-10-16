@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UFL_ControlRigFX_C>();
 	}
 };
-DUMPER7_ASSERTS_UFL_ControlRigFX_C;
 
 SDK_NAMESPACE_END

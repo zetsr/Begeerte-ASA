@@ -82,6 +82,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_NewsCarouselTemplate_Entry_News_Video_Half_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_NewsCarouselTemplate_Entry_News_Video_Half_C;
 
 SDK_NAMESPACE_END

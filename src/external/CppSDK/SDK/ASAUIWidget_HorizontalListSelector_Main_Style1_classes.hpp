@@ -61,36 +61,36 @@ public:
 	struct FSlateFontInfo                         ButtonLabels_Font;                                 // 0x04F8(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TArray<class UASAUIWidget_Button_Style2A_C*>  buttons;                                           // 0x0558(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	double                                        ButtonWidth;                                       // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(int32 Index)>   OnSelectionChangedIndex;                           // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(int32 Index_0)> OnSelectionChangedIndex;                           // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateWidget();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void SwitchButton(bool Next, class UWidget** Widget);
-	void SetToSpecificIndex(int32 Index_0);
-	void SetToIndex(int32 NewIndex, bool* Valid);
-	void SetEnabledStateOfButtonIndex(int32 Index_0, bool Enabled_);
-	void Set_Visible_State_Of_Button_Index(int32 Index_0, bool Enabled);
-	void Set_All_Buttons_Inactive();
-	void PreConstruct(bool IsDesignTime);
-	void GetPreviousAvailableButtonIndex(int32 StartingIndex, int32* FirstButton);
-	void GetNextAvailableButtonIndex(int32 StartingIndex, int32* FirstButton);
-	void GetLastAvailableButtonIndex(int32* FirstButton);
-	void Get_First_Available_Button_Index(int32* FirstButton);
-	void FixConsoleIcons();
-	void ExecuteUbergraph_ASAUIWidget_HorizontalListSelector_Main_Style1(int32 EntryPoint);
-	void Construct();
-	void BndEvt__ASAUIWidget_HorizontalListSelector_Button9_K2Node_ComponentBoundEvent_9_OnButtonClicked__DelegateSignature();
-	void BndEvt__ASAUIWidget_HorizontalListSelector_Button8_K2Node_ComponentBoundEvent_8_OnButtonClicked__DelegateSignature();
-	void BndEvt__ASAUIWidget_HorizontalListSelector_Button7_K2Node_ComponentBoundEvent_7_OnButtonClicked__DelegateSignature();
-	void BndEvt__ASAUIWidget_HorizontalListSelector_Button6_K2Node_ComponentBoundEvent_6_OnButtonClicked__DelegateSignature();
-	void BndEvt__ASAUIWidget_HorizontalListSelector_Button5_K2Node_ComponentBoundEvent_5_OnButtonClicked__DelegateSignature();
-	void BndEvt__ASAUIWidget_HorizontalListSelector_Button4_K2Node_ComponentBoundEvent_1_OnButtonClicked__DelegateSignature();
-	void BndEvt__ASAUIWidget_HorizontalListSelector_Button3_K2Node_ComponentBoundEvent_0_OnButtonClicked__DelegateSignature();
-	void BndEvt__ASAUIWidget_HorizontalListSelector_Button10_K2Node_ComponentBoundEvent_10_OnButtonClicked__DelegateSignature();
-	void BndEvt__ASAUI_ListSessions_UnofficialProxyButton_K2Node_ComponentBoundEvent_3_OnButtonClicked__DelegateSignature();
-	void BndEvt__ASAUI_ListSessions_OfficialProxyButton_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature();
 	void BndEvt__ASAUI_ListSessions_FavoritesProxyButton_K2Node_ComponentBoundEvent_4_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUI_ListSessions_OfficialProxyButton_K2Node_ComponentBoundEvent_2_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUI_ListSessions_UnofficialProxyButton_K2Node_ComponentBoundEvent_3_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUIWidget_HorizontalListSelector_Button10_K2Node_ComponentBoundEvent_10_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUIWidget_HorizontalListSelector_Button3_K2Node_ComponentBoundEvent_0_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUIWidget_HorizontalListSelector_Button4_K2Node_ComponentBoundEvent_1_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUIWidget_HorizontalListSelector_Button5_K2Node_ComponentBoundEvent_5_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUIWidget_HorizontalListSelector_Button6_K2Node_ComponentBoundEvent_6_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUIWidget_HorizontalListSelector_Button7_K2Node_ComponentBoundEvent_7_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUIWidget_HorizontalListSelector_Button8_K2Node_ComponentBoundEvent_8_OnButtonClicked__DelegateSignature();
+	void BndEvt__ASAUIWidget_HorizontalListSelector_Button9_K2Node_ComponentBoundEvent_9_OnButtonClicked__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_ASAUIWidget_HorizontalListSelector_Main_Style1(int32 EntryPoint);
+	void FixConsoleIcons();
+	void Get_First_Available_Button_Index(int32* FirstButton);
+	void GetLastAvailableButtonIndex(int32* FirstButton);
+	void GetNextAvailableButtonIndex(int32 StartingIndex, int32* FirstButton);
+	void GetPreviousAvailableButtonIndex(int32 StartingIndex, int32* FirstButton);
+	void PreConstruct(bool IsDesignTime);
+	void Set_All_Buttons_Inactive();
+	void Set_Visible_State_Of_Button_Index(int32 Index_0, bool Enabled);
+	void SetEnabledStateOfButtonIndex(int32 Index_0, bool Enabled_);
+	void SetToIndex(int32 NewIndex, bool* Valid);
+	void SetToSpecificIndex(int32 Index_0);
+	void SwitchButton(bool Next, class UWidget** Widget);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void UpdateWidget();
 
 public:
 	static class UClass* StaticClass()
@@ -106,6 +106,5 @@ public:
 		return GetDefaultObjImpl<UASAUIWidget_HorizontalListSelector_Main_Style1_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUIWidget_HorizontalListSelector_Main_Style1_C;
 
 SDK_NAMESPACE_END

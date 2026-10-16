@@ -52,7 +52,6 @@ public:
 		return GetDefaultObjImpl<UMassAgentComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMassAgentComponent;
 
 // Class MassActors.MassActorPoolableInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -86,7 +85,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMassActorPoolableInterface;
 
 // Class MassActors.MassActorSpawnerSubsystem
 // 0x00B8 (0x00F0 - 0x0038)
@@ -112,7 +110,6 @@ public:
 		return GetDefaultObjImpl<UMassActorSpawnerSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassActorSpawnerSubsystem;
 
 // Class MassActors.MassActorSubsystem
 // 0x0010 (0x0048 - 0x0038)
@@ -135,7 +132,6 @@ public:
 		return GetDefaultObjImpl<UMassActorSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassActorSubsystem;
 
 // Class MassActors.MassAgentSubsystem
 // 0x0148 (0x0180 - 0x0038)
@@ -165,7 +161,6 @@ public:
 		return GetDefaultObjImpl<UMassAgentSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassAgentSubsystem;
 
 // Class MassActors.MassAgentSyncTrait
 // 0x0008 (0x0030 - 0x0028)
@@ -189,7 +184,6 @@ public:
 		return GetDefaultObjImpl<UMassAgentSyncTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassAgentSyncTrait;
 
 // Class MassActors.MassAgentCapsuleCollisionSyncTrait
 // 0x0008 (0x0038 - 0x0030)
@@ -213,7 +207,6 @@ public:
 		return GetDefaultObjImpl<UMassAgentCapsuleCollisionSyncTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassAgentCapsuleCollisionSyncTrait;
 
 // Class MassActors.MassAgentMovementSyncTrait
 // 0x0000 (0x0030 - 0x0030)
@@ -233,7 +226,6 @@ public:
 		return GetDefaultObjImpl<UMassAgentMovementSyncTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassAgentMovementSyncTrait;
 
 // Class MassActors.MassAgentOrientationSyncTrait
 // 0x0000 (0x0030 - 0x0030)
@@ -253,7 +245,6 @@ public:
 		return GetDefaultObjImpl<UMassAgentOrientationSyncTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassAgentOrientationSyncTrait;
 
 // Class MassActors.MassAgentFeetLocationSyncTrait
 // 0x0000 (0x0030 - 0x0030)
@@ -273,7 +264,6 @@ public:
 		return GetDefaultObjImpl<UMassAgentFeetLocationSyncTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassAgentFeetLocationSyncTrait;
 
 // Class MassActors.MassCapsuleTransformToMassTranslator
 // 0x0320 (0x03F0 - 0x00D0)
@@ -296,7 +286,6 @@ public:
 		return GetDefaultObjImpl<UMassCapsuleTransformToMassTranslator>();
 	}
 };
-DUMPER7_ASSERTS_UMassCapsuleTransformToMassTranslator;
 
 // Class MassActors.MassTransformToActorCapsuleTranslator
 // 0x0320 (0x03F0 - 0x00D0)
@@ -319,7 +308,6 @@ public:
 		return GetDefaultObjImpl<UMassTransformToActorCapsuleTranslator>();
 	}
 };
-DUMPER7_ASSERTS_UMassTransformToActorCapsuleTranslator;
 
 // Class MassActors.MassCharacterMovementToMassTranslator
 // 0x0320 (0x03F0 - 0x00D0)
@@ -342,7 +330,6 @@ public:
 		return GetDefaultObjImpl<UMassCharacterMovementToMassTranslator>();
 	}
 };
-DUMPER7_ASSERTS_UMassCharacterMovementToMassTranslator;
 
 // Class MassActors.MassCharacterMovementToActorTranslator
 // 0x0320 (0x03F0 - 0x00D0)
@@ -365,7 +352,6 @@ public:
 		return GetDefaultObjImpl<UMassCharacterMovementToActorTranslator>();
 	}
 };
-DUMPER7_ASSERTS_UMassCharacterMovementToActorTranslator;
 
 // Class MassActors.MassCharacterOrientationToMassTranslator
 // 0x0320 (0x03F0 - 0x00D0)
@@ -388,7 +374,6 @@ public:
 		return GetDefaultObjImpl<UMassCharacterOrientationToMassTranslator>();
 	}
 };
-DUMPER7_ASSERTS_UMassCharacterOrientationToMassTranslator;
 
 // Class MassActors.MassCharacterOrientationToActorTranslator
 // 0x0320 (0x03F0 - 0x00D0)
@@ -411,7 +396,6 @@ public:
 		return GetDefaultObjImpl<UMassCharacterOrientationToActorTranslator>();
 	}
 };
-DUMPER7_ASSERTS_UMassCharacterOrientationToActorTranslator;
 
 // Class MassActors.MassSceneComponentLocationToMassTranslator
 // 0x0320 (0x03F0 - 0x00D0)
@@ -434,7 +418,6 @@ public:
 		return GetDefaultObjImpl<UMassSceneComponentLocationToMassTranslator>();
 	}
 };
-DUMPER7_ASSERTS_UMassSceneComponentLocationToMassTranslator;
 
 // Class MassActors.MassSceneComponentLocationToActorTranslator
 // 0x0320 (0x03F0 - 0x00D0)
@@ -457,7 +440,6 @@ public:
 		return GetDefaultObjImpl<UMassSceneComponentLocationToActorTranslator>();
 	}
 };
-DUMPER7_ASSERTS_UMassSceneComponentLocationToActorTranslator;
 
 // Class MassActors.MassTranslator_BehaviorTree
 // 0x0320 (0x03F0 - 0x00D0)
@@ -480,6 +462,5 @@ public:
 		return GetDefaultObjImpl<UMassTranslator_BehaviorTree>();
 	}
 };
-DUMPER7_ASSERTS_UMassTranslator_BehaviorTree;
 
 SDK_NAMESPACE_END

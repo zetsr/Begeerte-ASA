@@ -87,7 +87,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 Value;                                             // 0x0008(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FNNEAttributeValue;
 
 // ScriptStruct NNE.NNEFormatAttributeDesc
 // 0x0028 (0x0028 - 0x0000)
@@ -97,7 +96,6 @@ public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FNNEAttributeValue                     Value;                                             // 0x0010(0x0018)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNNEFormatAttributeDesc;
 
 // ScriptStruct NNE.NNEFormatOperatorDesc
 // 0x0058 (0x0058 - 0x0000)
@@ -111,7 +109,6 @@ public:
 	TArray<uint32>                                OutTensors;                                        // 0x0038(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	TArray<struct FNNEFormatAttributeDesc>        Attributes;                                        // 0x0048(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNNEFormatOperatorDesc;
 
 // ScriptStruct NNE.NNEFormatTensorDesc
 // 0x0038 (0x0038 - 0x0000)
@@ -126,7 +123,6 @@ public:
 	uint64                                        DataSize;                                          // 0x0028(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint64                                        DataOffset;                                        // 0x0030(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNNEFormatTensorDesc;
 
 // ScriptStruct NNE.NNERuntimeFormat
 // 0x0040 (0x0040 - 0x0000)
@@ -137,6 +133,5 @@ public:
 	TArray<struct FNNEFormatOperatorDesc>         Operators;                                         // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0x20];                                      // 0x0020(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNNERuntimeFormat;
 
 SDK_NAMESPACE_END

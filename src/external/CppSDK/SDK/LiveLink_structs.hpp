@@ -56,7 +56,6 @@ struct FLiveLinkRetargetAssetReference final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLiveLinkRetargetAssetReference;
 
 // ScriptStruct LiveLink.LiveLinkVirtualSubjectBoneAttachment
 // 0x0060 (0x0060 - 0x0000)
@@ -71,7 +70,6 @@ public:
 	struct FRotator                               RotationOffset;                                    // 0x0038(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLiveLinkVirtualSubjectBoneAttachment;
 
 // ScriptStruct LiveLink.ProviderPollResult
 // 0x0090 (0x0090 - 0x0000)
@@ -85,7 +83,6 @@ public:
 	bool                                          bIsValidProvider;                                  // 0x0038(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x57];                                      // 0x0039(0x0057)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FProviderPollResult;
 
 // ScriptStruct LiveLink.LiveLinkRoleProjectSetting
 // 0x0028 (0x0028 - 0x0000)
@@ -97,6 +94,5 @@ public:
 	TSubclassOf<class ULiveLinkFrameInterpolationProcessor> FrameInterpolationProcessor;             // 0x0010(0x0008)(Edit, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSubclassOf<class ULiveLinkFramePreProcessor>> FramePreProcessors;                        // 0x0018(0x0010)(Edit, ZeroConstructor, Config, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLiveLinkRoleProjectSetting;
 
 SDK_NAMESPACE_END

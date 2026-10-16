@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UWorldConditionSchema>();
 	}
 };
-DUMPER7_ASSERTS_UWorldConditionSchema;
 
 SDK_NAMESPACE_END

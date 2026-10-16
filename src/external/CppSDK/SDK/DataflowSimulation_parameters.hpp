@@ -22,7 +22,6 @@ public:
 	float                                         SimulationTime;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DeltaTime;                                         // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DataflowSimulationActor_PostDataflowSimulationTick;
 
 // Function DataflowSimulation.DataflowSimulationActor.PreDataflowSimulationTick
 // 0x0008 (0x0008 - 0x0000)
@@ -32,7 +31,6 @@ public:
 	float                                         SimulationTime;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DeltaTime;                                         // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_DataflowSimulationActor_PreDataflowSimulationTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -21,7 +21,6 @@ struct ExistingMeshMaterialProperties_GetUVChannelNamesFunc final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ExistingMeshMaterialProperties_GetUVChannelNamesFunc;
 
 // Function MeshModelingTools.MeshUVChannelProperties.GetUVChannelNamesFunc
 // 0x0010 (0x0010 - 0x0000)
@@ -30,7 +29,6 @@ struct MeshUVChannelProperties_GetUVChannelNamesFunc final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_MeshUVChannelProperties_GetUVChannelNamesFunc;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -78,6 +78,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_MainMenu_DLC_Selector_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_MainMenu_DLC_Selector_C;
 
 SDK_NAMESPACE_END

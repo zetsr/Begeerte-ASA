@@ -47,6 +47,5 @@ public:
 		return GetDefaultObjImpl<UStreamlineLibraryReflex>();
 	}
 };
-DUMPER7_ASSERTS_UStreamlineLibraryReflex;
 
 SDK_NAMESPACE_END

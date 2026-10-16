@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<ADeathItemCache_C>();
 	}
 };
-DUMPER7_ASSERTS_ADeathItemCache_C;
 
 SDK_NAMESPACE_END

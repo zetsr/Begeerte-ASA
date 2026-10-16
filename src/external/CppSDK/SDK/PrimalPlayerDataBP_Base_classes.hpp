@@ -65,6 +65,5 @@ public:
 		return GetDefaultObjImpl<UPrimalPlayerDataBP_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalPlayerDataBP_Base_C;
 
 SDK_NAMESPACE_END

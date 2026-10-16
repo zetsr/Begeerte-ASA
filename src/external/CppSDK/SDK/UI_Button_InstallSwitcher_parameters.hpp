@@ -25,7 +25,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Button_InstallSwitcher_C_GetRootCFWidget;
 
 // Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.UpdateButtonSwitcherStatus
 // 0x0618 (0x0618 - 0x0000)
@@ -37,7 +36,6 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0611(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0612(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Button_InstallSwitcher_C_UpdateButtonSwitcherStatus;
 
 // Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.UpdateButtonCollor
 // 0x0001 (0x0001 - 0x0000)
@@ -46,7 +44,6 @@ struct UI_Button_InstallSwitcher_C_UpdateButtonCollor final
 public:
 	ENUM_CFCore_Install                           ButtonStatus;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Button_InstallSwitcher_C_UpdateButtonCollor;
 
 // Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.SetProgress
 // 0x0610 (0x0610 - 0x0000)
@@ -55,7 +52,6 @@ struct UI_Button_InstallSwitcher_C_SetProgress final
 public:
 	struct FInstallProgressMod                    InstallProgressMod;                                // 0x0000(0x0610)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_UI_Button_InstallSwitcher_C_SetProgress;
 
 // Function UI_Button_InstallSwitcher.UI_Button_InstallSwitcher_C.ExecuteUbergraph_UI_Button_InstallSwitcher
 // 0x0648 (0x0648 - 0x0000)
@@ -77,7 +73,6 @@ public:
 	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x0640(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetPercent_InPercent_ImplicitCast_1;      // 0x0644(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Button_InstallSwitcher_C_ExecuteUbergraph_UI_Button_InstallSwitcher;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

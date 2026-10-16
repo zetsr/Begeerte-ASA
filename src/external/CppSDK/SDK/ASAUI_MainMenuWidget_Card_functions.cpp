@@ -47,9 +47,9 @@ void UASAUI_MainMenuWidget_Card_C::Refresh()
 // Function ASAUI_MainMenuWidget_Card.ASAUI_MainMenuWidget_Card_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime_PreConstruct                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUI_MainMenuWidget_Card_C::PreConstruct(bool IsDesignTime)
+void UASAUI_MainMenuWidget_Card_C::PreConstruct(bool IsDesignTime_PreConstruct)
 {
 	static class UFunction* Func = nullptr;
 
@@ -58,7 +58,7 @@ void UASAUI_MainMenuWidget_Card_C::PreConstruct(bool IsDesignTime)
 
 	Params::ASAUI_MainMenuWidget_Card_C_PreConstruct Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.IsDesignTime_PreConstruct = IsDesignTime_PreConstruct;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -81,9 +81,9 @@ void UASAUI_MainMenuWidget_Card_C::OnMouseLeaveFunc()
 // Function ASAUI_MainMenuWidget_Card.ASAUI_MainMenuWidget_Card_C.OnMouseLeave
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FPointerEvent&             MouseEvent_OnMouseLeave                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UASAUI_MainMenuWidget_Card_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
+void UASAUI_MainMenuWidget_Card_C::OnMouseLeave(const struct FPointerEvent& MouseEvent_OnMouseLeave)
 {
 	static class UFunction* Func = nullptr;
 
@@ -92,7 +92,7 @@ void UASAUI_MainMenuWidget_Card_C::OnMouseLeave(const struct FPointerEvent& Mous
 
 	Params::ASAUI_MainMenuWidget_Card_C_OnMouseLeave Parms{};
 
-	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.MouseEvent_OnMouseLeave = std::move(MouseEvent_OnMouseLeave);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -115,10 +115,10 @@ void UASAUI_MainMenuWidget_Card_C::OnMouseEnterFunc()
 // Function ASAUI_MainMenuWidget_Card.ASAUI_MainMenuWidget_Card_C.OnMouseEnter
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGeometry&                 MyGeometry_OnMouseEnter                                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent_OnMouseEnter                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UASAUI_MainMenuWidget_Card_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+void UASAUI_MainMenuWidget_Card_C::OnMouseEnter(const struct FGeometry& MyGeometry_OnMouseEnter, const struct FPointerEvent& MouseEvent_OnMouseEnter)
 {
 	static class UFunction* Func = nullptr;
 
@@ -127,8 +127,8 @@ void UASAUI_MainMenuWidget_Card_C::OnMouseEnter(const struct FGeometry& MyGeomet
 
 	Params::ASAUI_MainMenuWidget_Card_C_OnMouseEnter Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.MyGeometry_OnMouseEnter = std::move(MyGeometry_OnMouseEnter);
+	Parms.MouseEvent_OnMouseEnter = std::move(MouseEvent_OnMouseEnter);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

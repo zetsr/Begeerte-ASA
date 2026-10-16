@@ -56,6 +56,5 @@ public:
 		return GetDefaultObjImpl<UUpdatingModsToast_C>();
 	}
 };
-DUMPER7_ASSERTS_UUpdatingModsToast_C;
 
 SDK_NAMESPACE_END

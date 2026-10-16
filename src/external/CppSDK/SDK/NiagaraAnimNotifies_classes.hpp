@@ -47,7 +47,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_TimedNiagaraEffect>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotifyState_TimedNiagaraEffect;
 
 // Class NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffectAdvanced
 // 0x0070 (0x00F0 - 0x0080)
@@ -79,7 +78,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_TimedNiagaraEffectAdvanced>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotifyState_TimedNiagaraEffectAdvanced;
 
 // Class NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect
 // 0x0090 (0x00D0 - 0x0040)
@@ -114,6 +112,5 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayNiagaraEffect>();
 	}
 };
-DUMPER7_ASSERTS_UAnimNotify_PlayNiagaraEffect;
 
 SDK_NAMESPACE_END

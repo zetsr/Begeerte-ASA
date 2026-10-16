@@ -30,7 +30,6 @@ public:
 	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PreviewScene_InventoryNew_C_ExecuteUbergraph_PreviewScene_InventoryNew;
 
 // Function PreviewScene_InventoryNew.PreviewScene_InventoryNew_C.FrontLightChangeWhenBelowFloor
 // 0x0010 (0x0010 - 0x0000)
@@ -42,7 +41,6 @@ public:
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PreviewScene_InventoryNew_C_FrontLightChangeWhenBelowFloor;
 
 // Function PreviewScene_InventoryNew.PreviewScene_InventoryNew_C.NotifyPreviewSceneUpdated
 // 0x0004 (0x0004 - 0x0000)
@@ -51,7 +49,6 @@ struct PreviewScene_InventoryNew_C_NotifyPreviewSceneUpdated final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PreviewScene_InventoryNew_C_NotifyPreviewSceneUpdated;
 
 // Function PreviewScene_InventoryNew.PreviewScene_InventoryNew_C.NotifySetupPreviewScene
 // 0x0020 (0x0020 - 0x0000)
@@ -62,7 +59,6 @@ public:
 	TArray<class USceneComponent*>                ForChildComps;                                     // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 	class AShooterPlayerController*               ForPC;                                             // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PreviewScene_InventoryNew_C_NotifySetupPreviewScene;
 
 // Function PreviewScene_InventoryNew.PreviewScene_InventoryNew_C.RotateLightsInZWithCamera
 // 0x01A8 (0x01A8 - 0x0000)
@@ -92,7 +88,6 @@ public:
 	double                                        CallFunc_Add_DoubleFloat_A_ImplicitCast;           // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetSourceCubemapAngle_NewValue_ImplicitCast; // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PreviewScene_InventoryNew_C_RotateLightsInZWithCamera;
 
 // Function PreviewScene_InventoryNew.PreviewScene_InventoryNew_C.UpdateFloorLocation
 // 0x0160 (0x0160 - 0x0000)
@@ -110,7 +105,6 @@ public:
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0058(0x0108)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_PreviewScene_InventoryNew_C_UpdateFloorLocation;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

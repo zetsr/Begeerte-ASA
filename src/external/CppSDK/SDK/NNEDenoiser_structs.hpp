@@ -86,7 +86,6 @@ public:
 	int32                                         ResourceChannel;                                   // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNNEDenoiserBaseMappingData;
 
 // ScriptStruct NNEDenoiser.NNEDenoiserInputMappingData
 // 0x0008 (0x0020 - 0x0018)
@@ -96,7 +95,6 @@ public:
 	EInputResourceName                            Resource;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNNEDenoiserInputMappingData;
 
 // ScriptStruct NNEDenoiser.NNEDenoiserOutputMappingData
 // 0x0008 (0x0020 - 0x0018)
@@ -106,7 +104,6 @@ public:
 	EOutputResourceName                           Resource;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNNEDenoiserOutputMappingData;
 
 // ScriptStruct NNEDenoiser.NNEDenoiserTemporalInputMappingData
 // 0x0008 (0x0020 - 0x0018)
@@ -117,7 +114,6 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         FrameIndex;                                        // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNNEDenoiserTemporalInputMappingData;
 
 // ScriptStruct NNEDenoiser.NNEDenoiserTemporalOutputMappingData
 // 0x0008 (0x0020 - 0x0018)
@@ -127,7 +123,6 @@ public:
 	ETemporalOutputResourceName                   Resource;                                          // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNNEDenoiserTemporalOutputMappingData;
 
 // ScriptStruct NNEDenoiser.TilingConfig
 // 0x0010 (0x0010 - 0x0000)
@@ -139,6 +134,5 @@ public:
 	int32                                         MaxSize;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MinSize;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTilingConfig;
 
 SDK_NAMESPACE_END

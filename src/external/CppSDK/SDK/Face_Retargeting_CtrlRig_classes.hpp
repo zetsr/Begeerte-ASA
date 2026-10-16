@@ -39,6 +39,5 @@ public:
 		return GetDefaultObjImpl<UFace_Retargeting_CtrlRig_C>();
 	}
 };
-DUMPER7_ASSERTS_UFace_Retargeting_CtrlRig_C;
 
 SDK_NAMESPACE_END

@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UUI_CustomizeSlot_BUTTON_Uninstall_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CustomizeSlot_BUTTON_Uninstall_C;
 
 SDK_NAMESPACE_END

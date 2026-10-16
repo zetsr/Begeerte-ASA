@@ -42,6 +42,5 @@ public:
 		return GetDefaultObjImpl<UAttackTarget_SRV_C>();
 	}
 };
-DUMPER7_ASSERTS_UAttackTarget_SRV_C;
 
 SDK_NAMESPACE_END

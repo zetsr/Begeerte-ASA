@@ -31,7 +31,6 @@ public:
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0020(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_GameModeSelect_C_ExecuteUbergraph_ASAUI_MainMenu_GameModeSelect;
 
 // Function ASAUI_MainMenu_GameModeSelect.ASAUI_MainMenu_GameModeSelect_C.GetCardDLC
 // 0x0020 (0x0020 - 0x0000)
@@ -42,7 +41,6 @@ public:
 	class UOverlay*                               OverlayLC_0;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_GameModeSelect_C_GetCardDLC;
 
 // Function ASAUI_MainMenu_GameModeSelect.ASAUI_MainMenu_GameModeSelect_C.GetLastClickedCardButton
 // 0x0010 (0x0010 - 0x0000)
@@ -52,7 +50,6 @@ public:
 	class UCustomButtonWidget*                    LastClicked;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_GameModeSelect_C_GetLastClickedCardButton;
 
 // Function ASAUI_MainMenu_GameModeSelect.ASAUI_MainMenu_GameModeSelect_C.InitHasSave
 // 0x0018 (0x0018 - 0x0000)
@@ -64,7 +61,6 @@ public:
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_Select_Default;                             // 0x0008(0x0010)()
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_GameModeSelect_C_InitHasSave;
 
 // Function ASAUI_MainMenu_GameModeSelect.ASAUI_MainMenu_GameModeSelect_C.SelectionChanged
 // 0x0090 (0x0090 - 0x0000)
@@ -97,7 +93,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_GameModeSelect_C_SelectionChanged;
 
 // Function ASAUI_MainMenu_GameModeSelect.ASAUI_MainMenu_GameModeSelect_C.StopAllCardAnims
 // 0x0088 (0x0088 - 0x0000)
@@ -128,7 +123,6 @@ public:
 	class UASAUI_MainMenuWidget_Card_C*           K2Node_DynamicCast_AsASAUI_Main_Menu_Widget_Card;  // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_GameModeSelect_C_StopAllCardAnims;
 
 // Function ASAUI_MainMenu_GameModeSelect.ASAUI_MainMenu_GameModeSelect_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -138,7 +132,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_GameModeSelect_C_Tick;
 
 // Function ASAUI_MainMenu_GameModeSelect.ASAUI_MainMenu_GameModeSelect_C.UpdateDLC
 // 0x00C8 (0x00C8 - 0x0000)
@@ -187,7 +180,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasEverCompletedQueryEntitlements_ReturnValue; // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_MainMenu_GameModeSelect_C_UpdateDLC;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

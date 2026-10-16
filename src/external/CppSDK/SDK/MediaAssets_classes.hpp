@@ -150,7 +150,6 @@ public:
 		return GetDefaultObjImpl<UMediaPlayer>();
 	}
 };
-DUMPER7_ASSERTS_UMediaPlayer;
 
 // Class MediaAssets.MediaSourceRendererInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -179,7 +178,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMediaSourceRendererInterface;
 
 // Class MediaAssets.MediaTexture
 // 0x00E8 (0x0220 - 0x0138)
@@ -225,7 +223,6 @@ public:
 		return GetDefaultObjImpl<UMediaTexture>();
 	}
 };
-DUMPER7_ASSERTS_UMediaTexture;
 
 // Class MediaAssets.MediaSource
 // 0x0058 (0x0080 - 0x0028)
@@ -257,7 +254,6 @@ public:
 		return GetDefaultObjImpl<UMediaSource>();
 	}
 };
-DUMPER7_ASSERTS_UMediaSource;
 
 // Class MediaAssets.BaseMediaSource
 // 0x0008 (0x0088 - 0x0080)
@@ -280,7 +276,6 @@ public:
 		return GetDefaultObjImpl<UBaseMediaSource>();
 	}
 };
-DUMPER7_ASSERTS_UBaseMediaSource;
 
 // Class MediaAssets.FileMediaSource
 // 0x0028 (0x00B0 - 0x0088)
@@ -308,7 +303,6 @@ public:
 		return GetDefaultObjImpl<UFileMediaSource>();
 	}
 };
-DUMPER7_ASSERTS_UFileMediaSource;
 
 // Class MediaAssets.MediaComponent
 // 0x0010 (0x00E0 - 0x00D0)
@@ -336,7 +330,6 @@ public:
 		return GetDefaultObjImpl<UMediaComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMediaComponent;
 
 // Class MediaAssets.MediaTimeStampInfo
 // 0x0010 (0x0038 - 0x0028)
@@ -360,7 +353,6 @@ public:
 		return GetDefaultObjImpl<UMediaTimeStampInfo>();
 	}
 };
-DUMPER7_ASSERTS_UMediaTimeStampInfo;
 
 // Class MediaAssets.MediaPlayerProxyInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -389,7 +381,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMediaPlayerProxyInterface;
 
 // Class MediaAssets.MediaPlaylist
 // 0x0010 (0x0038 - 0x0028)
@@ -426,7 +417,6 @@ public:
 		return GetDefaultObjImpl<UMediaPlaylist>();
 	}
 };
-DUMPER7_ASSERTS_UMediaPlaylist;
 
 // Class MediaAssets.MediaSoundComponent
 // 0x00E0 (0x09C0 - 0x08E0)
@@ -469,7 +459,6 @@ public:
 		return GetDefaultObjImpl<UMediaSoundComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMediaSoundComponent;
 
 // Class MediaAssets.PlatformMediaSource
 // 0x0008 (0x0088 - 0x0080)
@@ -492,7 +481,6 @@ public:
 		return GetDefaultObjImpl<UPlatformMediaSource>();
 	}
 };
-DUMPER7_ASSERTS_UPlatformMediaSource;
 
 // Class MediaAssets.StreamMediaSource
 // 0x0010 (0x0098 - 0x0088)
@@ -515,7 +503,6 @@ public:
 		return GetDefaultObjImpl<UStreamMediaSource>();
 	}
 };
-DUMPER7_ASSERTS_UStreamMediaSource;
 
 // Class MediaAssets.TimeSynchronizableMediaSource
 // 0x0018 (0x00A0 - 0x0088)
@@ -543,7 +530,6 @@ public:
 		return GetDefaultObjImpl<UTimeSynchronizableMediaSource>();
 	}
 };
-DUMPER7_ASSERTS_UTimeSynchronizableMediaSource;
 
 // Class MediaAssets.MediaBlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -568,6 +554,5 @@ public:
 		return GetDefaultObjImpl<UMediaBlueprintFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UMediaBlueprintFunctionLibrary;
 
 SDK_NAMESPACE_END

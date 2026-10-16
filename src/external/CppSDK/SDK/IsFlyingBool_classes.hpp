@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UIsFlyingBool_C>();
 	}
 };
-DUMPER7_ASSERTS_UIsFlyingBool_C;
 
 SDK_NAMESPACE_END

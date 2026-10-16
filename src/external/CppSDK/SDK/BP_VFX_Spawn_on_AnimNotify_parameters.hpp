@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 #include "Audio_Ground_Collection_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Niagara_structs.hpp"
 #include "DinoContentData_structs.hpp"
+#include "Niagara_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -28,7 +28,6 @@ public:
 	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraSystem*                         NS_Override;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_on_AnimNotify_C_BPOverrideNiagaraSystem;
 
 // Function BP_VFX_Spawn_on_AnimNotify.BP_VFX_Spawn_on_AnimNotify_C.Spawn_Sound
 // 0x0118 (0x0118 - 0x0000)
@@ -75,7 +74,6 @@ public:
 	float                                         CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast_4; // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SpawnSoundAttached_VolumeMultiplier_ImplicitCast_5; // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_on_AnimNotify_C_Spawn_Sound;
 
 // Function BP_VFX_Spawn_on_AnimNotify.BP_VFX_Spawn_on_AnimNotify_C.Received_NotifyBegin
 // 0x0BF0 (0x0BF0 - 0x0000)
@@ -354,7 +352,6 @@ public:
 	float                                         CallFunc_Multiply_DoubleFloat_B_ImplicitCast_13;   // 0x0BE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_DoubleFloat_B_ImplicitCast_14;   // 0x0BE4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_on_AnimNotify_C_Received_NotifyBegin;
 
 // Function BP_VFX_Spawn_on_AnimNotify.BP_VFX_Spawn_on_AnimNotify_C.Received_NotifyEnd
 // 0x0048 (0x0048 - 0x0000)
@@ -366,7 +363,6 @@ public:
 	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_on_AnimNotify_C_Received_NotifyEnd;
 
 // Function BP_VFX_Spawn_on_AnimNotify.BP_VFX_Spawn_on_AnimNotify_C.GetNotifyName
 // 0x0020 (0x0020 - 0x0000)
@@ -376,7 +372,6 @@ public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_on_AnimNotify_C_GetNotifyName;
 
 // Function BP_VFX_Spawn_on_AnimNotify.BP_VFX_Spawn_on_AnimNotify_C.Received_NotifyTick
 // 0x0058 (0x0058 - 0x0000)
@@ -392,7 +387,6 @@ public:
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Line_End_Distance;                                 // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_VFX_Spawn_on_AnimNotify_C_Received_NotifyTick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

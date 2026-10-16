@@ -91,6 +91,5 @@ public:
 		return GetDefaultObjImpl<UPDA_VoiceCollection_C>();
 	}
 };
-DUMPER7_ASSERTS_UPDA_VoiceCollection_C;
 
 SDK_NAMESPACE_END

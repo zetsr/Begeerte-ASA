@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "DinoContentData_structs.hpp"
 #include "ShooterGame_classes.hpp"
+#include "DinoContentData_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -80,6 +80,5 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_ADino_Character_BP_C;
 
 SDK_NAMESPACE_END

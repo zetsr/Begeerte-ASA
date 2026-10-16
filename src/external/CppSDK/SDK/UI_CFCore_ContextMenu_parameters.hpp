@@ -24,7 +24,6 @@ struct UI_CFCore_ContextMenu_C_CustomEvent_3 final
 public:
 	class FString                                 temp_user_token;                                   // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ContextMenu_C_CustomEvent_3;
 
 // Function UI_CFCore_ContextMenu.UI_CFCore_ContextMenu_C.CustomEvent_4
 // 0x0038 (0x0038 - 0x0000)
@@ -33,7 +32,6 @@ struct UI_CFCore_ContextMenu_C_CustomEvent_4 final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ContextMenu_C_CustomEvent_4;
 
 // Function UI_CFCore_ContextMenu.UI_CFCore_ContextMenu_C.DecideWhichOptionsToDisplay
 // 0x0090 (0x0090 - 0x0000)
@@ -101,7 +99,6 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_6;                  // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ContextMenu_C_DecideWhichOptionsToDisplay;
 
 // Function UI_CFCore_ContextMenu.UI_CFCore_ContextMenu_C.ExecuteUbergraph_UI_CFCore_ContextMenu
 // 0x0148 (0x0148 - 0x0000)
@@ -157,7 +154,6 @@ public:
 	uint8                                         Pad_142[0x2];                                      // 0x0142(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_SetWidthOverride_InWidthOverride_ImplicitCast; // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ContextMenu_C_ExecuteUbergraph_UI_CFCore_ContextMenu;
 
 // Function UI_CFCore_ContextMenu.UI_CFCore_ContextMenu_C.PlayFadeInOnBeginPlay
 // 0x0010 (0x0010 - 0x0000)
@@ -167,7 +163,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ContextMenu_C_PlayFadeInOnBeginPlay;
 
 // Function UI_CFCore_ContextMenu.UI_CFCore_ContextMenu_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -176,7 +171,6 @@ struct UI_CFCore_ContextMenu_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ContextMenu_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

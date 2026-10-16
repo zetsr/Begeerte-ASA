@@ -431,14 +431,12 @@ struct alignas(0x08) FManagedArrayCollection
 public:
 	uint8                                         Pad_0[0xB0];                                       // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FManagedArrayCollection;
 
 // ScriptStruct Chaos.FieldCollection
 // 0x0000 (0x00B0 - 0x00B0)
 struct FFieldCollection final : public FManagedArrayCollection
 {
 };
-DUMPER7_ASSERTS_FFieldCollection;
 
 // ScriptStruct Chaos.ClosestPhysicsObjectResult
 // 0x0028 (0x0028 - 0x0000)
@@ -447,7 +445,6 @@ struct alignas(0x08) FClosestPhysicsObjectResult final
 public:
 	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FClosestPhysicsObjectResult;
 
 // ScriptStruct Chaos.SolverCollisionFilterSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -460,7 +457,6 @@ public:
 	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinImpulse;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSolverCollisionFilterSettings;
 
 // ScriptStruct Chaos.SolverBreakingFilterSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -473,7 +469,6 @@ public:
 	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinVolume;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSolverBreakingFilterSettings;
 
 // ScriptStruct Chaos.SolverTrailingFilterSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -486,7 +481,6 @@ public:
 	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinVolume;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSolverTrailingFilterSettings;
 
 // ScriptStruct Chaos.ChaosSolverConfiguration
 // 0x006C (0x006C - 0x0000)
@@ -517,7 +511,6 @@ public:
 	bool                                          bGenerateContactGraph;                             // 0x0068(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FChaosSolverConfiguration;
 
 // ScriptStruct Chaos.SolverCollisionData
 // 0x00C0 (0x00C0 - 0x0000)
@@ -538,7 +531,6 @@ public:
 	int32                                         ParticleIndexMesh;                                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LevelsetIndexMesh;                                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSolverCollisionData;
 
 // ScriptStruct Chaos.SolverBreakingData
 // 0x0058 (0x0058 - 0x0000)
@@ -553,7 +545,6 @@ public:
 	int32                                         ParticleIndexMesh;                                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSolverBreakingData;
 
 // ScriptStruct Chaos.SolverTrailingData
 // 0x0058 (0x0058 - 0x0000)
@@ -568,7 +559,6 @@ public:
 	int32                                         ParticleIndexMesh;                                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FSolverTrailingData;
 
 // ScriptStruct Chaos.RecordedFrame
 // 0x00B8 (0x00B8 - 0x0000)
@@ -585,7 +575,6 @@ public:
 	float                                         Timestamp;                                         // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FRecordedFrame;
 
 // ScriptStruct Chaos.RecordedTransformTrack
 // 0x0010 (0x0010 - 0x0000)
@@ -594,7 +583,6 @@ struct FRecordedTransformTrack final
 public:
 	TArray<struct FRecordedFrame>                 Records;                                           // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRecordedTransformTrack;
 
 // ScriptStruct Chaos.SolverRemovalFilterSettings
 // 0x000C (0x000C - 0x0000)
@@ -606,6 +594,5 @@ public:
 	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinVolume;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSolverRemovalFilterSettings;
 
 SDK_NAMESPACE_END

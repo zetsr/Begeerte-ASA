@@ -46,7 +46,6 @@ public:
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_VectorFloat_B_ImplicitCast;      // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DmgType_Melee_StonePick_Gauntlet_C_BPAdjustDamage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

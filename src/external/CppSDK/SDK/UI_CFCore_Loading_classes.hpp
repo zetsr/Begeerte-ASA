@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ENUM_CFCore_LoadingProgress_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CFCoreWidget_classes.hpp"
 
 
@@ -62,6 +62,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Loading_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Loading_C;
 
 SDK_NAMESPACE_END

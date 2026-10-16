@@ -40,7 +40,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPointData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPointData;
 
 // Class PCGExtendedToolkit.PCGExInstancedFactory
 // 0x0080 (0x00A8 - 0x0028)
@@ -63,7 +62,6 @@ public:
 		return GetDefaultObjImpl<UPCGExInstancedFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExInstancedFactory;
 
 // Class PCGExtendedToolkit.PCGExRelaxClusterOperation
 // 0x0020 (0x00C8 - 0x00A8)
@@ -86,7 +84,6 @@ public:
 		return GetDefaultObjImpl<UPCGExRelaxClusterOperation>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExRelaxClusterOperation;
 
 // Class PCGExtendedToolkit.PCGExFittingRelaxBase
 // 0x0090 (0x0158 - 0x00C8)
@@ -118,7 +115,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFittingRelaxBase>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFittingRelaxBase;
 
 // Class PCGExtendedToolkit.PCGExParamDataBase
 // 0x0000 (0x01B0 - 0x01B0)
@@ -138,7 +134,6 @@ public:
 		return GetDefaultObjImpl<UPCGExParamDataBase>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExParamDataBase;
 
 // Class PCGExtendedToolkit.PCGExPointsProcessorSettings
 // 0x0030 (0x00E8 - 0x00B8)
@@ -170,7 +165,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPointsProcessorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPointsProcessorSettings;
 
 // Class PCGExtendedToolkit.PCGExBuildVoronoiGraphSettings
 // 0x0070 (0x0158 - 0x00E8)
@@ -202,7 +196,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBuildVoronoiGraphSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBuildVoronoiGraphSettings;
 
 // Class PCGExtendedToolkit.PCGExFactoryData
 // 0x0010 (0x01C0 - 0x01B0)
@@ -230,7 +223,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UPCGExFactoryData;
 
 // Class PCGExtendedToolkit.PCGExFilterFactoryData
 // 0x0000 (0x01C0 - 0x01C0)
@@ -250,7 +242,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFilterFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFilterFactoryData;
 
 // Class PCGExtendedToolkit.PCGExEntryCountFilterFactory
 // 0x0010 (0x01D0 - 0x01C0)
@@ -273,7 +264,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEntryCountFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEntryCountFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExActionFactoryData
 // 0x0030 (0x01F0 - 0x01C0)
@@ -298,7 +288,6 @@ public:
 		return GetDefaultObjImpl<UPCGExActionFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExActionFactoryData;
 
 // Class PCGExtendedToolkit.PCGExFactoryProviderSettings
 // 0x0008 (0x00C0 - 0x00B8)
@@ -324,7 +313,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExFillControlsFactoryProviderSettings
 // 0x0000 (0x00C0 - 0x00C0)
@@ -344,7 +332,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExFillControlsEdgeFiltersProviderSettings
 // 0x0008 (0x00C8 - 0x00C0)
@@ -368,7 +355,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsEdgeFiltersProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsEdgeFiltersProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExActionProviderSettings
 // 0x0008 (0x00C8 - 0x00C0)
@@ -392,7 +378,6 @@ public:
 		return GetDefaultObjImpl<UPCGExActionProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExActionProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExClusterData
 // 0x0000 (0x01B0 - 0x01B0)
@@ -412,7 +397,6 @@ public:
 		return GetDefaultObjImpl<UPCGExClusterData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExClusterData;
 
 // Class PCGExtendedToolkit.PCGExFillControlsFactoryData
 // 0x0000 (0x01C0 - 0x01C0)
@@ -432,7 +416,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsFactoryData;
 
 // Class PCGExtendedToolkit.PCGExFillControlsFactoryCount
 // 0x0020 (0x01E0 - 0x01C0)
@@ -456,7 +439,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsFactoryCount>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsFactoryCount;
 
 // Class PCGExtendedToolkit.PCGExActionWriteValuesFactory
 // 0x00E0 (0x02D0 - 0x01F0)
@@ -479,7 +461,6 @@ public:
 		return GetDefaultObjImpl<UPCGExActionWriteValuesFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExActionWriteValuesFactory;
 
 // Class PCGExtendedToolkit.PCGExActionWriteValuesProviderSettings
 // 0x00E0 (0x01A8 - 0x00C8)
@@ -503,7 +484,6 @@ public:
 		return GetDefaultObjImpl<UPCGExActionWriteValuesProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExActionWriteValuesProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExBuildDelaunayGraphSettings
 // 0x0070 (0x0158 - 0x00E8)
@@ -537,7 +517,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBuildDelaunayGraphSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBuildDelaunayGraphSettings;
 
 // Class PCGExtendedToolkit.PCGExEdgeRefineOperation
 // 0x0040 (0x00E8 - 0x00A8)
@@ -560,7 +539,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRefineOperation>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRefineOperation;
 
 // Class PCGExtendedToolkit.PCGExEdgeRemoveShortest
 // 0x0000 (0x00E8 - 0x00E8)
@@ -580,7 +558,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRemoveShortest>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRemoveShortest;
 
 // Class PCGExtendedToolkit.PCGExAssetCollection
 // 0x0110 (0x0140 - 0x0030)
@@ -610,7 +587,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAssetCollection>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAssetCollection;
 
 // Class PCGExtendedToolkit.PCGExActorCollection
 // 0x0010 (0x0150 - 0x0140)
@@ -633,7 +609,6 @@ public:
 		return GetDefaultObjImpl<UPCGExActorCollection>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExActorCollection;
 
 // Class PCGExtendedToolkit.PCGExFillControlsDepthProviderSettings
 // 0x0018 (0x00D8 - 0x00C0)
@@ -657,7 +632,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsDepthProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsDepthProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExAssetCollectionToSetSettings
 // 0x0088 (0x0140 - 0x00B8)
@@ -706,7 +680,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAssetCollectionToSetSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAssetCollectionToSetSettings;
 
 // Class PCGExtendedToolkit.PCGExFillControlsVtxFiltersProviderSettings
 // 0x0008 (0x00C8 - 0x00C0)
@@ -730,7 +703,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsVtxFiltersProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsVtxFiltersProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExAssetStagingSettings
 // 0x0390 (0x0478 - 0x00E8)
@@ -775,7 +747,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAssetStagingSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAssetStagingSettings;
 
 // Class PCGExtendedToolkit.PCGExAttributeBlendFactory
 // 0x01A0 (0x0360 - 0x01C0)
@@ -798,7 +769,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAttributeBlendFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAttributeBlendFactory;
 
 // Class PCGExtendedToolkit.PCGExFillControlsKeepDirectionProviderSettings
 // 0x0080 (0x0140 - 0x00C0)
@@ -821,7 +791,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsKeepDirectionProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsKeepDirectionProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExAttributeBlendFactoryProviderSettings
 // 0x0188 (0x0248 - 0x00C0)
@@ -846,7 +815,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAttributeBlendFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAttributeBlendFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExFillControlsCountProviderSettings
 // 0x0018 (0x00D8 - 0x00C0)
@@ -870,7 +838,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsCountProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsCountProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExAttributeCheckFilterFactory
 // 0x0020 (0x01E0 - 0x01C0)
@@ -894,7 +861,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAttributeCheckFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAttributeCheckFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExVtxPropertyFactoryData
 // 0x0000 (0x01C0 - 0x01C0)
@@ -914,7 +880,6 @@ public:
 		return GetDefaultObjImpl<UPCGExVtxPropertyFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExVtxPropertyFactoryData;
 
 // Class PCGExtendedToolkit.PCGExVtxPropertySpecialEdgesFactory
 // 0x0190 (0x0350 - 0x01C0)
@@ -937,7 +902,6 @@ public:
 		return GetDefaultObjImpl<UPCGExVtxPropertySpecialEdgesFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExVtxPropertySpecialEdgesFactory;
 
 // Class PCGExtendedToolkit.PCGExBitmaskFilterFactory
 // 0x0030 (0x01F0 - 0x01C0)
@@ -961,7 +925,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBitmaskFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBitmaskFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExFilterProviderSettings
 // 0x0008 (0x00C8 - 0x00C0)
@@ -985,7 +948,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExFillControlsRunningAverageProviderSettings
 // 0x0070 (0x0130 - 0x00C0)
@@ -1008,7 +970,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsRunningAverageProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsRunningAverageProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExAttributeCheckFilterProviderSettings
 // 0x0018 (0x00E0 - 0x00C8)
@@ -1031,7 +992,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAttributeCheckFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAttributeCheckFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExTangentsOperation
 // 0x0008 (0x00B0 - 0x00A8)
@@ -1054,7 +1014,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTangentsOperation>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTangentsOperation;
 
 // Class PCGExtendedToolkit.PCGExAttributeHashSettings
 // 0x0048 (0x0130 - 0x00E8)
@@ -1081,7 +1040,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAttributeHashSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAttributeHashSettings;
 
 // Class PCGExtendedToolkit.PCGExEdgesProcessorSettings
 // 0x0008 (0x00F0 - 0x00E8)
@@ -1106,7 +1064,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgesProcessorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgesProcessorSettings;
 
 // Class PCGExtendedToolkit.PCGExFindPointOnBoundsClustersSettings
 // 0x0120 (0x0210 - 0x00F0)
@@ -1136,7 +1093,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFindPointOnBoundsClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFindPointOnBoundsClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExAttributeRemapSettings
 // 0x05D0 (0x06B8 - 0x00E8)
@@ -1171,7 +1127,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAttributeRemapSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAttributeRemapSettings;
 
 // Class PCGExtendedToolkit.PCGExPathProcessorSettings
 // 0x0038 (0x0120 - 0x00E8)
@@ -1198,7 +1153,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathProcessorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathProcessorSettings;
 
 // Class PCGExtendedToolkit.PCGExClusterFilterFactoryData
 // 0x0000 (0x01C0 - 0x01C0)
@@ -1218,7 +1172,6 @@ public:
 		return GetDefaultObjImpl<UPCGExClusterFilterFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExClusterFilterFactoryData;
 
 // Class PCGExtendedToolkit.PCGExFilterGroupFactoryData
 // 0x0020 (0x01E0 - 0x01C0)
@@ -1244,7 +1197,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFilterGroupFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFilterGroupFactoryData;
 
 // Class PCGExtendedToolkit.PCGExFilterGroupFactoryDataAND
 // 0x0000 (0x01E0 - 0x01E0)
@@ -1264,7 +1216,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFilterGroupFactoryDataAND>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFilterGroupFactoryDataAND;
 
 // Class PCGExtendedToolkit.PCGExAttributeRollingSettings
 // 0x0050 (0x0170 - 0x0120)
@@ -1311,7 +1262,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAttributeRollingSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAttributeRollingSettings;
 
 // Class PCGExtendedToolkit.PCGExBinPackingSettings
 // 0x00D8 (0x01C0 - 0x00E8)
@@ -1353,7 +1303,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBinPackingSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBinPackingSettings;
 
 // Class PCGExtendedToolkit.PCGExAttributeStatsSettings
 // 0x0158 (0x0240 - 0x00E8)
@@ -1436,7 +1385,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAttributeStatsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAttributeStatsSettings;
 
 // Class PCGExtendedToolkit.PCGExFillControlsLengthProviderSettings
 // 0x0018 (0x00D8 - 0x00C0)
@@ -1459,7 +1407,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsLengthProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsLengthProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExAttributesToTagsSettings
 // 0x0030 (0x0118 - 0x00E8)
@@ -1490,7 +1437,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAttributesToTagsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAttributesToTagsSettings;
 
 // Class PCGExtendedToolkit.PCGExAutoTangents
 // 0x0000 (0x00B0 - 0x00B0)
@@ -1510,7 +1456,6 @@ public:
 		return GetDefaultObjImpl<UPCGExAutoTangents>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExAutoTangents;
 
 // Class PCGExtendedToolkit.PCGExWriteVtxPropertiesSettings
 // 0x0018 (0x0108 - 0x00F0)
@@ -1538,7 +1483,6 @@ public:
 		return GetDefaultObjImpl<UPCGExWriteVtxPropertiesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExWriteVtxPropertiesSettings;
 
 // Class PCGExtendedToolkit.PCGExBatchActionsSettings
 // 0x00E8 (0x01D0 - 0x00E8)
@@ -1564,7 +1508,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBatchActionsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBatchActionsSettings;
 
 // Class PCGExtendedToolkit.PCGExBevelPathSettings
 // 0x00C8 (0x01E8 - 0x0120)
@@ -1621,7 +1564,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBevelPathSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBevelPathSettings;
 
 // Class PCGExtendedToolkit.PCGExBitmaskSettings
 // 0x0028 (0x00E0 - 0x00B8)
@@ -1644,7 +1586,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBitmaskSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBitmaskSettings;
 
 // Class PCGExtendedToolkit.PCGExBitmaskFilterProviderSettings
 // 0x0028 (0x00F0 - 0x00C8)
@@ -1667,7 +1608,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBitmaskFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBitmaskFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExBitmaskMergeSettings
 // 0x0008 (0x00C0 - 0x00B8)
@@ -1691,7 +1631,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBitmaskMergeSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBitmaskMergeSettings;
 
 // Class PCGExtendedToolkit.PCGExBitwiseOperationSettings
 // 0x0020 (0x0108 - 0x00E8)
@@ -1720,7 +1659,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBitwiseOperationSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBitwiseOperationSettings;
 
 // Class PCGExtendedToolkit.PCGExBlendAttributesSettings
 // 0x0008 (0x00F0 - 0x00E8)
@@ -1744,7 +1682,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBlendAttributesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBlendAttributesSettings;
 
 // Class PCGExtendedToolkit.PCGExBlendPathSettings
 // 0x00C0 (0x01E0 - 0x0120)
@@ -1775,7 +1712,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBlendPathSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBlendPathSettings;
 
 // Class PCGExtendedToolkit.PCGExBlueprintHelpers
 // 0x0000 (0x0028 - 0x0028)
@@ -1800,7 +1736,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBlueprintHelpers>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBlueprintHelpers;
 
 // Class PCGExtendedToolkit.PCGExBooleanCompareFilterFactory
 // 0x0060 (0x0220 - 0x01C0)
@@ -1823,7 +1758,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBooleanCompareFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBooleanCompareFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExWriteGUIDSettings
 // 0x00F0 (0x01D8 - 0x00E8)
@@ -1846,7 +1780,6 @@ public:
 		return GetDefaultObjImpl<UPCGExWriteGUIDSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExWriteGUIDSettings;
 
 // Class PCGExtendedToolkit.PCGExBooleanCompareFilterProviderSettings
 // 0x0060 (0x0128 - 0x00C8)
@@ -1869,7 +1802,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBooleanCompareFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBooleanCompareFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExBoundsAxisToPointsSettings
 // 0x00E0 (0x01C8 - 0x00E8)
@@ -1910,7 +1842,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBoundsAxisToPointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBoundsAxisToPointsSettings;
 
 // Class PCGExtendedToolkit.PCGExVtxPropertyEdgeMatchFactory
 // 0x0160 (0x0320 - 0x01C0)
@@ -1933,7 +1864,6 @@ public:
 		return GetDefaultObjImpl<UPCGExVtxPropertyEdgeMatchFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExVtxPropertyEdgeMatchFactory;
 
 // Class PCGExtendedToolkit.PCGExBoundsClustersIntersectionSettings
 // 0x0188 (0x0278 - 0x00F0)
@@ -1956,7 +1886,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBoundsClustersIntersectionSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBoundsClustersIntersectionSettings;
 
 // Class PCGExtendedToolkit.PCGExBoundsFilterFactory
 // 0x0040 (0x0200 - 0x01C0)
@@ -1980,7 +1909,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBoundsFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBoundsFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExBoundsFilterProviderSettings
 // 0x0018 (0x00E0 - 0x00C8)
@@ -2003,7 +1931,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBoundsFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBoundsFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExVtxPropertySpecialNeighborsFactory
 // 0x0150 (0x0310 - 0x01C0)
@@ -2026,7 +1953,6 @@ public:
 		return GetDefaultObjImpl<UPCGExVtxPropertySpecialNeighborsFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExVtxPropertySpecialNeighborsFactory;
 
 // Class PCGExtendedToolkit.PCGExBoundsPathIntersectionSettings
 // 0x0188 (0x02A8 - 0x0120)
@@ -2049,7 +1975,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBoundsPathIntersectionSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBoundsPathIntersectionSettings;
 
 // Class PCGExtendedToolkit.PCGExBoundsToPointsSettings
 // 0x0180 (0x0268 - 0x00E8)
@@ -2083,7 +2008,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBoundsToPointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBoundsToPointsSettings;
 
 // Class PCGExtendedToolkit.PCGExWithinRangeFilterProviderSettings
 // 0x0040 (0x0108 - 0x00C8)
@@ -2106,7 +2030,6 @@ public:
 		return GetDefaultObjImpl<UPCGExWithinRangeFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExWithinRangeFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExBoxFittingRelax
 // 0x0018 (0x0170 - 0x0158)
@@ -2130,7 +2053,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBoxFittingRelax>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBoxFittingRelax;
 
 // Class PCGExtendedToolkit.PCGExBreakClustersToPathsSettings
 // 0x0150 (0x0240 - 0x00F0)
@@ -2171,7 +2093,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBreakClustersToPathsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBreakClustersToPathsSettings;
 
 // Class PCGExtendedToolkit.PCGExBuildConvexHullSettings
 // 0x0050 (0x0138 - 0x00E8)
@@ -2194,7 +2115,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBuildConvexHullSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBuildConvexHullSettings;
 
 // Class PCGExtendedToolkit.PCGExBuildConvexHull2DSettings
 // 0x0118 (0x0200 - 0x00E8)
@@ -2224,7 +2144,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBuildConvexHull2DSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBuildConvexHull2DSettings;
 
 // Class PCGExtendedToolkit.PCGExWritePathPropertiesSettings
 // 0x01F0 (0x0310 - 0x0120)
@@ -2324,7 +2243,6 @@ public:
 		return GetDefaultObjImpl<UPCGExWritePathPropertiesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExWritePathPropertiesSettings;
 
 // Class PCGExtendedToolkit.PCGExCustomGraphSettings
 // 0x00E8 (0x0110 - 0x0028)
@@ -2386,7 +2304,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCustomGraphSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCustomGraphSettings;
 
 // Class PCGExtendedToolkit.PCGExCustomGraphBuilder
 // 0x0028 (0x00D0 - 0x00A8)
@@ -2417,7 +2334,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCustomGraphBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCustomGraphBuilder;
 
 // Class PCGExtendedToolkit.PCGExBuildCustomGraphSettings
 // 0x0070 (0x0158 - 0x00E8)
@@ -2448,7 +2364,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBuildCustomGraphSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBuildCustomGraphSettings;
 
 // Class PCGExtendedToolkit.PCGExTensorFactoryData
 // 0x03E0 (0x05A0 - 0x01C0)
@@ -2473,7 +2388,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UPCGExTensorFactoryData;
 
 // Class PCGExtendedToolkit.PCGExBuildDelaunayGraph2DSettings
 // 0x0118 (0x0200 - 0x00E8)
@@ -2508,7 +2422,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBuildDelaunayGraph2DSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBuildDelaunayGraph2DSettings;
 
 // Class PCGExtendedToolkit.PCGExBuildVoronoiGraph2DSettings
 // 0x0128 (0x0210 - 0x00E8)
@@ -2546,7 +2459,6 @@ public:
 		return GetDefaultObjImpl<UPCGExBuildVoronoiGraph2DSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExBuildVoronoiGraph2DSettings;
 
 // Class PCGExtendedToolkit.PCGExCatmullRomTangents
 // 0x0000 (0x00B0 - 0x00B0)
@@ -2566,7 +2478,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCatmullRomTangents>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCatmullRomTangents;
 
 // Class PCGExtendedToolkit.PCGExTensorDotFilterFactory
 // 0x0120 (0x02E0 - 0x01C0)
@@ -2591,7 +2502,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorDotFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorDotFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExCherryPickPointsSettings
 // 0x0008 (0x00F0 - 0x00E8)
@@ -2617,7 +2527,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCherryPickPointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCherryPickPointsSettings;
 
 // Class PCGExtendedToolkit.PCGExClusterNodesData
 // 0x0010 (0x01C0 - 0x01B0)
@@ -2640,7 +2549,6 @@ public:
 		return GetDefaultObjImpl<UPCGExClusterNodesData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExClusterNodesData;
 
 // Class PCGExtendedToolkit.PCGExClusterEdgesData
 // 0x0010 (0x01C0 - 0x01B0)
@@ -2663,7 +2571,6 @@ public:
 		return GetDefaultObjImpl<UPCGExClusterEdgesData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExClusterEdgesData;
 
 // Class PCGExtendedToolkit.PCGExTensorPointFactoryData
 // 0x0020 (0x05C0 - 0x05A0)
@@ -2688,7 +2595,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UPCGExTensorPointFactoryData;
 
 // Class PCGExtendedToolkit.PCGExTensorFlowFactory
 // 0x0410 (0x09D0 - 0x05C0)
@@ -2711,7 +2617,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorFlowFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorFlowFactory;
 
 // Class PCGExtendedToolkit.PCGExNodeFilterFactoryData
 // 0x0000 (0x01C0 - 0x01C0)
@@ -2731,7 +2636,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNodeFilterFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNodeFilterFactoryData;
 
 // Class PCGExtendedToolkit.PCGExEdgeFilterFactoryData
 // 0x0000 (0x01C0 - 0x01C0)
@@ -2751,7 +2655,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeFilterFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeFilterFactoryData;
 
 // Class PCGExtendedToolkit.PCGExClusterStateFactoryData
 // 0x0090 (0x0250 - 0x01C0)
@@ -2776,7 +2679,6 @@ public:
 		return GetDefaultObjImpl<UPCGExClusterStateFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExClusterStateFactoryData;
 
 // Class PCGExtendedToolkit.PCGExTensorInertiaConstantFactory
 // 0x0400 (0x09A0 - 0x05A0)
@@ -2799,7 +2701,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorInertiaConstantFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorInertiaConstantFactory;
 
 // Class PCGExtendedToolkit.PCGExClusterStateFactoryProviderSettings
 // 0x0088 (0x0148 - 0x00C0)
@@ -2825,7 +2726,6 @@ public:
 		return GetDefaultObjImpl<UPCGExClusterStateFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExClusterStateFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExCollocationCountSettings
 // 0x0020 (0x0108 - 0x00E8)
@@ -2853,7 +2753,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCollocationCountSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCollocationCountSettings;
 
 // Class PCGExtendedToolkit.PCGExConnectClustersSettings
 // 0x0200 (0x02F0 - 0x00F0)
@@ -2882,7 +2781,6 @@ public:
 		return GetDefaultObjImpl<UPCGExConnectClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExConnectClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExConnectPointsSettings
 // 0x0108 (0x01F0 - 0x00E8)
@@ -2911,7 +2809,6 @@ public:
 		return GetDefaultObjImpl<UPCGExConnectPointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExConnectPointsSettings;
 
 // Class PCGExtendedToolkit.PCGExConstantEnumSettings
 // 0x00B0 (0x0168 - 0x00B8)
@@ -2957,7 +2854,6 @@ public:
 		return GetDefaultObjImpl<UPCGExConstantEnumSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExConstantEnumSettings;
 
 // Class PCGExtendedToolkit.PCGExConstantFilterFactory
 // 0x0010 (0x01D0 - 0x01C0)
@@ -2981,7 +2877,6 @@ public:
 		return GetDefaultObjImpl<UPCGExConstantFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExConstantFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExConstantFilterProviderSettings
 // 0x0008 (0x00D0 - 0x00C8)
@@ -3005,7 +2900,6 @@ public:
 		return GetDefaultObjImpl<UPCGExConstantFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExConstantFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExConstantsSettings
 // 0x0068 (0x0120 - 0x00B8)
@@ -3038,7 +2932,6 @@ public:
 		return GetDefaultObjImpl<UPCGExConstantsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExConstantsSettings;
 
 // Class PCGExtendedToolkit.PCGExCopyClustersToPointsSettings
 // 0x0440 (0x0530 - 0x00F0)
@@ -3067,7 +2960,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCopyClustersToPointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCopyClustersToPointsSettings;
 
 // Class PCGExtendedToolkit.PCGExCopyToPointsSettings
 // 0x0440 (0x0528 - 0x00E8)
@@ -3095,7 +2987,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCopyToPointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCopyToPointsSettings;
 
 // Class PCGExtendedToolkit.PCGExShapeProcessorSettings
 // 0x0008 (0x00F0 - 0x00E8)
@@ -3119,7 +3010,6 @@ public:
 		return GetDefaultObjImpl<UPCGExShapeProcessorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExShapeProcessorSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateShapesSettings
 // 0x0020 (0x0110 - 0x00F0)
@@ -3151,7 +3041,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateShapesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateShapesSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateSplineSettings
 // 0x0060 (0x0180 - 0x0120)
@@ -3186,7 +3075,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateSplineSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateSplineSettings;
 
 // Class PCGExtendedToolkit.PCGExCutEdgesSettings
 // 0x00E8 (0x01D8 - 0x00F0)
@@ -3220,7 +3108,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCutEdgesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCutEdgesSettings;
 
 // Class PCGExtendedToolkit.PCGExWaitForPCGDataSettings
 // 0x00E0 (0x01C8 - 0x00E8)
@@ -3271,7 +3158,6 @@ public:
 		return GetDefaultObjImpl<UPCGExWaitForPCGDataSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExWaitForPCGDataSettings;
 
 // Class PCGExtendedToolkit.PCGExDataOwnedItem
 // 0x0058 (0x0080 - 0x0028)
@@ -3295,7 +3181,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDataOwnedItem>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDataOwnedItem;
 
 // Class PCGExtendedToolkit.PCGExDataBucket
 // 0x00B8 (0x00E0 - 0x0028)
@@ -3320,7 +3205,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDataBucket>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDataBucket;
 
 // Class PCGExtendedToolkit.PCGExSharedDataManager
 // 0x0068 (0x0090 - 0x0028)
@@ -3345,7 +3229,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSharedDataManager>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSharedDataManager;
 
 // Class PCGExtendedToolkit.PCGExDestroyActorSettings
 // 0x0008 (0x00F0 - 0x00E8)
@@ -3368,7 +3251,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDestroyActorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDestroyActorSettings;
 
 // Class PCGExtendedToolkit.PCGExDiscardByOverlapSettings
 // 0x00E0 (0x01C8 - 0x00E8)
@@ -3401,7 +3283,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDiscardByOverlapSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDiscardByOverlapSettings;
 
 // Class PCGExtendedToolkit.PCGExDiscardByPointCountSettings
 // 0x0018 (0x0100 - 0x00E8)
@@ -3431,7 +3312,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDiscardByPointCountSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDiscardByPointCountSettings;
 
 // Class PCGExtendedToolkit.PCGExDiscardSameSettings
 // 0x0068 (0x0150 - 0x00E8)
@@ -3467,7 +3347,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDiscardSameSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDiscardSameSettings;
 
 // Class PCGExtendedToolkit.PCGExDistanceFilterFactory
 // 0x0070 (0x0230 - 0x01C0)
@@ -3491,7 +3370,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDistanceFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDistanceFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExDistanceFilterProviderSettings
 // 0x0048 (0x0110 - 0x00C8)
@@ -3514,7 +3392,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDistanceFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDistanceFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExDotFilterFactory
 // 0x00E0 (0x02A0 - 0x01C0)
@@ -3537,7 +3414,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDotFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDotFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExDotFilterProviderSettings
 // 0x00E0 (0x01A8 - 0x00C8)
@@ -3560,7 +3436,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDotFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDotFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExDrawAttributesSettings
 // 0x0018 (0x0100 - 0x00E8)
@@ -3585,7 +3460,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDrawAttributesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDrawAttributesSettings;
 
 // Class PCGExtendedToolkit.PCGExDynamicMeshComponent
 // 0x0010 (0x0A00 - 0x09F0)
@@ -3609,7 +3483,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDynamicMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDynamicMeshComponent;
 
 // Class PCGExtendedToolkit.PCGExEdgeEndpointsCheckFilterFactory
 // 0x0020 (0x01E0 - 0x01C0)
@@ -3635,7 +3508,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeEndpointsCheckFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeEndpointsCheckFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExEdgeEndpointsCheckFilterProviderSettings
 // 0x0008 (0x00D0 - 0x00C8)
@@ -3659,7 +3531,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeEndpointsCheckFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeEndpointsCheckFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExEdgeEndpointsCompareNumFilterFactory
 // 0x0040 (0x0200 - 0x01C0)
@@ -3682,7 +3553,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeEndpointsCompareNumFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeEndpointsCompareNumFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExEdgeEndpointsCompareNumFilterProviderSettings
 // 0x0040 (0x0108 - 0x00C8)
@@ -3705,7 +3575,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeEndpointsCompareNumFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeEndpointsCompareNumFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExEdgeEndpointsCompareStrFilterFactory
 // 0x0030 (0x01F0 - 0x01C0)
@@ -3728,7 +3597,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeEndpointsCompareStrFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeEndpointsCompareStrFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExEdgeEndpointsCompareStrFilterProviderSettings
 // 0x0030 (0x00F8 - 0x00C8)
@@ -3751,7 +3619,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeEndpointsCompareStrFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeEndpointsCompareStrFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExEdgeLengthFilterFactory
 // 0x0050 (0x0210 - 0x01C0)
@@ -3774,7 +3641,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeLengthFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeLengthFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExEdgeLengthFilterProviderSettings
 // 0x0050 (0x0118 - 0x00C8)
@@ -3797,7 +3663,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeLengthFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeLengthFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExSampleNearestPointSettings
 // 0x0310 (0x03F8 - 0x00E8)
@@ -3895,7 +3760,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSampleNearestPointSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSampleNearestPointSettings;
 
 // Class PCGExtendedToolkit.PCGExEdgeNeighborsCountFilterFactory
 // 0x0040 (0x0200 - 0x01C0)
@@ -3918,7 +3782,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeNeighborsCountFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeNeighborsCountFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExEdgeNeighborsCountFilterProviderSettings
 // 0x0040 (0x0108 - 0x00C8)
@@ -3941,7 +3804,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeNeighborsCountFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeNeighborsCountFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExEdgeOrderSettings
 // 0x0058 (0x0148 - 0x00F0)
@@ -3964,7 +3826,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeOrderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeOrderSettings;
 
 // Class PCGExtendedToolkit.PCGExSampleOverlapStatsSettings
 // 0x0078 (0x0160 - 0x00E8)
@@ -4010,7 +3871,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSampleOverlapStatsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSampleOverlapStatsSettings;
 
 // Class PCGExtendedToolkit.PCGExEdgeRefineByFilter
 // 0x0008 (0x00F0 - 0x00E8)
@@ -4035,7 +3895,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRefineByFilter>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRefineByFilter;
 
 // Class PCGExtendedToolkit.PCGExEdgeRefineGabriel
 // 0x0008 (0x00F0 - 0x00E8)
@@ -4060,7 +3919,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRefineGabriel>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRefineGabriel;
 
 // Class PCGExtendedToolkit.PCGExEdgeKeepHighestScore
 // 0x0000 (0x00E8 - 0x00E8)
@@ -4080,7 +3938,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeKeepHighestScore>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeKeepHighestScore;
 
 // Class PCGExtendedToolkit.PCGExEdgeKeepLongest
 // 0x0000 (0x00E8 - 0x00E8)
@@ -4100,7 +3957,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeKeepLongest>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeKeepLongest;
 
 // Class PCGExtendedToolkit.PCGExSanitizeClustersSettings
 // 0x0050 (0x0140 - 0x00F0)
@@ -4123,7 +3979,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSanitizeClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSanitizeClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExEdgeKeepLowestScore
 // 0x0000 (0x00E8 - 0x00E8)
@@ -4143,7 +3998,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeKeepLowestScore>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeKeepLowestScore;
 
 // Class PCGExtendedToolkit.PCGExEdgeKeepShortest
 // 0x0000 (0x00E8 - 0x00E8)
@@ -4163,7 +4017,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeKeepShortest>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeKeepShortest;
 
 // Class PCGExtendedToolkit.PCGExEdgeRefineLineTrace
 // 0x00F8 (0x01E0 - 0x00E8)
@@ -4189,7 +4042,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRefineLineTrace>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRefineLineTrace;
 
 // Class PCGExtendedToolkit.PCGExEdgeRefinePrimMST
 // 0x0008 (0x00F0 - 0x00E8)
@@ -4213,7 +4065,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRefinePrimMST>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRefinePrimMST;
 
 // Class PCGExtendedToolkit.PCGExShapeBuilderFactoryData
 // 0x0000 (0x01C0 - 0x01C0)
@@ -4233,7 +4084,6 @@ public:
 		return GetDefaultObjImpl<UPCGExShapeBuilderFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExShapeBuilderFactoryData;
 
 // Class PCGExtendedToolkit.PCGExEdgeRemoveHighestScore
 // 0x0000 (0x00E8 - 0x00E8)
@@ -4253,7 +4103,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRemoveHighestScore>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRemoveHighestScore;
 
 // Class PCGExtendedToolkit.PCGExEdgeRemoveLongest
 // 0x0000 (0x00E8 - 0x00E8)
@@ -4273,7 +4122,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRemoveLongest>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRemoveLongest;
 
 // Class PCGExtendedToolkit.PCGExEdgeRemoveLowestScore
 // 0x0000 (0x00E8 - 0x00E8)
@@ -4293,7 +4141,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRemoveLowestScore>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRemoveLowestScore;
 
 // Class PCGExtendedToolkit.PCGExEdgeRemoveOverlap
 // 0x0048 (0x0130 - 0x00E8)
@@ -4327,7 +4174,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRemoveOverlap>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRemoveOverlap;
 
 // Class PCGExtendedToolkit.PCGExMeshSelectorStaged
 // 0x0018 (0x0040 - 0x0028)
@@ -4352,7 +4198,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMeshSelectorStaged>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMeshSelectorStaged;
 
 // Class PCGExtendedToolkit.PCGExEdgeRefineSkeleton
 // 0x0018 (0x0100 - 0x00E8)
@@ -4378,7 +4223,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEdgeRefineSkeleton>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEdgeRefineSkeleton;
 
 // Class PCGExtendedToolkit.PCGExEntryCountFilterProviderSettings
 // 0x0010 (0x00D8 - 0x00C8)
@@ -4401,7 +4245,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEntryCountFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEntryCountFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExExtrudeTensorsSettings
 // 0x0310 (0x03F8 - 0x00E8)
@@ -4495,7 +4338,6 @@ public:
 		return GetDefaultObjImpl<UPCGExExtrudeTensorsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExExtrudeTensorsSettings;
 
 // Class PCGExtendedToolkit.PCGExFillControlsFactoryDepth
 // 0x0020 (0x01E0 - 0x01C0)
@@ -4519,7 +4361,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsFactoryDepth>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsFactoryDepth;
 
 // Class PCGExtendedToolkit.PCGExFillControlsFactoryEdgeFilters
 // 0x0020 (0x01E0 - 0x01C0)
@@ -4545,7 +4386,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsFactoryEdgeFilters>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsFactoryEdgeFilters;
 
 // Class PCGExtendedToolkit.PCGExFillControlsFactoryKeepDirection
 // 0x0080 (0x0240 - 0x01C0)
@@ -4568,7 +4408,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsFactoryKeepDirection>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsFactoryKeepDirection;
 
 // Class PCGExtendedToolkit.PCGExFillControlsFactoryLength
 // 0x0020 (0x01E0 - 0x01C0)
@@ -4592,7 +4431,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsFactoryLength>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsFactoryLength;
 
 // Class PCGExtendedToolkit.PCGExFillControlsFactoryRunningAverage
 // 0x0070 (0x0230 - 0x01C0)
@@ -4615,7 +4453,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsFactoryRunningAverage>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsFactoryRunningAverage;
 
 // Class PCGExtendedToolkit.PCGExFillControlsFactoryVtxFilters
 // 0x0020 (0x01E0 - 0x01C0)
@@ -4641,7 +4478,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFillControlsFactoryVtxFilters>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFillControlsFactoryVtxFilters;
 
 // Class PCGExtendedToolkit.PCGExFilterGroupFactoryDataOR
 // 0x0000 (0x01E0 - 0x01E0)
@@ -4661,7 +4497,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFilterGroupFactoryDataOR>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFilterGroupFactoryDataOR;
 
 // Class PCGExtendedToolkit.PCGExFilterGroupProviderSettings
 // 0x0008 (0x00C8 - 0x00C0)
@@ -4687,7 +4522,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFilterGroupProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFilterGroupProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExFilterVtxSettings
 // 0x00A0 (0x0190 - 0x00F0)
@@ -4718,7 +4552,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFilterVtxSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFilterVtxSettings;
 
 // Class PCGExtendedToolkit.PCGExFindClustersDataSettings
 // 0x0008 (0x00F0 - 0x00E8)
@@ -4744,7 +4577,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFindClustersDataSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFindClustersDataSettings;
 
 // Class PCGExtendedToolkit.PCGExFindPointOnBoundsSettings
 // 0x0120 (0x0208 - 0x00E8)
@@ -4773,7 +4605,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFindPointOnBoundsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFindPointOnBoundsSettings;
 
 // Class PCGExtendedToolkit.PCGExFlagNodesSettings
 // 0x0010 (0x0100 - 0x00F0)
@@ -4797,7 +4628,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFlagNodesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFlagNodesSettings;
 
 // Class PCGExtendedToolkit.PCGExFlatProjectionSettings
 // 0x00B8 (0x01A0 - 0x00E8)
@@ -4826,7 +4656,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFlatProjectionSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFlatProjectionSettings;
 
 // Class PCGExtendedToolkit.PCGExClusterDiffusionSettings
 // 0x0148 (0x0238 - 0x00F0)
@@ -4870,7 +4699,6 @@ public:
 		return GetDefaultObjImpl<UPCGExClusterDiffusionSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExClusterDiffusionSettings;
 
 // Class PCGExtendedToolkit.PCGExProbeFactoryData
 // 0x0000 (0x01C0 - 0x01C0)
@@ -4892,7 +4720,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UPCGExProbeFactoryData;
 
 // Class PCGExtendedToolkit.PCGExProbeFactoryNumericCompare
 // 0x0080 (0x0240 - 0x01C0)
@@ -4916,7 +4743,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeFactoryNumericCompare>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeFactoryNumericCompare;
 
 // Class PCGExtendedToolkit.PCGExDebugSettings
 // 0x0018 (0x00D0 - 0x00B8)
@@ -4942,7 +4768,6 @@ public:
 		return GetDefaultObjImpl<UPCGExDebugSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExDebugSettings;
 
 // Class PCGExtendedToolkit.PCGExForceDirectedRelax
 // 0x0010 (0x00D8 - 0x00C8)
@@ -4966,7 +4791,6 @@ public:
 		return GetDefaultObjImpl<UPCGExForceDirectedRelax>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExForceDirectedRelax;
 
 // Class PCGExtendedToolkit.PCGExFromNeighborsTangents
 // 0x0000 (0x00B0 - 0x00B0)
@@ -4986,7 +4810,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFromNeighborsTangents>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFromNeighborsTangents;
 
 // Class PCGExtendedToolkit.PCGExFromTransformTangents
 // 0x0008 (0x00B8 - 0x00B0)
@@ -5010,7 +4833,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFromTransformTangents>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFromTransformTangents;
 
 // Class PCGExtendedToolkit.PCGExPruneEdgesByLengthSettings
 // 0x0000 (0x00F0 - 0x00F0)
@@ -5030,7 +4852,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPruneEdgesByLengthSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPruneEdgesByLengthSettings;
 
 // Class PCGExtendedToolkit.PCGExFuseClustersSettings
 // 0x0620 (0x0710 - 0x00F0)
@@ -5070,7 +4891,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFuseClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFuseClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExFuseCollinearSettings
 // 0x0020 (0x0140 - 0x0120)
@@ -5099,7 +4919,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFuseCollinearSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFuseCollinearSettings;
 
 // Class PCGExtendedToolkit.PCGExSplineInclusionFilterFactory
 // 0x0040 (0x0200 - 0x01C0)
@@ -5123,7 +4942,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSplineInclusionFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSplineInclusionFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExFusePointsSettings
 // 0x0258 (0x0340 - 0x00E8)
@@ -5150,7 +4968,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFusePointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFusePointsSettings;
 
 // Class PCGExtendedToolkit.PCGExGameplayTagsFilterFactory
 // 0x0070 (0x0230 - 0x01C0)
@@ -5173,7 +4990,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGameplayTagsFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGameplayTagsFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExRandomFilterProviderSettings
 // 0x0130 (0x01F8 - 0x00C8)
@@ -5196,7 +5012,6 @@ public:
 		return GetDefaultObjImpl<UPCGExRandomFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExRandomFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExGameplayTagsFilterProviderSettings
 // 0x0068 (0x0130 - 0x00C8)
@@ -5219,7 +5034,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGameplayTagsFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGameplayTagsFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExGetGUIDSettings
 // 0x00F8 (0x01E0 - 0x00E8)
@@ -5245,7 +5059,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGetGUIDSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGetGUIDSettings;
 
 // Class PCGExtendedToolkit.PCGExProbeFactoryIndex
 // 0x0070 (0x0230 - 0x01C0)
@@ -5269,7 +5082,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeFactoryIndex>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeFactoryIndex;
 
 // Class PCGExtendedToolkit.PCGExGetTextureDataSettings
 // 0x00D8 (0x01C0 - 0x00E8)
@@ -5311,7 +5123,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGetTextureDataSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGetTextureDataSettings;
 
 // Class PCGExtendedToolkit.PCGExGlobalSettings
 // 0x0200 (0x0228 - 0x0028)
@@ -5393,7 +5204,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGlobalSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGlobalSettings;
 
 // Class PCGExtendedToolkit.PCGExResamplePathSettings
 // 0x0098 (0x01B8 - 0x0120)
@@ -5423,7 +5233,6 @@ public:
 		return GetDefaultObjImpl<UPCGExResamplePathSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExResamplePathSettings;
 
 // Class PCGExtendedToolkit.PCGExGoalPicker
 // 0x0008 (0x00B0 - 0x00A8)
@@ -5447,7 +5256,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGoalPicker>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGoalPicker;
 
 // Class PCGExtendedToolkit.PCGExGoalPickerAll
 // 0x0008 (0x00B8 - 0x00B0)
@@ -5470,7 +5278,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGoalPickerAll>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGoalPickerAll;
 
 // Class PCGExtendedToolkit.PCGExPointStateFactoryProviderSettings
 // 0x0000 (0x00C0 - 0x00C0)
@@ -5490,7 +5297,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPointStateFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPointStateFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExGoalPickerAttribute
 // 0x0070 (0x0120 - 0x00B0)
@@ -5519,7 +5325,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGoalPickerAttribute>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGoalPickerAttribute;
 
 // Class PCGExtendedToolkit.PCGExGoalPickerRandom
 // 0x0048 (0x00F8 - 0x00B0)
@@ -5548,7 +5353,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGoalPickerRandom>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGoalPickerRandom;
 
 // Class PCGExtendedToolkit.PCGExTensorSplineFactoryData
 // 0x0050 (0x05F0 - 0x05A0)
@@ -5571,7 +5375,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorSplineFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorSplineFactoryData;
 
 // Class PCGExtendedToolkit.PCGExTensorSplineFlowFactory
 // 0x0400 (0x09F0 - 0x05F0)
@@ -5594,7 +5397,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorSplineFlowFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorSplineFlowFactory;
 
 // Class PCGExtendedToolkit.PCGExGridEventObserverComponent
 // 0x0050 (0x0120 - 0x00D0)
@@ -5620,7 +5422,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGridEventObserverComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGridEventObserverComponent;
 
 // Class PCGExtendedToolkit.PCGExGridIDTracker
 // 0x00E8 (0x0110 - 0x0028)
@@ -5647,7 +5448,6 @@ public:
 		return GetDefaultObjImpl<UPCGExGridIDTracker>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExGridIDTracker;
 
 // Class PCGExtendedToolkit.PCGExSmoothingOperation
 // 0x0000 (0x00A8 - 0x00A8)
@@ -5667,7 +5467,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSmoothingOperation>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSmoothingOperation;
 
 // Class PCGExtendedToolkit.PCGExRadiusSmoothing
 // 0x0000 (0x00A8 - 0x00A8)
@@ -5687,7 +5486,6 @@ public:
 		return GetDefaultObjImpl<UPCGExRadiusSmoothing>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExRadiusSmoothing;
 
 // Class PCGExtendedToolkit.PCGExComponentCallback
 // 0x0048 (0x0070 - 0x0028)
@@ -5713,7 +5511,6 @@ public:
 		return GetDefaultObjImpl<UPCGExComponentCallback>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExComponentCallback;
 
 // Class PCGExtendedToolkit.PCGExPCGComponentCallback
 // 0x0048 (0x0070 - 0x0028)
@@ -5739,7 +5536,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPCGComponentCallback>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPCGComponentCallback;
 
 // Class PCGExtendedToolkit.PCGExTensorPathPoleFactory
 // 0x0410 (0x0E00 - 0x09F0)
@@ -5762,7 +5558,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorPathPoleFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorPathPoleFactory;
 
 // Class PCGExtendedToolkit.PCGExManagedObjectInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -5791,7 +5586,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IPCGExManagedObjectInterface;
 
 // Class PCGExtendedToolkit.PCGExManagedComponentInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -5820,7 +5614,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IPCGExManagedComponentInterface;
 
 // Class PCGExtendedToolkit.PCGExProbeFactoryClosest
 // 0x0070 (0x0230 - 0x01C0)
@@ -5843,7 +5636,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeFactoryClosest>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeFactoryClosest;
 
 // Class PCGExtendedToolkit.PCGExFunctionPrototypes
 // 0x0000 (0x0028 - 0x0028)
@@ -5867,7 +5659,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFunctionPrototypes>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFunctionPrototypes;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsFactoryData
 // 0x0130 (0x02F0 - 0x01C0)
@@ -5890,7 +5681,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsFactoryData;
 
 // Class PCGExtendedToolkit.PCGExTensorSampler
 // 0x0008 (0x00B0 - 0x00A8)
@@ -5913,7 +5703,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorSampler>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorSampler;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsFactoryAttribute
 // 0x0170 (0x0460 - 0x02F0)
@@ -5936,7 +5725,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsFactoryAttribute>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsFactoryAttribute;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsFactoryProviderSettings
 // 0x0000 (0x00C0 - 0x00C0)
@@ -5956,7 +5744,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExSampleInsideBoundsSettings
 // 0x02E0 (0x03C8 - 0x00E8)
@@ -6051,7 +5838,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSampleInsideBoundsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSampleInsideBoundsSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateHeuristicAttributeSettings
 // 0x0170 (0x0230 - 0x00C0)
@@ -6074,7 +5860,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateHeuristicAttributeSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateHeuristicAttributeSettings;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsFactoryAzimuth
 // 0x0130 (0x0420 - 0x02F0)
@@ -6097,7 +5882,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsFactoryAzimuth>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsFactoryAzimuth;
 
 // Class PCGExtendedToolkit.PCGExTensorFactoryProviderSettings
 // 0x0008 (0x00C8 - 0x00C0)
@@ -6121,7 +5905,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExTensorPointFactoryProviderSettings
 // 0x0000 (0x00C8 - 0x00C8)
@@ -6141,7 +5924,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorPointFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorPointFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorSpinSettings
 // 0x0418 (0x04E0 - 0x00C8)
@@ -6164,7 +5946,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorSpinSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorSpinSettings;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsAzimuthProviderSettings
 // 0x0130 (0x01F0 - 0x00C0)
@@ -6187,7 +5968,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsAzimuthProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsAzimuthProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsFactoryShortestDistance
 // 0x0130 (0x0420 - 0x02F0)
@@ -6210,7 +5990,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsFactoryShortestDistance>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsFactoryShortestDistance;
 
 // Class PCGExtendedToolkit.PCGExProbeFactoryTensor
 // 0x00D0 (0x0290 - 0x01C0)
@@ -6234,7 +6013,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeFactoryTensor>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeFactoryTensor;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsShortestDistanceProviderSettings
 // 0x0130 (0x01F0 - 0x00C0)
@@ -6257,7 +6035,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsShortestDistanceProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsShortestDistanceProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsFactoryFeedback
 // 0x0150 (0x0440 - 0x02F0)
@@ -6280,7 +6057,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsFactoryFeedback>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsFactoryFeedback;
 
 // Class PCGExtendedToolkit.PCGExSharedDataComponent
 // 0x0078 (0x0148 - 0x00D0)
@@ -6304,7 +6080,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSharedDataComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSharedDataComponent;
 
 // Class PCGExtendedToolkit.PCGExHeuristicFeedbackProviderSettings
 // 0x0150 (0x0210 - 0x00C0)
@@ -6327,7 +6102,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicFeedbackProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicFeedbackProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsFactoryInertia
 // 0x0150 (0x0440 - 0x02F0)
@@ -6351,7 +6125,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsFactoryInertia>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsFactoryInertia;
 
 // Class PCGExtendedToolkit.PCGExSampleTensorsSettings
 // 0x0050 (0x0138 - 0x00E8)
@@ -6388,7 +6161,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSampleTensorsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSampleTensorsSettings;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsInertiaProviderSettings
 // 0x0148 (0x0208 - 0x00C0)
@@ -6411,7 +6183,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsInertiaProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsInertiaProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsFactoryLeastNodes
 // 0x0130 (0x0420 - 0x02F0)
@@ -6434,7 +6205,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsFactoryLeastNodes>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsFactoryLeastNodes;
 
 // Class PCGExtendedToolkit.PCGExSmoothSettings
 // 0x0108 (0x0228 - 0x0120)
@@ -6470,7 +6240,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSmoothSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSmoothSettings;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsLeastNodesProviderSettings
 // 0x0130 (0x01F0 - 0x00C0)
@@ -6493,7 +6262,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsLeastNodesProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsLeastNodesProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsFactorySteepness
 // 0x0160 (0x0450 - 0x02F0)
@@ -6517,7 +6285,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsFactorySteepness>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsFactorySteepness;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsSteepnessProviderSettings
 // 0x0158 (0x0218 - 0x00C0)
@@ -6540,7 +6307,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsSteepnessProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsSteepnessProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsFactoryTensor
 // 0x01B0 (0x04A0 - 0x02F0)
@@ -6565,7 +6331,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsFactoryTensor>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsFactoryTensor;
 
 // Class PCGExtendedToolkit.PCGExSplineAlphaFilterFactory
 // 0x0060 (0x0220 - 0x01C0)
@@ -6589,7 +6354,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSplineAlphaFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSplineAlphaFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExHeuristicsTensorProviderSettings
 // 0x0198 (0x0258 - 0x00C0)
@@ -6612,7 +6376,6 @@ public:
 		return GetDefaultObjImpl<UPCGExHeuristicsTensorProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExHeuristicsTensorProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExIsoEdgeDirectionFilterFactory
 // 0x0170 (0x0330 - 0x01C0)
@@ -6637,7 +6400,6 @@ public:
 		return GetDefaultObjImpl<UPCGExIsoEdgeDirectionFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExIsoEdgeDirectionFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExShapeCircleFactory
 // 0x0410 (0x05D0 - 0x01C0)
@@ -6660,7 +6422,6 @@ public:
 		return GetDefaultObjImpl<UPCGExShapeCircleFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExShapeCircleFactory;
 
 // Class PCGExtendedToolkit.PCGExIsoEdgeDirectionFilterProviderSettings
 // 0x0158 (0x0220 - 0x00C8)
@@ -6683,7 +6444,6 @@ public:
 		return GetDefaultObjImpl<UPCGExIsoEdgeDirectionFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExIsoEdgeDirectionFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExIterationsSettings
 // 0x0010 (0x00C8 - 0x00B8)
@@ -6710,7 +6470,6 @@ public:
 		return GetDefaultObjImpl<UPCGExIterationsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExIterationsSettings;
 
 // Class PCGExtendedToolkit.PCGExSplineToPathSettings
 // 0x00D8 (0x01C0 - 0x00E8)
@@ -6755,7 +6514,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSplineToPathSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSplineToPathSettings;
 
 // Class PCGExtendedToolkit.PCGExLaplacianRelax
 // 0x0000 (0x00C8 - 0x00C8)
@@ -6775,7 +6533,6 @@ public:
 		return GetDefaultObjImpl<UPCGExLaplacianRelax>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExLaplacianRelax;
 
 // Class PCGExtendedToolkit.PCGExLloydRelaxSettings
 // 0x0058 (0x0140 - 0x00E8)
@@ -6800,7 +6557,6 @@ public:
 		return GetDefaultObjImpl<UPCGExLloydRelaxSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExLloydRelaxSettings;
 
 // Class PCGExtendedToolkit.PCGExSampleNearestSurfaceSettings
 // 0x01E0 (0x02C8 - 0x00E8)
@@ -6870,7 +6626,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSampleNearestSurfaceSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSampleNearestSurfaceSettings;
 
 // Class PCGExtendedToolkit.PCGExLloydRelax2DSettings
 // 0x00F8 (0x01E0 - 0x00E8)
@@ -6896,7 +6651,6 @@ public:
 		return GetDefaultObjImpl<UPCGExLloydRelax2DSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExLloydRelax2DSettings;
 
 // Class PCGExtendedToolkit.PCGExMakeClustersUniqueSettings
 // 0x0000 (0x00F0 - 0x00F0)
@@ -6916,7 +6670,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMakeClustersUniqueSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMakeClustersUniqueSettings;
 
 // Class PCGExtendedToolkit.PCGExFilterCollectionFactoryData
 // 0x0000 (0x01C0 - 0x01C0)
@@ -6936,7 +6689,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFilterCollectionFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFilterCollectionFactoryData;
 
 // Class PCGExtendedToolkit.PCGExMeanFilterFactory
 // 0x0060 (0x0220 - 0x01C0)
@@ -6959,7 +6711,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMeanFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMeanFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExMeanFilterProviderSettings
 // 0x0060 (0x0128 - 0x00C8)
@@ -6982,7 +6733,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMeanFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMeanFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExSortingRuleProviderSettings
 // 0x0068 (0x0128 - 0x00C0)
@@ -7007,7 +6757,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSortingRuleProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSortingRuleProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExMergePointsSettings
 // 0x0198 (0x0280 - 0x00E8)
@@ -7036,7 +6785,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMergePointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMergePointsSettings;
 
 // Class PCGExtendedToolkit.PCGExMergePointsByTagSettings
 // 0x0178 (0x0260 - 0x00E8)
@@ -7065,7 +6813,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMergePointsByTagSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMergePointsByTagSettings;
 
 // Class PCGExtendedToolkit.PCGExPolygonInclusionFilterFactory
 // 0x0040 (0x0200 - 0x01C0)
@@ -7089,7 +6836,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPolygonInclusionFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPolygonInclusionFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExMergeVerticesSettings
 // 0x00F0 (0x01E0 - 0x00F0)
@@ -7112,7 +6858,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMergeVerticesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMergeVerticesSettings;
 
 // Class PCGExtendedToolkit.PCGExMeshCollection
 // 0x0010 (0x0150 - 0x0140)
@@ -7135,7 +6880,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMeshCollection>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMeshCollection;
 
 // Class PCGExtendedToolkit.PCGExSearchOperation
 // 0x0010 (0x00B8 - 0x00A8)
@@ -7160,7 +6904,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSearchOperation>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSearchOperation;
 
 // Class PCGExtendedToolkit.PCGExSearchAStar
 // 0x0000 (0x00B8 - 0x00B8)
@@ -7180,7 +6923,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSearchAStar>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSearchAStar;
 
 // Class PCGExtendedToolkit.PCGExMeshToClustersSettings
 // 0x03D8 (0x04C0 - 0x00E8)
@@ -7215,7 +6957,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMeshToClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMeshToClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExMetaCleanupSettings
 // 0x00F0 (0x01D8 - 0x00E8)
@@ -7238,7 +6979,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMetaCleanupSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMetaCleanupSettings;
 
 // Class PCGExtendedToolkit.PCGExProbeFactoryProviderSettings
 // 0x0000 (0x00C0 - 0x00C0)
@@ -7258,7 +6998,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExMetaFilterSettings
 // 0x00F0 (0x01D8 - 0x00E8)
@@ -7287,7 +7026,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMetaFilterSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMetaFilterSettings;
 
 // Class PCGExtendedToolkit.PCGExPartitionRule
 // 0x0090 (0x0250 - 0x01C0)
@@ -7310,7 +7048,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPartitionRule>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPartitionRule;
 
 // Class PCGExtendedToolkit.PCGExStringCompareFilterFactory
 // 0x0030 (0x01F0 - 0x01C0)
@@ -7334,7 +7071,6 @@ public:
 		return GetDefaultObjImpl<UPCGExStringCompareFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExStringCompareFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExPartitionRuleProviderSettings
 // 0x0090 (0x0150 - 0x00C0)
@@ -7357,7 +7093,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPartitionRuleProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPartitionRuleProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExPartitionByValuesBaseSettings
 // 0x0010 (0x00F8 - 0x00E8)
@@ -7384,7 +7119,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPartitionByValuesBaseSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPartitionByValuesBaseSettings;
 
 // Class PCGExtendedToolkit.PCGExProbeFactoryDirection
 // 0x00B0 (0x0270 - 0x01C0)
@@ -7408,7 +7142,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeFactoryDirection>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeFactoryDirection;
 
 // Class PCGExtendedToolkit.PCGExModularPartitionByValuesSettings
 // 0x0000 (0x00F8 - 0x00F8)
@@ -7428,7 +7161,6 @@ public:
 		return GetDefaultObjImpl<UPCGExModularPartitionByValuesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExModularPartitionByValuesSettings;
 
 // Class PCGExtendedToolkit.PCGExSortPointsBaseSettings
 // 0x0008 (0x00F0 - 0x00E8)
@@ -7452,7 +7184,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSortPointsBaseSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSortPointsBaseSettings;
 
 // Class PCGExtendedToolkit.PCGExShrinkPathSettings
 // 0x0100 (0x0220 - 0x0120)
@@ -7485,7 +7216,6 @@ public:
 		return GetDefaultObjImpl<UPCGExShrinkPathSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExShrinkPathSettings;
 
 // Class PCGExtendedToolkit.PCGExModularSortPointsSettings
 // 0x0000 (0x00F0 - 0x00F0)
@@ -7505,7 +7235,6 @@ public:
 		return GetDefaultObjImpl<UPCGExModularSortPointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExModularSortPointsSettings;
 
 // Class PCGExtendedToolkit.PCGExModuloCompareFilterFactory
 // 0x00B0 (0x0270 - 0x01C0)
@@ -7529,7 +7258,6 @@ public:
 		return GetDefaultObjImpl<UPCGExModuloCompareFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExModuloCompareFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExTensorConstantFactory
 // 0x0410 (0x09B0 - 0x05A0)
@@ -7554,7 +7282,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorConstantFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorConstantFactory;
 
 // Class PCGExtendedToolkit.PCGExModuloCompareFilterProviderSettings
 // 0x00A8 (0x0170 - 0x00C8)
@@ -7577,7 +7304,6 @@ public:
 		return GetDefaultObjImpl<UPCGExModuloCompareFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExModuloCompareFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExMovePivotSettings
 // 0x00D8 (0x01C0 - 0x00E8)
@@ -7600,7 +7326,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMovePivotSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMovePivotSettings;
 
 // Class PCGExtendedToolkit.PCGExSubPointsOperation
 // 0x0008 (0x00B0 - 0x00A8)
@@ -7623,7 +7348,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSubPointsOperation>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSubPointsOperation;
 
 // Class PCGExtendedToolkit.PCGExSubPointsBlendOperation
 // 0x0090 (0x0140 - 0x00B0)
@@ -7647,7 +7371,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSubPointsBlendOperation>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSubPointsBlendOperation;
 
 // Class PCGExtendedToolkit.PCGExSubPointsBlendInheritEnd
 // 0x0000 (0x0140 - 0x0140)
@@ -7667,7 +7390,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSubPointsBlendInheritEnd>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSubPointsBlendInheritEnd;
 
 // Class PCGExtendedToolkit.PCGExMovingAverageSmoothing
 // 0x0000 (0x00A8 - 0x00A8)
@@ -7687,7 +7409,6 @@ public:
 		return GetDefaultObjImpl<UPCGExMovingAverageSmoothing>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExMovingAverageSmoothing;
 
 // Class PCGExtendedToolkit.PCGExTensorDotFilterProviderSettings
 // 0x00F8 (0x01C0 - 0x00C8)
@@ -7710,7 +7431,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorDotFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorDotFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExNeighborSamplerFactoryData
 // 0x0110 (0x02D0 - 0x01C0)
@@ -7737,7 +7457,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNeighborSamplerFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNeighborSamplerFactoryData;
 
 // Class PCGExtendedToolkit.PCGExNeighborSamplerFactoryAttribute
 // 0x0010 (0x02E0 - 0x02D0)
@@ -7760,7 +7479,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNeighborSamplerFactoryAttribute>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNeighborSamplerFactoryAttribute;
 
 // Class PCGExtendedToolkit.PCGExUnpackClustersSettings
 // 0x0008 (0x00F0 - 0x00E8)
@@ -7784,7 +7502,6 @@ public:
 		return GetDefaultObjImpl<UPCGExUnpackClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExUnpackClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExNeighborSampleProviderSettings
 // 0x00E8 (0x01A8 - 0x00C0)
@@ -7809,7 +7526,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNeighborSampleProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNeighborSampleProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExNeighborSampleAttributeSettings
 // 0x0018 (0x01C0 - 0x01A8)
@@ -7832,7 +7548,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNeighborSampleAttributeSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNeighborSampleAttributeSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorFlowSettings
 // 0x0418 (0x04E0 - 0x00C8)
@@ -7855,7 +7570,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorFlowSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorFlowSettings;
 
 // Class PCGExtendedToolkit.PCGExNeighborSamplerFactoryFilters
 // 0x0040 (0x0310 - 0x02D0)
@@ -7878,7 +7592,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNeighborSamplerFactoryFilters>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNeighborSamplerFactoryFilters;
 
 // Class PCGExtendedToolkit.PCGExNeighborSampleFiltersSettings
 // 0x0048 (0x01F0 - 0x01A8)
@@ -7901,7 +7614,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNeighborSampleFiltersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNeighborSampleFiltersSettings;
 
 // Class PCGExtendedToolkit.PCGExTagValueFilterProviderSettings
 // 0x0048 (0x0110 - 0x00C8)
@@ -7924,7 +7636,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTagValueFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTagValueFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExNeighborSamplerFactoryProperties
 // 0x0010 (0x02E0 - 0x02D0)
@@ -7947,7 +7658,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNeighborSamplerFactoryProperties>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNeighborSamplerFactoryProperties;
 
 // Class PCGExtendedToolkit.PCGExNeighborSamplePropertiesSettings
 // 0x0010 (0x01B8 - 0x01A8)
@@ -7971,7 +7681,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNeighborSamplePropertiesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNeighborSamplePropertiesSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorInertiaConstantSettings
 // 0x0440 (0x0508 - 0x00C8)
@@ -8001,7 +7710,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorInertiaConstantSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorInertiaConstantSettings;
 
 // Class PCGExtendedToolkit.PCGExNodeAdjacencyFilterFactory
 // 0x00D0 (0x0290 - 0x01C0)
@@ -8024,7 +7732,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNodeAdjacencyFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNodeAdjacencyFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExNodeAdjacencyFilterProviderSettings
 // 0x00D0 (0x0198 - 0x00C8)
@@ -8047,7 +7754,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNodeAdjacencyFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNodeAdjacencyFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExSubdivideSettings
 // 0x0070 (0x0190 - 0x0120)
@@ -8086,7 +7792,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSubdivideSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSubdivideSettings;
 
 // Class PCGExtendedToolkit.PCGExNodeEdgeAngleFilterFactory
 // 0x0080 (0x0240 - 0x01C0)
@@ -8110,7 +7815,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNodeEdgeAngleFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNodeEdgeAngleFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExNodeEdgeAngleFilterProviderSettings
 // 0x0078 (0x0140 - 0x00C8)
@@ -8133,7 +7837,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNodeEdgeAngleFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNodeEdgeAngleFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExNodeEdgeDirectionFilterFactory
 // 0x0170 (0x0330 - 0x01C0)
@@ -8157,7 +7860,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNodeEdgeDirectionFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNodeEdgeDirectionFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExNodeEdgeDirectionFilterProviderSettings
 // 0x0168 (0x0230 - 0x00C8)
@@ -8180,7 +7882,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNodeEdgeDirectionFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNodeEdgeDirectionFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExNodeNeighborsCountFilterFactory
 // 0x0040 (0x0200 - 0x01C0)
@@ -8203,7 +7904,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNodeNeighborsCountFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNodeNeighborsCountFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExNodeNeighborsCountFilterProviderSettings
 // 0x0040 (0x0108 - 0x00C8)
@@ -8226,7 +7926,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNodeNeighborsCountFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNodeNeighborsCountFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExNumericCompareFilterFactory
 // 0x0070 (0x0230 - 0x01C0)
@@ -8250,7 +7949,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNumericCompareFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNumericCompareFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExNumericCompareFilterProviderSettings
 // 0x0068 (0x0130 - 0x00C8)
@@ -8273,7 +7971,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNumericCompareFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNumericCompareFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExSubSystem
 // 0x00A0 (0x00E0 - 0x0040)
@@ -8301,7 +7998,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSubSystem>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSubSystem;
 
 // Class PCGExtendedToolkit.PCGExNumericCompareNearestFilterFactory
 // 0x0080 (0x0240 - 0x01C0)
@@ -8325,7 +8021,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNumericCompareNearestFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNumericCompareNearestFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExNumericCompareNearestFilterProviderSettings
 // 0x0070 (0x0138 - 0x00C8)
@@ -8348,7 +8043,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNumericCompareNearestFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNumericCompareNearestFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExNumericSelfCompareFilterFactory
 // 0x0070 (0x0230 - 0x01C0)
@@ -8371,7 +8065,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNumericSelfCompareFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNumericSelfCompareFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExNumericSelfCompareFilterProviderSettings
 // 0x0070 (0x0138 - 0x00C8)
@@ -8394,7 +8087,6 @@ public:
 		return GetDefaultObjImpl<UPCGExNumericSelfCompareFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExNumericSelfCompareFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorNullSettings
 // 0x03E0 (0x04A8 - 0x00C8)
@@ -8417,7 +8109,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorNullSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorNullSettings;
 
 // Class PCGExtendedToolkit.PCGExOffsetPathSettings
 // 0x00C0 (0x01E0 - 0x0120)
@@ -8465,7 +8156,6 @@ public:
 		return GetDefaultObjImpl<UPCGExOffsetPathSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExOffsetPathSettings;
 
 // Class PCGExtendedToolkit.PCGExOrientSettings
 // 0x0028 (0x0148 - 0x0120)
@@ -8498,7 +8188,6 @@ public:
 		return GetDefaultObjImpl<UPCGExOrientSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExOrientSettings;
 
 // Class PCGExtendedToolkit.PCGExOrientOperation
 // 0x0018 (0x00C0 - 0x00A8)
@@ -8521,7 +8210,6 @@ public:
 		return GetDefaultObjImpl<UPCGExOrientOperation>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExOrientOperation;
 
 // Class PCGExtendedToolkit.PCGExOrientAverage
 // 0x0000 (0x00C0 - 0x00C0)
@@ -8541,7 +8229,6 @@ public:
 		return GetDefaultObjImpl<UPCGExOrientAverage>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExOrientAverage;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorConstantSettings
 // 0x0430 (0x04F8 - 0x00C8)
@@ -8568,7 +8255,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorConstantSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorConstantSettings;
 
 // Class PCGExtendedToolkit.PCGExOrientLookAt
 // 0x0040 (0x0100 - 0x00C0)
@@ -8594,7 +8280,6 @@ public:
 		return GetDefaultObjImpl<UPCGExOrientLookAt>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExOrientLookAt;
 
 // Class PCGExtendedToolkit.PCGExOrientWeighted
 // 0x0008 (0x00C8 - 0x00C0)
@@ -8618,7 +8303,6 @@ public:
 		return GetDefaultObjImpl<UPCGExOrientWeighted>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExOrientWeighted;
 
 // Class PCGExtendedToolkit.PCGExTensorsTransformSettings
 // 0x00A8 (0x0190 - 0x00E8)
@@ -8663,7 +8347,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorsTransformSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorsTransformSettings;
 
 // Class PCGExtendedToolkit.PCGExCustomActorDataPacker
 // 0x00F0 (0x0198 - 0x00A8)
@@ -8740,7 +8423,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCustomActorDataPacker>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCustomActorDataPacker;
 
 // Class PCGExtendedToolkit.PCGExPackActorDataSettings
 // 0x0018 (0x0100 - 0x00E8)
@@ -8768,7 +8450,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPackActorDataSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPackActorDataSettings;
 
 // Class PCGExtendedToolkit.PCGExTensorPoleFactory
 // 0x03E0 (0x09A0 - 0x05C0)
@@ -8792,7 +8473,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorPoleFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorPoleFactory;
 
 // Class PCGExtendedToolkit.PCGExPackAttributesToPropertiesSettings
 // 0x0018 (0x0100 - 0x00E8)
@@ -8817,7 +8497,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPackAttributesToPropertiesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPackAttributesToPropertiesSettings;
 
 // Class PCGExtendedToolkit.PCGExPackClustersSettings
 // 0x00F0 (0x01E0 - 0x00F0)
@@ -8840,7 +8519,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPackClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPackClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExTopologyEdgesProcessorSettings
 // 0x0410 (0x0500 - 0x00F0)
@@ -8870,7 +8548,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTopologyEdgesProcessorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTopologyEdgesProcessorSettings;
 
 // Class PCGExtendedToolkit.PCGExPartitionByValuesSettings
 // 0x0010 (0x0108 - 0x00F8)
@@ -8893,7 +8570,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPartitionByValuesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPartitionByValuesSettings;
 
 // Class PCGExtendedToolkit.PCGExPartitionVerticesSettings
 // 0x0000 (0x00F0 - 0x00F0)
@@ -8913,7 +8589,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPartitionVerticesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPartitionVerticesSettings;
 
 // Class PCGExtendedToolkit.PCGExRefreshSeedSettings
 // 0x0008 (0x00F0 - 0x00E8)
@@ -8937,7 +8612,6 @@ public:
 		return GetDefaultObjImpl<UPCGExRefreshSeedSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExRefreshSeedSettings;
 
 // Class PCGExtendedToolkit.PCGExPathAlphaFilterFactory
 // 0x0090 (0x0250 - 0x01C0)
@@ -8961,7 +8635,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathAlphaFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathAlphaFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExPathAlphaFilterProviderSettings
 // 0x0068 (0x0130 - 0x00C8)
@@ -8984,7 +8657,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathAlphaFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathAlphaFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExUberFilterSettings
 // 0x0050 (0x0138 - 0x00E8)
@@ -9019,7 +8691,6 @@ public:
 		return GetDefaultObjImpl<UPCGExUberFilterSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExUberFilterSettings;
 
 // Class PCGExtendedToolkit.PCGExPathCrossingsSettings
 // 0x0268 (0x0388 - 0x0120)
@@ -9073,7 +8744,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathCrossingsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathCrossingsSettings;
 
 // Class PCGExtendedToolkit.PCGExPathfindingEdgesSettings
 // 0x0220 (0x0310 - 0x00F0)
@@ -9111,7 +8781,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathfindingEdgesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathfindingEdgesSettings;
 
 // Class PCGExtendedToolkit.PCGExTensorSplinePoleFactory
 // 0x03F0 (0x09E0 - 0x05F0)
@@ -9134,7 +8803,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorSplinePoleFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorSplinePoleFactory;
 
 // Class PCGExtendedToolkit.PCGExFindAllCellsSettings
 // 0x0240 (0x0330 - 0x00F0)
@@ -9162,7 +8830,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFindAllCellsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFindAllCellsSettings;
 
 // Class PCGExtendedToolkit.PCGExFindContoursSettings
 // 0x0330 (0x0420 - 0x00F0)
@@ -9195,7 +8862,6 @@ public:
 		return GetDefaultObjImpl<UPCGExFindContoursSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExFindContoursSettings;
 
 // Class PCGExtendedToolkit.PCGExVtxPropertyAmplitudeFactory
 // 0x0070 (0x0230 - 0x01C0)
@@ -9218,7 +8884,6 @@ public:
 		return GetDefaultObjImpl<UPCGExVtxPropertyAmplitudeFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExVtxPropertyAmplitudeFactory;
 
 // Class PCGExtendedToolkit.PCGExPathfindingGrowPathsSettings
 // 0x0260 (0x0350 - 0x00F0)
@@ -9276,7 +8941,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathfindingGrowPathsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathfindingGrowPathsSettings;
 
 // Class PCGExtendedToolkit.PCGExPathfindingNavmeshSettings
 // 0x0210 (0x02F8 - 0x00E8)
@@ -9312,7 +8976,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathfindingNavmeshSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathfindingNavmeshSettings;
 
 // Class PCGExtendedToolkit.PCGExTensorSplineFactoryProviderSettings
 // 0x0000 (0x00C8 - 0x00C8)
@@ -9332,7 +8995,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorSplineFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorSplineFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExPathfindingPlotEdgesSettings
 // 0x0090 (0x0180 - 0x00F0)
@@ -9373,7 +9035,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathfindingPlotEdgesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathfindingPlotEdgesSettings;
 
 // Class PCGExtendedToolkit.PCGExPathfindingPlotNavmeshSettings
 // 0x0060 (0x0148 - 0x00E8)
@@ -9408,7 +9069,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathfindingPlotNavmeshSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathfindingPlotNavmeshSettings;
 
 // Class PCGExtendedToolkit.PCGExStringSelfCompareFilterFactory
 // 0x0040 (0x0200 - 0x01C0)
@@ -9431,7 +9091,6 @@ public:
 		return GetDefaultObjImpl<UPCGExStringSelfCompareFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExStringSelfCompareFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExPathInclusionFilterFactory
 // 0x0060 (0x0220 - 0x01C0)
@@ -9455,7 +9114,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathInclusionFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathInclusionFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExPathInclusionFilterProviderSettings
 // 0x0050 (0x0118 - 0x00C8)
@@ -9478,7 +9136,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathInclusionFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathInclusionFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExEventObserver
 // 0x0060 (0x0088 - 0x0028)
@@ -9504,7 +9161,6 @@ public:
 		return GetDefaultObjImpl<UPCGExEventObserver>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExEventObserver;
 
 // Class PCGExtendedToolkit.PCGExPathSolidifySettings
 // 0x00E0 (0x0200 - 0x0120)
@@ -9547,7 +9203,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathSolidifySettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathSolidifySettings;
 
 // Class PCGExtendedToolkit.PCGExPathSplineMeshSettings
 // 0x06C8 (0x07E8 - 0x0120)
@@ -9599,7 +9254,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathSplineMeshSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathSplineMeshSettings;
 
 // Class PCGExtendedToolkit.PCGExPathSplineMeshSimpleSettings
 // 0x03D0 (0x04F0 - 0x0120)
@@ -9650,7 +9304,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathSplineMeshSimpleSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathSplineMeshSimpleSettings;
 
 // Class PCGExtendedToolkit.PCGExPathToClustersSettings
 // 0x0538 (0x0658 - 0x0120)
@@ -9691,7 +9344,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPathToClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPathToClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExTensorSamplerSixPoints
 // 0x0090 (0x0140 - 0x00B0)
@@ -9714,7 +9366,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorSamplerSixPoints>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorSamplerSixPoints;
 
 // Class PCGExtendedToolkit.PCGExPickClosestClustersSettings
 // 0x0100 (0x01F0 - 0x00F0)
@@ -9748,7 +9399,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPickClosestClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPickClosestClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExPickerFactoryData
 // 0x0030 (0x01F0 - 0x01C0)
@@ -9775,7 +9425,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UPCGExPickerFactoryData;
 
 // Class PCGExtendedToolkit.PCGExSubPointsBlendInterpolate
 // 0x0010 (0x0150 - 0x0140)
@@ -9800,7 +9449,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSubPointsBlendInterpolate>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSubPointsBlendInterpolate;
 
 // Class PCGExtendedToolkit.PCGExPickerConstantFactory
 // 0x0020 (0x0210 - 0x01F0)
@@ -9824,7 +9472,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPickerConstantFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPickerConstantFactory;
 
 // Class PCGExtendedToolkit.PCGExPickerFactoryProviderSettings
 // 0x0000 (0x00C0 - 0x00C0)
@@ -9844,7 +9491,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPickerFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPickerFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExVtxPropertyProviderSettings
 // 0x0000 (0x00C0 - 0x00C0)
@@ -9864,7 +9510,6 @@ public:
 		return GetDefaultObjImpl<UPCGExVtxPropertyProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExVtxPropertyProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExVtxPropertyAmplitudeSettings
 // 0x0078 (0x0138 - 0x00C0)
@@ -9887,7 +9532,6 @@ public:
 		return GetDefaultObjImpl<UPCGExVtxPropertyAmplitudeSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExVtxPropertyAmplitudeSettings;
 
 // Class PCGExtendedToolkit.PCGExPickerConstantSettings
 // 0x0020 (0x00E0 - 0x00C0)
@@ -9910,7 +9554,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPickerConstantSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPickerConstantSettings;
 
 // Class PCGExtendedToolkit.PCGExPickerConstantRangeFactory
 // 0x0030 (0x0220 - 0x01F0)
@@ -9934,7 +9577,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPickerConstantRangeFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPickerConstantRangeFactory;
 
 // Class PCGExtendedToolkit.PCGExTagCheckFilterProviderSettings
 // 0x0018 (0x00E0 - 0x00C8)
@@ -9957,7 +9599,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTagCheckFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTagCheckFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExPickerConstantRangeSettings
 // 0x0030 (0x00F0 - 0x00C0)
@@ -9980,7 +9621,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPickerConstantRangeSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPickerConstantRangeSettings;
 
 // Class PCGExtendedToolkit.PCGExPickerConstantSetFactory
 // 0x0020 (0x0210 - 0x01F0)
@@ -10004,7 +9644,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPickerConstantSetFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPickerConstantSetFactory;
 
 // Class PCGExtendedToolkit.PCGExTexParamProviderSettings
 // 0x0050 (0x0110 - 0x00C0)
@@ -10027,7 +9666,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTexParamProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTexParamProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExPickerConstantSetSettings
 // 0x0020 (0x00E0 - 0x00C0)
@@ -10050,7 +9688,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPickerConstantSetSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPickerConstantSetSettings;
 
 // Class PCGExtendedToolkit.PCGExPickerFilterFactory
 // 0x0020 (0x01E0 - 0x01C0)
@@ -10076,7 +9713,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPickerFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPickerFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExPickerFilterProviderSettings
 // 0x0008 (0x00D0 - 0x00C8)
@@ -10100,7 +9736,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPickerFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPickerFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExPointStateFactoryData
 // 0x0010 (0x01D0 - 0x01C0)
@@ -10123,7 +9758,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPointStateFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPointStateFactoryData;
 
 // Class PCGExtendedToolkit.PCGExPointsToBoundsSettings
 // 0x0098 (0x0180 - 0x00E8)
@@ -10154,7 +9788,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPointsToBoundsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPointsToBoundsSettings;
 
 // Class PCGExtendedToolkit.PCGExPolygonInclusionFilterProviderSettings
 // 0x0018 (0x00E0 - 0x00C8)
@@ -10178,7 +9811,6 @@ public:
 		return GetDefaultObjImpl<UPCGExPolygonInclusionFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExPolygonInclusionFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExProbeFactoryAnisotropic
 // 0x0040 (0x0200 - 0x01C0)
@@ -10201,7 +9833,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeFactoryAnisotropic>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeFactoryAnisotropic;
 
 // Class PCGExtendedToolkit.PCGExProbeAnisotropicProviderSettings
 // 0x0048 (0x0108 - 0x00C0)
@@ -10224,7 +9855,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeAnisotropicProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeAnisotropicProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExProbeClosestProviderSettings
 // 0x0078 (0x0138 - 0x00C0)
@@ -10247,7 +9877,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeClosestProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeClosestProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExProbeDirectionProviderSettings
 // 0x00B0 (0x0170 - 0x00C0)
@@ -10270,7 +9899,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeDirectionProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeDirectionProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExProbeIndexProviderSettings
 // 0x0070 (0x0130 - 0x00C0)
@@ -10293,7 +9921,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeIndexProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeIndexProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExProbeNumericCompareProviderSettings
 // 0x0080 (0x0140 - 0x00C0)
@@ -10316,7 +9943,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeNumericCompareProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeNumericCompareProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExProbeTensorProviderSettings
 // 0x00C8 (0x0188 - 0x00C0)
@@ -10339,7 +9965,6 @@ public:
 		return GetDefaultObjImpl<UPCGExProbeTensorProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExProbeTensorProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExRadiusFittingRelax
 // 0x0038 (0x0190 - 0x0158)
@@ -10363,7 +9988,6 @@ public:
 		return GetDefaultObjImpl<UPCGExRadiusFittingRelax>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExRadiusFittingRelax;
 
 // Class PCGExtendedToolkit.PCGExRandomFilterFactory
 // 0x0130 (0x02F0 - 0x01C0)
@@ -10386,7 +10010,6 @@ public:
 		return GetDefaultObjImpl<UPCGExRandomFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExRandomFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExRefineEdgesSettings
 // 0x0060 (0x0150 - 0x00F0)
@@ -10415,7 +10038,6 @@ public:
 		return GetDefaultObjImpl<UPCGExRefineEdgesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExRefineEdgesSettings;
 
 // Class PCGExtendedToolkit.PCGExRelaxClustersSettings
 // 0x0088 (0x0178 - 0x00F0)
@@ -10451,7 +10073,6 @@ public:
 		return GetDefaultObjImpl<UPCGExRelaxClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExRelaxClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExReversePointOrderSettings
 // 0x00E8 (0x01D0 - 0x00E8)
@@ -10485,7 +10106,6 @@ public:
 		return GetDefaultObjImpl<UPCGExReversePointOrderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExReversePointOrderSettings;
 
 // Class PCGExtendedToolkit.PCGExSampleNearestBoundsSettings
 // 0x0268 (0x0350 - 0x00E8)
@@ -10570,7 +10190,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSampleNearestBoundsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSampleNearestBoundsSettings;
 
 // Class PCGExtendedToolkit.PCGExSampleNearestSplineSettings
 // 0x0308 (0x03F0 - 0x00E8)
@@ -10692,7 +10311,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSampleNearestSplineSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSampleNearestSplineSettings;
 
 // Class PCGExtendedToolkit.PCGExSampleNeighborsSettings
 // 0x0000 (0x00F0 - 0x00F0)
@@ -10712,7 +10330,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSampleNeighborsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSampleNeighborsSettings;
 
 // Class PCGExtendedToolkit.PCGExSampleSurfaceGuidedSettings
 // 0x0268 (0x0350 - 0x00E8)
@@ -10800,7 +10417,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSampleSurfaceGuidedSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSampleSurfaceGuidedSettings;
 
 // Class PCGExtendedToolkit.PCGExSampleTextureSettings
 // 0x0060 (0x0148 - 0x00E8)
@@ -10833,7 +10449,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSampleTextureSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSampleTextureSettings;
 
 // Class PCGExtendedToolkit.PCGExSearchDijkstra
 // 0x0000 (0x00B8 - 0x00B8)
@@ -10853,7 +10468,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSearchDijkstra>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSearchDijkstra;
 
 // Class PCGExtendedToolkit.PCGExShapeBuilderFactoryProviderSettings
 // 0x0000 (0x00C0 - 0x00C0)
@@ -10873,7 +10487,6 @@ public:
 		return GetDefaultObjImpl<UPCGExShapeBuilderFactoryProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExShapeBuilderFactoryProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateShapeCircleSettings
 // 0x0410 (0x04D0 - 0x00C0)
@@ -10896,7 +10509,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateShapeCircleSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateShapeCircleSettings;
 
 // Class PCGExtendedToolkit.PCGExShiftPathSettings
 // 0x0020 (0x0140 - 0x0120)
@@ -10928,7 +10540,6 @@ public:
 		return GetDefaultObjImpl<UPCGExShiftPathSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExShiftPathSettings;
 
 // Class PCGExtendedToolkit.PCGExSimplifyClustersSettings
 // 0x01F0 (0x02E0 - 0x00F0)
@@ -10961,7 +10572,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSimplifyClustersSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSimplifyClustersSettings;
 
 // Class PCGExtendedToolkit.PCGExSortingRule
 // 0x0060 (0x0220 - 0x01C0)
@@ -10984,7 +10594,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSortingRule>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSortingRule;
 
 // Class PCGExtendedToolkit.PCGExSortPointsSettings
 // 0x0010 (0x0100 - 0x00F0)
@@ -11007,7 +10616,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSortPointsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSortPointsSettings;
 
 // Class PCGExtendedToolkit.PCGExSplineAlphaFilterProviderSettings
 // 0x0040 (0x0108 - 0x00C8)
@@ -11030,7 +10638,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSplineAlphaFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSplineAlphaFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExSplineInclusionFilterProviderSettings
 // 0x0028 (0x00F0 - 0x00C8)
@@ -11053,7 +10660,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSplineInclusionFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSplineInclusionFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExSplitPathSettings
 // 0x0088 (0x01A8 - 0x0120)
@@ -11088,7 +10694,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSplitPathSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSplitPathSettings;
 
 // Class PCGExtendedToolkit.PCGExStringCompareFilterProviderSettings
 // 0x0028 (0x00F0 - 0x00C8)
@@ -11111,7 +10716,6 @@ public:
 		return GetDefaultObjImpl<UPCGExStringCompareFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExStringCompareFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExStringSelfCompareFilterProviderSettings
 // 0x0040 (0x0108 - 0x00C8)
@@ -11134,7 +10738,6 @@ public:
 		return GetDefaultObjImpl<UPCGExStringSelfCompareFilterProviderSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExStringSelfCompareFilterProviderSettings;
 
 // Class PCGExtendedToolkit.PCGExSubdivideEdgesSettings
 // 0x00D0 (0x01C0 - 0x00F0)
@@ -11177,7 +10780,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSubdivideEdgesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSubdivideEdgesSettings;
 
 // Class PCGExtendedToolkit.PCGExSubPointsBlendInheritStart
 // 0x0000 (0x0140 - 0x0140)
@@ -11197,7 +10799,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSubPointsBlendInheritStart>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSubPointsBlendInheritStart;
 
 // Class PCGExtendedToolkit.PCGExSubPointsBlendNone
 // 0x0000 (0x0140 - 0x0140)
@@ -11217,7 +10818,6 @@ public:
 		return GetDefaultObjImpl<UPCGExSubPointsBlendNone>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExSubPointsBlendNone;
 
 // Class PCGExtendedToolkit.PCGExTagCheckFilterFactory
 // 0x0020 (0x01E0 - 0x01C0)
@@ -11241,7 +10841,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTagCheckFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTagCheckFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExTagValueFilterFactory
 // 0x0050 (0x0210 - 0x01C0)
@@ -11265,7 +10864,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTagValueFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTagValueFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExTensorInertiaFactory
 // 0x03E0 (0x09A0 - 0x05C0)
@@ -11288,7 +10886,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorInertiaFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorInertiaFactory;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorInertiaSettings
 // 0x03E8 (0x04B0 - 0x00C8)
@@ -11311,7 +10908,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorInertiaSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorInertiaSettings;
 
 // Class PCGExtendedToolkit.PCGExTensorNullFactory
 // 0x03E0 (0x09A0 - 0x05C0)
@@ -11334,7 +10930,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorNullFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorNullFactory;
 
 // Class PCGExtendedToolkit.PCGExTensorPathFlowFactory
 // 0x0420 (0x0E10 - 0x09F0)
@@ -11357,7 +10952,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorPathFlowFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorPathFlowFactory;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorPathFlowSettings
 // 0x0420 (0x04E8 - 0x00C8)
@@ -11380,7 +10974,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorPathFlowSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorPathFlowSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorPathPoleSettings
 // 0x0418 (0x04E0 - 0x00C8)
@@ -11403,7 +10996,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorPathPoleSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorPathPoleSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorPoleSettings
 // 0x03E0 (0x04A8 - 0x00C8)
@@ -11426,7 +11018,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorPoleSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorPoleSettings;
 
 // Class PCGExtendedToolkit.PCGExTensorSamplerRK4
 // 0x0000 (0x00B0 - 0x00B0)
@@ -11446,7 +11037,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorSamplerRK4>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorSamplerRK4;
 
 // Class PCGExtendedToolkit.PCGExTensorSpinFactory
 // 0x0410 (0x09D0 - 0x05C0)
@@ -11469,7 +11059,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTensorSpinFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTensorSpinFactory;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorSplineFlowSettings
 // 0x03F8 (0x04C0 - 0x00C8)
@@ -11492,7 +11081,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorSplineFlowSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorSplineFlowSettings;
 
 // Class PCGExtendedToolkit.PCGExCreateTensorSplinePoleSettings
 // 0x03F0 (0x04B8 - 0x00C8)
@@ -11515,7 +11103,6 @@ public:
 		return GetDefaultObjImpl<UPCGExCreateTensorSplinePoleSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExCreateTensorSplinePoleSettings;
 
 // Class PCGExtendedToolkit.PCGExTexParamFactoryData
 // 0x0060 (0x0220 - 0x01C0)
@@ -11538,7 +11125,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTexParamFactoryData>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTexParamFactoryData;
 
 // Class PCGExtendedToolkit.PCGExToggleTopologySettings
 // 0x0038 (0x00F0 - 0x00B8)
@@ -11567,7 +11153,6 @@ public:
 		return GetDefaultObjImpl<UPCGExToggleTopologySettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExToggleTopologySettings;
 
 // Class PCGExtendedToolkit.PCGExTopologyClusterSurfaceSettings
 // 0x0000 (0x0500 - 0x0500)
@@ -11587,7 +11172,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTopologyClusterSurfaceSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTopologyClusterSurfaceSettings;
 
 // Class PCGExtendedToolkit.PCGExTrackerComponent
 // 0x00C0 (0x0190 - 0x00D0)
@@ -11616,7 +11200,6 @@ public:
 		return GetDefaultObjImpl<UPCGExTrackerComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExTrackerComponent;
 
 // Class PCGExtendedToolkit.PCGExUberFilterCollectionsSettings
 // 0x0028 (0x0110 - 0x00E8)
@@ -11648,7 +11231,6 @@ public:
 		return GetDefaultObjImpl<UPCGExUberFilterCollectionsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExUberFilterCollectionsSettings;
 
 // Class PCGExtendedToolkit.PCGExVtxPropertyEdgeMatchSettings
 // 0x0160 (0x0220 - 0x00C0)
@@ -11671,7 +11253,6 @@ public:
 		return GetDefaultObjImpl<UPCGExVtxPropertyEdgeMatchSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExVtxPropertyEdgeMatchSettings;
 
 // Class PCGExtendedToolkit.PCGExVtxPropertySpecialEdgesSettings
 // 0x0198 (0x0258 - 0x00C0)
@@ -11694,7 +11275,6 @@ public:
 		return GetDefaultObjImpl<UPCGExVtxPropertySpecialEdgesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExVtxPropertySpecialEdgesSettings;
 
 // Class PCGExtendedToolkit.PCGExVtxPropertySpecialNeighborsSettings
 // 0x0150 (0x0210 - 0x00C0)
@@ -11717,7 +11297,6 @@ public:
 		return GetDefaultObjImpl<UPCGExVtxPropertySpecialNeighborsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExVtxPropertySpecialNeighborsSettings;
 
 // Class PCGExtendedToolkit.PCGExWithinRangeFilterFactory
 // 0x0040 (0x0200 - 0x01C0)
@@ -11740,7 +11319,6 @@ public:
 		return GetDefaultObjImpl<UPCGExWithinRangeFilterFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExWithinRangeFilterFactory;
 
 // Class PCGExtendedToolkit.PCGExWriteEdgePropertiesSettings
 // 0x01F8 (0x02E8 - 0x00F0)
@@ -11803,7 +11381,6 @@ public:
 		return GetDefaultObjImpl<UPCGExWriteEdgePropertiesSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExWriteEdgePropertiesSettings;
 
 // Class PCGExtendedToolkit.PCGExWriteIndexSettings
 // 0x0030 (0x0118 - 0x00E8)
@@ -11844,7 +11421,6 @@ public:
 		return GetDefaultObjImpl<UPCGExWriteIndexSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExWriteIndexSettings;
 
 // Class PCGExtendedToolkit.PCGExWriteTangentsSettings
 // 0x0098 (0x01B8 - 0x0120)
@@ -11879,7 +11455,6 @@ public:
 		return GetDefaultObjImpl<UPCGExWriteTangentsSettings>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExWriteTangentsSettings;
 
 // Class PCGExtendedToolkit.PCGExZeroTangents
 // 0x0000 (0x00B0 - 0x00B0)
@@ -11899,6 +11474,5 @@ public:
 		return GetDefaultObjImpl<UPCGExZeroTangents>();
 	}
 };
-DUMPER7_ASSERTS_UPCGExZeroTangents;
 
 SDK_NAMESPACE_END

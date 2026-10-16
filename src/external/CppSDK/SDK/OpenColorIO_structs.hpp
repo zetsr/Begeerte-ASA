@@ -32,7 +32,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 FamilyName;                                        // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOpenColorIOColorSpace;
 
 // ScriptStruct OpenColorIO.OpenColorIODisplayView
 // 0x0020 (0x0020 - 0x0000)
@@ -42,7 +41,6 @@ public:
 	class FString                                 Display;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 View;                                              // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOpenColorIODisplayView;
 
 // ScriptStruct OpenColorIO.OpenColorIOColorConversionSettings
 // 0x0080 (0x0080 - 0x0000)
@@ -56,7 +54,6 @@ public:
 	EOpenColorIOViewTransformDirection            DisplayViewDirection;                              // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FOpenColorIOColorConversionSettings;
 
 // ScriptStruct OpenColorIO.OpenColorIODisplayConfiguration
 // 0x0088 (0x0088 - 0x0000)
@@ -67,6 +64,5 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOpenColorIOColorConversionSettings    ColorConfiguration;                                // 0x0008(0x0080)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOpenColorIODisplayConfiguration;
 
 SDK_NAMESPACE_END

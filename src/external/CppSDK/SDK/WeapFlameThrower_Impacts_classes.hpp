@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<AWeapFlameThrower_Impacts_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapFlameThrower_Impacts_C;
 
 SDK_NAMESPACE_END

@@ -41,7 +41,6 @@ public:
 		return GetDefaultObjImpl<UMassDistanceLODProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassDistanceLODProcessor;
 
 // Class MassRepresentation.MassDistanceVisualizationTrait
 // 0x00F8 (0x0120 - 0x0028)
@@ -72,7 +71,6 @@ public:
 		return GetDefaultObjImpl<UMassDistanceVisualizationTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassDistanceVisualizationTrait;
 
 // Class MassRepresentation.MassVisualizationTrait
 // 0x0118 (0x0140 - 0x0028)
@@ -103,7 +101,6 @@ public:
 		return GetDefaultObjImpl<UMassVisualizationTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassVisualizationTrait;
 
 // Class MassRepresentation.MassMovableVisualizationTrait
 // 0x0000 (0x0140 - 0x0140)
@@ -123,7 +120,6 @@ public:
 		return GetDefaultObjImpl<UMassMovableVisualizationTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassMovableVisualizationTrait;
 
 // Class MassRepresentation.MassRepresentationActorManagement
 // 0x0000 (0x0028 - 0x0028)
@@ -143,7 +139,6 @@ public:
 		return GetDefaultObjImpl<UMassRepresentationActorManagement>();
 	}
 };
-DUMPER7_ASSERTS_UMassRepresentationActorManagement;
 
 // Class MassRepresentation.MassRepresentationProcessor
 // 0x0330 (0x03E0 - 0x00B0)
@@ -168,7 +163,6 @@ public:
 		return GetDefaultObjImpl<UMassRepresentationProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassRepresentationProcessor;
 
 // Class MassRepresentation.MassVisualizationProcessor
 // 0x0000 (0x03E0 - 0x03E0)
@@ -188,7 +182,6 @@ public:
 		return GetDefaultObjImpl<UMassVisualizationProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassVisualizationProcessor;
 
 // Class MassRepresentation.MassRepresentationFragmentDestructor
 // 0x0328 (0x03F0 - 0x00C8)
@@ -211,7 +204,6 @@ public:
 		return GetDefaultObjImpl<UMassRepresentationFragmentDestructor>();
 	}
 };
-DUMPER7_ASSERTS_UMassRepresentationFragmentDestructor;
 
 // Class MassRepresentation.MassRepresentationSubsystem
 // 0x00C0 (0x00F8 - 0x0038)
@@ -240,7 +232,6 @@ public:
 		return GetDefaultObjImpl<UMassRepresentationSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassRepresentationSubsystem;
 
 // Class MassRepresentation.MassStationaryDistanceVisualizationTrait
 // 0x0000 (0x0120 - 0x0120)
@@ -260,7 +251,6 @@ public:
 		return GetDefaultObjImpl<UMassStationaryDistanceVisualizationTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassStationaryDistanceVisualizationTrait;
 
 // Class MassRepresentation.MassStationaryISMRepresentationFragmentDestructor
 // 0x0328 (0x03F0 - 0x00C8)
@@ -283,7 +273,6 @@ public:
 		return GetDefaultObjImpl<UMassStationaryISMRepresentationFragmentDestructor>();
 	}
 };
-DUMPER7_ASSERTS_UMassStationaryISMRepresentationFragmentDestructor;
 
 // Class MassRepresentation.MassStationaryISMSwitcherProcessor
 // 0x0320 (0x03D0 - 0x00B0)
@@ -306,7 +295,6 @@ public:
 		return GetDefaultObjImpl<UMassStationaryISMSwitcherProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassStationaryISMSwitcherProcessor;
 
 // Class MassRepresentation.MassStationaryVisualizationTrait
 // 0x0000 (0x0140 - 0x0140)
@@ -326,7 +314,6 @@ public:
 		return GetDefaultObjImpl<UMassStationaryVisualizationTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassStationaryVisualizationTrait;
 
 // Class MassRepresentation.MassUpdateISMProcessor
 // 0x0320 (0x03D0 - 0x00B0)
@@ -349,7 +336,6 @@ public:
 		return GetDefaultObjImpl<UMassUpdateISMProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassUpdateISMProcessor;
 
 // Class MassRepresentation.MassVisualizationComponent
 // 0x0160 (0x0230 - 0x00D0)
@@ -373,7 +359,6 @@ public:
 		return GetDefaultObjImpl<UMassVisualizationComponent>();
 	}
 };
-DUMPER7_ASSERTS_UMassVisualizationComponent;
 
 // Class MassRepresentation.MassVisualizationLODProcessor
 // 0x0CA0 (0x0D50 - 0x00B0)
@@ -399,7 +384,6 @@ public:
 		return GetDefaultObjImpl<UMassVisualizationLODProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassVisualizationLODProcessor;
 
 // Class MassRepresentation.MassVisualizer
 // 0x0008 (0x0498 - 0x0490)
@@ -422,6 +406,5 @@ public:
 		return GetDefaultObjImpl<AMassVisualizer>();
 	}
 };
-DUMPER7_ASSERTS_AMassVisualizer;
 
 SDK_NAMESPACE_END

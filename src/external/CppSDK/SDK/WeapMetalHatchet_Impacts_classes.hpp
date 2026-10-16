@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<AWeapMetalHatchet_Impacts_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapMetalHatchet_Impacts_C;
 
 SDK_NAMESPACE_END

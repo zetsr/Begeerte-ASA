@@ -50,6 +50,5 @@ public:
 		return GetDefaultObjImpl<UHuman_Male_Face_Retargeting_AnimBP_C>();
 	}
 };
-DUMPER7_ASSERTS_UHuman_Male_Face_Retargeting_AnimBP_C;
 
 SDK_NAMESPACE_END

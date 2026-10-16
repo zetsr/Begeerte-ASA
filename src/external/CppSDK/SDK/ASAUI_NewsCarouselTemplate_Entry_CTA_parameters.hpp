@@ -21,7 +21,6 @@ struct ASAUI_NewsCarouselTemplate_Entry_CTA_C_BlueprintInit final
 public:
 	class FString                                 RawExtraData;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTA_C_BlueprintInit;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTA.ASAUI_NewsCarouselTemplate_Entry_CTA_C.EntryFocusEnd
 // 0x0001 (0x0001 - 0x0000)
@@ -30,7 +29,6 @@ struct ASAUI_NewsCarouselTemplate_Entry_CTA_C_EntryFocusEnd final
 public:
 	bool                                          bInstigatedByAutoRollover;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTA_C_EntryFocusEnd;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTA.ASAUI_NewsCarouselTemplate_Entry_CTA_C.EntryFocusStart
 // 0x0001 (0x0001 - 0x0000)
@@ -39,7 +37,6 @@ struct ASAUI_NewsCarouselTemplate_Entry_CTA_C_EntryFocusStart final
 public:
 	bool                                          bInstigatedByAutoRollover;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTA_C_EntryFocusStart;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTA.ASAUI_NewsCarouselTemplate_Entry_CTA_C.EntryFocusTick
 // 0x0008 (0x0008 - 0x0000)
@@ -49,7 +46,6 @@ public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIsHighlighted;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTA_C_EntryFocusTick;
 
 // Function ASAUI_NewsCarouselTemplate_Entry_CTA.ASAUI_NewsCarouselTemplate_Entry_CTA_C.ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTA
 // 0x0028 (0x0028 - 0x0000)
@@ -65,7 +61,6 @@ public:
 	float                                         K2Node_Event_DeltaTime;                            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bIsHighlighted;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUI_NewsCarouselTemplate_Entry_CTA_C_ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTA;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArtifact_Extinction_ForestKaiju_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemArtifact_Extinction_ForestKaiju_C;
 
 SDK_NAMESPACE_END

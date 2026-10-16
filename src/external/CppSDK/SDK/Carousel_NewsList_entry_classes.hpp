@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UCarousel_NewsList_entry_C>();
 	}
 };
-DUMPER7_ASSERTS_UCarousel_NewsList_entry_C;
 
 SDK_NAMESPACE_END

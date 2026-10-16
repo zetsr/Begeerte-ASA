@@ -21,7 +21,6 @@ struct AudioLinkBlueprintInterface_PlayLink final
 public:
 	float                                         StartTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioLinkBlueprintInterface_PlayLink;
 
 // Function AudioLinkEngine.AudioLinkBlueprintInterface.SetLinkSound
 // 0x0008 (0x0008 - 0x0000)
@@ -30,7 +29,6 @@ struct AudioLinkBlueprintInterface_SetLinkSound final
 public:
 	class USoundBase*                             NewSound;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioLinkBlueprintInterface_SetLinkSound;
 
 // Function AudioLinkEngine.AudioLinkBlueprintInterface.IsLinkPlaying
 // 0x0001 (0x0001 - 0x0000)
@@ -39,7 +37,6 @@ struct AudioLinkBlueprintInterface_IsLinkPlaying final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_AudioLinkBlueprintInterface_IsLinkPlaying;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

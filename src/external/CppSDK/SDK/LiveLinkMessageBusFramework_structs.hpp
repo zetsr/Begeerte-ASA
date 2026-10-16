@@ -24,7 +24,6 @@ public:
 	struct FGuid                                  PollRequest;                                       // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LiveLinkVersion;                                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLiveLinkPingMessage;
 
 // ScriptStruct LiveLinkMessageBusFramework.LiveLinkPongMessage
 // 0x0040 (0x0040 - 0x0000)
@@ -38,7 +37,6 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CreationPlatformTime;                              // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLiveLinkPongMessage;
 
 // ScriptStruct LiveLinkMessageBusFramework.LiveLinkConnectMessage
 // 0x0004 (0x0004 - 0x0000)
@@ -47,7 +45,6 @@ struct FLiveLinkConnectMessage final
 public:
 	int32                                         LiveLinkVersion;                                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLiveLinkConnectMessage;
 
 // ScriptStruct LiveLinkMessageBusFramework.LiveLinkHeartbeatMessage
 // 0x0001 (0x0001 - 0x0000)
@@ -56,7 +53,6 @@ struct FLiveLinkHeartbeatMessage final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLiveLinkHeartbeatMessage;
 
 // ScriptStruct LiveLinkMessageBusFramework.LiveLinkClearSubject
 // 0x0008 (0x0008 - 0x0000)
@@ -65,7 +61,6 @@ struct FLiveLinkClearSubject final
 public:
 	class FName                                   SubjectName;                                       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLiveLinkClearSubject;
 
 // ScriptStruct LiveLinkMessageBusFramework.LiveLinkSubjectDataMessage
 // 0x0028 (0x0028 - 0x0000)
@@ -75,7 +70,6 @@ public:
 	struct FLiveLinkRefSkeleton                   RefSkeleton;                                       // 0x0000(0x0020)(NativeAccessSpecifierPublic)
 	class FName                                   SubjectName;                                       // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLiveLinkSubjectDataMessage;
 
 // ScriptStruct LiveLinkMessageBusFramework.LiveLinkSubjectFrameMessage
 // 0x0090 (0x0090 - 0x0000)
@@ -88,6 +82,5 @@ public:
 	struct FLiveLinkMetaData                      MetaData;                                          // 0x0028(0x0060)(NativeAccessSpecifierPublic)
 	double                                        Time;                                              // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FLiveLinkSubjectFrameMessage;
 
 SDK_NAMESPACE_END

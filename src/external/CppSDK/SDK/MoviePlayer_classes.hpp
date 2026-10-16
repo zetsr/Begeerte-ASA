@@ -39,6 +39,5 @@ public:
 		return GetDefaultObjImpl<UMoviePlayerSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePlayerSettings;
 
 SDK_NAMESPACE_END

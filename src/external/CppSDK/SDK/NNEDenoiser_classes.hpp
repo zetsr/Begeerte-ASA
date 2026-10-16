@@ -41,7 +41,6 @@ public:
 		return GetDefaultObjImpl<UNNEDenoiserAsset>();
 	}
 };
-DUMPER7_ASSERTS_UNNEDenoiserAsset;
 
 // Class NNEDenoiser.NNEDenoiserTemporalAsset
 // 0x0088 (0x00B8 - 0x0030)
@@ -67,7 +66,6 @@ public:
 		return GetDefaultObjImpl<UNNEDenoiserTemporalAsset>();
 	}
 };
-DUMPER7_ASSERTS_UNNEDenoiserTemporalAsset;
 
 // Class NNEDenoiser.NNEDenoiserSettings
 // 0x0068 (0x00A0 - 0x0038)
@@ -94,6 +92,5 @@ public:
 		return GetDefaultObjImpl<UNNEDenoiserSettings>();
 	}
 };
-DUMPER7_ASSERTS_UNNEDenoiserSettings;
 
 SDK_NAMESPACE_END

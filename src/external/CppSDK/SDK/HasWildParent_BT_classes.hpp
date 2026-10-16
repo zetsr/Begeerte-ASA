@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UHasWildParent_BT_C>();
 	}
 };
-DUMPER7_ASSERTS_UHasWildParent_BT_C;
 
 SDK_NAMESPACE_END

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Buff_OverrideVelocity_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Buff_OverrideVelocity_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -132,6 +132,5 @@ public:
 		return GetDefaultObjImpl<ABuff_TekArmor_C>();
 	}
 };
-DUMPER7_ASSERTS_ABuff_TekArmor_C;
 
 SDK_NAMESPACE_END

@@ -27,7 +27,6 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UReMainMenuUI_ASA_C*                    CallFunc_Create_ReturnValue;                       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MainMenu_C_ExecuteUbergraph_MainMenu;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -23,6 +23,5 @@ public:
 	struct FWeaponAnim                            WeaponAnimMontageWeapFPVandPlayerTPV_3_E345A22A482C21885C5552A880D6082C; // 0x0000(0x0010)(Edit, BlueprintVisible, NoDestructor)
 	class UAnimMontage*                           Weapon3PAnimMontage_6_6173121A4C1DE5047A5B719782DF0195; // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FStruct_WeapAnimWith3P_V3;
 
 SDK_NAMESPACE_END

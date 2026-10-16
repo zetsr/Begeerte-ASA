@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<ADeathItemCache_PlayerDeath_C>();
 	}
 };
-DUMPER7_ASSERTS_ADeathItemCache_PlayerDeath_C;
 
 SDK_NAMESPACE_END

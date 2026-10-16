@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UStoneHarvestComponent_C>();
 	}
 };
-DUMPER7_ASSERTS_UStoneHarvestComponent_C;
 
 SDK_NAMESPACE_END

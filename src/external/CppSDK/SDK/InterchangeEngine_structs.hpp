@@ -39,7 +39,6 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         ExtraFormats;                                      // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangeFilePickerParameters;
 
 // ScriptStruct InterchangeEngine.InterchangeStackInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -49,7 +48,6 @@ public:
 	class FName                                   StackName;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UInterchangePipelineBase*>       Pipelines;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FInterchangeStackInfo;
 
 // ScriptStruct InterchangeEngine.InterchangeTranslatorPipelines
 // 0x0038 (0x0038 - 0x0000)
@@ -59,7 +57,6 @@ public:
 	TSoftClassPtr<class UClass>                   Translator;                                        // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FSoftObjectPath>                Pipelines;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangeTranslatorPipelines;
 
 // ScriptStruct InterchangeEngine.InterchangePipelineStack
 // 0x0020 (0x0020 - 0x0000)
@@ -69,7 +66,6 @@ public:
 	TArray<struct FSoftObjectPath>                Pipelines;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FInterchangeTranslatorPipelines> PerTranslatorPipelines;                           // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangePipelineStack;
 
 // ScriptStruct InterchangeEngine.InterchangeImportSettings
 // 0x0088 (0x0088 - 0x0000)
@@ -82,7 +78,6 @@ public:
 	bool                                          bShowImportDialog;                                 // 0x0080(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FInterchangeImportSettings;
 
 // ScriptStruct InterchangeEngine.InterchangePerTranslatorDialogOverride
 // 0x0030 (0x0030 - 0x0000)
@@ -93,7 +88,6 @@ public:
 	bool                                          bShowImportDialog;                                 // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FInterchangePerTranslatorDialogOverride;
 
 // ScriptStruct InterchangeEngine.InterchangeDialogOverride
 // 0x0018 (0x0018 - 0x0000)
@@ -104,7 +98,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FInterchangePerTranslatorDialogOverride> PerTranslatorImportDialogOverride;        // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangeDialogOverride;
 
 // ScriptStruct InterchangeEngine.InterchangeContentImportSettings
 // 0x00A0 (0x0128 - 0x0088)
@@ -114,7 +107,6 @@ public:
 	TMap<EInterchangeTranslatorAssetType, class FName> DefaultPipelineStackOverride;                 // 0x0088(0x0050)(Edit, NativeAccessSpecifierPublic)
 	TMap<EInterchangeTranslatorAssetType, struct FInterchangeDialogOverride> ShowImportDialogOverride; // 0x00D8(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangeContentImportSettings;
 
 // ScriptStruct InterchangeEngine.InterchangeGroup
 // 0x00C8 (0x00C8 - 0x0000)
@@ -129,7 +121,6 @@ public:
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<EInterchangeTranslatorAssetType, struct FInterchangeDialogOverride> ShowImportDialogOverride; // 0x0078(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangeGroup;
 
 // ScriptStruct InterchangeEngine.PropertyData
 // 0x0018 (0x0018 - 0x0000)
@@ -138,7 +129,6 @@ struct alignas(0x08) FPropertyData final
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPropertyData;
 
 // ScriptStruct InterchangeEngine.ImportAssetParameters
 // 0x00C8 (0x00C8 - 0x0000)
@@ -165,6 +155,5 @@ public:
 	TDelegate<void(const TArray<class UObject*>& Objects)> OnSceneImportDone;                        // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B0[0x18];                                      // 0x00B0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FImportAssetParameters;
 
 SDK_NAMESPACE_END

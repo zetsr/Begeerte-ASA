@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "STRUCT_CustomComboBoxOption_structs.hpp"
 #include "UMG_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "ENUM_CFCore_SideTabs_structs.hpp"
 #include "cfcore_structs.hpp"
 #include "cfcore_ui_structs.hpp"
-#include "STRUCT_CustomComboBoxOption_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ENUM_CFCore_TimeFilters_structs.hpp"
 #include "ENUM_CFCore_InputDevices_structs.hpp"
+#include "ENUM_CFCore_TimeFilters_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -117,7 +117,6 @@ public:
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0238(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_ExecuteUbergraph_UI_CFCore_ParentBrowser;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -127,7 +126,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_GetRootCFWidget;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.BPEscapeClosed
 // 0x0002 (0x0002 - 0x0000)
@@ -137,7 +135,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_BPEscapeClosed;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.EnableClassesDropdown
 // 0x0006 (0x0006 - 0x0000)
@@ -151,7 +148,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_EnableClassesDropdown;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.SetVisibilityOfUninstallAllMods
 // 0x0030 (0x0030 - 0x0000)
@@ -171,7 +167,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_SetVisibilityOfUninstallAllMods;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.SetVisibilityOfUpdateAllMods
 // 0x0648 (0x0648 - 0x0000)
@@ -200,7 +195,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0640(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0641(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_SetVisibilityOfUpdateAllMods;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.Translate_OptionsFilter
 // 0x0100 (0x0100 - 0x0000)
@@ -227,7 +221,6 @@ public:
 	class FString                                 Temp_string_Variable_12;                           // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 K2Node_Select_Default;                             // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_Translate_OptionsFilter;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.Translate_PremiumFilter
 // 0x0060 (0x0060 - 0x0000)
@@ -244,7 +237,6 @@ public:
 	class FString                                 Temp_string_Variable_2;                            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 K2Node_Select_Default;                             // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_Translate_PremiumFilter;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.FilterSort_Premium
 // 0x0088 (0x0088 - 0x0000)
@@ -270,7 +262,6 @@ public:
 	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_FilterSort_Premium;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.PlayFadeOutAnim
 // 0x0010 (0x0010 - 0x0000)
@@ -282,7 +273,6 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_PlayFadeOutAnim;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.PlayFadeIn
 // 0x0010 (0x0010 - 0x0000)
@@ -292,7 +282,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_PlayFadeIn;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.GetAllModsIDs
 // 0x0648 (0x0648 - 0x0000)
@@ -310,7 +299,6 @@ public:
 	uint8                                         Pad_641[0x3];                                      // 0x0641(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0644(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_GetAllModsIDs;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.MoreImagesLeftToDownload
 // 0x0014 (0x0014 - 0x0000)
@@ -324,7 +312,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_MoreImagesLeftToDownload;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.GetModIndexesForCurrentRow
 // 0x001C (0x001C - 0x0000)
@@ -339,7 +326,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Int32_SubOne_ReturnValue_1;               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_GetModIndexesForCurrentRow;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.DownloadNextBatchOfMods
 // 0x000C (0x000C - 0x0000)
@@ -350,7 +336,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_DownloadNextBatchOfMods;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.DownloadBatchOfMods
 // 0x0648 (0x0648 - 0x0000)
@@ -372,7 +357,6 @@ public:
 	uint8                                         Pad_635[0x3];                                      // 0x0635(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0638(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_DownloadBatchOfMods;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.CheckIfImagesAreReady
 // 0x0660 (0x0660 - 0x0000)
@@ -404,7 +388,6 @@ public:
 	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0648(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0658(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_CheckIfImagesAreReady;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.DownloadImagesInAllMods
 // 0x0001 (0x0001 - 0x0000)
@@ -413,7 +396,6 @@ struct UI_CFCore_ParentBrowser_C_DownloadImagesInAllMods final
 public:
 	bool                                          CallFunc_InitiliazeImageDownloads_ReadyToStart;    // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_DownloadImagesInAllMods;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.SwitchControllerAction
 // 0x0020 (0x0020 - 0x0000)
@@ -425,7 +407,6 @@ public:
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_SwitchControllerAction;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.Nav Down from DropdownTime
 // 0x0030 (0x0030 - 0x0000)
@@ -441,7 +422,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_Nav_Down_from_DropdownTime;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.Nav Down from DropdownSort
 // 0x0030 (0x0030 - 0x0000)
@@ -457,7 +437,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_Nav_Down_from_DropdownSort;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.Nav Down from DropdownCategory
 // 0x0030 (0x0030 - 0x0000)
@@ -473,7 +452,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_Nav_Down_from_DropdownCategory;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.Nav for Up Move from List
 // 0x0010 (0x0010 - 0x0000)
@@ -484,7 +462,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_Nav_for_Up_Move_from_List;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.SetNavigationRuleForList
 // 0x0048 (0x0048 - 0x0000)
@@ -503,7 +480,6 @@ public:
 	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_SetNavigationRuleForList;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.SetListFocus
 // 0x0018 (0x0018 - 0x0000)
@@ -514,7 +490,6 @@ public:
 	class UUI_CFCore_GameSlot_C*                  K2Node_DynamicCast_AsUI_CFCore_Game_Slot;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_SetListFocus;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.CloseAllDropdownApartFrom
 // 0x0048 (0x0048 - 0x0000)
@@ -533,7 +508,6 @@ public:
 	class UBindButtonSystem*                      CallFunc_GetEngineSubsystem_ReturnValue;           // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class UUI_CFCore_CustomComboBox_C*>    K2Node_MakeArray_Array;                            // 0x0038(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_CloseAllDropdownApartFrom;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.CloseAllDropDown
 // 0x0040 (0x0040 - 0x0000)
@@ -552,7 +526,6 @@ public:
 	class UUI_CFCore_CustomComboBox_C*            CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_CloseAllDropDown;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.BindToDropdown
 // 0x0068 (0x0068 - 0x0000)
@@ -575,7 +548,6 @@ public:
 	class UUI_CFCore_CustomComboBox_C*            CallFunc_Array_Get_Item_1;                         // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_BindToDropdown;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.SetEnableStageForGameSlot
 // 0x0048 (0x0048 - 0x0000)
@@ -596,7 +568,6 @@ public:
 	class UUI_CFCore_GameSlot_C*                  K2Node_DynamicCast_AsUI_CFCore_Game_Slot;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_SetEnableStageForGameSlot;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.ReturnModsOfCurrentPage
 // 0x0070 (0x0070 - 0x0000)
@@ -624,7 +595,6 @@ public:
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_ReturnModsOfCurrentPage;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.UpdateNotificationInSwitcher
 // 0x0038 (0x0038 - 0x0000)
@@ -651,7 +621,6 @@ public:
 	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                K2Node_Select_Default;                             // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_UpdateNotificationInSwitcher;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.UpdateSearchText
 // 0x0060 (0x0060 - 0x0000)
@@ -667,7 +636,6 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0048(0x0010)()
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_UpdateSearchText;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.LoadSavedUpImagesAsync
 // 0x0640 (0x0640 - 0x0000)
@@ -689,7 +657,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0634(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0638(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_LoadSavedUpImagesAsync;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.InitiliazeImageDownloads
 // 0x0648 (0x0648 - 0x0000)
@@ -716,7 +683,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0640(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0644(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_InitiliazeImageDownloads;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.CalculateModsPerRow
 // 0x0004 (0x0004 - 0x0000)
@@ -725,7 +691,6 @@ struct UI_CFCore_ParentBrowser_C_CalculateModsPerRow final
 public:
 	int32                                         mods;                                              // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_CalculateModsPerRow;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.CalculateModsPerPage
 // 0x0004 (0x0004 - 0x0000)
@@ -734,7 +699,6 @@ struct UI_CFCore_ParentBrowser_C_CalculateModsPerPage final
 public:
 	int32                                         mods;                                              // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_CalculateModsPerPage;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.PrevPage
 // 0x0010 (0x0010 - 0x0000)
@@ -748,7 +712,6 @@ public:
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_PrevPage;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.NextPage
 // 0x0010 (0x0010 - 0x0000)
@@ -761,7 +724,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_NextPage;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.GetCurrentSearchInput
 // 0x0010 (0x0010 - 0x0000)
@@ -770,7 +732,6 @@ struct UI_CFCore_ParentBrowser_C_GetCurrentSearchInput final
 public:
 	class FText                                   CurrentSearchInput_0;                              // 0x0000(0x0010)(Parm, OutParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_GetCurrentSearchInput;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.BuildPage
 // 0x0020 (0x0020 - 0x0000)
@@ -790,7 +751,6 @@ public:
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_BuildPage;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.SetStypleOfPageArrowsButtons
 // 0x0002 (0x0002 - 0x0000)
@@ -800,7 +760,6 @@ public:
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_SetStypleOfPageArrowsButtons;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.UpdatePaginations
 // 0x0048 (0x0048 - 0x0000)
@@ -822,7 +781,6 @@ public:
 	int32                                         CallFunc_Int32_AddOne_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Select_Default;                             // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_UpdatePaginations;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.FilterModInfo
 // 0x00E8 (0x00E8 - 0x0000)
@@ -843,7 +801,6 @@ public:
 	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCFCoreSearchModsFilter                K2Node_MakeStruct_CFCoreSearchModsFilter;          // 0x0090(0x0058)()
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_FilterModInfo;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.ClearAllModsInPage
 // 0x0628 (0x0628 - 0x0000)
@@ -859,7 +816,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0624(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0625(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_ClearAllModsInPage;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.BindToGameSlot
 // 0x0058 (0x0058 - 0x0000)
@@ -880,7 +836,6 @@ public:
 	class UUI_CFCore_GameSlot_C*                  K2Node_DynamicCast_AsUI_CFCore_Game_Slot;          // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_BindToGameSlot;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.UpdatePagesPagination
 // 0x00D0 (0x00D0 - 0x0000)
@@ -901,7 +856,6 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x00B0(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00C0(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_UpdatePagesPagination;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.CreateModSlot
 // 0x0628 (0x0628 - 0x0000)
@@ -914,7 +868,6 @@ public:
 	class UWrapBoxSlot*                           CallFunc_AddChildToWrapBox_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FInstallProgressMod                    K2Node_MakeStruct_InstallProgressMod;              // 0x0018(0x0610)(ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_CreateModSlot;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.FilterSort_Time
 // 0x0090 (0x0090 - 0x0000)
@@ -940,7 +893,6 @@ public:
 	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_FilterSort_Time;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.FilterSort_Options
 // 0x0088 (0x0088 - 0x0000)
@@ -962,7 +914,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_FilterSort_Options;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.FilterSort_ClassFilter
 // 0x0150 (0x0150 - 0x0000)
@@ -982,7 +933,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_FilterSort_ClassFilter;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.SelectClass
 // 0x0002 (0x0002 - 0x0000)
@@ -992,7 +942,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_SelectClass;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.OnMouseButtonDown
 // 0x0228 (0x0228 - 0x0000)
@@ -1007,7 +956,6 @@ public:
 	uint8                                         Pad_16A[0x6];                                      // 0x016A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0170(0x00B8)()
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_OnMouseButtonDown;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.CheckWhichTextAppearsFirst
 // 0x00B8 (0x00B8 - 0x0000)
@@ -1044,7 +992,6 @@ public:
 	uint8                                         Pad_B3[0x1];                                       // 0x00B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_CheckWhichTextAppearsFirst;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.Event On Input Device Changed
 // 0x0001 (0x0001 - 0x0000)
@@ -1053,7 +1000,6 @@ struct UI_CFCore_ParentBrowser_C_Event_On_Input_Device_Changed final
 public:
 	ENUM_CFCore_InputDevices                      device;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_Event_On_Input_Device_Changed;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.BndEvt__ParentPageWidget_SortBySelect_K2Node_ComponentBoundEvent_4_OnOptionSelected__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -1062,7 +1008,6 @@ struct UI_CFCore_ParentBrowser_C_BndEvt__ParentPageWidget_SortBySelect_K2Node_Co
 public:
 	class FString                                 Option;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_BndEvt__ParentPageWidget_SortBySelect_K2Node_ComponentBoundEvent_4_OnOptionSelected__DelegateSignature;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.Event Update Filter By Options
 // 0x0008 (0x0008 - 0x0000)
@@ -1071,7 +1016,6 @@ struct UI_CFCore_ParentBrowser_C_Event_Update_Filter_By_Options final
 public:
 	int64                                         Current_Class_Category_ID;                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_Event_Update_Filter_By_Options;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.UpdateSearch
 // 0x0010 (0x0010 - 0x0000)
@@ -1080,7 +1024,6 @@ struct UI_CFCore_ParentBrowser_C_UpdateSearch final
 public:
 	class FText                                   SearchInput;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_UpdateSearch;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.OnSearch
 // 0x0010 (0x0010 - 0x0000)
@@ -1089,7 +1032,6 @@ struct UI_CFCore_ParentBrowser_C_OnSearch final
 public:
 	class FText                                   Search_Input;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_OnSearch;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.ButtonCall
 // 0x0020 (0x0020 - 0x0000)
@@ -1099,7 +1041,6 @@ public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	EViewState                                    State;                                             // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_ButtonCall;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -1108,7 +1049,6 @@ struct UI_CFCore_ParentBrowser_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_PreConstruct;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.BndEvt__UI_ParentBrowser_UI_PremiumFilters_K2Node_ComponentBoundEvent_2_OnOptionSelected__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -1117,7 +1057,6 @@ struct UI_CFCore_ParentBrowser_C_BndEvt__UI_ParentBrowser_UI_PremiumFilters_K2No
 public:
 	class FString                                 Option;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_BndEvt__UI_ParentBrowser_UI_PremiumFilters_K2Node_ComponentBoundEvent_2_OnOptionSelected__DelegateSignature;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2Node_ComponentBoundEvent_0_OnOptionSelected__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -1126,7 +1065,6 @@ struct UI_CFCore_ParentBrowser_C_BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2No
 public:
 	class FString                                 Option;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_BndEvt__UI_ParentBrowser_UI_Filter_Classes_K2Node_ComponentBoundEvent_0_OnOptionSelected__DelegateSignature;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2Node_ComponentBoundEvent_8_OnOptionSelected__DelegateSignature
 // 0x0010 (0x0010 - 0x0000)
@@ -1135,7 +1073,6 @@ struct UI_CFCore_ParentBrowser_C_BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2
 public:
 	class FString                                 Option;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_BndEvt__UI_ParentBrowser_UI_CategoriesSelect_K2Node_ComponentBoundEvent_8_OnOptionSelected__DelegateSignature;
 
 // Function UI_CFCore_ParentBrowser.UI_CFCore_ParentBrowser_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -1145,7 +1082,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_ParentBrowser_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

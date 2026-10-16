@@ -20,6 +20,5 @@ SDK_NAMESPACE_START
 struct TPV_ClimbPick_MaleAnimBP::FAnimBlueprintGeneratedConstantData final : public BaseHumanAnimBP::FAnimBlueprintGeneratedConstantData
 {
 };
-DUMPER7_ASSERTS_TPV_ClimbPick_MaleAnimBP__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

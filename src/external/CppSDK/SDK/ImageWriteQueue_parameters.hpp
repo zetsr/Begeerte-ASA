@@ -26,7 +26,6 @@ public:
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FImageWriteOptions                     Options;                                           // 0x0020(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_ImageWriteBlueprintLibrary_ExportToDisk;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

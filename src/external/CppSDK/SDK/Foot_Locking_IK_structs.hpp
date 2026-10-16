@@ -64,6 +64,5 @@ public:
 	struct FVector                                IK_WorldLocationSmoothed_127_F742CD11439175A67F304FBFE3BB01E3; // 0x0228(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                LastPosition_119_C42BB66F477B4C73BF58CAB355B3EFCD; // 0x0240(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FFoot_Locking_IK;
 
 SDK_NAMESPACE_END

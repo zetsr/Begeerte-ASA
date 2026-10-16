@@ -20,6 +20,5 @@ SDK_NAMESPACE_START
 struct TPV_Lance_MaleAnimBP::FAnimBlueprintGeneratedConstantData final : public BaseHumanAnimBP::FAnimBlueprintGeneratedConstantData
 {
 };
-DUMPER7_ASSERTS_TPV_Lance_MaleAnimBP__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

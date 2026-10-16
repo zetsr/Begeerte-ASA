@@ -28,6 +28,5 @@ public:
 	float                                         SelectorWidth;                                     // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2D4[0xC];                                      // 0x02D4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FColorGradingSpinBoxStyle;
 
 SDK_NAMESPACE_END

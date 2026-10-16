@@ -52,6 +52,5 @@ public:
 		return GetDefaultObjImpl<AClimbing_ImpactEffect_C>();
 	}
 };
-DUMPER7_ASSERTS_AClimbing_ImpactEffect_C;
 
 SDK_NAMESPACE_END

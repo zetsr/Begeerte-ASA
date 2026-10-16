@@ -38,6 +38,5 @@ public:
 		return GetDefaultObjImpl<USignificanceManager>();
 	}
 };
-DUMPER7_ASSERTS_USignificanceManager;
 
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Keratin_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Keratin_C;
 
 SDK_NAMESPACE_END

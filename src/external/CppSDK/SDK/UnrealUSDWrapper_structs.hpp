@@ -105,7 +105,6 @@ public:
 	struct FVector2D                              Row0;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              Row1;                                              // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMatrix2D;
 
 // ScriptStruct UnrealUSDWrapper.Matrix3D
 // 0x0048 (0x0048 - 0x0000)
@@ -116,6 +115,5 @@ public:
 	struct FVector                                Row1;                                              // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Row2;                                              // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMatrix3D;
 
 SDK_NAMESPACE_END

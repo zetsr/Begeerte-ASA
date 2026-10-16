@@ -44,7 +44,6 @@ public:
 		return GetDefaultObjImpl<UMovieGraphImagePassBaseNode>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphImagePassBaseNode;
 
 // Class MovieRenderPipelineRenderPasses.MovieGraphDeferredRenderPassNode
 // 0x0020 (0x00E8 - 0x00C8)
@@ -82,7 +81,6 @@ public:
 		return GetDefaultObjImpl<UMovieGraphDeferredRenderPassNode>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphDeferredRenderPassNode;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineImageSequenceOutputBase
 // 0x0020 (0x0068 - 0x0048)
@@ -105,7 +103,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineImageSequenceOutputBase>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineImageSequenceOutputBase;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineImageSequenceOutput_EXR
 // 0x0008 (0x0070 - 0x0068)
@@ -130,7 +127,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineImageSequenceOutput_EXR>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineImageSequenceOutput_EXR;
 
 // Class MovieRenderPipelineRenderPasses.MovieGraphImageSequenceOutputNode
 // 0x0100 (0x01C0 - 0x00C0)
@@ -158,7 +154,6 @@ public:
 		return GetDefaultObjImpl<UMovieGraphImageSequenceOutputNode>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphImageSequenceOutputNode;
 
 // Class MovieRenderPipelineRenderPasses.MovieGraphImageSequenceOutputNode_EXR
 // 0x0008 (0x01C8 - 0x01C0)
@@ -183,7 +178,6 @@ public:
 		return GetDefaultObjImpl<UMovieGraphImageSequenceOutputNode_EXR>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphImageSequenceOutputNode_EXR;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineImagePassBase
 // 0x0130 (0x0178 - 0x0048)
@@ -206,7 +200,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineImagePassBase>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineImagePassBase;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineDeferredPassBase
 // 0x0100 (0x0278 - 0x0178)
@@ -241,7 +234,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineDeferredPassBase>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineDeferredPassBase;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineDeferredPass_Unlit
 // 0x0000 (0x0278 - 0x0278)
@@ -261,7 +253,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineDeferredPass_Unlit>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineDeferredPass_Unlit;
 
 // Class MovieRenderPipelineRenderPasses.MovieGraphImageSequenceOutputNode_MultiLayerEXR
 // 0x0000 (0x01C8 - 0x01C8)
@@ -281,7 +272,6 @@ public:
 		return GetDefaultObjImpl<UMovieGraphImageSequenceOutputNode_MultiLayerEXR>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphImageSequenceOutputNode_MultiLayerEXR;
 
 // Class MovieRenderPipelineRenderPasses.MovieGraphImageSequenceOutputNode_BMP
 // 0x0000 (0x01C0 - 0x01C0)
@@ -301,7 +291,6 @@ public:
 		return GetDefaultObjImpl<UMovieGraphImageSequenceOutputNode_BMP>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphImageSequenceOutputNode_BMP;
 
 // Class MovieRenderPipelineRenderPasses.MovieGraphImageSequenceOutputNode_JPG
 // 0x0000 (0x01C0 - 0x01C0)
@@ -321,7 +310,6 @@ public:
 		return GetDefaultObjImpl<UMovieGraphImageSequenceOutputNode_JPG>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphImageSequenceOutputNode_JPG;
 
 // Class MovieRenderPipelineRenderPasses.MovieGraphImageSequenceOutputNode_PNG
 // 0x0000 (0x01C0 - 0x01C0)
@@ -341,7 +329,6 @@ public:
 		return GetDefaultObjImpl<UMovieGraphImageSequenceOutputNode_PNG>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphImageSequenceOutputNode_PNG;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineDeferredPass_PathTracer
 // 0x0008 (0x0280 - 0x0278)
@@ -365,7 +352,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineDeferredPass_PathTracer>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineDeferredPass_PathTracer;
 
 // Class MovieRenderPipelineRenderPasses.MovieGraphPathTracerRenderPassNode
 // 0x0040 (0x0108 - 0x00C8)
@@ -423,7 +409,6 @@ public:
 		return GetDefaultObjImpl<UMovieGraphPathTracerRenderPassNode>();
 	}
 };
-DUMPER7_ASSERTS_UMovieGraphPathTracerRenderPassNode;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineDeferredPass_DetailLighting
 // 0x0000 (0x0278 - 0x0278)
@@ -443,7 +428,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineDeferredPass_DetailLighting>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineDeferredPass_DetailLighting;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineDeferredPass_LightingOnly
 // 0x0000 (0x0278 - 0x0278)
@@ -463,7 +447,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineDeferredPass_LightingOnly>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineDeferredPass_LightingOnly;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineDeferredPass_ReflectionsOnly
 // 0x0000 (0x0278 - 0x0278)
@@ -483,7 +466,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineDeferredPass_ReflectionsOnly>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineDeferredPass_ReflectionsOnly;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineImageSequenceOutput_BMP
 // 0x0000 (0x0068 - 0x0068)
@@ -503,7 +485,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineImageSequenceOutput_BMP>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineImageSequenceOutput_BMP;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineImageSequenceOutput_PNG
 // 0x0008 (0x0070 - 0x0068)
@@ -527,7 +508,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineImageSequenceOutput_PNG>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineImageSequenceOutput_PNG;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineImageSequenceOutput_JPG
 // 0x0000 (0x0068 - 0x0068)
@@ -547,7 +527,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineImageSequenceOutput_JPG>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineImageSequenceOutput_JPG;
 
 // Class MovieRenderPipelineRenderPasses.MoviePipelineWaveOutput
 // 0x0070 (0x00B8 - 0x0048)
@@ -571,6 +550,5 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineWaveOutput>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineWaveOutput;
 
 SDK_NAMESPACE_END

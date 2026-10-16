@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "CFCoreWidget_classes.hpp"
 #include "cfcore_ui_structs.hpp"
 #include "UMG_structs.hpp"
-#include "CFCoreWidget_classes.hpp"
 #include "ENUM_CFCore_SideTabs_structs.hpp"
 
 
@@ -154,6 +154,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_GameSlot_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_GameSlot_C;
 
 SDK_NAMESPACE_END

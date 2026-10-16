@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<UIsInvalidNavigationPoint_TK_C>();
 	}
 };
-DUMPER7_ASSERTS_UIsInvalidNavigationPoint_TK_C;
 
 SDK_NAMESPACE_END

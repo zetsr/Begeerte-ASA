@@ -41,7 +41,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeFactoryBase>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeFactoryBase;
 
 // Class InterchangeCore.InterchangeSourceData
 // 0x0028 (0x0050 - 0x0028)
@@ -70,7 +69,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeSourceData>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeSourceData;
 
 // Class InterchangeCore.InterchangeWriterBase
 // 0x0000 (0x0028 - 0x0028)
@@ -90,7 +88,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeWriterBase>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeWriterBase;
 
 // Class InterchangeCore.InterchangePipelineBase
 // 0x0120 (0x0148 - 0x0028)
@@ -133,7 +130,6 @@ public:
 		return GetDefaultObjImpl<UInterchangePipelineBase>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangePipelineBase;
 
 // Class InterchangeCore.InterchangeResult
 // 0x0048 (0x0070 - 0x0028)
@@ -160,7 +156,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResult>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResult;
 
 // Class InterchangeCore.InterchangeResultSuccess
 // 0x0000 (0x0070 - 0x0070)
@@ -180,7 +175,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultSuccess>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultSuccess;
 
 // Class InterchangeCore.InterchangeResultWarning
 // 0x0000 (0x0070 - 0x0070)
@@ -200,7 +194,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultWarning>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultWarning;
 
 // Class InterchangeCore.InterchangeResultError
 // 0x0000 (0x0070 - 0x0070)
@@ -220,7 +213,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultError>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultError;
 
 // Class InterchangeCore.InterchangeResultWarning_Generic
 // 0x0010 (0x0080 - 0x0070)
@@ -243,7 +235,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultWarning_Generic>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultWarning_Generic;
 
 // Class InterchangeCore.InterchangeResultError_Generic
 // 0x0010 (0x0080 - 0x0070)
@@ -266,7 +257,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultError_Generic>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultError_Generic;
 
 // Class InterchangeCore.InterchangeResultError_ReimportFail
 // 0x0000 (0x0070 - 0x0070)
@@ -286,7 +276,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultError_ReimportFail>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultError_ReimportFail;
 
 // Class InterchangeCore.InterchangeResultDisplay_Generic
 // 0x0010 (0x0080 - 0x0070)
@@ -309,7 +298,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultDisplay_Generic>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultDisplay_Generic;
 
 // Class InterchangeCore.InterchangeResultsContainer
 // 0x0038 (0x0060 - 0x0028)
@@ -333,7 +321,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeResultsContainer>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeResultsContainer;
 
 // Class InterchangeCore.InterchangeTranslatorSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -357,7 +344,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeTranslatorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeTranslatorSettings;
 
 // Class InterchangeCore.InterchangeTranslatorBase
 // 0x0010 (0x0038 - 0x0028)
@@ -381,7 +367,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeTranslatorBase>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeTranslatorBase;
 
 // Class InterchangeCore.InterchangeBaseNode
 // 0x0038 (0x0060 - 0x0028)
@@ -439,7 +424,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeBaseNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeBaseNode;
 
 // Class InterchangeCore.InterchangeBaseNodeContainer
 // 0x00A0 (0x00C8 - 0x0028)
@@ -483,7 +467,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeBaseNodeContainer>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeBaseNodeContainer;
 
 // Class InterchangeCore.InterchangeFactoryBaseNode
 // 0x00F0 (0x0150 - 0x0060)
@@ -529,7 +512,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeFactoryBaseNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeFactoryBaseNode;
 
 // Class InterchangeCore.InterchangeSourceNode
 // 0x00F8 (0x0158 - 0x0060)
@@ -575,7 +557,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeSourceNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeSourceNode;
 
 // Class InterchangeCore.InterchangeUserDefinedAttributesAPI
 // 0x0000 (0x0028 - 0x0028)
@@ -610,6 +591,5 @@ public:
 		return GetDefaultObjImpl<UInterchangeUserDefinedAttributesAPI>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeUserDefinedAttributesAPI;
 
 SDK_NAMESPACE_END

@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UAllowWandering_C>();
 	}
 };
-DUMPER7_ASSERTS_UAllowWandering_C;
 
 SDK_NAMESPACE_END

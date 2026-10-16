@@ -22,7 +22,6 @@ public:
 	int32                                         Quantity;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataMainMenuContainerDLC_C_GetAllDLC;
 
 // Function DataMainMenuContainerDLC.DataMainMenuContainerDLC_C.GetAllDLCEntries
 // 0x00B0 (0x00B0 - 0x0000)
@@ -66,7 +65,6 @@ public:
 	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Max_ReturnValue;                          // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataMainMenuContainerDLC_C_GetAllDLCEntries;
 
 // Function DataMainMenuContainerDLC.DataMainMenuContainerDLC_C.GetAllOwnedDLC
 // 0x0030 (0x0030 - 0x0000)
@@ -86,7 +84,6 @@ public:
 	bool                                          CallFunc_IsDLCOwned_Owns;                          // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataMainMenuContainerDLC_C_GetAllOwnedDLC;
 
 // Function DataMainMenuContainerDLC.DataMainMenuContainerDLC_C.IsAvailableNewDLC
 // 0x0038 (0x0038 - 0x0000)
@@ -108,7 +105,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLatestDLC_Yes;                          // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_DataMainMenuContainerDLC_C_IsAvailableNewDLC;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<AMeleeStoneWeapon_Impacts_C>();
 	}
 };
-DUMPER7_ASSERTS_AMeleeStoneWeapon_Impacts_C;
 
 SDK_NAMESPACE_END

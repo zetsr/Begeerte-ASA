@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<ADrill_HarvestImpactEmitter_Stone_C>();
 	}
 };
-DUMPER7_ASSERTS_ADrill_HarvestImpactEmitter_Stone_C;
 
 SDK_NAMESPACE_END

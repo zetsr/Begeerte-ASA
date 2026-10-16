@@ -51,6 +51,5 @@ public:
 		return GetDefaultObjImpl<UBuildPatchManifest>();
 	}
 };
-DUMPER7_ASSERTS_UBuildPatchManifest;
 
 SDK_NAMESPACE_END

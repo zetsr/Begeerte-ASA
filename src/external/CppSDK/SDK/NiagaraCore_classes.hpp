@@ -33,7 +33,6 @@ public:
 		return GetDefaultObjImpl<UNiagaraMergeable>();
 	}
 };
-DUMPER7_ASSERTS_UNiagaraMergeable;
 
 // Class NiagaraCore.NiagaraDataInterfaceBase
 // 0x0000 (0x0028 - 0x0028)
@@ -53,6 +52,5 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfaceBase>();
 	}
 };
-DUMPER7_ASSERTS_UNiagaraDataInterfaceBase;
 
 SDK_NAMESPACE_END

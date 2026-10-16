@@ -30,11 +30,11 @@ public:
 	class UClass*                                 SubEntryWidgetTemplate;                            // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BlueprintInit(const class FString& RawExtraData);
-	void EntryFocusEnd(bool bInstigatedByAutoRollover);
-	void EntryFocusStart(bool bInstigatedByAutoRollover);
-	void EntryFocusTick(float DeltaTime, bool bIsHighlighted);
 	void ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_NewsTextOnly_Half(int32 EntryPoint);
+	void EntryFocusTick(float DeltaTime_EntryFocusTick, bool bIsHighlighted_EntryFocusTick);
+	void EntryFocusStart(bool bInstigatedByAutoRollover_EntryFocusStart);
+	void EntryFocusEnd(bool bInstigatedByAutoRollover_EntryFocusEnd);
+	void BlueprintInit(const class FString& RawExtraData_BlueprintInit);
 
 public:
 	static class UClass* StaticClass()
@@ -50,6 +50,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_NewsCarouselTemplate_Entry_NewsTextOnly_Half_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_NewsCarouselTemplate_Entry_NewsTextOnly_Half_C;
 
 SDK_NAMESPACE_END

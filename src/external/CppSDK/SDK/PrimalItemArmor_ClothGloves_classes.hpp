@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_ClothGloves_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemArmor_ClothGloves_C;
 
 SDK_NAMESPACE_END

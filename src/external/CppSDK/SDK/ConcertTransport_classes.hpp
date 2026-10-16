@@ -38,6 +38,5 @@ public:
 		return GetDefaultObjImpl<UConcertEndpointConfig>();
 	}
 };
-DUMPER7_ASSERTS_UConcertEndpointConfig;
 
 SDK_NAMESPACE_END

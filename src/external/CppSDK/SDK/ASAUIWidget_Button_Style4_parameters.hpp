@@ -17,24 +17,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.SetActive
-// 0x0001 (0x0001 - 0x0000)
-struct ASAUIWidget_Button_Style4_C_SetActive final
-{
-public:
-	bool                                          newActive;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ASAUIWidget_Button_Style4_C_SetActive;
-
-// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct ASAUIWidget_Button_Style4_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ASAUIWidget_Button_Style4_C_PreConstruct;
-
 // Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.ExecuteUbergraph_ASAUIWidget_Button_Style4
 // 0x01B0 (0x01B0 - 0x0000)
 struct ASAUIWidget_Button_Style4_C_ExecuteUbergraph_ASAUIWidget_Button_Style4 final
@@ -62,7 +44,22 @@ public:
 	float                                         CallFunc_SetHeightOverride_InHeightOverride_ImplicitCast; // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetWidthOverride_InWidthOverride_ImplicitCast; // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ASAUIWidget_Button_Style4_C_ExecuteUbergraph_ASAUIWidget_Button_Style4;
+
+// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct ASAUIWidget_Button_Style4_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ASAUIWidget_Button_Style4.ASAUIWidget_Button_Style4_C.SetActive
+// 0x0001 (0x0001 - 0x0000)
+struct ASAUIWidget_Button_Style4_C_SetActive final
+{
+public:
+	bool                                          newActive;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

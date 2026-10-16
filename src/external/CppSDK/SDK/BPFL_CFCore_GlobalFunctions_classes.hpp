@@ -78,6 +78,5 @@ public:
 		return GetDefaultObjImpl<UBPFL_CFCore_GlobalFunctions_C>();
 	}
 };
-DUMPER7_ASSERTS_UBPFL_CFCore_GlobalFunctions_C;
 
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UClimbingSettings_Player_BP_C>();
 	}
 };
-DUMPER7_ASSERTS_UClimbingSettings_Player_BP_C;
 
 SDK_NAMESPACE_END

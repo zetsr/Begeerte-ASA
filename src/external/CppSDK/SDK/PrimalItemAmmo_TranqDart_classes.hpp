@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_TranqDart_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemAmmo_TranqDart_C;
 
 SDK_NAMESPACE_END

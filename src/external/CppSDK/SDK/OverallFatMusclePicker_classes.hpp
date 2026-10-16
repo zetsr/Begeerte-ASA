@@ -58,6 +58,5 @@ public:
 		return GetDefaultObjImpl<UOverallFatMusclePicker_C>();
 	}
 };
-DUMPER7_ASSERTS_UOverallFatMusclePicker_C;
 
 SDK_NAMESPACE_END

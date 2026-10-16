@@ -25,6 +25,5 @@ public:
 	ECheckBoxState                                CheckedState;                                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FConsoleVariablesEditorAssetSaveData;
 
 SDK_NAMESPACE_END

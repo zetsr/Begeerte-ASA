@@ -46,7 +46,6 @@ public:
 		return GetDefaultObjImpl<UUsdAssetCache>();
 	}
 };
-DUMPER7_ASSERTS_UUsdAssetCache;
 
 // Class USDClasses.UsdAssetCache2
 // 0x0178 (0x01A0 - 0x0028)
@@ -91,7 +90,6 @@ public:
 		return GetDefaultObjImpl<UUsdAssetCache2>();
 	}
 };
-DUMPER7_ASSERTS_UUsdAssetCache2;
 
 // Class USDClasses.UsdAssetCache3
 // 0x0268 (0x0290 - 0x0028)
@@ -145,7 +143,6 @@ public:
 		return GetDefaultObjImpl<UUsdAssetCache3>();
 	}
 };
-DUMPER7_ASSERTS_UUsdAssetCache3;
 
 // Class USDClasses.UsdAssetImportData
 // 0x0018 (0x0040 - 0x0028)
@@ -169,7 +166,6 @@ public:
 		return GetDefaultObjImpl<UUsdAssetImportData>();
 	}
 };
-DUMPER7_ASSERTS_UUsdAssetImportData;
 
 // Class USDClasses.UsdAnimSequenceAssetImportData
 // 0x0008 (0x0048 - 0x0040)
@@ -193,7 +189,6 @@ public:
 		return GetDefaultObjImpl<UUsdAnimSequenceAssetImportData>();
 	}
 };
-DUMPER7_ASSERTS_UUsdAnimSequenceAssetImportData;
 
 // Class USDClasses.UsdMeshAssetImportData
 // 0x0050 (0x0090 - 0x0040)
@@ -216,7 +211,6 @@ public:
 		return GetDefaultObjImpl<UUsdMeshAssetImportData>();
 	}
 };
-DUMPER7_ASSERTS_UUsdMeshAssetImportData;
 
 // Class USDClasses.UsdAssetUserData
 // 0x0070 (0x0098 - 0x0028)
@@ -241,7 +235,6 @@ public:
 		return GetDefaultObjImpl<UUsdAssetUserData>();
 	}
 };
-DUMPER7_ASSERTS_UUsdAssetUserData;
 
 // Class USDClasses.UsdAnimSequenceAssetUserData
 // 0x0008 (0x00A0 - 0x0098)
@@ -265,7 +258,6 @@ public:
 		return GetDefaultObjImpl<UUsdAnimSequenceAssetUserData>();
 	}
 };
-DUMPER7_ASSERTS_UUsdAnimSequenceAssetUserData;
 
 // Class USDClasses.UsdMaterialAssetUserData
 // 0x00A0 (0x0138 - 0x0098)
@@ -289,7 +281,6 @@ public:
 		return GetDefaultObjImpl<UUsdMaterialAssetUserData>();
 	}
 };
-DUMPER7_ASSERTS_UUsdMaterialAssetUserData;
 
 // Class USDClasses.UsdMeshAssetUserData
 // 0x00A0 (0x0138 - 0x0098)
@@ -313,7 +304,6 @@ public:
 		return GetDefaultObjImpl<UUsdMeshAssetUserData>();
 	}
 };
-DUMPER7_ASSERTS_UUsdMeshAssetUserData;
 
 // Class USDClasses.UsdGeometryCacheAssetUserData
 // 0x0008 (0x0140 - 0x0138)
@@ -337,7 +327,6 @@ public:
 		return GetDefaultObjImpl<UUsdGeometryCacheAssetUserData>();
 	}
 };
-DUMPER7_ASSERTS_UUsdGeometryCacheAssetUserData;
 
 // Class USDClasses.UsdLevelSequenceAssetUserData
 // 0x0060 (0x0088 - 0x0028)
@@ -361,7 +350,6 @@ public:
 		return GetDefaultObjImpl<UUsdLevelSequenceAssetUserData>();
 	}
 };
-DUMPER7_ASSERTS_UUsdLevelSequenceAssetUserData;
 
 // Class USDClasses.UsdSparseVolumeTextureAssetUserData
 // 0x0040 (0x00D8 - 0x0098)
@@ -387,7 +375,6 @@ public:
 		return GetDefaultObjImpl<UUsdSparseVolumeTextureAssetUserData>();
 	}
 };
-DUMPER7_ASSERTS_UUsdSparseVolumeTextureAssetUserData;
 
 // Class USDClasses.UsdDrawModeComponent
 // 0x0090 (0x06B0 - 0x0620)
@@ -439,7 +426,6 @@ public:
 		return GetDefaultObjImpl<UUsdDrawModeComponent>();
 	}
 };
-DUMPER7_ASSERTS_UUsdDrawModeComponent;
 
 // Class USDClasses.UsdProjectSettings
 // 0x0248 (0x0280 - 0x0038)
@@ -495,7 +481,6 @@ public:
 		return GetDefaultObjImpl<UUsdProjectSettings>();
 	}
 };
-DUMPER7_ASSERTS_UUsdProjectSettings;
 
 // Class USDClasses.UsdReferenceOptions
 // 0x0038 (0x0060 - 0x0028)
@@ -525,6 +510,5 @@ public:
 		return GetDefaultObjImpl<UUsdReferenceOptions>();
 	}
 };
-DUMPER7_ASSERTS_UUsdReferenceOptions;
 
 SDK_NAMESPACE_END

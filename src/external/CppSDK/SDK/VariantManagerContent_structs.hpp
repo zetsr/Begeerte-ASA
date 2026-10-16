@@ -36,7 +36,6 @@ struct FFunctionCaller final
 public:
 	class FName                                   FunctionName;                                      // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FFunctionCaller;
 
 // ScriptStruct VariantManagerContent.CapturedPropSegment
 // 0x0028 (0x0028 - 0x0000)
@@ -48,7 +47,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ComponentName;                                     // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCapturedPropSegment;
 
 // ScriptStruct VariantManagerContent.VariantDependency
 // 0x0058 (0x0058 - 0x0000)
@@ -60,6 +58,5 @@ public:
 	bool                                          bEnabled;                                          // 0x0050(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVariantDependency;
 
 SDK_NAMESPACE_END

@@ -22,7 +22,6 @@ public:
 	bool                                          InOutHidePrimitivesInEditor;                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          InOutHidePrimitivesInGame;                         // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_VirtualHeightfieldMeshComponent_GatherHideFlags;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

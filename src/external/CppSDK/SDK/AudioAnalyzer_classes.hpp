@@ -34,7 +34,6 @@ public:
 		return GetDefaultObjImpl<UAudioAnalyzerAssetBase>();
 	}
 };
-DUMPER7_ASSERTS_UAudioAnalyzerAssetBase;
 
 // Class AudioAnalyzer.AudioAnalyzerSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -54,7 +53,6 @@ public:
 		return GetDefaultObjImpl<UAudioAnalyzerSettings>();
 	}
 };
-DUMPER7_ASSERTS_UAudioAnalyzerSettings;
 
 // Class AudioAnalyzer.AudioAnalyzer
 // 0x0078 (0x00A0 - 0x0028)
@@ -84,7 +82,6 @@ public:
 		return GetDefaultObjImpl<UAudioAnalyzer>();
 	}
 };
-DUMPER7_ASSERTS_UAudioAnalyzer;
 
 // Class AudioAnalyzer.AudioAnalyzerNRTSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -104,7 +101,6 @@ public:
 		return GetDefaultObjImpl<UAudioAnalyzerNRTSettings>();
 	}
 };
-DUMPER7_ASSERTS_UAudioAnalyzerNRTSettings;
 
 // Class AudioAnalyzer.AudioAnalyzerNRT
 // 0x0050 (0x0078 - 0x0028)
@@ -129,7 +125,6 @@ public:
 		return GetDefaultObjImpl<UAudioAnalyzerNRT>();
 	}
 };
-DUMPER7_ASSERTS_UAudioAnalyzerNRT;
 
 // Class AudioAnalyzer.AudioAnalyzerSubsystem
 // 0x0020 (0x0050 - 0x0030)
@@ -153,6 +148,5 @@ public:
 		return GetDefaultObjImpl<UAudioAnalyzerSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UAudioAnalyzerSubsystem;
 
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Silicon_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Silicon_C;
 
 SDK_NAMESPACE_END

@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UDataListEntryWidgetGeneric_AutomaticRefresh_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListEntryWidgetGeneric_AutomaticRefresh_C;
 
 SDK_NAMESPACE_END

@@ -45,6 +45,5 @@ public:
 		return GetDefaultObjImpl<UCustomButton_HUB_ASA_C>();
 	}
 };
-DUMPER7_ASSERTS_UCustomButton_HUB_ASA_C;
 
 SDK_NAMESPACE_END

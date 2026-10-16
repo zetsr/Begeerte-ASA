@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDinoCameraConfig_Base_BP_C>();
 	}
 };
-DUMPER7_ASSERTS_UDinoCameraConfig_Base_BP_C;
 
 SDK_NAMESPACE_END

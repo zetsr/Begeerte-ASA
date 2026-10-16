@@ -27,7 +27,6 @@ struct ReMainMenuUI_ASA_C_BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect
 public:
 	class FString                                 DLC;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_BndEvt__ReMainMenuUI_ASA_ASAUI_MainMenu_GameModeSelect_K2Node_ComponentBoundEvent_12_OnDLCStore__DelegateSignature;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.BPGamepadReleased
 // 0x0030 (0x0030 - 0x0000)
@@ -46,7 +45,6 @@ public:
 	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue_1;       // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchInteger_CmpSuccess_1;                 // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_BPGamepadReleased;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.CreateNotifManager
 // 0x0010 (0x0010 - 0x0000)
@@ -57,7 +55,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUI_CFCore_NotificationManager_C*       CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_CreateNotifManager;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.DeepLinkModPage
 // 0x0008 (0x0008 - 0x0000)
@@ -66,7 +63,6 @@ struct ReMainMenuUI_ASA_C_DeepLinkModPage final
 public:
 	int64                                         RequestedModID;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_DeepLinkModPage;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.ExecuteUbergraph_ReMainMenuUI_ASA
 // 0x03B0 (0x03B0 - 0x0000)
@@ -172,7 +168,6 @@ public:
 	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x03A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_ExecuteUbergraph_ReMainMenuUI_ASA;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.HandleDiscordButtonVisibility
 // 0x0028 (0x0028 - 0x0000)
@@ -191,7 +186,6 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_HandleDiscordButtonVisibility;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.HighlightTheStartButton
 // 0x0002 (0x0002 - 0x0000)
@@ -201,7 +195,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_HighlightTheStartButton;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.OnGamepadActiveChangedBP
 // 0x0001 (0x0001 - 0x0000)
@@ -210,7 +203,6 @@ struct ReMainMenuUI_ASA_C_OnGamepadActiveChangedBP final
 public:
 	bool                                          bIsGamepadActive;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_OnGamepadActiveChangedBP;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.OnGamepadSelectionChanged
 // 0x0008 (0x0008 - 0x0000)
@@ -219,7 +211,6 @@ struct ReMainMenuUI_ASA_C_OnGamepadSelectionChanged final
 public:
 	class UWidget*                                Widget;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_OnGamepadSelectionChanged;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.OnKeyDownEvent
 // 0x0230 (0x0230 - 0x0000)
@@ -243,7 +234,6 @@ public:
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_3;          // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_OnKeyDownEvent;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.SetMainJoinedButtonVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -252,7 +242,6 @@ struct ReMainMenuUI_ASA_C_SetMainJoinedButtonVisibility final
 public:
 	ESlateVisibility                              newVisibilty;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_SetMainJoinedButtonVisibility;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.SettingsOverlayIsOpen
 // 0x0028 (0x0028 - 0x0000)
@@ -268,7 +257,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_SettingsOverlayIsOpen;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -278,7 +266,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_Tick;
 
 // Function ReMainMenuUI_ASA.ReMainMenuUI_ASA_C.UpdateLeftTextPosition
 // 0x0040 (0x0040 - 0x0000)
@@ -294,7 +281,6 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ReMainMenuUI_ASA_C_UpdateLeftTextPosition;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

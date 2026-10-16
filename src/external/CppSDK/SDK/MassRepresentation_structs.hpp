@@ -35,14 +35,12 @@ enum class EMassRepresentationType : uint8
 struct FMassDistanceLODProcessorTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassDistanceLODProcessorTag;
 
 // ScriptStruct MassRepresentation.MassStaticRepresentationTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassStaticRepresentationTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassStaticRepresentationTag;
 
 // ScriptStruct MassRepresentation.MassRepresentationLODFragment
 // 0x0008 (0x0008 - 0x0000)
@@ -55,7 +53,6 @@ public:
 	EMassVisibility                               PrevVisibility;                                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LODSignificance;                                   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassRepresentationLODFragment;
 
 // ScriptStruct MassRepresentation.StaticMeshInstanceVisualizationDescHandle
 // 0x0002 (0x0002 - 0x0000)
@@ -64,7 +61,6 @@ struct FStaticMeshInstanceVisualizationDescHandle final
 public:
 	uint16                                        Index;                                             // 0x0000(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FStaticMeshInstanceVisualizationDescHandle;
 
 // ScriptStruct MassRepresentation.MassRepresentationFragment
 // 0x0080 (0x0080 - 0x0000)
@@ -81,7 +77,6 @@ public:
 	float                                         PrevLODSignificance;                               // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_74[0xC];                                       // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassRepresentationFragment;
 
 // ScriptStruct MassRepresentation.MassRepresentationSubsystemSharedFragment
 // 0x0008 (0x0008 - 0x0000)
@@ -90,7 +85,6 @@ struct FMassRepresentationSubsystemSharedFragment final : public FMassSharedFrag
 public:
 	class UMassRepresentationSubsystem*           RepresentationSubsystem;                           // 0x0000(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMassRepresentationSubsystemSharedFragment;
 
 // ScriptStruct MassRepresentation.MassRepresentationParameters
 // 0x0028 (0x0028 - 0x0000)
@@ -110,7 +104,6 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMassRepresentationActorManagement*     CachedRepresentationActorManagement;               // 0x0020(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMassRepresentationParameters;
 
 // ScriptStruct MassRepresentation.MassVisualizationLODParameters
 // 0x0048 (0x0048 - 0x0000)
@@ -126,7 +119,6 @@ public:
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptStruct*                          FilterTag;                                         // 0x0040(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMassVisualizationLODParameters;
 
 // ScriptStruct MassRepresentation.MassVisualizationLODSharedFragment
 // 0x2028 (0x2028 - 0x0000)
@@ -136,7 +128,6 @@ public:
 	uint8                                         Pad_0[0x2020];                                     // 0x0000(0x2020)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptStruct*                          FilterTag;                                         // 0x2020(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMassVisualizationLODSharedFragment;
 
 // ScriptStruct MassRepresentation.MassDistanceLODParameters
 // 0x0020 (0x0020 - 0x0000)
@@ -148,7 +139,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptStruct*                          FilterTag;                                         // 0x0018(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMassDistanceLODParameters;
 
 // ScriptStruct MassRepresentation.MassDistanceLODSharedFragment
 // 0x2020 (0x2020 - 0x0000)
@@ -158,7 +148,6 @@ public:
 	uint8                                         Pad_0[0x2018];                                     // 0x0000(0x2018)(Fixing Size After Last Property [ Dumper-7 ])
 	class UScriptStruct*                          FilterTag;                                         // 0x2018(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMassDistanceLODSharedFragment;
 
 // ScriptStruct MassRepresentation.MassRepresentationUpdateParams
 // 0x0001 (0x0001 - 0x0000)
@@ -167,14 +156,12 @@ struct FMassRepresentationUpdateParams final
 public:
 	bool                                          bTestCollisionAvailibilityForActorVisualization;   // 0x0000(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassRepresentationUpdateParams;
 
 // ScriptStruct MassRepresentation.MassVisualizationProcessorTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassVisualizationProcessorTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassVisualizationProcessorTag;
 
 // ScriptStruct MassRepresentation.MassStaticMeshInstanceVisualizationMeshDesc
 // 0x0030 (0x0030 - 0x0000)
@@ -189,7 +176,6 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UInstancedStaticMeshComponent> ISMComponentClass;                              // 0x0028(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMassStaticMeshInstanceVisualizationMeshDesc;
 
 // ScriptStruct MassRepresentation.StaticMeshInstanceVisualizationDesc
 // 0x0078 (0x0080 - 0x0008)
@@ -201,7 +187,6 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             TransformOffset;                                   // 0x0020(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStaticMeshInstanceVisualizationDesc;
 
 // ScriptStruct MassRepresentation.MassLODSignificanceRange
 // 0x0020 (0x0020 - 0x0000)
@@ -210,7 +195,6 @@ struct alignas(0x08) FMassLODSignificanceRange final
 public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassLODSignificanceRange;
 
 // ScriptStruct MassRepresentation.MassInstancedStaticMeshInfo
 // 0x00A0 (0x00A0 - 0x0000)
@@ -221,20 +205,17 @@ public:
 	TArray<class UInstancedStaticMeshComponent*>  InstancedStaticMeshComponents;                     // 0x0080(0x0010)(Edit, ExportObject, ZeroConstructor, EditConst, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected, ExperimentalNeverOverriden)
 	TArray<struct FMassLODSignificanceRange>      LODSignificanceRanges;                             // 0x0090(0x0010)(Edit, ZeroConstructor, EditConst, Protected, NativeAccessSpecifierProtected)
 };
-DUMPER7_ASSERTS_FMassInstancedStaticMeshInfo;
 
 // ScriptStruct MassRepresentation.MassStationaryISMSwitcherProcessorTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassStationaryISMSwitcherProcessorTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassStationaryISMSwitcherProcessorTag;
 
 // ScriptStruct MassRepresentation.MassVisualizationLODProcessorTag
 // 0x0000 (0x0001 - 0x0001)
 struct FMassVisualizationLODProcessorTag final : public FMassTag
 {
 };
-DUMPER7_ASSERTS_FMassVisualizationLODProcessorTag;
 
 SDK_NAMESPACE_END

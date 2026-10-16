@@ -22,10 +22,9 @@ SDK_PARAM_NAMESPACE_START
 struct Slider_ASA_Widget_C_Tick final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              MyGeometry_Tick;                                   // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime_Tick;                                  // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Slider_ASA_Widget_C_Tick;
 
 // Function Slider_ASA_Widget.Slider_ASA_Widget_C.SetupValue
 // 0x0010 (0x0010 - 0x0000)
@@ -35,7 +34,6 @@ public:
 	double                                        float_0;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          PreventRecallParent;                               // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Slider_ASA_Widget_C_SetupValue;
 
 // Function Slider_ASA_Widget.Slider_ASA_Widget_C.SetupSetPercent
 // 0x00E8 (0x00E8 - 0x0000)
@@ -61,16 +59,14 @@ public:
 	float                                         CallFunc_Divide_DoubleFloat_B_ImplicitCast;        // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetPercent_InPercent_ImplicitCast;        // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Slider_ASA_Widget_C_SetupSetPercent;
 
 // Function Slider_ASA_Widget.Slider_ASA_Widget_C.GetOverrideHighligteableWidgetBP
 // 0x0008 (0x0008 - 0x0000)
 struct Slider_ASA_Widget_C_GetOverrideHighligteableWidgetBP final
 {
 public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                ReturnValue_GetOverrideHighligteableWidgetBP;      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Slider_ASA_Widget_C_GetOverrideHighligteableWidgetBP;
 
 // Function Slider_ASA_Widget.Slider_ASA_Widget_C.ExecuteUbergraph_Slider_ASA_Widget
 // 0x0108 (0x0108 - 0x0000)
@@ -99,17 +95,15 @@ public:
 	double                                        CallFunc_EqualEqual_DoubleDouble_B_ImplicitCast;   // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetValue_InValue_ImplicitCast;            // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Slider_ASA_Widget_C_ExecuteUbergraph_Slider_ASA_Widget;
 
 // Function Slider_ASA_Widget.Slider_ASA_Widget_C.BPExecutedCommandForPrimalUI
 // 0x0080 (0x0080 - 0x0000)
 struct Slider_ASA_Widget_C_BPExecutedCommandForPrimalUI final
 {
 public:
-	class FName                                   CommandName;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FBPNetExecParams                       ExecParams;                                        // 0x0008(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FName                                   CommandName_BPExecutedCommandForPrimalUI;          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FBPNetExecParams                       ExecParams_BPExecutedCommandForPrimalUI;           // 0x0008(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_Slider_ASA_Widget_C_BPExecutedCommandForPrimalUI;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

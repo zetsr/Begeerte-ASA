@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UTPV_ClimbPick_MaleAnimBP_C>();
 	}
 };
-DUMPER7_ASSERTS_UTPV_ClimbPick_MaleAnimBP_C;
 
 SDK_NAMESPACE_END

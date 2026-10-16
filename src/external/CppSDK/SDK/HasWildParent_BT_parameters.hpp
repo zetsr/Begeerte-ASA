@@ -32,7 +32,6 @@ public:
 	class APrimalDinoCharacter*                   CallFunc_GetFirstValidWildFollowingParentRef_ReturnValue; // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HasWildParent_BT_C_ExecuteUbergraph_HasWildParent_BT;
 
 // Function HasWildParent_BT.HasWildParent_BT_C.ReceiveConditionCheck
 // 0x0008 (0x0008 - 0x0000)
@@ -41,7 +40,6 @@ struct HasWildParent_BT_C_ReceiveConditionCheck final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HasWildParent_BT_C_ReceiveConditionCheck;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

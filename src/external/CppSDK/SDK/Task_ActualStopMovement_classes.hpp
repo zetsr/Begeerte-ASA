@@ -41,6 +41,5 @@ public:
 		return GetDefaultObjImpl<UTask_ActualStopMovement_C>();
 	}
 };
-DUMPER7_ASSERTS_UTask_ActualStopMovement_C;
 
 SDK_NAMESPACE_END

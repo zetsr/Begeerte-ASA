@@ -25,7 +25,6 @@ struct HostSession_Switch_C_BPPopulateMods final
 public:
 	TArray<struct FInstalledMod>                  ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_BPPopulateMods;
 
 // Function HostSession_Switch.HostSession_Switch_C.DoSettingsMatchAnyDefaults
 // 0x0004 (0x0004 - 0x0000)
@@ -37,7 +36,6 @@ public:
 	bool                                          CallFunc_DoesSettingsMatchSettingsDataAsset_ReturnValue_1; // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesSettingsMatchSettingsDataAsset_ReturnValue_2; // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_DoSettingsMatchAnyDefaults;
 
 // Function HostSession_Switch.HostSession_Switch_C.ExecuteUbergraph_HostSession_Switch
 // 0x00E8 (0x00E8 - 0x0000)
@@ -79,7 +77,6 @@ public:
 	TArray<struct FInstalledMod>                  K2Node_CustomEvent_installed_mods;                 // 0x00D0(0x0010)(ConstParm, ReferenceParm)
 	bool                                          K2Node_CustomEvent_is_authenticated;               // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_ExecuteUbergraph_HostSession_Switch;
 
 // Function HostSession_Switch.HostSession_Switch_C.GetMapSelectScrollBox
 // 0x0008 (0x0008 - 0x0000)
@@ -88,7 +85,6 @@ struct HostSession_Switch_C_GetMapSelectScrollBox final
 public:
 	class UScrollBox*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_GetMapSelectScrollBox;
 
 // Function HostSession_Switch.HostSession_Switch_C.GetSelectedMapIndex
 // 0x0008 (0x0008 - 0x0000)
@@ -98,7 +94,6 @@ public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_GetSelectedMapIndex_index;                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_GetSelectedMapIndex;
 
 // Function HostSession_Switch.HostSession_Switch_C.IsInMapSelectView
 // 0x0002 (0x0002 - 0x0000)
@@ -108,7 +103,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_IsInMapSelectView;
 
 // Function HostSession_Switch.HostSession_Switch_C.OnGetInstalledMods
 // 0x0010 (0x0010 - 0x0000)
@@ -117,7 +111,6 @@ struct HostSession_Switch_C_OnGetInstalledMods final
 public:
 	TArray<struct FInstalledMod>                  installed_mods;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_OnGetInstalledMods;
 
 // Function HostSession_Switch.HostSession_Switch_C.OnIsAuthenticated
 // 0x0001 (0x0001 - 0x0000)
@@ -126,7 +119,6 @@ struct HostSession_Switch_C_OnIsAuthenticated final
 public:
 	bool                                          is_authenticated;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_OnIsAuthenticated;
 
 // Function HostSession_Switch.HostSession_Switch_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -135,7 +127,6 @@ struct HostSession_Switch_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_PreConstruct;
 
 // Function HostSession_Switch.HostSession_Switch_C.SetMainMapSelectEntry
 // 0x0078 (0x0078 - 0x0000)
@@ -160,7 +151,6 @@ public:
 	struct FMapDescription                        CallFunc_GetMapInfo_OutDescription;                // 0x0048(0x0020)()
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_SetMainMapSelectEntry;
 
 // Function HostSession_Switch.HostSession_Switch_C.SetSelectedMapIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -169,7 +159,6 @@ struct HostSession_Switch_C_SetSelectedMapIndex final
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_SetSelectedMapIndex;
 
 // Function HostSession_Switch.HostSession_Switch_C.SetupMapSelectEntries
 // 0x0030 (0x0030 - 0x0000)
@@ -186,7 +175,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_SetupMapSelectEntries;
 
 // Function HostSession_Switch.HostSession_Switch_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -196,7 +184,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_HostSession_Switch_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<ALeftClimbing_ImpactEffect_Rock_C>();
 	}
 };
-DUMPER7_ASSERTS_ALeftClimbing_ImpactEffect_Rock_C;
 
 SDK_NAMESPACE_END

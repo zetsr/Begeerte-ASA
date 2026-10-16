@@ -32,7 +32,6 @@ struct alignas(0x10) FMassEnvQueryEntityInfoBlueprintWrapper final
 public:
 	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassEnvQueryEntityInfoBlueprintWrapper;
 
 // ScriptStruct MassEQS.MassEnvQueryEntityInfo
 // 0x0070 (0x0070 - 0x0000)
@@ -41,13 +40,11 @@ struct alignas(0x10) FMassEnvQueryEntityInfo final
 public:
 	uint8                                         Pad_0[0x70];                                       // 0x0000(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMassEnvQueryEntityInfo;
 
 // ScriptStruct MassEQS.MassEQSRequestHandle
 // 0x0000 (0x0008 - 0x0008)
 struct FMassEQSRequestHandle final : public FIndexedHandleBase
 {
 };
-DUMPER7_ASSERTS_FMassEQSRequestHandle;
 
 SDK_NAMESPACE_END

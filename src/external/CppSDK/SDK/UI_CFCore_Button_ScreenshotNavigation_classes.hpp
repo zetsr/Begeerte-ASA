@@ -52,6 +52,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Button_ScreenshotNavigation_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Button_ScreenshotNavigation_C;
 
 SDK_NAMESPACE_END

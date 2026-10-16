@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Human_Male_Faces_Enum_structs.hpp"
 #include "Human_FaceCustomization_AnimBP_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "Human_Male_Faces_Enum_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -205,6 +205,5 @@ public:
 		return GetDefaultObjImpl<UHuman_FaceCustomization_AnimBP_C>();
 	}
 };
-DUMPER7_ASSERTS_UHuman_FaceCustomization_AnimBP_C;
 
 SDK_NAMESPACE_END

@@ -92,6 +92,5 @@ public:
 		return GetDefaultObjImpl<UFFXFSR3Settings>();
 	}
 };
-DUMPER7_ASSERTS_UFFXFSR3Settings;
 
 SDK_NAMESPACE_END

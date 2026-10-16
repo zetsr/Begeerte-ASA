@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ArrayOfStrings_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PrimalItem_Note_classes.hpp"
-#include "ArrayOfStrings_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -71,6 +71,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_StartingNote_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_StartingNote_C;
 
 SDK_NAMESPACE_END

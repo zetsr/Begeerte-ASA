@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_WebBall_WeapJumpingSpider_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemAmmo_WebBall_WeapJumpingSpider_C;
 
 SDK_NAMESPACE_END

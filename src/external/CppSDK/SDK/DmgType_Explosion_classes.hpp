@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDmgType_Explosion_C>();
 	}
 };
-DUMPER7_ASSERTS_UDmgType_Explosion_C;
 
 SDK_NAMESPACE_END

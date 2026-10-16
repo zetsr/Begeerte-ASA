@@ -42,7 +42,6 @@ public:
 		return GetDefaultObjImpl<UBinkFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UBinkFunctionLibrary;
 
 // Class BinkMediaPlayer.BinkMediaPlayer
 // 0x0108 (0x0130 - 0x0028)
@@ -125,7 +124,6 @@ public:
 		return GetDefaultObjImpl<UBinkMediaPlayer>();
 	}
 };
-DUMPER7_ASSERTS_UBinkMediaPlayer;
 
 // Class BinkMediaPlayer.BinkMediaTexture
 // 0x0038 (0x0170 - 0x0138)
@@ -162,7 +160,6 @@ public:
 		return GetDefaultObjImpl<UBinkMediaTexture>();
 	}
 };
-DUMPER7_ASSERTS_UBinkMediaTexture;
 
 // Class BinkMediaPlayer.BinkMoviePlayerSettings
 // 0x0030 (0x0058 - 0x0028)
@@ -192,6 +189,5 @@ public:
 		return GetDefaultObjImpl<UBinkMoviePlayerSettings>();
 	}
 };
-DUMPER7_ASSERTS_UBinkMoviePlayerSettings;
 
 SDK_NAMESPACE_END

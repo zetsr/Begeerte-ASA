@@ -26,7 +26,6 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetHasBPOverrideFallVelocityBuff_ReturnValue; // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_OverrideVelocity_C_BPDeactivated;
 
 // Function Buff_OverrideVelocity.Buff_OverrideVelocity_C.BPOverrideCharacterNewFallVelocity
 // 0x01B8 (0x01B8 - 0x0000)
@@ -65,7 +64,6 @@ public:
 	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_VectorFloat_B_ImplicitCast;      // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_OverrideVelocity_C_BPOverrideCharacterNewFallVelocity;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

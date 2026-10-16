@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResourceGeneric_Curing_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResourceGeneric_Curing_C;
 
 SDK_NAMESPACE_END

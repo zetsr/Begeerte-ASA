@@ -28,7 +28,6 @@ public:
 	float                                         ReturnValue;                                       // 0x0070(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_74[0xC];                                       // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SPCameraMode_GetCustomFocusDistance;
 
 // Function SP_Camera.SPCam_AttachedCamera.ChooseViewCameraComponent
 // 0x0010 (0x0010 - 0x0000)
@@ -38,7 +37,6 @@ public:
 	class AActor*                                 ViewTarget;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCameraComponent*                       ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SPCam_AttachedCamera_ChooseViewCameraComponent;
 
 // Function SP_Camera.SPPlayerCameraManager.ConfigureAlternateCamera
 // 0x0018 (0x0018 - 0x0000)
@@ -50,7 +48,6 @@ public:
 	float                                         NewAltCameraTransitionTime;                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_SPPlayerCameraManager_ConfigureAlternateCamera;
 
 // Function SP_Camera.SPPlayerCameraManager.GetCurrentCameraMode
 // 0x0008 (0x0008 - 0x0000)
@@ -59,7 +56,6 @@ struct SPPlayerCameraManager_GetCurrentCameraMode final
 public:
 	class USPCameraMode*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SPPlayerCameraManager_GetCurrentCameraMode;
 
 // Function SP_Camera.SPPlayerCameraManager.SetDebugCameraStyle
 // 0x0001 (0x0001 - 0x0000)
@@ -68,7 +64,6 @@ struct SPPlayerCameraManager_SetDebugCameraStyle final
 public:
 	EDebugCameraStyle                             NewDebugCameraStyle;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SPPlayerCameraManager_SetDebugCameraStyle;
 
 // Function SP_Camera.SPPlayerCameraManager.SetUsingAlternateCamera
 // 0x0001 (0x0001 - 0x0000)
@@ -77,7 +72,6 @@ struct SPPlayerCameraManager_SetUsingAlternateCamera final
 public:
 	bool                                          bNewUsingAltCamera;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SPPlayerCameraManager_SetUsingAlternateCamera;
 
 // Function SP_Camera.SPPlayerCameraManager.SetViewPitchLimits
 // 0x0008 (0x0008 - 0x0000)
@@ -87,7 +81,6 @@ public:
 	float                                         MinPitch;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxPitch;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SPPlayerCameraManager_SetViewPitchLimits;
 
 // Function SP_Camera.SPPlayerCameraManager.StopAmbientCameraShake
 // 0x0001 (0x0001 - 0x0000)
@@ -96,7 +89,6 @@ struct SPPlayerCameraManager_StopAmbientCameraShake final
 public:
 	bool                                          bImmediate;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SPPlayerCameraManager_StopAmbientCameraShake;
 
 // Function SP_Camera.SPPlayerCameraManager.GetCameraClassForCharacter
 // 0x0010 (0x0010 - 0x0000)
@@ -106,7 +98,6 @@ public:
 	const class AActor*                           InViewTarget;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class USPCameraMode>              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SPPlayerCameraManager_GetCameraClassForCharacter;
 
 // Function SP_Camera.SPPlayerCameraManager.IsUsingAlternateCamera
 // 0x0001 (0x0001 - 0x0000)
@@ -115,7 +106,6 @@ struct SPPlayerCameraManager_IsUsingAlternateCamera final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SPPlayerCameraManager_IsUsingAlternateCamera;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

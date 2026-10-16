@@ -8784,9 +8784,9 @@ void UDiscordClient::ExchangeChildToken(const class FString& parentApplicationTo
 // Parameters:
 // EDiscordAuthorizationTokenType          tokenType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    token                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& ID, const class FString& Name)>&Callback                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& ID, const class FString& Name_0)>&Callback                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UDiscordClient::FetchCurrentUser(EDiscordAuthorizationTokenType tokenType, const class FString& token, const TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& ID, const class FString& Name)>& Callback)
+void UDiscordClient::FetchCurrentUser(EDiscordAuthorizationTokenType tokenType, const class FString& token, const TDelegate<void(class UDiscordClientResult* Result, const struct FDiscordUniqueID& ID, const class FString& Name_0)>& Callback)
 {
 	static class UFunction* Func = nullptr;
 

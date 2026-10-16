@@ -29,7 +29,6 @@ public:
 	bool                                          CallFunc_IsLocallyControlledByPlayer_ReturnValue;  // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_ActivateVFX;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.ApplyMeshColorization
 // 0x0003 (0x0003 - 0x0000)
@@ -40,7 +39,6 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_ApplyMeshColorization;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.AreValidTorchIDs
 // 0x0038 (0x0038 - 0x0000)
@@ -61,7 +59,6 @@ public:
 	class UPrimalItem*                            CallFunc_BPFindItemWithID_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_AreValidTorchIDs;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.BPDeactivated
 // 0x0008 (0x0008 - 0x0000)
@@ -70,7 +67,6 @@ struct Buff_BeltTorch_C_BPDeactivated final
 public:
 	class AActor*                                 ForInstigator;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_BPDeactivated;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.BPGetMultiUseEntries
 // 0x0028 (0x0028 - 0x0000)
@@ -81,7 +77,6 @@ public:
 	TArray<struct FMultiUseEntry>                 MultiUseEntries;                                   // 0x0008(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 	TArray<struct FMultiUseEntry>                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_BPGetMultiUseEntries;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.BPOnInputEvent
 // 0x0001 (0x0001 - 0x0000)
@@ -90,7 +85,6 @@ struct Buff_BeltTorch_C_BPOnInputEvent final
 public:
 	EPrimalCharacterInputType                     inputType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_BPOnInputEvent;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.BPTryMultiUse
 // 0x0018 (0x0018 - 0x0000)
@@ -102,7 +96,6 @@ public:
 	class FName                                   UseName;                                           // 0x000C(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_BPTryMultiUse;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.BuffTickClient
 // 0x0004 (0x0004 - 0x0000)
@@ -111,7 +104,6 @@ struct Buff_BeltTorch_C_BuffTickClient final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_BuffTickClient;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.BuffTickServer
 // 0x0004 (0x0004 - 0x0000)
@@ -120,7 +112,6 @@ struct Buff_BeltTorch_C_BuffTickServer final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_BuffTickServer;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.DeactivateBeltTorch
 // 0x0003 (0x0003 - 0x0000)
@@ -131,7 +122,6 @@ public:
 	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_DeactivateBeltTorch;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.ExecuteUbergraph_Buff_BeltTorch
 // 0x00A8 (0x00A8 - 0x0000)
@@ -185,7 +175,6 @@ public:
 	float                                         CallFunc_Multiply_DoubleFloat_B_ImplicitCast;      // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_AddItemDurability_durabilityToAdd_ImplicitCast; // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_ExecuteUbergraph_Buff_BeltTorch;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.InitializeAssociatedWeaponClass
 // 0x0010 (0x0010 - 0x0000)
@@ -195,7 +184,6 @@ public:
 	class UClass*                                 WeaponClass;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_InitializeAssociatedWeaponClass;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.InitializeDefaultTorchWeapon
 // 0x0020 (0x0020 - 0x0000)
@@ -209,7 +197,6 @@ public:
 	class AShooterWeapon_Melee*                   K2Node_DynamicCast_AsShooter_Weapon_Melee;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_InitializeDefaultTorchWeapon;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.InitializeTorchFromItem
 // 0x0060 (0x0060 - 0x0000)
@@ -238,7 +225,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_InitializeTorchFromItem;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.InitializeTorchIDs
 // 0x0018 (0x0018 - 0x0000)
@@ -252,7 +238,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_InitializeTorchIDs;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.InitializeTorchItem
 // 0x0038 (0x0038 - 0x0000)
@@ -272,7 +257,6 @@ public:
 	class UPrimalItem*                            CallFunc_BPFindItemWithID_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_InitializeTorchItem;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.InitializeTorchMesh
 // 0x0003 (0x0003 - 0x0000)
@@ -283,7 +267,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_InitializeTorchMesh;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.SetFlameColorIndex
 // 0x0008 (0x0008 - 0x0000)
@@ -293,7 +276,6 @@ public:
 	int32                                         theIndex;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_SetFlameColorIndex;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.SetTorchColorByIndex
 // 0x0098 (0x0098 - 0x0000)
@@ -328,7 +310,6 @@ public:
 	class UPrimalItem_WeaponTorch_C*              K2Node_DynamicCast_AsPrimal_Item_Weapon_Torch;     // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_SetTorchColorByIndex;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.SetTorchColorByIndex_Multicast
 // 0x0014 (0x0014 - 0x0000)
@@ -338,7 +319,6 @@ public:
 	struct FLinearColor                           theColor;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         theIndex;                                          // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_SetTorchColorByIndex_Multicast;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.SetTorchFlameColor
 // 0x0038 (0x0038 - 0x0000)
@@ -350,7 +330,6 @@ public:
 	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_SetTorchFlameColor;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.SetTorchFlameColor_Multicast
 // 0x0010 (0x0010 - 0x0000)
@@ -359,7 +338,6 @@ struct Buff_BeltTorch_C_SetTorchFlameColor_Multicast final
 public:
 	struct FLinearColor                           theColor;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_SetTorchFlameColor_Multicast;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.ShouldDeactivateBuff
 // 0x0020 (0x0020 - 0x0000)
@@ -377,7 +355,6 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_ShouldDeactivateBuff;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.Update All Torch Colors
 // 0x0024 (0x0024 - 0x0000)
@@ -391,7 +368,6 @@ public:
 	struct FLinearColor                           CallFunc_Array_Get_Item;                           // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_Update_All_Torch_Colors;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.UpdateTorchColorsArray
 // 0x0068 (0x0068 - 0x0000)
@@ -422,7 +398,6 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0066(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0067(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_UpdateTorchColorsArray;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.UpdateTorchFlameColor
 // 0x0020 (0x0020 - 0x0000)
@@ -435,7 +410,6 @@ public:
 	bool                                          CallFunc_NotEqual_LinearColorLinearColor_ReturnValue; // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_UpdateTorchFlameColor;
 
 // Function Buff_BeltTorch.Buff_BeltTorch_C.UpdateTorchType
 // 0x01E0 (0x01E0 - 0x0000)
@@ -452,7 +426,6 @@ public:
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0070(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x00D0(0x0108)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_Buff_BeltTorch_C_UpdateTorchType;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

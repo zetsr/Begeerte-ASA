@@ -47,7 +47,6 @@ public:
 		return GetDefaultObjImpl<UUIComponent>();
 	}
 };
-DUMPER7_ASSERTS_UUIComponent;
 
 // Class UMG.Visual
 // 0x0000 (0x0028 - 0x0028)
@@ -67,7 +66,6 @@ public:
 		return GetDefaultObjImpl<UVisual>();
 	}
 };
-DUMPER7_ASSERTS_UVisual;
 
 // Class UMG.AsyncTaskDownloadBinkMovieCached
 // 0x0048 (0x0078 - 0x0030)
@@ -101,7 +99,6 @@ public:
 		return GetDefaultObjImpl<UAsyncTaskDownloadBinkMovieCached>();
 	}
 };
-DUMPER7_ASSERTS_UAsyncTaskDownloadBinkMovieCached;
 
 // Class UMG.Widget
 // 0x01D8 (0x0200 - 0x0028)
@@ -236,7 +233,6 @@ public:
 		return GetDefaultObjImpl<UWidget>();
 	}
 };
-DUMPER7_ASSERTS_UWidget;
 
 // Class UMG.SpinBox
 // 0x0640 (0x0840 - 0x0200)
@@ -319,7 +315,6 @@ public:
 		return GetDefaultObjImpl<USpinBox>();
 	}
 };
-DUMPER7_ASSERTS_USpinBox;
 
 // Class UMG.ListViewBase
 // 0x0128 (0x0328 - 0x0200)
@@ -377,7 +372,6 @@ public:
 		return GetDefaultObjImpl<UListViewBase>();
 	}
 };
-DUMPER7_ASSERTS_UListViewBase;
 
 // Class UMG.PanelSlot
 // 0x0010 (0x0038 - 0x0028)
@@ -404,7 +398,6 @@ public:
 		return GetDefaultObjImpl<UPanelSlot>();
 	}
 };
-DUMPER7_ASSERTS_UPanelSlot;
 
 // Class UMG.VerticalBoxSlot
 // 0x0028 (0x0060 - 0x0038)
@@ -437,7 +430,6 @@ public:
 		return GetDefaultObjImpl<UVerticalBoxSlot>();
 	}
 };
-DUMPER7_ASSERTS_UVerticalBoxSlot;
 
 // Class UMG.ListView
 // 0x08A8 (0x0BD0 - 0x0328)
@@ -515,7 +507,6 @@ public:
 		return GetDefaultObjImpl<UListView>();
 	}
 };
-DUMPER7_ASSERTS_UListView;
 
 // Class UMG.ListViewDesignerPreviewItem
 // 0x0000 (0x0028 - 0x0028)
@@ -535,7 +526,6 @@ public:
 		return GetDefaultObjImpl<UListViewDesignerPreviewItem>();
 	}
 };
-DUMPER7_ASSERTS_UListViewDesignerPreviewItem;
 
 // Class UMG.PrimalWordList
 // 0x0010 (0x0040 - 0x0030)
@@ -558,7 +548,6 @@ public:
 		return GetDefaultObjImpl<UPrimalWordList>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalWordList;
 
 // Class UMG.PanelWidget
 // 0x0018 (0x0218 - 0x0200)
@@ -600,7 +589,6 @@ public:
 		return GetDefaultObjImpl<UPanelWidget>();
 	}
 };
-DUMPER7_ASSERTS_UPanelWidget;
 
 // Class UMG.ContentWidget
 // 0x0000 (0x0218 - 0x0218)
@@ -626,7 +614,6 @@ public:
 		return GetDefaultObjImpl<UContentWidget>();
 	}
 };
-DUMPER7_ASSERTS_UContentWidget;
 
 // Class UMG.Button
 // 0x0478 (0x0690 - 0x0218)
@@ -689,7 +676,6 @@ public:
 		return GetDefaultObjImpl<UButton>();
 	}
 };
-DUMPER7_ASSERTS_UButton;
 
 // Class UMG.WidgetSwitcher
 // 0x0018 (0x0230 - 0x0218)
@@ -722,7 +708,6 @@ public:
 		return GetDefaultObjImpl<UWidgetSwitcher>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetSwitcher;
 
 // Class UMG.SlateAccessibleWidgetData
 // 0x0048 (0x0070 - 0x0028)
@@ -752,7 +737,6 @@ public:
 		return GetDefaultObjImpl<USlateAccessibleWidgetData>();
 	}
 };
-DUMPER7_ASSERTS_USlateAccessibleWidgetData;
 
 // Class UMG.UniformGridSlot
 // 0x0018 (0x0050 - 0x0038)
@@ -786,7 +770,6 @@ public:
 		return GetDefaultObjImpl<UUniformGridSlot>();
 	}
 };
-DUMPER7_ASSERTS_UUniformGridSlot;
 
 // Class UMG.UserWidget
 // 0x0168 (0x0368 - 0x0200)
@@ -944,7 +927,6 @@ public:
 		return GetDefaultObjImpl<UUserWidget>();
 	}
 };
-DUMPER7_ASSERTS_UUserWidget;
 
 // Class UMG.UserWidgetExtension
 // 0x0000 (0x0028 - 0x0028)
@@ -964,7 +946,6 @@ public:
 		return GetDefaultObjImpl<UUserWidgetExtension>();
 	}
 };
-DUMPER7_ASSERTS_UUserWidgetExtension;
 
 // Class UMG.CheckBox
 // 0x0998 (0x0BB0 - 0x0218)
@@ -1011,7 +992,6 @@ public:
 		return GetDefaultObjImpl<UCheckBox>();
 	}
 };
-DUMPER7_ASSERTS_UCheckBox;
 
 // Class UMG.UIComponentContainer
 // 0x0010 (0x0038 - 0x0028)
@@ -1034,7 +1014,6 @@ public:
 		return GetDefaultObjImpl<UUIComponentContainer>();
 	}
 };
-DUMPER7_ASSERTS_UUIComponentContainer;
 
 // Class UMG.UserWidgetBlueprint
 // 0x0000 (0x00A8 - 0x00A8)
@@ -1054,7 +1033,6 @@ public:
 		return GetDefaultObjImpl<UUserWidgetBlueprint>();
 	}
 };
-DUMPER7_ASSERTS_UUserWidgetBlueprint;
 
 // Class UMG.ComboBoxKey
 // 0x17F0 (0x19F0 - 0x0200)
@@ -1105,7 +1083,6 @@ public:
 		return GetDefaultObjImpl<UComboBoxKey>();
 	}
 };
-DUMPER7_ASSERTS_UComboBoxKey;
 
 // Class UMG.WidgetBlueprintGeneratedClassExtension
 // 0x0000 (0x0028 - 0x0028)
@@ -1125,7 +1102,6 @@ public:
 		return GetDefaultObjImpl<UWidgetBlueprintGeneratedClassExtension>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetBlueprintGeneratedClassExtension;
 
 // Class UMG.WidgetFieldNotificationExtension
 // 0x0018 (0x0040 - 0x0028)
@@ -1148,7 +1124,6 @@ public:
 		return GetDefaultObjImpl<UWidgetFieldNotificationExtension>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetFieldNotificationExtension;
 
 // Class UMG.WidgetNavigation
 // 0x00D8 (0x0100 - 0x0028)
@@ -1176,7 +1151,6 @@ public:
 		return GetDefaultObjImpl<UWidgetNavigation>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetNavigation;
 
 // Class UMG.CanvasPanel
 // 0x0030 (0x0248 - 0x0218)
@@ -1205,7 +1179,6 @@ public:
 		return GetDefaultObjImpl<UCanvasPanel>();
 	}
 };
-DUMPER7_ASSERTS_UCanvasPanel;
 
 // Class UMG.MovieScene2DTransformPropertySystem
 // 0x0000 (0x0058 - 0x0058)
@@ -1225,7 +1198,6 @@ public:
 		return GetDefaultObjImpl<UMovieScene2DTransformPropertySystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieScene2DTransformPropertySystem;
 
 // Class UMG.WidgetLayoutLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -1269,7 +1241,6 @@ public:
 		return GetDefaultObjImpl<UWidgetLayoutLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetLayoutLibrary;
 
 // Class UMG.MovieScene2DTransformSection
 // 0x0780 (0x0878 - 0x00F8)
@@ -1298,7 +1269,6 @@ public:
 		return GetDefaultObjImpl<UMovieScene2DTransformSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieScene2DTransformSection;
 
 // Class UMG.MovieScene2DTransformTrack
 // 0x0000 (0x0128 - 0x0128)
@@ -1318,7 +1288,6 @@ public:
 		return GetDefaultObjImpl<UMovieScene2DTransformTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieScene2DTransformTrack;
 
 // Class UMG.MovieSceneMarginPropertySystem
 // 0x0000 (0x0058 - 0x0058)
@@ -1338,7 +1307,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneMarginPropertySystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneMarginPropertySystem;
 
 // Class UMG.MovieSceneMarginSection
 // 0x0448 (0x0540 - 0x00F8)
@@ -1365,7 +1333,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneMarginSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneMarginSection;
 
 // Class UMG.MovieSceneMarginTrack
 // 0x0000 (0x0128 - 0x0128)
@@ -1385,7 +1352,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneMarginTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneMarginTrack;
 
 // Class UMG.MovieSceneWidgetMaterialSystem
 // 0x0168 (0x01A8 - 0x0040)
@@ -1408,7 +1374,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneWidgetMaterialSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneWidgetMaterialSystem;
 
 // Class UMG.WidgetBlueprintGeneratedClass
 // 0x0070 (0x03E8 - 0x0378)
@@ -1440,7 +1405,6 @@ public:
 		return GetDefaultObjImpl<UWidgetBlueprintGeneratedClass>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetBlueprintGeneratedClass;
 
 // Class UMG.MovieSceneWidgetMaterialTrack
 // 0x0028 (0x0138 - 0x0110)
@@ -1465,7 +1429,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneWidgetMaterialTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneWidgetMaterialTrack;
 
 // Class UMG.UMGSequencePlayer
 // 0x02A0 (0x02C8 - 0x0028)
@@ -1497,7 +1460,6 @@ public:
 		return GetDefaultObjImpl<UUMGSequencePlayer>();
 	}
 };
-DUMPER7_ASSERTS_UUMGSequencePlayer;
 
 // Class UMG.UMGSequenceTickManager
 // 0x0098 (0x00C0 - 0x0028)
@@ -1522,7 +1484,6 @@ public:
 		return GetDefaultObjImpl<UUMGSequenceTickManager>();
 	}
 };
-DUMPER7_ASSERTS_UUMGSequenceTickManager;
 
 // Class UMG.WidgetAnimation
 // 0x0030 (0x0098 - 0x0068)
@@ -1560,7 +1521,6 @@ public:
 		return GetDefaultObjImpl<UWidgetAnimation>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetAnimation;
 
 // Class UMG.WidgetAnimationDelegateBinding
 // 0x0010 (0x0038 - 0x0028)
@@ -1583,7 +1543,6 @@ public:
 		return GetDefaultObjImpl<UWidgetAnimationDelegateBinding>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetAnimationDelegateBinding;
 
 // Class UMG.WidgetAnimationPlayCallbackProxy
 // 0x0018 (0x0040 - 0x0028)
@@ -1611,7 +1570,6 @@ public:
 		return GetDefaultObjImpl<UWidgetAnimationPlayCallbackProxy>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetAnimationPlayCallbackProxy;
 
 // Class UMG.PropertyBinding
 // 0x0048 (0x0070 - 0x0028)
@@ -1636,7 +1594,6 @@ public:
 		return GetDefaultObjImpl<UPropertyBinding>();
 	}
 };
-DUMPER7_ASSERTS_UPropertyBinding;
 
 // Class UMG.BoolBinding
 // 0x0000 (0x0070 - 0x0070)
@@ -1659,7 +1616,6 @@ public:
 		return GetDefaultObjImpl<UBoolBinding>();
 	}
 };
-DUMPER7_ASSERTS_UBoolBinding;
 
 // Class UMG.WidgetBinding
 // 0x0000 (0x0070 - 0x0070)
@@ -1682,7 +1638,6 @@ public:
 		return GetDefaultObjImpl<UWidgetBinding>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetBinding;
 
 // Class UMG.BrushBinding
 // 0x0008 (0x0078 - 0x0070)
@@ -1708,7 +1663,6 @@ public:
 		return GetDefaultObjImpl<UBrushBinding>();
 	}
 };
-DUMPER7_ASSERTS_UBrushBinding;
 
 // Class UMG.CheckedStateBinding
 // 0x0008 (0x0078 - 0x0070)
@@ -1734,7 +1688,6 @@ public:
 		return GetDefaultObjImpl<UCheckedStateBinding>();
 	}
 };
-DUMPER7_ASSERTS_UCheckedStateBinding;
 
 // Class UMG.WidgetBinaryStateRegistration
 // 0x0000 (0x0028 - 0x0028)
@@ -1754,7 +1707,6 @@ public:
 		return GetDefaultObjImpl<UWidgetBinaryStateRegistration>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetBinaryStateRegistration;
 
 // Class UMG.WidgetDisabledStateRegistration
 // 0x0000 (0x0028 - 0x0028)
@@ -1774,7 +1726,6 @@ public:
 		return GetDefaultObjImpl<UWidgetDisabledStateRegistration>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetDisabledStateRegistration;
 
 // Class UMG.ColorBinding
 // 0x0008 (0x0078 - 0x0070)
@@ -1801,7 +1752,6 @@ public:
 		return GetDefaultObjImpl<UColorBinding>();
 	}
 };
-DUMPER7_ASSERTS_UColorBinding;
 
 // Class UMG.FloatBinding
 // 0x0000 (0x0070 - 0x0070)
@@ -1824,7 +1774,6 @@ public:
 		return GetDefaultObjImpl<UFloatBinding>();
 	}
 };
-DUMPER7_ASSERTS_UFloatBinding;
 
 // Class UMG.Int32Binding
 // 0x0000 (0x0070 - 0x0070)
@@ -1847,7 +1796,6 @@ public:
 		return GetDefaultObjImpl<UInt32Binding>();
 	}
 };
-DUMPER7_ASSERTS_UInt32Binding;
 
 // Class UMG.MouseCursorBinding
 // 0x0000 (0x0070 - 0x0070)
@@ -1870,7 +1818,6 @@ public:
 		return GetDefaultObjImpl<UMouseCursorBinding>();
 	}
 };
-DUMPER7_ASSERTS_UMouseCursorBinding;
 
 // Class UMG.TextBinding
 // 0x0008 (0x0078 - 0x0070)
@@ -1897,7 +1844,6 @@ public:
 		return GetDefaultObjImpl<UTextBinding>();
 	}
 };
-DUMPER7_ASSERTS_UTextBinding;
 
 // Class UMG.WidgetHoveredStateRegistration
 // 0x0000 (0x0028 - 0x0028)
@@ -1917,7 +1863,6 @@ public:
 		return GetDefaultObjImpl<UWidgetHoveredStateRegistration>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetHoveredStateRegistration;
 
 // Class UMG.WidgetPressedStateRegistration
 // 0x0000 (0x0028 - 0x0028)
@@ -1937,7 +1882,6 @@ public:
 		return GetDefaultObjImpl<UWidgetPressedStateRegistration>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetPressedStateRegistration;
 
 // Class UMG.WidgetSelectedStateRegistration
 // 0x0000 (0x0028 - 0x0028)
@@ -1957,7 +1901,6 @@ public:
 		return GetDefaultObjImpl<UWidgetSelectedStateRegistration>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetSelectedStateRegistration;
 
 // Class UMG.WidgetEnumStateRegistration
 // 0x0000 (0x0028 - 0x0028)
@@ -1977,7 +1920,6 @@ public:
 		return GetDefaultObjImpl<UWidgetEnumStateRegistration>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetEnumStateRegistration;
 
 // Class UMG.WidgetStateSettings
 // 0x06B0 (0x06E8 - 0x0038)
@@ -2000,7 +1942,6 @@ public:
 		return GetDefaultObjImpl<UWidgetStateSettings>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetStateSettings;
 
 // Class UMG.VisibilityBinding
 // 0x0000 (0x0070 - 0x0070)
@@ -2023,7 +1964,6 @@ public:
 		return GetDefaultObjImpl<UVisibilityBinding>();
 	}
 };
-DUMPER7_ASSERTS_UVisibilityBinding;
 
 // Class UMG.AsyncTaskDownloadImage
 // 0x0020 (0x0050 - 0x0030)
@@ -2050,7 +1990,6 @@ public:
 		return GetDefaultObjImpl<UAsyncTaskDownloadImage>();
 	}
 };
-DUMPER7_ASSERTS_UAsyncTaskDownloadImage;
 
 // Class UMG.GameViewportSubsystem
 // 0x0080 (0x00B0 - 0x0030)
@@ -2085,7 +2024,6 @@ public:
 		return GetDefaultObjImpl<UGameViewportSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UGameViewportSubsystem;
 
 // Class UMG.UserListEntry
 // 0x0000 (0x0000 - 0x0000)
@@ -2119,7 +2057,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IUserListEntry;
 
 // Class UMG.UserListEntryLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -2144,7 +2081,6 @@ public:
 		return GetDefaultObjImpl<UUserListEntryLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UUserListEntryLibrary;
 
 // Class UMG.UserObjectListEntry
 // 0x0000 (0x0000 - 0x0000)
@@ -2176,7 +2112,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IUserObjectListEntry;
 
 // Class UMG.UserObjectListEntryLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -2199,7 +2134,6 @@ public:
 		return GetDefaultObjImpl<UUserObjectListEntryLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UUserObjectListEntryLibrary;
 
 // Class UMG.BackgroundBlur
 // 0x0108 (0x0320 - 0x0218)
@@ -2244,7 +2178,6 @@ public:
 		return GetDefaultObjImpl<UBackgroundBlur>();
 	}
 };
-DUMPER7_ASSERTS_UBackgroundBlur;
 
 // Class UMG.BackgroundBlurSlot
 // 0x0028 (0x0060 - 0x0038)
@@ -2275,7 +2208,6 @@ public:
 		return GetDefaultObjImpl<UBackgroundBlurSlot>();
 	}
 };
-DUMPER7_ASSERTS_UBackgroundBlurSlot;
 
 // Class UMG.Border
 // 0x0188 (0x03A0 - 0x0218)
@@ -2331,7 +2263,6 @@ public:
 		return GetDefaultObjImpl<UBorder>();
 	}
 };
-DUMPER7_ASSERTS_UBorder;
 
 // Class UMG.BorderSlot
 // 0x0028 (0x0060 - 0x0038)
@@ -2362,7 +2293,6 @@ public:
 		return GetDefaultObjImpl<UBorderSlot>();
 	}
 };
-DUMPER7_ASSERTS_UBorderSlot;
 
 // Class UMG.ButtonSlot
 // 0x0028 (0x0060 - 0x0038)
@@ -2393,7 +2323,6 @@ public:
 		return GetDefaultObjImpl<UButtonSlot>();
 	}
 };
-DUMPER7_ASSERTS_UButtonSlot;
 
 // Class UMG.CanvasPanelSlot
 // 0x0050 (0x0088 - 0x0038)
@@ -2441,7 +2370,6 @@ public:
 		return GetDefaultObjImpl<UCanvasPanelSlot>();
 	}
 };
-DUMPER7_ASSERTS_UCanvasPanelSlot;
 
 // Class UMG.WidgetCheckedStateRegistration
 // 0x0000 (0x0028 - 0x0028)
@@ -2461,7 +2389,6 @@ public:
 		return GetDefaultObjImpl<UWidgetCheckedStateRegistration>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetCheckedStateRegistration;
 
 // Class UMG.CircularThrobber
 // 0x00E0 (0x02E0 - 0x0200)
@@ -2495,7 +2422,6 @@ public:
 		return GetDefaultObjImpl<UCircularThrobber>();
 	}
 };
-DUMPER7_ASSERTS_UCircularThrobber;
 
 // Class UMG.ComboBox
 // 0x06A0 (0x08A0 - 0x0200)
@@ -2524,7 +2450,6 @@ public:
 		return GetDefaultObjImpl<UComboBox>();
 	}
 };
-DUMPER7_ASSERTS_UComboBox;
 
 // Class UMG.ComboBoxString
 // 0x18A0 (0x1AA0 - 0x0200)
@@ -2584,7 +2509,6 @@ public:
 		return GetDefaultObjImpl<UComboBoxString>();
 	}
 };
-DUMPER7_ASSERTS_UComboBoxString;
 
 // Class UMG.DynamicEntryBoxBase
 // 0x00E0 (0x02E0 - 0x0200)
@@ -2625,7 +2549,6 @@ public:
 		return GetDefaultObjImpl<UDynamicEntryBoxBase>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicEntryBoxBase;
 
 // Class UMG.DynamicEntryBox
 // 0x0008 (0x02E8 - 0x02E0)
@@ -2654,7 +2577,6 @@ public:
 		return GetDefaultObjImpl<UDynamicEntryBox>();
 	}
 };
-DUMPER7_ASSERTS_UDynamicEntryBox;
 
 // Class UMG.EditableText
 // 0x0330 (0x0530 - 0x0200)
@@ -2685,8 +2607,8 @@ public:
 	ETextOverflowPolicy                           OverflowPolicy;                                    // 0x04FB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FShapedTextOptions                     ShapedTextOptions;                                 // 0x04FC(0x0003)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4FF[0x1];                                      // 0x04FF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FText& Text)> OnTextChanged;                           // 0x0500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FText& Text, ETextCommit CommitMethod)> OnTextCommitted; // 0x0510(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FText& Text_0)> OnTextChanged;                         // 0x0500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FText& Text_0, ETextCommit CommitMethod)> OnTextCommitted; // 0x0510(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_520[0x10];                                     // 0x0520(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2720,7 +2642,6 @@ public:
 		return GetDefaultObjImpl<UEditableText>();
 	}
 };
-DUMPER7_ASSERTS_UEditableText;
 
 // Class UMG.EditableTextBox
 // 0x0D30 (0x0F30 - 0x0200)
@@ -2753,8 +2674,8 @@ public:
 	ETextOverflowPolicy                           OverflowPolicy;                                    // 0x0EFB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FShapedTextOptions                     ShapedTextOptions;                                 // 0x0EFC(0x0003)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 	uint8                                         Pad_EFF[0x1];                                      // 0x0EFF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FText& Text)> OnTextChanged;                           // 0x0F00(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FText& Text, ETextCommit CommitMethod)> OnTextCommitted; // 0x0F10(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FText& Text_0)> OnTextChanged;                         // 0x0F00(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FText& Text_0, ETextCommit CommitMethod)> OnTextCommitted; // 0x0F10(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_F20[0x10];                                     // 0x0F20(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -2785,7 +2706,6 @@ public:
 		return GetDefaultObjImpl<UEditableTextBox>();
 	}
 };
-DUMPER7_ASSERTS_UEditableTextBox;
 
 // Class UMG.ExpandableArea
 // 0x02B0 (0x04B0 - 0x0200)
@@ -2827,7 +2747,6 @@ public:
 		return GetDefaultObjImpl<UExpandableArea>();
 	}
 };
-DUMPER7_ASSERTS_UExpandableArea;
 
 // Class UMG.GridPanel
 // 0x0030 (0x0248 - 0x0218)
@@ -2857,7 +2776,6 @@ public:
 		return GetDefaultObjImpl<UGridPanel>();
 	}
 };
-DUMPER7_ASSERTS_UGridPanel;
 
 // Class UMG.GridSlot
 // 0x0040 (0x0078 - 0x0038)
@@ -2901,7 +2819,6 @@ public:
 		return GetDefaultObjImpl<UGridSlot>();
 	}
 };
-DUMPER7_ASSERTS_UGridSlot;
 
 // Class UMG.HorizontalBox
 // 0x0010 (0x0228 - 0x0218)
@@ -2927,7 +2844,6 @@ public:
 		return GetDefaultObjImpl<UHorizontalBox>();
 	}
 };
-DUMPER7_ASSERTS_UHorizontalBox;
 
 // Class UMG.HorizontalBoxSlot
 // 0x0028 (0x0060 - 0x0038)
@@ -2961,7 +2877,6 @@ public:
 		return GetDefaultObjImpl<UHorizontalBoxSlot>();
 	}
 };
-DUMPER7_ASSERTS_UHorizontalBoxSlot;
 
 // Class UMG.Image
 // 0x0140 (0x0340 - 0x0200)
@@ -3010,7 +2925,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UImage;
 
 // Class UMG.InputKeySelector
 // 0x06F0 (0x08F0 - 0x0200)
@@ -3027,7 +2941,7 @@ public:
 	bool                                          bAllowGamepadKeys;                                 // 0x08A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8A2[0x6];                                      // 0x08A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FKey>                           EscapeKeys;                                        // 0x08A8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const struct FInputChord& SelectedKey)> OnKeySelected;             // 0x08B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FInputChord& SelectedKey_0)> OnKeySelected;           // 0x08B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnIsSelectingKeyChanged;                           // 0x08C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8D8[0x18];                                     // 0x08D8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
@@ -3056,7 +2970,6 @@ public:
 		return GetDefaultObjImpl<UInputKeySelector>();
 	}
 };
-DUMPER7_ASSERTS_UInputKeySelector;
 
 // Class UMG.InvalidationBox
 // 0x0018 (0x0230 - 0x0218)
@@ -3086,7 +2999,6 @@ public:
 		return GetDefaultObjImpl<UInvalidationBox>();
 	}
 };
-DUMPER7_ASSERTS_UInvalidationBox;
 
 // Class UMG.MenuAnchor
 // 0x0070 (0x0288 - 0x0218)
@@ -3136,7 +3048,6 @@ public:
 		return GetDefaultObjImpl<UMenuAnchor>();
 	}
 };
-DUMPER7_ASSERTS_UMenuAnchor;
 
 // Class UMG.TextLayoutWidget
 // 0x0020 (0x0220 - 0x0200)
@@ -3170,7 +3081,6 @@ public:
 		return GetDefaultObjImpl<UTextLayoutWidget>();
 	}
 };
-DUMPER7_ASSERTS_UTextLayoutWidget;
 
 // Class UMG.MultiLineEditableText
 // 0x0370 (0x0590 - 0x0220)
@@ -3191,8 +3101,8 @@ public:
 	struct FVirtualKeyboardOptions                VirtualKeyboardOptions;                            // 0x0538(0x0018)(Edit, AdvancedDisplay, NativeAccessSpecifierPublic)
 	EVirtualKeyboardDismissAction                 VirtualKeyboardDismissAction;                      // 0x0550(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_551[0x7];                                      // 0x0551(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FText& Text)> OnTextChanged;                           // 0x0558(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FText& Text, ETextCommit CommitMethod)> OnTextCommitted; // 0x0568(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FText& Text_0)> OnTextChanged;                         // 0x0558(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FText& Text_0, ETextCommit CommitMethod)> OnTextCommitted; // 0x0568(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_578[0x18];                                     // 0x0578(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -3222,7 +3132,6 @@ public:
 		return GetDefaultObjImpl<UMultiLineEditableText>();
 	}
 };
-DUMPER7_ASSERTS_UMultiLineEditableText;
 
 // Class UMG.MultiLineEditableTextBox
 // 0x0D10 (0x0F30 - 0x0220)
@@ -3239,8 +3148,8 @@ public:
 	struct FVirtualKeyboardOptions                VirtualKeyboardOptions;                            // 0x0ED8(0x0018)(Edit, AdvancedDisplay, NativeAccessSpecifierPublic)
 	EVirtualKeyboardDismissAction                 VirtualKeyboardDismissAction;                      // 0x0EF0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_EF1[0x7];                                      // 0x0EF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const class FText& Text)> OnTextChanged;                           // 0x0EF8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FText& Text, ETextCommit CommitMethod)> OnTextCommitted; // 0x0F08(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FText& Text_0)> OnTextChanged;                         // 0x0EF8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FText& Text_0, ETextCommit CommitMethod)> OnTextCommitted; // 0x0F08(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_F18[0x18];                                     // 0x0F18(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -3268,7 +3177,6 @@ public:
 		return GetDefaultObjImpl<UMultiLineEditableTextBox>();
 	}
 };
-DUMPER7_ASSERTS_UMultiLineEditableTextBox;
 
 // Class UMG.NamedSlot
 // 0x0010 (0x0228 - 0x0218)
@@ -3291,7 +3199,6 @@ public:
 		return GetDefaultObjImpl<UNamedSlot>();
 	}
 };
-DUMPER7_ASSERTS_UNamedSlot;
 
 // Class UMG.NamedSlotInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -3320,7 +3227,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_INamedSlotInterface;
 
 // Class UMG.NativeWidgetHost
 // 0x0010 (0x0210 - 0x0200)
@@ -3343,7 +3249,6 @@ public:
 		return GetDefaultObjImpl<UNativeWidgetHost>();
 	}
 };
-DUMPER7_ASSERTS_UNativeWidgetHost;
 
 // Class UMG.Overlay
 // 0x0010 (0x0228 - 0x0218)
@@ -3370,7 +3275,6 @@ public:
 		return GetDefaultObjImpl<UOverlay>();
 	}
 };
-DUMPER7_ASSERTS_UOverlay;
 
 // Class UMG.OverlaySlot
 // 0x0020 (0x0058 - 0x0038)
@@ -3402,7 +3306,6 @@ public:
 		return GetDefaultObjImpl<UOverlaySlot>();
 	}
 };
-DUMPER7_ASSERTS_UOverlaySlot;
 
 // Class UMG.SlatePostBufferProcessorUpdater
 // 0x0008 (0x0030 - 0x0028)
@@ -3426,7 +3329,6 @@ public:
 		return GetDefaultObjImpl<USlatePostBufferProcessorUpdater>();
 	}
 };
-DUMPER7_ASSERTS_USlatePostBufferProcessorUpdater;
 
 // Class UMG.PostBufferBlurUpdater
 // 0x0008 (0x0038 - 0x0030)
@@ -3450,7 +3352,6 @@ public:
 		return GetDefaultObjImpl<UPostBufferBlurUpdater>();
 	}
 };
-DUMPER7_ASSERTS_UPostBufferBlurUpdater;
 
 // Class UMG.PostBufferUpdate
 // 0x0038 (0x0238 - 0x0200)
@@ -3477,7 +3378,6 @@ public:
 		return GetDefaultObjImpl<UPostBufferUpdate>();
 	}
 };
-DUMPER7_ASSERTS_UPostBufferUpdate;
 
 // Class UMG.ProgressBar
 // 0x02A0 (0x04A0 - 0x0200)
@@ -3521,7 +3421,6 @@ public:
 		return GetDefaultObjImpl<UProgressBar>();
 	}
 };
-DUMPER7_ASSERTS_UProgressBar;
 
 // Class UMG.RetainerBox
 // 0x0030 (0x0248 - 0x0218)
@@ -3562,7 +3461,6 @@ public:
 		return GetDefaultObjImpl<URetainerBox>();
 	}
 };
-DUMPER7_ASSERTS_URetainerBox;
 
 // Class UMG.RichTextBlock
 // 0x0630 (0x0850 - 0x0220)
@@ -3620,7 +3518,6 @@ public:
 		return GetDefaultObjImpl<URichTextBlock>();
 	}
 };
-DUMPER7_ASSERTS_URichTextBlock;
 
 // Class UMG.RichTextBlockDecorator
 // 0x0000 (0x0028 - 0x0028)
@@ -3640,7 +3537,6 @@ public:
 		return GetDefaultObjImpl<URichTextBlockDecorator>();
 	}
 };
-DUMPER7_ASSERTS_URichTextBlockDecorator;
 
 // Class UMG.RichTextBlockImageDecorator
 // 0x0008 (0x0030 - 0x0028)
@@ -3663,7 +3559,6 @@ public:
 		return GetDefaultObjImpl<URichTextBlockImageDecorator>();
 	}
 };
-DUMPER7_ASSERTS_URichTextBlockImageDecorator;
 
 // Class UMG.SafeZone
 // 0x0018 (0x0230 - 0x0218)
@@ -3693,7 +3588,6 @@ public:
 		return GetDefaultObjImpl<USafeZone>();
 	}
 };
-DUMPER7_ASSERTS_USafeZone;
 
 // Class UMG.SafeZoneSlot
 // 0x0038 (0x0070 - 0x0038)
@@ -3723,7 +3617,6 @@ public:
 		return GetDefaultObjImpl<USafeZoneSlot>();
 	}
 };
-DUMPER7_ASSERTS_USafeZoneSlot;
 
 // Class UMG.ScaleBox
 // 0x0020 (0x0238 - 0x0218)
@@ -3757,7 +3650,6 @@ public:
 		return GetDefaultObjImpl<UScaleBox>();
 	}
 };
-DUMPER7_ASSERTS_UScaleBox;
 
 // Class UMG.ScaleBoxSlot
 // 0x0018 (0x0050 - 0x0038)
@@ -3787,7 +3679,6 @@ public:
 		return GetDefaultObjImpl<UScaleBoxSlot>();
 	}
 };
-DUMPER7_ASSERTS_UScaleBoxSlot;
 
 // Class UMG.ScrollBar
 // 0x0690 (0x0890 - 0x0200)
@@ -3820,7 +3711,6 @@ public:
 		return GetDefaultObjImpl<UScrollBar>();
 	}
 };
-DUMPER7_ASSERTS_UScrollBar;
 
 // Class UMG.ScrollBox
 // 0x0A08 (0x0C20 - 0x0218)
@@ -3913,7 +3803,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UScrollBox;
 
 // Class UMG.ScrollBoxSlot
 // 0x0028 (0x0060 - 0x0038)
@@ -3945,7 +3834,6 @@ public:
 		return GetDefaultObjImpl<UScrollBoxSlot>();
 	}
 };
-DUMPER7_ASSERTS_UScrollBoxSlot;
 
 // Class UMG.SizeBox
 // 0x0038 (0x0250 - 0x0218)
@@ -4003,7 +3891,6 @@ public:
 		return GetDefaultObjImpl<USizeBox>();
 	}
 };
-DUMPER7_ASSERTS_USizeBox;
 
 // Class UMG.SizeBoxSlot
 // 0x0028 (0x0060 - 0x0038)
@@ -4035,7 +3922,6 @@ public:
 		return GetDefaultObjImpl<USizeBoxSlot>();
 	}
 };
-DUMPER7_ASSERTS_USizeBoxSlot;
 
 // Class UMG.Slider
 // 0x04F0 (0x06F0 - 0x0200)
@@ -4093,7 +3979,6 @@ public:
 		return GetDefaultObjImpl<USlider>();
 	}
 };
-DUMPER7_ASSERTS_USlider;
 
 // Class UMG.Spacer
 // 0x0020 (0x0220 - 0x0200)
@@ -4120,7 +4005,6 @@ public:
 		return GetDefaultObjImpl<USpacer>();
 	}
 };
-DUMPER7_ASSERTS_USpacer;
 
 // Class UMG.StackBox
 // 0x0018 (0x0230 - 0x0218)
@@ -4148,7 +4032,6 @@ public:
 		return GetDefaultObjImpl<UStackBox>();
 	}
 };
-DUMPER7_ASSERTS_UStackBox;
 
 // Class UMG.StackBoxSlot
 // 0x0028 (0x0060 - 0x0038)
@@ -4175,7 +4058,6 @@ public:
 		return GetDefaultObjImpl<UStackBoxSlot>();
 	}
 };
-DUMPER7_ASSERTS_UStackBoxSlot;
 
 // Class UMG.TextBlock
 // 0x0490 (0x06B0 - 0x0220)
@@ -4238,7 +4120,6 @@ public:
 		return GetDefaultObjImpl<UTextBlock>();
 	}
 };
-DUMPER7_ASSERTS_UTextBlock;
 
 // Class UMG.Throbber
 // 0x00D0 (0x02D0 - 0x0200)
@@ -4273,7 +4154,6 @@ public:
 		return GetDefaultObjImpl<UThrobber>();
 	}
 };
-DUMPER7_ASSERTS_UThrobber;
 
 // Class UMG.TileView
 // 0x0030 (0x0C00 - 0x0BD0)
@@ -4311,7 +4191,6 @@ public:
 		return GetDefaultObjImpl<UTileView>();
 	}
 };
-DUMPER7_ASSERTS_UTileView;
 
 // Class UMG.TreeView
 // 0x0060 (0x0C30 - 0x0BD0)
@@ -4342,7 +4221,6 @@ public:
 		return GetDefaultObjImpl<UTreeView>();
 	}
 };
-DUMPER7_ASSERTS_UTreeView;
 
 // Class UMG.UniformGridPanel
 // 0x0028 (0x0240 - 0x0218)
@@ -4374,7 +4252,6 @@ public:
 		return GetDefaultObjImpl<UUniformGridPanel>();
 	}
 };
-DUMPER7_ASSERTS_UUniformGridPanel;
 
 // Class UMG.VerticalBox
 // 0x0010 (0x0228 - 0x0218)
@@ -4400,7 +4277,6 @@ public:
 		return GetDefaultObjImpl<UVerticalBox>();
 	}
 };
-DUMPER7_ASSERTS_UVerticalBox;
 
 // Class UMG.Viewport
 // 0x0060 (0x0278 - 0x0218)
@@ -4437,7 +4313,6 @@ public:
 		return GetDefaultObjImpl<UViewport>();
 	}
 };
-DUMPER7_ASSERTS_UViewport;
 
 // Class UMG.WidgetComponent
 // 0x0140 (0x07A0 - 0x0660)
@@ -4549,7 +4424,6 @@ public:
 		return GetDefaultObjImpl<UWidgetComponent>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetComponent;
 
 // Class UMG.WidgetInteractionComponent
 // 0x0300 (0x0580 - 0x0280)
@@ -4613,7 +4487,6 @@ public:
 		return GetDefaultObjImpl<UWidgetInteractionComponent>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetInteractionComponent;
 
 // Class UMG.WidgetSwitcherSlot
 // 0x0020 (0x0058 - 0x0038)
@@ -4645,7 +4518,6 @@ public:
 		return GetDefaultObjImpl<UWidgetSwitcherSlot>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetSwitcherSlot;
 
 // Class UMG.WindowTitleBarArea
 // 0x0020 (0x0238 - 0x0218)
@@ -4675,7 +4547,6 @@ public:
 		return GetDefaultObjImpl<UWindowTitleBarArea>();
 	}
 };
-DUMPER7_ASSERTS_UWindowTitleBarArea;
 
 // Class UMG.WindowTitleBarAreaSlot
 // 0x0028 (0x0060 - 0x0038)
@@ -4706,7 +4577,6 @@ public:
 		return GetDefaultObjImpl<UWindowTitleBarAreaSlot>();
 	}
 };
-DUMPER7_ASSERTS_UWindowTitleBarAreaSlot;
 
 // Class UMG.WrapBox
 // 0x0028 (0x0240 - 0x0218)
@@ -4739,7 +4609,6 @@ public:
 		return GetDefaultObjImpl<UWrapBox>();
 	}
 };
-DUMPER7_ASSERTS_UWrapBox;
 
 // Class UMG.WrapBoxSlot
 // 0x0020 (0x0058 - 0x0038)
@@ -4776,7 +4645,6 @@ public:
 		return GetDefaultObjImpl<UWrapBoxSlot>();
 	}
 };
-DUMPER7_ASSERTS_UWrapBoxSlot;
 
 // Class UMG.DragDropOperation
 // 0x0068 (0x0090 - 0x0028)
@@ -4812,7 +4680,6 @@ public:
 		return GetDefaultObjImpl<UDragDropOperation>();
 	}
 };
-DUMPER7_ASSERTS_UDragDropOperation;
 
 // Class UMG.SlateBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -4850,7 +4717,6 @@ public:
 		return GetDefaultObjImpl<USlateBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_USlateBlueprintLibrary;
 
 // Class UMG.SlateVectorArtData
 // 0x0048 (0x0070 - 0x0028)
@@ -4877,7 +4743,6 @@ public:
 		return GetDefaultObjImpl<USlateVectorArtData>();
 	}
 };
-DUMPER7_ASSERTS_USlateVectorArtData;
 
 // Class UMG.WidgetBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -4953,7 +4818,6 @@ public:
 		return GetDefaultObjImpl<UWidgetBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetBlueprintLibrary;
 
 // Class UMG.WidgetTree
 // 0x0060 (0x0088 - 0x0028)
@@ -4978,6 +4842,5 @@ public:
 		return GetDefaultObjImpl<UWidgetTree>();
 	}
 };
-DUMPER7_ASSERTS_UWidgetTree;
 
 SDK_NAMESPACE_END

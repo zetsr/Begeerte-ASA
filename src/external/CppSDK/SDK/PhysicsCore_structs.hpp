@@ -280,7 +280,6 @@ public:
 	uint8                                         bUpdateMassWhenScaleChanges : 1;                   // 0x0008(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBodyInstanceCore;
 
 // ScriptStruct PhysicsCore.PhysicalMaterialStrength
 // 0x000C (0x000C - 0x0000)
@@ -291,7 +290,6 @@ public:
 	float                                         CompressionStrength;                               // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ShearStrength;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPhysicalMaterialStrength;
 
 // ScriptStruct PhysicsCore.PhysicalMaterialDamageModifier
 // 0x0004 (0x0004 - 0x0000)
@@ -300,6 +298,5 @@ struct FPhysicalMaterialDamageModifier final
 public:
 	float                                         DamageThresholdMultiplier;                         // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FPhysicalMaterialDamageModifier;
 
 SDK_NAMESPACE_END

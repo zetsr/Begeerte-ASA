@@ -77,7 +77,6 @@ public:
 		return GetDefaultObjImpl<UClothConfigNv>();
 	}
 };
-DUMPER7_ASSERTS_UClothConfigNv;
 
 // Class ClothingSystemRuntimeNv.ClothingSimulationFactoryNv
 // 0x0000 (0x0028 - 0x0028)
@@ -97,7 +96,6 @@ public:
 		return GetDefaultObjImpl<UClothingSimulationFactoryNv>();
 	}
 };
-DUMPER7_ASSERTS_UClothingSimulationFactoryNv;
 
 // Class ClothingSystemRuntimeNv.ClothingSimulationInteractorNv
 // 0x0000 (0x0090 - 0x0090)
@@ -120,7 +118,6 @@ public:
 		return GetDefaultObjImpl<UClothingSimulationInteractorNv>();
 	}
 };
-DUMPER7_ASSERTS_UClothingSimulationInteractorNv;
 
 // Class ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy
 // 0x0040 (0x0120 - 0x00E0)
@@ -146,6 +143,5 @@ public:
 		return GetDefaultObjImpl<UClothPhysicalMeshDataNv_Legacy>();
 	}
 };
-DUMPER7_ASSERTS_UClothPhysicalMeshDataNv_Legacy;
 
 SDK_NAMESPACE_END

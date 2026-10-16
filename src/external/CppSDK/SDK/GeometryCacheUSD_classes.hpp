@@ -36,7 +36,6 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheTrackUsd>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheTrackUsd;
 
 // Class GeometryCacheUSD.GeometryCacheUsdComponent
 // 0x0000 (0x06E0 - 0x06E0)
@@ -56,6 +55,5 @@ public:
 		return GetDefaultObjImpl<UGeometryCacheUsdComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGeometryCacheUsdComponent;
 
 SDK_NAMESPACE_END

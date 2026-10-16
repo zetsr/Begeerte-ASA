@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UTPV_Lance_MaleAnimBP_C>();
 	}
 };
-DUMPER7_ASSERTS_UTPV_Lance_MaleAnimBP_C;
 
 SDK_NAMESPACE_END

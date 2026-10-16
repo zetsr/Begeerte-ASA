@@ -39,7 +39,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineBurnInWidget>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineBurnInWidget;
 
 // Class MovieRenderPipelineSettings.MoviePipelineBurnInSetting
 // 0x0068 (0x00B0 - 0x0048)
@@ -66,7 +65,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineBurnInSetting>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineBurnInSetting;
 
 // Class MovieRenderPipelineSettings.MoviePipelineConsoleVariableSetting
 // 0x0060 (0x00A8 - 0x0048)
@@ -101,7 +99,6 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineConsoleVariableSetting>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineConsoleVariableSetting;
 
 // Class MovieRenderPipelineSettings.MoviePipelineWidgetRenderer
 // 0x0020 (0x0068 - 0x0048)
@@ -126,6 +123,5 @@ public:
 		return GetDefaultObjImpl<UMoviePipelineWidgetRenderer>();
 	}
 };
-DUMPER7_ASSERTS_UMoviePipelineWidgetRenderer;
 
 SDK_NAMESPACE_END

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UI_CustomComboBoxOption_classes.hpp"
 #include "Engine_structs.hpp"
+#include "UI_CustomComboBoxOption_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<UUI_ComboCategory_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_ComboCategory_C;
 
 SDK_NAMESPACE_END

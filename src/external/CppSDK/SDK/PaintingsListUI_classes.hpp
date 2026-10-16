@@ -49,6 +49,5 @@ public:
 		return GetDefaultObjImpl<UPaintingsListUI_C>();
 	}
 };
-DUMPER7_ASSERTS_UPaintingsListUI_C;
 
 SDK_NAMESPACE_END

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "CFCoreWidget_classes.hpp"
 #include "cfcore_structs.hpp"
 #include "cfcore_ui_structs.hpp"
-#include "CFCoreWidget_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -94,6 +94,5 @@ public:
 		return GetDefaultObjImpl<UBP_CFCore_ServerModsLoading_C>();
 	}
 };
-DUMPER7_ASSERTS_UBP_CFCore_ServerModsLoading_C;
 
 SDK_NAMESPACE_END

@@ -26,7 +26,6 @@ public:
 	class UPrimalCharacterStatusComponent*        CallFunc_GetCharacterStatusComponent_ReturnValue;  // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UPrimalCharacterMovement*               CallFunc_CharacterMovementToPCM_ReturnValue;       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BasedOnDesertKaiju_C_BPDeactivated;
 
 // Function Buff_BasedOnDesertKaiju.Buff_BasedOnDesertKaiju_C.BPSetupForInstigator
 // 0x0028 (0x0028 - 0x0000)
@@ -40,7 +39,6 @@ public:
 	class UPrimalCharacterStatusComponent*        CallFunc_GetCharacterStatusComponent_ReturnValue;  // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UPrimalCharacterMovement*               CallFunc_CharacterMovementToPCM_ReturnValue;       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Buff_BasedOnDesertKaiju_C_BPSetupForInstigator;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

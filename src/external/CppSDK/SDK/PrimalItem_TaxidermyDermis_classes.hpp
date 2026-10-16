@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_TaxidermyDermis_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_TaxidermyDermis_C;
 
 SDK_NAMESPACE_END

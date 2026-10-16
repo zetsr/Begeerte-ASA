@@ -52,10 +52,10 @@ public:
 	void GetAdjustedTimerFormatText(const class FString& BaseTimerFormatString, int32 Days, int32 Hours, int32 Minutes, int32 Seconds, class FString* CorrectedTimerFormatString, int32* CorrectedDays, int32* CorrectedHours, int32* CorrectedMinutes, int32* CorrectedSeconds);
 	class FText Get_CountDownTimerTextBox_Text();
 	void ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half(int32 EntryPoint);
-	void EntryFocusTick(float DeltaTime, bool bIsHighlighted);
-	void EntryFocusStart(bool bInstigatedByAutoRollover);
-	void EntryFocusEnd(bool bInstigatedByAutoRollover);
-	void BlueprintInit(const class FString& RawExtraData);
+	void EntryFocusTick(float DeltaTime_EntryFocusTick, bool bIsHighlighted_EntryFocusTick);
+	void EntryFocusStart(bool bInstigatedByAutoRollover_EntryFocusStart);
+	void EntryFocusEnd(bool bInstigatedByAutoRollover_EntryFocusEnd);
+	void BlueprintInit(const class FString& RawExtraData_BlueprintInit);
 
 public:
 	static class UClass* StaticClass()
@@ -71,6 +71,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_NewsCarouselTemplate_Entry_CTATIMER_Half_C;
 
 SDK_NAMESPACE_END

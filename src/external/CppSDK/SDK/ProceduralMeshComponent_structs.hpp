@@ -34,7 +34,6 @@ public:
 	bool                                          bFlipTangentY;                                     // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FProcMeshTangent;
 
 // ScriptStruct ProceduralMeshComponent.ProcMeshVertex
 // 0x0098 (0x0098 - 0x0000)
@@ -51,7 +50,6 @@ public:
 	struct FVector2D                              UV2;                                               // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              UV3;                                               // 0x0088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FProcMeshVertex;
 
 // ScriptStruct ProceduralMeshComponent.ProcMeshSection
 // 0x0060 (0x0060 - 0x0000)
@@ -65,6 +63,5 @@ public:
 	bool                                          bSectionVisible;                                   // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FProcMeshSection;
 
 SDK_NAMESPACE_END

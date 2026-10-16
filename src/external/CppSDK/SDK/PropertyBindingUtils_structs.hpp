@@ -35,7 +35,6 @@ public:
 	class UStruct*                                Struct;                                            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class FName                                   Name;                                              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBindableStructDesc;
 
 // ScriptStruct PropertyBindingUtils.PropertyBindingPathSegment
 // 0x0018 (0x0018 - 0x0000)
@@ -47,7 +46,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStruct*                                InstanceStruct;                                    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FPropertyBindingPathSegment;
 
 // ScriptStruct PropertyBindingUtils.PropertyBindingPath
 // 0x0010 (0x0010 - 0x0000)
@@ -56,6 +54,5 @@ struct FPropertyBindingPath final
 public:
 	TArray<struct FPropertyBindingPathSegment>    Segments;                                          // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FPropertyBindingPath;
 
 SDK_NAMESPACE_END

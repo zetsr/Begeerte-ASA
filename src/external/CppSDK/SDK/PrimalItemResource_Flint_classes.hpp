@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Flint_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Flint_C;
 
 SDK_NAMESPACE_END

@@ -33,10 +33,10 @@ public:
 
 public:
 	void ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_ServerStatus(int32 EntryPoint);
-	void EntryFocusTick(float DeltaTime, bool bIsHighlighted);
-	void EntryFocusStart(bool bInstigatedByAutoRollover);
-	void EntryFocusEnd(bool bInstigatedByAutoRollover);
-	void BlueprintInit(const class FString& RawExtraData);
+	void EntryFocusTick(float DeltaTime_EntryFocusTick, bool bIsHighlighted_EntryFocusTick);
+	void EntryFocusStart(bool bInstigatedByAutoRollover_EntryFocusStart);
+	void EntryFocusEnd(bool bInstigatedByAutoRollover_EntryFocusEnd);
+	void BlueprintInit(const class FString& RawExtraData_BlueprintInit);
 
 public:
 	static class UClass* StaticClass()
@@ -52,6 +52,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_NewsCarouselTemplate_Entry_ServerStatus_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_NewsCarouselTemplate_Entry_ServerStatus_C;
 
 SDK_NAMESPACE_END

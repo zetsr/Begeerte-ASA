@@ -44,14 +44,14 @@ public:
 	struct FMargin                                ButtonTextPadding;                                 // 0x05D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void UpdateButton();
-	void SetActive(bool newActive);
-	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_ASAUIWidget_Button_Style4(int32 EntryPoint);
-	void Destruct();
-	void Construct();
-	void BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__ASAUIWidget_Button_1_BackButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
+	void Construct();
+	void Destruct();
+	void ExecuteUbergraph_ASAUIWidget_Button_Style4(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetActive(bool newActive);
+	void UpdateButton();
 
 public:
 	static class UClass* StaticClass()
@@ -67,6 +67,5 @@ public:
 		return GetDefaultObjImpl<UASAUIWidget_Button_Style4_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUIWidget_Button_Style4_C;
 
 SDK_NAMESPACE_END

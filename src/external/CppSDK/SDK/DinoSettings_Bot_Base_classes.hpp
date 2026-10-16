@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Struct_VFX_DinoData_structs.hpp"
 #include "DinoSettings_Base_classes.hpp"
+#include "Struct_VFX_DinoData_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -39,6 +39,5 @@ public:
 		return GetDefaultObjImpl<UDinoSettings_Bot_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UDinoSettings_Bot_Base_C;
 
 SDK_NAMESPACE_END

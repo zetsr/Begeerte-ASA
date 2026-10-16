@@ -21,7 +21,6 @@ struct ConfirmationDialogGeneric_C_BPEscapeClosed final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ConfirmationDialogGeneric_C_BPEscapeClosed;
 
 // Function ConfirmationDialogGeneric.ConfirmationDialogGeneric_C.ExecuteUbergraph_ConfirmationDialogGeneric
 // 0x0098 (0x0098 - 0x0000)
@@ -53,7 +52,6 @@ public:
 	class UTexture2D*                             CallFunc_GetIconForKeyName_ReturnValue_1;          // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ConfirmationDialogGeneric_C_ExecuteUbergraph_ConfirmationDialogGeneric;
 
 // Function ConfirmationDialogGeneric.ConfirmationDialogGeneric_C.OverrideAcceptButtonText
 // 0x0010 (0x0010 - 0x0000)
@@ -62,7 +60,6 @@ struct ConfirmationDialogGeneric_C_OverrideAcceptButtonText final
 public:
 	class FText                                   AcceptText;                                        // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_ConfirmationDialogGeneric_C_OverrideAcceptButtonText;
 
 // Function ConfirmationDialogGeneric.ConfirmationDialogGeneric_C.OverrideCancelButtonText
 // 0x0010 (0x0010 - 0x0000)
@@ -71,7 +68,6 @@ struct ConfirmationDialogGeneric_C_OverrideCancelButtonText final
 public:
 	class FText                                   CancelText;                                        // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_ConfirmationDialogGeneric_C_OverrideCancelButtonText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

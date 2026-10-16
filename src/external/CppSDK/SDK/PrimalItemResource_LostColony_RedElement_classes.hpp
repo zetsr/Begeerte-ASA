@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_LostColony_RedElement_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_LostColony_RedElement_C;
 
 SDK_NAMESPACE_END

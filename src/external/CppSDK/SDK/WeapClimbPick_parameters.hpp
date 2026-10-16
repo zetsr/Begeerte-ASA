@@ -32,7 +32,6 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_FunctionResult_ReturnValue_ImplicitCast;    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapClimbPick_C_BPModifyFOV;
 
 // Function WeapClimbPick.WeapClimbPick_C.BPOnWeaponAnimPlayedNotify
 // 0x0030 (0x0030 - 0x0000)
@@ -54,7 +53,6 @@ public:
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapClimbPick_C_BPOnWeaponAnimPlayedNotify;
 
 // Function WeapClimbPick.WeapClimbPick_C.BPUpdateClimbTarget
 // 0x07E8 (0x07E8 - 0x0000)
@@ -135,7 +133,6 @@ public:
 	float                                         CallFunc_VInterpTo_InterpSpeed_ImplicitCast_1;     // 0x07DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_RInterpTo_InterpSpeed_ImplicitCast_1;     // 0x07E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapClimbPick_C_BPUpdateClimbTarget;
 
 // Function WeapClimbPick.WeapClimbPick_C.SetSourceLocation
 // 0x0030 (0x0030 - 0x0000)
@@ -149,7 +146,6 @@ public:
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapClimbPick_C_SetSourceLocation;
 
 // Function WeapClimbPick.WeapClimbPick_C.SetTemplateTo
 // 0x0018 (0x0018 - 0x0000)
@@ -160,7 +156,6 @@ public:
 	class UParticleSystem*                        New_Template;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapClimbPick_C_SetTemplateTo;
 
 // Function WeapClimbPick.WeapClimbPick_C.StartUnequipEvent
 // 0x0070 (0x0070 - 0x0000)
@@ -176,7 +171,6 @@ public:
 	bool                                          CallFunc_GetGroundLocation_ReturnValue;            // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapClimbPick_C_StartUnequipEvent;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

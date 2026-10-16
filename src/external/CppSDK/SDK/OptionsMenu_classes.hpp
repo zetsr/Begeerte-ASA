@@ -224,6 +224,5 @@ public:
 		return GetDefaultObjImpl<UOptionsMenu_C>();
 	}
 };
-DUMPER7_ASSERTS_UOptionsMenu_C;
 
 SDK_NAMESPACE_END

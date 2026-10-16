@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<UTcpMessagingSettings>();
 	}
 };
-DUMPER7_ASSERTS_UTcpMessagingSettings;
 
 SDK_NAMESPACE_END

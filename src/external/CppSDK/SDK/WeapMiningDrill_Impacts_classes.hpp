@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<AWeapMiningDrill_Impacts_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapMiningDrill_Impacts_C;
 
 SDK_NAMESPACE_END

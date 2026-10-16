@@ -27,7 +27,6 @@ struct UI_CFCore_WideGameSlot_C_BndEvt__UI_WideGameSlot_CheckBox_110_K2Node_Comp
 public:
 	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_BndEvt__UI_WideGameSlot_CheckBox_110_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.BP_OnItemExpansionChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -36,7 +35,6 @@ struct UI_CFCore_WideGameSlot_C_BP_OnItemExpansionChanged final
 public:
 	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_BP_OnItemExpansionChanged;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.BP_OnItemSelectionChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -45,7 +43,6 @@ struct UI_CFCore_WideGameSlot_C_BP_OnItemSelectionChanged final
 public:
 	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_BP_OnItemSelectionChanged;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.ExecuteUbergraph_UI_CFCore_WideGameSlot
 // 0x01F0 (0x01F0 - 0x0000)
@@ -109,7 +106,6 @@ public:
 	class UCFCoreUISubsystem*                     CallFunc_GetGameInstanceSubsystem_ReturnValue_5;   // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_ExecuteUbergraph_UI_CFCore_WideGameSlot;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.FormatDownloadNumber
 // 0x01C8 (0x01C8 - 0x0000)
@@ -153,7 +149,6 @@ public:
 	class FText                                   CallFunc_Conv_Int64ToText_ReturnValue_4;           // 0x01B0(0x0010)()
 	bool                                          CallFunc_Less_Int64Int64_ReturnValue_1;            // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_FormatDownloadNumber;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.GenerateAuthorNameToolTipWidget
 // 0x0018 (0x0018 - 0x0000)
@@ -164,7 +159,6 @@ public:
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUI_CFCore_ToolTipWidget_C*             CallFunc_Create_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_GenerateAuthorNameToolTipWidget;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.GenerateModNameToolTipWidget
 // 0x0020 (0x0020 - 0x0000)
@@ -177,7 +171,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUI_CFCore_ToolTipWidget_C*             CallFunc_Create_ReturnValue;                       // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_GenerateModNameToolTipWidget;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.GetAuthors
 // 0x0098 (0x0098 - 0x0000)
@@ -199,7 +192,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_GetAuthors;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.GetDownloadCount
 // 0x0020 (0x0020 - 0x0000)
@@ -209,7 +201,6 @@ public:
 	class FText                                   FinalAmount;                                       // 0x0000(0x0010)(Parm, OutParm)
 	class FText                                   CallFunc_FormatDownloadNumber_FinalAmount;         // 0x0010(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_GetDownloadCount;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.GetModName
 // 0x0010 (0x0010 - 0x0000)
@@ -218,7 +209,6 @@ struct UI_CFCore_WideGameSlot_C_GetModName final
 public:
 	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_GetModName;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.GetModSize
 // 0x0250 (0x0250 - 0x0000)
@@ -251,7 +241,6 @@ public:
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0230(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0240(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_GetModSize;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -261,7 +250,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_GetRootCFWidget;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.InitModInfo
 // 0x0610 (0x0610 - 0x0000)
@@ -270,7 +258,6 @@ struct UI_CFCore_WideGameSlot_C_InitModInfo final
 public:
 	struct FInstallProgressMod                    NewModInfo;                                        // 0x0000(0x0610)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_InitModInfo;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.OnEventBroadcasted
 // 0x0C70 (0x0C70 - 0x0000)
@@ -294,7 +281,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0C64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_Int64Int64_ReturnValue;        // 0x0C68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_OnEventBroadcasted;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.OnFail_B8EEEF7848312655C1FBE6846A0BF90D
 // 0x0008 (0x0008 - 0x0000)
@@ -303,7 +289,6 @@ struct UI_CFCore_WideGameSlot_C_OnFail_B8EEEF7848312655C1FBE6846A0BF90D final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_OnFail_B8EEEF7848312655C1FBE6846A0BF90D;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.OnListItemObjectSet
 // 0x0008 (0x0008 - 0x0000)
@@ -312,7 +297,6 @@ struct UI_CFCore_WideGameSlot_C_OnListItemObjectSet final
 public:
 	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_OnListItemObjectSet;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.OnSuccess_B8EEEF7848312655C1FBE6846A0BF90D
 // 0x0008 (0x0008 - 0x0000)
@@ -321,7 +305,6 @@ struct UI_CFCore_WideGameSlot_C_OnSuccess_B8EEEF7848312655C1FBE6846A0BF90D final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_OnSuccess_B8EEEF7848312655C1FBE6846A0BF90D;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.PlayStartingAnimation
 // 0x0010 (0x0010 - 0x0000)
@@ -331,7 +314,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_PlayStartingAnimation;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.SetIsSelected
 // 0x0001 (0x0001 - 0x0000)
@@ -340,7 +322,6 @@ struct UI_CFCore_WideGameSlot_C_SetIsSelected final
 public:
 	bool                                          IsSelected;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_SetIsSelected;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.SetVisibilityEnabledNavUpDown
 // 0x0006 (0x0006 - 0x0000)
@@ -354,7 +335,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_SetVisibilityEnabledNavUpDown;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -364,7 +344,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_Tick;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.Update LikeStatus
 // 0x0001 (0x0001 - 0x0000)
@@ -373,7 +352,6 @@ struct UI_CFCore_WideGameSlot_C_Update_LikeStatus final
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_Update_LikeStatus;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.UpdateAuthors
 // 0x0038 (0x0038 - 0x0000)
@@ -386,7 +364,6 @@ public:
 	class FString                                 CallFunc_StringLimit_NewString;                    // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0028(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_UpdateAuthors;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.UpdatedIsEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -402,7 +379,6 @@ public:
 	int32                                         CallFunc_GetIsModEnabled_Load_Order;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECheckBoxState                                K2Node_Select_Default;                             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_UpdatedIsEnabled;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.UpdateModName
 // 0x0018 (0x0018 - 0x0000)
@@ -413,7 +389,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetModName_Name;                          // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_UpdateModName;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.UpdatePaidPremiumStatus
 // 0x0068 (0x0068 - 0x0000)
@@ -435,7 +410,6 @@ public:
 	struct FPremiumDetailsDiscount                CallFunc_GetIsModPaidStatus_Discount_Data;         // 0x0040(0x0020)()
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_UpdatePaidPremiumStatus;
 
 // Function UI_CFCore_WideGameSlot.UI_CFCore_WideGameSlot_C.UpdateUPDATEButtonStatus
 // 0x0010 (0x0010 - 0x0000)
@@ -451,7 +425,6 @@ public:
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_WideGameSlot_C_UpdateUPDATEButtonStatus;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

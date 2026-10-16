@@ -84,6 +84,5 @@ public:
 		return GetDefaultObjImpl<UToolTipWidgetPrimalItem_Inventory_C>();
 	}
 };
-DUMPER7_ASSERTS_UToolTipWidgetPrimalItem_Inventory_C;
 
 SDK_NAMESPACE_END

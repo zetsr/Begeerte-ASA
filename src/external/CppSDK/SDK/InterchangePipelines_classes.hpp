@@ -61,7 +61,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeGenericCommonMeshesProperties>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeGenericCommonMeshesProperties;
 
 // Class InterchangePipelines.InterchangeGenericCommonSkeletalMeshesAndAnimationsProperties
 // 0x0010 (0x0158 - 0x0148)
@@ -90,7 +89,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties;
 
 // Class InterchangePipelines.GLTFPipelineSettings
 // 0x0058 (0x0090 - 0x0038)
@@ -114,7 +112,6 @@ public:
 		return GetDefaultObjImpl<UGLTFPipelineSettings>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFPipelineSettings;
 
 // Class InterchangePipelines.InterchangeGLTFPipeline
 // 0x0018 (0x0160 - 0x0148)
@@ -138,7 +135,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeGLTFPipeline>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeGLTFPipeline;
 
 // Class InterchangePipelines.MaterialXPipelineSettings
 // 0x0140 (0x0178 - 0x0038)
@@ -164,7 +160,6 @@ public:
 		return GetDefaultObjImpl<UMaterialXPipelineSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMaterialXPipelineSettings;
 
 // Class InterchangePipelines.InterchangeMaterialXPipeline
 // 0x0008 (0x0150 - 0x0148)
@@ -187,7 +182,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeMaterialXPipeline>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeMaterialXPipeline;
 
 // Class InterchangePipelines.InterchangeGenericAnimationPipeline
 // 0x0070 (0x01B8 - 0x0148)
@@ -233,7 +227,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeGenericAnimationPipeline>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeGenericAnimationPipeline;
 
 // Class InterchangePipelines.InterchangeGenericAssetsPipeline
 // 0x0188 (0x02D0 - 0x0148)
@@ -272,7 +265,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeGenericAssetsPipeline>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeGenericAssetsPipeline;
 
 // Class InterchangePipelines.InterchangeGenericMaterialPipeline
 // 0x00B0 (0x01F8 - 0x0148)
@@ -307,7 +299,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeGenericMaterialPipeline>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeGenericMaterialPipeline;
 
 // Class InterchangePipelines.InterchangeGenericMeshPipeline
 // 0x00F0 (0x0238 - 0x0148)
@@ -379,7 +370,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeGenericMeshPipeline>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeGenericMeshPipeline;
 
 // Class InterchangePipelines.InterchangeGenericLevelPipeline
 // 0x0030 (0x0178 - 0x0148)
@@ -410,7 +400,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeGenericLevelPipeline>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeGenericLevelPipeline;
 
 // Class InterchangePipelines.InterchangeGenericTexturePipeline
 // 0x0068 (0x01B0 - 0x0148)
@@ -440,7 +429,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeGenericTexturePipeline>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeGenericTexturePipeline;
 
 // Class InterchangePipelines.InterchangePipelineMeshesUtilities
 // 0x0100 (0x0128 - 0x0028)
@@ -482,6 +470,5 @@ public:
 		return GetDefaultObjImpl<UInterchangePipelineMeshesUtilities>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangePipelineMeshesUtilities;
 
 SDK_NAMESPACE_END

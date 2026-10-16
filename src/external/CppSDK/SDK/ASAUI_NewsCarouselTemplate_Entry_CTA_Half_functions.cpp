@@ -39,10 +39,10 @@ void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::ExecuteUbergraph_ASAUI_NewsCa
 // Function ASAUI_NewsCarouselTemplate_Entry_CTA_Half.ASAUI_NewsCarouselTemplate_Entry_CTA_Half_C.EntryFocusTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsHighlighted                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaTime_EntryFocusTick                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsHighlighted_EntryFocusTick                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusTick(float DeltaTime, bool bIsHighlighted)
+void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusTick(float DeltaTime_EntryFocusTick, bool bIsHighlighted_EntryFocusTick)
 {
 	static class UFunction* Func = nullptr;
 
@@ -51,8 +51,8 @@ void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusTick(float DeltaTim
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_CTA_Half_C_EntryFocusTick Parms{};
 
-	Parms.DeltaTime = DeltaTime;
-	Parms.bIsHighlighted = bIsHighlighted;
+	Parms.DeltaTime_EntryFocusTick = DeltaTime_EntryFocusTick;
+	Parms.bIsHighlighted_EntryFocusTick = bIsHighlighted_EntryFocusTick;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -61,9 +61,9 @@ void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusTick(float DeltaTim
 // Function ASAUI_NewsCarouselTemplate_Entry_CTA_Half.ASAUI_NewsCarouselTemplate_Entry_CTA_Half_C.EntryFocusStart
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    bInstigatedByAutoRollover                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInstigatedByAutoRollover_EntryFocusStart              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusStart(bool bInstigatedByAutoRollover)
+void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusStart(bool bInstigatedByAutoRollover_EntryFocusStart)
 {
 	static class UFunction* Func = nullptr;
 
@@ -72,7 +72,7 @@ void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusStart(bool bInstiga
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_CTA_Half_C_EntryFocusStart Parms{};
 
-	Parms.bInstigatedByAutoRollover = bInstigatedByAutoRollover;
+	Parms.bInstigatedByAutoRollover_EntryFocusStart = bInstigatedByAutoRollover_EntryFocusStart;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -81,9 +81,9 @@ void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusStart(bool bInstiga
 // Function ASAUI_NewsCarouselTemplate_Entry_CTA_Half.ASAUI_NewsCarouselTemplate_Entry_CTA_Half_C.EntryFocusEnd
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    bInstigatedByAutoRollover                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInstigatedByAutoRollover_EntryFocusEnd                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusEnd(bool bInstigatedByAutoRollover)
+void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusEnd(bool bInstigatedByAutoRollover_EntryFocusEnd)
 {
 	static class UFunction* Func = nullptr;
 
@@ -92,7 +92,7 @@ void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusEnd(bool bInstigate
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_CTA_Half_C_EntryFocusEnd Parms{};
 
-	Parms.bInstigatedByAutoRollover = bInstigatedByAutoRollover;
+	Parms.bInstigatedByAutoRollover_EntryFocusEnd = bInstigatedByAutoRollover_EntryFocusEnd;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -101,9 +101,9 @@ void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::EntryFocusEnd(bool bInstigate
 // Function ASAUI_NewsCarouselTemplate_Entry_CTA_Half.ASAUI_NewsCarouselTemplate_Entry_CTA_Half_C.BlueprintInit
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// const class FString&                    RawExtraData                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    RawExtraData_BlueprintInit                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::BlueprintInit(const class FString& RawExtraData)
+void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::BlueprintInit(const class FString& RawExtraData_BlueprintInit)
 {
 	static class UFunction* Func = nullptr;
 
@@ -112,7 +112,7 @@ void UASAUI_NewsCarouselTemplate_Entry_CTA_Half_C::BlueprintInit(const class FSt
 
 	Params::ASAUI_NewsCarouselTemplate_Entry_CTA_Half_C_BlueprintInit Parms{};
 
-	Parms.RawExtraData = std::move(RawExtraData);
+	Parms.RawExtraData_BlueprintInit = std::move(RawExtraData_BlueprintInit);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

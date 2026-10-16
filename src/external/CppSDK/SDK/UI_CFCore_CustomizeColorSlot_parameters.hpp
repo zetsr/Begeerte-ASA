@@ -25,7 +25,6 @@ struct UI_CFCore_CustomizeColorSlot_C_GetColor final
 public:
 	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomizeColorSlot_C_GetColor;
 
 // Function UI_CFCore_CustomizeColorSlot.UI_CFCore_CustomizeColorSlot_C.SetColor
 // 0x0014 (0x0014 - 0x0000)
@@ -35,7 +34,6 @@ public:
 	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomizeColorSlot_C_SetColor;
 
 // Function UI_CFCore_CustomizeColorSlot.UI_CFCore_CustomizeColorSlot_C.GetCurrentTheme
 // 0x0108 (0x0108 - 0x0000)
@@ -45,7 +43,6 @@ public:
 	struct FCFCoreThemeRowData                    CurrentTheme;                                      // 0x0000(0x0100)(Parm, OutParm)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomizeColorSlot_C_GetCurrentTheme;
 
 // Function UI_CFCore_CustomizeColorSlot.UI_CFCore_CustomizeColorSlot_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -54,7 +51,6 @@ struct UI_CFCore_CustomizeColorSlot_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomizeColorSlot_C_PreConstruct;
 
 // Function UI_CFCore_CustomizeColorSlot.UI_CFCore_CustomizeColorSlot_C.ExecuteUbergraph_UI_CFCore_CustomizeColorSlot
 // 0x0060 (0x0060 - 0x0000)
@@ -73,7 +69,6 @@ public:
 	struct FLinearColor                           CallFunc_GetColor_Color;                           // 0x003C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_GetColor_Color_1;                         // 0x004C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomizeColorSlot_C_ExecuteUbergraph_UI_CFCore_CustomizeColorSlot;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

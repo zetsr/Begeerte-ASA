@@ -19,10 +19,10 @@ SDK_NAMESPACE_START
 // Function Slider_ASA_Widget.Slider_ASA_Widget_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USlider_ASA_Widget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void USlider_ASA_Widget_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,8 +31,8 @@ void USlider_ASA_Widget_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 
 	Params::Slider_ASA_Widget_C_Tick Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
+	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -85,7 +85,7 @@ void USlider_ASA_Widget_C::SetupSetPercent(float InputPin, bool PreventRecallPar
 // Function Slider_ASA_Widget.Slider_ASA_Widget_C.GetOverrideHighligteableWidgetBP
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue_GetOverrideHighligteableWidgetBP           (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 class UWidget* USlider_ASA_Widget_C::GetOverrideHighligteableWidgetBP()
 {
@@ -125,10 +125,10 @@ void USlider_ASA_Widget_C::ExecuteUbergraph_Slider_ASA_Widget(int32 EntryPoint)
 // Function Slider_ASA_Widget.Slider_ASA_Widget_C.BPExecutedCommandForPrimalUI
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// class FName                             CommandName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FBPNetExecParams&          ExecParams                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class FName                             CommandName_BPExecutedCommandForPrimalUI               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FBPNetExecParams&          ExecParams_BPExecutedCommandForPrimalUI                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void USlider_ASA_Widget_C::BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams)
+void USlider_ASA_Widget_C::BPExecutedCommandForPrimalUI(class FName CommandName_BPExecutedCommandForPrimalUI, const struct FBPNetExecParams& ExecParams_BPExecutedCommandForPrimalUI)
 {
 	static class UFunction* Func = nullptr;
 
@@ -137,8 +137,8 @@ void USlider_ASA_Widget_C::BPExecutedCommandForPrimalUI(class FName CommandName,
 
 	Params::Slider_ASA_Widget_C_BPExecutedCommandForPrimalUI Parms{};
 
-	Parms.CommandName = CommandName;
-	Parms.ExecParams = std::move(ExecParams);
+	Parms.CommandName_BPExecutedCommandForPrimalUI = CommandName_BPExecutedCommandForPrimalUI;
+	Parms.ExecParams_BPExecutedCommandForPrimalUI = std::move(ExecParams_BPExecutedCommandForPrimalUI);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

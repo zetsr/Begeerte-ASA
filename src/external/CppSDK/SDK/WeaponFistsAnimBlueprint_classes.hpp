@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UWeaponFistsAnimBlueprint_C>();
 	}
 };
-DUMPER7_ASSERTS_UWeaponFistsAnimBlueprint_C;
 
 SDK_NAMESPACE_END

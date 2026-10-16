@@ -78,6 +78,5 @@ public:
 		return GetDefaultObjImpl<UVisualSettings_MainMenuUI_ASA_C>();
 	}
 };
-DUMPER7_ASSERTS_UVisualSettings_MainMenuUI_ASA_C;
 
 SDK_NAMESPACE_END

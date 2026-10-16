@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_MainMenuWidget_PopupTooltip_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_MainMenuWidget_PopupTooltip_C;
 
 SDK_NAMESPACE_END

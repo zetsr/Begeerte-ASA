@@ -35,7 +35,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_WeaponMachinedSniper_Cursed_C_BPPreventWeaponEquip;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

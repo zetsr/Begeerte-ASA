@@ -80,6 +80,5 @@ public:
 		return GetDefaultObjImpl<UBP_PrimalWindSourceComponent_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UBP_PrimalWindSourceComponent_Base_C;
 
 SDK_NAMESPACE_END

@@ -98,7 +98,6 @@ public:
 		return GetDefaultObjImpl<UHoverDroneMovementComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoverDroneMovementComponent;
 
 // Class HoverDrone.HoverDronePawnBase
 // 0x0008 (0x0578 - 0x0570)
@@ -121,7 +120,6 @@ public:
 		return GetDefaultObjImpl<AHoverDronePawnBase>();
 	}
 };
-DUMPER7_ASSERTS_AHoverDronePawnBase;
 
 // Class HoverDrone.HoverDronePawn
 // 0x00D0 (0x0648 - 0x0578)
@@ -168,7 +166,6 @@ public:
 		return GetDefaultObjImpl<AHoverDronePawn>();
 	}
 };
-DUMPER7_ASSERTS_AHoverDronePawn;
 
 // Class HoverDrone.HoverDroneSpeedLimitBox
 // 0x0008 (0x04E8 - 0x04E0)
@@ -192,7 +189,6 @@ public:
 		return GetDefaultObjImpl<AHoverDroneSpeedLimitBox>();
 	}
 };
-DUMPER7_ASSERTS_AHoverDroneSpeedLimitBox;
 
 // Class HoverDrone.HoverDroneVolumeManager
 // 0x00B8 (0x00E8 - 0x0030)
@@ -217,6 +213,5 @@ public:
 		return GetDefaultObjImpl<UHoverDroneVolumeManager>();
 	}
 };
-DUMPER7_ASSERTS_UHoverDroneVolumeManager;
 
 SDK_NAMESPACE_END

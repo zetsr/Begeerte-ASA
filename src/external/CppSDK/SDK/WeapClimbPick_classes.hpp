@@ -57,6 +57,5 @@ public:
 		return GetDefaultObjImpl<AWeapClimbPick_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapClimbPick_C;
 
 SDK_NAMESPACE_END

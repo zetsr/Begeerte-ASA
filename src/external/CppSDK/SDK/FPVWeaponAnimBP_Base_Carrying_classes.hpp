@@ -191,6 +191,5 @@ public:
 		return GetDefaultObjImpl<UFPVWeaponAnimBP_Base_Carrying_C>();
 	}
 };
-DUMPER7_ASSERTS_UFPVWeaponAnimBP_Base_Carrying_C;
 
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_WeaponPoisonTrap_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_WeaponPoisonTrap_C;
 
 SDK_NAMESPACE_END

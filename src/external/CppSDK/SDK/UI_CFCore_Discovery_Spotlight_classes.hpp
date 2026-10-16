@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "cfcore_structs.hpp"
 #include "CFCoreWidget_classes.hpp"
+#include "cfcore_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -80,6 +80,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Discovery_Spotlight_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Discovery_Spotlight_C;
 
 SDK_NAMESPACE_END

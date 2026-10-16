@@ -39,7 +39,6 @@ public:
 		return GetDefaultObjImpl<UMassLODCollectorProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassLODCollectorProcessor;
 
 // Class MassLOD.MassLODDistanceCollectorProcessor
 // 0x0CA0 (0x0D50 - 0x00B0)
@@ -62,7 +61,6 @@ public:
 		return GetDefaultObjImpl<UMassLODDistanceCollectorProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassLODDistanceCollectorProcessor;
 
 // Class MassLOD.MassLODSubsystem
 // 0x00C8 (0x0100 - 0x0038)
@@ -96,7 +94,6 @@ public:
 		return GetDefaultObjImpl<UMassLODSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UMassLODSubsystem;
 
 // Class MassLOD.MassLODCollectorTrait
 // 0x0000 (0x0028 - 0x0028)
@@ -116,7 +113,6 @@ public:
 		return GetDefaultObjImpl<UMassLODCollectorTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassLODCollectorTrait;
 
 // Class MassLOD.MassDistanceLODCollectorTrait
 // 0x0000 (0x0028 - 0x0028)
@@ -136,7 +132,6 @@ public:
 		return GetDefaultObjImpl<UMassDistanceLODCollectorTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassDistanceLODCollectorTrait;
 
 // Class MassLOD.MassSimulationLODTrait
 // 0x0040 (0x0068 - 0x0028)
@@ -162,7 +157,6 @@ public:
 		return GetDefaultObjImpl<UMassSimulationLODTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassSimulationLODTrait;
 
 // Class MassLOD.MassSimulationLODProcessor
 // 0x0FB0 (0x1060 - 0x00B0)
@@ -187,6 +181,5 @@ public:
 		return GetDefaultObjImpl<UMassSimulationLODProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassSimulationLODProcessor;
 
 SDK_NAMESPACE_END

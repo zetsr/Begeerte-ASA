@@ -39,6 +39,5 @@ public:
 		return GetDefaultObjImpl<USavePaintingEntryUI_C>();
 	}
 };
-DUMPER7_ASSERTS_USavePaintingEntryUI_C;
 
 SDK_NAMESPACE_END

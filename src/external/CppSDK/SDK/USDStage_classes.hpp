@@ -41,7 +41,6 @@ public:
 		return GetDefaultObjImpl<UUsdDynamicBindingResolverLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UUsdDynamicBindingResolverLibrary;
 
 // Class USDStage.UsdInfoCache
 // 0x0008 (0x0030 - 0x0028)
@@ -64,7 +63,6 @@ public:
 		return GetDefaultObjImpl<UUsdInfoCache>();
 	}
 };
-DUMPER7_ASSERTS_UUsdInfoCache;
 
 // Class USDStage.UsdPrimLinkCache
 // 0x0008 (0x0030 - 0x0028)
@@ -87,7 +85,6 @@ public:
 		return GetDefaultObjImpl<UUsdPrimLinkCache>();
 	}
 };
-DUMPER7_ASSERTS_UUsdPrimLinkCache;
 
 // Class USDStage.UsdPrimTwin
 // 0x0088 (0x00B0 - 0x0028)
@@ -114,7 +111,6 @@ public:
 		return GetDefaultObjImpl<UUsdPrimTwin>();
 	}
 };
-DUMPER7_ASSERTS_UUsdPrimTwin;
 
 // Class USDStage.UsdStageActor
 // 0x03D0 (0x0860 - 0x0490)
@@ -207,7 +203,6 @@ public:
 		return GetDefaultObjImpl<AUsdStageActor>();
 	}
 };
-DUMPER7_ASSERTS_AUsdStageActor;
 
 // Class USDStage.UsdTransactor
 // 0x0010 (0x0038 - 0x0028)
@@ -230,6 +225,5 @@ public:
 		return GetDefaultObjImpl<UUsdTransactor>();
 	}
 };
-DUMPER7_ASSERTS_UUsdTransactor;
 
 SDK_NAMESPACE_END

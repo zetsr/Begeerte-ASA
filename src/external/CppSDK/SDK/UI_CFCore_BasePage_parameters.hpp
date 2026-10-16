@@ -25,7 +25,6 @@ public:
 	class FString                                 CallFunc_BPGetPrimaryMapName_ReturnValue;          // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_StriStri_ReturnValue;            // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_BasePage_C_ShouldHideOptionsButton;
 
 // Function UI_CFCore_BasePage.UI_CFCore_BasePage_C.GetControlSizeBox
 // 0x0008 (0x0008 - 0x0000)
@@ -34,7 +33,6 @@ struct UI_CFCore_BasePage_C_GetControlSizeBox final
 public:
 	class USizeBox*                               SizeBoxForControls;                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_BasePage_C_GetControlSizeBox;
 
 // Function UI_CFCore_BasePage.UI_CFCore_BasePage_C.CheckHideOptionsButton
 // 0x0020 (0x0020 - 0x0000)
@@ -50,7 +48,6 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_SetWidthOverride_InWidthOverride_ImplicitCast; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_BasePage_C_CheckHideOptionsButton;
 
 // Function UI_CFCore_BasePage.UI_CFCore_BasePage_C.GetOptionsButton
 // 0x0008 (0x0008 - 0x0000)
@@ -59,7 +56,6 @@ struct UI_CFCore_BasePage_C_GetOptionsButton final
 public:
 	class UUI_Button_CFCore_Global_Master_C*      OptionsButton;                                     // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_BasePage_C_GetOptionsButton;
 
 // Function UI_CFCore_BasePage.UI_CFCore_BasePage_C.ExecuteUbergraph_UI_CFCore_BasePage
 // 0x0004 (0x0004 - 0x0000)
@@ -68,7 +64,6 @@ struct UI_CFCore_BasePage_C_ExecuteUbergraph_UI_CFCore_BasePage final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_BasePage_C_ExecuteUbergraph_UI_CFCore_BasePage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

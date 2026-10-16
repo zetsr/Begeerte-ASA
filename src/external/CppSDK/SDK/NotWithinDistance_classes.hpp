@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UNotWithinDistance_C>();
 	}
 };
-DUMPER7_ASSERTS_UNotWithinDistance_C;
 
 SDK_NAMESPACE_END

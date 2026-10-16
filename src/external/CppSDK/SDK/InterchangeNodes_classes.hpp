@@ -48,7 +48,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeAnimationTrackSetNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeAnimationTrackSetNode;
 
 // Class InterchangeNodes.InterchangeAnimationTrackBaseNode
 // 0x0010 (0x0070 - 0x0060)
@@ -76,7 +75,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeAnimationTrackBaseNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeAnimationTrackBaseNode;
 
 // Class InterchangeNodes.InterchangeAnimationTrackSetInstanceNode
 // 0x0040 (0x00B0 - 0x0070)
@@ -110,7 +108,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeAnimationTrackSetInstanceNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeAnimationTrackSetInstanceNode;
 
 // Class InterchangeNodes.InterchangeAnimationTrackNode
 // 0x0060 (0x00D0 - 0x0070)
@@ -144,7 +141,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeAnimationTrackNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeAnimationTrackNode;
 
 // Class InterchangeNodes.InterchangeTransformAnimationTrackNode
 // 0x0010 (0x00E0 - 0x00D0)
@@ -172,7 +168,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeTransformAnimationTrackNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeTransformAnimationTrackNode;
 
 // Class InterchangeNodes.InterchangeSkeletalAnimationTrackNode
 // 0x0220 (0x0290 - 0x0070)
@@ -211,7 +206,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeSkeletalAnimationTrackNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeSkeletalAnimationTrackNode;
 
 // Class InterchangeNodes.InterchangePhysicalCameraNode
 // 0x0040 (0x00A0 - 0x0060)
@@ -245,7 +239,6 @@ public:
 		return GetDefaultObjImpl<UInterchangePhysicalCameraNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangePhysicalCameraNode;
 
 // Class InterchangeNodes.InterchangeStandardCameraNode
 // 0x0060 (0x00C0 - 0x0060)
@@ -283,7 +276,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeStandardCameraNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeStandardCameraNode;
 
 // Class InterchangeNodes.InterchangeShaderNode
 // 0x0010 (0x0070 - 0x0060)
@@ -314,7 +306,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeShaderNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeShaderNode;
 
 // Class InterchangeNodes.InterchangeDecalMaterialNode
 // 0x0020 (0x0090 - 0x0070)
@@ -337,7 +328,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeDecalMaterialNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeDecalMaterialNode;
 
 // Class InterchangeNodes.InterchangeDecalNode
 // 0x0030 (0x0090 - 0x0060)
@@ -369,7 +359,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeDecalNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeDecalNode;
 
 // Class InterchangeNodes.InterchangeBaseLightNode
 // 0x0040 (0x00A0 - 0x0060)
@@ -403,7 +392,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeBaseLightNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeBaseLightNode;
 
 // Class InterchangeNodes.InterchangeLightNode
 // 0x0060 (0x0100 - 0x00A0)
@@ -441,7 +429,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeLightNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeLightNode;
 
 // Class InterchangeNodes.InterchangePointLightNode
 // 0x0020 (0x0120 - 0x0100)
@@ -471,7 +458,6 @@ public:
 		return GetDefaultObjImpl<UInterchangePointLightNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangePointLightNode;
 
 // Class InterchangeNodes.InterchangeSpotLightNode
 // 0x0020 (0x0140 - 0x0120)
@@ -501,7 +487,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeSpotLightNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeSpotLightNode;
 
 // Class InterchangeNodes.InterchangeRectLightNode
 // 0x0020 (0x0120 - 0x0100)
@@ -531,7 +516,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeRectLightNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeRectLightNode;
 
 // Class InterchangeNodes.InterchangeDirectionalLightNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -551,7 +535,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeDirectionalLightNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeDirectionalLightNode;
 
 // Class InterchangeNodes.InterchangeTextureNode
 // 0x0040 (0x00A0 - 0x0060)
@@ -586,7 +569,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeTextureNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeTextureNode;
 
 // Class InterchangeNodes.InterchangeTexture2DArrayNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -606,7 +588,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeTexture2DArrayNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeTexture2DArrayNode;
 
 // Class InterchangeNodes.InterchangeTextureCubeArrayNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -626,7 +607,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeTextureCubeArrayNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeTextureCubeArrayNode;
 
 // Class InterchangeNodes.InterchangeTextureCubeNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -646,7 +626,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeTextureCubeNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeTextureCubeNode;
 
 // Class InterchangeNodes.InterchangeTextureLightProfileNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -666,7 +645,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeTextureLightProfileNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeTextureLightProfileNode;
 
 // Class InterchangeNodes.InterchangeVariantSetNode
 // 0x0040 (0x00A0 - 0x0060)
@@ -701,7 +679,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeVariantSetNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeVariantSetNode;
 
 // Class InterchangeNodes.InterchangeSceneVariantSetsNode
 // 0x0020 (0x0080 - 0x0060)
@@ -732,7 +709,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeSceneVariantSetsNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeSceneVariantSetsNode;
 
 // Class InterchangeNodes.InterchangeVolumeTextureNode
 // 0x0000 (0x00A0 - 0x00A0)
@@ -752,7 +728,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeVolumeTextureNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeVolumeTextureNode;
 
 // Class InterchangeNodes.InterchangeMaterialInstanceNode
 // 0x0010 (0x0070 - 0x0060)
@@ -788,7 +763,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeMaterialInstanceNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeMaterialInstanceNode;
 
 // Class InterchangeNodes.InterchangeMeshNode
 // 0x0188 (0x01E8 - 0x0060)
@@ -858,7 +832,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeMeshNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeMeshNode;
 
 // Class InterchangeNodes.InterchangeSceneNode
 // 0x03A0 (0x0400 - 0x0060)
@@ -917,7 +890,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeSceneNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeSceneNode;
 
 // Class InterchangeNodes.InterchangeShaderPortsAPI
 // 0x0000 (0x0028 - 0x0028)
@@ -952,7 +924,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeShaderPortsAPI>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeShaderPortsAPI;
 
 // Class InterchangeNodes.InterchangeFunctionCallShaderNode
 // 0x0010 (0x0080 - 0x0070)
@@ -980,7 +951,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeFunctionCallShaderNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeFunctionCallShaderNode;
 
 // Class InterchangeNodes.InterchangeShaderGraphNode
 // 0x0060 (0x00D0 - 0x0070)
@@ -1018,7 +988,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeShaderGraphNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeShaderGraphNode;
 
 // Class InterchangeNodes.InterchangeTexture2DNode
 // 0x0098 (0x0138 - 0x00A0)
@@ -1049,7 +1018,6 @@ public:
 		return GetDefaultObjImpl<UInterchangeTexture2DNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeTexture2DNode;
 
 // Class InterchangeNodes.InterchangeTextureBlurNode
 // 0x0000 (0x0138 - 0x0138)
@@ -1069,6 +1037,5 @@ public:
 		return GetDefaultObjImpl<UInterchangeTextureBlurNode>();
 	}
 };
-DUMPER7_ASSERTS_UInterchangeTextureBlurNode;
 
 SDK_NAMESPACE_END

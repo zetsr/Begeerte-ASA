@@ -27,7 +27,6 @@ public:
 	bool                                          CallFunc_IsShooterCharacter_ReturnValue;           // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItemDyeGeneric_C_BPShouldAlwaysShowInFolder;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -42,7 +42,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkInstance>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkInstance;
 
 // Class LiveLinkAnimationCore.LiveLinkRetargetAsset
 // 0x0000 (0x0028 - 0x0028)
@@ -62,7 +61,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkRetargetAsset>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkRetargetAsset;
 
 // Class LiveLinkAnimationCore.LiveLinkRemapAsset
 // 0x00A0 (0x00C8 - 0x0028)
@@ -90,6 +88,5 @@ public:
 		return GetDefaultObjImpl<ULiveLinkRemapAsset>();
 	}
 };
-DUMPER7_ASSERTS_ULiveLinkRemapAsset;
 
 SDK_NAMESPACE_END

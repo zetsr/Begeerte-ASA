@@ -24,7 +24,6 @@ struct CFCoreUIWidget_MainModShop_C_DoExit final
 public:
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_DoExit;
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.ExecuteUbergraph_CFCoreUIWidget_MainModShop
 // 0x05A8 (0x05A8 - 0x0000)
@@ -55,7 +54,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x05A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x05A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_ExecuteUbergraph_CFCoreUIWidget_MainModShop;
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.GamepadChangeTab
 // 0x0001 (0x0001 - 0x0000)
@@ -64,7 +62,6 @@ struct CFCoreUIWidget_MainModShop_C_GamepadChangeTab final
 public:
 	bool                                          Forward;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_GamepadChangeTab;
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.GamepadRequestChangeTab
 // 0x0001 (0x0001 - 0x0000)
@@ -73,7 +70,6 @@ struct CFCoreUIWidget_MainModShop_C_GamepadRequestChangeTab final
 public:
 	bool                                          Forward;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_GamepadRequestChangeTab;
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.GetDiscoveryRef
 // 0x0008 (0x0008 - 0x0000)
@@ -82,7 +78,6 @@ struct CFCoreUIWidget_MainModShop_C_GetDiscoveryRef final
 public:
 	class UUI_CFCore_Discovery_C*                 DiscoveryRef;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_GetDiscoveryRef;
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.GetDiscoveryScrollBox
 // 0x0008 (0x0008 - 0x0000)
@@ -91,7 +86,6 @@ struct CFCoreUIWidget_MainModShop_C_GetDiscoveryScrollBox final
 public:
 	class UScrollBox*                             NewParam;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_GetDiscoveryScrollBox;
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.GetScrollBox
 // 0x0010 (0x0010 - 0x0000)
@@ -101,7 +95,6 @@ public:
 	class UScrollBox*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UScrollBox*                             CallFunc_GetDiscoveryScrollBox_NewParam;           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_GetScrollBox;
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.OnBackInstallingCheck
 // 0x0010 (0x0010 - 0x0000)
@@ -110,7 +103,6 @@ struct CFCoreUIWidget_MainModShop_C_OnBackInstallingCheck final
 public:
 	TArray<struct FInstalledMod>                  installed_mods;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_OnBackInstallingCheck;
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.OnRequestedModPage
 // 0x0008 (0x0008 - 0x0000)
@@ -119,7 +111,6 @@ struct CFCoreUIWidget_MainModShop_C_OnRequestedModPage final
 public:
 	int64                                         ForModID;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_OnRequestedModPage;
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.RequestModPage
 // 0x0030 (0x0030 - 0x0000)
@@ -133,7 +124,6 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0028(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_RequestModPage;
 
 // Function CFCoreUIWidget_MainModShop.CFCoreUIWidget_MainModShop_C.WaitDeeplinkToSpotlight
 // 0x0010 (0x0010 - 0x0000)
@@ -144,7 +134,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_CFCoreUIWidget_MainModShop_C_WaitDeeplinkToSpotlight;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

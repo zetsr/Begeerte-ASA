@@ -34,6 +34,5 @@ public:
 	EExecutionMode                                ExecutionMode;                                     // 0x000C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FThreadingOptions;
 
 SDK_NAMESPACE_END

@@ -38,7 +38,6 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_AllowWandering_C_ExecuteUbergraph_AllowWandering;
 
 // Function AllowWandering.AllowWandering_C.ReceiveExecute
 // 0x0008 (0x0008 - 0x0000)
@@ -47,7 +46,6 @@ struct AllowWandering_C_ReceiveExecute final
 public:
 	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_AllowWandering_C_ReceiveExecute;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

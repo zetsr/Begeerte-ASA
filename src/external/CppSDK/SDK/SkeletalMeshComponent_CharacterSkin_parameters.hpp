@@ -78,7 +78,6 @@ public:
 	float                                         CallFunc_SetBoneModifiersOverride_UtilizingPlayerProportions_OverrideLegLengthPercent_ImplicitCast; // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_VariableSet_BoneModifiersLegLengthPercentage_ImplicitCast; // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_SkeletalMeshComponent_CharacterSkin_C_AddedAsPrimalItemAttachment;
 
 // Function SkeletalMeshComponent_CharacterSkin.SkeletalMeshComponent_CharacterSkin_C.BPOnComponentDestroyed
 // 0x0038 (0x0038 - 0x0000)
@@ -94,7 +93,6 @@ public:
 	class AShooterCharacter*                      K2Node_DynamicCast_AsShooter_Character;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_SkeletalMeshComponent_CharacterSkin_C_BPOnComponentDestroyed;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

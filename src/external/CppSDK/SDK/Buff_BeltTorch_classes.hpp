@@ -95,6 +95,5 @@ public:
 		return GetDefaultObjImpl<ABuff_BeltTorch_C>();
 	}
 };
-DUMPER7_ASSERTS_ABuff_BeltTorch_C;
 
 SDK_NAMESPACE_END

@@ -45,7 +45,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IAssetBackedTarget;
 
 // Class InteractiveToolsFramework.TransformProxy
 // 0x0188 (0x01B0 - 0x0028)
@@ -73,7 +72,6 @@ public:
 		return GetDefaultObjImpl<UTransformProxy>();
 	}
 };
-DUMPER7_ASSERTS_UTransformProxy;
 
 // Class InteractiveToolsFramework.ComponentBoundTransformProxy
 // 0x0010 (0x01C0 - 0x01B0)
@@ -96,7 +94,6 @@ public:
 		return GetDefaultObjImpl<UComponentBoundTransformProxy>();
 	}
 };
-DUMPER7_ASSERTS_UComponentBoundTransformProxy;
 
 // Class InteractiveToolsFramework.GizmoBaseComponentInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -125,7 +122,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGizmoBaseComponentInterface;
 
 // Class InteractiveToolsFramework.GizmoBaseComponent
 // 0x0040 (0x0660 - 0x0620)
@@ -160,7 +156,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UGizmoBaseComponent;
 
 // Class InteractiveToolsFramework.InteractiveGizmoBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -180,7 +175,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveGizmoBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveGizmoBuilder;
 
 // Class InteractiveToolsFramework.SimpleLambdaInteractiveGizmoBuilder
 // 0x0048 (0x0070 - 0x0028)
@@ -203,7 +197,6 @@ public:
 		return GetDefaultObjImpl<USimpleLambdaInteractiveGizmoBuilder>();
 	}
 };
-DUMPER7_ASSERTS_USimpleLambdaInteractiveGizmoBuilder;
 
 // Class InteractiveToolsFramework.InteractiveCommandArguments
 // 0x0008 (0x0030 - 0x0028)
@@ -226,7 +219,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveCommandArguments>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveCommandArguments;
 
 // Class InteractiveToolsFramework.InteractiveCommandResult
 // 0x0000 (0x0028 - 0x0028)
@@ -246,7 +238,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveCommandResult>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveCommandResult;
 
 // Class InteractiveToolsFramework.InteractiveCommand
 // 0x0000 (0x0028 - 0x0028)
@@ -266,7 +257,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveCommand>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveCommand;
 
 // Class InteractiveToolsFramework.ToolContextTransactionProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -295,7 +285,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IToolContextTransactionProvider;
 
 // Class InteractiveToolsFramework.InternalToolFrameworkActor
 // 0x0008 (0x0498 - 0x0490)
@@ -319,7 +308,6 @@ public:
 		return GetDefaultObjImpl<AInternalToolFrameworkActor>();
 	}
 };
-DUMPER7_ASSERTS_AInternalToolFrameworkActor;
 
 // Class InteractiveToolsFramework.ToolFrameworkComponent
 // 0x0000 (0x0000 - 0x0000)
@@ -348,7 +336,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IToolFrameworkComponent;
 
 // Class InteractiveToolsFramework.InteractiveToolCameraFocusAPI
 // 0x0000 (0x0000 - 0x0000)
@@ -377,7 +364,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IInteractiveToolCameraFocusAPI;
 
 // Class InteractiveToolsFramework.InteractiveToolNestedAcceptCancelAPI
 // 0x0000 (0x0000 - 0x0000)
@@ -406,7 +392,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IInteractiveToolNestedAcceptCancelAPI;
 
 // Class InteractiveToolsFramework.InteractiveToolShutdownQueryAPI
 // 0x0000 (0x0000 - 0x0000)
@@ -435,7 +420,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IInteractiveToolShutdownQueryAPI;
 
 // Class InteractiveToolsFramework.InteractiveToolExclusiveToolAPI
 // 0x0000 (0x0000 - 0x0000)
@@ -464,7 +448,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IInteractiveToolExclusiveToolAPI;
 
 // Class InteractiveToolsFramework.InteractiveToolEditorGizmoAPI
 // 0x0000 (0x0000 - 0x0000)
@@ -493,7 +476,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IInteractiveToolEditorGizmoAPI;
 
 // Class InteractiveToolsFramework.InteractiveToolManageGeometrySelectionAPI
 // 0x0000 (0x0000 - 0x0000)
@@ -522,7 +504,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IInteractiveToolManageGeometrySelectionAPI;
 
 // Class InteractiveToolsFramework.MaterialProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -551,7 +532,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMaterialProvider;
 
 // Class InteractiveToolsFramework.MeshDescriptionCommitter
 // 0x0000 (0x0000 - 0x0000)
@@ -580,7 +560,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMeshDescriptionCommitter;
 
 // Class InteractiveToolsFramework.MeshDescriptionProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -609,7 +588,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMeshDescriptionProvider;
 
 // Class InteractiveToolsFramework.GizmoBaseVec2ParameterSource
 // 0x0020 (0x0048 - 0x0028)
@@ -632,7 +610,6 @@ public:
 		return GetDefaultObjImpl<UGizmoBaseVec2ParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoBaseVec2ParameterSource;
 
 // Class InteractiveToolsFramework.GizmoLocalVec2ParameterSource
 // 0x0030 (0x0078 - 0x0048)
@@ -656,7 +633,6 @@ public:
 		return GetDefaultObjImpl<UGizmoLocalVec2ParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoLocalVec2ParameterSource;
 
 // Class InteractiveToolsFramework.GizmoBaseFloatParameterSource
 // 0x0020 (0x0048 - 0x0028)
@@ -679,7 +655,6 @@ public:
 		return GetDefaultObjImpl<UGizmoBaseFloatParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoBaseFloatParameterSource;
 
 // Class InteractiveToolsFramework.GizmoAxisTranslationParameterSource
 // 0x0148 (0x0190 - 0x0048)
@@ -710,7 +685,6 @@ public:
 		return GetDefaultObjImpl<UGizmoAxisTranslationParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoAxisTranslationParameterSource;
 
 // Class InteractiveToolsFramework.GizmoPlaneTranslationParameterSource
 // 0x01D8 (0x0220 - 0x0048)
@@ -742,7 +716,6 @@ public:
 		return GetDefaultObjImpl<UGizmoPlaneTranslationParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoPlaneTranslationParameterSource;
 
 // Class InteractiveToolsFramework.GizmoAxisRotationParameterSource
 // 0x0148 (0x0190 - 0x0048)
@@ -773,7 +746,6 @@ public:
 		return GetDefaultObjImpl<UGizmoAxisRotationParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoAxisRotationParameterSource;
 
 // Class InteractiveToolsFramework.GizmoUniformScaleParameterSource
 // 0x01A8 (0x01F0 - 0x0048)
@@ -808,7 +780,6 @@ public:
 		return GetDefaultObjImpl<UGizmoUniformScaleParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoUniformScaleParameterSource;
 
 // Class InteractiveToolsFramework.GizmoAxisScaleParameterSource
 // 0x0158 (0x01A0 - 0x0048)
@@ -843,7 +814,6 @@ public:
 		return GetDefaultObjImpl<UGizmoAxisScaleParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoAxisScaleParameterSource;
 
 // Class InteractiveToolsFramework.GizmoPlaneScaleParameterSource
 // 0x0228 (0x0270 - 0x0048)
@@ -880,7 +850,6 @@ public:
 		return GetDefaultObjImpl<UGizmoPlaneScaleParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoPlaneScaleParameterSource;
 
 // Class InteractiveToolsFramework.PhysicsDataSource
 // 0x0000 (0x0000 - 0x0000)
@@ -909,7 +878,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IPhysicsDataSource;
 
 // Class InteractiveToolsFramework.PrimitiveComponentBackedTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -938,7 +906,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IPrimitiveComponentBackedTarget;
 
 // Class InteractiveToolsFramework.InteractiveGizmo
 // 0x0010 (0x0038 - 0x0028)
@@ -962,7 +929,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveGizmo>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveGizmo;
 
 // Class InteractiveToolsFramework.SimpleSingleClickGizmo
 // 0x0040 (0x0078 - 0x0038)
@@ -987,7 +953,6 @@ public:
 		return GetDefaultObjImpl<USimpleSingleClickGizmo>();
 	}
 };
-DUMPER7_ASSERTS_USimpleSingleClickGizmo;
 
 // Class InteractiveToolsFramework.SkeletalMeshBackedTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -1016,7 +981,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ISkeletalMeshBackedTarget;
 
 // Class InteractiveToolsFramework.StaticMeshBackedTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -1045,7 +1009,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IStaticMeshBackedTarget;
 
 // Class InteractiveToolsFramework.ToolsContextCursorAPI
 // 0x0008 (0x0030 - 0x0028)
@@ -1068,7 +1031,6 @@ public:
 		return GetDefaultObjImpl<UToolsContextCursorAPI>();
 	}
 };
-DUMPER7_ASSERTS_UToolsContextCursorAPI;
 
 // Class InteractiveToolsFramework.ViewAdjustedStaticMeshGizmoComponent
 // 0x0040 (0x0750 - 0x0710)
@@ -1095,7 +1057,6 @@ public:
 		return GetDefaultObjImpl<UViewAdjustedStaticMeshGizmoComponent>();
 	}
 };
-DUMPER7_ASSERTS_UViewAdjustedStaticMeshGizmoComponent;
 
 // Class InteractiveToolsFramework.InputBehavior
 // 0x0008 (0x0030 - 0x0028)
@@ -1118,7 +1079,6 @@ public:
 		return GetDefaultObjImpl<UInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UInputBehavior;
 
 // Class InteractiveToolsFramework.AnyButtonInputBehavior
 // 0x0050 (0x0080 - 0x0030)
@@ -1141,7 +1101,6 @@ public:
 		return GetDefaultObjImpl<UAnyButtonInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UAnyButtonInputBehavior;
 
 // Class InteractiveToolsFramework.ClickDragInputBehavior
 // 0x00C0 (0x0140 - 0x0080)
@@ -1166,7 +1125,6 @@ public:
 		return GetDefaultObjImpl<UClickDragInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UClickDragInputBehavior;
 
 // Class InteractiveToolsFramework.LocalClickDragInputBehavior
 // 0x0140 (0x0280 - 0x0140)
@@ -1189,7 +1147,6 @@ public:
 		return GetDefaultObjImpl<ULocalClickDragInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_ULocalClickDragInputBehavior;
 
 // Class InteractiveToolsFramework.SingleClickInputBehavior
 // 0x00B0 (0x0130 - 0x0080)
@@ -1214,7 +1171,6 @@ public:
 		return GetDefaultObjImpl<USingleClickInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_USingleClickInputBehavior;
 
 // Class InteractiveToolsFramework.DoubleClickInputBehavior
 // 0x0000 (0x0130 - 0x0130)
@@ -1234,7 +1190,6 @@ public:
 		return GetDefaultObjImpl<UDoubleClickInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UDoubleClickInputBehavior;
 
 // Class InteractiveToolsFramework.LocalDoubleClickInputBehavior
 // 0x00D0 (0x0200 - 0x0130)
@@ -1257,7 +1212,6 @@ public:
 		return GetDefaultObjImpl<ULocalDoubleClickInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_ULocalDoubleClickInputBehavior;
 
 // Class InteractiveToolsFramework.KeyAsModifierInputBehavior
 // 0x0068 (0x0098 - 0x0030)
@@ -1280,7 +1234,6 @@ public:
 		return GetDefaultObjImpl<UKeyAsModifierInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UKeyAsModifierInputBehavior;
 
 // Class InteractiveToolsFramework.KeyInputBehavior
 // 0x00E0 (0x0110 - 0x0030)
@@ -1303,7 +1256,6 @@ public:
 		return GetDefaultObjImpl<UKeyInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UKeyInputBehavior;
 
 // Class InteractiveToolsFramework.MouseHoverBehavior
 // 0x00B0 (0x00E0 - 0x0030)
@@ -1326,7 +1278,6 @@ public:
 		return GetDefaultObjImpl<UMouseHoverBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UMouseHoverBehavior;
 
 // Class InteractiveToolsFramework.LocalMouseHoverBehavior
 // 0x0140 (0x0220 - 0x00E0)
@@ -1349,7 +1300,6 @@ public:
 		return GetDefaultObjImpl<ULocalMouseHoverBehavior>();
 	}
 };
-DUMPER7_ASSERTS_ULocalMouseHoverBehavior;
 
 // Class InteractiveToolsFramework.MouseWheelInputBehavior
 // 0x00B0 (0x0130 - 0x0080)
@@ -1372,7 +1322,6 @@ public:
 		return GetDefaultObjImpl<UMouseWheelInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UMouseWheelInputBehavior;
 
 // Class InteractiveToolsFramework.MultiClickSequenceInputBehavior
 // 0x00F0 (0x0170 - 0x0080)
@@ -1395,7 +1344,6 @@ public:
 		return GetDefaultObjImpl<UMultiClickSequenceInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UMultiClickSequenceInputBehavior;
 
 // Class InteractiveToolsFramework.LocalSingleClickInputBehavior
 // 0x00D0 (0x0200 - 0x0130)
@@ -1418,7 +1366,6 @@ public:
 		return GetDefaultObjImpl<ULocalSingleClickInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_ULocalSingleClickInputBehavior;
 
 // Class InteractiveToolsFramework.SingleClickOrDragInputBehavior
 // 0x0100 (0x0180 - 0x0080)
@@ -1445,7 +1392,6 @@ public:
 		return GetDefaultObjImpl<USingleClickOrDragInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_USingleClickOrDragInputBehavior;
 
 // Class InteractiveToolsFramework.SingleKeyCaptureBehavior
 // 0x00E0 (0x0110 - 0x0030)
@@ -1468,7 +1414,6 @@ public:
 		return GetDefaultObjImpl<USingleKeyCaptureBehavior>();
 	}
 };
-DUMPER7_ASSERTS_USingleKeyCaptureBehavior;
 
 // Class InteractiveToolsFramework.WidgetBaseBehavior
 // 0x0000 (0x0000 - 0x0000)
@@ -1497,7 +1442,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IWidgetBaseBehavior;
 
 // Class InteractiveToolsFramework.AxisAngleGizmoBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1517,7 +1461,6 @@ public:
 		return GetDefaultObjImpl<UAxisAngleGizmoBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UAxisAngleGizmoBuilder;
 
 // Class InteractiveToolsFramework.AxisAngleGizmo
 // 0x0198 (0x01D0 - 0x0038)
@@ -1557,7 +1500,6 @@ public:
 		return GetDefaultObjImpl<UAxisAngleGizmo>();
 	}
 };
-DUMPER7_ASSERTS_UAxisAngleGizmo;
 
 // Class InteractiveToolsFramework.AxisPositionGizmoBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1577,7 +1519,6 @@ public:
 		return GetDefaultObjImpl<UAxisPositionGizmoBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UAxisPositionGizmoBuilder;
 
 // Class InteractiveToolsFramework.AxisPositionGizmo
 // 0x0188 (0x01C0 - 0x0038)
@@ -1618,7 +1559,6 @@ public:
 		return GetDefaultObjImpl<UAxisPositionGizmo>();
 	}
 };
-DUMPER7_ASSERTS_UAxisPositionGizmo;
 
 // Class InteractiveToolsFramework.GizmoConstantAxisSource
 // 0x0038 (0x0060 - 0x0028)
@@ -1643,7 +1583,6 @@ public:
 		return GetDefaultObjImpl<UGizmoConstantAxisSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoConstantAxisSource;
 
 // Class InteractiveToolsFramework.GizmoConstantFrameAxisSource
 // 0x0068 (0x0090 - 0x0028)
@@ -1670,7 +1609,6 @@ public:
 		return GetDefaultObjImpl<UGizmoConstantFrameAxisSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoConstantFrameAxisSource;
 
 // Class InteractiveToolsFramework.GizmoWorldAxisSource
 // 0x0028 (0x0050 - 0x0028)
@@ -1696,7 +1634,6 @@ public:
 		return GetDefaultObjImpl<UGizmoWorldAxisSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoWorldAxisSource;
 
 // Class InteractiveToolsFramework.GizmoComponentAxisSource
 // 0x0018 (0x0040 - 0x0028)
@@ -1723,7 +1660,6 @@ public:
 		return GetDefaultObjImpl<UGizmoComponentAxisSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoComponentAxisSource;
 
 // Class InteractiveToolsFramework.BrushStampIndicatorBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -1743,7 +1679,6 @@ public:
 		return GetDefaultObjImpl<UBrushStampIndicatorBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UBrushStampIndicatorBuilder;
 
 // Class InteractiveToolsFramework.BrushStampIndicator
 // 0x00A0 (0x00D8 - 0x0038)
@@ -1787,7 +1722,6 @@ public:
 		return GetDefaultObjImpl<UBrushStampIndicator>();
 	}
 };
-DUMPER7_ASSERTS_UBrushStampIndicator;
 
 // Class InteractiveToolsFramework.GizmoActor
 // 0x0000 (0x0498 - 0x0498)
@@ -1807,7 +1741,6 @@ public:
 		return GetDefaultObjImpl<AGizmoActor>();
 	}
 };
-DUMPER7_ASSERTS_AGizmoActor;
 
 // Class InteractiveToolsFramework.CombinedTransformGizmoActor
 // 0x0088 (0x0520 - 0x0498)
@@ -1846,7 +1779,6 @@ public:
 		return GetDefaultObjImpl<ACombinedTransformGizmoActor>();
 	}
 };
-DUMPER7_ASSERTS_ACombinedTransformGizmoActor;
 
 // Class InteractiveToolsFramework.CombinedTransformGizmoBuilder
 // 0x00C8 (0x00F0 - 0x0028)
@@ -1869,7 +1801,6 @@ public:
 		return GetDefaultObjImpl<UCombinedTransformGizmoBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UCombinedTransformGizmoBuilder;
 
 // Class InteractiveToolsFramework.CombinedTransformGizmo
 // 0x0378 (0x03B0 - 0x0038)
@@ -1919,7 +1850,6 @@ public:
 		return GetDefaultObjImpl<UCombinedTransformGizmo>();
 	}
 };
-DUMPER7_ASSERTS_UCombinedTransformGizmo;
 
 // Class InteractiveToolsFramework.GizmoArrowComponent
 // 0x0020 (0x0680 - 0x0660)
@@ -1946,7 +1876,6 @@ public:
 		return GetDefaultObjImpl<UGizmoArrowComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoArrowComponent;
 
 // Class InteractiveToolsFramework.GizmoBoxComponent
 // 0x0050 (0x06B0 - 0x0660)
@@ -1975,7 +1904,6 @@ public:
 		return GetDefaultObjImpl<UGizmoBoxComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoBoxComponent;
 
 // Class InteractiveToolsFramework.GizmoCircleComponent
 // 0x0020 (0x0680 - 0x0660)
@@ -2005,7 +1933,6 @@ public:
 		return GetDefaultObjImpl<UGizmoCircleComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoCircleComponent;
 
 // Class InteractiveToolsFramework.GizmoElementBase
 // 0x00E0 (0x0108 - 0x0028)
@@ -2051,7 +1978,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementBase>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementBase;
 
 // Class InteractiveToolsFramework.GizmoElementLineBase
 // 0x0050 (0x0158 - 0x0108)
@@ -2080,7 +2006,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementLineBase>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementLineBase;
 
 // Class InteractiveToolsFramework.GizmoElementCircleBase
 // 0x0070 (0x01C8 - 0x0158)
@@ -2111,7 +2036,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementCircleBase>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementCircleBase;
 
 // Class InteractiveToolsFramework.GizmoElementArc
 // 0x0008 (0x01D0 - 0x01C8)
@@ -2134,7 +2058,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementArc>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementArc;
 
 // Class InteractiveToolsFramework.GizmoElementArrow
 // 0x0080 (0x0188 - 0x0108)
@@ -2169,7 +2092,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementArrow>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementArrow;
 
 // Class InteractiveToolsFramework.GizmoElementBox
 // 0x0060 (0x0168 - 0x0108)
@@ -2195,7 +2117,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementBox>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementBox;
 
 // Class InteractiveToolsFramework.GizmoElementCircle
 // 0x0008 (0x01D0 - 0x01C8)
@@ -2222,7 +2143,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementCircle>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementCircle;
 
 // Class InteractiveToolsFramework.GizmoElementCone
 // 0x0040 (0x0148 - 0x0108)
@@ -2250,7 +2170,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementCone>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementCone;
 
 // Class InteractiveToolsFramework.GizmoElementCylinder
 // 0x0040 (0x0148 - 0x0108)
@@ -2278,7 +2197,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementCylinder>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementCylinder;
 
 // Class InteractiveToolsFramework.GizmoElementGroup
 // 0x0018 (0x0170 - 0x0158)
@@ -2304,7 +2222,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementGroup>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementGroup;
 
 // Class InteractiveToolsFramework.GizmoElementHitTarget
 // 0x0068 (0x0090 - 0x0028)
@@ -2331,7 +2248,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementHitTarget>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementHitTarget;
 
 // Class InteractiveToolsFramework.GizmoElementHitMultiTarget
 // 0x0068 (0x0090 - 0x0028)
@@ -2358,7 +2274,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementHitMultiTarget>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementHitMultiTarget;
 
 // Class InteractiveToolsFramework.GizmoElementLineStrip
 // 0x0070 (0x01C8 - 0x0158)
@@ -2386,7 +2301,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementLineStrip>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementLineStrip;
 
 // Class InteractiveToolsFramework.GizmoElementRectangle
 // 0x0058 (0x01B0 - 0x0158)
@@ -2418,7 +2332,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementRectangle>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementRectangle;
 
 // Class InteractiveToolsFramework.GizmoElementSphere
 // 0x0020 (0x0128 - 0x0108)
@@ -2443,7 +2356,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementSphere>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementSphere;
 
 // Class InteractiveToolsFramework.GizmoElementTorus
 // 0x0010 (0x01D8 - 0x01C8)
@@ -2469,7 +2381,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementTorus>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementTorus;
 
 // Class InteractiveToolsFramework.GizmoElementTriangleList
 // 0x0068 (0x0170 - 0x0108)
@@ -2496,7 +2407,6 @@ public:
 		return GetDefaultObjImpl<UGizmoElementTriangleList>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoElementTriangleList;
 
 // Class InteractiveToolsFramework.GizmoTransformSource
 // 0x0000 (0x0000 - 0x0000)
@@ -2530,7 +2440,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGizmoTransformSource;
 
 // Class InteractiveToolsFramework.GizmoAxisSource
 // 0x0000 (0x0000 - 0x0000)
@@ -2565,7 +2474,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGizmoAxisSource;
 
 // Class InteractiveToolsFramework.GizmoClickTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -2598,7 +2506,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGizmoClickTarget;
 
 // Class InteractiveToolsFramework.GizmoClickMultiTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -2632,7 +2539,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGizmoClickMultiTarget;
 
 // Class InteractiveToolsFramework.GizmoRenderTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -2661,7 +2567,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGizmoRenderTarget;
 
 // Class InteractiveToolsFramework.GizmoRenderMultiTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -2693,7 +2598,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGizmoRenderMultiTarget;
 
 // Class InteractiveToolsFramework.GizmoStateTarget
 // 0x0000 (0x0000 - 0x0000)
@@ -2726,7 +2630,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGizmoStateTarget;
 
 // Class InteractiveToolsFramework.GizmoFloatParameterSource
 // 0x0000 (0x0000 - 0x0000)
@@ -2762,7 +2665,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGizmoFloatParameterSource;
 
 // Class InteractiveToolsFramework.GizmoVec2ParameterSource
 // 0x0000 (0x0000 - 0x0000)
@@ -2798,7 +2700,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGizmoVec2ParameterSource;
 
 // Class InteractiveToolsFramework.GizmoLineHandleComponent
 // 0x0040 (0x06A0 - 0x0660)
@@ -2827,7 +2728,6 @@ public:
 		return GetDefaultObjImpl<UGizmoLineHandleComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoLineHandleComponent;
 
 // Class InteractiveToolsFramework.GizmoRectangleComponent
 // 0x0050 (0x06B0 - 0x0660)
@@ -2860,7 +2760,6 @@ public:
 		return GetDefaultObjImpl<UGizmoRectangleComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoRectangleComponent;
 
 // Class InteractiveToolsFramework.GizmoViewContext
 // 0x01B8 (0x01E0 - 0x0028)
@@ -2883,7 +2782,6 @@ public:
 		return GetDefaultObjImpl<UGizmoViewContext>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoViewContext;
 
 // Class InteractiveToolsFramework.GizmoLambdaHitTarget
 // 0x00C8 (0x00F0 - 0x0028)
@@ -2906,7 +2804,6 @@ public:
 		return GetDefaultObjImpl<UGizmoLambdaHitTarget>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoLambdaHitTarget;
 
 // Class InteractiveToolsFramework.GizmoComponentHitTarget
 // 0x00D8 (0x0100 - 0x0028)
@@ -2931,7 +2828,6 @@ public:
 		return GetDefaultObjImpl<UGizmoComponentHitTarget>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoComponentHitTarget;
 
 // Class InteractiveToolsFramework.IntervalGizmoActor
 // 0x0018 (0x04B0 - 0x0498)
@@ -2956,7 +2852,6 @@ public:
 		return GetDefaultObjImpl<AIntervalGizmoActor>();
 	}
 };
-DUMPER7_ASSERTS_AIntervalGizmoActor;
 
 // Class InteractiveToolsFramework.IntervalGizmoBuilder
 // 0x0098 (0x00C0 - 0x0028)
@@ -2979,7 +2874,6 @@ public:
 		return GetDefaultObjImpl<UIntervalGizmoBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UIntervalGizmoBuilder;
 
 // Class InteractiveToolsFramework.IntervalGizmo
 // 0x01C8 (0x0200 - 0x0038)
@@ -3010,7 +2904,6 @@ public:
 		return GetDefaultObjImpl<UIntervalGizmo>();
 	}
 };
-DUMPER7_ASSERTS_UIntervalGizmo;
 
 // Class InteractiveToolsFramework.GizmoAxisIntervalParameterSource
 // 0x0018 (0x0060 - 0x0048)
@@ -3035,7 +2928,6 @@ public:
 		return GetDefaultObjImpl<UGizmoAxisIntervalParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoAxisIntervalParameterSource;
 
 // Class InteractiveToolsFramework.GizmoLocalFloatParameterSource
 // 0x0010 (0x0058 - 0x0048)
@@ -3060,7 +2952,6 @@ public:
 		return GetDefaultObjImpl<UGizmoLocalFloatParameterSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoLocalFloatParameterSource;
 
 // Class InteractiveToolsFramework.PlanePositionGizmoBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3080,7 +2971,6 @@ public:
 		return GetDefaultObjImpl<UPlanePositionGizmoBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UPlanePositionGizmoBuilder;
 
 // Class InteractiveToolsFramework.PlanePositionGizmo
 // 0x0278 (0x02B0 - 0x0038)
@@ -3124,7 +3014,6 @@ public:
 		return GetDefaultObjImpl<UPlanePositionGizmo>();
 	}
 };
-DUMPER7_ASSERTS_UPlanePositionGizmo;
 
 // Class InteractiveToolsFramework.RepositionableTransformGizmoBuilder
 // 0x0000 (0x00F0 - 0x00F0)
@@ -3144,7 +3033,6 @@ public:
 		return GetDefaultObjImpl<URepositionableTransformGizmoBuilder>();
 	}
 };
-DUMPER7_ASSERTS_URepositionableTransformGizmoBuilder;
 
 // Class InteractiveToolsFramework.RepositionableTransformGizmo
 // 0x00A0 (0x0450 - 0x03B0)
@@ -3169,7 +3057,6 @@ public:
 		return GetDefaultObjImpl<URepositionableTransformGizmo>();
 	}
 };
-DUMPER7_ASSERTS_URepositionableTransformGizmo;
 
 // Class InteractiveToolsFramework.ScalableSphereGizmoBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3189,7 +3076,6 @@ public:
 		return GetDefaultObjImpl<UScalableSphereGizmoBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UScalableSphereGizmoBuilder;
 
 // Class InteractiveToolsFramework.ScalableSphereGizmo
 // 0x00C8 (0x0100 - 0x0038)
@@ -3225,7 +3111,6 @@ public:
 		return GetDefaultObjImpl<UScalableSphereGizmo>();
 	}
 };
-DUMPER7_ASSERTS_UScalableSphereGizmo;
 
 // Class InteractiveToolsFramework.ScalableSphereGizmoInputBehavior
 // 0x0050 (0x00D0 - 0x0080)
@@ -3248,7 +3133,6 @@ public:
 		return GetDefaultObjImpl<UScalableSphereGizmoInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UScalableSphereGizmoInputBehavior;
 
 // Class InteractiveToolsFramework.GizmoNilStateTarget
 // 0x0008 (0x0030 - 0x0028)
@@ -3271,7 +3155,6 @@ public:
 		return GetDefaultObjImpl<UGizmoNilStateTarget>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoNilStateTarget;
 
 // Class InteractiveToolsFramework.GizmoLambdaStateTarget
 // 0x0088 (0x00B0 - 0x0028)
@@ -3294,7 +3177,6 @@ public:
 		return GetDefaultObjImpl<UGizmoLambdaStateTarget>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoLambdaStateTarget;
 
 // Class InteractiveToolsFramework.GizmoObjectModifyStateTarget
 // 0x0030 (0x0058 - 0x0028)
@@ -3318,7 +3200,6 @@ public:
 		return GetDefaultObjImpl<UGizmoObjectModifyStateTarget>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoObjectModifyStateTarget;
 
 // Class InteractiveToolsFramework.GizmoTransformChangeStateTarget
 // 0x0118 (0x0140 - 0x0028)
@@ -3343,7 +3224,6 @@ public:
 		return GetDefaultObjImpl<UGizmoTransformChangeStateTarget>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoTransformChangeStateTarget;
 
 // Class InteractiveToolsFramework.CombinedTransformGizmoContextObject
 // 0x0030 (0x0058 - 0x0028)
@@ -3366,7 +3246,6 @@ public:
 		return GetDefaultObjImpl<UCombinedTransformGizmoContextObject>();
 	}
 };
-DUMPER7_ASSERTS_UCombinedTransformGizmoContextObject;
 
 // Class InteractiveToolsFramework.GizmoBaseTransformSource
 // 0x0020 (0x0048 - 0x0028)
@@ -3389,7 +3268,6 @@ public:
 		return GetDefaultObjImpl<UGizmoBaseTransformSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoBaseTransformSource;
 
 // Class InteractiveToolsFramework.GizmoComponentWorldTransformSource
 // 0x0010 (0x0058 - 0x0048)
@@ -3414,7 +3292,6 @@ public:
 		return GetDefaultObjImpl<UGizmoComponentWorldTransformSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoComponentWorldTransformSource;
 
 // Class InteractiveToolsFramework.GizmoScaledTransformSource
 // 0x0098 (0x00E0 - 0x0048)
@@ -3438,7 +3315,6 @@ public:
 		return GetDefaultObjImpl<UGizmoScaledTransformSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoScaledTransformSource;
 
 // Class InteractiveToolsFramework.GizmoTransformProxyTransformSource
 // 0x0028 (0x0070 - 0x0048)
@@ -3462,7 +3338,6 @@ public:
 		return GetDefaultObjImpl<UGizmoTransformProxyTransformSource>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoTransformProxyTransformSource;
 
 // Class InteractiveToolsFramework.GizmoScaledAndUnscaledTransformSources
 // 0x0020 (0x0068 - 0x0048)
@@ -3486,7 +3361,6 @@ public:
 		return GetDefaultObjImpl<UGizmoScaledAndUnscaledTransformSources>();
 	}
 };
-DUMPER7_ASSERTS_UGizmoScaledAndUnscaledTransformSources;
 
 // Class InteractiveToolsFramework.InteractiveToolPropertySet
 // 0x0080 (0x00A8 - 0x0028)
@@ -3512,7 +3386,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveToolPropertySet>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveToolPropertySet;
 
 // Class InteractiveToolsFramework.BrushBaseProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -3543,7 +3416,6 @@ public:
 		return GetDefaultObjImpl<UBrushBaseProperties>();
 	}
 };
-DUMPER7_ASSERTS_UBrushBaseProperties;
 
 // Class InteractiveToolsFramework.BrushAdjusterInputBehavior
 // 0x0050 (0x00D0 - 0x0080)
@@ -3566,7 +3438,6 @@ public:
 		return GetDefaultObjImpl<UBrushAdjusterInputBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UBrushAdjusterInputBehavior;
 
 // Class InteractiveToolsFramework.InteractiveTool
 // 0x0070 (0x0098 - 0x0028)
@@ -3592,7 +3463,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveTool>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveTool;
 
 // Class InteractiveToolsFramework.SingleSelectionTool
 // 0x0010 (0x00A8 - 0x0098)
@@ -3616,7 +3486,6 @@ public:
 		return GetDefaultObjImpl<USingleSelectionTool>();
 	}
 };
-DUMPER7_ASSERTS_USingleSelectionTool;
 
 // Class InteractiveToolsFramework.MeshSurfacePointTool
 // 0x0058 (0x0100 - 0x00A8)
@@ -3640,7 +3509,6 @@ public:
 		return GetDefaultObjImpl<UMeshSurfacePointTool>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSurfacePointTool;
 
 // Class InteractiveToolsFramework.BaseBrushTool
 // 0x01A8 (0x02A8 - 0x0100)
@@ -3671,7 +3539,6 @@ public:
 		return GetDefaultObjImpl<UBaseBrushTool>();
 	}
 };
-DUMPER7_ASSERTS_UBaseBrushTool;
 
 // Class InteractiveToolsFramework.InteractiveToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3691,7 +3558,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveToolBuilder;
 
 // Class InteractiveToolsFramework.ClickDragToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3711,7 +3577,6 @@ public:
 		return GetDefaultObjImpl<UClickDragToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UClickDragToolBuilder;
 
 // Class InteractiveToolsFramework.ClickDragTool
 // 0x0008 (0x00A0 - 0x0098)
@@ -3734,7 +3599,6 @@ public:
 		return GetDefaultObjImpl<UClickDragTool>();
 	}
 };
-DUMPER7_ASSERTS_UClickDragTool;
 
 // Class InteractiveToolsFramework.InteractiveToolWithToolTargetsBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3754,7 +3618,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveToolWithToolTargetsBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveToolWithToolTargetsBuilder;
 
 // Class InteractiveToolsFramework.MeshSurfacePointToolBuilder
 // 0x0008 (0x0030 - 0x0028)
@@ -3777,7 +3640,6 @@ public:
 		return GetDefaultObjImpl<UMeshSurfacePointToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSurfacePointToolBuilder;
 
 // Class InteractiveToolsFramework.SingleClickToolBuilder
 // 0x0000 (0x0028 - 0x0028)
@@ -3797,7 +3659,6 @@ public:
 		return GetDefaultObjImpl<USingleClickToolBuilder>();
 	}
 };
-DUMPER7_ASSERTS_USingleClickToolBuilder;
 
 // Class InteractiveToolsFramework.SingleClickTool
 // 0x0008 (0x00A0 - 0x0098)
@@ -3820,7 +3681,6 @@ public:
 		return GetDefaultObjImpl<USingleClickTool>();
 	}
 };
-DUMPER7_ASSERTS_USingleClickTool;
 
 // Class InteractiveToolsFramework.ContextObjectStore
 // 0x0010 (0x0038 - 0x0028)
@@ -3843,7 +3703,6 @@ public:
 		return GetDefaultObjImpl<UContextObjectStore>();
 	}
 };
-DUMPER7_ASSERTS_UContextObjectStore;
 
 // Class InteractiveToolsFramework.InputBehaviorSet
 // 0x0010 (0x0038 - 0x0028)
@@ -3866,7 +3725,6 @@ public:
 		return GetDefaultObjImpl<UInputBehaviorSet>();
 	}
 };
-DUMPER7_ASSERTS_UInputBehaviorSet;
 
 // Class InteractiveToolsFramework.InputBehaviorSource
 // 0x0000 (0x0000 - 0x0000)
@@ -3895,7 +3753,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IInputBehaviorSource;
 
 // Class InteractiveToolsFramework.LocalInputBehaviorSource
 // 0x0048 (0x0070 - 0x0028)
@@ -3918,7 +3775,6 @@ public:
 		return GetDefaultObjImpl<ULocalInputBehaviorSource>();
 	}
 };
-DUMPER7_ASSERTS_ULocalInputBehaviorSource;
 
 // Class InteractiveToolsFramework.InputRouter
 // 0x0168 (0x0190 - 0x0028)
@@ -3945,7 +3801,6 @@ public:
 		return GetDefaultObjImpl<UInputRouter>();
 	}
 };
-DUMPER7_ASSERTS_UInputRouter;
 
 // Class InteractiveToolsFramework.InteractionMechanic
 // 0x0008 (0x0030 - 0x0028)
@@ -3968,7 +3823,6 @@ public:
 		return GetDefaultObjImpl<UInteractionMechanic>();
 	}
 };
-DUMPER7_ASSERTS_UInteractionMechanic;
 
 // Class InteractiveToolsFramework.InteractiveGizmoManager
 // 0x0098 (0x00C0 - 0x0028)
@@ -3995,7 +3849,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveGizmoManager>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveGizmoManager;
 
 // Class InteractiveToolsFramework.InteractiveToolManager
 // 0x0188 (0x01B0 - 0x0028)
@@ -4023,7 +3876,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveToolManager>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveToolManager;
 
 // Class InteractiveToolsFramework.InteractiveToolsContext
 // 0x0308 (0x0330 - 0x0028)
@@ -4054,7 +3906,6 @@ public:
 		return GetDefaultObjImpl<UInteractiveToolsContext>();
 	}
 };
-DUMPER7_ASSERTS_UInteractiveToolsContext;
 
 // Class InteractiveToolsFramework.MultiSelectionTool
 // 0x0018 (0x00B0 - 0x0098)
@@ -4078,7 +3929,6 @@ public:
 		return GetDefaultObjImpl<UMultiSelectionTool>();
 	}
 };
-DUMPER7_ASSERTS_UMultiSelectionTool;
 
 // Class InteractiveToolsFramework.SceneSnappingManager
 // 0x0000 (0x0028 - 0x0028)
@@ -4098,7 +3948,6 @@ public:
 		return GetDefaultObjImpl<USceneSnappingManager>();
 	}
 };
-DUMPER7_ASSERTS_USceneSnappingManager;
 
 // Class InteractiveToolsFramework.SelectionSet
 // 0x0018 (0x0040 - 0x0028)
@@ -4121,7 +3970,6 @@ public:
 		return GetDefaultObjImpl<USelectionSet>();
 	}
 };
-DUMPER7_ASSERTS_USelectionSet;
 
 // Class InteractiveToolsFramework.MeshSelectionSet
 // 0x0040 (0x0080 - 0x0040)
@@ -4147,7 +3995,6 @@ public:
 		return GetDefaultObjImpl<UMeshSelectionSet>();
 	}
 };
-DUMPER7_ASSERTS_UMeshSelectionSet;
 
 // Class InteractiveToolsFramework.ToolTargetManager
 // 0x0018 (0x0040 - 0x0028)
@@ -4171,7 +4018,6 @@ public:
 		return GetDefaultObjImpl<UToolTargetManager>();
 	}
 };
-DUMPER7_ASSERTS_UToolTargetManager;
 
 // Class InteractiveToolsFramework.ToolTarget
 // 0x0000 (0x0028 - 0x0028)
@@ -4191,7 +4037,6 @@ public:
 		return GetDefaultObjImpl<UToolTarget>();
 	}
 };
-DUMPER7_ASSERTS_UToolTarget;
 
 // Class InteractiveToolsFramework.PrimitiveComponentToolTarget
 // 0x0010 (0x0038 - 0x0028)
@@ -4214,7 +4059,6 @@ public:
 		return GetDefaultObjImpl<UPrimitiveComponentToolTarget>();
 	}
 };
-DUMPER7_ASSERTS_UPrimitiveComponentToolTarget;
 
 // Class InteractiveToolsFramework.ToolTargetFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -4234,7 +4078,6 @@ public:
 		return GetDefaultObjImpl<UToolTargetFactory>();
 	}
 };
-DUMPER7_ASSERTS_UToolTargetFactory;
 
 // Class InteractiveToolsFramework.PrimitiveComponentToolTargetFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -4254,6 +4097,5 @@ public:
 		return GetDefaultObjImpl<UPrimitiveComponentToolTargetFactory>();
 	}
 };
-DUMPER7_ASSERTS_UPrimitiveComponentToolTargetFactory;
 
 SDK_NAMESPACE_END

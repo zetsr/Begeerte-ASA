@@ -33,7 +33,6 @@ public:
 		return GetDefaultObjImpl<UDataStream>();
 	}
 };
-DUMPER7_ASSERTS_UDataStream;
 
 // Class IrisStub.IrisObjectReferencePackageMap
 // 0x0000 (0x0028 - 0x0028)
@@ -53,7 +52,6 @@ public:
 		return GetDefaultObjImpl<UIrisObjectReferencePackageMap>();
 	}
 };
-DUMPER7_ASSERTS_UIrisObjectReferencePackageMap;
 
 // Class IrisStub.NetBlobHandler
 // 0x0000 (0x0028 - 0x0028)
@@ -73,7 +71,6 @@ public:
 		return GetDefaultObjImpl<UNetBlobHandler>();
 	}
 };
-DUMPER7_ASSERTS_UNetBlobHandler;
 
 // Class IrisStub.NetObjectPrioritizerConfig
 // 0x0000 (0x0028 - 0x0028)
@@ -93,7 +90,6 @@ public:
 		return GetDefaultObjImpl<UNetObjectPrioritizerConfig>();
 	}
 };
-DUMPER7_ASSERTS_UNetObjectPrioritizerConfig;
 
 // Class IrisStub.NetObjectCountLimiterConfig
 // 0x0000 (0x0028 - 0x0028)
@@ -113,7 +109,6 @@ public:
 		return GetDefaultObjImpl<UNetObjectCountLimiterConfig>();
 	}
 };
-DUMPER7_ASSERTS_UNetObjectCountLimiterConfig;
 
 // Class IrisStub.NetObjectFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -133,7 +128,6 @@ public:
 		return GetDefaultObjImpl<UNetObjectFactory>();
 	}
 };
-DUMPER7_ASSERTS_UNetObjectFactory;
 
 // Class IrisStub.NetObjectFilterConfig
 // 0x0000 (0x0028 - 0x0028)
@@ -153,7 +147,6 @@ public:
 		return GetDefaultObjImpl<UNetObjectFilterConfig>();
 	}
 };
-DUMPER7_ASSERTS_UNetObjectFilterConfig;
 
 // Class IrisStub.NetObjectFilter
 // 0x0000 (0x0028 - 0x0028)
@@ -173,7 +166,6 @@ public:
 		return GetDefaultObjImpl<UNetObjectFilter>();
 	}
 };
-DUMPER7_ASSERTS_UNetObjectFilter;
 
 // Class IrisStub.NetObjectPrioritizer
 // 0x0000 (0x0028 - 0x0028)
@@ -193,7 +185,6 @@ public:
 		return GetDefaultObjImpl<UNetObjectPrioritizer>();
 	}
 };
-DUMPER7_ASSERTS_UNetObjectPrioritizer;
 
 // Class IrisStub.ReplicationBridge
 // 0x0000 (0x0028 - 0x0028)
@@ -213,7 +204,6 @@ public:
 		return GetDefaultObjImpl<UReplicationBridge>();
 	}
 };
-DUMPER7_ASSERTS_UReplicationBridge;
 
 // Class IrisStub.ObjectReplicationBridge
 // 0x0000 (0x0028 - 0x0028)
@@ -233,7 +223,6 @@ public:
 		return GetDefaultObjImpl<UObjectReplicationBridge>();
 	}
 };
-DUMPER7_ASSERTS_UObjectReplicationBridge;
 
 // Class IrisStub.SequentialPartialNetBlobHandlerConfig
 // 0x0000 (0x0028 - 0x0028)
@@ -253,7 +242,6 @@ public:
 		return GetDefaultObjImpl<USequentialPartialNetBlobHandlerConfig>();
 	}
 };
-DUMPER7_ASSERTS_USequentialPartialNetBlobHandlerConfig;
 
 // Class IrisStub.SequentialPartialNetBlobHandler
 // 0x0000 (0x0028 - 0x0028)
@@ -273,7 +261,6 @@ public:
 		return GetDefaultObjImpl<USequentialPartialNetBlobHandler>();
 	}
 };
-DUMPER7_ASSERTS_USequentialPartialNetBlobHandler;
 
 // Class IrisStub.SphereWithOwnerBoostNetObjectPrioritizerConfig
 // 0x0000 (0x0028 - 0x0028)
@@ -293,6 +280,5 @@ public:
 		return GetDefaultObjImpl<USphereWithOwnerBoostNetObjectPrioritizerConfig>();
 	}
 };
-DUMPER7_ASSERTS_USphereWithOwnerBoostNetObjectPrioritizerConfig;
 
 SDK_NAMESPACE_END

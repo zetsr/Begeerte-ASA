@@ -29,6 +29,5 @@ public:
 	struct FLinearColor                           WindowBackgroundColor1_19_B6B295314B9EE41BAF53E89956F30D90; // 0x004C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           WindowBackgroundColor2_21_92AB1C9645E714A5E67EEFA87D627747; // 0x005C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FSTRUCT_CFCore_UITheme;
 
 SDK_NAMESPACE_END

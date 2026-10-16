@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<AMeshFadeOut_Blueprint_WithDrop_C>();
 	}
 };
-DUMPER7_ASSERTS_AMeshFadeOut_Blueprint_WithDrop_C;
 
 SDK_NAMESPACE_END

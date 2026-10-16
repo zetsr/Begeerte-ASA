@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UAttackHarvestComponent_Base_C>();
 	}
 };
-DUMPER7_ASSERTS_UAttackHarvestComponent_Base_C;
 
 SDK_NAMESPACE_END

@@ -78,6 +78,5 @@ public:
 		return GetDefaultObjImpl<UGlobalUIData_BP_C>();
 	}
 };
-DUMPER7_ASSERTS_UGlobalUIData_BP_C;
 
 SDK_NAMESPACE_END

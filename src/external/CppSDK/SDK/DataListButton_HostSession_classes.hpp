@@ -60,6 +60,5 @@ public:
 		return GetDefaultObjImpl<UDataListButton_HostSession_C>();
 	}
 };
-DUMPER7_ASSERTS_UDataListButton_HostSession_C;
 
 SDK_NAMESPACE_END

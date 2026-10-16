@@ -35,7 +35,6 @@ public:
 	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   K2Node_Select_Default;                             // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_WeapFists_C_BPOverrideMeleeSwingSocket;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

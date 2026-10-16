@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PrimalItemConsumableEatable_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "PrimalItemConsumableEatable_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_Egg_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumable_Egg_C;
 
 SDK_NAMESPACE_END

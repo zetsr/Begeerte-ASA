@@ -50,7 +50,6 @@ public:
 		return GetDefaultObjImpl<UBTNode>();
 	}
 };
-DUMPER7_ASSERTS_UBTNode;
 
 // Class AIModule.BTAuxiliaryNode
 // 0x0008 (0x0060 - 0x0058)
@@ -73,7 +72,6 @@ public:
 		return GetDefaultObjImpl<UBTAuxiliaryNode>();
 	}
 };
-DUMPER7_ASSERTS_UBTAuxiliaryNode;
 
 // Class AIModule.BTService
 // 0x0010 (0x0070 - 0x0060)
@@ -100,7 +98,6 @@ public:
 		return GetDefaultObjImpl<UBTService>();
 	}
 };
-DUMPER7_ASSERTS_UBTService;
 
 // Class AIModule.EnvQueryNode
 // 0x0008 (0x0030 - 0x0028)
@@ -124,7 +121,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryNode>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryNode;
 
 // Class AIModule.EnvQueryGenerator
 // 0x0020 (0x0050 - 0x0030)
@@ -151,7 +147,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator;
 
 // Class AIModule.EnvQueryGenerator_ActorsOfClass
 // 0x0080 (0x00D0 - 0x0050)
@@ -177,7 +172,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_ActorsOfClass>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_ActorsOfClass;
 
 // Class AIModule.AIAsyncTaskBlueprintProxy
 // 0x0040 (0x0068 - 0x0028)
@@ -205,7 +199,6 @@ public:
 		return GetDefaultObjImpl<UAIAsyncTaskBlueprintProxy>();
 	}
 };
-DUMPER7_ASSERTS_UAIAsyncTaskBlueprintProxy;
 
 // Class AIModule.AISenseConfig
 // 0x0020 (0x0048 - 0x0028)
@@ -231,7 +224,6 @@ public:
 		return GetDefaultObjImpl<UAISenseConfig>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseConfig;
 
 // Class AIModule.AISenseConfig_Team
 // 0x0000 (0x0048 - 0x0048)
@@ -251,7 +243,6 @@ public:
 		return GetDefaultObjImpl<UAISenseConfig_Team>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseConfig_Team;
 
 // Class AIModule.AIResourceInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -280,7 +271,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IAIResourceInterface;
 
 // Class AIModule.BlackboardKeyType
 // 0x0008 (0x0030 - 0x0028)
@@ -303,7 +293,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType;
 
 // Class AIModule.BlackboardKeyType_Vector
 // 0x0020 (0x0050 - 0x0030)
@@ -328,7 +317,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_Vector>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_Vector;
 
 // Class AIModule.EnvQueryInstanceBlueprintWrapper
 // 0x0050 (0x0078 - 0x0028)
@@ -366,7 +354,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryInstanceBlueprintWrapper>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryInstanceBlueprintWrapper;
 
 // Class AIModule.AISenseBlueprintListener
 // 0x0000 (0x0108 - 0x0108)
@@ -386,7 +373,6 @@ public:
 		return GetDefaultObjImpl<UAISenseBlueprintListener>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseBlueprintListener;
 
 // Class AIModule.AISenseConfig_Blueprint
 // 0x0008 (0x0050 - 0x0048)
@@ -409,7 +395,6 @@ public:
 		return GetDefaultObjImpl<UAISenseConfig_Blueprint>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseConfig_Blueprint;
 
 // Class AIModule.AISenseConfig_Hearing
 // 0x0018 (0x0060 - 0x0048)
@@ -437,7 +422,6 @@ public:
 		return GetDefaultObjImpl<UAISenseConfig_Hearing>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseConfig_Hearing;
 
 // Class AIModule.AISenseConfig_Prediction
 // 0x0000 (0x0048 - 0x0048)
@@ -457,7 +441,6 @@ public:
 		return GetDefaultObjImpl<UAISenseConfig_Prediction>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseConfig_Prediction;
 
 // Class AIModule.AISenseConfig_Sight
 // 0x0028 (0x0070 - 0x0048)
@@ -488,7 +471,6 @@ public:
 		return GetDefaultObjImpl<UAISenseConfig_Sight>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseConfig_Sight;
 
 // Class AIModule.AISenseConfig_Touch
 // 0x0008 (0x0050 - 0x0048)
@@ -512,7 +494,6 @@ public:
 		return GetDefaultObjImpl<UAISenseConfig_Touch>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseConfig_Touch;
 
 // Class AIModule.AISenseEvent
 // 0x0000 (0x0028 - 0x0028)
@@ -532,7 +513,6 @@ public:
 		return GetDefaultObjImpl<UAISenseEvent>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseEvent;
 
 // Class AIModule.AISenseEvent_Damage
 // 0x0050 (0x0078 - 0x0028)
@@ -555,7 +535,6 @@ public:
 		return GetDefaultObjImpl<UAISenseEvent_Damage>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseEvent_Damage;
 
 // Class AIModule.AISenseEvent_Hearing
 // 0x0040 (0x0068 - 0x0028)
@@ -578,7 +557,6 @@ public:
 		return GetDefaultObjImpl<UAISenseEvent_Hearing>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseEvent_Hearing;
 
 // Class AIModule.BlackboardKeyType_Struct
 // 0x0020 (0x0050 - 0x0030)
@@ -602,7 +580,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_Struct>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_Struct;
 
 // Class AIModule.CrowdAgentInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -631,7 +608,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ICrowdAgentInterface;
 
 // Class AIModule.EnvQueryTypes
 // 0x0000 (0x0028 - 0x0028)
@@ -651,7 +627,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTypes>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTypes;
 
 // Class AIModule.EQSQueryResultSourceInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -680,7 +655,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IEQSQueryResultSourceInterface;
 
 // Class AIModule.GeneratedNavLinksProxy
 // 0x0010 (0x0050 - 0x0040)
@@ -706,7 +680,6 @@ public:
 		return GetDefaultObjImpl<UGeneratedNavLinksProxy>();
 	}
 };
-DUMPER7_ASSERTS_UGeneratedNavLinksProxy;
 
 // Class AIModule.GenericTeamAgentInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -735,7 +708,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGenericTeamAgentInterface;
 
 // Class AIModule.ValueOrBBKeyBlueprintUtility
 // 0x0000 (0x0028 - 0x0028)
@@ -768,7 +740,6 @@ public:
 		return GetDefaultObjImpl<UValueOrBBKeyBlueprintUtility>();
 	}
 };
-DUMPER7_ASSERTS_UValueOrBBKeyBlueprintUtility;
 
 // Class AIModule.PawnAction
 // 0x0068 (0x0090 - 0x0028)
@@ -807,7 +778,6 @@ public:
 		return GetDefaultObjImpl<UPawnAction>();
 	}
 };
-DUMPER7_ASSERTS_UPawnAction;
 
 // Class AIModule.PawnActionsComponent
 // 0x0038 (0x0108 - 0x00D0)
@@ -841,7 +811,6 @@ public:
 		return GetDefaultObjImpl<UPawnActionsComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPawnActionsComponent;
 
 // Class AIModule.PawnAction_BlueprintBase
 // 0x0000 (0x0090 - 0x0090)
@@ -868,7 +837,6 @@ public:
 		return GetDefaultObjImpl<UPawnAction_BlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UPawnAction_BlueprintBase;
 
 // Class AIModule.PawnAction_Move
 // 0x0060 (0x00F0 - 0x0090)
@@ -903,7 +871,6 @@ public:
 		return GetDefaultObjImpl<UPawnAction_Move>();
 	}
 };
-DUMPER7_ASSERTS_UPawnAction_Move;
 
 // Class AIModule.PawnAction_Repeat
 // 0x0020 (0x00B0 - 0x0090)
@@ -929,7 +896,6 @@ public:
 		return GetDefaultObjImpl<UPawnAction_Repeat>();
 	}
 };
-DUMPER7_ASSERTS_UPawnAction_Repeat;
 
 // Class AIModule.PawnAction_Sequence
 // 0x0028 (0x00B8 - 0x0090)
@@ -956,7 +922,6 @@ public:
 		return GetDefaultObjImpl<UPawnAction_Sequence>();
 	}
 };
-DUMPER7_ASSERTS_UPawnAction_Sequence;
 
 // Class AIModule.PawnAction_Wait
 // 0x0010 (0x00A0 - 0x0090)
@@ -980,7 +945,6 @@ public:
 		return GetDefaultObjImpl<UPawnAction_Wait>();
 	}
 };
-DUMPER7_ASSERTS_UPawnAction_Wait;
 
 // Class AIModule.AIController
 // 0x0090 (0x05C8 - 0x0538)
@@ -1047,7 +1011,6 @@ public:
 		return GetDefaultObjImpl<AAIController>();
 	}
 };
-DUMPER7_ASSERTS_AAIController;
 
 // Class AIModule.AIResource_Movement
 // 0x0000 (0x0038 - 0x0038)
@@ -1067,7 +1030,6 @@ public:
 		return GetDefaultObjImpl<UAIResource_Movement>();
 	}
 };
-DUMPER7_ASSERTS_UAIResource_Movement;
 
 // Class AIModule.AIResource_Logic
 // 0x0000 (0x0038 - 0x0038)
@@ -1087,7 +1049,6 @@ public:
 		return GetDefaultObjImpl<UAIResource_Logic>();
 	}
 };
-DUMPER7_ASSERTS_UAIResource_Logic;
 
 // Class AIModule.AISubsystem
 // 0x0010 (0x0038 - 0x0028)
@@ -1111,7 +1072,6 @@ public:
 		return GetDefaultObjImpl<UAISubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UAISubsystem;
 
 // Class AIModule.AISystem
 // 0x0140 (0x01A0 - 0x0060)
@@ -1163,7 +1123,6 @@ public:
 		return GetDefaultObjImpl<UAISystem>();
 	}
 };
-DUMPER7_ASSERTS_UAISystem;
 
 // Class AIModule.BehaviorTree
 // 0x0040 (0x0068 - 0x0028)
@@ -1191,7 +1150,6 @@ public:
 		return GetDefaultObjImpl<UBehaviorTree>();
 	}
 };
-DUMPER7_ASSERTS_UBehaviorTree;
 
 // Class AIModule.BrainComponent
 // 0x0058 (0x0128 - 0x00D0)
@@ -1225,7 +1183,6 @@ public:
 		return GetDefaultObjImpl<UBrainComponent>();
 	}
 };
-DUMPER7_ASSERTS_UBrainComponent;
 
 // Class AIModule.BehaviorTreeComponent
 // 0x01A8 (0x02D0 - 0x0128)
@@ -1259,7 +1216,6 @@ public:
 		return GetDefaultObjImpl<UBehaviorTreeComponent>();
 	}
 };
-DUMPER7_ASSERTS_UBehaviorTreeComponent;
 
 // Class AIModule.BehaviorTreeManager
 // 0x0028 (0x0050 - 0x0028)
@@ -1285,7 +1241,6 @@ public:
 		return GetDefaultObjImpl<UBehaviorTreeManager>();
 	}
 };
-DUMPER7_ASSERTS_UBehaviorTreeManager;
 
 // Class AIModule.BehaviorTreeTypes
 // 0x0000 (0x0028 - 0x0028)
@@ -1305,7 +1260,6 @@ public:
 		return GetDefaultObjImpl<UBehaviorTreeTypes>();
 	}
 };
-DUMPER7_ASSERTS_UBehaviorTreeTypes;
 
 // Class AIModule.BlackboardAssetProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -1337,7 +1291,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IBlackboardAssetProvider;
 
 // Class AIModule.BlackboardComponent
 // 0x0108 (0x01D8 - 0x00D0)
@@ -1394,7 +1347,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardComponent>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardComponent;
 
 // Class AIModule.BlackboardData
 // 0x0020 (0x0050 - 0x0030)
@@ -1420,7 +1372,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardData>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardData;
 
 // Class AIModule.BlackboardKeyType_Bool
 // 0x0008 (0x0038 - 0x0030)
@@ -1444,7 +1395,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_Bool>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_Bool;
 
 // Class AIModule.BlackboardKeyType_Class
 // 0x0010 (0x0040 - 0x0030)
@@ -1468,7 +1418,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_Class>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_Class;
 
 // Class AIModule.BlackboardKeyType_Enum
 // 0x0020 (0x0050 - 0x0030)
@@ -1496,7 +1445,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_Enum>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_Enum;
 
 // Class AIModule.BlackboardKeyType_Float
 // 0x0008 (0x0038 - 0x0030)
@@ -1520,7 +1468,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_Float>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_Float;
 
 // Class AIModule.BlackboardKeyType_Int
 // 0x0008 (0x0038 - 0x0030)
@@ -1544,7 +1491,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_Int>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_Int;
 
 // Class AIModule.BlackboardKeyType_Name
 // 0x0008 (0x0038 - 0x0030)
@@ -1567,7 +1513,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_Name>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_Name;
 
 // Class AIModule.BlackboardKeyType_NativeEnum
 // 0x0018 (0x0048 - 0x0030)
@@ -1591,7 +1536,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_NativeEnum>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_NativeEnum;
 
 // Class AIModule.BlackboardKeyType_Object
 // 0x0010 (0x0040 - 0x0030)
@@ -1615,7 +1559,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_Object>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_Object;
 
 // Class AIModule.BlackboardKeyType_Rotator
 // 0x0020 (0x0050 - 0x0030)
@@ -1640,7 +1583,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_Rotator>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_Rotator;
 
 // Class AIModule.BlackboardKeyType_String
 // 0x0020 (0x0050 - 0x0030)
@@ -1664,7 +1606,6 @@ public:
 		return GetDefaultObjImpl<UBlackboardKeyType_String>();
 	}
 };
-DUMPER7_ASSERTS_UBlackboardKeyType_String;
 
 // Class AIModule.BTCompositeNode
 // 0x0028 (0x0080 - 0x0058)
@@ -1690,7 +1631,6 @@ public:
 		return GetDefaultObjImpl<UBTCompositeNode>();
 	}
 };
-DUMPER7_ASSERTS_UBTCompositeNode;
 
 // Class AIModule.BTDecorator
 // 0x0008 (0x0068 - 0x0060)
@@ -1717,7 +1657,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator;
 
 // Class AIModule.BTFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -1766,7 +1705,6 @@ public:
 		return GetDefaultObjImpl<UBTFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UBTFunctionLibrary;
 
 // Class AIModule.BTTaskNode
 // 0x0018 (0x0070 - 0x0058)
@@ -1791,7 +1729,6 @@ public:
 		return GetDefaultObjImpl<UBTTaskNode>();
 	}
 };
-DUMPER7_ASSERTS_UBTTaskNode;
 
 // Class AIModule.BTComposite_Selector
 // 0x0000 (0x0080 - 0x0080)
@@ -1811,7 +1748,6 @@ public:
 		return GetDefaultObjImpl<UBTComposite_Selector>();
 	}
 };
-DUMPER7_ASSERTS_UBTComposite_Selector;
 
 // Class AIModule.BTComposite_Sequence
 // 0x0000 (0x0080 - 0x0080)
@@ -1831,7 +1767,6 @@ public:
 		return GetDefaultObjImpl<UBTComposite_Sequence>();
 	}
 };
-DUMPER7_ASSERTS_UBTComposite_Sequence;
 
 // Class AIModule.BTComposite_SimpleParallel
 // 0x0008 (0x0088 - 0x0080)
@@ -1855,7 +1790,6 @@ public:
 		return GetDefaultObjImpl<UBTComposite_SimpleParallel>();
 	}
 };
-DUMPER7_ASSERTS_UBTComposite_SimpleParallel;
 
 // Class AIModule.BTDecorator_BlackboardBase
 // 0x0028 (0x0090 - 0x0068)
@@ -1878,7 +1812,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_BlackboardBase>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_BlackboardBase;
 
 // Class AIModule.BTDecorator_Blackboard
 // 0x0030 (0x00C0 - 0x0090)
@@ -1907,7 +1840,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_Blackboard>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_Blackboard;
 
 // Class AIModule.BTDecorator_BlueprintBase
 // 0x0038 (0x00A0 - 0x0068)
@@ -1955,7 +1887,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_BlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_BlueprintBase;
 
 // Class AIModule.BTDecorator_CheckGameplayTagsOnActor
 // 0x0060 (0x00C8 - 0x0068)
@@ -1982,7 +1913,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_CheckGameplayTagsOnActor>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_CheckGameplayTagsOnActor;
 
 // Class AIModule.BTDecorator_CompareBBEntries
 // 0x0058 (0x00C0 - 0x0068)
@@ -2008,7 +1938,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_CompareBBEntries>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_CompareBBEntries;
 
 // Class AIModule.BTDecorator_ConditionalLoop
 // 0x0000 (0x00C0 - 0x00C0)
@@ -2028,7 +1957,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_ConditionalLoop>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_ConditionalLoop;
 
 // Class AIModule.BTDecorator_ConeCheck
 // 0x0088 (0x00F0 - 0x0068)
@@ -2054,7 +1982,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_ConeCheck>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_ConeCheck;
 
 // Class AIModule.BTDecorator_Cooldown
 // 0x0038 (0x00A0 - 0x0068)
@@ -2078,7 +2005,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_Cooldown>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_Cooldown;
 
 // Class AIModule.BTDecorator_DoesPathExist
 // 0x00A0 (0x0108 - 0x0068)
@@ -2106,7 +2032,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_DoesPathExist>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_DoesPathExist;
 
 // Class AIModule.BTDecorator_ForceSuccess
 // 0x0000 (0x0068 - 0x0068)
@@ -2126,7 +2051,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_ForceSuccess>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_ForceSuccess;
 
 // Class AIModule.BTDecorator_IsAtLocation
 // 0x0068 (0x00F8 - 0x0090)
@@ -2157,7 +2081,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_IsAtLocation>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_IsAtLocation;
 
 // Class AIModule.BTDecorator_IsBBEntryOfClass
 // 0x0020 (0x00B0 - 0x0090)
@@ -2180,7 +2103,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_IsBBEntryOfClass>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_IsBBEntryOfClass;
 
 // Class AIModule.BTDecorator_KeepInCone
 // 0x0068 (0x00D0 - 0x0068)
@@ -2208,7 +2130,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_KeepInCone>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_KeepInCone;
 
 // Class AIModule.BTDecorator_Loop
 // 0x0028 (0x0090 - 0x0068)
@@ -2235,7 +2156,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_Loop>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_Loop;
 
 // Class AIModule.BTDecorator_ReachedMoveGoal
 // 0x0000 (0x0068 - 0x0068)
@@ -2255,7 +2175,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_ReachedMoveGoal>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_ReachedMoveGoal;
 
 // Class AIModule.BTDecorator_SetTagCooldown
 // 0x0028 (0x0090 - 0x0068)
@@ -2280,7 +2199,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_SetTagCooldown>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_SetTagCooldown;
 
 // Class AIModule.BTDecorator_TagCooldown
 // 0x0038 (0x00A0 - 0x0068)
@@ -2306,7 +2224,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_TagCooldown>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_TagCooldown;
 
 // Class AIModule.BTDecorator_TimeLimit
 // 0x0038 (0x00A0 - 0x0068)
@@ -2330,7 +2247,6 @@ public:
 		return GetDefaultObjImpl<UBTDecorator_TimeLimit>();
 	}
 };
-DUMPER7_ASSERTS_UBTDecorator_TimeLimit;
 
 // Class AIModule.BTService_BlackboardBase
 // 0x0028 (0x0098 - 0x0070)
@@ -2353,7 +2269,6 @@ public:
 		return GetDefaultObjImpl<UBTService_BlackboardBase>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_BlackboardBase;
 
 // Class AIModule.BTService_BlueprintBase
 // 0x0028 (0x0098 - 0x0070)
@@ -2394,7 +2309,6 @@ public:
 		return GetDefaultObjImpl<UBTService_BlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_BlueprintBase;
 
 // Class AIModule.BTService_DefaultFocus
 // 0x0008 (0x00A0 - 0x0098)
@@ -2418,7 +2332,6 @@ public:
 		return GetDefaultObjImpl<UBTService_DefaultFocus>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_DefaultFocus;
 
 // Class AIModule.BTService_RunEQS
 // 0x0060 (0x00F8 - 0x0098)
@@ -2443,7 +2356,6 @@ public:
 		return GetDefaultObjImpl<UBTService_RunEQS>();
 	}
 };
-DUMPER7_ASSERTS_UBTService_RunEQS;
 
 // Class AIModule.BTTask_BlackboardBase
 // 0x0028 (0x0098 - 0x0070)
@@ -2466,7 +2378,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_BlackboardBase>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_BlackboardBase;
 
 // Class AIModule.BTTask_BlueprintBase
 // 0x0038 (0x00A8 - 0x0070)
@@ -2509,7 +2420,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_BlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_BlueprintBase;
 
 // Class AIModule.BTTask_FinishWithResult
 // 0x0028 (0x0098 - 0x0070)
@@ -2532,7 +2442,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_FinishWithResult>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_FinishWithResult;
 
 // Class AIModule.BTTask_GameplayTaskBase
 // 0x0010 (0x0080 - 0x0070)
@@ -2555,7 +2464,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_GameplayTaskBase>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_GameplayTaskBase;
 
 // Class AIModule.BTTask_MakeNoise
 // 0x0010 (0x0080 - 0x0070)
@@ -2578,7 +2486,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_MakeNoise>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_MakeNoise;
 
 // Class AIModule.BTTask_MoveTo
 // 0x00F0 (0x0188 - 0x0098)
@@ -2616,7 +2523,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_MoveTo>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_MoveTo;
 
 // Class AIModule.BTTask_MoveDirectlyToward
 // 0x0008 (0x0190 - 0x0188)
@@ -2642,7 +2548,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_MoveDirectlyToward>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_MoveDirectlyToward;
 
 // Class AIModule.BTTask_PawnActionBase
 // 0x0000 (0x0070 - 0x0070)
@@ -2662,7 +2567,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_PawnActionBase>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_PawnActionBase;
 
 // Class AIModule.BTTask_PlayAnimation
 // 0x0070 (0x00E0 - 0x0070)
@@ -2690,7 +2594,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_PlayAnimation>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_PlayAnimation;
 
 // Class AIModule.BTTask_PlaySound
 // 0x0020 (0x0090 - 0x0070)
@@ -2713,7 +2616,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_PlaySound>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_PlaySound;
 
 // Class AIModule.BTTask_PushPawnAction
 // 0x0008 (0x0078 - 0x0070)
@@ -2736,7 +2638,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_PushPawnAction>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_PushPawnAction;
 
 // Class AIModule.BTTask_RotateToFaceBBEntry
 // 0x0040 (0x00D8 - 0x0098)
@@ -2764,7 +2665,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_RotateToFaceBBEntry>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_RotateToFaceBBEntry;
 
 // Class AIModule.BTTask_RunBehavior
 // 0x0020 (0x0090 - 0x0070)
@@ -2789,7 +2689,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_RunBehavior>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_RunBehavior;
 
 // Class AIModule.BTTask_RunBehaviorDynamic
 // 0x0018 (0x0088 - 0x0070)
@@ -2814,7 +2713,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_RunBehaviorDynamic>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_RunBehaviorDynamic;
 
 // Class AIModule.BTTask_RunEQSQuery
 // 0x00C0 (0x0158 - 0x0098)
@@ -2847,7 +2745,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_RunEQSQuery>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_RunEQSQuery;
 
 // Class AIModule.BTTask_SetTagCooldown
 // 0x0028 (0x0098 - 0x0070)
@@ -2872,7 +2769,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_SetTagCooldown>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_SetTagCooldown;
 
 // Class AIModule.BTTask_Wait
 // 0x0020 (0x0090 - 0x0070)
@@ -2896,7 +2792,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_Wait>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_Wait;
 
 // Class AIModule.BTTask_WaitBlackboardTime
 // 0x0028 (0x00B8 - 0x0090)
@@ -2919,7 +2814,6 @@ public:
 		return GetDefaultObjImpl<UBTTask_WaitBlackboardTime>();
 	}
 };
-DUMPER7_ASSERTS_UBTTask_WaitBlackboardTime;
 
 // Class AIModule.AIBlueprintHelperLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -2957,7 +2851,6 @@ public:
 		return GetDefaultObjImpl<UAIBlueprintHelperLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UAIBlueprintHelperLibrary;
 
 // Class AIModule.AIDataProvider
 // 0x0000 (0x0028 - 0x0028)
@@ -2977,7 +2870,6 @@ public:
 		return GetDefaultObjImpl<UAIDataProvider>();
 	}
 };
-DUMPER7_ASSERTS_UAIDataProvider;
 
 // Class AIModule.AIDataProvider_QueryParams
 // 0x0018 (0x0040 - 0x0028)
@@ -3004,7 +2896,6 @@ public:
 		return GetDefaultObjImpl<UAIDataProvider_QueryParams>();
 	}
 };
-DUMPER7_ASSERTS_UAIDataProvider_QueryParams;
 
 // Class AIModule.AIDataProvider_Random
 // 0x0010 (0x0050 - 0x0040)
@@ -3030,7 +2921,6 @@ public:
 		return GetDefaultObjImpl<UAIDataProvider_Random>();
 	}
 };
-DUMPER7_ASSERTS_UAIDataProvider_Random;
 
 // Class AIModule.DetourCrowdAIController
 // 0x0000 (0x05C8 - 0x05C8)
@@ -3050,7 +2940,6 @@ public:
 		return GetDefaultObjImpl<ADetourCrowdAIController>();
 	}
 };
-DUMPER7_ASSERTS_ADetourCrowdAIController;
 
 // Class AIModule.EnvQueryContext
 // 0x0000 (0x0028 - 0x0028)
@@ -3070,7 +2959,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryContext>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryContext;
 
 // Class AIModule.EnvQueryContext_BlueprintBase
 // 0x0008 (0x0030 - 0x0028)
@@ -3099,7 +2987,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryContext_BlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryContext_BlueprintBase;
 
 // Class AIModule.EnvQueryContext_Item
 // 0x0000 (0x0028 - 0x0028)
@@ -3119,7 +3006,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryContext_Item>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryContext_Item;
 
 // Class AIModule.EnvQueryContext_Querier
 // 0x0000 (0x0028 - 0x0028)
@@ -3139,7 +3025,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryContext_Querier>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryContext_Querier;
 
 // Class AIModule.EnvQuery
 // 0x0018 (0x0048 - 0x0030)
@@ -3163,7 +3048,6 @@ public:
 		return GetDefaultObjImpl<UEnvQuery>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQuery;
 
 // Class AIModule.EnvQueryDebugHelpers
 // 0x0000 (0x0028 - 0x0028)
@@ -3183,7 +3067,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryDebugHelpers>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryDebugHelpers;
 
 // Class AIModule.EnvQueryManager
 // 0x0120 (0x0158 - 0x0038)
@@ -3221,7 +3104,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryManager>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryManager;
 
 // Class AIModule.EnvQueryOption
 // 0x0018 (0x0040 - 0x0028)
@@ -3245,7 +3127,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryOption>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryOption;
 
 // Class AIModule.EnvQueryTest
 // 0x01C8 (0x01F8 - 0x0030)
@@ -3292,7 +3173,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest;
 
 // Class AIModule.EQSRenderingComponent
 // 0x0040 (0x06B0 - 0x0670)
@@ -3315,7 +3195,6 @@ public:
 		return GetDefaultObjImpl<UEQSRenderingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UEQSRenderingComponent;
 
 // Class AIModule.EQSTestingPawn
 // 0x00A0 (0x0940 - 0x08A0)
@@ -3354,7 +3233,6 @@ public:
 		return GetDefaultObjImpl<AEQSTestingPawn>();
 	}
 };
-DUMPER7_ASSERTS_AEQSTestingPawn;
 
 // Class AIModule.EnvQueryGenerator_BlueprintBase
 // 0x0030 (0x0080 - 0x0050)
@@ -3387,7 +3265,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_BlueprintBase>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_BlueprintBase;
 
 // Class AIModule.EnvQueryGenerator_Composite
 // 0x0020 (0x0070 - 0x0050)
@@ -3414,7 +3291,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_Composite>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_Composite;
 
 // Class AIModule.EnvQueryGenerator_ProjectedPoints
 // 0x0040 (0x0090 - 0x0050)
@@ -3437,7 +3313,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_ProjectedPoints>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_ProjectedPoints;
 
 // Class AIModule.EnvQueryGenerator_Cone
 // 0x00F0 (0x0180 - 0x0090)
@@ -3466,7 +3341,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_Cone>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_Cone;
 
 // Class AIModule.EnvQueryGenerator_CurrentLocation
 // 0x0008 (0x0058 - 0x0050)
@@ -3489,7 +3363,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_CurrentLocation>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_CurrentLocation;
 
 // Class AIModule.EnvQueryGenerator_Donut
 // 0x0150 (0x01E0 - 0x0090)
@@ -3522,7 +3395,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_Donut>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_Donut;
 
 // Class AIModule.EnvQueryGenerator_OnCircle
 // 0x01A0 (0x0230 - 0x0090)
@@ -3560,7 +3432,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_OnCircle>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_OnCircle;
 
 // Class AIModule.EnvQueryGenerator_SimpleGrid
 // 0x0078 (0x0108 - 0x0090)
@@ -3585,7 +3456,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_SimpleGrid>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_SimpleGrid;
 
 // Class AIModule.EnvQueryGenerator_PathingGrid
 // 0x0078 (0x0180 - 0x0108)
@@ -3610,7 +3480,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_PathingGrid>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_PathingGrid;
 
 // Class AIModule.EnvQueryGenerator_PerceivedActors
 // 0x0058 (0x00A8 - 0x0050)
@@ -3638,7 +3507,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryGenerator_PerceivedActors>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryGenerator_PerceivedActors;
 
 // Class AIModule.EnvQueryItemType
 // 0x0008 (0x0030 - 0x0028)
@@ -3661,7 +3529,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryItemType>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryItemType;
 
 // Class AIModule.EnvQueryItemType_VectorBase
 // 0x0000 (0x0030 - 0x0030)
@@ -3681,7 +3548,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryItemType_VectorBase>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryItemType_VectorBase;
 
 // Class AIModule.EnvQueryItemType_ActorBase
 // 0x0000 (0x0030 - 0x0030)
@@ -3701,7 +3567,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryItemType_ActorBase>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryItemType_ActorBase;
 
 // Class AIModule.EnvQueryItemType_Actor
 // 0x0000 (0x0030 - 0x0030)
@@ -3721,7 +3586,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryItemType_Actor>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryItemType_Actor;
 
 // Class AIModule.EnvQueryItemType_Direction
 // 0x0000 (0x0030 - 0x0030)
@@ -3741,7 +3605,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryItemType_Direction>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryItemType_Direction;
 
 // Class AIModule.EnvQueryItemType_Point
 // 0x0000 (0x0030 - 0x0030)
@@ -3761,7 +3624,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryItemType_Point>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryItemType_Point;
 
 // Class AIModule.EnvQueryTest_Distance
 // 0x0010 (0x0208 - 0x01F8)
@@ -3786,7 +3648,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest_Distance>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest_Distance;
 
 // Class AIModule.EnvQueryTest_Dot
 // 0x0048 (0x0240 - 0x01F8)
@@ -3813,7 +3674,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest_Dot>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest_Dot;
 
 // Class AIModule.EnvQueryTest_GameplayTags
 // 0x0070 (0x0268 - 0x01F8)
@@ -3841,7 +3701,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest_GameplayTags>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest_GameplayTags;
 
 // Class AIModule.EnvQueryTest_Overlap
 // 0x0030 (0x0228 - 0x01F8)
@@ -3864,7 +3723,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest_Overlap>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest_Overlap;
 
 // Class AIModule.EnvQueryTest_Pathfinding
 // 0x0088 (0x0280 - 0x01F8)
@@ -3892,7 +3750,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest_Pathfinding>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest_Pathfinding;
 
 // Class AIModule.EnvQueryTest_PathfindingBatch
 // 0x0038 (0x02B8 - 0x0280)
@@ -3915,7 +3772,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest_PathfindingBatch>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest_PathfindingBatch;
 
 // Class AIModule.EnvQueryTest_Project
 // 0x0040 (0x0238 - 0x01F8)
@@ -3938,7 +3794,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest_Project>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest_Project;
 
 // Class AIModule.EnvQueryTest_Random
 // 0x0000 (0x01F8 - 0x01F8)
@@ -3958,7 +3813,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest_Random>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest_Random;
 
 // Class AIModule.EnvQueryTest_Trace
 // 0x00F0 (0x02E8 - 0x01F8)
@@ -3985,7 +3839,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest_Trace>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest_Trace;
 
 // Class AIModule.EnvQueryTest_Volume
 // 0x0018 (0x0210 - 0x01F8)
@@ -4012,7 +3865,6 @@ public:
 		return GetDefaultObjImpl<UEnvQueryTest_Volume>();
 	}
 };
-DUMPER7_ASSERTS_UEnvQueryTest_Volume;
 
 // Class AIModule.GridPathAIController
 // 0x0000 (0x05C8 - 0x05C8)
@@ -4032,7 +3884,6 @@ public:
 		return GetDefaultObjImpl<AGridPathAIController>();
 	}
 };
-DUMPER7_ASSERTS_AGridPathAIController;
 
 // Class AIModule.AIHotSpotManager
 // 0x0000 (0x0028 - 0x0028)
@@ -4052,7 +3903,6 @@ public:
 		return GetDefaultObjImpl<UAIHotSpotManager>();
 	}
 };
-DUMPER7_ASSERTS_UAIHotSpotManager;
 
 // Class AIModule.PathFollowingComponent
 // 0x0250 (0x0320 - 0x00D0)
@@ -4086,7 +3936,6 @@ public:
 		return GetDefaultObjImpl<UPathFollowingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPathFollowingComponent;
 
 // Class AIModule.CrowdFollowingComponent
 // 0x0050 (0x0370 - 0x0320)
@@ -4114,7 +3963,6 @@ public:
 		return GetDefaultObjImpl<UCrowdFollowingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UCrowdFollowingComponent;
 
 // Class AIModule.CrowdManager
 // 0x00C8 (0x00F0 - 0x0028)
@@ -4150,7 +3998,6 @@ public:
 		return GetDefaultObjImpl<UCrowdManager>();
 	}
 };
-DUMPER7_ASSERTS_UCrowdManager;
 
 // Class AIModule.GridPathFollowingComponent
 // 0x0030 (0x0350 - 0x0320)
@@ -4174,7 +4021,6 @@ public:
 		return GetDefaultObjImpl<UGridPathFollowingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGridPathFollowingComponent;
 
 // Class AIModule.NavFilter_AIControllerDefault
 // 0x0000 (0x0048 - 0x0048)
@@ -4194,7 +4040,6 @@ public:
 		return GetDefaultObjImpl<UNavFilter_AIControllerDefault>();
 	}
 };
-DUMPER7_ASSERTS_UNavFilter_AIControllerDefault;
 
 // Class AIModule.NavLinkProxy
 // 0x0050 (0x04E0 - 0x0490)
@@ -4231,7 +4076,6 @@ public:
 		return GetDefaultObjImpl<ANavLinkProxy>();
 	}
 };
-DUMPER7_ASSERTS_ANavLinkProxy;
 
 // Class AIModule.NavLocalGridManager
 // 0x0030 (0x0058 - 0x0028)
@@ -4263,7 +4107,6 @@ public:
 		return GetDefaultObjImpl<UNavLocalGridManager>();
 	}
 };
-DUMPER7_ASSERTS_UNavLocalGridManager;
 
 // Class AIModule.PathFollowingManager
 // 0x0000 (0x0028 - 0x0028)
@@ -4283,7 +4126,6 @@ public:
 		return GetDefaultObjImpl<UPathFollowingManager>();
 	}
 };
-DUMPER7_ASSERTS_UPathFollowingManager;
 
 // Class AIModule.AIPerceptionComponent
 // 0x00F0 (0x01C0 - 0x00D0)
@@ -4327,7 +4169,6 @@ public:
 		return GetDefaultObjImpl<UAIPerceptionComponent>();
 	}
 };
-DUMPER7_ASSERTS_UAIPerceptionComponent;
 
 // Class AIModule.AIPerceptionListenerInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -4356,7 +4197,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IAIPerceptionListenerInterface;
 
 // Class AIModule.AIPerceptionStimuliSourceComponent
 // 0x0018 (0x00E8 - 0x00D0)
@@ -4387,7 +4227,6 @@ public:
 		return GetDefaultObjImpl<UAIPerceptionStimuliSourceComponent>();
 	}
 };
-DUMPER7_ASSERTS_UAIPerceptionStimuliSourceComponent;
 
 // Class AIModule.AIPerceptionSystem
 // 0x0100 (0x0138 - 0x0038)
@@ -4421,7 +4260,6 @@ public:
 		return GetDefaultObjImpl<UAIPerceptionSystem>();
 	}
 };
-DUMPER7_ASSERTS_UAIPerceptionSystem;
 
 // Class AIModule.AISense
 // 0x0050 (0x0078 - 0x0028)
@@ -4450,7 +4288,6 @@ public:
 		return GetDefaultObjImpl<UAISense>();
 	}
 };
-DUMPER7_ASSERTS_UAISense;
 
 // Class AIModule.AISenseConfig_Damage
 // 0x0008 (0x0050 - 0x0048)
@@ -4473,7 +4310,6 @@ public:
 		return GetDefaultObjImpl<UAISenseConfig_Damage>();
 	}
 };
-DUMPER7_ASSERTS_UAISenseConfig_Damage;
 
 // Class AIModule.AISense_Blueprint
 // 0x0028 (0x00A0 - 0x0078)
@@ -4508,7 +4344,6 @@ public:
 		return GetDefaultObjImpl<UAISense_Blueprint>();
 	}
 };
-DUMPER7_ASSERTS_UAISense_Blueprint;
 
 // Class AIModule.AISense_Damage
 // 0x0010 (0x0088 - 0x0078)
@@ -4534,7 +4369,6 @@ public:
 		return GetDefaultObjImpl<UAISense_Damage>();
 	}
 };
-DUMPER7_ASSERTS_UAISense_Damage;
 
 // Class AIModule.AISense_Hearing
 // 0x0068 (0x00E0 - 0x0078)
@@ -4562,7 +4396,6 @@ public:
 		return GetDefaultObjImpl<UAISense_Hearing>();
 	}
 };
-DUMPER7_ASSERTS_UAISense_Hearing;
 
 // Class AIModule.AISense_Prediction
 // 0x0010 (0x0088 - 0x0078)
@@ -4589,7 +4422,6 @@ public:
 		return GetDefaultObjImpl<UAISense_Prediction>();
 	}
 };
-DUMPER7_ASSERTS_UAISense_Prediction;
 
 // Class AIModule.AISense_Sight
 // 0x0130 (0x01A8 - 0x0078)
@@ -4624,7 +4456,6 @@ public:
 		return GetDefaultObjImpl<UAISense_Sight>();
 	}
 };
-DUMPER7_ASSERTS_UAISense_Sight;
 
 // Class AIModule.AISense_Team
 // 0x0010 (0x0088 - 0x0078)
@@ -4647,7 +4478,6 @@ public:
 		return GetDefaultObjImpl<UAISense_Team>();
 	}
 };
-DUMPER7_ASSERTS_UAISense_Team;
 
 // Class AIModule.AISense_Touch
 // 0x0060 (0x00D8 - 0x0078)
@@ -4674,7 +4504,6 @@ public:
 		return GetDefaultObjImpl<UAISense_Touch>();
 	}
 };
-DUMPER7_ASSERTS_UAISense_Touch;
 
 // Class AIModule.AISightTargetInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -4703,7 +4532,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IAISightTargetInterface;
 
 // Class AIModule.PawnSensingComponent
 // 0x0048 (0x0118 - 0x00D0)
@@ -4747,7 +4575,6 @@ public:
 		return GetDefaultObjImpl<UPawnSensingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UPawnSensingComponent;
 
 // Class AIModule.AITask
 // 0x0008 (0x0070 - 0x0068)
@@ -4770,7 +4597,6 @@ public:
 		return GetDefaultObjImpl<UAITask>();
 	}
 };
-DUMPER7_ASSERTS_UAITask;
 
 // Class AIModule.AITask_LockLogic
 // 0x0000 (0x0070 - 0x0070)
@@ -4790,7 +4616,6 @@ public:
 		return GetDefaultObjImpl<UAITask_LockLogic>();
 	}
 };
-DUMPER7_ASSERTS_UAITask_LockLogic;
 
 // Class AIModule.AITask_MoveTo
 // 0x00B0 (0x0120 - 0x0070)
@@ -4819,7 +4644,6 @@ public:
 		return GetDefaultObjImpl<UAITask_MoveTo>();
 	}
 };
-DUMPER7_ASSERTS_UAITask_MoveTo;
 
 // Class AIModule.AITask_RunEQS
 // 0x0078 (0x00E8 - 0x0070)
@@ -4845,7 +4669,6 @@ public:
 		return GetDefaultObjImpl<UAITask_RunEQS>();
 	}
 };
-DUMPER7_ASSERTS_UAITask_RunEQS;
 
 // Class AIModule.VisualLoggerExtension
 // 0x0000 (0x0028 - 0x0028)
@@ -4865,6 +4688,5 @@ public:
 		return GetDefaultObjImpl<UVisualLoggerExtension>();
 	}
 };
-DUMPER7_ASSERTS_UVisualLoggerExtension;
 
 SDK_NAMESPACE_END

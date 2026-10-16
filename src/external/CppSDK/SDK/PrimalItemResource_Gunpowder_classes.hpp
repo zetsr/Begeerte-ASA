@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Gunpowder_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Gunpowder_C;
 
 SDK_NAMESPACE_END

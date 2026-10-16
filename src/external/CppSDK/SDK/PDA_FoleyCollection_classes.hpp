@@ -47,6 +47,5 @@ public:
 		return GetDefaultObjImpl<UPDA_FoleyCollection_C>();
 	}
 };
-DUMPER7_ASSERTS_UPDA_FoleyCollection_C;
 
 SDK_NAMESPACE_END

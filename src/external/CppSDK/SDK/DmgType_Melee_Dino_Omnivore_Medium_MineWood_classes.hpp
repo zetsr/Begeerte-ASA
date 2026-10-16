@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDmgType_Melee_Dino_Omnivore_Medium_MineWood_C>();
 	}
 };
-DUMPER7_ASSERTS_UDmgType_Melee_Dino_Omnivore_Medium_MineWood_C;
 
 SDK_NAMESPACE_END

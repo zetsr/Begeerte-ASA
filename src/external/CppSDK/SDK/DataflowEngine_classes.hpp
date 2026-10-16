@@ -44,7 +44,6 @@ public:
 		return GetDefaultObjImpl<UDataflow>();
 	}
 };
-DUMPER7_ASSERTS_UDataflow;
 
 // Class DataflowEngine.DataflowBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -67,7 +66,6 @@ public:
 		return GetDefaultObjImpl<UDataflowBlueprintLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UDataflowBlueprintLibrary;
 
 // Class DataflowEngine.DataflowContentOwner
 // 0x0000 (0x0000 - 0x0000)
@@ -96,7 +94,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataflowContentOwner;
 
 // Class DataflowEngine.DataflowContextObject
 // 0x0050 (0x0078 - 0x0028)
@@ -123,7 +120,6 @@ public:
 		return GetDefaultObjImpl<UDataflowContextObject>();
 	}
 };
-DUMPER7_ASSERTS_UDataflowContextObject;
 
 // Class DataflowEngine.DataflowBaseContent
 // 0x0030 (0x00A8 - 0x0078)
@@ -151,7 +147,6 @@ public:
 		return GetDefaultObjImpl<UDataflowBaseContent>();
 	}
 };
-DUMPER7_ASSERTS_UDataflowBaseContent;
 
 // Class DataflowEngine.DataflowSkeletalContent
 // 0x0018 (0x00C0 - 0x00A8)
@@ -176,7 +171,6 @@ public:
 		return GetDefaultObjImpl<UDataflowSkeletalContent>();
 	}
 };
-DUMPER7_ASSERTS_UDataflowSkeletalContent;
 
 // Class DataflowEngine.DataflowEdNode
 // 0x0028 (0x00C8 - 0x00A0)
@@ -203,6 +197,5 @@ public:
 		return GetDefaultObjImpl<UDataflowEdNode>();
 	}
 };
-DUMPER7_ASSERTS_UDataflowEdNode;
 
 SDK_NAMESPACE_END

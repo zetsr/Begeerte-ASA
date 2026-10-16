@@ -22,7 +22,6 @@ struct alignas(0x10) FTrackRenderData final
 public:
 	uint8                                         Pad_0[0xC0];                                       // 0x0000(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTrackRenderData;
 
 // ScriptStruct GeometryCache.GeometryCacheMeshBatchInfo
 // 0x000C (0x000C - 0x0000)
@@ -31,7 +30,6 @@ struct alignas(0x04) FGeometryCacheMeshBatchInfo final
 public:
 	uint8                                         Pad_0[0xC];                                        // 0x0000(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FGeometryCacheMeshBatchInfo;
 
 // ScriptStruct GeometryCache.GeometryCacheVertexInfo
 // 0x0009 (0x0009 - 0x0000)
@@ -40,7 +38,6 @@ struct FGeometryCacheVertexInfo final
 public:
 	uint8                                         Pad_0[0x9];                                        // 0x0000(0x0009)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FGeometryCacheVertexInfo;
 
 // ScriptStruct GeometryCache.GeometryCacheMeshData
 // 0x00C8 (0x00C8 - 0x0000)
@@ -49,7 +46,6 @@ struct alignas(0x08) FGeometryCacheMeshData final
 public:
 	uint8                                         Pad_0[0xC8];                                       // 0x0000(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FGeometryCacheMeshData;
 
 // ScriptStruct GeometryCache.NiagaraGeometryCacheMICOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -59,7 +55,6 @@ public:
 	class UMaterialInterface*                     OriginalMaterial;                                  // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	class UMaterialInstanceConstant*              ReplacementMaterial;                               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FNiagaraGeometryCacheMICOverride;
 
 // ScriptStruct GeometryCache.NiagaraGeometryCacheReference
 // 0x0048 (0x0048 - 0x0000)
@@ -71,6 +66,5 @@ public:
 	TArray<class UMaterialInterface*>             OverrideMaterials;                                 // 0x0028(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	TArray<struct FNiagaraGeometryCacheMICOverride> MICOverrideMaterials;                            // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNiagaraGeometryCacheReference;
 
 SDK_NAMESPACE_END

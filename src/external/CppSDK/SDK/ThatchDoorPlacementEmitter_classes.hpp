@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<AThatchDoorPlacementEmitter_C>();
 	}
 };
-DUMPER7_ASSERTS_AThatchDoorPlacementEmitter_C;
 
 SDK_NAMESPACE_END

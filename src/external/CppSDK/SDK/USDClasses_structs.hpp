@@ -95,7 +95,6 @@ struct FUsdPrimPathList final
 public:
 	TArray<class FString>                         PrimPaths;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUsdPrimPathList;
 
 // ScriptStruct USDClasses.UsdMetadataValue
 // 0x0020 (0x0020 - 0x0000)
@@ -105,7 +104,6 @@ public:
 	class FString                                 TypeName;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 StringifiedValue;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUsdMetadataValue;
 
 // ScriptStruct USDClasses.UsdPrimMetadata
 // 0x0050 (0x0050 - 0x0000)
@@ -114,7 +112,6 @@ struct FUsdPrimMetadata final
 public:
 	TMap<class FString, struct FUsdMetadataValue> MetaData;                                          // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUsdPrimMetadata;
 
 // ScriptStruct USDClasses.UsdCombinedPrimMetadata
 // 0x0050 (0x0050 - 0x0000)
@@ -123,7 +120,6 @@ struct FUsdCombinedPrimMetadata final
 public:
 	TMap<class FString, struct FUsdPrimMetadata>  PrimPathToMetadata;                                // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUsdCombinedPrimMetadata;
 
 // ScriptStruct USDClasses.UsdMetadataImportOptions
 // 0x0020 (0x0020 - 0x0000)
@@ -138,7 +134,6 @@ public:
 	bool                                          bInvertFilters;                                    // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FUsdMetadataImportOptions;
 
 // ScriptStruct USDClasses.UsdStageOptions
 // 0x0008 (0x0008 - 0x0000)
@@ -149,7 +144,6 @@ public:
 	EUsdUpAxis                                    UpAxis;                                            // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FUsdStageOptions;
 
 // ScriptStruct USDClasses.UsdUnrealAssetInfo
 // 0x0070 (0x0070 - 0x0000)
@@ -164,6 +158,5 @@ public:
 	class FString                                 UnrealExportTime;                                  // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UnrealEngineVersion;                               // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUsdUnrealAssetInfo;
 
 SDK_NAMESPACE_END

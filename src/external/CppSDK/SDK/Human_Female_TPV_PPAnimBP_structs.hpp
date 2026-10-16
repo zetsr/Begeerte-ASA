@@ -42,6 +42,5 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimGraph_1;              // 0x0310(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimGraph;                // 0x0340(0x0030)()
 };
-DUMPER7_ASSERTS_Human_Female_TPV_PPAnimBP__FAnimBlueprintGeneratedConstantData;
 
 SDK_NAMESPACE_END

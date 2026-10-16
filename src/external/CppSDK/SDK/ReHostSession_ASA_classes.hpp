@@ -371,6 +371,5 @@ public:
 		return GetDefaultObjImpl<UReHostSession_ASA_C>();
 	}
 };
-DUMPER7_ASSERTS_UReHostSession_ASA_C;
 
 SDK_NAMESPACE_END

@@ -100,7 +100,6 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfaceChaosDestruction>();
 	}
 };
-DUMPER7_ASSERTS_UNiagaraDataInterfaceChaosDestruction;
 
 // Class ChaosNiagara.NiagaraDataInterfaceGeometryCollection
 // 0x0068 (0x00A0 - 0x0038)
@@ -130,7 +129,6 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfaceGeometryCollection>();
 	}
 };
-DUMPER7_ASSERTS_UNiagaraDataInterfaceGeometryCollection;
 
 // Class ChaosNiagara.NiagaraDataInterfacePhysicsField
 // 0x0000 (0x0038 - 0x0038)
@@ -150,6 +148,5 @@ public:
 		return GetDefaultObjImpl<UNiagaraDataInterfacePhysicsField>();
 	}
 };
-DUMPER7_ASSERTS_UNiagaraDataInterfacePhysicsField;
 
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<AWeapGun_Impacts_TekSword_C>();
 	}
 };
-DUMPER7_ASSERTS_AWeapGun_Impacts_TekSword_C;
 
 SDK_NAMESPACE_END

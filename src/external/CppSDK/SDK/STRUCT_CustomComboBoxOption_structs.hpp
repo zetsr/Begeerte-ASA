@@ -25,6 +25,5 @@ public:
 	TArray<struct FSTRUCT_SubOptions>             SubOptions_9_0FDA515249F344B2F1B0449DA437EADE;     // 0x0018(0x0010)(Edit, BlueprintVisible)
 	class FString                                 ImageUrl_13_487F9F2742BB6A0B222F21A177253BD6;      // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_FSTRUCT_CustomComboBoxOption;
 
 SDK_NAMESPACE_END

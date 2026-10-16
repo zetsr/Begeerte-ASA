@@ -43,7 +43,6 @@ public:
 		return GetDefaultObjImpl<USoundscapeBPFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_USoundscapeBPFunctionLibrary;
 
 // Class Soundscape.SoundscapeColor
 // 0x00D8 (0x0100 - 0x0028)
@@ -72,7 +71,6 @@ public:
 		return GetDefaultObjImpl<USoundscapeColor>();
 	}
 };
-DUMPER7_ASSERTS_USoundscapeColor;
 
 // Class Soundscape.ActiveSoundscapeColorVoice
 // 0x0018 (0x0040 - 0x0028)
@@ -101,7 +99,6 @@ public:
 		return GetDefaultObjImpl<UActiveSoundscapeColorVoice>();
 	}
 };
-DUMPER7_ASSERTS_UActiveSoundscapeColorVoice;
 
 // Class Soundscape.ActiveSoundscapeColor
 // 0x0168 (0x0190 - 0x0028)
@@ -138,7 +135,6 @@ public:
 		return GetDefaultObjImpl<UActiveSoundscapeColor>();
 	}
 };
-DUMPER7_ASSERTS_UActiveSoundscapeColor;
 
 // Class Soundscape.SoundscapeColorPointComponent
 // 0x0008 (0x00D8 - 0x00D0)
@@ -161,7 +157,6 @@ public:
 		return GetDefaultObjImpl<USoundscapeColorPointComponent>();
 	}
 };
-DUMPER7_ASSERTS_USoundscapeColorPointComponent;
 
 // Class Soundscape.SoundscapePalette
 // 0x0058 (0x0080 - 0x0028)
@@ -185,7 +180,6 @@ public:
 		return GetDefaultObjImpl<USoundscapePalette>();
 	}
 };
-DUMPER7_ASSERTS_USoundscapePalette;
 
 // Class Soundscape.ActiveSoundscapePalette
 // 0x0018 (0x0040 - 0x0028)
@@ -213,7 +207,6 @@ public:
 		return GetDefaultObjImpl<UActiveSoundscapePalette>();
 	}
 };
-DUMPER7_ASSERTS_UActiveSoundscapePalette;
 
 // Class Soundscape.SoundscapeSettings
 // 0x0070 (0x00A8 - 0x0038)
@@ -245,7 +238,6 @@ public:
 		return GetDefaultObjImpl<USoundscapeSettings>();
 	}
 };
-DUMPER7_ASSERTS_USoundscapeSettings;
 
 // Class Soundscape.SoundscapeColorPointHashCellDensity
 // 0x0050 (0x0078 - 0x0028)
@@ -268,7 +260,6 @@ public:
 		return GetDefaultObjImpl<USoundscapeColorPointHashCellDensity>();
 	}
 };
-DUMPER7_ASSERTS_USoundscapeColorPointHashCellDensity;
 
 // Class Soundscape.SoundscapeColorPointHashMap
 // 0x0098 (0x00C0 - 0x0028)
@@ -307,7 +298,6 @@ public:
 		return GetDefaultObjImpl<USoundscapeColorPointHashMap>();
 	}
 };
-DUMPER7_ASSERTS_USoundscapeColorPointHashMap;
 
 // Class Soundscape.SoundscapeColorPointHashMapCollection
 // 0x0030 (0x0058 - 0x0028)
@@ -338,7 +328,6 @@ public:
 		return GetDefaultObjImpl<USoundscapeColorPointHashMapCollection>();
 	}
 };
-DUMPER7_ASSERTS_USoundscapeColorPointHashMapCollection;
 
 // Class Soundscape.SoundscapeSubsystem
 // 0x0238 (0x0268 - 0x0030)
@@ -383,6 +372,5 @@ public:
 		return GetDefaultObjImpl<USoundscapeSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_USoundscapeSubsystem;
 
 SDK_NAMESPACE_END

@@ -52,7 +52,6 @@ public:
 		return GetDefaultObjImpl<USparseVolumeTextureViewerComponent>();
 	}
 };
-DUMPER7_ASSERTS_USparseVolumeTextureViewerComponent;
 
 // Class Renderer.SparseVolumeTextureViewer
 // 0x0008 (0x0498 - 0x0490)
@@ -75,6 +74,5 @@ public:
 		return GetDefaultObjImpl<ASparseVolumeTextureViewer>();
 	}
 };
-DUMPER7_ASSERTS_ASparseVolumeTextureViewer;
 
 SDK_NAMESPACE_END

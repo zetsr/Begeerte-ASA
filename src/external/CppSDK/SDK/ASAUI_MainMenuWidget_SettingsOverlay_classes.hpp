@@ -35,12 +35,12 @@ public:
 	TMulticastInlineDelegate<void()>              OnQuitGameClicked;                                 // 0x0868(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	struct FEventReply OnKeyDownEvent(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyboardEvent);
+	void Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick);
+	struct FEventReply OnKeyDownEvent(const struct FGeometry& MyGeometry_OnKeyDownEvent, const struct FKeyEvent& InKeyboardEvent_OnKeyDownEvent);
 	void ExecuteUbergraph_ASAUI_MainMenuWidget_SettingsOverlay(int32 EntryPoint);
 	void Construct();
 	void BPVirtualCursorinit();
-	bool BPGamepadReleased(const struct FKey& theKey);
+	bool BPGamepadReleased(const struct FKey& theKey_BPGamepadReleased);
 	void BndEvt__ASAUI_MainMenuWidget_SettingsOverlay_SettingsButton_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__ASAUI_MainMenuWidget_SettingsOverlay_QuitButton_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__ASAUI_MainMenuWidget_SettingsOverlay_CreditsButton_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature();
@@ -60,6 +60,5 @@ public:
 		return GetDefaultObjImpl<UASAUI_MainMenuWidget_SettingsOverlay_C>();
 	}
 };
-DUMPER7_ASSERTS_UASAUI_MainMenuWidget_SettingsOverlay_C;
 
 SDK_NAMESPACE_END

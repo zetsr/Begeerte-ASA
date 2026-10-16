@@ -48,7 +48,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniAsset>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniAsset;
 
 // Class HoudiniEngineRuntime.HoudiniParameter
 // 0x00E0 (0x0108 - 0x0028)
@@ -104,7 +103,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameter>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameter;
 
 // Class HoudiniEngineRuntime.HoudiniParameterFile
 // 0x0038 (0x0140 - 0x0108)
@@ -131,7 +129,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterFile>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterFile;
 
 // Class HoudiniEngineRuntime.HoudiniAssetActor
 // 0x0008 (0x0498 - 0x0490)
@@ -154,7 +151,6 @@ public:
 		return GetDefaultObjImpl<AHoudiniAssetActor>();
 	}
 };
-DUMPER7_ASSERTS_AHoudiniAssetActor;
 
 // Class HoudiniEngineRuntime.HoudiniParameterOperatorPath
 // 0x0008 (0x0110 - 0x0108)
@@ -177,7 +173,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterOperatorPath>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterOperatorPath;
 
 // Class HoudiniEngineRuntime.HoudiniAssetComponent
 // 0x0530 (0x0B50 - 0x0620)
@@ -272,7 +267,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniAssetComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniAssetComponent;
 
 // Class HoudiniEngineRuntime.HoudiniParameterString
 // 0x0038 (0x0140 - 0x0108)
@@ -299,7 +293,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterString>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterString;
 
 // Class HoudiniEngineRuntime.HoudiniAssetBlueprintComponent
 // 0x0100 (0x0C50 - 0x0B50)
@@ -337,7 +330,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniAssetBlueprintComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniAssetBlueprintComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInputObject
 // 0x01F8 (0x0220 - 0x0028)
@@ -377,7 +369,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputObject>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputObject;
 
 // Class HoudiniEngineRuntime.HoudiniInputSceneComponent
 // 0x0070 (0x0290 - 0x0220)
@@ -403,7 +394,6 @@ public:
 	}
 };
 #pragma pack(pop)
-DUMPER7_ASSERTS_UHoudiniInputSceneComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInputCameraComponent
 // 0x0010 (0x02A0 - 0x0290)
@@ -432,7 +422,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputCameraComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputCameraComponent;
 
 // Class HoudiniEngineRuntime.HoudiniEngineCopyPropertiesInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -461,7 +450,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IHoudiniEngineCopyPropertiesInterface;
 
 // Class HoudiniEngineRuntime.HoudiniParameterInt
 // 0x0048 (0x0150 - 0x0108)
@@ -496,7 +484,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterInt>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterInt;
 
 // Class HoudiniEngineRuntime.HoudiniEngineEditorSettings
 // 0x0000 (0x0038 - 0x0038)
@@ -516,7 +503,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniEngineEditorSettings>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniEngineEditorSettings;
 
 // Class HoudiniEngineRuntime.HoudiniHandleParameter
 // 0x0010 (0x0038 - 0x0028)
@@ -541,7 +527,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniHandleParameter>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniHandleParameter;
 
 // Class HoudiniEngineRuntime.HoudiniHandleComponent
 // 0x00A0 (0x0320 - 0x0280)
@@ -573,7 +558,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniHandleComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniHandleComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInputActor
 // 0x0190 (0x03B0 - 0x0220)
@@ -608,7 +592,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputActor>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputActor;
 
 // Class HoudiniEngineRuntime.HoudiniInputLandscape
 // 0x0010 (0x03C0 - 0x03B0)
@@ -632,7 +615,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputLandscape>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputLandscape;
 
 // Class HoudiniEngineRuntime.HoudiniInput
 // 0x01E8 (0x0210 - 0x0028)
@@ -706,7 +688,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInput>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInput;
 
 // Class HoudiniEngineRuntime.HoudiniParameterRampModificationEvent
 // 0x0028 (0x0050 - 0x0028)
@@ -737,7 +718,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterRampModificationEvent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterRampModificationEvent;
 
 // Class HoudiniEngineRuntime.HoudiniParameterToggle
 // 0x0020 (0x0128 - 0x0108)
@@ -761,7 +741,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterToggle>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterToggle;
 
 // Class HoudiniEngineRuntime.HoudiniInputStaticMesh
 // 0x0000 (0x0220 - 0x0220)
@@ -781,7 +760,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputStaticMesh>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputStaticMesh;
 
 // Class HoudiniEngineRuntime.HoudiniInputSkeletalMesh
 // 0x0000 (0x0220 - 0x0220)
@@ -801,7 +779,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputSkeletalMesh>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputSkeletalMesh;
 
 // Class HoudiniEngineRuntime.HoudiniInputBlueprint
 // 0x0070 (0x0290 - 0x0220)
@@ -828,7 +805,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputBlueprint>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputBlueprint;
 
 // Class HoudiniEngineRuntime.HoudiniInputAnimation
 // 0x0000 (0x0220 - 0x0220)
@@ -848,7 +824,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputAnimation>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputAnimation;
 
 // Class HoudiniEngineRuntime.HoudiniParameterMultiParm
 // 0x0048 (0x0150 - 0x0108)
@@ -883,7 +858,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterMultiParm>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterMultiParm;
 
 // Class HoudiniEngineRuntime.HoudiniParameterRampColor
 // 0x0070 (0x01C0 - 0x0150)
@@ -915,7 +889,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterRampColor>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterRampColor;
 
 // Class HoudiniEngineRuntime.HoudiniInputGeometryCollection
 // 0x0000 (0x0220 - 0x0220)
@@ -935,7 +908,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputGeometryCollection>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputGeometryCollection;
 
 // Class HoudiniEngineRuntime.HoudiniInputBrush
 // 0x0020 (0x03D0 - 0x03B0)
@@ -962,7 +934,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputBrush>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputBrush;
 
 // Class HoudiniEngineRuntime.HoudiniInputMeshComponent
 // 0x0020 (0x02B0 - 0x0290)
@@ -985,7 +956,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputMeshComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInputSplineMeshComponent
 // 0x0100 (0x03B0 - 0x02B0)
@@ -1017,7 +987,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputSplineMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputSplineMeshComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInputInstancedMeshComponent
 // 0x0010 (0x02C0 - 0x02B0)
@@ -1040,7 +1009,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputInstancedMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputInstancedMeshComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInputSplineComponent
 // 0x0020 (0x02B0 - 0x0290)
@@ -1069,7 +1037,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputSplineComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputSplineComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInputGeometryCollectionComponent
 // 0x0000 (0x0290 - 0x0290)
@@ -1089,7 +1056,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputGeometryCollectionComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputGeometryCollectionComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInputSkeletalMeshComponent
 // 0x0000 (0x0290 - 0x0290)
@@ -1109,7 +1075,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputSkeletalMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputSkeletalMeshComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInputHoudiniSplineComponent
 // 0x0010 (0x0230 - 0x0220)
@@ -1136,7 +1101,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputHoudiniSplineComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputHoudiniSplineComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInputHoudiniAsset
 // 0x0010 (0x0230 - 0x0220)
@@ -1161,7 +1125,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputHoudiniAsset>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputHoudiniAsset;
 
 // Class HoudiniEngineRuntime.HoudiniInputLevelInstance
 // 0x0060 (0x0410 - 0x03B0)
@@ -1187,7 +1150,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputLevelInstance>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputLevelInstance;
 
 // Class HoudiniEngineRuntime.HoudiniInputDataTable
 // 0x0000 (0x0220 - 0x0220)
@@ -1207,7 +1169,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputDataTable>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputDataTable;
 
 // Class HoudiniEngineRuntime.HoudiniInputFoliageType_InstancedStaticMesh
 // 0x0000 (0x0220 - 0x0220)
@@ -1227,7 +1188,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputFoliageType_InstancedStaticMesh>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputFoliageType_InstancedStaticMesh;
 
 // Class HoudiniEngineRuntime.HoudiniInputPackedLevelActor
 // 0x0010 (0x03C0 - 0x03B0)
@@ -1251,7 +1211,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputPackedLevelActor>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputPackedLevelActor;
 
 // Class HoudiniEngineRuntime.HoudiniInputLandscapeSplineActor
 // 0x0000 (0x03B0 - 0x03B0)
@@ -1271,7 +1230,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputLandscapeSplineActor>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputLandscapeSplineActor;
 
 // Class HoudiniEngineRuntime.HoudiniInputLandscapeSplinesComponent
 // 0x0070 (0x0300 - 0x0290)
@@ -1298,7 +1256,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInputLandscapeSplinesComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInputLandscapeSplinesComponent;
 
 // Class HoudiniEngineRuntime.HoudiniInstancedActorComponent
 // 0x0020 (0x02A0 - 0x0280)
@@ -1324,7 +1281,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniInstancedActorComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniInstancedActorComponent;
 
 // Class HoudiniEngineRuntime.HoudiniMeshSplitInstancerComponent
 // 0x0020 (0x02A0 - 0x0280)
@@ -1349,7 +1305,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniMeshSplitInstancerComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniMeshSplitInstancerComponent;
 
 // Class HoudiniEngineRuntime.HoudiniNodeSyncComponent
 // 0x0030 (0x0B80 - 0x0B50)
@@ -1375,7 +1330,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniNodeSyncComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniNodeSyncComponent;
 
 // Class HoudiniEngineRuntime.HoudiniLandscapePtr
 // 0x0038 (0x0060 - 0x0028)
@@ -1402,7 +1356,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniLandscapePtr>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniLandscapePtr;
 
 // Class HoudiniEngineRuntime.HoudiniLandscapeTargetLayerOutput
 // 0x00A8 (0x00D0 - 0x0028)
@@ -1442,7 +1395,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniLandscapeTargetLayerOutput>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniLandscapeTargetLayerOutput;
 
 // Class HoudiniEngineRuntime.HoudiniLandscapeOutput
 // 0x0030 (0x0058 - 0x0028)
@@ -1469,7 +1421,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniLandscapeOutput>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniLandscapeOutput;
 
 // Class HoudiniEngineRuntime.HoudiniLandscapeSplineTargetLayerOutput
 // 0x0018 (0x00E8 - 0x00D0)
@@ -1493,7 +1444,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniLandscapeSplineTargetLayerOutput>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniLandscapeSplineTargetLayerOutput;
 
 // Class HoudiniEngineRuntime.HoudiniLandscapeSplinesOutput
 // 0x0090 (0x00B8 - 0x0028)
@@ -1522,7 +1472,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniLandscapeSplinesOutput>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniLandscapeSplinesOutput;
 
 // Class HoudiniEngineRuntime.HoudiniOutput
 // 0x0188 (0x01B0 - 0x0028)
@@ -1561,7 +1510,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniOutput>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniOutput;
 
 // Class HoudiniEngineRuntime.HoudiniParameterButton
 // 0x0000 (0x0108 - 0x0108)
@@ -1581,7 +1529,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterButton>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterButton;
 
 // Class HoudiniEngineRuntime.HoudiniParameterButtonStrip
 // 0x0018 (0x0120 - 0x0108)
@@ -1606,7 +1553,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterButtonStrip>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterButtonStrip;
 
 // Class HoudiniEngineRuntime.HoudiniParameterChoice
 // 0x0070 (0x0178 - 0x0108)
@@ -1638,7 +1584,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterChoice>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterChoice;
 
 // Class HoudiniEngineRuntime.HoudiniParameterColor
 // 0x0028 (0x0130 - 0x0108)
@@ -1664,7 +1609,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterColor>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterColor;
 
 // Class HoudiniEngineRuntime.HoudiniParameterFloat
 // 0x0050 (0x0158 - 0x0108)
@@ -1702,7 +1646,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterFloat>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterFloat;
 
 // Class HoudiniEngineRuntime.HoudiniParameterFolder
 // 0x0010 (0x0118 - 0x0108)
@@ -1731,7 +1674,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterFolder>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterFolder;
 
 // Class HoudiniEngineRuntime.HoudiniParameterFolderList
 // 0x0018 (0x0120 - 0x0108)
@@ -1757,7 +1699,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterFolderList>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterFolderList;
 
 // Class HoudiniEngineRuntime.HoudiniParameterLabel
 // 0x0010 (0x0118 - 0x0108)
@@ -1780,7 +1721,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterLabel>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterLabel;
 
 // Class HoudiniEngineRuntime.HoudiniParameterRampFloatPoint
 // 0x0028 (0x0050 - 0x0028)
@@ -1810,7 +1750,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterRampFloatPoint>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterRampFloatPoint;
 
 // Class HoudiniEngineRuntime.HoudiniParameterRampColorPoint
 // 0x0038 (0x0060 - 0x0028)
@@ -1841,7 +1780,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterRampColorPoint>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterRampColorPoint;
 
 // Class HoudiniEngineRuntime.HoudiniParameterRampFloat
 // 0x0068 (0x01B8 - 0x0150)
@@ -1872,7 +1810,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterRampFloat>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterRampFloat;
 
 // Class HoudiniEngineRuntime.HoudiniParameterSeparator
 // 0x0000 (0x0108 - 0x0108)
@@ -1892,7 +1829,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniParameterSeparator>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniParameterSeparator;
 
 // Class HoudiniEngineRuntime.TOPNode
 // 0x0378 (0x03A0 - 0x0028)
@@ -1937,7 +1873,6 @@ public:
 		return GetDefaultObjImpl<UTOPNode>();
 	}
 };
-DUMPER7_ASSERTS_UTOPNode;
 
 // Class HoudiniEngineRuntime.TOPNetwork
 // 0x0070 (0x0098 - 0x0028)
@@ -1970,7 +1905,6 @@ public:
 		return GetDefaultObjImpl<UTOPNetwork>();
 	}
 };
-DUMPER7_ASSERTS_UTOPNetwork;
 
 // Class HoudiniEngineRuntime.HoudiniPDGAssetLink
 // 0x0110 (0x0138 - 0x0028)
@@ -2015,7 +1949,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniPDGAssetLink>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniPDGAssetLink;
 
 // Class HoudiniEngineRuntime.HoudiniRuntimeSettings
 // 0x02F0 (0x0318 - 0x0028)
@@ -2130,7 +2063,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniRuntimeSettings>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniRuntimeSettings;
 
 // Class HoudiniEngineRuntime.HoudiniSplineComponent
 // 0x0340 (0x05C0 - 0x0280)
@@ -2176,7 +2108,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniSplineComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniSplineComponent;
 
 // Class HoudiniEngineRuntime.HoudiniStaticMesh
 // 0x00A0 (0x00C8 - 0x0028)
@@ -2259,7 +2190,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniStaticMesh>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniStaticMesh;
 
 // Class HoudiniEngineRuntime.HoudiniStaticMeshComponent
 // 0x0040 (0x06A0 - 0x0660)
@@ -2293,7 +2223,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniStaticMeshComponent>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniStaticMeshComponent;
 
 // Class HoudiniEngineRuntime.HoudiniToolData
 // 0x0088 (0x00B0 - 0x0028)
@@ -2332,7 +2261,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniToolData>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniToolData;
 
 // Class HoudiniEngineRuntime.HoudiniToolsPackageAsset
 // 0x0068 (0x0090 - 0x0028)
@@ -2361,7 +2289,6 @@ public:
 		return GetDefaultObjImpl<UHoudiniToolsPackageAsset>();
 	}
 };
-DUMPER7_ASSERTS_UHoudiniToolsPackageAsset;
 
 // Class HoudiniEngineRuntime.HoudiniAssetStateEvents
 // 0x0000 (0x0000 - 0x0000)
@@ -2390,6 +2317,5 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IHoudiniAssetStateEvents;
 
 SDK_NAMESPACE_END

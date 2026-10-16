@@ -76,7 +76,6 @@ public:
 		return GetDefaultObjImpl<UGLTFExportOptions>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFExportOptions;
 
 // Class GLTFExporter.GLTFExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -99,7 +98,6 @@ public:
 		return GetDefaultObjImpl<UGLTFExporter>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFExporter;
 
 // Class GLTFExporter.GLTFAnimSequenceExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -119,7 +117,6 @@ public:
 		return GetDefaultObjImpl<UGLTFAnimSequenceExporter>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFAnimSequenceExporter;
 
 // Class GLTFExporter.GLTFLevelExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -139,7 +136,6 @@ public:
 		return GetDefaultObjImpl<UGLTFLevelExporter>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFLevelExporter;
 
 // Class GLTFExporter.GLTFLevelSequenceExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -159,7 +155,6 @@ public:
 		return GetDefaultObjImpl<UGLTFLevelSequenceExporter>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFLevelSequenceExporter;
 
 // Class GLTFExporter.GLTFLevelVariantSetsExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -179,7 +174,6 @@ public:
 		return GetDefaultObjImpl<UGLTFLevelVariantSetsExporter>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFLevelVariantSetsExporter;
 
 // Class GLTFExporter.GLTFMaterialExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -199,7 +193,6 @@ public:
 		return GetDefaultObjImpl<UGLTFMaterialExporter>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFMaterialExporter;
 
 // Class GLTFExporter.GLTFSkeletalMeshExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -219,7 +212,6 @@ public:
 		return GetDefaultObjImpl<UGLTFSkeletalMeshExporter>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFSkeletalMeshExporter;
 
 // Class GLTFExporter.GLTFStaticMeshExporter
 // 0x0000 (0x0078 - 0x0078)
@@ -239,7 +231,6 @@ public:
 		return GetDefaultObjImpl<UGLTFStaticMeshExporter>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFStaticMeshExporter;
 
 // Class GLTFExporter.GLTFProxyOptions
 // 0x0068 (0x0090 - 0x0028)
@@ -272,7 +263,6 @@ public:
 		return GetDefaultObjImpl<UGLTFProxyOptions>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFProxyOptions;
 
 // Class GLTFExporter.GLTFMaterialExportOptions
 // 0x0070 (0x0098 - 0x0028)
@@ -298,6 +288,5 @@ public:
 		return GetDefaultObjImpl<UGLTFMaterialExportOptions>();
 	}
 };
-DUMPER7_ASSERTS_UGLTFMaterialExportOptions;
 
 SDK_NAMESPACE_END

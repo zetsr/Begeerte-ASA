@@ -44,7 +44,6 @@ public:
 		return GetDefaultObjImpl<USmartObjectMassBehaviorDefinition>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectMassBehaviorDefinition;
 
 // Class MassSmartObjects.MassSmartObjectCandidatesFinderProcessor
 // 0x0650 (0x0700 - 0x00B0)
@@ -68,7 +67,6 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectCandidatesFinderProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassSmartObjectCandidatesFinderProcessor;
 
 // Class MassSmartObjects.MassSmartObjectTimedBehaviorProcessor
 // 0x0320 (0x03D0 - 0x00B0)
@@ -91,7 +89,6 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectTimedBehaviorProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassSmartObjectTimedBehaviorProcessor;
 
 // Class MassSmartObjects.MassSmartObjectUserFragmentDeinitializer
 // 0x0328 (0x03F0 - 0x00C8)
@@ -114,7 +111,6 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectUserFragmentDeinitializer>();
 	}
 };
-DUMPER7_ASSERTS_UMassSmartObjectUserFragmentDeinitializer;
 
 // Class MassSmartObjects.MassSmartObjectInitializerBase
 // 0x0338 (0x0400 - 0x00C8)
@@ -137,7 +133,6 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectInitializerBase>();
 	}
 };
-DUMPER7_ASSERTS_UMassSmartObjectInitializerBase;
 
 // Class MassSmartObjects.MassSmartObjectDeinitializerBase
 // 0x0338 (0x0400 - 0x00C8)
@@ -160,7 +155,6 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectDeinitializerBase>();
 	}
 };
-DUMPER7_ASSERTS_UMassSmartObjectDeinitializerBase;
 
 // Class MassSmartObjects.MassActiveSmartObjectInitializer
 // 0x0000 (0x0400 - 0x0400)
@@ -180,7 +174,6 @@ public:
 		return GetDefaultObjImpl<UMassActiveSmartObjectInitializer>();
 	}
 };
-DUMPER7_ASSERTS_UMassActiveSmartObjectInitializer;
 
 // Class MassSmartObjects.MassActiveSmartObjectDeinitializer
 // 0x0000 (0x0400 - 0x0400)
@@ -200,7 +193,6 @@ public:
 		return GetDefaultObjImpl<UMassActiveSmartObjectDeinitializer>();
 	}
 };
-DUMPER7_ASSERTS_UMassActiveSmartObjectDeinitializer;
 
 // Class MassSmartObjects.MassActorInstanceHandleInitializer
 // 0x0000 (0x0400 - 0x0400)
@@ -220,7 +212,6 @@ public:
 		return GetDefaultObjImpl<UMassActorInstanceHandleInitializer>();
 	}
 };
-DUMPER7_ASSERTS_UMassActorInstanceHandleInitializer;
 
 // Class MassSmartObjects.MassActorInstanceHandleDeinitializer
 // 0x0000 (0x0400 - 0x0400)
@@ -240,7 +231,6 @@ public:
 		return GetDefaultObjImpl<UMassActorInstanceHandleDeinitializer>();
 	}
 };
-DUMPER7_ASSERTS_UMassActorInstanceHandleDeinitializer;
 
 // Class MassSmartObjects.MassActiveSmartObjectSignalProcessor
 // 0x0640 (0x0AD0 - 0x0490)
@@ -263,7 +253,6 @@ public:
 		return GetDefaultObjImpl<UMassActiveSmartObjectSignalProcessor>();
 	}
 };
-DUMPER7_ASSERTS_UMassActiveSmartObjectSignalProcessor;
 
 // Class MassSmartObjects.MassSmartObjectSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -288,7 +277,6 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMassSmartObjectSettings;
 
 // Class MassSmartObjects.MassSmartObjectUserTrait
 // 0x0020 (0x0048 - 0x0028)
@@ -311,7 +299,6 @@ public:
 		return GetDefaultObjImpl<UMassSmartObjectUserTrait>();
 	}
 };
-DUMPER7_ASSERTS_UMassSmartObjectUserTrait;
 
 // Class MassSmartObjects.SmartObjectZoneAnnotations
 // 0x0030 (0x06C0 - 0x0690)
@@ -339,6 +326,5 @@ public:
 		return GetDefaultObjImpl<USmartObjectZoneAnnotations>();
 	}
 };
-DUMPER7_ASSERTS_USmartObjectZoneAnnotations;
 
 SDK_NAMESPACE_END

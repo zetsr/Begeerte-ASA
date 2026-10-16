@@ -118,6 +118,5 @@ public:
 		return GetDefaultObjImpl<UUI_HelpPage_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_HelpPage_C;
 
 SDK_NAMESPACE_END

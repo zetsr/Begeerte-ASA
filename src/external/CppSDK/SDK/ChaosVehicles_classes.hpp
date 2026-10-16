@@ -175,7 +175,6 @@ public:
 		return GetDefaultObjImpl<UChaosVehicleMovementComponent>();
 	}
 };
-DUMPER7_ASSERTS_UChaosVehicleMovementComponent;
 
 // Class ChaosVehicles.ChaosVehicleWheel
 // 0x02B8 (0x02E0 - 0x0028)
@@ -262,7 +261,6 @@ public:
 		return GetDefaultObjImpl<UChaosVehicleWheel>();
 	}
 };
-DUMPER7_ASSERTS_UChaosVehicleWheel;
 
 // Class ChaosVehicles.ChaosWheeledVehicleMovementComponent
 // 0x0320 (0x0DA0 - 0x0A80)
@@ -345,7 +343,6 @@ public:
 		return GetDefaultObjImpl<UChaosWheeledVehicleMovementComponent>();
 	}
 };
-DUMPER7_ASSERTS_UChaosWheeledVehicleMovementComponent;
 
 // Class ChaosVehicles.VehicleAnimationInstance
 // 0x07E0 (0x0BB0 - 0x03D0)
@@ -373,7 +370,6 @@ public:
 		return GetDefaultObjImpl<UVehicleAnimationInstance>();
 	}
 };
-DUMPER7_ASSERTS_UVehicleAnimationInstance;
 
 // Class ChaosVehicles.WheeledVehiclePawn
 // 0x0010 (0x0530 - 0x0520)
@@ -397,6 +393,5 @@ public:
 		return GetDefaultObjImpl<AWheeledVehiclePawn>();
 	}
 };
-DUMPER7_ASSERTS_AWheeledVehiclePawn;
 
 SDK_NAMESPACE_END

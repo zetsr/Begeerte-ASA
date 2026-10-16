@@ -82,7 +82,6 @@ public:
 		return GetDefaultObjImpl<ADaySequenceActor>();
 	}
 };
-DUMPER7_ASSERTS_ADaySequenceActor;
 
 // Class DaySequence.BaseDaySequenceActor
 // 0x0038 (0x0630 - 0x05F8)
@@ -111,7 +110,6 @@ public:
 		return GetDefaultObjImpl<ABaseDaySequenceActor>();
 	}
 };
-DUMPER7_ASSERTS_ABaseDaySequenceActor;
 
 // Class DaySequence.DaySequenceCheatManagerExtension
 // 0x0000 (0x0028 - 0x0028)
@@ -135,7 +133,6 @@ public:
 		return GetDefaultObjImpl<UDaySequenceCheatManagerExtension>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequenceCheatManagerExtension;
 
 // Class DaySequence.DaySequenceConditionTag
 // 0x0030 (0x0058 - 0x0028)
@@ -164,7 +161,6 @@ public:
 		return GetDefaultObjImpl<UDaySequenceConditionTag>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequenceConditionTag;
 
 // Class DaySequence.DaySequenceModifierEasingFunction
 // 0x0048 (0x0070 - 0x0028)
@@ -187,7 +183,6 @@ public:
 		return GetDefaultObjImpl<UDaySequenceModifierEasingFunction>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequenceModifierEasingFunction;
 
 // Class DaySequence.DaySequenceModifierComponent
 // 0x00D0 (0x0350 - 0x0280)
@@ -243,7 +238,6 @@ public:
 		return GetDefaultObjImpl<UDaySequenceModifierComponent>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequenceModifierComponent;
 
 // Class DaySequence.DaySequenceModifierVolume
 // 0x0038 (0x04C8 - 0x0490)
@@ -274,7 +268,6 @@ public:
 		return GetDefaultObjImpl<ADaySequenceModifierVolume>();
 	}
 };
-DUMPER7_ASSERTS_ADaySequenceModifierVolume;
 
 // Class DaySequence.DaySequenceStaticTimeContributor
 // 0x0018 (0x0040 - 0x0028)
@@ -305,7 +298,6 @@ public:
 		return GetDefaultObjImpl<UDaySequenceStaticTimeContributor>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequenceStaticTimeContributor;
 
 // Class DaySequence.ProceduralDaySequenceBuilder
 // 0x0028 (0x0050 - 0x0028)
@@ -350,7 +342,6 @@ public:
 		return GetDefaultObjImpl<UProceduralDaySequenceBuilder>();
 	}
 };
-DUMPER7_ASSERTS_UProceduralDaySequenceBuilder;
 
 // Class DaySequence.SunMoonDaySequenceActor
 // 0x0008 (0x0638 - 0x0630)
@@ -373,7 +364,6 @@ public:
 		return GetDefaultObjImpl<ASunMoonDaySequenceActor>();
 	}
 };
-DUMPER7_ASSERTS_ASunMoonDaySequenceActor;
 
 // Class DaySequence.DaySequence
 // 0x00C8 (0x0130 - 0x0068)
@@ -400,7 +390,6 @@ public:
 		return GetDefaultObjImpl<UDaySequence>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequence;
 
 // Class DaySequence.DaySequenceCollectionAsset
 // 0x0020 (0x0050 - 0x0030)
@@ -424,7 +413,6 @@ public:
 		return GetDefaultObjImpl<UDaySequenceCollectionAsset>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequenceCollectionAsset;
 
 // Class DaySequence.DaySequenceDirector
 // 0x0010 (0x0038 - 0x0028)
@@ -460,7 +448,6 @@ public:
 		return GetDefaultObjImpl<UDaySequenceDirector>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequenceDirector;
 
 // Class DaySequence.DaySequencePlayer
 // 0x0448 (0x0470 - 0x0028)
@@ -540,7 +527,6 @@ public:
 		return GetDefaultObjImpl<UDaySequencePlayer>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequencePlayer;
 
 // Class DaySequence.DaySequenceProjectSettings
 // 0x0030 (0x0068 - 0x0038)
@@ -568,7 +554,6 @@ public:
 		return GetDefaultObjImpl<UDaySequenceProjectSettings>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequenceProjectSettings;
 
 // Class DaySequence.DaySequenceProvider
 // 0x0010 (0x04A0 - 0x0490)
@@ -591,7 +576,6 @@ public:
 		return GetDefaultObjImpl<ADaySequenceProvider>();
 	}
 };
-DUMPER7_ASSERTS_ADaySequenceProvider;
 
 // Class DaySequence.DaySequenceSubsystem
 // 0x0038 (0x0068 - 0x0030)
@@ -620,7 +604,6 @@ public:
 		return GetDefaultObjImpl<UDaySequenceSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequenceSubsystem;
 
 // Class DaySequence.DaySequenceTrack
 // 0x0000 (0x0108 - 0x0108)
@@ -640,7 +623,6 @@ public:
 		return GetDefaultObjImpl<UDaySequenceTrack>();
 	}
 };
-DUMPER7_ASSERTS_UDaySequenceTrack;
 
 // Class DaySequence.EnvironmentLightingActor
 // 0x0030 (0x04D0 - 0x04A0)
@@ -668,6 +650,5 @@ public:
 		return GetDefaultObjImpl<AEnvironmentLightingActor>();
 	}
 };
-DUMPER7_ASSERTS_AEnvironmentLightingActor;
 
 SDK_NAMESPACE_END

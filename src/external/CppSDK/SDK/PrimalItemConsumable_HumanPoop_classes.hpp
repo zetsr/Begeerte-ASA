@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumable_HumanPoop_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumable_HumanPoop_C;
 
 SDK_NAMESPACE_END

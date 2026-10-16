@@ -35,7 +35,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Option_ModPageCategory_C_ExecuteUbergraph_UI_Option_ModPageCategory;
 
 // Function UI_Option_ModPageCategory.UI_Option_ModPageCategory_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -45,7 +44,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Option_ModPageCategory_C_GetRootCFWidget;
 
 // Function UI_Option_ModPageCategory.UI_Option_ModPageCategory_C.OnFail_20B338B847EF646EF76186BFC4DF1AD5
 // 0x0008 (0x0008 - 0x0000)
@@ -54,7 +52,6 @@ struct UI_Option_ModPageCategory_C_OnFail_20B338B847EF646EF76186BFC4DF1AD5 final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Option_ModPageCategory_C_OnFail_20B338B847EF646EF76186BFC4DF1AD5;
 
 // Function UI_Option_ModPageCategory.UI_Option_ModPageCategory_C.OnSuccess_20B338B847EF646EF76186BFC4DF1AD5
 // 0x0008 (0x0008 - 0x0000)
@@ -63,7 +60,6 @@ struct UI_Option_ModPageCategory_C_OnSuccess_20B338B847EF646EF76186BFC4DF1AD5 fi
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_Option_ModPageCategory_C_OnSuccess_20B338B847EF646EF76186BFC4DF1AD5;
 
 // Function UI_Option_ModPageCategory.UI_Option_ModPageCategory_C.UpdateThemeSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -74,7 +70,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0004(0x0014)()
 };
-DUMPER7_ASSERTS_UI_Option_ModPageCategory_C_UpdateThemeSettings;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

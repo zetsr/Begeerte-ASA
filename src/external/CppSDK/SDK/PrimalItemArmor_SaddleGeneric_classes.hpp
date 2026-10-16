@@ -48,6 +48,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_SaddleGeneric_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemArmor_SaddleGeneric_C;
 
 SDK_NAMESPACE_END

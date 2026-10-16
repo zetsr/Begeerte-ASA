@@ -25,7 +25,6 @@ public:
 	class FText                                   MainText;                                          // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   SecondaryText_0;                                   // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_UI_CFCore_Notification_C_CreateAndPlayAnimation;
 
 // Function UI_CFCore_Notification.UI_CFCore_Notification_C.Download Thumbnail
 // 0x0010 (0x0010 - 0x0000)
@@ -34,7 +33,6 @@ struct UI_CFCore_Notification_C_Download_Thumbnail final
 public:
 	class FString                                 thumbnailUrl;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Notification_C_Download_Thumbnail;
 
 // Function UI_CFCore_Notification.UI_CFCore_Notification_C.ExecuteUbergraph_UI_CFCore_Notification
 // 0x0108 (0x0108 - 0x0000)
@@ -76,7 +74,6 @@ public:
 	class FText                                   CallFunc_GetText_ReturnValue_1;                    // 0x00E8(0x0010)()
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue_1;          // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Notification_C_ExecuteUbergraph_UI_CFCore_Notification;
 
 // Function UI_CFCore_Notification.UI_CFCore_Notification_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -86,7 +83,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Notification_C_GetRootCFWidget;
 
 // Function UI_CFCore_Notification.UI_CFCore_Notification_C.OnFail_E84A8D0E4FF41AB6F8FDA4A13C0CED23
 // 0x0008 (0x0008 - 0x0000)
@@ -95,7 +91,6 @@ struct UI_CFCore_Notification_C_OnFail_E84A8D0E4FF41AB6F8FDA4A13C0CED23 final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Notification_C_OnFail_E84A8D0E4FF41AB6F8FDA4A13C0CED23;
 
 // Function UI_CFCore_Notification.UI_CFCore_Notification_C.OnSuccess_E84A8D0E4FF41AB6F8FDA4A13C0CED23
 // 0x0008 (0x0008 - 0x0000)
@@ -104,7 +99,6 @@ struct UI_CFCore_Notification_C_OnSuccess_E84A8D0E4FF41AB6F8FDA4A13C0CED23 final
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Notification_C_OnSuccess_E84A8D0E4FF41AB6F8FDA4A13C0CED23;
 
 // Function UI_CFCore_Notification.UI_CFCore_Notification_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -113,7 +107,6 @@ struct UI_CFCore_Notification_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Notification_C_PreConstruct;
 
 // Function UI_CFCore_Notification.UI_CFCore_Notification_C.SetMainMessage
 // 0x0018 (0x0018 - 0x0000)
@@ -123,7 +116,6 @@ public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Notification_C_SetMainMessage;
 
 // Function UI_CFCore_Notification.UI_CFCore_Notification_C.SetSecondaryMessage
 // 0x0018 (0x0018 - 0x0000)
@@ -133,7 +125,6 @@ public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Notification_C_SetSecondaryMessage;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

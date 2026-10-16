@@ -39,7 +39,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSpawnableChaosCacheBinding>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSpawnableChaosCacheBinding;
 
 // Class ChaosCaching.ChaosCacheCollection
 // 0x0018 (0x0040 - 0x0028)
@@ -64,7 +63,6 @@ public:
 		return GetDefaultObjImpl<UChaosCacheCollection>();
 	}
 };
-DUMPER7_ASSERTS_UChaosCacheCollection;
 
 // Class ChaosCaching.ChaosCacheManager
 // 0x00B0 (0x0540 - 0x0490)
@@ -106,7 +104,6 @@ public:
 		return GetDefaultObjImpl<AChaosCacheManager>();
 	}
 };
-DUMPER7_ASSERTS_AChaosCacheManager;
 
 // Class ChaosCaching.ChaosCachePlayer
 // 0x0000 (0x0540 - 0x0540)
@@ -126,7 +123,6 @@ public:
 		return GetDefaultObjImpl<AChaosCachePlayer>();
 	}
 };
-DUMPER7_ASSERTS_AChaosCachePlayer;
 
 // Class ChaosCaching.ChaosCache
 // 0x0358 (0x0380 - 0x0028)
@@ -170,7 +166,6 @@ public:
 		return GetDefaultObjImpl<UChaosCache>();
 	}
 };
-DUMPER7_ASSERTS_UChaosCache;
 
 // Class ChaosCaching.MovieSceneChaosCacheSection
 // 0x0028 (0x0128 - 0x0100)
@@ -193,7 +188,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneChaosCacheSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneChaosCacheSection;
 
 // Class ChaosCaching.MovieSceneChaosCacheTrack
 // 0x0018 (0x0110 - 0x00F8)
@@ -217,6 +211,5 @@ public:
 		return GetDefaultObjImpl<UMovieSceneChaosCacheTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneChaosCacheTrack;
 
 SDK_NAMESPACE_END

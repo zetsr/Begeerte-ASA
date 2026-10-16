@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UOilHarvestComponent_C>();
 	}
 };
-DUMPER7_ASSERTS_UOilHarvestComponent_C;
 
 SDK_NAMESPACE_END

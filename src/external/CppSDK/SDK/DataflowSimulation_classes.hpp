@@ -37,7 +37,6 @@ public:
 		return GetDefaultObjImpl<UDataflowSimulationManager>();
 	}
 };
-DUMPER7_ASSERTS_UDataflowSimulationManager;
 
 // Class DataflowSimulation.DataflowSimulationInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -66,7 +65,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataflowSimulationInterface;
 
 // Class DataflowSimulation.DataflowCollisionObjectInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -95,7 +93,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataflowCollisionObjectInterface;
 
 // Class DataflowSimulation.DataflowConstraintObjectInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -124,7 +121,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataflowConstraintObjectInterface;
 
 // Class DataflowSimulation.DataflowSimulationActor
 // 0x0000 (0x0000 - 0x0000)
@@ -157,7 +153,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataflowSimulationActor;
 
 // Class DataflowSimulation.DataflowGeometryCachable
 // 0x0000 (0x0000 - 0x0000)
@@ -186,7 +181,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataflowGeometryCachable;
 
 // Class DataflowSimulation.DataflowPhysicsSolverInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -215,7 +209,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataflowPhysicsSolverInterface;
 
 // Class DataflowSimulation.DataflowPhysicsObjectInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -244,6 +237,5 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IDataflowPhysicsObjectInterface;
 
 SDK_NAMESPACE_END

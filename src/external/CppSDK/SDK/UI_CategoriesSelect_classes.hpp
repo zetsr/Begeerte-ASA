@@ -55,6 +55,5 @@ public:
 		return GetDefaultObjImpl<UUI_CategoriesSelect_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CategoriesSelect_C;
 
 SDK_NAMESPACE_END

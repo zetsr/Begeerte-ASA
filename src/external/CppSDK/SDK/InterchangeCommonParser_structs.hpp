@@ -62,7 +62,6 @@ public:
 	float                                         LeaveTangent;                                      // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LeaveTangentWeight;                                // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangeCurveKey;
 
 // ScriptStruct InterchangeCommonParser.InterchangeCurve
 // 0x0010 (0x0010 - 0x0000)
@@ -71,7 +70,6 @@ struct FInterchangeCurve final
 public:
 	TArray<struct FInterchangeCurveKey>           Keys;                                              // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FInterchangeCurve;
 
 // ScriptStruct InterchangeCommonParser.InterchangeStepCurve
 // 0x0060 (0x0060 - 0x0000)
@@ -81,6 +79,5 @@ public:
 	TArray<float>                                 KeyTimes;                                          // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x50];                                      // 0x0010(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FInterchangeStepCurve;
 
 SDK_NAMESPACE_END

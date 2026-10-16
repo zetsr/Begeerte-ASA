@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_PeltOrHair_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_PeltOrHair_C;
 
 SDK_NAMESPACE_END

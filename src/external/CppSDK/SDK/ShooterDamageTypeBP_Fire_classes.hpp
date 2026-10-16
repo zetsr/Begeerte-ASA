@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UShooterDamageTypeBP_Fire_C>();
 	}
 };
-DUMPER7_ASSERTS_UShooterDamageTypeBP_Fire_C;
 
 SDK_NAMESPACE_END

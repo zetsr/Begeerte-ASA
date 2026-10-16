@@ -27,7 +27,6 @@ public:
 	class UUI_CFCore_Notification_C*              CallFunc_Create_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UOverlaySlot*                           CallFunc_AddChildToOverlay_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_NotificationManager_C_CreateNotify;
 
 // Function UI_CFCore_NotificationManager.UI_CFCore_NotificationManager_C.ExecuteUbergraph_UI_CFCore_NotificationManager
 // 0x0660 (0x0660 - 0x0000)
@@ -46,7 +45,6 @@ public:
 	class UUI_CFCore_Notification_C*              CallFunc_CreateNotify_ReturnValue_2;               // 0x0650(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUI_CFCore_Notification_C*              CallFunc_CreateNotify_ReturnValue_3;               // 0x0658(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_NotificationManager_C_ExecuteUbergraph_UI_CFCore_NotificationManager;
 
 // Function UI_CFCore_NotificationManager.UI_CFCore_NotificationManager_C.PlayInstalledNotification
 // 0x0610 (0x0610 - 0x0000)
@@ -55,7 +53,6 @@ struct UI_CFCore_NotificationManager_C_PlayInstalledNotification final
 public:
 	struct FInstallProgressMod                    InstallProgressMod;                                // 0x0000(0x0610)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_UI_CFCore_NotificationManager_C_PlayInstalledNotification;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

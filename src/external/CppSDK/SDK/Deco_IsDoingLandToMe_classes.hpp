@@ -43,6 +43,5 @@ public:
 		return GetDefaultObjImpl<UDeco_IsDoingLandToMe_C>();
 	}
 };
-DUMPER7_ASSERTS_UDeco_IsDoingLandToMe_C;
 
 SDK_NAMESPACE_END

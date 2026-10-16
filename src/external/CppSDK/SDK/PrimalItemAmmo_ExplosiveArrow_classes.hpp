@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_ExplosiveArrow_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemAmmo_ExplosiveArrow_C;
 
 SDK_NAMESPACE_END

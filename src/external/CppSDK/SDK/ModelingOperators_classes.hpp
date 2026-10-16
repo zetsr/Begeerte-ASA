@@ -55,7 +55,6 @@ public:
 		return GetDefaultObjImpl<URecomputeUVsToolProperties>();
 	}
 };
-DUMPER7_ASSERTS_URecomputeUVsToolProperties;
 
 // Class ModelingOperators.UVLayoutProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -88,7 +87,6 @@ public:
 		return GetDefaultObjImpl<UUVLayoutProperties>();
 	}
 };
-DUMPER7_ASSERTS_UUVLayoutProperties;
 
 // Class ModelingOperators.RecomputeUVsOpFactory
 // 0x0118 (0x0140 - 0x0028)
@@ -113,7 +111,6 @@ public:
 		return GetDefaultObjImpl<URecomputeUVsOpFactory>();
 	}
 };
-DUMPER7_ASSERTS_URecomputeUVsOpFactory;
 
 // Class ModelingOperators.UVEditorTexelDensitySettings
 // 0x0018 (0x00C0 - 0x00A8)
@@ -144,7 +141,6 @@ public:
 		return GetDefaultObjImpl<UUVEditorTexelDensitySettings>();
 	}
 };
-DUMPER7_ASSERTS_UUVEditorTexelDensitySettings;
 
 // Class ModelingOperators.UVTexelDensityOperatorFactory
 // 0x0168 (0x0190 - 0x0028)
@@ -169,7 +165,6 @@ public:
 		return GetDefaultObjImpl<UUVTexelDensityOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_UUVTexelDensityOperatorFactory;
 
 // Class ModelingOperators.UVLayoutOperatorFactory
 // 0x0168 (0x0190 - 0x0028)
@@ -194,6 +189,5 @@ public:
 		return GetDefaultObjImpl<UUVLayoutOperatorFactory>();
 	}
 };
-DUMPER7_ASSERTS_UUVLayoutOperatorFactory;
 
 SDK_NAMESPACE_END

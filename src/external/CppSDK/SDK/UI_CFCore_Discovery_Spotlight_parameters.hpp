@@ -28,7 +28,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_Spotlight_C_BPGamepadReleased;
 
 // Function UI_CFCore_Discovery_Spotlight.UI_CFCore_Discovery_Spotlight_C.ErrorNotFoundMods
 // 0x0038 (0x0038 - 0x0000)
@@ -37,7 +36,6 @@ struct UI_CFCore_Discovery_Spotlight_C_ErrorNotFoundMods final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_Spotlight_C_ErrorNotFoundMods;
 
 // Function UI_CFCore_Discovery_Spotlight.UI_CFCore_Discovery_Spotlight_C.ExecuteUbergraph_UI_CFCore_Discovery_Spotlight
 // 0x0A90 (0x0A90 - 0x0000)
@@ -98,7 +96,6 @@ public:
 	class UShooterGameViewportClient*             CallFunc_GetViewportClient_ReturnValue;            // 0x0A80(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimalUI*                              CallFunc_GetUISceneFromClass_ReturnValue;          // 0x0A88(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_Spotlight_C_ExecuteUbergraph_UI_CFCore_Discovery_Spotlight;
 
 // Function UI_CFCore_Discovery_Spotlight.UI_CFCore_Discovery_Spotlight_C.FoundMods
 // 0x0010 (0x0010 - 0x0000)
@@ -107,7 +104,6 @@ struct UI_CFCore_Discovery_Spotlight_C_FoundMods final
 public:
 	TArray<struct FCFCoreMod>                     mods;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_Spotlight_C_FoundMods;
 
 // Function UI_CFCore_Discovery_Spotlight.UI_CFCore_Discovery_Spotlight_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -117,7 +113,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_Spotlight_C_GetRootCFWidget;
 
 // Function UI_CFCore_Discovery_Spotlight.UI_CFCore_Discovery_Spotlight_C.OnFail_595996E447E7F8948FB0EBAE4414047D
 // 0x0008 (0x0008 - 0x0000)
@@ -126,7 +121,6 @@ struct UI_CFCore_Discovery_Spotlight_C_OnFail_595996E447E7F8948FB0EBAE4414047D f
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_Spotlight_C_OnFail_595996E447E7F8948FB0EBAE4414047D;
 
 // Function UI_CFCore_Discovery_Spotlight.UI_CFCore_Discovery_Spotlight_C.OnSuccess_595996E447E7F8948FB0EBAE4414047D
 // 0x0008 (0x0008 - 0x0000)
@@ -135,7 +129,6 @@ struct UI_CFCore_Discovery_Spotlight_C_OnSuccess_595996E447E7F8948FB0EBAE4414047
 public:
 	class UTexture2DDynamic*                      Texture;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_Spotlight_C_OnSuccess_595996E447E7F8948FB0EBAE4414047D;
 
 // Function UI_CFCore_Discovery_Spotlight.UI_CFCore_Discovery_Spotlight_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -145,7 +138,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_Spotlight_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

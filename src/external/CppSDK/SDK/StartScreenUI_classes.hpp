@@ -40,6 +40,5 @@ public:
 		return GetDefaultObjImpl<UStartScreenUI_C>();
 	}
 };
-DUMPER7_ASSERTS_UStartScreenUI_C;
 
 SDK_NAMESPACE_END

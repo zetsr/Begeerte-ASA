@@ -52,6 +52,5 @@ public:
 		return GetDefaultObjImpl<UUI_CFCore_Prompt_GoToComments_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_CFCore_Prompt_GoToComments_C;
 
 SDK_NAMESPACE_END

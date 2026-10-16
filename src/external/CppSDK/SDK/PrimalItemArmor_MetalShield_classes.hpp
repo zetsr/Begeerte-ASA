@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemArmor_MetalShield_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemArmor_MetalShield_C;
 
 SDK_NAMESPACE_END

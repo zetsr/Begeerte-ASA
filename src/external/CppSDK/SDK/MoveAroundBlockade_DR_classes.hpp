@@ -45,6 +45,5 @@ public:
 		return GetDefaultObjImpl<UMoveAroundBlockade_DR_C>();
 	}
 };
-DUMPER7_ASSERTS_UMoveAroundBlockade_DR_C;
 
 SDK_NAMESPACE_END

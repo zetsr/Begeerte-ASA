@@ -120,7 +120,6 @@ public:
 	float                                         StageCoachBlend;                                   // 0x00D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D8[0x18];                                      // 0x00D8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_StageCoachWheelController;
 
 // ScriptStruct ChaosVehicles.AnimNode_WheelController
 // 0x0018 (0x00E0 - 0x00C8)
@@ -129,7 +128,6 @@ struct FAnimNode_WheelController final : public FAnimNode_SkeletalControlBase
 public:
 	uint8                                         Pad_C8[0x18];                                      // 0x00C8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_WheelController;
 
 // ScriptStruct ChaosVehicles.VehicleInputs
 // 0x0024 (0x0024 - 0x0000)
@@ -147,7 +145,6 @@ public:
 	bool                                          bUseThrustersInput;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleInputs;
 
 // ScriptStruct ChaosVehicles.ControlInputs
 // 0x0004 (0x0028 - 0x0024)
@@ -159,7 +156,6 @@ public:
 	bool                                          GearUpInput;                                       // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          GearDownInput;                                     // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FControlInputs;
 
 // ScriptStruct ChaosVehicles.NetworkVehicleInputs
 // 0x0038 (0x0050 - 0x0018)
@@ -172,7 +168,6 @@ public:
 	int32                                         TransmissionTargetGear;                            // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNetworkVehicleInputs;
 
 // ScriptStruct ChaosVehicles.NetworkVehicleStates
 // 0x0090 (0x00A8 - 0x0018)
@@ -190,7 +185,6 @@ public:
 	float                                         EngineOmega;                                       // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNetworkVehicleStates;
 
 // ScriptStruct ChaosVehicles.VehicleReplicatedState
 // 0x000C (0x0030 - 0x0024)
@@ -201,7 +195,6 @@ public:
 	float                                         ThrottleUp;                                        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ThrottleDown;                                      // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVehicleReplicatedState;
 
 // ScriptStruct ChaosVehicles.VehicleTorqueControlConfig
 // 0x0040 (0x0040 - 0x0000)
@@ -219,7 +212,6 @@ public:
 	float                                         RotationDamping;                                   // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0x20];                                      // 0x0020(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleTorqueControlConfig;
 
 // ScriptStruct ChaosVehicles.VehicleTargetRotationControlConfig
 // 0x0058 (0x0058 - 0x0000)
@@ -241,7 +233,6 @@ public:
 	float                                         AutoCentreYawStrength;                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x2C];                                      // 0x002C(0x002C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleTargetRotationControlConfig;
 
 // ScriptStruct ChaosVehicles.VehicleStabilizeControlConfig
 // 0x0018 (0x0018 - 0x0000)
@@ -254,7 +245,6 @@ public:
 	float                                         PositionHoldXY;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0xC];                                        // 0x000C(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleStabilizeControlConfig;
 
 // ScriptStruct ChaosVehicles.VehicleInputRateConfig
 // 0x0098 (0x0098 - 0x0000)
@@ -267,7 +257,6 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRuntimeFloatCurve                     UserCurve;                                         // 0x0010(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVehicleInputRateConfig;
 
 // ScriptStruct ChaosVehicles.VehicleAerofoilConfig
 // 0x00B0 (0x00B0 - 0x0000)
@@ -288,7 +277,6 @@ public:
 	float                                         DragMultiplier;                                    // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_58[0x58];                                      // 0x0058(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleAerofoilConfig;
 
 // ScriptStruct ChaosVehicles.VehicleThrustConfig
 // 0x00A0 (0x00A0 - 0x0000)
@@ -305,7 +293,6 @@ public:
 	float                                         MaxControlAngle;                                   // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_48[0x58];                                      // 0x0048(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleThrustConfig;
 
 // ScriptStruct ChaosVehicles.WheelStatus
 // 0x0088 (0x0088 - 0x0000)
@@ -333,7 +320,6 @@ public:
 	bool                                          bABSActivated;                                     // 0x0080(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWheelStatus;
 
 // ScriptStruct ChaosVehicles.VehicleDifferentialConfig
 // 0x0010 (0x0010 - 0x0000)
@@ -345,7 +331,6 @@ public:
 	float                                         FrontRearSplit;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleDifferentialConfig;
 
 // ScriptStruct ChaosVehicles.VehicleEngineConfig
 // 0x00C8 (0x00C8 - 0x0000)
@@ -361,7 +346,6 @@ public:
 	float                                         EngineRevDownRate;                                 // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A0[0x28];                                      // 0x00A0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleEngineConfig;
 
 // ScriptStruct ChaosVehicles.VehicleTransmissionConfig
 // 0x0070 (0x0070 - 0x0000)
@@ -380,7 +364,6 @@ public:
 	float                                         TransmissionEfficiency;                            // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0x38];                                      // 0x0038(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleTransmissionConfig;
 
 // ScriptStruct ChaosVehicles.VehicleSteeringConfig
 // 0x00D8 (0x00D8 - 0x0000)
@@ -393,7 +376,6 @@ public:
 	struct FRuntimeFloatCurve                     SteeringCurve;                                     // 0x0008(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	uint8                                         Pad_90[0x48];                                      // 0x0090(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleSteeringConfig;
 
 // ScriptStruct ChaosVehicles.ChaosWheelSetup
 // 0x0028 (0x0028 - 0x0000)
@@ -404,7 +386,6 @@ public:
 	class FName                                   BoneName;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                AdditionalOffset;                                  // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FChaosWheelSetup;
 
 // ScriptStruct ChaosVehicles.BaseSnapshotData
 // 0x0090 (0x0090 - 0x0000)
@@ -415,7 +396,6 @@ public:
 	struct FVector                                LinearVelocity;                                    // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                AngularVelocity;                                   // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBaseSnapshotData;
 
 // ScriptStruct ChaosVehicles.WheelSnapshot
 // 0x0014 (0x0014 - 0x0000)
@@ -428,7 +408,6 @@ public:
 	float                                         WheelRadius;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WheelAngularVelocity;                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FWheelSnapshot;
 
 // ScriptStruct ChaosVehicles.WheeledSnaphotData
 // 0x0020 (0x00B0 - 0x0090)
@@ -440,7 +419,6 @@ public:
 	TArray<struct FWheelSnapshot>                 WheelSnapshots;                                    // 0x0098(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWheeledSnaphotData;
 
 // ScriptStruct ChaosVehicles.VehicleAnimationInstanceProxy
 // 0x0020 (0x07C0 - 0x07A0)
@@ -449,6 +427,5 @@ struct FVehicleAnimationInstanceProxy final : public FAnimInstanceProxy
 public:
 	uint8                                         Pad_798[0x28];                                     // 0x0798(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FVehicleAnimationInstanceProxy;
 
 SDK_NAMESPACE_END

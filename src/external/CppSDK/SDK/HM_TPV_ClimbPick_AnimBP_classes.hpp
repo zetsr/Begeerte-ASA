@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UHM_TPV_ClimbPick_AnimBP_C>();
 	}
 };
-DUMPER7_ASSERTS_UHM_TPV_ClimbPick_AnimBP_C;
 
 SDK_NAMESPACE_END

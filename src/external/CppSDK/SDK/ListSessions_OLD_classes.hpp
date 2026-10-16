@@ -74,6 +74,5 @@ public:
 		return GetDefaultObjImpl<UListSessions_OLD_C>();
 	}
 };
-DUMPER7_ASSERTS_UListSessions_OLD_C;
 
 SDK_NAMESPACE_END

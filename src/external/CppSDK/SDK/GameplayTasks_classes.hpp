@@ -47,7 +47,6 @@ public:
 		return GetDefaultObjImpl<UGameplayTask>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayTask;
 
 // Class GameplayTasks.GameplayTaskOwnerInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -76,7 +75,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IGameplayTaskOwnerInterface;
 
 // Class GameplayTasks.GameplayTaskResource
 // 0x0010 (0x0038 - 0x0028)
@@ -103,7 +101,6 @@ public:
 		return GetDefaultObjImpl<UGameplayTaskResource>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayTaskResource;
 
 // Class GameplayTasks.GameplayTasksComponent
 // 0x0078 (0x0148 - 0x00D0)
@@ -137,7 +134,6 @@ public:
 		return GetDefaultObjImpl<UGameplayTasksComponent>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayTasksComponent;
 
 // Class GameplayTasks.GameplayTask_ClaimResource
 // 0x0000 (0x0068 - 0x0068)
@@ -161,7 +157,6 @@ public:
 		return GetDefaultObjImpl<UGameplayTask_ClaimResource>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayTask_ClaimResource;
 
 // Class GameplayTasks.GameplayTask_SpawnActor
 // 0x0058 (0x00C0 - 0x0068)
@@ -193,7 +188,6 @@ public:
 		return GetDefaultObjImpl<UGameplayTask_SpawnActor>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayTask_SpawnActor;
 
 // Class GameplayTasks.GameplayTask_TimeLimitedExecution
 // 0x0038 (0x00A0 - 0x0068)
@@ -218,7 +212,6 @@ public:
 		return GetDefaultObjImpl<UGameplayTask_TimeLimitedExecution>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayTask_TimeLimitedExecution;
 
 // Class GameplayTasks.GameplayTask_WaitDelay
 // 0x0020 (0x0088 - 0x0068)
@@ -245,6 +238,5 @@ public:
 		return GetDefaultObjImpl<UGameplayTask_WaitDelay>();
 	}
 };
-DUMPER7_ASSERTS_UGameplayTask_WaitDelay;
 
 SDK_NAMESPACE_END

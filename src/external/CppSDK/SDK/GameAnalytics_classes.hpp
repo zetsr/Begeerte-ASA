@@ -102,6 +102,5 @@ public:
 		return GetDefaultObjImpl<UGameAnalytics>();
 	}
 };
-DUMPER7_ASSERTS_UGameAnalytics;
 
 SDK_NAMESPACE_END

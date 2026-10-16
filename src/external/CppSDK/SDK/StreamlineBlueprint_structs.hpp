@@ -63,7 +63,6 @@ public:
 	int32                                         Minor;                                             // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Build;                                             // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStreamlineVersion;
 
 // ScriptStruct StreamlineBlueprint.StreamlineFeatureRequirements
 // 0x0034 (0x0034 - 0x0000)
@@ -78,6 +77,5 @@ public:
 	struct FStreamlineVersion                     RequiredDriverVersion;                             // 0x001C(0x000C)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FStreamlineVersion                     DetectedDriverVersion;                             // 0x0028(0x000C)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FStreamlineFeatureRequirements;
 
 SDK_NAMESPACE_END

@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ShooterGame_structs.hpp"
 #include "DinoContentData_structs.hpp"
+#include "ShooterGame_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -104,7 +104,6 @@ public:
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_2;    // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_3;    // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_ExecuteUbergraph_Dino_Character_BP;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPCameraAllowPivotPitchModifiers
 // 0x0001 (0x0001 - 0x0000)
@@ -113,7 +112,6 @@ struct Dino_Character_BP_C_BPCameraAllowPivotPitchModifiers final
 public:
 	bool                                          bAllow;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPCameraAllowPivotPitchModifiers;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.SetSubmarineStructure
 // 0x0008 (0x0008 - 0x0000)
@@ -122,7 +120,6 @@ struct Dino_Character_BP_C_SetSubmarineStructure final
 public:
 	class APrimalStructure*                       Structure;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_SetSubmarineStructure;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPGetRidingMultiUseEntries
 // 0x0120 (0x0120 - 0x0000)
@@ -150,7 +147,6 @@ public:
 	bool                                          CallFunc_HasItemsEquipped_ReturnValue;             // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPGetRidingMultiUseEntries;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.FearTheManticore
 // 0x0001 (0x0001 - 0x0000)
@@ -159,7 +155,6 @@ struct Dino_Character_BP_C_FearTheManticore final
 public:
 	bool                                          ShouldFear;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_FearTheManticore;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPTryMultiUse
 // 0x0020 (0x0020 - 0x0000)
@@ -176,7 +171,6 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPTryMultiUse;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPGetMultiUseEntries
 // 0x0120 (0x0120 - 0x0000)
@@ -204,7 +198,6 @@ public:
 	bool                                          CallFunc_HasItemsEquipped_ReturnValue;             // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPGetMultiUseEntries;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPOverrideCameraDesiredPivotLocation
 // 0x0038 (0x0038 - 0x0000)
@@ -215,7 +208,6 @@ public:
 	struct FVector                                DesiredCameraPivotLocation;                        // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPOverrideCameraDesiredPivotLocation;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPOverrideCameraDesiredPivotRotation
 // 0x0058 (0x0058 - 0x0000)
@@ -231,7 +223,6 @@ public:
 	float                                         CallFunc_BreakRotator_Yaw;                         // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPOverrideCameraDesiredPivotRotation;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPOverrideCameraDesiredPivotOffset
 // 0x00F8 (0x00F8 - 0x0000)
@@ -243,7 +234,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x00F0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BPCameraAllowPivotPitchModifiers_bAllow;  // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPOverrideCameraDesiredPivotOffset;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPOverrideCameraPivotLocationInterpParams
 // 0x0158 (0x0158 - 0x0000)
@@ -261,7 +251,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0154(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BPCameraAllowPivotPitchModifiers_bAllow;  // 0x0155(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPOverrideCameraPivotLocationInterpParams;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPOverrideCameraArmLengthInterpParams
 // 0x00E8 (0x00E8 - 0x0000)
@@ -272,7 +261,6 @@ public:
 	struct FPrimalCameraInterpParams              OutInterpParams;                                   // 0x00D8(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	bool                                          ReturnValue;                                       // 0x00E4(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPOverrideCameraArmLengthInterpParams;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPOverrideCameraArmLength
 // 0x00F8 (0x00F8 - 0x0000)
@@ -287,7 +275,6 @@ public:
 	double                                        CallFunc_FinalOverrideCameraArmLength_CurrentCameraArmLength_ImplicitCast; // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FinalOverrideCameraArmLength_DesiredCameraArmLength_ImplicitCast; // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPOverrideCameraArmLength;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.GetFXBloodColor
 // 0x0058 (0x0058 - 0x0000)
@@ -303,7 +290,6 @@ public:
 	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           CallFunc_GetFXBloodColor_ReturnValue;              // 0x0044(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_GetFXBloodColor;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.GetDinoContentData
 // 0x0020 (0x0020 - 0x0000)
@@ -312,7 +298,6 @@ struct Dino_Character_BP_C_GetDinoContentData final
 public:
 	struct FDinoContentData                       DinoContentData;                                   // 0x0000(0x0020)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_GetDinoContentData;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPHandleRightShoulderButton
 // 0x0040 (0x0040 - 0x0000)
@@ -337,7 +322,6 @@ public:
 	bool                                          CallFunc_ObjectIsChildOfSoftRef_ReturnValue;       // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPHandleRightShoulderButton;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BlendSpaceGenerated
 // 0x0008 (0x0008 - 0x0000)
@@ -346,7 +330,6 @@ struct Dino_Character_BP_C_BlendSpaceGenerated final
 public:
 	class UBlendSpace*                            BlendSpace;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BlendSpaceGenerated;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPSpawnAttackerDamageImpactFX
 // 0x0010 (0x0010 - 0x0000)
@@ -356,7 +339,6 @@ public:
 	class FName                                   SocketName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APrimalCharacter*                       VictimChar;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPSpawnAttackerDamageImpactFX;
 
 // Function Dino_Character_BP.Dino_Character_BP_C.BPControlRigNotify
 // 0x0130 (0x0130 - 0x0000)
@@ -368,7 +350,6 @@ public:
 	struct FHitResult                             WorldSpaceHitResult;                               // 0x0010(0x0108)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	struct FVector                                Velocity;                                          // 0x0118(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Dino_Character_BP_C_BPControlRigNotify;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

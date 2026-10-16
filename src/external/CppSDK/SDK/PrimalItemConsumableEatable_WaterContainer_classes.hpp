@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemConsumableEatable_WaterContainer_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemConsumableEatable_WaterContainer_C;
 
 SDK_NAMESPACE_END

@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemAmmo_SimpleRifleBullet_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemAmmo_SimpleRifleBullet_C;
 
 SDK_NAMESPACE_END

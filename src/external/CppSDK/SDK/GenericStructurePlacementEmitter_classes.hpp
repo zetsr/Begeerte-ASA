@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<AGenericStructurePlacementEmitter_C>();
 	}
 };
-DUMPER7_ASSERTS_AGenericStructurePlacementEmitter_C;
 
 SDK_NAMESPACE_END

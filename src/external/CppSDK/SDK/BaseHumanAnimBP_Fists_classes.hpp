@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<UBaseHumanAnimBP_Fists_C>();
 	}
 };
-DUMPER7_ASSERTS_UBaseHumanAnimBP_Fists_C;
 
 SDK_NAMESPACE_END

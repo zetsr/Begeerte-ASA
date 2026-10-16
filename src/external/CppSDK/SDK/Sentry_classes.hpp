@@ -47,7 +47,6 @@ public:
 		return GetDefaultObjImpl<USentryAttachment>();
 	}
 };
-DUMPER7_ASSERTS_USentryAttachment;
 
 // Class Sentry.SentryBeforeBreadcrumbHandler
 // 0x0000 (0x0028 - 0x0028)
@@ -70,7 +69,6 @@ public:
 		return GetDefaultObjImpl<USentryBeforeBreadcrumbHandler>();
 	}
 };
-DUMPER7_ASSERTS_USentryBeforeBreadcrumbHandler;
 
 // Class Sentry.SentryBeforeLogHandler
 // 0x0000 (0x0028 - 0x0028)
@@ -93,7 +91,6 @@ public:
 		return GetDefaultObjImpl<USentryBeforeLogHandler>();
 	}
 };
-DUMPER7_ASSERTS_USentryBeforeLogHandler;
 
 // Class Sentry.SentryBeforeSendHandler
 // 0x0000 (0x0028 - 0x0028)
@@ -116,7 +113,6 @@ public:
 		return GetDefaultObjImpl<USentryBeforeSendHandler>();
 	}
 };
-DUMPER7_ASSERTS_USentryBeforeSendHandler;
 
 // Class Sentry.SentryBreadcrumb
 // 0x0018 (0x0040 - 0x0028)
@@ -153,7 +149,6 @@ public:
 		return GetDefaultObjImpl<USentryBreadcrumb>();
 	}
 };
-DUMPER7_ASSERTS_USentryBreadcrumb;
 
 // Class Sentry.SentryEvent
 // 0x0018 (0x0040 - 0x0028)
@@ -205,7 +200,6 @@ public:
 		return GetDefaultObjImpl<USentryEvent>();
 	}
 };
-DUMPER7_ASSERTS_USentryEvent;
 
 // Class Sentry.SentryFeedback
 // 0x0018 (0x0040 - 0x0028)
@@ -239,7 +233,6 @@ public:
 		return GetDefaultObjImpl<USentryFeedback>();
 	}
 };
-DUMPER7_ASSERTS_USentryFeedback;
 
 // Class Sentry.SentryHint
 // 0x0018 (0x0040 - 0x0028)
@@ -266,7 +259,6 @@ public:
 		return GetDefaultObjImpl<USentryHint>();
 	}
 };
-DUMPER7_ASSERTS_USentryHint;
 
 // Class Sentry.SentryLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -298,7 +290,6 @@ public:
 		return GetDefaultObjImpl<USentryLibrary>();
 	}
 };
-DUMPER7_ASSERTS_USentryLibrary;
 
 // Class Sentry.SentryLog
 // 0x0030 (0x0058 - 0x0028)
@@ -332,7 +323,6 @@ public:
 		return GetDefaultObjImpl<USentryLog>();
 	}
 };
-DUMPER7_ASSERTS_USentryLog;
 
 // Class Sentry.SentrySamplingContext
 // 0x0018 (0x0040 - 0x0028)
@@ -359,7 +349,6 @@ public:
 		return GetDefaultObjImpl<USentrySamplingContext>();
 	}
 };
-DUMPER7_ASSERTS_USentrySamplingContext;
 
 // Class Sentry.SentryScope
 // 0x0018 (0x0040 - 0x0028)
@@ -411,7 +400,6 @@ public:
 		return GetDefaultObjImpl<USentryScope>();
 	}
 };
-DUMPER7_ASSERTS_USentryScope;
 
 // Class Sentry.ScopeTestBeforeSendHandler
 // 0x0000 (0x0028 - 0x0028)
@@ -431,7 +419,6 @@ public:
 		return GetDefaultObjImpl<UScopeTestBeforeSendHandler>();
 	}
 };
-DUMPER7_ASSERTS_UScopeTestBeforeSendHandler;
 
 // Class Sentry.SentrySettings
 // 0x0178 (0x01A0 - 0x0028)
@@ -519,7 +506,6 @@ public:
 		return GetDefaultObjImpl<USentrySettings>();
 	}
 };
-DUMPER7_ASSERTS_USentrySettings;
 
 // Class Sentry.SentrySpan
 // 0x0018 (0x0040 - 0x0028)
@@ -555,7 +541,6 @@ public:
 		return GetDefaultObjImpl<USentrySpan>();
 	}
 };
-DUMPER7_ASSERTS_USentrySpan;
 
 // Class Sentry.SentrySubsystem
 // 0x0088 (0x00B8 - 0x0030)
@@ -624,7 +609,6 @@ public:
 		return GetDefaultObjImpl<USentrySubsystem>();
 	}
 };
-DUMPER7_ASSERTS_USentrySubsystem;
 
 // Class Sentry.TestBeforeLogHandler
 // 0x0000 (0x0028 - 0x0028)
@@ -644,7 +628,6 @@ public:
 		return GetDefaultObjImpl<UTestBeforeLogHandler>();
 	}
 };
-DUMPER7_ASSERTS_UTestBeforeLogHandler;
 
 // Class Sentry.SentryTraceSampler
 // 0x0000 (0x0028 - 0x0028)
@@ -667,7 +650,6 @@ public:
 		return GetDefaultObjImpl<USentryTraceSampler>();
 	}
 };
-DUMPER7_ASSERTS_USentryTraceSampler;
 
 // Class Sentry.TraceSamplingTestHandler
 // 0x0000 (0x0028 - 0x0028)
@@ -687,7 +669,6 @@ public:
 		return GetDefaultObjImpl<UTraceSamplingTestHandler>();
 	}
 };
-DUMPER7_ASSERTS_UTraceSamplingTestHandler;
 
 // Class Sentry.SentryTransaction
 // 0x0018 (0x0040 - 0x0028)
@@ -724,7 +705,6 @@ public:
 		return GetDefaultObjImpl<USentryTransaction>();
 	}
 };
-DUMPER7_ASSERTS_USentryTransaction;
 
 // Class Sentry.SentryTransactionContext
 // 0x0018 (0x0040 - 0x0028)
@@ -753,7 +733,6 @@ public:
 		return GetDefaultObjImpl<USentryTransactionContext>();
 	}
 };
-DUMPER7_ASSERTS_USentryTransactionContext;
 
 // Class Sentry.SentryUser
 // 0x0018 (0x0040 - 0x0028)
@@ -789,7 +768,6 @@ public:
 		return GetDefaultObjImpl<USentryUser>();
 	}
 };
-DUMPER7_ASSERTS_USentryUser;
 
 // Class Sentry.SentryVariantHelper
 // 0x0000 (0x0028 - 0x0028)
@@ -836,6 +814,5 @@ public:
 		return GetDefaultObjImpl<USentryVariantHelper>();
 	}
 };
-DUMPER7_ASSERTS_USentryVariantHelper;
 
 SDK_NAMESPACE_END

@@ -39,7 +39,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingKey;
 
 // Class SequencerScripting.MovieSceneScriptingActorReferenceKey
 // 0x0020 (0x0060 - 0x0040)
@@ -69,7 +68,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingActorReferenceKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingActorReferenceKey;
 
 // Class SequencerScripting.MovieSceneScriptingChannel
 // 0x0008 (0x0030 - 0x0028)
@@ -92,7 +90,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingChannel>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingChannel;
 
 // Class SequencerScripting.MovieSceneScriptingActorReferenceChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -126,7 +123,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingActorReferenceChannel>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingActorReferenceChannel;
 
 // Class SequencerScripting.MovieSceneScriptingBoolKey
 // 0x0020 (0x0060 - 0x0040)
@@ -156,7 +152,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingBoolKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingBoolKey;
 
 // Class SequencerScripting.MovieSceneScriptingBoolChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -193,7 +188,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingBoolChannel>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingBoolChannel;
 
 // Class SequencerScripting.MovieSceneScriptingByteKey
 // 0x0020 (0x0060 - 0x0040)
@@ -223,7 +217,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingByteKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingByteKey;
 
 // Class SequencerScripting.MovieSceneScriptingByteChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -257,7 +250,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingByteChannel>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingByteChannel;
 
 // Class SequencerScripting.MovieSceneScriptingDoubleKey
 // 0x0020 (0x0060 - 0x0040)
@@ -301,7 +293,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingDoubleKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingDoubleKey;
 
 // Class SequencerScripting.MovieSceneScriptingDoubleChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -342,7 +333,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingDoubleChannel>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingDoubleChannel;
 
 // Class SequencerScripting.MovieSceneScriptingEventKey
 // 0x0020 (0x0060 - 0x0040)
@@ -372,7 +362,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingEventKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingEventKey;
 
 // Class SequencerScripting.MovieSceneScriptingEventChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -402,7 +391,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingEventChannel>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingEventChannel;
 
 // Class SequencerScripting.MovieSceneScriptingFloatKey
 // 0x0000 (0x0040 - 0x0040)
@@ -443,7 +431,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingFloatKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingFloatKey;
 
 // Class SequencerScripting.MovieSceneScriptingActualFloatKey
 // 0x0020 (0x0060 - 0x0040)
@@ -466,7 +453,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingActualFloatKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingActualFloatKey;
 
 // Class SequencerScripting.MovieSceneScriptingDoubleAsFloatKey
 // 0x0020 (0x0060 - 0x0040)
@@ -489,7 +475,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingDoubleAsFloatKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingDoubleAsFloatKey;
 
 // Class SequencerScripting.MovieSceneScriptingFloatChannel
 // 0x0050 (0x0080 - 0x0030)
@@ -530,7 +515,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingFloatChannel>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingFloatChannel;
 
 // Class SequencerScripting.MovieSceneScriptingIntegerKey
 // 0x0020 (0x0060 - 0x0040)
@@ -560,7 +544,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingIntegerKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingIntegerKey;
 
 // Class SequencerScripting.MovieSceneScriptingIntegerChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -598,7 +581,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingIntegerChannel>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingIntegerChannel;
 
 // Class SequencerScripting.MovieSceneScriptingObjectPathKey
 // 0x0020 (0x0060 - 0x0040)
@@ -628,7 +610,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingObjectPathKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingObjectPathKey;
 
 // Class SequencerScripting.MovieSceneScriptingObjectPathChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -662,7 +643,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingObjectPathChannel>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingObjectPathChannel;
 
 // Class SequencerScripting.MovieSceneScriptingStringKey
 // 0x0020 (0x0060 - 0x0040)
@@ -692,7 +672,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingStringKey>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingStringKey;
 
 // Class SequencerScripting.MovieSceneScriptingStringChannel
 // 0x0030 (0x0060 - 0x0030)
@@ -726,7 +705,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneScriptingStringChannel>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneScriptingStringChannel;
 
 // Class SequencerScripting.MovieSceneBindingExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -769,7 +747,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneBindingExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneBindingExtensions;
 
 // Class SequencerScripting.MovieSceneEventTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -794,7 +771,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneEventTrackExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneEventTrackExtensions;
 
 // Class SequencerScripting.MovieSceneFolderExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -829,7 +805,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneFolderExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneFolderExtensions;
 
 // Class SequencerScripting.MovieSceneMaterialTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -855,7 +830,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneMaterialTrackExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneMaterialTrackExtensions;
 
 // Class SequencerScripting.MovieScenePrimitiveMaterialTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -881,7 +855,6 @@ public:
 		return GetDefaultObjImpl<UMovieScenePrimitiveMaterialTrackExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieScenePrimitiveMaterialTrackExtensions;
 
 // Class SequencerScripting.MovieScenePropertyTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -911,7 +884,6 @@ public:
 		return GetDefaultObjImpl<UMovieScenePropertyTrackExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieScenePropertyTrackExtensions;
 
 // Class SequencerScripting.MovieSceneSectionExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -957,7 +929,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSectionExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSectionExtensions;
 
 // Class SequencerScripting.MovieSceneSequenceExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -1048,7 +1019,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSequenceExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSequenceExtensions;
 
 // Class SequencerScripting.MovieSceneTimeWarpExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -1076,7 +1046,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTimeWarpExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTimeWarpExtensions;
 
 // Class SequencerScripting.MovieSceneTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -1111,7 +1080,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTrackExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTrackExtensions;
 
 // Class SequencerScripting.MovieSceneFloatVectorTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -1135,7 +1103,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneFloatVectorTrackExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneFloatVectorTrackExtensions;
 
 // Class SequencerScripting.MovieSceneDoubleVectorTrackExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -1159,7 +1126,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneDoubleVectorTrackExtensions>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneDoubleVectorTrackExtensions;
 
 // Class SequencerScripting.SequencerScriptingRangeExtensions
 // 0x0000 (0x0028 - 0x0028)
@@ -1193,6 +1159,5 @@ public:
 		return GetDefaultObjImpl<USequencerScriptingRangeExtensions>();
 	}
 };
-DUMPER7_ASSERTS_USequencerScriptingRangeExtensions;
 
 SDK_NAMESPACE_END

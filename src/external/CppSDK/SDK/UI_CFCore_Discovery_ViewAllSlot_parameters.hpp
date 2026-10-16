@@ -23,7 +23,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_ViewAllSlot_C_ExecuteUbergraph_UI_CFCore_Discovery_ViewAllSlot;
 
 // Function UI_CFCore_Discovery_ViewAllSlot.UI_CFCore_Discovery_ViewAllSlot_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -33,7 +32,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Discovery_ViewAllSlot_C_GetRootCFWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

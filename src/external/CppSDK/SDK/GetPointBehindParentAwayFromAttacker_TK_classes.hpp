@@ -46,6 +46,5 @@ public:
 		return GetDefaultObjImpl<UGetPointBehindParentAwayFromAttacker_TK_C>();
 	}
 };
-DUMPER7_ASSERTS_UGetPointBehindParentAwayFromAttacker_TK_C;
 
 SDK_NAMESPACE_END

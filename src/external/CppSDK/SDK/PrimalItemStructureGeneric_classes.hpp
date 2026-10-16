@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemStructureGeneric_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemStructureGeneric_C;
 
 SDK_NAMESPACE_END

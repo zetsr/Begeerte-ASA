@@ -32,6 +32,5 @@ struct FUdpMockMessage final
 public:
 	TArray<uint8>                                 Data;                                              // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUdpMockMessage;
 
 SDK_NAMESPACE_END

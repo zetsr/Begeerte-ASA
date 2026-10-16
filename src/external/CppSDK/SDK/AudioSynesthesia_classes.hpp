@@ -35,7 +35,6 @@ public:
 		return GetDefaultObjImpl<UAudioSynesthesiaSettings>();
 	}
 };
-DUMPER7_ASSERTS_UAudioSynesthesiaSettings;
 
 // Class AudioSynesthesia.AudioSynesthesiaNRTSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -55,7 +54,6 @@ public:
 		return GetDefaultObjImpl<UAudioSynesthesiaNRTSettings>();
 	}
 };
-DUMPER7_ASSERTS_UAudioSynesthesiaNRTSettings;
 
 // Class AudioSynesthesia.AudioSynesthesiaNRT
 // 0x0000 (0x0078 - 0x0078)
@@ -75,7 +73,6 @@ public:
 		return GetDefaultObjImpl<UAudioSynesthesiaNRT>();
 	}
 };
-DUMPER7_ASSERTS_UAudioSynesthesiaNRT;
 
 // Class AudioSynesthesia.ConstantQSettings
 // 0x0020 (0x0048 - 0x0028)
@@ -109,7 +106,6 @@ public:
 		return GetDefaultObjImpl<UConstantQSettings>();
 	}
 };
-DUMPER7_ASSERTS_UConstantQSettings;
 
 // Class AudioSynesthesia.ConstantQAnalyzer
 // 0x0058 (0x00F8 - 0x00A0)
@@ -141,7 +137,6 @@ public:
 		return GetDefaultObjImpl<UConstantQAnalyzer>();
 	}
 };
-DUMPER7_ASSERTS_UConstantQAnalyzer;
 
 // Class AudioSynesthesia.ConstantQNRTSettings
 // 0x0020 (0x0048 - 0x0028)
@@ -175,7 +170,6 @@ public:
 		return GetDefaultObjImpl<UConstantQNRTSettings>();
 	}
 };
-DUMPER7_ASSERTS_UConstantQNRTSettings;
 
 // Class AudioSynesthesia.ConstantQNRT
 // 0x0008 (0x0080 - 0x0078)
@@ -202,7 +196,6 @@ public:
 		return GetDefaultObjImpl<UConstantQNRT>();
 	}
 };
-DUMPER7_ASSERTS_UConstantQNRT;
 
 // Class AudioSynesthesia.LoudnessSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -231,7 +224,6 @@ public:
 		return GetDefaultObjImpl<ULoudnessSettings>();
 	}
 };
-DUMPER7_ASSERTS_ULoudnessSettings;
 
 // Class AudioSynesthesia.LoudnessAnalyzer
 // 0x0048 (0x00E8 - 0x00A0)
@@ -258,7 +250,6 @@ public:
 		return GetDefaultObjImpl<ULoudnessAnalyzer>();
 	}
 };
-DUMPER7_ASSERTS_ULoudnessAnalyzer;
 
 // Class AudioSynesthesia.LoudnessNRTSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -287,7 +278,6 @@ public:
 		return GetDefaultObjImpl<ULoudnessNRTSettings>();
 	}
 };
-DUMPER7_ASSERTS_ULoudnessNRTSettings;
 
 // Class AudioSynesthesia.LoudnessNRT
 // 0x0008 (0x0080 - 0x0078)
@@ -316,7 +306,6 @@ public:
 		return GetDefaultObjImpl<ULoudnessNRT>();
 	}
 };
-DUMPER7_ASSERTS_ULoudnessNRT;
 
 // Class AudioSynesthesia.MeterSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -345,7 +334,6 @@ public:
 		return GetDefaultObjImpl<UMeterSettings>();
 	}
 };
-DUMPER7_ASSERTS_UMeterSettings;
 
 // Class AudioSynesthesia.MeterAnalyzer
 // 0x00A8 (0x0148 - 0x00A0)
@@ -376,7 +364,6 @@ public:
 		return GetDefaultObjImpl<UMeterAnalyzer>();
 	}
 };
-DUMPER7_ASSERTS_UMeterAnalyzer;
 
 // Class AudioSynesthesia.OnsetNRTSettings
 // 0x0018 (0x0040 - 0x0028)
@@ -405,7 +392,6 @@ public:
 		return GetDefaultObjImpl<UOnsetNRTSettings>();
 	}
 };
-DUMPER7_ASSERTS_UOnsetNRTSettings;
 
 // Class AudioSynesthesia.OnsetNRT
 // 0x0008 (0x0080 - 0x0078)
@@ -432,7 +418,6 @@ public:
 		return GetDefaultObjImpl<UOnsetNRT>();
 	}
 };
-DUMPER7_ASSERTS_UOnsetNRT;
 
 // Class AudioSynesthesia.SynesthesiaSpectrumAnalysisSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -459,7 +444,6 @@ public:
 		return GetDefaultObjImpl<USynesthesiaSpectrumAnalysisSettings>();
 	}
 };
-DUMPER7_ASSERTS_USynesthesiaSpectrumAnalysisSettings;
 
 // Class AudioSynesthesia.SynesthesiaSpectrumAnalyzer
 // 0x0058 (0x00F8 - 0x00A0)
@@ -491,6 +475,5 @@ public:
 		return GetDefaultObjImpl<USynesthesiaSpectrumAnalyzer>();
 	}
 };
-DUMPER7_ASSERTS_USynesthesiaSpectrumAnalyzer;
 
 SDK_NAMESPACE_END

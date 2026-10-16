@@ -41,7 +41,6 @@ public:
 		return GetDefaultObjImpl<UDLSSOverrideSettings>();
 	}
 };
-DUMPER7_ASSERTS_UDLSSOverrideSettings;
 
 // Class DLSS.DLSSSettings
 // 0x0040 (0x0068 - 0x0028)
@@ -91,6 +90,5 @@ public:
 		return GetDefaultObjImpl<UDLSSSettings>();
 	}
 };
-DUMPER7_ASSERTS_UDLSSSettings;
 
 SDK_NAMESPACE_END

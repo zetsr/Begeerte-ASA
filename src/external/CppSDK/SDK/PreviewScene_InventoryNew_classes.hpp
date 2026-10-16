@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PreviewScene_Base_classes.hpp"
 #include "Engine_structs.hpp"
+#include "PreviewScene_Base_classes.hpp"
 
 
 SDK_NAMESPACE_START
@@ -62,6 +62,5 @@ public:
 		return GetDefaultObjImpl<APreviewScene_InventoryNew_C>();
 	}
 };
-DUMPER7_ASSERTS_APreviewScene_InventoryNew_C;
 
 SDK_NAMESPACE_END

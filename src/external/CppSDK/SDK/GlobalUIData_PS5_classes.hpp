@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UGlobalUIData_PS5_C>();
 	}
 };
-DUMPER7_ASSERTS_UGlobalUIData_PS5_C;
 
 SDK_NAMESPACE_END

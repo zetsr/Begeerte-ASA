@@ -126,7 +126,6 @@ public:
 	class FName                                   SourceCurve;                                       // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   TargetCurve;                                       // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FCurveRemapPair;
 
 // ScriptStruct IKRig.TargetChainFKSettings
 // 0x001C (0x001C - 0x0000)
@@ -145,7 +144,6 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PoleVectorOffset;                                  // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTargetChainFKSettings;
 
 // ScriptStruct IKRig.TargetChainIKSettings
 // 0x0078 (0x0078 - 0x0000)
@@ -164,7 +162,6 @@ public:
 	bool                                          bAffectedByIKWarping;                              // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FTargetChainIKSettings;
 
 // ScriptStruct IKRig.TargetChainSpeedPlantSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -178,7 +175,6 @@ public:
 	float                                         UnplantStiffness;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         UnplantCriticalDamping;                            // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTargetChainSpeedPlantSettings;
 
 // ScriptStruct IKRig.TargetChainSettings
 // 0x00B0 (0x00B0 - 0x0000)
@@ -190,7 +186,6 @@ public:
 	struct FTargetChainIKSettings                 IK;                                                // 0x0020(0x0078)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FTargetChainSpeedPlantSettings         SpeedPlanting;                                     // 0x0098(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTargetChainSettings;
 
 // ScriptStruct IKRig.TargetRootSettings
 // 0x0068 (0x0068 - 0x0000)
@@ -209,7 +204,6 @@ public:
 	float                                         AffectIKHorizontal;                                // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AffectIKVertical;                                  // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FTargetRootSettings;
 
 // ScriptStruct IKRig.RetargetGlobalSettings
 // 0x0024 (0x0024 - 0x0000)
@@ -229,7 +223,6 @@ public:
 	float                                         SidewaysOffset;                                    // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WarpSplay;                                         // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRetargetGlobalSettings;
 
 // ScriptStruct IKRig.RetargetProfile
 // 0x0108 (0x0108 - 0x0000)
@@ -252,7 +245,6 @@ public:
 	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRetargetGlobalSettings                GlobalSettings;                                    // 0x00E4(0x0024)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRetargetProfile;
 
 // ScriptStruct IKRig.PinBoneData
 // 0x0080 (0x0080 - 0x0000)
@@ -263,7 +255,6 @@ public:
 	class FName                                   BoneToPinTo;                                       // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x70];                                      // 0x0010(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FPinBoneData;
 
 // ScriptStruct IKRig.IKRigGoal
 // 0x00A0 (0x00A0 - 0x0000)
@@ -286,7 +277,6 @@ public:
 	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  FinalBlendedRotation;                              // 0x0080(0x0020)(Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FIKRigGoal;
 
 // ScriptStruct IKRig.AnimNode_IKRig
 // 0x0188 (0x01E0 - 0x0058)
@@ -310,7 +300,6 @@ public:
 	float                                         ActualAlpha;                                       // 0x01D8(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_1DC[0x4];                                      // 0x01DC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_IKRig;
 
 // ScriptStruct IKRig.AnimNode_RetargetPoseFromMesh
 // 0x01D0 (0x01E0 - 0x0010)
@@ -331,7 +320,6 @@ public:
 	class UIKRetargetProcessor*                   Processor;                                         // 0x0140(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 	uint8                                         Pad_148[0x98];                                     // 0x0148(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAnimNode_RetargetPoseFromMesh;
 
 // ScriptStruct IKRig.RetargetChainMap
 // 0x0010 (0x0010 - 0x0000)
@@ -341,7 +329,6 @@ public:
 	class FName                                   SourceChain;                                       // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   TargetChain;                                       // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRetargetChainMap;
 
 // ScriptStruct IKRig.IKRetargetPose
 // 0x0070 (0x0070 - 0x0000)
@@ -352,7 +339,6 @@ public:
 	TMap<class FName, struct FQuat>               BoneRotationOffsets;                               // 0x0018(0x0050)(Edit, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FIKRetargetPose;
 
 // ScriptStruct IKRig.IKRigGoalContainer
 // 0x0010 (0x0010 - 0x0000)
@@ -361,7 +347,6 @@ struct alignas(0x08) FIKRigGoalContainer final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FIKRigGoalContainer;
 
 // ScriptStruct IKRig.BoneChain
 // 0x0030 (0x0030 - 0x0000)
@@ -373,7 +358,6 @@ public:
 	struct FBoneReference                         EndBone;                                           // 0x0018(0x0010)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
 	class FName                                   IKGoalName;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FBoneChain;
 
 // ScriptStruct IKRig.RetargetDefinition
 // 0x0018 (0x0018 - 0x0000)
@@ -383,7 +367,6 @@ public:
 	class FName                                   RootBone;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FBoneChain>                     BoneChains;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRetargetDefinition;
 
 // ScriptStruct IKRig.GoalBone
 // 0x0010 (0x0010 - 0x0000)
@@ -392,7 +375,6 @@ struct alignas(0x04) FGoalBone final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FGoalBone;
 
 // ScriptStruct IKRig.IKRigInputSkeleton
 // 0x0038 (0x0038 - 0x0000)
@@ -401,7 +383,6 @@ struct alignas(0x08) FIKRigInputSkeleton final
 public:
 	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FIKRigInputSkeleton;
 
 // ScriptStruct IKRig.IKRigSkeleton
 // 0x0070 (0x0070 - 0x0000)
@@ -416,7 +397,6 @@ public:
 	TArray<struct FTransform>                     RefPoseGlobal;                                     // 0x0050(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 	uint8                                         Pad_60[0x10];                                      // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FIKRigSkeleton;
 
 // ScriptStruct IKRig.LimbSolverSettings
 // 0x0024 (0x0024 - 0x0000)
@@ -438,7 +418,6 @@ public:
 	EAxis                                         EndBoneForwardAxis;                                // 0x0021(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLimbSolverSettings;
 
 // ScriptStruct IKRig.LimbLink
 // 0x0068 (0x0068 - 0x0000)
@@ -447,7 +426,6 @@ struct alignas(0x08) FLimbLink final
 public:
 	uint8                                         Pad_0[0x68];                                       // 0x0000(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLimbLink;
 
 // ScriptStruct IKRig.LimbSolver
 // 0x0018 (0x0018 - 0x0000)
@@ -456,6 +434,5 @@ struct alignas(0x08) FLimbSolver final
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FLimbSolver;
 
 SDK_NAMESPACE_END

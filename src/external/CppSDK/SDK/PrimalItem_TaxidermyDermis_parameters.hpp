@@ -31,7 +31,6 @@ public:
 	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture*                               CallFunc_GetDinoEntryIcon_ReturnValue;             // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_TaxidermyDermis_C_BPInitIconMaterial;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

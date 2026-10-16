@@ -19,10 +19,10 @@ SDK_NAMESPACE_START
 // Function ASAUI_MainMenuWidget_SettingsOverlay.ASAUI_MainMenuWidget_SettingsOverlay_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry_Tick                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime_Tick                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UASAUI_MainMenuWidget_SettingsOverlay_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UASAUI_MainMenuWidget_SettingsOverlay_C::Tick(const struct FGeometry& MyGeometry_Tick, float InDeltaTime_Tick)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,8 +31,8 @@ void UASAUI_MainMenuWidget_SettingsOverlay_C::Tick(const struct FGeometry& MyGeo
 
 	Params::ASAUI_MainMenuWidget_SettingsOverlay_C_Tick Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+	Parms.MyGeometry_Tick = std::move(MyGeometry_Tick);
+	Parms.InDeltaTime_Tick = InDeltaTime_Tick;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -41,11 +41,11 @@ void UASAUI_MainMenuWidget_SettingsOverlay_C::Tick(const struct FGeometry& MyGeo
 // Function ASAUI_MainMenuWidget_SettingsOverlay.ASAUI_MainMenuWidget_SettingsOverlay_C.OnKeyDownEvent
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FGeometry&                 MyGeometry                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor)
-// const struct FKeyEvent&                 InKeyboardEvent                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+// const struct FGeometry&                 MyGeometry_OnKeyDownEvent                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor)
+// const struct FKeyEvent&                 InKeyboardEvent_OnKeyDownEvent                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply                      ReturnValue_OnKeyDownEvent                             (Parm, OutParm, ReturnParm)
 
-struct FEventReply UASAUI_MainMenuWidget_SettingsOverlay_C::OnKeyDownEvent(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyboardEvent)
+struct FEventReply UASAUI_MainMenuWidget_SettingsOverlay_C::OnKeyDownEvent(const struct FGeometry& MyGeometry_OnKeyDownEvent, const struct FKeyEvent& InKeyboardEvent_OnKeyDownEvent)
 {
 	static class UFunction* Func = nullptr;
 
@@ -54,8 +54,8 @@ struct FEventReply UASAUI_MainMenuWidget_SettingsOverlay_C::OnKeyDownEvent(const
 
 	Params::ASAUI_MainMenuWidget_SettingsOverlay_C_OnKeyDownEvent Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InKeyboardEvent = std::move(InKeyboardEvent);
+	Parms.MyGeometry_OnKeyDownEvent = std::move(MyGeometry_OnKeyDownEvent);
+	Parms.InKeyboardEvent_OnKeyDownEvent = std::move(InKeyboardEvent_OnKeyDownEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -114,10 +114,10 @@ void UASAUI_MainMenuWidget_SettingsOverlay_C::BPVirtualCursorinit()
 // Function ASAUI_MainMenuWidget_SettingsOverlay.ASAUI_MainMenuWidget_SettingsOverlay_C.BPGamepadReleased
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FKey&                      theKey                                                 (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FKey&                      theKey_BPGamepadReleased                               (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    ReturnValue_BPGamepadReleased                          (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UASAUI_MainMenuWidget_SettingsOverlay_C::BPGamepadReleased(const struct FKey& theKey)
+bool UASAUI_MainMenuWidget_SettingsOverlay_C::BPGamepadReleased(const struct FKey& theKey_BPGamepadReleased)
 {
 	static class UFunction* Func = nullptr;
 
@@ -126,7 +126,7 @@ bool UASAUI_MainMenuWidget_SettingsOverlay_C::BPGamepadReleased(const struct FKe
 
 	Params::ASAUI_MainMenuWidget_SettingsOverlay_C_BPGamepadReleased Parms{};
 
-	Parms.theKey = std::move(theKey);
+	Parms.theKey_BPGamepadReleased = std::move(theKey_BPGamepadReleased);
 
 	UObject::ProcessEvent(Func, &Parms);
 

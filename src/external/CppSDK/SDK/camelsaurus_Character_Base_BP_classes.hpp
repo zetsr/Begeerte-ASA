@@ -46,6 +46,5 @@ public:
 		return GetDefaultObjImpl<Acamelsaurus_Character_Base_BP_C>();
 	}
 };
-DUMPER7_ASSERTS_Acamelsaurus_Character_Base_BP_C;
 
 SDK_NAMESPACE_END

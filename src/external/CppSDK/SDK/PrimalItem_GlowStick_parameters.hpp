@@ -32,7 +32,6 @@ public:
 	int32                                         CallFunc_IncrementItemQuantity_ReturnValue;        // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_GlowStick_C_BPItemBroken;
 
 // Function PrimalItem_GlowStick.PrimalItem_GlowStick_C.BPPostInitializeItem
 // 0x0028 (0x0028 - 0x0000)
@@ -47,7 +46,6 @@ public:
 	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Less_DoubleDouble_B_ImplicitCast;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_PrimalItem_GlowStick_C_BPPostInitializeItem;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

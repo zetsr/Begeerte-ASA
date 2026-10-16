@@ -39,7 +39,6 @@ public:
 	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast; // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Overlay_C_ExecuteUbergraph_UI_CFCore_Overlay;
 
 // Function UI_CFCore_Overlay.UI_CFCore_Overlay_C.PlayHover
 // 0x0010 (0x0010 - 0x0000)
@@ -50,7 +49,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        PlaybackSpeed;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Overlay_C_PlayHover;
 
 // Function UI_CFCore_Overlay.UI_CFCore_Overlay_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -59,7 +57,6 @@ struct UI_CFCore_Overlay_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Overlay_C_PreConstruct;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

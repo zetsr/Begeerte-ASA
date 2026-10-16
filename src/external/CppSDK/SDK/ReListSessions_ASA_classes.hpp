@@ -136,6 +136,5 @@ public:
 		return GetDefaultObjImpl<UReListSessions_ASA_C>();
 	}
 };
-DUMPER7_ASSERTS_UReListSessions_ASA_C;
 
 SDK_NAMESPACE_END

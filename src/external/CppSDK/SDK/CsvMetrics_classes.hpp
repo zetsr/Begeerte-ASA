@@ -37,7 +37,6 @@ public:
 		return GetDefaultObjImpl<UCsvActorCountMetric>();
 	}
 };
-DUMPER7_ASSERTS_UCsvActorCountMetric;
 
 // Class CsvMetrics.CsvMetricsSubsystem
 // 0x0030 (0x0060 - 0x0030)
@@ -61,6 +60,5 @@ public:
 		return GetDefaultObjImpl<UCsvMetricsSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UCsvMetricsSubsystem;
 
 SDK_NAMESPACE_END

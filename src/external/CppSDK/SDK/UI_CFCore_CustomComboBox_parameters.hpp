@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "STRUCT_CustomComboBoxOption_structs.hpp"
 #include "UMG_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "STRUCT_CustomComboBoxOption_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -27,7 +27,6 @@ struct UI_CFCore_CustomComboBox_C_Event_Add_Option final
 public:
 	struct FSTRUCT_CustomComboBoxOption           CategoryInfo;                                      // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_Event_Add_Option;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.Event Set Selected Option
 // 0x0028 (0x0028 - 0x0000)
@@ -39,7 +38,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0018(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_Event_Set_Selected_Option;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.ExecuteUbergraph_UI_CFCore_CustomComboBox
 // 0x05C0 (0x05C0 - 0x0000)
@@ -143,7 +141,6 @@ public:
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x05A0(0x0010)()
 	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x05B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_ExecuteUbergraph_UI_CFCore_CustomComboBox;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.GetOptionAtIndex
 // 0x0048 (0x0048 - 0x0000)
@@ -162,7 +159,6 @@ public:
 	class UUI_CustomComboBoxOption_C*             K2Node_DynamicCast_AsUI_Custom_Combo_Box_Option;   // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_GetOptionAtIndex;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.GetRootCFWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -172,7 +168,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_GetRootCFWidget;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.Nav Back Tomain Button
 // 0x0010 (0x0010 - 0x0000)
@@ -183,7 +178,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_Nav_Back_Tomain_Button;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.Nav to Options
 // 0x0030 (0x0030 - 0x0000)
@@ -199,7 +193,6 @@ public:
 	class UUI_CustomComboBoxOption_C*             K2Node_DynamicCast_AsUI_Custom_Combo_Box_Option;   // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_Nav_to_Options;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.OnKeyDown
 // 0x0150 (0x0150 - 0x0000)
@@ -215,7 +208,6 @@ public:
 	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue_1;          // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsHovered_ReturnValue;                    // 0x014B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_OnKeyDown;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.OnOptionSelectedInterface
 // 0x0018 (0x0018 - 0x0000)
@@ -225,7 +217,6 @@ public:
 	class FString                                 Option;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	int64                                         ID;                                                // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_OnOptionSelectedInterface;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -234,7 +225,6 @@ struct UI_CFCore_CustomComboBox_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_PreConstruct;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.SetUpNavigation
 // 0x0080 (0x0080 - 0x0000)
@@ -268,7 +258,6 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_SetUpNavigation;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.SetUpNavigationSingle
 // 0x0048 (0x0048 - 0x0000)
@@ -288,7 +277,6 @@ public:
 	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_SetUpNavigationSingle;
 
 // Function UI_CFCore_CustomComboBox.UI_CFCore_CustomComboBox_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -298,7 +286,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_CustomComboBox_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

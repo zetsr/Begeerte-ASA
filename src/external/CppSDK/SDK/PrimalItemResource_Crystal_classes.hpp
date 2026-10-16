@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemResource_Crystal_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemResource_Crystal_C;
 
 SDK_NAMESPACE_END

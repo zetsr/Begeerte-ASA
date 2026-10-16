@@ -50,6 +50,5 @@ public:
 		return GetDefaultObjImpl<UImgMediaSettings>();
 	}
 };
-DUMPER7_ASSERTS_UImgMediaSettings;
 
 SDK_NAMESPACE_END

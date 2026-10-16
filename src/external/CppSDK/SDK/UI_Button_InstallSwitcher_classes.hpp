@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ENUM_CFCore_Install_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CFCoreWidget_classes.hpp"
+#include "ENUM_CFCore_Install_structs.hpp"
 
 
 SDK_NAMESPACE_START
@@ -74,6 +74,5 @@ public:
 		return GetDefaultObjImpl<UUI_Button_InstallSwitcher_C>();
 	}
 };
-DUMPER7_ASSERTS_UUI_Button_InstallSwitcher_C;
 
 SDK_NAMESPACE_END

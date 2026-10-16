@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItemRadio_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItemRadio_C;
 
 SDK_NAMESPACE_END

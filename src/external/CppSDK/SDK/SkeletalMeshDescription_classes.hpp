@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<USkeletalMeshDescription>();
 	}
 };
-DUMPER7_ASSERTS_USkeletalMeshDescription;
 
 SDK_NAMESPACE_END

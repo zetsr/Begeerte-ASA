@@ -99,7 +99,6 @@ public:
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast;      // 0x07D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast_1;    // 0x07D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_GlobalUIData_BP_C_BPGetHUDElements_Module_FuelOrAmmo;
 
 // Function GlobalUIData_BP.GlobalUIData_BP_C.BPGetHUDElements_Module_FuelOrAmmo_ExtraBar
 // 0x0578 (0x0578 - 0x0000)
@@ -159,7 +158,6 @@ public:
 	struct FLinearColor                           CallFunc_SelectColor_ReturnValue_11;               // 0x0560(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetHUDElementProgress_NewProgress_ImplicitCast; // 0x0570(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_GlobalUIData_BP_C_BPGetHUDElements_Module_FuelOrAmmo_ExtraBar;
 
 // Function GlobalUIData_BP.GlobalUIData_BP_C.BPGetHUDElements_Module_FuelOrAmmo_Frame
 // 0x07D8 (0x07D8 - 0x0000)
@@ -189,7 +187,6 @@ public:
 	double                                        CallFunc_Add_DoubleFloat_A_ImplicitCast;           // 0x07C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetHUDElementRichTextScale_Scale_ImplicitCast; // 0x07D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_GlobalUIData_BP_C_BPGetHUDElements_Module_FuelOrAmmo_Frame;
 
 // Function GlobalUIData_BP.GlobalUIData_BP_C.BPGetHUDElements_Module_Struggle
 // 0x0550 (0x0550 - 0x0000)
@@ -248,7 +245,6 @@ public:
 	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0540(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_MakeColor_A_ImplicitCast;                 // 0x0548(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_GlobalUIData_BP_C_BPGetHUDElements_Module_Struggle;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

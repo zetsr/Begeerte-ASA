@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UWoodHardHarvestComponent_C>();
 	}
 };
-DUMPER7_ASSERTS_UWoodHardHarvestComponent_C;
 
 SDK_NAMESPACE_END

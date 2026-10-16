@@ -66,7 +66,6 @@ struct FConcertLocalIdentifierState final
 public:
 	TArray<class FString>                         MappedNames;                                       // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FConcertLocalIdentifierState;
 
 // ScriptStruct ConcertTransport.ConcertMessageData
 // 0x0030 (0x0030 - 0x0000)
@@ -80,21 +79,18 @@ public:
 	uint16                                        ChannelId;                                         // 0x002A(0x0002)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FConcertMessageData;
 
 // ScriptStruct ConcertTransport.ConcertEventData
 // 0x0000 (0x0030 - 0x0030)
 struct FConcertEventData : public FConcertMessageData
 {
 };
-DUMPER7_ASSERTS_FConcertEventData;
 
 // ScriptStruct ConcertTransport.ConcertRequestData
 // 0x0000 (0x0030 - 0x0030)
 struct FConcertRequestData : public FConcertMessageData
 {
 };
-DUMPER7_ASSERTS_FConcertRequestData;
 
 // ScriptStruct ConcertTransport.ConcertResponseData
 // 0x0028 (0x0058 - 0x0030)
@@ -106,7 +102,6 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Reason;                                            // 0x0048(0x0010)(Edit, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FConcertResponseData;
 
 // ScriptStruct ConcertTransport.ConcertEndpointDiscoveryEvent
 // 0x0008 (0x0038 - 0x0030)
@@ -116,14 +111,12 @@ public:
 	EConcertMessageVersion                        ConcertProtocolVersion;                            // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FConcertEndpointDiscoveryEvent;
 
 // ScriptStruct ConcertTransport.ConcertEndpointClosedData
 // 0x0000 (0x0030 - 0x0030)
 struct FConcertEndpointClosedData final : public FConcertMessageData
 {
 };
-DUMPER7_ASSERTS_FConcertEndpointClosedData;
 
 // ScriptStruct ConcertTransport.ConcertReliableHandshakeData
 // 0x0010 (0x0048 - 0x0038)
@@ -137,7 +130,6 @@ public:
 	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         EndpointTimeoutTick;                               // 0x0040(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FConcertReliableHandshakeData;
 
 // ScriptStruct ConcertTransport.ConcertAckData
 // 0x0018 (0x0048 - 0x0030)
@@ -147,14 +139,12 @@ public:
 	int64                                         AckSendTimeTicks;                                  // 0x0030(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  SourceMessageId;                                   // 0x0038(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FConcertAckData;
 
 // ScriptStruct ConcertTransport.ConcertKeepAlive
 // 0x0000 (0x0030 - 0x0030)
 struct FConcertKeepAlive final : public FConcertMessageData
 {
 };
-DUMPER7_ASSERTS_FConcertKeepAlive;
 
 // ScriptStruct ConcertTransport.ConcertSendResendPending
 // 0x0001 (0x0001 - 0x0000)
@@ -163,7 +153,6 @@ struct FConcertSendResendPending final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FConcertSendResendPending;
 
 // ScriptStruct ConcertTransport.ConcertEndpointSettings
 // 0x000C (0x000C - 0x0000)
@@ -175,6 +164,5 @@ public:
 	int32                                         PurgeProcessedMessageDelaySeconds;                 // 0x0004(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         RemoteEndpointTimeoutSeconds;                      // 0x0008(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FConcertEndpointSettings;
 
 SDK_NAMESPACE_END

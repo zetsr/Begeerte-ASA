@@ -31,55 +31,47 @@ struct FElementID
 public:
 	int32                                         IDValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-DUMPER7_ASSERTS_FElementID;
 
 // ScriptStruct MeshDescription.VertexID
 // 0x0000 (0x0004 - 0x0004)
 struct FVertexID final : public FElementID
 {
 };
-DUMPER7_ASSERTS_FVertexID;
 
 // ScriptStruct MeshDescription.VertexInstanceID
 // 0x0000 (0x0004 - 0x0004)
 struct FVertexInstanceID final : public FElementID
 {
 };
-DUMPER7_ASSERTS_FVertexInstanceID;
 
 // ScriptStruct MeshDescription.EdgeID
 // 0x0000 (0x0004 - 0x0004)
 struct FEdgeID final : public FElementID
 {
 };
-DUMPER7_ASSERTS_FEdgeID;
 
 // ScriptStruct MeshDescription.UVID
 // 0x0000 (0x0004 - 0x0004)
 struct FUVID final : public FElementID
 {
 };
-DUMPER7_ASSERTS_FUVID;
 
 // ScriptStruct MeshDescription.TriangleID
 // 0x0000 (0x0004 - 0x0004)
 struct FTriangleID final : public FElementID
 {
 };
-DUMPER7_ASSERTS_FTriangleID;
 
 // ScriptStruct MeshDescription.PolygonGroupID
 // 0x0000 (0x0004 - 0x0004)
 struct FPolygonGroupID final : public FElementID
 {
 };
-DUMPER7_ASSERTS_FPolygonGroupID;
 
 // ScriptStruct MeshDescription.PolygonID
 // 0x0000 (0x0004 - 0x0004)
 struct FPolygonID final : public FElementID
 {
 };
-DUMPER7_ASSERTS_FPolygonID;
 
 SDK_NAMESPACE_END

@@ -58,6 +58,5 @@ public:
 		return GetDefaultObjImpl<UUdpMessagingSettings>();
 	}
 };
-DUMPER7_ASSERTS_UUdpMessagingSettings;
 
 SDK_NAMESPACE_END

@@ -47,7 +47,6 @@ public:
 		return GetDefaultObjImpl<ACameraRig_Crane>();
 	}
 };
-DUMPER7_ASSERTS_ACameraRig_Crane;
 
 // Class CinematicCamera.CameraRig_Rail
 // 0x0020 (0x04B0 - 0x0490)
@@ -78,7 +77,6 @@ public:
 		return GetDefaultObjImpl<ACameraRig_Rail>();
 	}
 };
-DUMPER7_ASSERTS_ACameraRig_Rail;
 
 // Class CinematicCamera.CineCameraActor
 // 0x0080 (0x0D60 - 0x0CE0)
@@ -105,7 +103,6 @@ public:
 		return GetDefaultObjImpl<ACineCameraActor>();
 	}
 };
-DUMPER7_ASSERTS_ACineCameraActor;
 
 // Class CinematicCamera.CineCameraComponent
 // 0x0120 (0x0C80 - 0x0B60)
@@ -171,7 +168,6 @@ public:
 		return GetDefaultObjImpl<UCineCameraComponent>();
 	}
 };
-DUMPER7_ASSERTS_UCineCameraComponent;
 
 // Class CinematicCamera.CineCameraSettings
 // 0x0078 (0x00B0 - 0x0038)
@@ -221,6 +217,5 @@ public:
 		return GetDefaultObjImpl<UCineCameraSettings>();
 	}
 };
-DUMPER7_ASSERTS_UCineCameraSettings;
 
 SDK_NAMESPACE_END

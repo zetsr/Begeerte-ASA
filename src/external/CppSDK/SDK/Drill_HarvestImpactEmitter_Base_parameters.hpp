@@ -23,7 +23,6 @@ struct Drill_HarvestImpactEmitter_Base_C_BPOnSetEmitterInstigatorFromSpawn final
 public:
 	class APawn*                                  NewInstigator;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Drill_HarvestImpactEmitter_Base_C_BPOnSetEmitterInstigatorFromSpawn;
 
 // Function Drill_HarvestImpactEmitter_Base.Drill_HarvestImpactEmitter_Base_C.ExecuteUbergraph_Drill_HarvestImpactEmitter_Base
 // 0x0128 (0x0128 - 0x0000)
@@ -69,7 +68,6 @@ public:
 	double                                        CallFunc_MakeVector_Y_ImplicitCast_1;              // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_MakeVector_Z_ImplicitCast_1;              // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Drill_HarvestImpactEmitter_Base_C_ExecuteUbergraph_Drill_HarvestImpactEmitter_Base;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

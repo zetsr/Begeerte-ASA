@@ -37,6 +37,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_GlowStick_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_GlowStick_C;
 
 SDK_NAMESPACE_END

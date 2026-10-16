@@ -36,6 +36,5 @@ public:
 		return GetDefaultObjImpl<USave_CfCoreUI_C>();
 	}
 };
-DUMPER7_ASSERTS_USave_CfCoreUI_C;
 
 SDK_NAMESPACE_END

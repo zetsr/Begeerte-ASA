@@ -42,7 +42,6 @@ public:
 		return GetDefaultObjImpl<UWorldMetricsSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UWorldMetricsSubsystem;
 
 // Class WorldMetricsCore.WorldMetricInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -62,7 +61,6 @@ public:
 		return GetDefaultObjImpl<UWorldMetricInterface>();
 	}
 };
-DUMPER7_ASSERTS_UWorldMetricInterface;
 
 // Class WorldMetricsCore.WorldMetricsActorTrackerSubscriber
 // 0x0000 (0x0000 - 0x0000)
@@ -91,7 +89,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IWorldMetricsActorTrackerSubscriber;
 
 // Class WorldMetricsCore.WorldMetricsExtension
 // 0x0000 (0x0028 - 0x0028)
@@ -111,7 +108,6 @@ public:
 		return GetDefaultObjImpl<UWorldMetricsExtension>();
 	}
 };
-DUMPER7_ASSERTS_UWorldMetricsExtension;
 
 // Class WorldMetricsCore.WorldMetricsActorTracker
 // 0x00A8 (0x00D0 - 0x0028)
@@ -134,6 +130,5 @@ public:
 		return GetDefaultObjImpl<UWorldMetricsActorTracker>();
 	}
 };
-DUMPER7_ASSERTS_UWorldMetricsActorTracker;
 
 SDK_NAMESPACE_END

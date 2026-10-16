@@ -59,6 +59,5 @@ public:
 		return GetDefaultObjImpl<UBP_CFCore_ServerModsSubMenu_C>();
 	}
 };
-DUMPER7_ASSERTS_UBP_CFCore_ServerModsSubMenu_C;
 
 SDK_NAMESPACE_END

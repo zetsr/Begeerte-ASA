@@ -45,7 +45,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneBlenderSystemSupport;
 
 // Class MovieScene.MovieSceneBoundObjectProxy
 // 0x0000 (0x0000 - 0x0000)
@@ -77,7 +76,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneBoundObjectProxy;
 
 // Class MovieScene.MovieSceneSignedObject
 // 0x0030 (0x0058 - 0x0028)
@@ -102,7 +100,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSignedObject>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSignedObject;
 
 // Class MovieScene.MovieSceneTrack
 // 0x00A0 (0x00F8 - 0x0058)
@@ -136,7 +133,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTrack;
 
 // Class MovieScene.MovieSceneSpawnTrack
 // 0x0020 (0x0118 - 0x00F8)
@@ -160,7 +156,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSpawnTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSpawnTrack;
 
 // Class MovieScene.MovieSceneChannelOverrideProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -189,7 +184,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneChannelOverrideProvider;
 
 // Class MovieScene.MovieSceneChannelOwner
 // 0x0000 (0x0000 - 0x0000)
@@ -218,7 +212,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneChannelOwner;
 
 // Class MovieScene.MovieSceneDeterminismSource
 // 0x0000 (0x0000 - 0x0000)
@@ -247,7 +240,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneDeterminismSource;
 
 // Class MovieScene.MovieSceneMetaDataInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -276,7 +268,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneMetaDataInterface;
 
 // Class MovieScene.MovieScenePlaybackClient
 // 0x0000 (0x0000 - 0x0000)
@@ -305,7 +296,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieScenePlaybackClient;
 
 // Class MovieScene.MovieSceneSequencePlayerObserver
 // 0x0000 (0x0000 - 0x0000)
@@ -334,7 +324,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneSequencePlayerObserver;
 
 // Class MovieScene.MovieSceneBindingEventReceiverInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -367,7 +356,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneBindingEventReceiverInterface;
 
 // Class MovieScene.MovieSceneBindingOwnerInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -396,7 +384,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneBindingOwnerInterface;
 
 // Class MovieScene.MovieSceneCachedTrack
 // 0x0000 (0x0000 - 0x0000)
@@ -425,7 +412,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneCachedTrack;
 
 // Class MovieScene.MovieSceneCondition
 // 0x0008 (0x0060 - 0x0058)
@@ -454,7 +440,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneCondition>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneCondition;
 
 // Class MovieScene.MovieSceneCustomBinding
 // 0x0000 (0x0028 - 0x0028)
@@ -478,7 +463,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneCustomBinding>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneCustomBinding;
 
 // Class MovieScene.MovieSceneEasingFunction
 // 0x0000 (0x0000 - 0x0000)
@@ -510,7 +494,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneEasingFunction;
 
 // Class MovieScene.MovieSceneEntitySystem
 // 0x0018 (0x0040 - 0x0028)
@@ -534,7 +517,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneEntitySystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneEntitySystem;
 
 // Class MovieScene.MovieSceneEntityGroupingSystem
 // 0x00A8 (0x00E8 - 0x0040)
@@ -557,7 +539,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneEntityGroupingSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneEntityGroupingSystem;
 
 // Class MovieScene.MovieSceneGroupCondition
 // 0x0018 (0x0078 - 0x0060)
@@ -582,7 +563,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneGroupCondition>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneGroupCondition;
 
 // Class MovieScene.MovieSceneKeyProxy
 // 0x0000 (0x0000 - 0x0000)
@@ -611,7 +591,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneKeyProxy;
 
 // Class MovieScene.MovieSceneNumericVariantGetter
 // 0x0008 (0x0060 - 0x0058)
@@ -634,7 +613,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneNumericVariantGetter>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneNumericVariantGetter;
 
 // Class MovieScene.MovieSceneTimeWarpGetter
 // 0x0010 (0x0070 - 0x0060)
@@ -659,7 +637,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTimeWarpGetter>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTimeWarpGetter;
 
 // Class MovieScene.MovieScenePlayRateCurve
 // 0x0140 (0x01B0 - 0x0070)
@@ -683,7 +660,6 @@ public:
 		return GetDefaultObjImpl<UMovieScenePlayRateCurve>();
 	}
 };
-DUMPER7_ASSERTS_UMovieScenePlayRateCurve;
 
 // Class MovieScene.MovieSceneReplaceableBindingBase
 // 0x0000 (0x0028 - 0x0028)
@@ -703,7 +679,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneReplaceableBindingBase>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneReplaceableBindingBase;
 
 // Class MovieScene.MovieSceneSequenceTickManagerClient
 // 0x0000 (0x0000 - 0x0000)
@@ -732,7 +707,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneSequenceTickManagerClient;
 
 // Class MovieScene.MovieSceneSpawnableBindingBase
 // 0x0008 (0x0030 - 0x0028)
@@ -757,7 +731,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSpawnableBindingBase>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSpawnableBindingBase;
 
 // Class MovieScene.MovieSceneTimeWarpCurve
 // 0x0128 (0x0198 - 0x0070)
@@ -780,7 +753,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTimeWarpCurve>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTimeWarpCurve;
 
 // Class MovieScene.MovieSceneSection
 // 0x00A0 (0x00F8 - 0x0058)
@@ -844,7 +816,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSection;
 
 // Class MovieScene.MovieSceneTimeWarpSection
 // 0x0008 (0x0100 - 0x00F8)
@@ -867,7 +838,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTimeWarpSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTimeWarpSection;
 
 // Class MovieScene.MovieSceneTimeWarpTrack
 // 0x0018 (0x0110 - 0x00F8)
@@ -892,7 +862,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTimeWarpTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTimeWarpTrack;
 
 // Class MovieScene.MovieSceneChannelOverrideContainer
 // 0x0000 (0x0058 - 0x0058)
@@ -912,7 +881,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneChannelOverrideContainer>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneChannelOverrideContainer;
 
 // Class MovieScene.MovieSceneSectionChannelOverrideRegistry
 // 0x0050 (0x0078 - 0x0028)
@@ -935,7 +903,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSectionChannelOverrideRegistry>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSectionChannelOverrideRegistry;
 
 // Class MovieScene.MovieSceneTrackTemplateProducer
 // 0x0000 (0x0000 - 0x0000)
@@ -964,7 +931,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneTrackTemplateProducer;
 
 // Class MovieScene.MovieSceneCompiledData
 // 0x03F8 (0x0420 - 0x0028)
@@ -997,7 +963,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneCompiledData>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneCompiledData;
 
 // Class MovieScene.MovieSceneCompiledDataManager
 // 0x0208 (0x0230 - 0x0028)
@@ -1025,7 +990,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneCompiledDataManager>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneCompiledDataManager;
 
 // Class MovieScene.MovieSceneEntityProvider
 // 0x0000 (0x0000 - 0x0000)
@@ -1054,7 +1018,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneEntityProvider;
 
 // Class MovieScene.MovieSceneBindingLifetimeSystem
 // 0x0000 (0x0040 - 0x0040)
@@ -1074,7 +1037,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneBindingLifetimeSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneBindingLifetimeSystem;
 
 // Class MovieScene.MovieSceneBlenderSystem
 // 0x0028 (0x0068 - 0x0040)
@@ -1097,7 +1059,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneBlenderSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneBlenderSystem;
 
 // Class MovieScene.MovieSceneEntityInstantiatorSystem
 // 0x0000 (0x0040 - 0x0040)
@@ -1117,7 +1078,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneEntityInstantiatorSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneEntityInstantiatorSystem;
 
 // Class MovieScene.MovieSceneGenericBoundObjectInstantiator
 // 0x0000 (0x0040 - 0x0040)
@@ -1137,7 +1097,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneGenericBoundObjectInstantiator>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneGenericBoundObjectInstantiator;
 
 // Class MovieScene.MovieSceneBoundSceneComponentInstantiator
 // 0x0000 (0x0040 - 0x0040)
@@ -1157,7 +1116,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneBoundSceneComponentInstantiator>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneBoundSceneComponentInstantiator;
 
 // Class MovieScene.MovieSceneValueDecomposer
 // 0x0000 (0x0000 - 0x0000)
@@ -1186,7 +1144,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneValueDecomposer;
 
 // Class MovieScene.MovieSceneEntitySystemLinker
 // 0x0728 (0x0750 - 0x0028)
@@ -1211,7 +1168,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneEntitySystemLinker>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneEntitySystemLinker;
 
 // Class MovieScene.MovieSceneEvalTimeSystem
 // 0x0170 (0x01B0 - 0x0040)
@@ -1234,7 +1190,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneEvalTimeSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneEvalTimeSystem;
 
 // Class MovieScene.MovieSceneEvaluationHookSystem
 // 0x0050 (0x0090 - 0x0040)
@@ -1257,7 +1212,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneEvaluationHookSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneEvaluationHookSystem;
 
 // Class MovieScene.MovieScenePreAnimatedStateSystemInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -1286,7 +1240,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieScenePreAnimatedStateSystemInterface;
 
 // Class MovieScene.MovieSceneCachePreAnimatedStateSystem
 // 0x0000 (0x0040 - 0x0040)
@@ -1306,7 +1259,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneCachePreAnimatedStateSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneCachePreAnimatedStateSystem;
 
 // Class MovieScene.MovieSceneRestorePreAnimatedStateSystem
 // 0x0010 (0x0050 - 0x0040)
@@ -1329,7 +1281,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneRestorePreAnimatedStateSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneRestorePreAnimatedStateSystem;
 
 // Class MovieScene.MovieSceneRootInstantiatorSystem
 // 0x0000 (0x0040 - 0x0040)
@@ -1349,7 +1300,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneRootInstantiatorSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneRootInstantiatorSystem;
 
 // Class MovieScene.MovieSceneSpawnablesSystem
 // 0x0000 (0x0040 - 0x0040)
@@ -1369,7 +1319,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSpawnablesSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSpawnablesSystem;
 
 // Class MovieScene.MovieSceneTrackInstance
 // 0x0028 (0x0050 - 0x0028)
@@ -1396,7 +1345,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTrackInstance>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTrackInstance;
 
 // Class MovieScene.MovieSceneTrackInstanceInstantiator
 // 0x00B0 (0x00F0 - 0x0040)
@@ -1419,7 +1367,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTrackInstanceInstantiator>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTrackInstanceInstantiator;
 
 // Class MovieScene.MovieSceneTrackInstanceSystem
 // 0x0008 (0x0048 - 0x0040)
@@ -1442,7 +1389,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneTrackInstanceSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneTrackInstanceSystem;
 
 // Class MovieScene.MovieSceneCustomClockSource
 // 0x0000 (0x0000 - 0x0000)
@@ -1477,7 +1423,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneCustomClockSource;
 
 // Class MovieScene.MovieSceneEvaluationHook
 // 0x0000 (0x0000 - 0x0000)
@@ -1506,7 +1451,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IMovieSceneEvaluationHook;
 
 // Class MovieScene.MovieSceneBuiltInEasingFunction
 // 0x0010 (0x0038 - 0x0028)
@@ -1531,7 +1475,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneBuiltInEasingFunction>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneBuiltInEasingFunction;
 
 // Class MovieScene.MovieSceneEasingExternalCurve
 // 0x0010 (0x0038 - 0x0028)
@@ -1555,7 +1498,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneEasingExternalCurve>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneEasingExternalCurve;
 
 // Class MovieScene.NodeAndChannelMappings
 // 0x0000 (0x0000 - 0x0000)
@@ -1584,7 +1526,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_INodeAndChannelMappings;
 
 // Class MovieScene.MovieSceneNodeGroup
 // 0x0000 (0x0028 - 0x0028)
@@ -1604,7 +1545,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneNodeGroup>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneNodeGroup;
 
 // Class MovieScene.MovieSceneNodeGroupCollection
 // 0x0000 (0x0028 - 0x0028)
@@ -1624,7 +1564,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneNodeGroupCollection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneNodeGroupCollection;
 
 // Class MovieScene.MovieScene
 // 0x0118 (0x0170 - 0x0058)
@@ -1663,7 +1602,6 @@ public:
 		return GetDefaultObjImpl<UMovieScene>();
 	}
 };
-DUMPER7_ASSERTS_UMovieScene;
 
 // Class MovieScene.MovieSceneBindingOverrides
 // 0x0068 (0x0090 - 0x0028)
@@ -1687,7 +1625,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneBindingOverrides>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneBindingOverrides;
 
 // Class MovieScene.BuiltInDynamicBindingResolverLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -1710,7 +1647,6 @@ public:
 		return GetDefaultObjImpl<UBuiltInDynamicBindingResolverLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UBuiltInDynamicBindingResolverLibrary;
 
 // Class MovieScene.MovieSceneFolder
 // 0x0050 (0x0078 - 0x0028)
@@ -1739,7 +1675,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneFolder>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneFolder;
 
 // Class MovieScene.MovieSceneMetaData
 // 0x0030 (0x0058 - 0x0028)
@@ -1774,7 +1709,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneMetaData>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneMetaData;
 
 // Class MovieScene.MovieSceneNameableTrack
 // 0x0000 (0x00F8 - 0x00F8)
@@ -1794,7 +1728,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneNameableTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneNameableTrack;
 
 // Class MovieScene.MovieSceneSequence
 // 0x0010 (0x0068 - 0x0058)
@@ -1827,7 +1760,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSequence>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSequence;
 
 // Class MovieScene.MovieSceneSequencePlayer
 // 0x0468 (0x0490 - 0x0028)
@@ -1920,7 +1852,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSequencePlayer>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSequencePlayer;
 
 // Class MovieScene.MovieSceneSequenceTickManager
 // 0x0070 (0x0098 - 0x0028)
@@ -1943,7 +1874,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSequenceTickManager>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSequenceTickManager;
 
 // Class MovieScene.MovieSceneBindingLifetimeSection
 // 0x0008 (0x0100 - 0x00F8)
@@ -1966,7 +1896,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneBindingLifetimeSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneBindingLifetimeSection;
 
 // Class MovieScene.MovieSceneBoolSection
 // 0x0110 (0x0208 - 0x00F8)
@@ -1991,7 +1920,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneBoolSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneBoolSection;
 
 // Class MovieScene.MovieSceneHookSection
 // 0x0018 (0x0110 - 0x00F8)
@@ -2017,7 +1945,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneHookSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneHookSection;
 
 // Class MovieScene.MovieSceneSpawnSection
 // 0x0008 (0x0210 - 0x0208)
@@ -2040,7 +1967,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSpawnSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSpawnSection;
 
 // Class MovieScene.MovieSceneSubSection
 // 0x06E8 (0x07E0 - 0x00F8)
@@ -2079,7 +2005,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSubSection>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSubSection;
 
 // Class MovieScene.TestMovieSceneTrack
 // 0x0020 (0x0118 - 0x00F8)
@@ -2105,7 +2030,6 @@ public:
 		return GetDefaultObjImpl<UTestMovieSceneTrack>();
 	}
 };
-DUMPER7_ASSERTS_UTestMovieSceneTrack;
 
 // Class MovieScene.TestMovieSceneSection
 // 0x0000 (0x00F8 - 0x00F8)
@@ -2125,7 +2049,6 @@ public:
 		return GetDefaultObjImpl<UTestMovieSceneSection>();
 	}
 };
-DUMPER7_ASSERTS_UTestMovieSceneSection;
 
 // Class MovieScene.TestMovieSceneSequence
 // 0x0008 (0x0070 - 0x0068)
@@ -2148,7 +2071,6 @@ public:
 		return GetDefaultObjImpl<UTestMovieSceneSequence>();
 	}
 };
-DUMPER7_ASSERTS_UTestMovieSceneSequence;
 
 // Class MovieScene.MovieSceneSubTrack
 // 0x0010 (0x0108 - 0x00F8)
@@ -2171,7 +2093,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneSubTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSubTrack;
 
 // Class MovieScene.TestMovieSceneSubTrack
 // 0x0010 (0x0118 - 0x0108)
@@ -2194,7 +2115,6 @@ public:
 		return GetDefaultObjImpl<UTestMovieSceneSubTrack>();
 	}
 };
-DUMPER7_ASSERTS_UTestMovieSceneSubTrack;
 
 // Class MovieScene.TestMovieSceneSubSection
 // 0x0000 (0x07E0 - 0x07E0)
@@ -2214,7 +2134,6 @@ public:
 		return GetDefaultObjImpl<UTestMovieSceneSubSection>();
 	}
 };
-DUMPER7_ASSERTS_UTestMovieSceneSubSection;
 
 // Class MovieScene.TestMovieSceneEvalHookTrack
 // 0x0010 (0x0108 - 0x00F8)
@@ -2237,7 +2156,6 @@ public:
 		return GetDefaultObjImpl<UTestMovieSceneEvalHookTrack>();
 	}
 };
-DUMPER7_ASSERTS_UTestMovieSceneEvalHookTrack;
 
 // Class MovieScene.TestMovieSceneEvalHookSection
 // 0x0018 (0x0128 - 0x0110)
@@ -2260,7 +2178,6 @@ public:
 		return GetDefaultObjImpl<UTestMovieSceneEvalHookSection>();
 	}
 };
-DUMPER7_ASSERTS_UTestMovieSceneEvalHookSection;
 
 // Class MovieScene.MovieSceneBindingLifetimeTrack
 // 0x0018 (0x0110 - 0x00F8)
@@ -2284,6 +2201,5 @@ public:
 		return GetDefaultObjImpl<UMovieSceneBindingLifetimeTrack>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneBindingLifetimeTrack;
 
 SDK_NAMESPACE_END

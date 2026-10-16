@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UPrimalItem_TekGrenade_C>();
 	}
 };
-DUMPER7_ASSERTS_UPrimalItem_TekGrenade_C;
 
 SDK_NAMESPACE_END

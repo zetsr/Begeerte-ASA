@@ -22,7 +22,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Downloads_C_GetRootCFWidget;
 
 // Function UI_CFCore_Downloads.UI_CFCore_Downloads_C.SetNumberOfDownloadsText
 // 0x0010 (0x0010 - 0x0000)
@@ -31,7 +30,6 @@ struct UI_CFCore_Downloads_C_SetNumberOfDownloadsText final
 public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_UI_CFCore_Downloads_C_SetNumberOfDownloadsText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

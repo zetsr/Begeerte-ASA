@@ -23,7 +23,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_CustomEvent_InText;                         // 0x0008(0x0010)()
 };
-DUMPER7_ASSERTS_UI_CFCore_NotifNoResultsFound_C_ExecuteUbergraph_UI_CFCore_NotifNoResultsFound;
 
 // Function UI_CFCore_NotifNoResultsFound.UI_CFCore_NotifNoResultsFound_C.UpdateWidget
 // 0x0010 (0x0010 - 0x0000)
@@ -32,7 +31,6 @@ struct UI_CFCore_NotifNoResultsFound_C_UpdateWidget final
 public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-DUMPER7_ASSERTS_UI_CFCore_NotifNoResultsFound_C_UpdateWidget;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

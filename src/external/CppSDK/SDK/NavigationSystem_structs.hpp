@@ -134,7 +134,6 @@ public:
 	bool                                          bLinkProxyRegistered;                              // 0x0048(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNavLinkGenerationJumpDownConfig;
 
 // ScriptStruct NavigationSystem.NavCollisionCylinder
 // 0x0020 (0x0020 - 0x0000)
@@ -145,7 +144,6 @@ public:
 	float                                         Radius;                                            // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Height;                                            // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNavCollisionCylinder;
 
 // ScriptStruct NavigationSystem.NavCollisionBox
 // 0x0030 (0x0030 - 0x0000)
@@ -155,7 +153,6 @@ public:
 	struct FVector                                Offset;                                            // 0x0000(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Extent;                                            // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNavCollisionBox;
 
 // ScriptStruct NavigationSystem.NavigationFilterArea
 // 0x0018 (0x0018 - 0x0000)
@@ -170,7 +167,6 @@ public:
 	uint8                                         bOverrideEnteringCost : 1;                         // 0x0010(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNavigationFilterArea;
 
 // ScriptStruct NavigationSystem.NavigationFilterFlags
 // 0x0004 (0x0004 - 0x0000)
@@ -195,7 +191,6 @@ public:
 	uint8                                         bNavFlag15 : 1;                                    // 0x0001(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNavigationFilterFlags;
 
 // ScriptStruct NavigationSystem.NavGraphEdge
 // 0x0018 (0x0018 - 0x0000)
@@ -204,7 +199,6 @@ struct alignas(0x08) FNavGraphEdge final
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNavGraphEdge;
 
 // ScriptStruct NavigationSystem.NavGraphNode
 // 0x0018 (0x0018 - 0x0000)
@@ -214,7 +208,6 @@ public:
 	class UObject*                                Owner;                                             // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FNavGraphNode;
 
 // ScriptStruct NavigationSystem.SupportedAreaData
 // 0x0020 (0x0020 - 0x0000)
@@ -226,7 +219,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UObject>                    AreaClass;                                         // 0x0018(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FSupportedAreaData;
 
 // ScriptStruct NavigationSystem.NavLinkCustomInstanceData
 // 0x0010 (0x0078 - 0x0068)
@@ -236,7 +228,6 @@ public:
 	struct FNavLinkId                             CustomLinkId;                                      // 0x0068(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FNavLinkAuxiliaryId                    AuxiliaryCustomLinkId;                             // 0x0070(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNavLinkCustomInstanceData;
 
 // ScriptStruct NavigationSystem.RecastNavMeshTileGenerationDebug
 // 0x0024 (0x0024 - 0x0000)
@@ -271,7 +262,6 @@ public:
 	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         LinkGenerationSelectedEdge;                        // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FRecastNavMeshTileGenerationDebug;
 
 // ScriptStruct NavigationSystem.NavMeshResolutionParam
 // 0x000C (0x000C - 0x0000)
@@ -282,6 +272,5 @@ public:
 	float                                         CellHeight;                                        // 0x0004(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AgentMaxStepHeight;                                // 0x0008(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FNavMeshResolutionParam;
 
 SDK_NAMESPACE_END

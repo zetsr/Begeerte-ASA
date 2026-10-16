@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<UDataflowSettings>();
 	}
 };
-DUMPER7_ASSERTS_UDataflowSettings;
 
 SDK_NAMESPACE_END

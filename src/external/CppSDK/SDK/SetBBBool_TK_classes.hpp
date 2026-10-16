@@ -44,6 +44,5 @@ public:
 		return GetDefaultObjImpl<USetBBBool_TK_C>();
 	}
 };
-DUMPER7_ASSERTS_USetBBBool_TK_C;
 
 SDK_NAMESPACE_END

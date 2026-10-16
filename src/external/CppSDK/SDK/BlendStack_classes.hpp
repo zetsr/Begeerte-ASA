@@ -47,7 +47,6 @@ public:
 		return GetDefaultObjImpl<UBlendStackAnimNodeLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UBlendStackAnimNodeLibrary;
 
 // Class BlendStack.BlendStackInputAnimNodeLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -72,6 +71,5 @@ public:
 		return GetDefaultObjImpl<UBlendStackInputAnimNodeLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UBlendStackInputAnimNodeLibrary;
 
 SDK_NAMESPACE_END

@@ -145,17 +145,21 @@ namespace ESP {
         Actors.clear();
 
         MEM::GetAllActorsOfClass(SDK::UWorld::GetWorld(), SDK::AActor::StaticClass(), Actors);
-        for (SDK::AActor* Actor : Actors) {
-            if (!Actor) continue;
+        for (SDK::AActor* BaseActor : Actors) {
+            if (!BaseActor) continue;
 
-            float distance = LocalPawn->GetDistanceTo(Actor) / 100.f;
-            if (distance > 100.f) continue;
+            if (BaseActor->IsA(SDK::APrimalCharacter::StaticClass())) {
+                SDK::APrimalCharacter* Actor = static_cast<SDK::APrimalCharacter*>(BaseActor);
 
-			ESP::BoxRect rect = ESP::GetBox(Canvas, Actor, 0.5f);
-			ESP::FlagManager f;
+                float distance = LocalPawn->GetDistanceTo(Actor) / 100.f;
+                if (distance > 100.f) continue;
 
-            f.AddFlag(Canvas, rect, std::format("{}", Actor->GetName()), { 1.f, 1.f, 1.f, 1.f }, ESP::FlagPos::Right, 1.f);
-			f.AddFlag(Canvas, rect, std::format("{:.1f}m", distance), { 1.f, 1.f, 1.f, 1.f }, ESP::FlagPos::Right, 1.f);
+                ESP::BoxRect rect = ESP::GetBox(Canvas, Actor, 0.5f);
+                ESP::FlagManager f;
+
+                f.AddFlag(Canvas, rect, std::format("{}", Actor->DescriptiveName.ToString()), { 1.f, 1.f, 1.f, 1.f }, ESP::FlagPos::Right, 1.f);
+                f.AddFlag(Canvas, rect, std::format("{:.1f}m", distance), { 1.f, 1.f, 1.f, 1.f }, ESP::FlagPos::Right, 1.f);
+            }
         }
 	}
 }

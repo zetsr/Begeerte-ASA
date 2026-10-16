@@ -52,7 +52,6 @@ public:
 	TSoftObjectPtr<class UMediaPlaylist>          SourcePlaylist;                                    // 0x0048(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UMediaPlaylist*                         ActivePlaylist;                                    // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate, ExperimentalNeverOverriden)
 };
-DUMPER7_ASSERTS_FMediaPlateResource;
 
 // ScriptStruct MediaPlate.MediaTextureResourceSettings
 // 0x0002 (0x0002 - 0x0000)
@@ -62,6 +61,5 @@ public:
 	bool                                          bEnableGenMips;                                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         CurrentNumMips;                                    // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FMediaTextureResourceSettings;
 
 SDK_NAMESPACE_END

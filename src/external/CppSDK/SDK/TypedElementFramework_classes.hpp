@@ -33,7 +33,6 @@ public:
 		return GetDefaultObjImpl<UEditorDataStorageFactory>();
 	}
 };
-DUMPER7_ASSERTS_UEditorDataStorageFactory;
 
 // Class TypedElementFramework.Test_PingPongBetweenPhaseFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -53,7 +52,6 @@ public:
 		return GetDefaultObjImpl<UTest_PingPongBetweenPhaseFactory>();
 	}
 };
-DUMPER7_ASSERTS_UTest_PingPongBetweenPhaseFactory;
 
 // Class TypedElementFramework.TypedElementHandleLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -79,7 +77,6 @@ public:
 		return GetDefaultObjImpl<UTypedElementHandleLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UTypedElementHandleLibrary;
 
 // Class TypedElementFramework.TypedElementListLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -121,7 +118,6 @@ public:
 		return GetDefaultObjImpl<UTypedElementListLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UTypedElementListLibrary;
 
 // Class TypedElementFramework.TypedElementCounterInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -150,7 +146,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ITypedElementCounterInterface;
 
 // Class TypedElementFramework.TypedElementRegistry
 // 0x0920 (0x0948 - 0x0028)
@@ -178,7 +173,6 @@ public:
 		return GetDefaultObjImpl<UTypedElementRegistry>();
 	}
 };
-DUMPER7_ASSERTS_UTypedElementRegistry;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA
 // 0x0000 (0x0000 - 0x0000)
@@ -211,7 +205,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ITestTypedElementInterfaceA;
 
 // Class TypedElementFramework.TestTypedElementInterfaceB
 // 0x0000 (0x0000 - 0x0000)
@@ -243,7 +236,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ITestTypedElementInterfaceB;
 
 // Class TypedElementFramework.TestTypedElementInterfaceC
 // 0x0000 (0x0000 - 0x0000)
@@ -275,7 +267,6 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_ITestTypedElementInterfaceC;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA_ImplTyped
 // 0x0008 (0x0030 - 0x0028)
@@ -298,7 +289,6 @@ public:
 		return GetDefaultObjImpl<UTestTypedElementInterfaceA_ImplTyped>();
 	}
 };
-DUMPER7_ASSERTS_UTestTypedElementInterfaceA_ImplTyped;
 
 // Class TypedElementFramework.TestTypedElementInterfaceA_ImplUntyped
 // 0x0008 (0x0030 - 0x0028)
@@ -321,7 +311,6 @@ public:
 		return GetDefaultObjImpl<UTestTypedElementInterfaceA_ImplUntyped>();
 	}
 };
-DUMPER7_ASSERTS_UTestTypedElementInterfaceA_ImplUntyped;
 
 // Class TypedElementFramework.TestTypedElementInterfaceBAndC_Typed
 // 0x0010 (0x0038 - 0x0028)
@@ -344,6 +333,5 @@ public:
 		return GetDefaultObjImpl<UTestTypedElementInterfaceBAndC_Typed>();
 	}
 };
-DUMPER7_ASSERTS_UTestTypedElementInterfaceBAndC_Typed;
 
 SDK_NAMESPACE_END

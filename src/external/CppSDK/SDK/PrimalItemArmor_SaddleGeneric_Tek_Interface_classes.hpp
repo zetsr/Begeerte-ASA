@@ -46,6 +46,5 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_IPrimalItemArmor_SaddleGeneric_Tek_Interface_C;
 
 SDK_NAMESPACE_END

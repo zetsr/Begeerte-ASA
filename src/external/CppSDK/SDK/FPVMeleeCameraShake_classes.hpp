@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UFPVMeleeCameraShake_C>();
 	}
 };
-DUMPER7_ASSERTS_UFPVMeleeCameraShake_C;
 
 SDK_NAMESPACE_END

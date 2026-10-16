@@ -31,7 +31,6 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FIntPoint                              CallFunc_GetDesktopResolution_ReturnValue;         // 0x001C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_ApplySomePCDefaults;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.AttemptUninstallMod
 // 0x0610 (0x0610 - 0x0000)
@@ -40,7 +39,6 @@ struct BP_CFCorePluginManager_C_AttemptUninstallMod final
 public:
 	struct FInstallProgressMod                    ModDetails_0;                                      // 0x0000(0x0610)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_AttemptUninstallMod;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Calculate Total Update Size Of Mods
 // 0x0680 (0x0680 - 0x0000)
@@ -65,7 +63,6 @@ public:
 	uint8                                         Pad_675[0x3];                                      // 0x0675(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0678(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Calculate_Total_Update_Size_Of_Mods;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.CreateNotifManager
 // 0x0010 (0x0010 - 0x0000)
@@ -76,7 +73,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUI_CFCore_NotificationManager_C*       CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_CreateNotifManager;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.CreateSaveFile
 // 0x0028 (0x0028 - 0x0000)
@@ -92,7 +88,6 @@ public:
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class USave_CfCoreUI_C*                       CallFunc_CreateSaveGameObject_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_CreateSaveFile;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.DestroyAllUIs
 // 0x0003 (0x0003 - 0x0000)
@@ -103,7 +98,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_DestroyAllUIs;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.DestroyPurchaseResponseHandle
 // 0x0001 (0x0001 - 0x0000)
@@ -112,7 +106,6 @@ struct BP_CFCorePluginManager_C_DestroyPurchaseResponseHandle final
 public:
 	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_DestroyPurchaseResponseHandle;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Event On CFCore Init Error
 // 0x0038 (0x0038 - 0x0000)
@@ -121,7 +114,6 @@ struct BP_CFCorePluginManager_C_Event_On_CFCore_Init_Error final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Event_On_CFCore_Init_Error;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Event On Get User Info
 // 0x0090 (0x0090 - 0x0000)
@@ -130,7 +122,6 @@ struct BP_CFCorePluginManager_C_Event_On_Get_User_Info final
 public:
 	struct FMe                                    Me;                                                // 0x0000(0x0090)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Event_On_Get_User_Info;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Event On Get User Info Failed
 // 0x0038 (0x0038 - 0x0000)
@@ -139,7 +130,6 @@ struct BP_CFCorePluginManager_C_Event_On_Get_User_Info_Failed final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Event_On_Get_User_Info_Failed;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Event On Sync Installed Mods Error
 // 0x0038 (0x0038 - 0x0000)
@@ -148,7 +138,6 @@ struct BP_CFCorePluginManager_C_Event_On_Sync_Installed_Mods_Error final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Event_On_Sync_Installed_Mods_Error;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.Event Result
 // 0x0001 (0x0001 - 0x0000)
@@ -157,7 +146,6 @@ struct BP_CFCorePluginManager_C_Event_Result final
 public:
 	bool                                          is_authenticated;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_Event_Result;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.ExecuteUbergraph_BP_CFCorePluginManager
 // 0x25A0 (0x25A0 - 0x0000)
@@ -382,7 +370,6 @@ public:
 	class UShooterGameUserSettings*               CallFunc_GetShooterGameUserSettings_ReturnValue_1; // 0x2588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x2590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_ExecuteUbergraph_BP_CFCorePluginManager;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.FailedPremiumModsChecks
 // 0x0038 (0x0038 - 0x0000)
@@ -391,7 +378,6 @@ struct BP_CFCorePluginManager_C_FailedPremiumModsChecks final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_FailedPremiumModsChecks;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InitSoundMediaComponent
 // 0x0070 (0x0070 - 0x0000)
@@ -403,7 +389,6 @@ public:
 	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMediaSoundComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InitSoundMediaComponent;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Eight_K2Node_InputKeyEvent_2
 // 0x0018 (0x0018 - 0x0000)
@@ -412,7 +397,6 @@ struct BP_CFCorePluginManager_C_InpActEvt_Eight_K2Node_InputKeyEvent_2 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Eight_K2Node_InputKeyEvent_2;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Five_K2Node_InputKeyEvent_0
 // 0x0018 (0x0018 - 0x0000)
@@ -421,7 +405,6 @@ struct BP_CFCorePluginManager_C_InpActEvt_Five_K2Node_InputKeyEvent_0 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Five_K2Node_InputKeyEvent_0;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Four_K2Node_InputKeyEvent_4
 // 0x0018 (0x0018 - 0x0000)
@@ -430,7 +413,6 @@ struct BP_CFCorePluginManager_C_InpActEvt_Four_K2Node_InputKeyEvent_4 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Four_K2Node_InputKeyEvent_4;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Nine_K2Node_InputKeyEvent_1
 // 0x0018 (0x0018 - 0x0000)
@@ -439,7 +421,6 @@ struct BP_CFCorePluginManager_C_InpActEvt_Nine_K2Node_InputKeyEvent_1 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Nine_K2Node_InputKeyEvent_1;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_One_K2Node_InputKeyEvent_7
 // 0x0018 (0x0018 - 0x0000)
@@ -448,7 +429,6 @@ struct BP_CFCorePluginManager_C_InpActEvt_One_K2Node_InputKeyEvent_7 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_One_K2Node_InputKeyEvent_7;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Seven_K2Node_InputKeyEvent_3
 // 0x0018 (0x0018 - 0x0000)
@@ -457,7 +437,6 @@ struct BP_CFCorePluginManager_C_InpActEvt_Seven_K2Node_InputKeyEvent_3 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Seven_K2Node_InputKeyEvent_3;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Three_K2Node_InputKeyEvent_5
 // 0x0018 (0x0018 - 0x0000)
@@ -466,7 +445,6 @@ struct BP_CFCorePluginManager_C_InpActEvt_Three_K2Node_InputKeyEvent_5 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Three_K2Node_InputKeyEvent_5;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.InpActEvt_Two_K2Node_InputKeyEvent_6
 // 0x0018 (0x0018 - 0x0000)
@@ -475,7 +453,6 @@ struct BP_CFCorePluginManager_C_InpActEvt_Two_K2Node_InputKeyEvent_6 final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_InpActEvt_Two_K2Node_InputKeyEvent_6;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.IsModPurchased
 // 0x0678 (0x0678 - 0x0000)
@@ -496,7 +473,6 @@ public:
 	struct FPremiumDetailsDiscount                CallFunc_GetIsModPaidStatus_Discount_Data;         // 0x0650(0x0020)()
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0670(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_IsModPurchased;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnClassCategoriesInfoFound
 // 0x0010 (0x0010 - 0x0000)
@@ -505,7 +481,6 @@ struct BP_CFCorePluginManager_C_OnClassCategoriesInfoFound final
 public:
 	TArray<struct FCategory>                      Categories;                                        // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnClassCategoriesInfoFound;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnClassCategoriesInfoFound_Error
 // 0x0038 (0x0038 - 0x0000)
@@ -514,7 +489,6 @@ struct BP_CFCorePluginManager_C_OnClassCategoriesInfoFound_Error final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnClassCategoriesInfoFound_Error;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnDiscSpaceAvailable
 // 0x0020 (0x0020 - 0x0000)
@@ -523,7 +497,6 @@ struct BP_CFCorePluginManager_C_OnDiscSpaceAvailable final
 public:
 	struct FModsDirInfo                           ModsDirInfo;                                       // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnDiscSpaceAvailable;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnDiscSpaceCheckFail
 // 0x0038 (0x0038 - 0x0000)
@@ -532,7 +505,6 @@ struct BP_CFCorePluginManager_C_OnDiscSpaceCheckFail final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnDiscSpaceCheckFail;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnErrorGeneratePremium
 // 0x0038 (0x0038 - 0x0000)
@@ -541,7 +513,6 @@ struct BP_CFCorePluginManager_C_OnErrorGeneratePremium final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnErrorGeneratePremium;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnErrorSpaceCheck
 // 0x0038 (0x0038 - 0x0000)
@@ -550,7 +521,6 @@ struct BP_CFCorePluginManager_C_OnErrorSpaceCheck final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnErrorSpaceCheck;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnErrorUpdateInstalledModProperties
 // 0x0038 (0x0038 - 0x0000)
@@ -559,7 +529,6 @@ struct BP_CFCorePluginManager_C_OnErrorUpdateInstalledModProperties final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnErrorUpdateInstalledModProperties;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnFailGetMyPremiumMods
 // 0x0038 (0x0038 - 0x0000)
@@ -568,7 +537,6 @@ struct BP_CFCorePluginManager_C_OnFailGetMyPremiumMods final
 public:
 	struct FCFCoreError                           Error;                                             // 0x0000(0x0038)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnFailGetMyPremiumMods;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnJoin
 // 0x0008 (0x0008 - 0x0000)
@@ -577,7 +545,6 @@ struct BP_CFCorePluginManager_C_OnJoin final
 public:
 	int64                                         ServerID;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnJoin;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnReportFavorite
 // 0x0008 (0x0008 - 0x0000)
@@ -586,7 +553,6 @@ struct BP_CFCorePluginManager_C_OnReportFavorite final
 public:
 	int64                                         ServerID;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnReportFavorite;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnSuccessGeneratePremium
 // 0x0010 (0x0010 - 0x0000)
@@ -595,7 +561,6 @@ struct BP_CFCorePluginManager_C_OnSuccessGeneratePremium final
 public:
 	class FString                                 URL;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnSuccessGeneratePremium;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnSuccessGetMyPremiumMods
 // 0x0020 (0x0020 - 0x0000)
@@ -604,7 +569,6 @@ struct BP_CFCorePluginManager_C_OnSuccessGetMyPremiumMods final
 public:
 	struct FOwnedPremiumMods                      OwnedPremiumMods;                                  // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnSuccessGetMyPremiumMods;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnSuccessPremiumModsCheck
 // 0x0010 (0x0010 - 0x0000)
@@ -613,7 +577,6 @@ struct BP_CFCorePluginManager_C_OnSuccessPremiumModsCheck final
 public:
 	TArray<int64>                                 modIds;                                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnSuccessPremiumModsCheck;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.OnSuccessSpaceCheck
 // 0x0020 (0x0020 - 0x0000)
@@ -622,7 +585,6 @@ struct BP_CFCorePluginManager_C_OnSuccessSpaceCheck final
 public:
 	struct FModsDirInfo                           ModsDirInfo;                                       // 0x0000(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_OnSuccessSpaceCheck;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.PurchaseModsWithIds
 // 0x0010 (0x0010 - 0x0000)
@@ -631,7 +593,6 @@ struct BP_CFCorePluginManager_C_PurchaseModsWithIds final
 public:
 	TArray<int64>                                 PurchasedMods;                                     // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_PurchaseModsWithIds;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.PurcherseMod
 // 0x0008 (0x0008 - 0x0000)
@@ -640,7 +601,6 @@ struct BP_CFCorePluginManager_C_PurcherseMod final
 public:
 	int64                                         modId;                                             // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_PurcherseMod;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.PurcherseMods
 // 0x0010 (0x0010 - 0x0000)
@@ -649,7 +609,6 @@ struct BP_CFCorePluginManager_C_PurcherseMods final
 public:
 	TArray<int64>                                 ModsId;                                            // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_PurcherseMods;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.RequestInstallMod
 // 0x0610 (0x0610 - 0x0000)
@@ -658,7 +617,6 @@ struct BP_CFCorePluginManager_C_RequestInstallMod final
 public:
 	struct FInstallProgressMod                    ModInfo;                                           // 0x0000(0x0610)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_RequestInstallMod;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.UninstallMods
 // 0x0010 (0x0010 - 0x0000)
@@ -667,7 +625,6 @@ struct BP_CFCorePluginManager_C_UninstallMods final
 public:
 	TArray<struct FInstallProgressMod>            Array;                                             // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_UninstallMods;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.UpdateModEnabledStatuses
 // 0x0010 (0x0010 - 0x0000)
@@ -676,7 +633,6 @@ struct BP_CFCorePluginManager_C_UpdateModEnabledStatuses final
 public:
 	TArray<struct FInstalledModProperties>        InInstalledModsProperties;                         // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_UpdateModEnabledStatuses;
 
 // Function BP_CFCorePluginManager.BP_CFCorePluginManager_C.UpdateMods
 // 0x0010 (0x0010 - 0x0000)
@@ -685,7 +641,6 @@ struct BP_CFCorePluginManager_C_UpdateMods final
 public:
 	TArray<struct FInstallProgressMod>            ModsToUpdate;                                      // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
-DUMPER7_ASSERTS_BP_CFCorePluginManager_C_UpdateMods;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

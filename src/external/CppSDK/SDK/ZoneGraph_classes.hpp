@@ -45,7 +45,6 @@ public:
 		return GetDefaultObjImpl<AZoneGraphData>();
 	}
 };
-DUMPER7_ASSERTS_AZoneGraphData;
 
 // Class ZoneGraph.ZoneGraphRenderingComponent
 // 0x0010 (0x0630 - 0x0620)
@@ -68,7 +67,6 @@ public:
 		return GetDefaultObjImpl<UZoneGraphRenderingComponent>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphRenderingComponent;
 
 // Class ZoneGraph.ZoneGraphSettings
 // 0x0280 (0x02B8 - 0x0038)
@@ -97,7 +95,6 @@ public:
 		return GetDefaultObjImpl<UZoneGraphSettings>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphSettings;
 
 // Class ZoneGraph.ZoneGraphSubsystem
 // 0x0050 (0x0090 - 0x0040)
@@ -122,7 +119,6 @@ public:
 		return GetDefaultObjImpl<UZoneGraphSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UZoneGraphSubsystem;
 
 // Class ZoneGraph.ZoneShape
 // 0x0008 (0x0498 - 0x0490)
@@ -145,7 +141,6 @@ public:
 		return GetDefaultObjImpl<AZoneShape>();
 	}
 };
-DUMPER7_ASSERTS_AZoneShape;
 
 // Class ZoneGraph.ZoneShapeComponent
 // 0x0070 (0x0690 - 0x0620)
@@ -189,6 +184,5 @@ public:
 		return GetDefaultObjImpl<UZoneShapeComponent>();
 	}
 };
-DUMPER7_ASSERTS_UZoneShapeComponent;
 
 SDK_NAMESPACE_END

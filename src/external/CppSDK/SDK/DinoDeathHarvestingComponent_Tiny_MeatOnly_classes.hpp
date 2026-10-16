@@ -33,6 +33,5 @@ public:
 		return GetDefaultObjImpl<UDinoDeathHarvestingComponent_Tiny_MeatOnly_C>();
 	}
 };
-DUMPER7_ASSERTS_UDinoDeathHarvestingComponent_Tiny_MeatOnly_C;
 
 SDK_NAMESPACE_END

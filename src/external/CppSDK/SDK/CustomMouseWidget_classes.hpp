@@ -62,6 +62,5 @@ public:
 		return GetDefaultObjImpl<UCustomMouseWidget_C>();
 	}
 };
-DUMPER7_ASSERTS_UCustomMouseWidget_C;
 
 SDK_NAMESPACE_END

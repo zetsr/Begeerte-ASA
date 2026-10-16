@@ -45,6 +45,5 @@ public:
 		return GetDefaultObjImpl<UWaveTableBank>();
 	}
 };
-DUMPER7_ASSERTS_UWaveTableBank;
 
 SDK_NAMESPACE_END

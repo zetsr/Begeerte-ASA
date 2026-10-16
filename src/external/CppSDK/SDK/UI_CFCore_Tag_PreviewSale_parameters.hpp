@@ -22,7 +22,6 @@ public:
 	class UPanelWidget*                           RootPanelWidget;                                   // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Tag_PreviewSale_C_GetRootCFWidget;
 
 // Function UI_CFCore_Tag_PreviewSale.UI_CFCore_Tag_PreviewSale_C.UpdateText
 // 0x0018 (0x0018 - 0x0000)
@@ -32,7 +31,6 @@ public:
 	class FText                                   InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_UI_CFCore_Tag_PreviewSale_C_UpdateText;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END

@@ -47,7 +47,6 @@ public:
 		return GetDefaultObjImpl<UAbilityTask_PerformTargeting>();
 	}
 };
-DUMPER7_ASSERTS_UAbilityTask_PerformTargeting;
 
 // Class TargetingSystem.AsyncAction_PerformTargeting
 // 0x0038 (0x0068 - 0x0030)
@@ -82,7 +81,6 @@ public:
 		return GetDefaultObjImpl<UAsyncAction_PerformTargeting>();
 	}
 };
-DUMPER7_ASSERTS_UAsyncAction_PerformTargeting;
 
 // Class TargetingSystem.TargetingTask
 // 0x0000 (0x0028 - 0x0028)
@@ -105,7 +103,6 @@ public:
 		return GetDefaultObjImpl<UTargetingTask>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingTask;
 
 // Class TargetingSystem.TargetingFilterTask_BasicFilterTemplate
 // 0x0000 (0x0028 - 0x0028)
@@ -125,7 +122,6 @@ public:
 		return GetDefaultObjImpl<UTargetingFilterTask_BasicFilterTemplate>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingFilterTask_BasicFilterTemplate;
 
 // Class TargetingSystem.SimpleTargetingFilterTask
 // 0x0000 (0x0028 - 0x0028)
@@ -148,7 +144,6 @@ public:
 		return GetDefaultObjImpl<USimpleTargetingFilterTask>();
 	}
 };
-DUMPER7_ASSERTS_USimpleTargetingFilterTask;
 
 // Class TargetingSystem.SimpleTargetingSelectionTask
 // 0x0000 (0x0028 - 0x0028)
@@ -173,7 +168,6 @@ public:
 		return GetDefaultObjImpl<USimpleTargetingSelectionTask>();
 	}
 };
-DUMPER7_ASSERTS_USimpleTargetingSelectionTask;
 
 // Class TargetingSystem.TargetingSortTask_Base
 // 0x0008 (0x0030 - 0x0028)
@@ -198,7 +192,6 @@ public:
 		return GetDefaultObjImpl<UTargetingSortTask_Base>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingSortTask_Base;
 
 // Class TargetingSystem.SimpleTargetingSortTask
 // 0x0000 (0x0030 - 0x0030)
@@ -221,7 +214,6 @@ public:
 		return GetDefaultObjImpl<USimpleTargetingSortTask>();
 	}
 };
-DUMPER7_ASSERTS_USimpleTargetingSortTask;
 
 // Class TargetingSystem.TargetingFilterTask_ActorClass
 // 0x0020 (0x0048 - 0x0028)
@@ -245,7 +237,6 @@ public:
 		return GetDefaultObjImpl<UTargetingFilterTask_ActorClass>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingFilterTask_ActorClass;
 
 // Class TargetingSystem.TargetingPreset
 // 0x0010 (0x0040 - 0x0030)
@@ -268,7 +259,6 @@ public:
 		return GetDefaultObjImpl<UTargetingPreset>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingPreset;
 
 // Class TargetingSystem.TargetingSelectionTask_AOE
 // 0x00B0 (0x00D8 - 0x0028)
@@ -311,7 +301,6 @@ public:
 		return GetDefaultObjImpl<UTargetingSelectionTask_AOE>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingSelectionTask_AOE;
 
 // Class TargetingSystem.TargetingSelectionTask_SourceActor
 // 0x0000 (0x0028 - 0x0028)
@@ -331,7 +320,6 @@ public:
 		return GetDefaultObjImpl<UTargetingSelectionTask_SourceActor>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingSelectionTask_SourceActor;
 
 // Class TargetingSystem.TargetingSelectionTask_Trace
 // 0x0150 (0x0178 - 0x0028)
@@ -383,7 +371,6 @@ public:
 		return GetDefaultObjImpl<UTargetingSelectionTask_Trace>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingSelectionTask_Trace;
 
 // Class TargetingSystem.TargetingSubsystem
 // 0x0048 (0x0078 - 0x0030)
@@ -419,7 +406,6 @@ public:
 		return GetDefaultObjImpl<UTargetingSubsystem>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingSubsystem;
 
 // Class TargetingSystem.TargetingFilterTask_SortByDistance
 // 0x0008 (0x0038 - 0x0030)
@@ -444,6 +430,5 @@ public:
 		return GetDefaultObjImpl<UTargetingFilterTask_SortByDistance>();
 	}
 };
-DUMPER7_ASSERTS_UTargetingFilterTask_SortByDistance;
 
 SDK_NAMESPACE_END

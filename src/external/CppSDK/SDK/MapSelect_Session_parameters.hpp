@@ -30,7 +30,6 @@ public:
 	class AShooterGame_Menu*                      K2Node_DynamicCast_AsShooter_Game_Menu;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_ExecuteUbergraph_MapSelect_Session;
 
 // Function MapSelect_Session.MapSelect_Session_C.GetMapSelectEntries
 // 0x0068 (0x0068 - 0x0000)
@@ -54,7 +53,6 @@ public:
 	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_GetMapSelectEntries;
 
 // Function MapSelect_Session.MapSelect_Session_C.GetSelectedMapIndex
 // 0x0038 (0x0038 - 0x0000)
@@ -72,7 +70,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelected_Selected;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_GetSelectedMapIndex;
 
 // Function MapSelect_Session.MapSelect_Session_C.OnMouseButtonDown
 // 0x02E0 (0x02E0 - 0x0000)
@@ -87,7 +84,6 @@ public:
 	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0228(0x00B8)()
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_OnMouseButtonDown;
 
 // Function MapSelect_Session.MapSelect_Session_C.OnMouseMove
 // 0x0350 (0x0350 - 0x0000)
@@ -119,7 +115,6 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_B_ImplicitCast;          // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast; // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_OnMouseMove;
 
 // Function MapSelect_Session.MapSelect_Session_C.ScrollToHoveredItem
 // 0x0008 (0x0008 - 0x0000)
@@ -128,7 +123,6 @@ struct MapSelect_Session_C_ScrollToHoveredItem final
 public:
 	class UMapSelect_Entry_C*                     EntryHovered;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_ScrollToHoveredItem;
 
 // Function MapSelect_Session.MapSelect_Session_C.SearchAndCreateModMaps
 // 0x0038 (0x0038 - 0x0000)
@@ -146,7 +140,6 @@ public:
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPanelSlot*                             CallFunc_AddChild_ReturnValue;                     // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_SearchAndCreateModMaps;
 
 // Function MapSelect_Session.MapSelect_Session_C.Select Map Button Clicked
 // 0x0048 (0x0048 - 0x0000)
@@ -173,7 +166,6 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsSelected_Selected;                      // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_Select_Map_Button_Clicked;
 
 // Function MapSelect_Session.MapSelect_Session_C.Set Selected Map Entry
 // 0x0038 (0x0038 - 0x0000)
@@ -191,7 +183,6 @@ public:
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_Set_Selected_Map_Entry;
 
 // Function MapSelect_Session.MapSelect_Session_C.SetSelectedMapIndex
 // 0x0040 (0x0040 - 0x0000)
@@ -211,7 +202,6 @@ public:
 	class UMapSelect_Entry_C*                     CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_SetSelectedMapIndex;
 
 // Function MapSelect_Session.MapSelect_Session_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -221,7 +211,6 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_MapSelect_Session_C_Tick;
 
 SDK_PARAM_NAMESPACE_END
 SDK_NAMESPACE_END
