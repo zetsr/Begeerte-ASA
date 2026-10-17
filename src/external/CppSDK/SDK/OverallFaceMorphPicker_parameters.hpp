@@ -17,12 +17,49 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateSaturationBar
-// 0x0010 (0x0010 - 0x0000)
-struct OverallFaceMorphPicker_C_UpdateSaturationBar final
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct OverallFaceMorphPicker_C_BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature final
 {
 public:
-	struct FLinearColor                           Value;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct OverallFaceMorphPicker_C_BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.ExecuteUbergraph_OverallFaceMorphPicker
+// 0x0030 (0x0030 - 0x0000)
+struct OverallFaceMorphPicker_C_ExecuteUbergraph_OverallFaceMorphPicker final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_ComponentBoundEvent_Value_1;                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_ComponentBoundEvent_Value;                  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              K2Node_CustomEvent_Value;                          // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_CalcFacePickerDefaultValue_ReturnValue;   // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.GetOverrideHighligteableWidgetBP
+// 0x0008 (0x0008 - 0x0000)
+struct OverallFaceMorphPicker_C_GetOverrideHighligteableWidgetBP final
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateColorPickerValue
+// 0x0010 (0x0010 - 0x0000)
+struct OverallFaceMorphPicker_C_UpdateColorPickerValue final
+{
+public:
+	struct FVector2D                              Value;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateColorSlider2D
@@ -47,49 +84,12 @@ public:
 	float                                         K2Node_MakeStruct_FloatParam2_ImplicitCast;        // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateColorPickerValue
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateSaturationBar
 // 0x0010 (0x0010 - 0x0000)
-struct OverallFaceMorphPicker_C_UpdateColorPickerValue final
+struct OverallFaceMorphPicker_C_UpdateSaturationBar final
 {
 public:
-	struct FVector2D                              Value;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.GetOverrideHighligteableWidgetBP
-// 0x0008 (0x0008 - 0x0000)
-struct OverallFaceMorphPicker_C_GetOverrideHighligteableWidgetBP final
-{
-public:
-	class UWidget*                                ReturnValue_GetOverrideHighligteableWidgetBP;      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.ExecuteUbergraph_OverallFaceMorphPicker
-// 0x0030 (0x0030 - 0x0000)
-struct OverallFaceMorphPicker_C_ExecuteUbergraph_OverallFaceMorphPicker final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_ComponentBoundEvent_Value_1;                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_ComponentBoundEvent_Value;                  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              K2Node_CustomEvent_Value;                          // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_CalcFacePickerDefaultValue_ReturnValue;   // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct OverallFaceMorphPicker_C_BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct OverallFaceMorphPicker_C_BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Value;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.CalcFacePickerDefaultValue

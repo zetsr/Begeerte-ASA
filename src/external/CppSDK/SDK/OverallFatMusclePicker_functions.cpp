@@ -16,111 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function OverallFatMusclePicker.OverallFatMusclePicker_C.UpdateSaturationBar
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function OverallFatMusclePicker.OverallFatMusclePicker_C.BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// const struct FLinearColor&              Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UOverallFatMusclePicker_C::UpdateSaturationBar(const struct FLinearColor& Value)
+void UOverallFatMusclePicker_C::BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFatMusclePicker_C", "UpdateSaturationBar");
+		Func = Class->GetFunction("OverallFatMusclePicker_C", "BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature");
 
-	Params::OverallFatMusclePicker_C_UpdateSaturationBar Parms{};
+	Params::OverallFatMusclePicker_C_BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature Parms{};
 
-	Parms.Value = std::move(Value);
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function OverallFatMusclePicker.OverallFatMusclePicker_C.UpdateColorSlider2D
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UOverallFatMusclePicker_C::UpdateColorSlider2D()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFatMusclePicker_C", "UpdateColorSlider2D");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function OverallFatMusclePicker.OverallFatMusclePicker_C.UpdateColorPickerValue
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector2D&                 Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UOverallFatMusclePicker_C::UpdateColorPickerValue(const struct FVector2D& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFatMusclePicker_C", "UpdateColorPickerValue");
-
-	Params::OverallFatMusclePicker_C_UpdateColorPickerValue Parms{};
-
-	Parms.Value = std::move(Value);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function OverallFatMusclePicker.OverallFatMusclePicker_C.GetOverrideHighligteableWidgetBP
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          ReturnValue_GetOverrideHighligteableWidgetBP           (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UOverallFatMusclePicker_C::GetOverrideHighligteableWidgetBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFatMusclePicker_C", "GetOverrideHighligteableWidgetBP");
-
-	Params::OverallFatMusclePicker_C_GetOverrideHighligteableWidgetBP Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OverallFatMusclePicker.OverallFatMusclePicker_C.ExecuteUbergraph_OverallFatMusclePicker
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UOverallFatMusclePicker_C::ExecuteUbergraph_OverallFatMusclePicker(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFatMusclePicker_C", "ExecuteUbergraph_OverallFatMusclePicker");
-
-	Params::OverallFatMusclePicker_C_ExecuteUbergraph_OverallFatMusclePicker Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function OverallFatMusclePicker.OverallFatMusclePicker_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UOverallFatMusclePicker_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFatMusclePicker_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -144,21 +56,109 @@ void UOverallFatMusclePicker_C::BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_
 }
 
 
-// Function OverallFatMusclePicker.OverallFatMusclePicker_C.BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function OverallFatMusclePicker.OverallFatMusclePicker_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UOverallFatMusclePicker_C::BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value)
+void UOverallFatMusclePicker_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFatMusclePicker_C", "BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature");
+		Func = Class->GetFunction("OverallFatMusclePicker_C", "Construct");
 
-	Params::OverallFatMusclePicker_C_BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Value = Value;
+
+// Function OverallFatMusclePicker.OverallFatMusclePicker_C.ExecuteUbergraph_OverallFatMusclePicker
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UOverallFatMusclePicker_C::ExecuteUbergraph_OverallFatMusclePicker(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFatMusclePicker_C", "ExecuteUbergraph_OverallFatMusclePicker");
+
+	Params::OverallFatMusclePicker_C_ExecuteUbergraph_OverallFatMusclePicker Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function OverallFatMusclePicker.OverallFatMusclePicker_C.GetOverrideHighligteableWidgetBP
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UOverallFatMusclePicker_C::GetOverrideHighligteableWidgetBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFatMusclePicker_C", "GetOverrideHighligteableWidgetBP");
+
+	Params::OverallFatMusclePicker_C_GetOverrideHighligteableWidgetBP Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OverallFatMusclePicker.OverallFatMusclePicker_C.UpdateColorPickerValue
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UOverallFatMusclePicker_C::UpdateColorPickerValue(const struct FVector2D& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFatMusclePicker_C", "UpdateColorPickerValue");
+
+	Params::OverallFatMusclePicker_C_UpdateColorPickerValue Parms{};
+
+	Parms.Value = std::move(Value);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function OverallFatMusclePicker.OverallFatMusclePicker_C.UpdateColorSlider2D
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UOverallFatMusclePicker_C::UpdateColorSlider2D()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFatMusclePicker_C", "UpdateColorSlider2D");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function OverallFatMusclePicker.OverallFatMusclePicker_C.UpdateSaturationBar
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UOverallFatMusclePicker_C::UpdateSaturationBar(const struct FLinearColor& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFatMusclePicker_C", "UpdateSaturationBar");
+
+	Params::OverallFatMusclePicker_C_UpdateSaturationBar Parms{};
+
+	Parms.Value = std::move(Value);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

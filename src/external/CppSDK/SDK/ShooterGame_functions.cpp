@@ -182209,6 +182209,31 @@ void AShooterPlayerController::OnArkTributeSaved(bool success)
 }
 
 
+// Function ShooterGame.ShooterPlayerController.OnCharacterDataUploadedToArk
+// (Final, Native, Public)
+// Parameters:
+// bool                                    success                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AShooterPlayerController::OnCharacterDataUploadedToArk(bool success)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShooterPlayerController", "OnCharacterDataUploadedToArk");
+
+	Params::ShooterPlayerController_OnCharacterDataUploadedToArk Parms{};
+
+	Parms.success = success;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ShooterGame.ShooterPlayerController.OnConsumeItemFinished
 // (Final, Native, Public)
 // Parameters:

@@ -38,15 +38,15 @@ public:
 	struct FVector2D                              DefaultCenterFaceCoords;                           // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateSaturationBar(const struct FLinearColor& Value);
-	void UpdateColorSlider2D();
-	void UpdateColorPickerValue(const struct FVector2D& Value);
-	class UWidget* GetOverrideHighligteableWidgetBP();
-	void ExecuteUbergraph_OverallFaceMorphPicker(int32 EntryPoint);
-	void Construct();
-	void BndEvt__OverallFaceMorphPicker_ResetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value);
 	void BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value);
+	void BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value);
+	void BndEvt__OverallFaceMorphPicker_ResetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
+	void Construct();
+	void ExecuteUbergraph_OverallFaceMorphPicker(int32 EntryPoint);
+	class UWidget* GetOverrideHighligteableWidgetBP();
+	void UpdateColorPickerValue(const struct FVector2D& Value);
+	void UpdateColorSlider2D();
+	void UpdateSaturationBar(const struct FLinearColor& Value);
 
 	struct FVector2D CalcFacePickerDefaultValue() const;
 

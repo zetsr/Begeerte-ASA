@@ -16,125 +16,23 @@
 
 SDK_NAMESPACE_START
 
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateSaturationBar
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FLinearColor&              Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UOverallFaceMorphPicker_C::UpdateSaturationBar(const struct FLinearColor& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFaceMorphPicker_C", "UpdateSaturationBar");
-
-	Params::OverallFaceMorphPicker_C_UpdateSaturationBar Parms{};
-
-	Parms.Value = std::move(Value);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateColorSlider2D
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UOverallFaceMorphPicker_C::UpdateColorSlider2D()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFaceMorphPicker_C", "UpdateColorSlider2D");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateColorPickerValue
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector2D&                 Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UOverallFaceMorphPicker_C::UpdateColorPickerValue(const struct FVector2D& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFaceMorphPicker_C", "UpdateColorPickerValue");
-
-	Params::OverallFaceMorphPicker_C_UpdateColorPickerValue Parms{};
-
-	Parms.Value = std::move(Value);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.GetOverrideHighligteableWidgetBP
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          ReturnValue_GetOverrideHighligteableWidgetBP           (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UOverallFaceMorphPicker_C::GetOverrideHighligteableWidgetBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFaceMorphPicker_C", "GetOverrideHighligteableWidgetBP");
-
-	Params::OverallFaceMorphPicker_C_GetOverrideHighligteableWidgetBP Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.ExecuteUbergraph_OverallFaceMorphPicker
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UOverallFaceMorphPicker_C::ExecuteUbergraph_OverallFaceMorphPicker(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFaceMorphPicker_C", "ExecuteUbergraph_OverallFaceMorphPicker");
-
-	Params::OverallFaceMorphPicker_C_ExecuteUbergraph_OverallFaceMorphPicker Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UOverallFaceMorphPicker_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFaceMorphPicker_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.BndEvt__OverallFaceMorphPicker_ResetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature
 // (BlueprintEvent)
+// Parameters:
+// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UOverallFaceMorphPicker_C::BndEvt__OverallFaceMorphPicker_ResetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
+void UOverallFaceMorphPicker_C::BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFaceMorphPicker_C", "BndEvt__OverallFaceMorphPicker_ResetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
+		Func = Class->GetFunction("OverallFaceMorphPicker_C", "BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::OverallFaceMorphPicker_C_BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -158,21 +56,123 @@ void UOverallFaceMorphPicker_C::BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_
 }
 
 
-// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.BndEvt__OverallFaceMorphPicker_ResetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
-// Parameters:
-// float                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UOverallFaceMorphPicker_C::BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature(float Value)
+void UOverallFaceMorphPicker_C::BndEvt__OverallFaceMorphPicker_ResetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("OverallFaceMorphPicker_C", "BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature");
+		Func = Class->GetFunction("OverallFaceMorphPicker_C", "BndEvt__OverallFaceMorphPicker_ResetButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 
-	Params::OverallFaceMorphPicker_C_BndEvt__ColorPicker_ASA_Widget_Synth2DSlider_89_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEventSynth2D__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Value = Value;
+
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UOverallFaceMorphPicker_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFaceMorphPicker_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.ExecuteUbergraph_OverallFaceMorphPicker
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UOverallFaceMorphPicker_C::ExecuteUbergraph_OverallFaceMorphPicker(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFaceMorphPicker_C", "ExecuteUbergraph_OverallFaceMorphPicker");
+
+	Params::OverallFaceMorphPicker_C_ExecuteUbergraph_OverallFaceMorphPicker Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.GetOverrideHighligteableWidgetBP
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UOverallFaceMorphPicker_C::GetOverrideHighligteableWidgetBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFaceMorphPicker_C", "GetOverrideHighligteableWidgetBP");
+
+	Params::OverallFaceMorphPicker_C_GetOverrideHighligteableWidgetBP Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateColorPickerValue
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UOverallFaceMorphPicker_C::UpdateColorPickerValue(const struct FVector2D& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFaceMorphPicker_C", "UpdateColorPickerValue");
+
+	Params::OverallFaceMorphPicker_C_UpdateColorPickerValue Parms{};
+
+	Parms.Value = std::move(Value);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateColorSlider2D
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UOverallFaceMorphPicker_C::UpdateColorSlider2D()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFaceMorphPicker_C", "UpdateColorSlider2D");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function OverallFaceMorphPicker.OverallFaceMorphPicker_C.UpdateSaturationBar
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UOverallFaceMorphPicker_C::UpdateSaturationBar(const struct FLinearColor& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OverallFaceMorphPicker_C", "UpdateSaturationBar");
+
+	Params::OverallFaceMorphPicker_C_UpdateSaturationBar Parms{};
+
+	Parms.Value = std::move(Value);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

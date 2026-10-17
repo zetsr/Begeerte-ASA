@@ -23,19 +23,19 @@ class UDataListButtonVariable_ColorPicker_Widget_ASA_C final : public UDataListB
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_DataListButtonVariable_ColorPicker_Widget_ASA_C; // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMulticastInlineDelegate<void(const struct FLinearColor& Color)> ChangedColor;                   // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FLinearColor& Color_0)> ChangedColor;                 // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          bHideColor;                                        // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(bool Toggle)>   SelectedOption;                                    // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue_UpdateColorPicker);
-	void SetupTextValue(const class FText& Text, class FText* ReturnText);
-	void PreConstruct(bool IsDesignTime_PreConstruct);
-	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
-	void ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA(int32 EntryPoint);
+	void BPExecutedCommandForPrimalUI(class FName CommandName, const struct FBPNetExecParams& ExecParams);
 	void Construct();
-	void BPExecutedCommandForPrimalUI(class FName CommandName_BPExecutedCommandForPrimalUI, const struct FBPNetExecParams& ExecParams_BPExecutedCommandForPrimalUI);
+	void ExecuteUbergraph_DataListButtonVariable_ColorPicker_Widget_ASA(int32 EntryPoint);
+	void ExtraSetupToggledButton(bool Toggle, bool FromSelectOtherOption);
+	void PreConstruct(bool IsDesignTime);
+	void SetupTextValue(const class FText& Text, class FText* ReturnText);
+	void UpdateColorPicker(const struct FVector2D& ColorPickerSliderValue);
 
 public:
 	static class UClass* StaticClass()

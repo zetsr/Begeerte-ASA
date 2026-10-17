@@ -57854,6 +57854,14 @@ public:
 	bool                                          success;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
+// Function ShooterGame.ShooterPlayerController.OnCharacterDataUploadedToArk
+// 0x0001 (0x0001 - 0x0000)
+struct ShooterPlayerController_OnCharacterDataUploadedToArk final
+{
+public:
+	bool                                          success;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
 // Function ShooterGame.ShooterPlayerController.OnConsumeItemFinished
 // 0x0010 (0x0010 - 0x0000)
 struct ShooterPlayerController_OnConsumeItemFinished final

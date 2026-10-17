@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "STRUCT_SubOptions_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "CFCoreWidget_classes.hpp"
 #include "STRUCT_CustomComboBoxOption_structs.hpp"
-#include "STRUCT_SubOptions_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 

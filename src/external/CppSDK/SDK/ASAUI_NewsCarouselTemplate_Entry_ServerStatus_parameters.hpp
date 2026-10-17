@@ -16,39 +16,6 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function ASAUI_NewsCarouselTemplate_Entry_ServerStatus.ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C.BlueprintInit
-// 0x0010 (0x0010 - 0x0000)
-struct ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C_BlueprintInit final
-{
-public:
-	class FString                                 RawExtraData;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-
-// Function ASAUI_NewsCarouselTemplate_Entry_ServerStatus.ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C.EntryFocusEnd
-// 0x0001 (0x0001 - 0x0000)
-struct ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C_EntryFocusEnd final
-{
-public:
-	bool                                          bInstigatedByAutoRollover;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function ASAUI_NewsCarouselTemplate_Entry_ServerStatus.ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C.EntryFocusStart
-// 0x0001 (0x0001 - 0x0000)
-struct ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C_EntryFocusStart final
-{
-public:
-	bool                                          bInstigatedByAutoRollover;                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
-// Function ASAUI_NewsCarouselTemplate_Entry_ServerStatus.ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C.EntryFocusTick
-// 0x0008 (0x0008 - 0x0000)
-struct ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C_EntryFocusTick final
-{
-public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsHighlighted;                                    // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-
 // Function ASAUI_NewsCarouselTemplate_Entry_ServerStatus.ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C.ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_ServerStatus
 // 0x0158 (0x0158 - 0x0000)
 struct ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C_ExecuteUbergraph_ASAUI_NewsCarouselTemplate_Entry_ServerStatus final
@@ -107,6 +74,39 @@ public:
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast;      // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_DoubleFloat_B_ImplicitCast_1;    // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetScrollOffset_NewScrollOffset_ImplicitCast; // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ASAUI_NewsCarouselTemplate_Entry_ServerStatus.ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C.EntryFocusTick
+// 0x0008 (0x0008 - 0x0000)
+struct ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C_EntryFocusTick final
+{
+public:
+	float                                         DeltaTime_EntryFocusTick;                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsHighlighted_EntryFocusTick;                     // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ASAUI_NewsCarouselTemplate_Entry_ServerStatus.ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C.EntryFocusStart
+// 0x0001 (0x0001 - 0x0000)
+struct ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C_EntryFocusStart final
+{
+public:
+	bool                                          bInstigatedByAutoRollover_EntryFocusStart;         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ASAUI_NewsCarouselTemplate_Entry_ServerStatus.ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C.EntryFocusEnd
+// 0x0001 (0x0001 - 0x0000)
+struct ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C_EntryFocusEnd final
+{
+public:
+	bool                                          bInstigatedByAutoRollover_EntryFocusEnd;           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ASAUI_NewsCarouselTemplate_Entry_ServerStatus.ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C.BlueprintInit
+// 0x0010 (0x0010 - 0x0000)
+struct ASAUI_NewsCarouselTemplate_Entry_ServerStatus_C_BlueprintInit final
+{
+public:
+	class FString                                 RawExtraData_BlueprintInit;                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
 
 SDK_PARAM_NAMESPACE_END
