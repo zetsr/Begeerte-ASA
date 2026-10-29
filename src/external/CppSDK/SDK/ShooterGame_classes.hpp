@@ -9844,7 +9844,7 @@ public:
 };
 
 // Class ShooterGame.ShooterGameMode
-// 0x4020 (0x45B0 - 0x0590)
+// 0x4070 (0x4600 - 0x0590)
 class alignas(0x10) AShooterGameMode : public APrimalGameMode
 {
 public:
@@ -10362,39 +10362,39 @@ public:
 	int32                                         MaxActiveGenesisLandOutposts;                      // 0x41C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41C4[0xB4];                                    // 0x41C4(0x00B4)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAntiDupeTransactionLog*                AntiDupeTransactionLog;                            // 0x4278(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4280[0x9C];                                    // 0x4280(0x009C)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bFilterCharacterNames;                             // 0x431C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFilterTribeNames;                                 // 0x431D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFilterChat;                                       // 0x431E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_431F[0x1];                                     // 0x431F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CurrentChatFilterVersion;                          // 0x4320(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RequestedChatFilterVersion;                        // 0x4324(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceLoadingPlayerData;                           // 0x4328(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4329[0x7];                                     // 0x4329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BadWordListURL;                                    // 0x4330(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BadWordWhiteListURL;                               // 0x4340(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAhoCorasickMatcher                    BadWordMatcher;                                    // 0x4350(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FAhoCorasickMatcher                    BadWordWhitelistMatcher;                           // 0x4368(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	bool                                          bEnableServerDestroyTamesAboveSoftTameLimit;       // 0x4380(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCheckSoftTameLimitOnTick;                         // 0x4381(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4382[0x2];                                     // 0x4382(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxTamedDinos_SoftTameLimit;                       // 0x4384(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxTamedDinos_SoftTameLimit_CountdownForDeletionDuration; // 0x4388(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_438C[0x7C];                                    // 0x438C(0x007C)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         OverrideSecondsUntilBuriedTreasureAutoReveals;     // 0x4408(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_440C[0x54];                                    // 0x440C(0x0054)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bDestroyCharacterOnLogoutInLobby : 1;              // 0x4460(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bPreventJoiningDuringMatch : 1;                    // 0x4460(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_4461[0x1F];                                    // 0x4461(0x001F)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class AShooterPlayerController* ForPlayerController, int32 ExplorerNoteIndex, class FName ExplorerNoteName)> OnExplorerNoteUnlocked; // 0x4480(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UPrimalColorSet*                        DynamicColorSetInstance;                           // 0x4490(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UPrimalColorSet>            DynamicColorSet;                                   // 0x4498(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DynamicColorSetChance;                             // 0x44A0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDontEnforceMilestoneTaskOrder;                    // 0x44A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44A5[0x3];                                     // 0x44A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ModValidationFailureWarnings;                      // 0x44A8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoAutomatedModValidationModeration;               // 0x44AC(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44AD[0x103];                                   // 0x44AD(0x0103)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4280[0xEC];                                    // 0x4280(0x00EC)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bFilterCharacterNames;                             // 0x436C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFilterTribeNames;                                 // 0x436D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFilterChat;                                       // 0x436E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_436F[0x1];                                     // 0x436F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CurrentChatFilterVersion;                          // 0x4370(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RequestedChatFilterVersion;                        // 0x4374(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceLoadingPlayerData;                           // 0x4378(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4379[0x7];                                     // 0x4379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BadWordListURL;                                    // 0x4380(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BadWordWhiteListURL;                               // 0x4390(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAhoCorasickMatcher                    BadWordMatcher;                                    // 0x43A0(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FAhoCorasickMatcher                    BadWordWhitelistMatcher;                           // 0x43B8(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	bool                                          bEnableServerDestroyTamesAboveSoftTameLimit;       // 0x43D0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCheckSoftTameLimitOnTick;                         // 0x43D1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_43D2[0x2];                                     // 0x43D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxTamedDinos_SoftTameLimit;                       // 0x43D4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxTamedDinos_SoftTameLimit_CountdownForDeletionDuration; // 0x43D8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_43DC[0x7C];                                    // 0x43DC(0x007C)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         OverrideSecondsUntilBuriedTreasureAutoReveals;     // 0x4458(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_445C[0x54];                                    // 0x445C(0x0054)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bDestroyCharacterOnLogoutInLobby : 1;              // 0x44B0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bPreventJoiningDuringMatch : 1;                    // 0x44B0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_44B1[0x1F];                                    // 0x44B1(0x001F)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class AShooterPlayerController* ForPlayerController, int32 ExplorerNoteIndex, class FName ExplorerNoteName)> OnExplorerNoteUnlocked; // 0x44D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UPrimalColorSet*                        DynamicColorSetInstance;                           // 0x44E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UPrimalColorSet>            DynamicColorSet;                                   // 0x44E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DynamicColorSetChance;                             // 0x44F0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDontEnforceMilestoneTaskOrder;                    // 0x44F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44F5[0x3];                                     // 0x44F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ModValidationFailureWarnings;                      // 0x44F8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoAutomatedModValidationModeration;               // 0x44FC(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44FD[0x103];                                   // 0x44FD(0x0103)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool AllowDamage(class UWorld* ForWorld, int32 TargetingTeam1, int32 TargetingTeam2, bool bIgnoreDamageIfAllied);
@@ -10607,7 +10607,7 @@ public:
 };
 
 // Class ShooterGame.CustomGameMode
-// 0x0000 (0x45B0 - 0x45B0)
+// 0x0000 (0x4600 - 0x4600)
 class ACustomGameMode final : public AShooterGameMode
 {
 public:
@@ -32004,7 +32004,7 @@ public:
 };
 
 // Class ShooterGame.ShooterPlayerController
-// 0x2DF8 (0x3920 - 0x0B28)
+// 0x2E48 (0x3970 - 0x0B28)
 class alignas(0x10) AShooterPlayerController final : public ABasePlayerController
 {
 public:
@@ -32276,22 +32276,22 @@ public:
 	uint8                                         Pad_3644[0x4];                                     // 0x3644(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 PerfCheckTimeOfDay;                                // 0x3648(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class FString>                         PerfCheckLocations;                                // 0x3658(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3668[0x118];                                   // 0x3668(0x0118)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bDisablePremiumModChecksForTesting;                // 0x3780(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3781[0x7];                                     // 0x3781(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FDebugActor>                    ShooterHUDDebugActors;                             // 0x3788(0x0010)(Net, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3798[0x20];                                    // 0x3798(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnSkillsChanged;                                   // 0x37B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37C8[0x8];                                     // 0x37C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FMidasTouchData>                MidasTouchData;                                    // 0x37D0(0x0010)(BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FVector                                LastPlayerTravelLocation;                          // 0x37E0(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37F8[0x60];                                    // 0x37F8(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             ToggleAutoRunIcon;                                 // 0x3858(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
-	uint8                                         bIsAutoRunEnabled;                                 // 0x3860(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bArePlannedStructuresHidden;                       // 0x3861(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3862[0x6];                                     // 0x3862(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPrimalSnowManager                     SnowManager;                                       // 0x3868(0x0078)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38E0[0x40];                                    // 0x38E0(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3668[0x170];                                   // 0x3668(0x0170)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bDisablePremiumModChecksForTesting;                // 0x37D8(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37D9[0x7];                                     // 0x37D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FDebugActor>                    ShooterHUDDebugActors;                             // 0x37E0(0x0010)(Net, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37F0[0x20];                                    // 0x37F0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnSkillsChanged;                                   // 0x3810(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3820[0x8];                                     // 0x3820(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMidasTouchData>                MidasTouchData;                                    // 0x3828(0x0010)(BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FVector                                LastPlayerTravelLocation;                          // 0x3838(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3850[0x60];                                    // 0x3850(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             ToggleAutoRunIcon;                                 // 0x38B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, ExperimentalNeverOverriden)
+	uint8                                         bIsAutoRunEnabled;                                 // 0x38B8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bArePlannedStructuresHidden;                       // 0x38B9(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38BA[0x6];                                     // 0x38BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPrimalSnowManager                     SnowManager;                                       // 0x38C0(0x0078)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3938[0x38];                                    // 0x3938(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool DoesPlayerOwnPing(const class AShooterPlayerController* PlayerPC, const int32 PingOwnerID);
@@ -33167,6 +33167,8 @@ public:
 	void AttackAOE(int32 attackInfosIndex, float Radius);
 	void AttackInfoTarget();
 	void BanPlayer(const class FString& PlayerSteamName, const class FString& Duration);
+	void BArkTrack(const class FString& EOSId, int32 Seconds);
+	void BArkUntrack(const class FString& EOSId);
 	bool BPCheckDenySpawningInThisMap(const class FString& PackageName);
 	void Broadcast(const class FString& MessageText);
 	void CamZoomIn();
@@ -33203,6 +33205,7 @@ public:
 	void DeepPockets();
 	void DefeatAllBosses(int32 PlayerID);
 	void DefeatBoss(int32 PlayerID, class FName BossName, int8 difficulty);
+	void DelayedRestart(int32 RestartInSeconds);
 	void DestroyActors(const class FString& ClassName, bool bExactMatch);
 	void DestroyAllEnemies();
 	void DestroyAllTames();
@@ -33532,6 +33535,8 @@ public:
 	void SetWindDir(float InWindDir);
 	void SetWindSpeed(float Speed);
 	void SetWindStr(float Strength);
+	void ShadowMute(const class FString& EOSId);
+	void ShadowUnmute(const class FString& EOSId);
 	void ShowActiveMissions();
 	void ShowAvailableMissionTags();
 	void ShowCheatMenu();
@@ -33911,7 +33916,7 @@ public:
 };
 
 // Class ShooterGame.ShooterGameInstance
-// 0x0A00 (0x0BC8 - 0x01C8)
+// 0x0A20 (0x0BE8 - 0x01C8)
 class UShooterGameInstance final : public UPrimalGameInstance
 {
 public:
@@ -33926,20 +33931,20 @@ public:
 	class FString                                 WelcomeScreenMap;                                  // 0x0450(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 MainMenuMap;                                       // 0x0460(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         AutoPgoSweepInterval;                              // 0x0470(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_474[0x29C];                                    // 0x0474(0x029C)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UObject*>                        ObjectsPendingTimeShift;                           // 0x0710(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_720[0x20C];                                    // 0x0720(0x020C)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   ActiveEvent;                                       // 0x092C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_934[0x4];                                      // 0x0934(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 WorldModifierConfigOverride;                       // 0x0938(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_948[0xD8];                                     // 0x0948(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         BitPad_A20_0 : 1;                                  // 0x0A20(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
-	uint8                                         bHasPlayedMainMenuIntroOnce : 1;                   // 0x0A20(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_A21[0x7F];                                     // 0x0A21(0x007F)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBackblazeB2CloudStorage*               BackblazeCloudStorage;                             // 0x0AA0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AA8[0x20];                                     // 0x0AA8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, struct FMarketTradeData>          GlobalTradeData_Client;                            // 0x0AC8(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B18[0xB0];                                     // 0x0B18(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_474[0x2BC];                                    // 0x0474(0x02BC)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UObject*>                        ObjectsPendingTimeShift;                           // 0x0730(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_740[0x20C];                                    // 0x0740(0x020C)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ActiveEvent;                                       // 0x094C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_954[0x4];                                      // 0x0954(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 WorldModifierConfigOverride;                       // 0x0958(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_968[0xD8];                                     // 0x0968(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         BitPad_A40_0 : 1;                                  // 0x0A40(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
+	uint8                                         bHasPlayedMainMenuIntroOnce : 1;                   // 0x0A40(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_A41[0x7F];                                     // 0x0A41(0x007F)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBackblazeB2CloudStorage*               BackblazeCloudStorage;                             // 0x0AC0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC8[0x20];                                     // 0x0AC8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, struct FMarketTradeData>          GlobalTradeData_Client;                            // 0x0AE8(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B38[0xB0];                                     // 0x0B38(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool GetSellOrderInfoForTradeData(const struct FItemNetID& ForItemID, const struct FMarketTradeData& TheTradeData, struct FMarketSellOrder* OutSellOrder, TSoftClassPtr<class UClass> TheItemClass, bool bOnlyCheckClassForMultiOrder);

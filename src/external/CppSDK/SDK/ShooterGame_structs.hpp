@@ -10578,13 +10578,13 @@ public:
 };
 
 // ScriptStruct ShooterGame.PlayerBanInfo
-// 0x0018 (0x0018 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct FPlayerBanInfo final
 {
 public:
 	class FString                                 PlayerName;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        Timeout;                                           // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14[0x14];                                      // 0x0014(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 
 // ScriptStruct ShooterGame.CachedTeamTameListStruct

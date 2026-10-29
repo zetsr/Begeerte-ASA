@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "UMG_structs.hpp"
-#include "ENUM_CFCore_OverlayProfiles_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ENUM_CFCore_OverlayProfiles_structs.hpp"
 
 
 SDK_NAMESPACE_START

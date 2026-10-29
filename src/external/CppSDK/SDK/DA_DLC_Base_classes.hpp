@@ -27,9 +27,9 @@ public:
 	class FText                                   ToolTip;                                           // 0x0050(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void WasntDLCBrowsedBefore(bool* Wasnt);
-	void IsLatestDLC(int32 LatestDLCVersion, bool* Yes);
 	void IsDLCOwned(bool* Owns);
+	void IsLatestDLC(int32 LatestDLCVersion, bool* Yes);
+	void WasntDLCBrowsedBefore(bool* Wasnt);
 
 public:
 	static class UClass* StaticClass()

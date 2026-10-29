@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "MapSpecificTekArmorBuffs_structs.hpp"
-#include "Engine_structs.hpp"
 #include "PrimalItemArmorGeneric_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 SDK_NAMESPACE_START

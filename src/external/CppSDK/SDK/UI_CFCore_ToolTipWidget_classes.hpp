@@ -23,7 +23,7 @@ class UUI_CFCore_ToolTipWidget_C final : public UCFCoreWidget_C
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_UI_CFCore_ToolTipWidget_C;          // 0x0870(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UOverlay*                               BaseOverlay;                                       // 0x0878(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TEXT_Tooltip;                                      // 0x0880(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_Tooltip;                                      // 0x0880(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class FText                                   Text;                                              // 0x0888(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:

@@ -19,9 +19,9 @@ SDK_NAMESPACE_START
 // Function DataListButton_HostSession.DataListButton_HostSession_C.OnPaint
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// struct FPaintContext&                   Context_OnPaint                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// struct FPaintContext&                   Context                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
-void UDataListButton_HostSession_C::OnPaint(struct FPaintContext& Context_OnPaint) const
+void UDataListButton_HostSession_C::OnPaint(struct FPaintContext& Context) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -30,11 +30,11 @@ void UDataListButton_HostSession_C::OnPaint(struct FPaintContext& Context_OnPain
 
 	Params::DataListButton_HostSession_C_OnPaint Parms{};
 
-	Parms.Context_OnPaint = std::move(Context_OnPaint);
+	Parms.Context = std::move(Context);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Context_OnPaint = std::move(Parms.Context_OnPaint);
+	Context = std::move(Parms.Context);
 }
 
 

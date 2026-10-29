@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "ENUM_CFCore_InputDevices_structs.hpp"
 #include "ShooterGame_classes.hpp"
 #include "UMG_structs.hpp"
-#include "ENUM_CFCore_InputDevices_structs.hpp"
 
 
 SDK_NAMESPACE_START

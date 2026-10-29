@@ -14,15 +14,13 @@
 SDK_NAMESPACE_START
 SDK_PARAM_NAMESPACE_START
 
-// Function DA_DLC_Base.DA_DLC_Base_C.WasntDLCBrowsedBefore
-// 0x0018 (0x0018 - 0x0000)
-struct DA_DLC_Base_C_WasntDLCBrowsedBefore final
+// Function DA_DLC_Base.DA_DLC_Base_C.IsDLCOwned
+// 0x0002 (0x0002 - 0x0000)
+struct DA_DLC_Base_C_IsDLCOwned final
 {
 public:
-	bool                                          Wasnt;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UShooterGameUserSettings*               CallFunc_GetShooterGameUserSettings_ReturnValue;   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Owns;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_OwnsDLC_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 // Function DA_DLC_Base.DA_DLC_Base_C.IsLatestDLC
@@ -35,13 +33,15 @@ public:
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
-// Function DA_DLC_Base.DA_DLC_Base_C.IsDLCOwned
-// 0x0002 (0x0002 - 0x0000)
-struct DA_DLC_Base_C_IsDLCOwned final
+// Function DA_DLC_Base.DA_DLC_Base_C.WasntDLCBrowsedBefore
+// 0x0018 (0x0018 - 0x0000)
+struct DA_DLC_Base_C_WasntDLCBrowsedBefore final
 {
 public:
-	bool                                          Owns;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_OwnsDLC_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Wasnt;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UShooterGameUserSettings*               CallFunc_GetShooterGameUserSettings_ReturnValue;   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 
 SDK_PARAM_NAMESPACE_END

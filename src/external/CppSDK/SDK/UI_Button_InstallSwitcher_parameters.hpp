@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "cfcore_ui_structs.hpp"
 #include "ENUM_CFCore_Install_structs.hpp"
+#include "cfcore_ui_structs.hpp"
 
 
 SDK_NAMESPACE_START

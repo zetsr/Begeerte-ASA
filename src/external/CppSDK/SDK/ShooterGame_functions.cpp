@@ -194040,6 +194040,58 @@ void UShooterCheatManager::BanPlayer(const class FString& PlayerSteamName, const
 }
 
 
+// Function ShooterGame.ShooterCheatManager.BArkTrack
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    EOSId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Seconds                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UShooterCheatManager::BArkTrack(const class FString& EOSId, int32 Seconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShooterCheatManager", "BArkTrack");
+
+	Params::ShooterCheatManager_BArkTrack Parms{};
+
+	Parms.EOSId = std::move(EOSId);
+	Parms.Seconds = Seconds;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.BArkUntrack
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    EOSId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UShooterCheatManager::BArkUntrack(const class FString& EOSId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShooterCheatManager", "BArkUntrack");
+
+	Params::ShooterCheatManager_BArkUntrack Parms{};
+
+	Parms.EOSId = std::move(EOSId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ShooterGame.ShooterCheatManager.BPCheckDenySpawningInThisMap
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -194841,6 +194893,31 @@ void UShooterCheatManager::DefeatBoss(int32 PlayerID, class FName BossName, int8
 	Parms.PlayerID = PlayerID;
 	Parms.BossName = BossName;
 	Parms.difficulty = difficulty;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.DelayedRestart
+// (Final, Exec, Native, Public)
+// Parameters:
+// int32                                   RestartInSeconds                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UShooterCheatManager::DelayedRestart(int32 RestartInSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShooterCheatManager", "DelayedRestart");
+
+	Params::ShooterCheatManager_DelayedRestart Parms{};
+
+	Parms.RestartInSeconds = RestartInSeconds;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -202540,6 +202617,56 @@ void UShooterCheatManager::SetWindStr(float Strength)
 	Params::ShooterCheatManager_SetWindStr Parms{};
 
 	Parms.Strength = Strength;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.ShadowMute
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    EOSId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UShooterCheatManager::ShadowMute(const class FString& EOSId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShooterCheatManager", "ShadowMute");
+
+	Params::ShooterCheatManager_ShadowMute Parms{};
+
+	Parms.EOSId = std::move(EOSId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ShooterGame.ShooterCheatManager.ShadowUnmute
+// (Final, Exec, Native, Public)
+// Parameters:
+// const class FString&                    EOSId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UShooterCheatManager::ShadowUnmute(const class FString& EOSId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShooterCheatManager", "ShadowUnmute");
+
+	Params::ShooterCheatManager_ShadowUnmute Parms{};
+
+	Parms.EOSId = std::move(EOSId);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

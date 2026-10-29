@@ -61266,6 +61266,24 @@ public:
 	class FString                                 Duration;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
+// Function ShooterGame.ShooterCheatManager.BArkTrack
+// 0x0018 (0x0018 - 0x0000)
+struct ShooterCheatManager_BArkTrack final
+{
+public:
+	class FString                                 EOSId;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Seconds;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function ShooterGame.ShooterCheatManager.BArkUntrack
+// 0x0010 (0x0010 - 0x0000)
+struct ShooterCheatManager_BArkUntrack final
+{
+public:
+	class FString                                 EOSId;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
 // Function ShooterGame.ShooterCheatManager.BPCheckDenySpawningInThisMap
 // 0x0018 (0x0018 - 0x0000)
 struct ShooterCheatManager_BPCheckDenySpawningInThisMap final
@@ -61408,6 +61426,14 @@ public:
 	class FName                                   BossName;                                          // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int8                                          difficulty;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function ShooterGame.ShooterCheatManager.DelayedRestart
+// 0x0004 (0x0004 - 0x0000)
+struct ShooterCheatManager_DelayedRestart final
+{
+public:
+	int32                                         RestartInSeconds;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function ShooterGame.ShooterCheatManager.DestroyActors
@@ -63151,6 +63177,22 @@ struct ShooterCheatManager_SetWindStr final
 {
 public:
 	float                                         Strength;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function ShooterGame.ShooterCheatManager.ShadowMute
+// 0x0010 (0x0010 - 0x0000)
+struct ShooterCheatManager_ShadowMute final
+{
+public:
+	class FString                                 EOSId;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function ShooterGame.ShooterCheatManager.ShadowUnmute
+// 0x0010 (0x0010 - 0x0000)
+struct ShooterCheatManager_ShadowUnmute final
+{
+public:
+	class FString                                 EOSId;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 
 // Function ShooterGame.ShooterCheatManager.ShowDebugPingLifetime
